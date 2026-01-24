@@ -19,7 +19,7 @@ Level 4: Individual units (<50KB)  - Loaded for specific need
 - `name`: Skill identifier
 - `description`: Comprehensive trigger description (when to use)
 
-**Always loaded** - Claude sees this to decide if skill is relevant.
+**Always loaded** - AI agent sees this to decide if skill is relevant.
 
 **Example**:
 ```yaml
@@ -42,7 +42,7 @@ description: First Principles Framework for structured reasoning. Use for any ta
 - Starter patterns (for first-time usage)
 - Critical disciplines (cross-cutting concerns)
 
-**Loaded on skill trigger** - when Claude determines skill is relevant.
+**Loaded on skill trigger** - when AI agent determines skill is relevant.
 
 **Structure**:
 ```markdown
@@ -62,7 +62,7 @@ Choose path based on your task:
 
 **Choose domain based on what you need:**
 
-- **Domain A** ([index](content-dir/domain-a/index.md))
+- **Domain A** ([index](references/domain-a/index.md))
   - **Load when:** [specific usage scenario]
   - **Starters:** A.1, A.2
   - **Complements:** Domain B (for X)
@@ -84,9 +84,11 @@ See [navigation-architecture.md](navigation-architecture.md) for detailed SKILL.
 
 ## Level 3: Domain Indexes
 
-**Location**: `{skill}/{content-dir}/{domain}/index.md`
+**Location**: `{skill}/references/{domain}/index.md`
 
 **Purpose**: Navigation hub + pattern catalog for specific domain
+
+**Note**: Following Agent Skills specification, pattern content is organized within the `references/` directory.
 
 **Content**:
 - Brief domain description (1-2 sentences)
@@ -142,7 +144,7 @@ See [navigation-architecture.md](navigation-architecture.md) for detailed domain
 
 ## Level 4: Individual Units
 
-**Location**: `{skill}/{content-dir}/{domain}/{unit_id}_{title}.md`
+**Location**: `{skill}/references/{domain}/{unit_id}_{title}.md`
 
 **Content**: Full content of single atomic unit from source specification.
 
@@ -155,10 +157,10 @@ See [navigation-architecture.md](navigation-architecture.md) for detailed domain
 ```
 User query: "How do I evaluate claim reliability?"
 
-1. L1 (always): Claude sees skill metadata, determines FPF relevant
-2. L2 (trigger): Claude loads SKILL.md body, sees domain table
-3. L3 (navigate): Claude loads trust-evidence/index.md, sees pattern list
-4. L4 (access): Claude loads B.3_trust_calculus.md for specific content
+1. L1 (always): AI agent sees skill metadata, determines FPF relevant
+2. L2 (trigger): AI agent loads SKILL.md body, sees domain table
+3. L3 (navigate): AI agent loads trust-evidence/index.md, sees pattern list
+4. L4 (access): AI agent loads B.3_trust_calculus.md for specific content
 ```
 
 ## Anti-Patterns
@@ -181,4 +183,4 @@ User query: "How do I evaluate claim reliability?"
 ### Missing "Load when..." Guidance
 
 **Bad**: Index lists units without usage context
-**Why bad**: Claude can't efficiently choose what to load
+**Why bad**: AI agent can't efficiently choose what to load

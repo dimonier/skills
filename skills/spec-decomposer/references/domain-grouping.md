@@ -8,7 +8,7 @@ Group content by **how it will be used**, not by how the source document is orga
 
 ### Step 1: List Use Cases
 
-Before looking at document structure, list how Claude will use this knowledge:
+Before looking at document structure, list how AI agent will use this knowledge:
 
 ```
 - Understanding what entities are
@@ -21,7 +21,7 @@ Before looking at document structure, list how Claude will use this knowledge:
 ### Step 2: Map Content to Use Cases
 
 For each section/pattern/article in source:
-- Ask: "When would Claude need this?"
+- Ask: "When would AI agent need this?"
 - Assign to use-case domain
 
 ### Step 3: Validate Groupings

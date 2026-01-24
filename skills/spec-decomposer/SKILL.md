@@ -1,7 +1,6 @@
 ---
 name: spec-decomposer
-description: Decompose large unified specifications into agent skills with progressive disclosure. Use when converting documentation, frameworks, or knowledge bases exceeding 50KB into properly structured skills that Claude can navigate efficiently.
-license: Complete terms in LICENSE.txt
+description: Decompose large unified specifications into agent skills with progressive disclosure. Use when converting documentation, frameworks, or knowledge bases exceeding 50KB into properly structured skills that an AI agent can navigate efficiently.
 ---
 
 # Specification Decomposer
@@ -71,9 +70,13 @@ No separate level folders - the level is implicit in the file role.
 
 If a unit exceeds 50KB, split into sub-units with their own index.
 
-## Optional: Operational Prompts
+## Optional Directories
 
-For complex skills, consider adding a `prompts/` folder with usage guidance:
+According to the Agent Skills specification, three optional directories can enhance your skill:
+
+### references/prompts/
+
+For complex skills, add operational prompts in `references/prompts/`:
 
 | File | Purpose |
 |------|---------|
@@ -83,6 +86,27 @@ For complex skills, consider adding a `prompts/` folder with usage guidance:
 
 Prompts help the agent know HOW to use the decomposed content effectively.
 See [references/operational-prompts.md](references/operational-prompts.md) for details.
+
+### assets/
+
+Store static resources that support the skill:
+- Templates (document templates, configuration templates)
+- Images (diagrams, examples)
+- Data files (lookup tables, schemas)
+
+### scripts/
+
+Automation scripts for maintaining the skill structure (generation, validation, etc.)
+
+## Frontmatter Extensions
+
+The official Agent Skills specification defines a minimal set of required fields (`name`, `description`) and optional fields (`license`, `compatibility`, `metadata`, `allowed-tools`).
+
+Specific clients (e.g., Cursor) may extend frontmatter with additional fields:
+- `priority: high` - skill loading priority
+- `auto_load: true` - automatic activation
+
+Such extensions maintain backward compatibility with the base specification.
 
 ## References
 

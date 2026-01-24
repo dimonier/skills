@@ -58,12 +58,12 @@ For typical usage:
 
 **Choose domain based on what you need:**
 
-- **Domain A** ([index](content-dir/domain-a/index.md))
+- **Domain A** ([index](references/domain-a/index.md))
   - **Load when:** [specific usage scenario]
   - **Starters:** A.1, A.2, A.7
   - **Complements:** Domain B (for X), Domain C (for Y)
 
-- **Domain B** ([index](content-dir/domain-b/index.md))
+- **Domain B** ([index](references/domain-b/index.md))
   - **Load when:** [specific usage scenario]
   - **Starters:** B.1, B.3
   - **Complements:** Domain A (for X)
@@ -98,7 +98,7 @@ Cross-cutting concerns that apply throughout:
 
 ## Level 3: Master Index (Optional)
 
-For large skills with 8+ domains, consider a master index at `content-dir/index.md`.
+For large skills with 8+ domains, consider a master index at `references/index.md`.
 
 ### When to Create
 
@@ -256,7 +256,7 @@ def parse_existing_navigation(index_path: Path) -> str:
 
 def generate_domain_index(domain: str, patterns: list):
     """Generate domain index preserving navigation."""
-    index_path = OUTPUT_DIR / domain / "index.md"
+    index_path = OUTPUT_DIR / "references" / domain / "index.md"
     
     # Extract existing navigation
     navigation = parse_existing_navigation(index_path)
@@ -326,13 +326,27 @@ Why: Load detail only when needed, minimize context usage.
 
 Why: Redundancy wastes context, creates maintenance burden.
 
+## Standard Directory Structure
+
+Per Agent Skills specification:
+
+```
+skill-name/
+├── SKILL.md
+├── references/
+│   ├── {domain}/      # Pattern content
+│   └── prompts/       # Optional operational prompts
+├── scripts/           # Optional automation scripts
+└── assets/            # Optional static resources
+```
+
 ## Size Budgets by Level
 
 | File | Max Size | Content Type |
 |------|----------|--------------|
 | SKILL.md | 50KB / ~500 lines | Navigation + decision logic |
-| content-dir/index.md | 50KB / ~500 lines | Domain directory (if needed) |
-| domain/index.md | 20KB / ~200 lines | Navigation + pattern table |
+| references/index.md | 50KB / ~500 lines | Master index (if needed) |
+| references/domain/index.md | 20KB / ~200 lines | Navigation + pattern table |
 | pattern files | 50KB | Full pattern content |
 
 **If domain index exceeds 20KB:**
@@ -389,13 +403,13 @@ Why bad: Creates navigation loops, unclear entry point.
 
 ```markdown
 # SKILL.md (entry point)
-- Domain A: Load when [scenario]
-- Domain B: Load when [scenario]
+- Domain A: Load when [scenario] → references/domain-a/index.md
+- Domain B: Load when [scenario] → references/domain-b/index.md
 
-# domain-a/index.md
+# references/domain-a/index.md
 Related Domains: domain-b - for [specific use case]
 
-# domain-b/index.md
+# references/domain-b/index.md
 Related Domains: domain-a - for [specific use case]
 ```
 

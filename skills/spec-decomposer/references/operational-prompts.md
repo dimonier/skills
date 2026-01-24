@@ -17,15 +17,19 @@ Skip prompts when:
 
 ## Prompts Folder Structure
 
+Per Agent Skills specification, prompts are placed in `references/prompts/`:
+
 ```
 skill-name/
 ├── SKILL.md
-├── {content}/
-└── prompts/           # Optional
-    ├── workflow.md    # Mandatory workflow steps
-    ├── principles.md  # Key concepts quick reference
-    ├── keywords.md    # Navigation/search guidance
-    └── templates/     # Reusable templates (optional)
+├── references/
+│   ├── {domain}/      # Pattern/content files
+│   └── prompts/       # Optional operational prompts
+│       ├── workflow.md    # Mandatory workflow steps
+│       ├── principles.md  # Key concepts quick reference
+│       ├── keywords.md    # Navigation/search guidance
+│       └── templates/     # Reusable templates (optional)
+└── scripts/           # Optional automation scripts
 ```
 
 ## Prompt Types
@@ -103,13 +107,13 @@ Use with search tools when domain unclear:
 
 ## Example: FPF Prompts
 
-FPF skill uses prompts for:
+FPF skill uses prompts in `references/prompts/` for:
 
 | Prompt | Purpose |
 |--------|---------|
-| `workflow.md` | 4-step mandatory process (decompose, reason, execute, translate) |
-| `principles.md` | Quick reference for A.7, A.10, B.3, B.5 with file paths |
-| `keywords.md` | Domain navigation table + search keywords |
-| `initial-plan.md` | Task execution template |
+| `references/prompts/workflow.md` | 4-step mandatory process (decompose, reason, execute, translate) |
+| `references/prompts/principles.md` | Quick reference for A.7, A.10, B.3, B.5 with file paths |
+| `references/prompts/keywords.md` | Domain navigation table + search keywords |
+| `references/prompts/initial-plan.md` | Task execution template |
 
 Total prompts size: ~3KB (minimal context cost).
