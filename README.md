@@ -26,13 +26,64 @@ The skills transform the AI into a specialized assistant that follows proven met
 
 ## Table of Contents
 
+- [Thinking Methodologies](#thinking-methodologies)
+  - [First Principles Framework](#-first-principles-framework-fpf)
+- [Text Analysis & Writing](#text-analysis--writing)
+  - [Reverse-Engineering Texts](#-reverse-engineering-texts)
+- [Development Tools](#development-tools)
+  - [Spec Decomposer](#-spec-decomposer)
 - [Space Planning & Organization](#space-planning--organization)
   - [Bathroom Planner](#-bathroom-planner)
   - [Wardrobe Planner](#-wardrobe-planner)
-- [Development Tools](#development-tools)
-  - [Spec Decomposer](#-spec-decomposer)
-- [Thinking Methodologies](#thinking-methodologies)
-  - [First Principles Framework](#-first-principles-framework-fpf)
+
+
+## Thinking Methodologies
+
+Frameworks for structured reasoning and systematic problem-solving.
+
+### 🧠 First Principles Framework (FPF)
+
+Structured reasoning skill for any task requiring auditable thinking, evidence chains, systematic problem-solving, or holonic composition.
+
+**Use when:**
+- Guiding reasoning on engineering, research, and management tasks
+- Requiring systematic evidence-based problem-solving
+- Building structured, verifiable solutions
+
+**Reference:** [FPF GitHub Repository](https://github.com/dimonier/FPF/tree/skill)
+
+**Location:** `skills/fpf/`
+
+## Text Analysis & Writing
+
+Skills for analyzing existing texts and extracting reusable structure, argumentation, and rhetorical patterns.
+
+### 🔍 Reverse-Engineering Texts
+
+Reverse-engineer texts into a reusable structural blueprint (reverse outlining, argument mining, copy teardown).
+
+**Use when:**
+- Analyzing a text’s thesis, hook, and macro-structure
+- Extracting argument maps and support/evidence moves
+- Mapping rhetoric (Ethos/Pathos/Logos)
+- Converting “text → structure/blueprint” to reuse patterns in writing, specs, prompts, or marketing
+
+**Location:** `skills/reverse-engineering-texts/`
+
+## Development Tools
+
+Tools for creating and managing AI agent skills and documentation.
+
+### 📚 Spec Decomposer
+
+Decompose large unified specifications into agent skills with progressive disclosure.
+
+**Use when:**
+- Converting documentation, frameworks, or knowledge bases exceeding 50KB
+- Creating properly structured skills that Claude can navigate efficiently
+- Implementing multi-level progressive disclosure for large content
+
+**Location:** `skills/spec-decomposer/`
 
 ## Space Planning & Organization
 
@@ -65,34 +116,4 @@ Structured 7-stage methodology for planning wardrobe/closet organization based o
 
 **Location:** `skills/wardrobe-planner/`
 
-## Development Tools
 
-Tools for creating and managing AI agent skills and documentation.
-
-### 📚 Spec Decomposer
-
-Decompose large unified specifications into agent skills with progressive disclosure.
-
-**Use when:**
-- Converting documentation, frameworks, or knowledge bases exceeding 50KB
-- Creating properly structured skills that Claude can navigate efficiently
-- Implementing multi-level progressive disclosure for large content
-
-**Location:** `skills/spec-decomposer/`
-
-## Thinking Methodologies
-
-Frameworks for structured reasoning and systematic problem-solving.
-
-### 🧠 First Principles Framework (FPF)
-
-Structured reasoning skill for any task requiring auditable thinking, evidence chains, systematic problem-solving, or holonic composition.
-
-**Use when:**
-- Guiding reasoning on engineering, research, and management tasks
-- Requiring systematic evidence-based problem-solving
-- Building structured, verifiable solutions
-
-**Reference:** [FPF GitHub Repository](https://github.com/dimonier/FPF/tree/skill)
-
-**Location:** `skills/fpf/`
