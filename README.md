@@ -32,6 +32,9 @@ The skills transform the AI into a specialized assistant that follows proven met
   - [Reverse-Engineering Texts](#-reverse-engineering-texts)
 - [Development Tools](#development-tools)
   - [Spec Decomposer](#-spec-decomposer)
+  - [Agent Skill Builder](#-agent-skill-builder)
+- [Project Management](#project-management)
+  - [Project Vault](#-project-vault)
 - [Space Planning & Organization](#space-planning--organization)
   - [Bathroom Planner](#-bathroom-planner)
   - [Wardrobe Planner](#-wardrobe-planner)
@@ -84,6 +87,35 @@ Decompose large unified specifications into agent skills with progressive disclo
 - Implementing multi-level progressive disclosure for large content
 
 **Location:** `skills/spec-decomposer/`
+
+### 🔧 Agent Skill Builder
+
+Guide for deciding when to create agent skills, how to design them well, and what anti-patterns to avoid. Covers the four-layer agent guidance stack (AGENTS.md, Skills, MCP, Memory), atomicity principles, and quality gates.
+
+**Use when:**
+- Creating a new skill or reviewing an existing one
+- Deciding between skills vs AGENTS.md vs MCP vs Memory
+- Designing atomic, reusable skills with progressive disclosure
+- Unsure if a skill is needed at all
+
+**Location:** `skills/create-agent-skill/`
+
+## Project Management
+
+Skills for tracking project state, decisions, risks, and dependencies in a structured markdown vault.
+
+### 🗂️ Project Vault
+
+Maintains project state in a markdown vault (tasks, dependencies, risks, key decisions, open questions, agendas, reports) from meeting transcripts, structured notes, or owner chat updates.
+
+**Use when:**
+- Initializing a project vault in a new repository
+- Updating project state from meeting transcripts or user briefings
+- Managing stakeholders and responsibilities
+- Generating status reports, open question lists, or meeting agendas
+- Surfacing contradictions and risks across project canon
+
+**Location:** `skills/project-vault/`
 
 ## Space Planning & Organization
 
