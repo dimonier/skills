@@ -26,36 +26,89 @@ The skills transform the AI into a specialized assistant that follows proven met
 
 ## Table of Contents
 
-- [Thinking Methodologies](#thinking-methodologies)
-  - [First Principles Framework](#-first-principles-framework-fpf)
-- [Text Analysis & Writing](#text-analysis--writing)
+- [Frameworks \& Methodologies](#frameworks--methodologies)
+  - [First Principles Framework (FPF Core)](#-first-principles-framework-fpf-core)
+  - [FPF Literacy \& DPF Authoring](#-fpf-literacy--dpf-authoring)
+  - [Layered Framework Workspace Architecture](#-layered-framework-workspace-architecture)
+- [Business Analysis \& Requirements Engineering](#business-analysis--requirements-engineering)
+  - [Business Analysis \& Requirements Engineering](#-business-analysis--requirements-engineering)
+- [Text Analysis \& Writing](#text-analysis--writing)
   - [Reverse-Engineering Texts](#-reverse-engineering-texts)
 - [Development Tools](#development-tools)
   - [Spec Decomposer](#-spec-decomposer)
   - [Agent Skill Builder](#-agent-skill-builder)
 - [Project Management](#project-management)
   - [Project Vault](#-project-vault)
-- [Space Planning & Organization](#space-planning--organization)
+- [Space Planning \& Organization](#space-planning--organization)
   - [Bathroom Planner](#-bathroom-planner)
   - [Wardrobe Planner](#-wardrobe-planner)
 
 
-## Thinking Methodologies
+## Frameworks & Methodologies
 
-Frameworks for structured reasoning and systematic problem-solving.
+Structured reasoning frameworks and domain-specific methodologies for systematic problem-solving.
 
-### 🧠 First Principles Framework (FPF)
+### 🧠 First Principles Framework (FPF Core)
 
-Structured reasoning skill for any task requiring auditable thinking, evidence chains, systematic problem-solving, or holonic composition.
+Root framework providing auditable thinking, evidence chains, and systematic problem-solving patterns. Serves as the governing foundation for all DPF and LPF skills.
 
 **Use when:**
 - Guiding reasoning on engineering, research, and management tasks
 - Requiring systematic evidence-based problem-solving
-- Building structured, verifiable solutions
+- Building structured, verifiable solutions with traceable evidence
 
-**Reference:** [FPF GitHub Repository](https://github.com/dimonier/FPF/tree/skill)
+**Reference:** [GitHub Repository of the original First Principles Framework by Anatoly Levenchuk](https://github.com/ailev/FPF)
 
-**Location:** `skills/fpf/`
+**Location:** `skills/fpf-core/`
+
+### 📖 FPF Literacy & DPF Authoring
+
+Helps agents understand the FPF/DPF/LPF stack, create new domain practical frameworks (DPFs), load domain knowledge, distinguish FPF-grounded answers from generic AI responses, and choose the right carrier for publication.
+
+**Depends on:** `fpf-core`
+
+**Use when:**
+- Teaching an agent the FPF ecosystem and its layers
+- Creating a new DPF from scratch (~1 hour draft)
+- Distinguishing vanilla AI answers from FPF-grounded reasoning
+- Deciding whether to publish in-chat vs as a file
+
+**Location:** `skills/dpf-fpf-literacy/`
+
+### 🏗️ Layered Framework Workspace Architecture
+
+Manages the FPF/DPF/LPF workspace structure: where to place frameworks, how to organize skill carriers, dependency chains, and LPF vs Project boundaries.
+
+**Depends on:** `fpf-core`, `dpf-fpf-literacy`
+
+**Use when:**
+- Organizing the FPF/DPF/LPF workspace layout
+- Deciding where a new framework belongs in the ecosystem
+- Setting up skill-carrier structure for a DPF/LPF
+- Resolving LPF vs Project boundary questions
+- Packaging a DPF/LPF as a distributable skill
+
+**Location:** `skills/dpf-lfw-architecture/`
+
+## Business Analysis & Requirements Engineering
+
+Domain practical framework for structured business analysis and requirements engineering in engineering projects.
+
+### 📋 Business Analysis & Requirements Engineering
+
+Covers the full requirements lifecycle: stakeholder identification, elicitation, specification, prioritization, validation, traceability, and change management. Includes business process modeling, use case modeling, and data/security requirements.
+
+**Depends on:** `fpf-core`
+
+**Use when:**
+- Identifying and managing stakeholders
+- Eliciting, specifying, or prioritizing requirements
+- Validating or tracing requirements
+- Managing requirements changes
+- Modeling business processes or use cases
+- Defining data or security requirements
+
+**Location:** `skills/dpf-business-analysis/`
 
 ## Text Analysis & Writing
 
@@ -66,25 +119,27 @@ Skills for analyzing existing texts and extracting reusable structure, argumenta
 Reverse-engineer texts into a reusable structural blueprint (reverse outlining, argument mining, copy teardown).
 
 **Use when:**
-- Analyzing a text’s thesis, hook, and macro-structure
+- Analyzing a text's thesis, hook, and macro-structure
 - Extracting argument maps and support/evidence moves
 - Mapping rhetoric (Ethos/Pathos/Logos)
-- Converting “text → structure/blueprint” to reuse patterns in writing, specs, prompts, or marketing
+- Converting "text → structure/blueprint" to reuse patterns in writing, specs, prompts, or marketing
 
 **Location:** `skills/reverse-engineering-texts/`
 
 ## Development Tools
 
-Tools for creating and managing AI agent skills and documentation.
+Tools for creating and managing AI agent skills and FPF/DPF/LPF documentation.
 
 ### 📚 Spec Decomposer
 
-Decompose large unified specifications into agent skills with progressive disclosure.
+Splits monolithic framework specifications (FPF/DPF/LPF) into atomic skill reference files. Includes Python scripts for automated decomposition of FPF (`:End`-delimited patterns) and DPF (sections 1–10 structure) monoliths.
+
+**Depends on:** `fpf-core`, `dpf-fpf-literacy`, `dpf-lfw-architecture`
 
 **Use when:**
-- Converting documentation, frameworks, or knowledge bases exceeding 50KB
-- Creating properly structured skills that Claude can navigate efficiently
-- Implementing multi-level progressive disclosure for large content
+- Decomposing a framework monolith into skill references
+- Updating references/ after monolith specification changes
+- Setting up a new DPF/LPF skill from a monolith spec
 
 **Location:** `skills/spec-decomposer/`
 
@@ -123,7 +178,7 @@ Skills for optimizing physical spaces and organizing belongings with systematic 
 
 ### 🚿 Bathroom Planner
 
-Structured 10-stage methodology for planning bathroom layouts with focus on ergonomics, functionality, and safety. 
+Structured 10-stage methodology for planning bathroom layouts with focus on ergonomics, functionality, and safety.
 
 **Use when:**
 - Planning bathroom furniture placement
@@ -147,5 +202,3 @@ Structured 7-stage methodology for planning wardrobe/closet organization based o
 - Solving wardrobe organization challenges
 
 **Location:** `skills/wardrobe-planner/`
-
-
