@@ -238,8 +238,3 @@ The selected name is `SupervisorSubholonFeedbackRelation@Context` because the go
 - **Uses:** `B.2.P` when feedback, supervision, emergence, or MHT wording hides the claim kind.
 
 ### B.2.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L33904–L34116

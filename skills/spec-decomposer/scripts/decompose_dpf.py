@@ -216,13 +216,12 @@ def _extract_relations(
     return text
 
 
-def format_relations(relations_text: str, spec_filename: str, start_line: int, end_line: int) -> str:
+def format_relations(relations_text: str) -> str:
     body = relations_text.rstrip()
     if body.endswith("---"):
         body = body[:-3].rstrip()
     header = f"# Relation Records (E.4.PFR)\n\n"
-    footer = f"\n---\n\n> **Source:** `{spec_filename}` section 7, lines L{start_line}–L{end_line}\n"
-    return header + body + footer
+    return header + body
 
 
 def main():
@@ -249,7 +248,7 @@ def main():
         written = 0
         skipped = 0
         for unit in units:
-            content, raw_len, opt_len = format_reference(unit, spec_filename)
+            content, raw_len, opt_len = format_reference(unit)
             report.size_stats.raw_bytes += raw_len
             report.size_stats.optimized_bytes += opt_len
             filename = slugify(unit.pid)
@@ -273,9 +272,6 @@ def main():
     if relations_text:
         relations_content = format_relations(
             relations_text,
-            spec_filename,
-            sec7_start or 0,
-            sec7_end or 0,
         )
         relations_path = refs_dir / "relations.md"
         if idempotent_write(relations_path, relations_content, dry_run=args.dry_run):

@@ -205,8 +205,3 @@ High `AE` does not by itself authorize endpoint claims, gate claims, or quality 
 Rigid templates, capitalized labels, or tidy sentence rhythm can simulate articulation. Migration should therefore test whether anchors and slots are really present; if not, the articulation level should drop.
 
 ### C.2.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L39368–L39548

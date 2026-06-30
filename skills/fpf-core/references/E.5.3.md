@@ -105,8 +105,3 @@ that innovation happens “below” without contaminating the timeless Core.
 * **Constrains:** All artefact imports recorded in DRRs or SCRs
 
 ### E.5.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L65681–L65759

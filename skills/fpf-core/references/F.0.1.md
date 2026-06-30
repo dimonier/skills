@@ -339,8 +339,3 @@ An artefact is **ready** with respect to F.0.1 when:
 > **Mental checklist:** *Name the Context → speak in the Context → connect Contexts only by labelled bridges → build rows from bridged cells.*
 
 ### F.0.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L80435–L80750

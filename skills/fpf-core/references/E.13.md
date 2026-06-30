@@ -216,8 +216,3 @@ The pattern is intentionally small. Goodhart-style failure is not repaired by an
 - **Used by:** improvement loops, release checks, pattern reviews, dashboards, metric-driven work, AI reward or judge-score cases, and any project where visible performance may displace intended value.
 
 ### E.13:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L70970–L71163

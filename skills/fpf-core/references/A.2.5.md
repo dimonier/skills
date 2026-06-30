@@ -356,8 +356,3 @@ The state-machine lens is useful because finite named states, guarded change, an
 | `C.27` and temporal patterns | Govern windows, currentness, freshness, and stale-state claims when those are current. |
 
 ### A.2.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L3715–L4047

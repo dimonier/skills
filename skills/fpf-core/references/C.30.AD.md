@@ -462,8 +462,3 @@ The pattern therefore specializes generic Description and publication machinery 
 - `E.10.MOVE` restores move-like wording when source prose about an architecture description does not mean a C.30 architecture move or a C.30.AD remaining architecture candidate use.
 
 ### C.30.AD:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L55275–L55674

@@ -479,8 +479,3 @@ Currentness is therefore inherited through that chain. Reopen A.19 when any gove
 - **Does not replace:** CHR mechanism-governing patterns, consumer patterns that use a declared space, source-set relations, publication-form patterns, or mathematical-lens use under `C.29`.
 
 ### A.19:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L24753–L25194

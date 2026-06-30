@@ -298,8 +298,3 @@ This row belongs in this pattern because it blocks diagram-as-architecture, grap
 - `C.29` governs mathematical-lens use and does not become architecture by analogy.
 
 ### C.30.P:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L55873–L56119

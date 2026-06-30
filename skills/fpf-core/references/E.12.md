@@ -109,8 +109,3 @@ This pattern does not weaken the formal rigor established by other ADRs; it comp
 *  **Is constrained by:** The overall governance process (DRRs), which is the vehicle for implementing the conceptual simplifications proposed by the HF-Loop.
 
 ### E.12:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L70882–L70968

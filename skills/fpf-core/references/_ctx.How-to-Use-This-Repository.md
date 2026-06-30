@@ -40,8 +40,3 @@ For the selected entry, give:
 3. the first FPF patterns to inspect,
 4. what still cannot be decided, trusted, or used responsibly.
 ```
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L636–L665

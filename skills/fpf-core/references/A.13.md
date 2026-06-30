@@ -176,8 +176,3 @@ In essence, this pattern does not *invent* a new theory of agency. It **distills
   *  `C.9 Agency Characteristic Profile`, which provides the formal definitions for the characteristics (BMC, PH, etc.).
 
 ### A.13:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L20791–L20940

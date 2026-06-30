@@ -305,8 +305,3 @@ Any example placed in Part C or Part B **must** render its claim through this ca
 > A useful worked example is a **one‑page alignment**: claim → Contexts → cells → **one row** → explicit **bridges** → Role-Description hooks → window/SoD if needed. No tooling, no process charts—just **visible thinking** that any careful reader can replay and critique at the right place.
 
 ### F.16:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L86102–L86385

@@ -235,8 +235,3 @@ If no **ScaleLensPolicy** is declared, selection remains **neutral** with respec
 *(These five are sufficient for a working test harness in Part F.)*
 
 ### E.16:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L71684–L71889

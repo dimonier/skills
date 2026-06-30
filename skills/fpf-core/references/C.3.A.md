@@ -750,8 +750,3 @@ To admit a **capability** for a specific **Work** step at **JobSlice**, the guar
 | Implicit “**latest**” time  | Non‑deterministic guard  | Require explicit **`Γ_time`** (point/window/policy).  |
 
 ### C.3.A:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L41500–L42226

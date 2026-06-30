@@ -137,8 +137,3 @@ Packaging these insights as one memorisable quintet → **Cognitive Elegance** w
 4. **Layer depth** — In an LCA (layered control architectures, https://arxiv.org/abs/2401.15185) stack every Planner is external to its Regulator; should FPF limit the number of nested layers, or is indefinite chaining acceptable?
 
 ### A.9:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L19842–L19954

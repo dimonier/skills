@@ -235,8 +235,3 @@ The pattern keeps the useful old `Gamma_work` notation, but only as notation ove
 - Coordinates with `C.16`, `C.29`, and `A.10` for measurement, mathematical lens, and evidence relations; source-use and publication-use relations remain with `E.17` or the direct source owner.
 
 ### B.1.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L32446–L32657

@@ -757,8 +757,3 @@ These cards are **thinking scaffolds**; they do not prescribe org process.
 * **Learning‑to‑rank vs measurement:** what minimal evidence suffices to treat an ordinal characteristic as interval for the purpose of frontier estimation?
 
 ### C.17:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L44645–L45361

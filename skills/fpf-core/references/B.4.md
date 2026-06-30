@@ -167,8 +167,3 @@ By making the `Transformer`'s role explicit in every phase, the pattern avoids t
 #### B.4:11.1 - Pre-abductive seam compatibility
 For early language-state routing, `Observe` does not have to jump directly into anomaly or hypothesis forms. `Observe` may publish `U.PreArticulationCuePack` and a `RoutedCueSet` via `B.4.1`, after which downstream loops consume that routed cue publication directly or a downstream typed publication such as `U.AbductivePrompt`, as appropriate.
 ### B.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L35247–L35389

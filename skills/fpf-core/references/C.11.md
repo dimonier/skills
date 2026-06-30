@@ -757,8 +757,3 @@ C.11 may cite `C.26` as the common quantum-like modeling lens only for the resid
 > `C.29` may supply a lens-supported prediction, distinction, obstruction, diagnostic boundary, or rival-lens note that a decision record can cite. If the output is a `ChoiceResult`, local choice record, selected-set publication, or selected option set, `C.11` governs the decision discipline and any `G.5`/`G.9` selector or benchmark publication remains separate. `C.29` does not select the option by mathematical elegance.
 
 ### C.11:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L42228–L42942

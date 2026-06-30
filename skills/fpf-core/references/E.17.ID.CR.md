@@ -729,8 +729,3 @@ The gain is practical: a team can compare available source epistemes or source p
 > When a bounded comparative review unit uses a mathematical comparison criterion, rival lens, invariant, obstruction, or structural similarity, `E.17.ID.CR` still works over comparison unit, viewpoint, comparison criterion, review-unit boundary, and bounded-use boundary. The applicable `C.29` output for the stated use (`MathLensUse.LensCandidateNote`, `MathLensUse.OneLine`, `MathLensUse.MiniCard`, or `MathLensUse.FullCard` when required) can be cited only for the mathematical-lens use: candidate mathematical object, lens mapping mode, preserved and lost structure, `LensUseAdmissibilityValue`, bounded use, blocked downstream use, and stop condition. It does not create the comparison record, adjudicate rival publications, or authorize bridge, evidence, selector, or benchmark claims outside the comparative-review-unit record.
 
 ### E.17.ID.CR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L74234–L74949

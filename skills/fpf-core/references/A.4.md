@@ -149,8 +149,3 @@ This pattern therefore realises three core principles in concert:
 > Evolution is the conversation between them.”*
 
 ### A.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L7853–L7979

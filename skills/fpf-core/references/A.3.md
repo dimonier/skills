@@ -236,8 +236,3 @@ Terms used here (TransformerRole, Work, Method, MethodDescription, PortionOf, Ph
 [12]: https://arxiv.org/pdf/2010.02013 "[PDF] A Brief History Of TensorFlow Extended (TFX) - arXiv"
 
 ### A.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L5952–L6160

@@ -264,8 +264,3 @@ Coordinates with: `C.19` for current-pool treatment, `G.5` for selected-set publ
 
 
 ### C.18:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L45365–L45588

@@ -17,8 +17,3 @@ title: "**Part C — Kernel Extension Specifications**"
 | --- | --- | --- | --- |
 | **Cluster C.I – Core CALs / LOGs / CHRs**  |  |  |  |
 | C.1  | **Sys‑CAL**  | CAL | Physical holon composition; conservation invariants; resource hooks. |
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L36539–L36545

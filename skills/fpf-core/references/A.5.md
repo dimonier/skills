@@ -65,8 +65,3 @@ To keep the Kernel open‑ended without a bespoke plug‑in patterns standard, F
 This section is intentionally lightweight: it provides architectural intent and neighboring-pattern pointers only. Any new enforceable modularity constraints belong in the A.6.* boundary patterns (or in E.* guard‑rails), not here.
 
 ### A.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L7981–L8028

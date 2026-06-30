@@ -229,8 +229,3 @@ The ladder and LOG shells align with FPF’s **Assurance calculus**: **F** (form
 **Outcome.** The pattern introduces **new content** (LOG shells + maturity poset + degrade modes + publication Standard) and **does not duplicate** CG‑Spec legality rules, CHR guard‑macros, or CAL acceptance mechanics; it *integrates* them into **admissibility logic** for MethodFamilies.
 
 ### C.23:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L47686–L47887

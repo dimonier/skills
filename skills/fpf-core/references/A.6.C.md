@@ -352,8 +352,3 @@ F.18 may supply durable names for recovered terms when naming is current, but it
   * **E.17** MVPK “no new semantics” rule to prevent publication faces from becoming new contracts.
 
 ### A.6.C:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L9674–L9992

@@ -107,8 +107,3 @@ This pattern transforms the assurance framework from a descriptive taxonomy into
 *  **Enables:** Objective quality gates in the Canonical Evolution Loop (B.4) and reliable inputs for D.4 Ethical Mediation and Decision Use.
 
 ### B.3.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L34720–L34802

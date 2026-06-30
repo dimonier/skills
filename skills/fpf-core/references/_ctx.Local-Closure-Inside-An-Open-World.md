@@ -29,8 +29,3 @@ FPF does not transform the open world into a closed one. It lets a project build
 - a reopen condition states when local closure is no longer enough.
 
 This is why FPF patterns often look strict. The strictness is local. It lets a project act while keeping the wider world open. A local closure is not a claim that nothing else exists. It is a declared scope for responsible action.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L770–L788

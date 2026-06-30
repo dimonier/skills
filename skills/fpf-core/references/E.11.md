@@ -352,8 +352,3 @@ After discharge, the remaining row is deleted because it only duplicates the `re
 - ToC rows provide query and dependency cues; they do not replace public first-entry scenarios or governing pattern bodies.
 
 ### E.11:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L70332–L70657

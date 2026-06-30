@@ -161,8 +161,3 @@ Discipline-composition practice is used here only when it preserves plural tradi
 **Constrains.** G.2 **MUST** publish **TraditionCards**/**BridgeMatrix** sufficient for `Γ_disc` to assemble **≥2 Traditions** and **≥3 `U.BoundedContext`** per SoTA synthesis to avoid monoculture. G.5 selector **SHALL** cite Discipline **CG‑Spec ids** and **EvidenceGraph** rows when admitting families.
 
 ### C.20:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L46259–L46392

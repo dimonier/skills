@@ -221,8 +221,3 @@ Add three follow-up checks:
 - **Is there an imaginable rival-set, even if not yet fully written?**
 - **Is the narrowing still a question rather than a disguised answer?**
 ### B.5.2.0:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L36078–L36269

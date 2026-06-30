@@ -487,8 +487,3 @@ Useful outputs:
 > If a mathematical lens depends on measurement construction, scale, unit, polarity, direct comparability, or evidence-stub adequacy, write that measurement-dependent relation in `C.16` before treating the lens as usable for those measurement-dependent claims. A `C.29` output may state only the measurement-dependent `LensUseAdmissibilityValue` for the mathematical-lens use claim; it does not construct the measure, make values comparable, or supply an evidence stub. Evidence relations remain `A.10`; assurance remains `B.3`.
 
 ### C.16:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L43164–L43616

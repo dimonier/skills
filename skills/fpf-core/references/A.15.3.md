@@ -433,8 +433,3 @@ Repair the PlanItem when a source-currentness change alters the target descripti
 Refresh before the PlanItem is used for performed-work preparation, work-entry readiness, launch-guard preparation, cross-context comparison, suite or kit reuse, Part G universalization, publication-view projection, evidence-reference use, or P2W carry-through. Stop the refresh at the smallest changed relation: the PlanItem, target slot-bearing description, concrete RefKind, cited source edition, readiness relation, performed-work variance record, or related gate, evidence, bridge, or publication relation.
 
 ### A.15.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L22357–L22757

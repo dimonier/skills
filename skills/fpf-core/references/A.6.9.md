@@ -469,8 +469,3 @@ A.6.9 turns a dangerous linguistic convenience into an explicit, reviewable, evo
 * **Constrains:** Any cross‑Context Concept‑Set row scope claims via weakest‑link and substitution thresholds.
 
 ### A.6.9:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L18042–L18475

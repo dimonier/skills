@@ -397,7 +397,7 @@ def main():
         if len(body_lines) <= 1:  # just the heading itself
             ctx_trivial += 1
             continue
-        ctx_content, raw_len, opt_len = format_reference(ct_unit, spec_filename)
+        ctx_content, raw_len, opt_len = format_reference(ct_unit)
         report.size_stats.raw_bytes += raw_len
         report.size_stats.optimized_bytes += opt_len
         filepath = refs_dir / slugify(ct_unit.pid)
@@ -415,7 +415,7 @@ def main():
         written = 0
         skipped = 0
         for unit in units:
-            content, raw_len, opt_len = format_reference(unit, spec_filename)
+            content, raw_len, opt_len = format_reference(unit)
             report.size_stats.raw_bytes += raw_len
             report.size_stats.optimized_bytes += opt_len
             filename = slugify(unit.pid)

@@ -814,8 +814,3 @@ Bare `quality` in Tech prose should therefore be banned or rewritten immediately
 This pattern does not govern articulation-state characteristics, bridge stances, or representation factors. Those remain governed by `A.16`, `C.2.LS`, `C.2.4`, `C.2.5`, `C.2.6`, `C.2.7`, and `F.9.1`.
 
 ### C.16.Q:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L43868–L44643

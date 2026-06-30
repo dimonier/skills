@@ -351,8 +351,3 @@ Coordinates with: `C.30.STRAT`, `C.32.P2S` when architecture-to-transformation-f
 Related claims stay with their governing patterns: `C.30.STRAT` for stratification wording and source-label repair, `E.18` for selected transformation-flow structure, path, crossing, and flow-valuation discipline, `E.18.2` and `C.29` for mathematical descriptions and lens-use claims, `C.30` for grounded architecture and selected-structure adequacy, `C.30.ASV` for architecture structural-view adequacy, `C.32.P2S` for connected problem-to-structure carry-through, `A.6.F` for function-use repair, and the non-flow governing patterns named in `C.30.TFS-REL:4.3`. `C.30.TFS-REL` governs only the architecture-to-transformation-flow-structure relation being claimed.
 
 ### C.30.TFS-REL:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L57628–L57967

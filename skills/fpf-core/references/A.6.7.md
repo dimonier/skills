@@ -472,8 +472,3 @@ In modern multi-step evaluation pipelines (e.g., calibrated scoring, uncertainty
 * **Relates to G.10:** suites are not packs; publication/shipping is handled via G.10 and MVPK faces.
 
 ### A.6.7:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L17081–L17520

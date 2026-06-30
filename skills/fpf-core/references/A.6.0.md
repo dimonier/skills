@@ -379,8 +379,3 @@ Repair the signature, or mint a new signature when monotone repair is impossible
 Do not repair the signature merely because a later realization, work plan, measurement run, bridge, or evidence record changed. Repair the object governed by that later relation unless the change alters the signature declaration itself or the exact dependency relation by which the later object cites the signature.
 
 ### A.6.0:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L9994–L10354

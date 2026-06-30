@@ -404,8 +404,3 @@ The mature-pattern parity coordinate is deliberately strict because recent short
 | `E.11` and `I.2` | Govern entry-distribution and expanded entry-disambiguation cues; `E.21` supplies only the scoped quality result. |
 
 ### E.21:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L78270–L78639

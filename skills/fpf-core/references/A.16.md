@@ -380,8 +380,3 @@ A reviewer can test an `A.16` move or move chain with six questions:
 
 This matrix keeps the integration layer narrow while still making its move semantics inspectable.
 ### A.16:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L23338–L23685

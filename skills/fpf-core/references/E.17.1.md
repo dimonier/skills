@@ -401,8 +401,3 @@ A reviewer can test a viewpoint bundle library with five questions:
 
 Library governance should therefore prefer small, editioned, provenance-preserving bundles over lexical mega-families that are easy to name but hard to reuse truthfully.
 ### E.17.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L72281–L72651

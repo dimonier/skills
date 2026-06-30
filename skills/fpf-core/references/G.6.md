@@ -357,8 +357,3 @@ Refresh the source use behind this pattern when current provenance, credential, 
 * **Does not govern:** stronger downstream uses named in `NotCarried`, work occurrence, source publication identity, or transformation-flow structure; those remain with their direct governing patterns.
 
 ### G.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L90683–L90996

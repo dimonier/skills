@@ -559,8 +559,3 @@ When you think you need "retargeting" in FPF, ask:
   * KD‑CAL/LOG‑CAL rules that reason about retargeting and invariant preservation across different EntityOfConcern values.
 
 ### A.6.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L13159–L13690

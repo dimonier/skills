@@ -165,8 +165,3 @@ If scale advantage is live, cite a `Scale-Audit` or `BLP-waiver`. If scale advan
 When `E.23` selects between a Ralph-like general adaptive loop, a specialized object-family cycle, or a mixed operation-family set, `C.19.1` governs the BLP comparison and waiver discipline. The local `E.23` cost and risk prompt `token_or_compute_cost + tool_cost + adaptation_attempt_cost + human_supervision_cost + rework_cost - avoided_loss_value` is not a scalar quality score; it is a practical accepted-work cost account for deciding whether the next pass, added operation, or method-family switch is BLP-compatible. Repeated automation alone does not satisfy BLP; the record must still name the object under improvement, object-under-improvement evaluation, protected trade-offs, bounded cost and risk condition, and stop or switch condition.
 
 ### C.19.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L46118–L46257

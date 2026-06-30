@@ -434,8 +434,3 @@ Scope: Universal for the bridge calibration kit; any method‑family or discipli
 **Constrains:** Any downstream consumer that claims cross‑Context/Tradition reuse must use the calibrated bridge artefacts/pins surfaced by this kit (governed by G.Core crossing invariants apply).
 
 ### G.7:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L90998–L91383

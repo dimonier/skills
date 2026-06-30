@@ -28,8 +28,3 @@ The important separation is between design-time constraints and run-time action.
 There are cases where procedure is required: safety, regulation, legal compliance, reproducibility, and training may need specified method descriptions. FPF does not forbid that. It requires the kind of claim to be explicit. A procedure script is a method description or work instruction; a constraint set is not the same thing; a monitor is not the same thing as evidence of success; a gate is not the work itself.
 
 This stance helps with human and AI work alike. A team can use general agents, search, simulation, model refresh, or state-of-the-art harvesting without surrendering safety. The freedom lives inside constraints, budgets, evidence, and typed checks.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L883–L900

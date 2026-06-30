@@ -464,8 +464,3 @@ Repair the local alignment frame when a subsequent source shows that the role as
 Refresh the `A.15` use before relying on it across a new context, new role assignment, new method family, new work plan, new execution window, new result measurement, or new evidence, assurance, gate, source-restoration, or mathematical-lens relation. If the issue under repair after refresh is no longer role-method-work alignment, use the governing pattern for that relation and keep only the remaining `A.15` separation here.
 
 ### A.15:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L21232–L21665

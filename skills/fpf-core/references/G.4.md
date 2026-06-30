@@ -508,8 +508,3 @@ All of these remain method‑specific semantics and therefore belong in `Extensi
 **Constrains:** any run‑time LOG implementation that executes CAL operators/flows must treat CAL artifacts as citable specifications and must not re‑invent acceptance semantics.
 
 ### G.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L89534–L90003

@@ -243,8 +243,3 @@ The pattern is intentionally narrower than C.29. C.29 answers the general questi
 - `C.30`, `C.30.AD`, `C.30.ASV`, `A.6.F`, `A.6.M`, and `C.31` govern architecture, architecture description, structural view, functional structure, module interface, and reusable-structure claims.
 
 ### E.18.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L76971–L77180

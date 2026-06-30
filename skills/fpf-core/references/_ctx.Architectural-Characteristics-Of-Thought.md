@@ -35,8 +35,3 @@ If FPF is an architecture for thought, then thought has architecture characteris
 | Epiplexity control | The structural entanglement that makes a holon hard to understand, change, reuse, or improve is not hidden by a simple diagram. | Architecture patterns, structural views, module and interface patterns, scale patterns, and architectural-characteristic evaluation. |
 
 The table is not a checklist for every project. It shows the kind of quality FPF is trying to preserve in reasoning itself. A project may enter through architecture, naming, evidence, mathematics, or comparison, but the deeper benefit is that the reasoning becomes more auditable, evolvable, and usable.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L809–L833

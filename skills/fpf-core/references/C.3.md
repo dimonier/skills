@@ -178,8 +178,3 @@ Do not treat this compact head pattern as the whole C.3 discipline when a case n
 - **Does not replace:** ontic settlement in `E.24`, U-kind admission in `E.24.UK`, or naming in Part F.
 
 ### C.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L40397–L40549

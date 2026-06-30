@@ -244,8 +244,3 @@ Use **`Guard_MaskedUse`** (Annex **C.3.A §4.3**). It requires:
 | **RM‑10** | Mask definedness **SHALL** be stated; guards **fail closed** outside the defined area.  |
 
 ### C.3.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L41113–L41335

@@ -343,8 +343,3 @@ Part C patterns (Sys‑CAL, KD‑CAL, Kind-CAL, LCA‑CAL) and the method/work s
 > Hold this quartet in your head and you’ll stop mixing plans with facts, signals with outcomes, and names across Contexts. Everything else—naming (F.5), `U.RoleDescription` (F.4), `U.RoleAssignment`, and performed-work attribution (A.2.1/F.6)—falls into place.
 
 ### F.11:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L84378–L84698

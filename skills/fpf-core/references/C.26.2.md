@@ -375,8 +375,3 @@ Worked-slice discipline from these rows:
 - Name posture: `Enacted Distributed State Evidence` names an evidence-bound `U.Episteme` reading over work carriers, not `Distributed Mind`, `Collective Consciousness`, `Social Field`, or `Organization Knows`.
 
 ### C.26.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L49553–L49894

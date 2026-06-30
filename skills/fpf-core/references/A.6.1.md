@@ -350,8 +350,3 @@ Repair the mechanism, or define a new mechanism when monotone repair is impossib
 Do not repair the mechanism merely because one work occurrence, telemetry publication, evidence record, gate decision, method choice, or realization version changed. Repair the object governed by that neighboring relation unless the change alters the MechanismDeclaration, its imported signature relation, or the monotone relation between a realization and the MechanismDeclaration.
 
 ### A.6.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L10356–L10688

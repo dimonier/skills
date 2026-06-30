@@ -693,8 +693,3 @@ Action result from the pattern-review and validation practice grounding: an `E.1
   * `G.11` (refresh/decay orchestration principles, where applicable)
 
 ### E.19:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L77182–L77861

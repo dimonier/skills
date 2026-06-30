@@ -352,8 +352,3 @@ Method Interface Standard (MIC)
 > **Γ\_method** composes **ordered, typed steps** into a reliable method, keeps **interfaces explicit** (MIC), leaves **costs to Γ\_work**, and provides clean hooks for **assurance** and **emergence**.
 
 ### B.1.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L32116–L32444

@@ -287,8 +287,3 @@ These rows document transfers from source practice into C.32.CONWAY. Each row st
 `C.32.CONWAY` governs architecture candidate synthesis where selected structures of a changing holon and selected structures of the changed holon must be co-synthesized under Conway, mirroring, or inverse-Conway pressure.
 
 ### C.32.CONWAY:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L60235–L60485

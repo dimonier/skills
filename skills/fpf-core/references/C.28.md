@@ -914,8 +914,3 @@ The pattern is not Pearl-only. SCM and PCH provide the rung discipline, but pote
 > `C.29` may document that a mathematical mapping appears abstraction-like, quotient-like, coarse-graining-like, simulation-like, or macro-model-like. It does not decide causal-use support. When the supported use includes intervention, policy, counterfactual, causal explanation, or causal decision, apply `C.28`; otherwise record `CausalUseDisposition = noCausalUseClaim` or `causalUseBlocked`.
 
 ### C.28:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L52463–L53328

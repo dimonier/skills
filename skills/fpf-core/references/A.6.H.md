@@ -396,8 +396,3 @@ Scale legality note: whenever “fraction/percentage/share” appears in wholene
 [5]: https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final "NIST SP 800-53 Rev. 5 - Security and Privacy Controls"
 
 ### A.6.H:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L18916–L19278

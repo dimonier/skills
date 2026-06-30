@@ -586,8 +586,3 @@ Useful outputs:
 - a relation repair using `A.6.P` when coupling words become reusable relation candidates, plus `F.18` only when the recovered relation term itself needs durable naming.
 
 ### A.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L8032–L8571

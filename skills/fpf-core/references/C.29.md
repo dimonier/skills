@@ -1407,8 +1407,3 @@ Use this recognition menu only to identify a possible lens family and likely nei
 - **Neighboring claims stay with their governing patterns.** Use `F.9` for bridges; `C.28` for causal use; `A.3.3` for dynamics semantics; `A.19` and `C.16` for characteristic-space and measurement construction; `A.10` and `B.3` for evidence and assurance; `C.11`, `A.15`, `A.15.1`, and `A.15.4` for decision, method, and work records; `E.17.*` for explanation and comparative-review publication use; `A.6.3.RT` and `A.6.3.CSC` for representation transition and coarsening; `C.27.TA`, `C.27`, `C.18.1`, `C.19.1`, and `C.31.ASAP` for temporal-aspect, temporal-claim adequacy, scale-law, method scale-preference, and architecture scale-preference claims; and Part G for selector and benchmark work. C.29 records only the declared mathematical-lens use and the governing-pattern boundary for the claim being made.
 
 ### C.29:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L53330–L54681

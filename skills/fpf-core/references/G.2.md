@@ -547,8 +547,3 @@ This pattern aligns its *method options* (via Extensions and authoring practice)
   * `F.18` (naming-side support wording when the question is label choice rather than synthesis geometry)
 
 ### G.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L88592–L89092

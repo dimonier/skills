@@ -287,8 +287,3 @@ B.2.P follows the E.10.ARCH algorithm: recover ontology first, then choose wordi
 - **Coordinates with:** `A.2.2`, `C.16`, `A.6.F`, `A.3.4`, `C.30`, `A.22`, `C.30.ASV`, `C.30.TFS-REL`, `C.30.ILC`, `C.32.P2S`, `C.29`, `A.10`, `C.2.1`, `E.17`, and source-use patterns.
 
 ### B.2.P:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L32936–L33192

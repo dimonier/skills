@@ -265,8 +265,3 @@ Putting `F.19` beside wording-use restoration keeps `E.10` from becoming a phras
 | `E.11` and `I.2` | Provide first-entry cues and expanded entry-disambiguation cases for phrase-level apparatus repair. |
 
 ### F.19:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L87136–L87367

@@ -481,8 +481,3 @@ Currentness rule: treat the current Part F and role-method-work patterns named i
 Use F.15 as a small check over a slice, not as a new vocabulary machine. First, check locality: contexts are named, local senses are inside their contexts, rows really cross contexts, RoleDescriptions describe one local role, bridges state kind and loss, and status variation stays with status windows. Then check change: editions, rows, bridges, role descriptions, aliases, names, and status windows either preserve their earlier meaning or state the change. When a check fails, do not patch the label. Treat the claim under the direct governing pattern and repair the value.
 
 ### F.15:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L85642–L86100

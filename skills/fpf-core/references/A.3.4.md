@@ -512,8 +512,3 @@ The slot-relation design keeps the ontic compact. Identity slots recover one bou
 - **Specializes:** the A.3 transformer-constitution family for bounded transformations under declared conditions.
 
 ### A.3.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L7137–L7606

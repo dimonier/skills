@@ -309,8 +309,3 @@ Resisted distortions:
 - **Used by:** patterns that need a positive temporal aspect without making a temporal-claim adequacy judgement.
 
 ### C.27.TA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L52191–L52461

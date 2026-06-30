@@ -29,8 +29,3 @@ FPF's non-goals are short:
 - it is not a substitute for evidence or accountability.
 
 Its positive scope is broader than those refusals. FPF is a compact language for keeping hard work honest enough to act on and alive enough to improve.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L1046–L1064

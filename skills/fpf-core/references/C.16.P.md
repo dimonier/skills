@@ -278,8 +278,3 @@ This row blocks scalar verdicts without declared scale and admissible use. It do
 - Exact evidence, assurance, gate, work, decision, causal-use, release, benchmark, and publication patterns govern their own claims.
 
 ### C.16.P:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L43618–L43866

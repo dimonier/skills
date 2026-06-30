@@ -148,8 +148,3 @@ The pillars are distilled from systems engineering, philosophy of science, softw
 *These pillars are not a cage but the load‑bearing columns of a workshop where ideas can be safely built, dismantled, and evolved.*
 
 ### E.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L63602–L63724

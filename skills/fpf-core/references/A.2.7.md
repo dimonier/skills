@@ -376,8 +376,3 @@ Do not use `RoleRelationStructure@BoundedContext` or a role-algebra lens as the 
 Those values may cite or justify a role relation. They do not become role relation structure by adjacency.
 
 ### A.2.7:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L4938–L5288

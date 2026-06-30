@@ -307,8 +307,3 @@ These rows document transfers from source practice into C.32.ADA. Keep a source 
 C.32.ADA closes when `ArchitectureDecisionAdequacyEvaluation@Project` declares the use and stop condition, cites the evaluated decision relation and optional projection, evaluates every coordinate with an E.21 value label and rationale or grounded not-triggered status, names weakest blocking coordinates, assigns repair patterns and repair instructions, and avoids average-score replacement.
 
 ### C.32.ADA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L61516–L61779

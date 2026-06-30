@@ -359,8 +359,3 @@ When a DRR relies on a source document, workstream plan, campaign queue, externa
 * **Coordinates with:** `E.23` when one `DRR` is being improved through repeated quality-improvement passes. `E.9` keeps the `DRR` kind and decision-record form; `E.9.DA` supplies the decision-adequacy object-under-improvement evaluation when adequacy is being improved; `E.23` governs the repeated method rather than turning the DRR into final pattern prose.
 
 ### E.9:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L66779–L67124

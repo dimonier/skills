@@ -764,8 +764,3 @@ This pattern is scoped to **action-invitation repair and endpoint continuation**
 Bridge stances, articulation-state governing patterns, authority-reference fields, and language-state facet characteristics are **referenced** by this pattern but remain governed by `F.9.1`, `A.16`, `C.2.LS`, `C.2.4`, `C.2.5`, `C.2.6`, and `C.2.7`.
 
 ### A.6.A:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L14759–L15492

@@ -504,8 +504,3 @@ The design puts the positive carry-through table first because repeated negative
 - `C.30`, `C.30.AD`, `C.30.ASV`, `C.32.P2S`, `C.31`, `A.6.M`, `A.6.F`, `E.10`, `E.17`, and `E.17.EFP` govern architecture, architecture-description, structural-view, problem-to-structure architecturing, reusable-structure, module-interface, function, wording-use, publication, and publication-use claims.
 
 ### E.18.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L76510–L76969

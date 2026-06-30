@@ -715,8 +715,3 @@ Useful outputs:
 Do not write "the boundary is quantum-like" as one unL/A/D/E-classified claim. The action is: split the claim, classify the pieces, then decide whether `C.26.1` still has a remaining job.
 
 ### A.6.B:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L8997–L9672

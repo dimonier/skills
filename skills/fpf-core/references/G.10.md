@@ -442,8 +442,3 @@ This pattern inherits order/illumination, evidence, and bridge/penalty legality 
 **Constrains:** tooling exports are downstream; serialisation and repository integration are explicitly non‑normative here.
 
 ### G.10:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L92365–L92765

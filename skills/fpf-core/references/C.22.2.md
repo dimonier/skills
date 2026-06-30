@@ -713,8 +713,3 @@ For P2W carry-through, use `E.18.1` with the accepted problem-side material and 
 - Coordinates with: `C.11`, `C.18`, `C.19`, `C.22.1`, `A.15`, `A.15.5`, `A.21`, `E.16`, `G.6`, `G.11`, `A.10`, `B.3`, `E.17`, `E.17.ID.CR`, `A.6.3`, `F.9`, `E.18`, `E.18.1`, `C.32.P2S`, and `E.10.MOVE`. Use `C.32.P2S` only when a problem-side record exposes architecture pressure that must continue into selected structures, candidate synthesis, decision, realization, actual-structure feedback, or refresh.
 
 ### C.22.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L47033–L47684

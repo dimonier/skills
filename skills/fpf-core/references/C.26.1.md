@@ -335,8 +335,3 @@ Worked-use-slice discipline from these rows:
 - Name posture: `Probe-Coupled Boundary Interaction` names a boundary and probe relation, not `Entangled Boundary`, `CoupledBy(...)`, `Interaction Field`, `State-Changing Communication`, or a reusable relation token. Relation wording remains local until `A.6.P` and `F.18` ratify it.
 
 ### C.26.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L49253–L49551

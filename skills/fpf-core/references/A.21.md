@@ -465,8 +465,3 @@ Gate-publication result in attestation-shaped practice: green tiles, readiness b
 * **A.21, G.6, and G.11 →define→ equivalence for decision stability.** Gate decisions are stable only under the declared equivalence witness; evidence-provenance or refresh implications use `G.6` or `G.11` where present.
 
 ### A.21:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L30145–L30568

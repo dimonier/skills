@@ -165,8 +165,3 @@ The pattern also keeps SoTA scaling practice from overriding FPF ontology. Scali
 > `C.18.1` supplies scale-window and scaling-law evidence for `C.29` when a mathematical lens claims scale behavior, universality, knees, exponents, coarse-graining validity, or diminishing returns. `C.29` cannot treat mathematical compression as scalable without an SLL or BLP-compatible scale-window account where scale is load-bearing. If no scale claim is live, `C.29` uses a local stop condition rather than opening scale-law work.
 
 ### C.18.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L45590–L45723

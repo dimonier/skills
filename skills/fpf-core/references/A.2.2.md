@@ -325,8 +325,3 @@ Do not use `U.Capability` as the current object for:
 These values may be related to a capability claim. They do not become the capability by adjacency.
 
 ### A.2.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L2623–L2922

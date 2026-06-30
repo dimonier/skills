@@ -28,8 +28,3 @@ FPF is a thinking-oriented architecture. It asks:
 This is the difference between a catalogue and an instrument. A catalogue can tell you that a method description and performed work are different kinds of things. FPF also asks what happens in the project when those two are confused, what written form should separate them, what evidence or decision remains blocked, and what pattern should be used next.
 
 The ontology therefore serves action guidance. FPF does not replace domain ontologies, mathematics, standards, or evidence. It gives them a place in project reasoning so they can be used without collapsing local meanings or publication forms.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L865–L882

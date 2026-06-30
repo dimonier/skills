@@ -398,8 +398,3 @@ Repair the source-restoration note when source currentness, revocation, source o
 Refresh before allowing the encountered source candidate to guide release, safety, compliance, delegated role-assignment or role-state, contested source, cross-context reuse, work-result reliance, external-impact reliance, or irreversible work. Stop the refresh at the smallest changed source-restoration value: encountered source candidate, source episteme, source publication, governing source, source-currentness relation, role-state record, credential-status record, context-state record, revocation record, gate relation, evidence relation, assurance relation, copied-source relation, generated-source relation, or work-governed relation.
 
 ### A.15.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L22759–L23116

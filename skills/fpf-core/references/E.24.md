@@ -498,8 +498,3 @@ Lower the decision before use when E.24 cannot decide among durable ontic, local
 - **Used by:** DRRs and pattern authors when repeated slot-relation-shaped material is being considered as either a durable ontic or a local use frame.
 
 ### E.24:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L79102–L79570

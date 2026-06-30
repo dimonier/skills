@@ -282,8 +282,3 @@ Publish: UTS twin labels; RSCR triggers on method edition change.
 ```
 
 ### C.21:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L46394–L46647

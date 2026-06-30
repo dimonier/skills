@@ -346,8 +346,3 @@ Extension patterns in Part C (Sys‑CAL, KD‑CAL, Kind-CAL, LCA‑CAL) plus the
 > “Before you name anything, **fix the context of meaning**. A *Context* is a **U.BoundedContext** tied to a specific canon—*BPMN 2.0*, *PROV‑O*, *ITIL 4*, *SOSA/SSN*, *IEC 61131‑3*, *OWL 2*. Words are **local to Contexts**: *process (BPMN)* is a workflow graph, *activity (PROV)* is a run‑time occurrence, *service (ITIL)* is a promise vocabulary. Cut the landscape so each unification line sees **at least three domain families**, with **one‑screen Cards** per Context (scope gist, time stance, trip‑wires). **Do not bridge** Contexts here—just write down the itch to bridge as an **F.9** bridge question. Keep the cut **small enough to remember**. With Contexts fixed, harvesting (F.2), local clustering (F.3), role template or status templates (F.4), and explicit Cross‑context bridges (F.9) become straightforward—and you avoid naming ghosts that come from words floating without walls.”
 
 ### F.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L80752–L81074

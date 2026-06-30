@@ -315,8 +315,3 @@ Source-use boundary: external labels are evidence for local meaning or common pr
 **Does not replace.** Direct evidence-use, status-use, requirement-use, source-use, publication-use, assurance, gate, decision, relation-signature, method, work, or architecture patterns.
 
 ### F.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L82026–L82315

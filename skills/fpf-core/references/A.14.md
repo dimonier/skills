@@ -313,8 +313,3 @@ A.14 exists because part-whole words carry identity, aggregation, measure, time,
 - **Used by:** architecture, description, evidence, and U-kind admission patterns when their structural claim depends on a clean parthood relation.
 
 ### A.14:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L20942–L21230

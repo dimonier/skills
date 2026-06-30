@@ -377,8 +377,3 @@ The triad “promise, utterance, and commitment” is useful for language discip
 * A.15.1 (`U.Work`) and evidence patterns: adjudication hooks refer to evidence in work, not to text.
 
 ### A.2.8:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L5290–L5631

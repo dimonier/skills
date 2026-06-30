@@ -28,8 +28,3 @@ The point is simple: complex reasoning usually needs several capability families
 This stack is not a sequence that every project must follow. It is a way to notice missing capability. A team may enter through architecture and discover that it lacks evidence. It may enter through naming and discover that it has not named the project thing under concern. It may enter through mathematical modeling and discover that it lacks declared characteristics for comparison.
 
 The learning value is that FPF can be taught as a set of capabilities, not only as a list of pattern ids.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L1028–L1045

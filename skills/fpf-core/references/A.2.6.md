@@ -913,8 +913,3 @@ A.2.6 needs a scope mechanism because scope is neither evidence freshness nor ex
 * Capability refits that preserve the set (unit changes) are **Refit**, not Δ(WorkScope).
 
 ### A.2.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L4049–L4936

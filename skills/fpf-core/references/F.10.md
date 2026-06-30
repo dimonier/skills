@@ -274,8 +274,3 @@ This keeps Part F naming and bridge machinery useful while letting A.10, B.3, C.
 * **Precision-restoration owners:** When source wording says "status role", "approved role", "standard role", "validated means compliant", "green means ready", or another status-shaped phrase hides target kind, status family, window, bridge, source, or direct-pattern use, use `A.6.RSIR` for relation-slot or role-like slot recovery and `E.10.ARCH` for ontology-first repair architecture.
 
 ### F.10:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L84126–L84376

@@ -895,8 +895,3 @@ C.2.1 echoes current work on formal languages as cognitive tools, operational ic
 Together, these relations make `U.EpistemeSlotRelation` the **single normative core** for thinking about epistemes, their EntityOfConcern mapping, their representations, and their transformations across FPF.
 
 ### C.2.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L36655–L37521

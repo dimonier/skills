@@ -225,8 +225,3 @@ Guards must be **reproducible** and **auditable**: same `slice` ⇒ same members
 | **C3.2‑S‑02** | `slice` **specifies `Γ_time`**; membership **must not** rely on implicit recency.  |
 
 ### C.3.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L40676–L40875

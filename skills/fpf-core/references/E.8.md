@@ -582,8 +582,3 @@ International and industry standards often speak in terms of *conformance criter
 * **Constrains:** All patterns; the DRR template references the same section order.
 
 ### E.8:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L66029–L66597

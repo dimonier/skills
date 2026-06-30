@@ -262,8 +262,3 @@ These rows document transfers from source practice into C.32.ADR. Keep a source 
 C.32.ADR closes when `ArchitectureDecisionRecordProjection@Project` cites the decision relation and decision description, names carrier, readers, scope, status, section-function mapping, decision outcome, rationale, consequences, method and work refs when live, confirmation or eval exit, publication boundaries, and update or supersession condition.
 
 ### C.32.ADR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L61294–L61514

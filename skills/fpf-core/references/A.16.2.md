@@ -252,8 +252,3 @@ Add three checks to the base retreat matrix:
 
 These checks keep `A.16.2` tied to explicit recovery and retirement rather than narrative smoothing.
 ### A.16.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L24240–L24463

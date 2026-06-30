@@ -474,8 +474,3 @@ EFEM does *not* prescribe a specific calculus (deductive, probabilistic, latent�
   E.17.0 `U.MultiViewDescribing` (families of Description epistemes, including Description epistemes admitted for specification use, under Viewpoints); E.17 (MVPK — publication as species of Viewing/EFEM); E.18 (structural reinterpretation and other transformation-flow relations over epistemes); KD‑CAL/LOG‑CAL rules that reason about episteme transforms categorically.
 
 ### A.6.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L10690–L11135

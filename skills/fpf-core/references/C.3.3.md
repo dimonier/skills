@@ -259,8 +259,3 @@ Use the **`Guard_XContext_Typed`** macro (Annex C.3.A), which requires **both br
 * **Templates.** ESG/Method templates should expose fields for **Scope Bridge (CL)** and **KindBridge (`CL^k`)** with loss notes & definedness.
 
 ### C.3.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L40877–L41111

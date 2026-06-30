@@ -229,8 +229,3 @@ These rows document transfers from source practice into C.32.HCS. Keep a source 
 C.32.HCS closes when the practitioner can name a holon-family starter pack, starter architecture-characteristic heads, likely bearers, likely Q-Bundle boundaries, and first project questions for `C.32.ACS`.
 
 ### C.32.HCS:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L59572–L59767

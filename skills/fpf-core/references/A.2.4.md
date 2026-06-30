@@ -341,8 +341,3 @@ Repair the use when a neighboring relation is actually current: performed work, 
 Refresh the use when the episteme edition, target claim, grounding holon, claim scope, theory version, relevance window, source-currentness relation, status source, proof check, measurement trace, method description, or assurance-use relation changes.
 
 ### A.2.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L3398–L3713

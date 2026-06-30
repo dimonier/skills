@@ -82,8 +82,3 @@ This pattern operationalizes the **Principle of State Explicitness (P-9)**. By g
 *  **Provides the states for:** `B.4 Canonical Evolution Loop`.
 
 ### B.5.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L35720–L35778

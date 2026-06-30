@@ -32,8 +32,3 @@ The useful order is not a required sequence. The practical stance is:
 In a laboratory, an anomaly is not merely noise. It may be a prompt for candidate explanations, followed by evidence and model comparison. In a product team, a concept sketch is not a meeting souvenir. It can become a reviewable knowledge object, which FPF calls an episteme, with scope, candidate value, and evidence needs. In operations, an emergency workaround may be a useful abductive move, but it must later be brought back into evidence, assurance, and work records.
 
 This is one of FPF's central payoffs: a team can be inventive without losing its audit trail, and conservative without closing down imagination too early.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L748–L769

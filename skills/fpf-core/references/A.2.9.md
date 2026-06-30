@@ -351,8 +351,3 @@ This also improves modularity:
 * **A.6.C (Contract unpacking)** as the “utterance/instituting act” hook that prevents episteme-as-agent claims and improves provenance.
 
 ### A.2.9:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L5633–L5950

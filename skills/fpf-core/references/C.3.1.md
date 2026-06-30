@@ -148,8 +148,3 @@ Formal type systems, ontology engineering, and bounded-context modeling all dist
 - **Does not replace:** C.3.2 intent and membership, C.3.3 bridges, or E.24-family U-kind governance.
 
 ### C.3.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L40551–L40674

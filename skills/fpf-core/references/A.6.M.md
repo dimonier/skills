@@ -388,8 +388,3 @@ Older or local sources may serve as lineage or worked examples only when the row
 | `A.10`, `B.3`, `A.20`, `A.21`, `C.28`, `E.20`, `G.5`, `C.11` | Evidence, assurance, gates, causal use, mechanism suites, set-return selection, and local decisions use their governing patterns; they are not A.6.M claims. |
 
 ### A.6.M:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L15875–L16218

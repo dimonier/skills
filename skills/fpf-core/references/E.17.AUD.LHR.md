@@ -377,8 +377,3 @@ Read `E.17.AUD.LHR:6 - Boundary dispositions` through this table only after the 
 - `E.17.ID.CR ComparativeReviewUnit`
 
 ### E.17.AUD.LHR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L75248–L75611

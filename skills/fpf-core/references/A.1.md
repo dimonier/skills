@@ -376,8 +376,3 @@ Treat a stronger source as current only when it changes the root split among `U.
 - **Used by:** patterns that need a grounding holon, admitted holon kind, acting system, non-agentive episteme, part-whole relation, collection-versus-collective distinction, delimitation relation, or boundary-crossing relation.
 
 ### A.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L1323–L1671

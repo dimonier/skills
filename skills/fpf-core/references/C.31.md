@@ -407,8 +407,3 @@ Older or local sources may serve as lineage or worked examples only when the row
 | `G.2`, `G.5`, `C.11` | Govern SoTA basis, set-return selection, and local decision claims. Candidate-generation or architecture-synthesis claims stay outside C.31 unless `G.5`, `C.11`, or a named architecture-synthesis governing pattern governs that claim; C.31 records only modularity or reusable-structure characteristic use and report-only boundaries. |
 
 ### C.31:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L57969–L58334

@@ -269,8 +269,3 @@ Repair the WorkPlan when a subsequent source changes the intended method, planne
 Refresh before relying on a WorkPlan for cross-context coordination, budget reservation, release preparation, gate preparation, work-entry readiness, evidence-reference use, performed-work entry, result measurement, or P2W carry-through. If the claim being made after refresh is work-entry readiness, performed work, evidence, assurance, gate passage, publication use, declarative representation, or source restoration, use the governing pattern for that relation and keep only the returned WorkPlan relation here.
 
 ### A.15.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L22109–L22355

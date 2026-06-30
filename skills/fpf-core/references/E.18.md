@@ -617,8 +617,3 @@ When a transformation-flow structure contains a cycle, budgeted retry path, moni
 Agent-loop diagrams often contain both kinds. A monitor/retry/escalate loop over physical execution state may be a valid `TransformationFlowStructure` and may include an `A.21` gate, but it does not prove that the controlled object improved. If the harness itself is improved, `E.23` governs that object-version improvement; if the harness only runs work, the A.15 family governs the work occurrence.
 
 ### E.18:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L75932–L76508

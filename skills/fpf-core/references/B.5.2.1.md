@@ -207,8 +207,3 @@ Contexts *may* monitor these—*not* as gates, but to improve practice:
 * **Respects:** **A.11** (no kernel growth beyond CHR template import + Method).
 
 ### B.5.2.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L36271–L36441

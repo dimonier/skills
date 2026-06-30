@@ -138,8 +138,3 @@ Knowledge frameworks that ignore time degrade silently. By embedding entropy acc
 *  **Enables:** Proactive maintenance planning within the Canonical Evolution Loop (B.4) and provides a dynamic risk input for ethical and strategic decision-making (Part D).
 
 ### B.3.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L34804–L34920

@@ -485,8 +485,3 @@ This pattern’s separation of **decision rules**, **acceptance thresholds**, **
 * [ ] If authoring tools materially shaped rule/rung content, cite `AuthoringMethodDescriptionRefs?[]` (edition‑pinned) for cross‑stance traceability.
 
 ### G.8:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L91385–L91852

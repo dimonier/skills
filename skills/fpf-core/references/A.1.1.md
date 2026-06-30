@@ -302,8 +302,3 @@ Source use and currentness: domain-driven bounded-context practice is the select
 ### A.1.1:13 - Footer Marker
 
 ### A.1.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L1673–L1952

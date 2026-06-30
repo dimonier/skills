@@ -255,8 +255,3 @@ This pattern is deliberately thin. B.2 owns whole reidentification; C.2.1 owns e
 - **Contrasts with:** `B.2.2` for system-result MHT and `B.2.4` for capability and functioning whole-reidentification evidence.
 
 ### B.2.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L33447–L33678

@@ -383,8 +383,3 @@ Refresh this pattern when current work on constructor theory, process theory, ef
 * **Informs:** `E.18` and `E.18.1` when transformation-flow-structure or P2W wording must keep flow-structure descriptions, graph/path mathematical expressions, method claims, and work claims separate.
 
 ### A.3.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L6162–L6522

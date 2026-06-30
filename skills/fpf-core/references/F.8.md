@@ -408,8 +408,3 @@ Source-use boundary: a source tradition may supply candidate words and current p
 Do not ask for a better name first. Ask what the expression is trying to name, whether that value already exists locally, whether any cross-context row admits the intended use, and whether the expression is really a role, status, evidence, policy, source, slot, method, work, or kind case. Mint only after reuse, alias, direct-pattern naming, and row options have failed.
 
 ### F.8:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L82966–L83349

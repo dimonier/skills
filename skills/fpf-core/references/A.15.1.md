@@ -465,8 +465,3 @@ Repair the work record when a subsequent source changes the work interval, perfo
 Refresh before cross-context acceptance, aggregation, comparison, result measurement, release reliance, gate use, evidence use, assurance use, QD or OEE archive use, or P2W carry-through use. If the claim being made after refresh is no longer performed work, use the governing pattern for that relation and keep only the returned `U.Work` reference here.
 
 ### A.15.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L21667–L22107

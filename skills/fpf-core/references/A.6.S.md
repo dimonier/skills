@@ -480,8 +480,3 @@ Grounding pointers in the current FPF draft (for alignment while integrating):
 * Claim register and quadrant separation discipline (A.6.B).
 
 ### A.6.S:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L18477–L18914

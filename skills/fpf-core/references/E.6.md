@@ -121,8 +121,3 @@ Primacy** and **P‑1 Cognitive Elegance** without weakening rigour.
 * **Instantiates pillars:** P‑1, P‑2
 
 ### E.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L65845–L65943

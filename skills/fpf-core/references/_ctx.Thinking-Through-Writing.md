@@ -29,8 +29,3 @@ The medium is not prescribed. A team may use paper, markdown, a wiki, a spreadsh
 This is especially important for AI use. An AI assistant can generate fluent prose faster than a team can inspect it. FPF forms give the generated material places to land: candidate set, evidence gap, description-use note, architecture question, term sheet row, source-return condition, or blocked-use result. Without such forms, the output often remains persuasive text rather than project reasoning.
 
 Thinking through writing is not paperwork. It is how thought becomes durable enough to challenge, improve, and responsibly act on.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L846–L864

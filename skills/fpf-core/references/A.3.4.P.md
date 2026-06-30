@@ -280,8 +280,3 @@ SoTA use is conservative: this pattern relies on the current FPF settlements alr
 - **Specializes:** `A.3.4` for wording-use precision restoration around situations of change.
 
 ### A.3.4.P:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L7608–L7851

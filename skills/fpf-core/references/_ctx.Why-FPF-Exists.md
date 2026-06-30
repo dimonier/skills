@@ -22,8 +22,3 @@ FPF exists to prevent that kind of drift while preserving useful movement. It do
 The practical ambition is simple: keep difficult reasoning alive long enough to improve it. A project should be able to generate alternatives, preserve uncertainty, compare options, choose locally, publish decisions, reopen stale claims, and repair language without losing the thing the reasoning was about. FPF calls that thing the EntityOfConcern.
 
 For humans, FPF gives a shared working memory for complex reasoning. For AI agents, FPF gives typed constraints, named distinctions, and checkable written forms so generated text can be tested against the kind of work it claims to perform. For organizations, FPF gives a way to make reasoning transfer across teams without pretending that all teams use the same local meanings.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L736–L747

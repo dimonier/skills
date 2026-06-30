@@ -286,8 +286,3 @@ The current set/space reading terms should read plainly as follows:
 - Not this glossary-side interpretive-view stack when the real move is to invent one new search doctrine, one new outcome metric family, or one new publication surface. Those decisions stay with the governing patterns for the object itself.
 
 ### A.0:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L1075–L1319

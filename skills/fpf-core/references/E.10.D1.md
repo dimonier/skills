@@ -206,8 +206,3 @@ dependencies:
 * **RSCR‑DCTX‑E03.** Multilingual updates follow D‑CTX‑7 (split/merge rationale recorded informatively).
 
 ### E.10.D1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L69798–L69975

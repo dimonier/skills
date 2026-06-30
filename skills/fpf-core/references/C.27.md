@@ -2011,8 +2011,3 @@ mathematical theater, physics ontology, false QL relevance, or unassigned
 compliance claims.
 
 ### C.27:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L50227–L52189

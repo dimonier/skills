@@ -222,8 +222,3 @@ Each expanded entry-disambiguation case keeps recoverable:
 - **What not to infer:** a randomized procedure is not automatically counterfactual support; a simulation is not realized counterfactual data; a target-trial phrase is not proof of identification; a fairness metric is not causal fairness; a method benchmark is not comparable if methods sit on different causal rungs or estimands; and a causal support record does not by itself create a duty, promise, commitment, release gate, or admissibility predicate.
 
 ### I.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L93954–L94162

@@ -159,8 +159,3 @@ In summary, A.17 is the linchpin that turns a loose collection of measurement pr
 -  **Anticipates:** **E.10 Lexical Discipline** rules – A.17’s enforcement of a single term and controlled aliases is a concrete instance of the lexical uniformity mandated in E.10. It also paves the way for **F.7 Concept-Set Bridges** in Unification patterns, since external ontologies for quantities (ISO 80000, QUDT, etc.) can be mapped cleanly onto FPF Characteristics now that the term is fixed. In short, A.17 is a foundational lexicon pattern that a) ensures internal consistency and b) simplifies alignment with external standards for measurable properties.
 
 ### A.17:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L24465–L24599

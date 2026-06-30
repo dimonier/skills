@@ -560,8 +560,3 @@ Useful outputs:
 - a C.26.3 note only when service viability is the actual envelope-regulation problem.
 
 ### A.6.8:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L17522–L18040

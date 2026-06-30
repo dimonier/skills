@@ -414,8 +414,3 @@ Queue `7b` relation note: `C.33`, `C.34`, and `C.35` govern architecture-specifi
 Does not replace: `C.30.P` or `C.30.STRAT` wording-use precision restoration, `C.30` for grounded architecture adequacy and conditional architecture-description use, `C.29` for mathematical-lens use, `C.16` for measurement and characterization, `C.28` for causal-use relation, `B.3` for assurance, `A.10` and `G.6` for evidence, `A.20` and `A.21` for gates and release, `A.15` for work, `C.11` for decisions, or `E.17` for publication.
 
 ### A.22:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L30570–L30945

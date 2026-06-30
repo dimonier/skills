@@ -290,8 +290,3 @@ This pattern does not introduce new external SoTA sources beyond the source uses
 `C.2.1`, `E.17`, `C.2.P.DR`, `A.10`, `B.3`, `G.6`, `F.10`, and `C.28` govern episteme, publication, declarative-representation, evidence, assurance, provenance, status, and causal-use cases.
 
 ### A.6.RSIR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L14520–L14757

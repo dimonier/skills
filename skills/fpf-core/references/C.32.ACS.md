@@ -301,8 +301,3 @@ These rows document transfers from source practice into C.32.ACS. Keep a source 
 C.32.ACS closes when the project can name the starter-pack row or source-catalogue line, draft project criteria rows, optimization indicators, monitored guardrails, context-only rows, bearers, scale forms, current reading or no-reading reason, protected counter-characteristics, receiving uses, and source-return conditions. The next architecture work then belongs to the receiving pattern.
 
 ### C.32.ACS:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L59769–L60032

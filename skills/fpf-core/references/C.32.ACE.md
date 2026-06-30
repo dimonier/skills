@@ -235,8 +235,3 @@ These rows document transfers from source practice into C.32.ACE. Keep a source 
 C.32.ACE closes when the eval program names evaluated criteria, evaluated candidates or structures, parity frame, eval purpose, scope, eval operation, trigger mode, result form, method refs, proxy risks, protected counter-characteristics, receiving use, and refresh or retire condition.
 
 ### C.32.ACE:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L60034–L60233

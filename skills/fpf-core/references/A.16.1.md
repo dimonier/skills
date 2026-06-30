@@ -321,8 +321,3 @@ A practitioner can test a cue pack with four questions:
 
 Migration from loose signal language should therefore reconstruct not just a vague "signal", but the preserved cue nucleus, its primary witness or anchor, and any directional hints that are already honestly visible.
 ### A.16.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L23945–L24238

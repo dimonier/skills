@@ -133,7 +133,6 @@ def _is_table_sep(line: str) -> bool:
 
 def format_reference(
     unit: ExtractedUnit,
-    spec_filename: str,
 ) -> str:
     pid = unit.pid
     title = unit.title or pid
@@ -160,12 +159,6 @@ def format_reference(
     body = optimize_body(body)
     opt_len = len(body.encode("utf-8"))
     lines.append(body)
-
-    lines.append("")
-    lines.append("---")
-    lines.append("")
-    lines.append(f"> **Source:** `{spec_filename}` lines L{unit.start_line}–L{unit.end_line}")
-    lines.append("")
 
     return "\n".join(lines), raw_len, opt_len
 

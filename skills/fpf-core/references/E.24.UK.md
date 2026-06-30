@@ -335,8 +335,3 @@ The coupling rule keeps the architecture compact: a durable U-kind needs an E.24
 - **Does not replace:** direct subject patterns for method, work, role, episteme, transformation, relation, characteristic, view, measurement, publication, evidence, gate, source, or decision claims.
 
 ### E.24.UK:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L80124–L80431

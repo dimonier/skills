@@ -381,8 +381,3 @@ FPF is a conceptual framework for disciplined creative work, not a data governan
 6. Keep provider/tool specifics in `Extensions` (or Phase‑3 seed) and do not let formats redefine semantics.
 
 ### G.13:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L93606–L93946

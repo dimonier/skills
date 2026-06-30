@@ -242,8 +242,3 @@ Constructional mereology, formal ontology, and model-based engineering all separ
 * A stable CT2R-LOG relation for `tv:groundedBy` links under `validationMode = axiomatic`.
 
 ### C.13:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L42944–L43162

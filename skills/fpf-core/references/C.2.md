@@ -136,8 +136,3 @@ KD‑CAL turns the coarse legacy semiotic picture into **holonic composition** o
 *(No tooling is implied; these are conceptual moves within the calculus.)*
 
 ### C.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L36546–L36653

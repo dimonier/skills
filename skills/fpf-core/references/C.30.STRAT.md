@@ -317,8 +317,3 @@ Internal FPF current practice is the governing source here: `E.10` supplies trig
 Neighboring claims stay with their governing patterns: `A.22` for selected-structure EntityOfConcern, `C.30` for grounded architecture and selected-structure adequacy, `C.30.P` for architecture and structure precision restoration, `C.30.ASV` for structural-view adequacy, `C.30.LCA` for control-structure view adequacy, `A.6.M` for module-interface repair, `A.6.F` for function-use repair, `E.18` for graph, path, crossing, and flow-valuation discipline, `C.16` for characterization, `C.29` for mathematical-lens use, `C.2.P` for source and publication relation repair, and the non-source-label governing patterns named in `C.30.STRAT:4.2`. `C.30.STRAT` governs stratification wording and architecture-operation source-label repair only.
 
 ### C.30.STRAT:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L56121–L56389

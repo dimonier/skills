@@ -341,8 +341,3 @@ Result:
 When names multiply, do not ask for a better name first. Ask what values are being named. Reuse existing roles and status families when they already admit the use. Use role relation structure for role-requirement substitution, incompatibility, qualification, and bundles. Use status windows and values for temporal or evaluative variation. Send capability, method, work, evidence, source, publication, requirement, policy, and assurance qualifiers to their direct patterns. Mint durable names only after the recovered value deserves one.
 
 ### F.14:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L85322–L85640

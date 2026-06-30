@@ -121,8 +121,3 @@ This pattern provides the engine that drives a hypothesis episteme through the `
 *  **Operationalizes:** The core FPF mission of transforming ideas into reliable, evidence-backed holons.
 
 ### B.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L35620–L35718

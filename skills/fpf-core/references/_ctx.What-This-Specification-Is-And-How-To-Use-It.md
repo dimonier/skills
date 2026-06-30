@@ -19,7 +19,7 @@ The reader should not need FPF vocabulary before this Preface becomes useful. He
 
 FPF is not a domain encyclopedia and not a project-management method. It is a framework for making hard project reasoning coherent when many kinds of things are easy to mix: systems, bodies of knowledge and models, architecture, descriptions, publications, concern-specific views, roles, methods, plans, performed work, evidence, decisions, options, commitments, and improvement criteria.
 
-FPF starts from holons: project entities that can be treated as wholes and as parts. A holon can be a physical system, software system, organization, method, publication system, body of knowledge or model, research program, AI-agent arrangement, or another entity selected by a pattern. This is why FPF can be used across domains without flattening every domain into one vocabulary.
+FPF starts from holons: project entities that can be treated as wholes and as parts. For a first reader, a holon is simply the project thing we are treating as a whole with parts for this question. It can be a physical system, software system, organization, method, publication system, body of knowledge or model, research program, AI-agent arrangement, local practice framework, or another entity selected by a pattern. This is why FPF can be used across domains without flattening every domain into one vocabulary.
 
 FPF is written as a pattern language. A pattern is not a tutorial, blog post, checklist bureaucracy, or local process script. It is a reusable action-guidance form. A mature FPF pattern lets a working practitioner recover:
 
@@ -35,8 +35,6 @@ The standard pattern form is governed by `E.8`. Review and refresh discipline is
 
 The FPF `readme` section at the beginning of the specification is the public first-practical-entry section. It starts from recognizable project questions: architecture review, method writing, problem shaping, comparison, evidence, naming, mathematical modeling, quality improvement, and portfolios of current best-known options. This Preface has a different job. It explains why those entries fit into one framework and how FPF can answer them without becoming a pile of disconnected tools.
 
-This Preface is also a reader-facing rendering of FPF's first-principles architecture. It is written for people who need the whole-framework picture before entering exact patterns. It foregrounds holons, descriptions, architecture, evidence, publication, choice, improvement, source currentness, and domain or local framework growth; it deliberately coarsens, omits, or defers individual pattern detail, source history, and many relation records. When a Preface claim becomes load-bearing, return to the governing pattern body.
-
 Use the `readme` when deciding where FPF may first help a project. Use this Preface when you need the whole-FPF picture. Use the Table of Content when you already know the pattern family or need a search-oriented overview. Use the pattern bodies after a project issue has proved important enough to need exact treatment.
 
 The large areas of the specification can be read as one conceptual architecture. You do not need every name in this list yet; it is a map for later lookup:
@@ -51,8 +49,3 @@ The large areas of the specification can be read as one conceptual architecture.
 - Later material carries glossaries, expanded cases, annexes, or other supporting publication units when the compact pattern body is not enough.
 
 That orientation list is only for lookup. The exact rules remain in the pattern bodies.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L677–L717

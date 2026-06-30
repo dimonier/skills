@@ -290,8 +290,3 @@ A practitioner should ask:
 
 Its job is narrower and architectural: to make the heavier trajectory account visible only where lineage, branch, loss, retreat, retirement, and responsibility transfer need to be published as one intelligible package.
 ### A.16.0:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L23687–L23943

@@ -250,8 +250,3 @@ The repeated problem is not a bad word. The repeated problem is an untyped state
 The pattern also protects local fields named by value. `LensUseAdmissibilityValue` and `dynClaimPosture` are acceptable when their governing patterns declare value sets and boundaries. Specification wording is acceptable only as a Description episteme admitted for specification use or refinement under a specification-granting neighbouring pattern named by value; it is not a reusable posture field. Broad `source posture`, `evidence posture`, `assurance posture`, `publication posture`, `release posture`, and administrative forms are not acceptable unless they are repaired into FPF kinds named by value or moved to the project-side administrative, review, dispatch, release or admission, or source-control record that actually governs them.
 
 ### A.19.SPR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L25448–L25654

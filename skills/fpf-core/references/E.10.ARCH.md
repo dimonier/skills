@@ -445,8 +445,3 @@ The selected architecture is lowered or reopened when one of those source lines 
 - `E.11` governs entry-distribution and assigns broad or old-term entry cases to README scenarios, ToC query cues, local Problem frames, or `I.2` expanded entry-disambiguation cases.
 
 ### E.10.ARCH:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L69362–L69766

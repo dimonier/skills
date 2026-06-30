@@ -240,8 +240,3 @@ C.35 rejects the popular shortcut that a generated output, Pareto point, or clus
 - **Boundary:** C.35 governs generated or discovered carrier adequacy before or around C.32 candidate admission. It does not build the candidate palette, select from alternatives, govern reusable generators, define eval programs, measure values, decide projects, supply evidence or assurance, authorize work, or prove realization.
 
 ### C.35:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L62165–L62354

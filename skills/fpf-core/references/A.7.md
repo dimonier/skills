@@ -441,8 +441,3 @@ unitOfDelivery := {
 * Behaviour column shows Method and Work, not the role itself.
 
 ### A.7:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L19282–L19700

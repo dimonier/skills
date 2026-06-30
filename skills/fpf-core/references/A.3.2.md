@@ -328,8 +328,3 @@ Refresh this pattern when current work on process theory, effect systems, execut
 * **Uses for precision restoration:** `E.10`, `E.10.ARCH`, `F.18`, and `C.2.P.DR` when method-like or representation-like wording hides the governed slot.
 
 ### A.3.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L6524–L6827

@@ -453,8 +453,3 @@ Optional panels:
 * `G.12:Ext.OpenEndedTelemetry` to include open‑endedness telemetry (environment diversity / transfer events) using POET‑style and related post‑2015 open‑ended generation families, while keeping such signals in telemetry unless an explicit governing-pattern policy promotes them.
 
 ### G.12:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L93195–L93604

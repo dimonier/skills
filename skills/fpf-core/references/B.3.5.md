@@ -348,8 +348,3 @@ Constructive mereology, assurance-case practice, and model-based engineering all
 **No introduction of order/time** — CT2R‑LOG does **not** define `SerialStepOf` / `ParallelFactorOf` / temporal **phases**; method structure and work ordering belong to `A.3`, `A.15`, and `B.1.5`, while physical or temporal system claims go to `C.1 Sys‑CAL`, `C.27`, or the direct temporal governing pattern when current.
 
 ### B.3.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L34922–L35245

@@ -541,8 +541,3 @@ If all answers are crisp and the invariants EV-0...EV-6 are satisfied, the patte
 | `A.15` and `A.6.1` | Govern performed work and mechanisms that may produce input epistemes or viewing outputs but are not themselves effect-free viewing. |
 
 ### A.6.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L11137–L11648

@@ -538,8 +538,3 @@ A team compares an observational predictor, an intervention optimizer, and a cou
 - If a scalar winner is being claimed where only a selected set or partial order is CSLC-admissible, parity is overclaiming and should publish the CSLC-admissible outcome shape instead.
 
 ### G.9:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L91854–L92363

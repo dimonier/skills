@@ -244,8 +244,3 @@ There is no neutral generic request when a quality result is wanted. The useful 
 | `C.11`, `C.24`, `A.15`, `A.20`, `A.21`, `A.10`, `B.3` | Receive decision, call-planning, work, gate, release, evidence, and assurance claims when a quality result is reused beyond evaluation. |
 
 ### E.22:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L78641–L78854

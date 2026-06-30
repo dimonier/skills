@@ -622,8 +622,3 @@ Repair from same, equivalent, align, and map prose should therefore recover the 
 * **A.6.3.CSC, C.26.1, and C.26.2.** Coarsened renderings and quantum-like state export need these patterns when export loss, probe effects, or no faithful-enough report becomes the live concern.
 
 ### F.9:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L83351–L83931

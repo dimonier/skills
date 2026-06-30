@@ -275,8 +275,3 @@ The shared method is simple: change an object version, re-evaluate it by the exa
 | `E.10`, `A.6.P`, `C.2.P`, `F.18` | Repair load-bearing wording and names introduced by loop records. |
 
 ### E.23:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L78856–L79100

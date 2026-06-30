@@ -366,8 +366,3 @@ These rows document transfers from source practice into C.32. Each row states wh
 `C.32` governs first useful architecture candidate-configuration synthesis for one grounded architecture question. Later C.18 or C.19 front-policy, publication of a selected set, local choice, architecture-description, publication-face, decision, gate, release, and authority-relation claims use their own patterns.
 
 ### C.32:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L59017–L59334

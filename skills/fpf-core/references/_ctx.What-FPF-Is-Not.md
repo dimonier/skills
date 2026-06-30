@@ -23,8 +23,3 @@ FPF is not:
 - a promise that every project needs every pattern.
 
 FPF is most useful when the cost of semantic drift, premature convergence, hidden evidence gaps, weak architecture, vague quality, or unreviewable work is higher than the cost of using a disciplined pattern language.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L623–L635

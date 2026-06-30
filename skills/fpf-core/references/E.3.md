@@ -180,8 +180,3 @@ The chosen taxonomy mirrors FPF’s layered dependency: **Governance** rules how
 > *“A taxonomy sorts principles; precedence gives them order—together they convert debate into design.”*
 
 ### E.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L64000–L64152

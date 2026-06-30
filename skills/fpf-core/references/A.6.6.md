@@ -619,8 +619,3 @@ Umbrella metaphors are disallowed as substitutes for baseRelation tokens; prose 
 Support-looking phrases that mean base-dependence are governed here: select a declared `baseRelation`, name `dependent` and `base`, add scope/time/witnesses as live, and preserve polarity. Support-looking phrases that do not mean base-dependence use the ontology of the governing pattern for that claim rather than becoming `SupportRelation`, `SupportBasis`, or `SupportRecord` buckets.
 
 ### A.6.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L16506–L17079

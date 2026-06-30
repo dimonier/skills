@@ -398,8 +398,3 @@ A.20 result in local-constraint and reproducible-pipeline practice: `CV.Status`,
 Register token classes (Tech) include: `TransformationFlowStructure`, `TransformationFlowMathDescription`, `OperationalGate`, `GateProfile`, `GateCheckKind`, `GateCheckRef`, `DecisionLog`, `FreshnessTicket`, `FinalizeLaunchValues`, `SubflowRef`, `FlowEmbed`, `SentinelId`, `PathSliceId`, `SliceRefresh`, `VALATA`; discriminators use `Base__P2W`, `Base__EvaluatingAndRefreshing`; Tech names are ASCII; aliases for Gamma-time rules and plane lexemes, plus `CLPlane` and `Phi`, follow E.10. A.20 references these tokens; it does not introduce additional LEX classes. **For each published CV check, `GateCheckRef.aspect` is fixed to `ConstraintValidity`.** *MVPK minima for CV faces also include `PathId` and `PathSliceId` where slice-local refresh applies through `E.18`, `A.20`, and `G.11` when refresh wiring is present.*
 
 ### A.20:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L29782–L30143

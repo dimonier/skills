@@ -331,8 +331,3 @@ Smallest source-currentness reopen trigger: reopen this SoTA slice when a newer 
 - **Used by:** DRRs and authoring passes that need to decide whether a recurring construct should become a durable ontic, remain a local use frame, use existing governing patterns, or stay as quote-only or reduced-use source wording.
 
 ### E.24.CD:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L79572–L79876

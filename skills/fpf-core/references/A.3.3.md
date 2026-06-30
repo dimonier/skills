@@ -345,8 +345,3 @@ Lower current use of this pattern when current work on process theory, predictiv
 * **Uses for precision restoration:** `E.10`, `E.10.ARCH`, `F.18`, and `C.2.P.DR` when source labels hide whether the claim is law, method, method description, mechanism, work, evidence, authority, or dynamics.
 
 ### A.3.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L6829–L7135

@@ -326,8 +326,3 @@ Legacy prose that describes abduction as a flash, leap, or raw creative moment m
 
 `B.5.2` ends when one conjecture is published as a prime `L0` hypothesis or when the run is explicitly aborted, deferred, or split. Deduction, evidence acquisition, and later assurance do not belong to the abductive loop itself, even though the loop must prepare a clear downstream-use boundary for them.
 ### B.5.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L35780–L36076

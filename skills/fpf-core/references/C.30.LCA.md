@@ -304,8 +304,3 @@ This also protects the architecture ontology's EntityOfConcern and Description-e
 Neighboring claims stay with their governing patterns: `C.30.STRAT` for stratification and source-label precision restoration, `C.30` for grounded architecture and selected-structure adequacy, `C.30.ASV` for architecture structural-view adequacy, `B.2.5` for supervisor-subholon feedback relation, `E.18` for graph, path, and crossing discipline, `A.3.3` for dynamics claims, `C.27.TA` for temporal-aspect or rate-band structure, `C.27` for authored temporal-claim adequacy, `C.28` for causal use, `A.10` or `G.6` for evidence, `B.3` for assurance, `A.20` or `A.21` for gate and constraint-validity records, `A.15` for work, and `C.29` for mathematical-lens use. `C.30.LCA` governs only the control-structure view relation being claimed.
 
 ### C.30.LCA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L57107–L57374

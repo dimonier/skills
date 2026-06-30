@@ -297,8 +297,3 @@ FPF keeps that discipline without overbuilding A.12. The transformation ontic li
 - **Does not own:** transformation occurrence evidence, work success, evidence independence, part-whole admission, MHT declaration, or the architecture of the larger holon.
 
 ### A.12:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L20516–L20789

@@ -275,8 +275,3 @@ The key distinction is ontological, not lexical. A result system is not a trigge
 - **Contrasts with:** `B.2.3` for MHT-result holons admitted as `U.Episteme` and `B.2.4` for capability and functioning whole-reidentification evidence.
 
 ### B.2.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L33194–L33445

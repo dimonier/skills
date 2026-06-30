@@ -418,8 +418,3 @@ Older or local sources may serve as lineage or worked examples only when the row
 | `G.5`, `C.11` | Govern set-return selection and local decision claims. Candidate-synthesis and selected-set publication claims are governed by `G.5` when set-return or candidate-set publication is being claimed; local decision claims are governed by `C.11`; RSA does not govern candidate-synthesis, selected-set, or decision use. |
 
 ### C.31.RSA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L58336–L58715

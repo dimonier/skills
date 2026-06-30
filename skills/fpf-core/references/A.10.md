@@ -454,8 +454,3 @@ Do not let the label `quantum-like` carry evidence weight by itself. The evidenc
 > If a mathematical lens needs evidence relation, write the evidence-provenance path, source currentness, provenance, and any model-card or datasheet evidence use in `A.10`. A `C.29` output may state only the C.29-local lens-use value for the mathematical-lens use claim; it is not an evidence-provenance path, currentness proof, provenance record, or evidence-carrier substitute. Assurance or release confidence goes to `B.3`; measurement construction or comparability goes to `C.16`.
 
 ### A.10:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L19956–L20368

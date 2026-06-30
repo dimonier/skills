@@ -151,15 +151,10 @@ First inspect: `G.0`, `G.1`, `G.2`, `G.5`, `G.10`, `G.11`, `C.18`, `C.19`, `A.19
 
 Use this when a team needs its own FPF-grounded guide for a domain, organization, role context, or local practice, such as a hydroponic-cucumber framework, neural-network architecture framework, enterprise architecture-review framework, or Codex-process framework.
 
-FPF helps you keep the FPF Core, domain principle framework, local practice framework, source pack, selected pattern set, relation records, edition dependencies, publication/access carriers, quality loop, and refresh route from collapsing into one all-in-one carrier, one callable route, or one useful checklist. This is the normal adoption path when a group wants FPF for its own field without turning local policy into a Core rule.
+FPF helps you keep the FPF Core, domain principle framework, local practice framework, source pack, selected pattern set, relation records, edition dependencies, publication units, quality loop, and refresh route from collapsing into one local monolith or one useful checklist. This is the normal adoption path when a group wants FPF for its own field without turning local policy into a Core rule.
 
 Typical first result: a family-and-structure map or principle-framework architecture decision that names the framework edition, bounded context, FPF Core dependency, selected first patterns, relation and publication carriers, source pack, quality route, and refresh route.
 
 In the first hour, write the context note, source-pack stub, first PFAD question, provisional name route, one to three pattern candidates, relation rows, first-entry carrier, quality route, and refresh trigger. Then open `E.4.DPF` for the full authoring spine.
 
-First inspect: `E.4`, `E.4.FPF` when the form of FPF itself is live, `E.4.PFAD`, `E.4.DPF`, `E.4.DPF.DA`, `E.4.PFR`, `G.2`, `E.8`, `E.11`, `E.17`, `F.18`, and `G.11`.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L437–L584
+First inspect: `E.4`, `E.4.PFAD`, `E.4.DPF`, `E.4.PFR`, `G.2`, `E.8`, `E.11`, `E.17`, `F.18`, and `G.11`.

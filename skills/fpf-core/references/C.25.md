@@ -449,8 +449,3 @@ Useful outputs:
 `C.32.P2S`, `C.32.PAD`, and `C.32.ADA` may cite Q-Bundles as architecture-characteristic inputs, accepted-loss structure, guardrail rows, feedback concerns, or adequacy concerns. C.25 keeps composite quality-family slots, bearer, scope, measures, mechanisms, qualification window, and evidence distinct from the problem-to-structure architecturing flow, project architecture decision relation, and ADR-like publication projection.
 
 ### C.25:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L48239–L48654

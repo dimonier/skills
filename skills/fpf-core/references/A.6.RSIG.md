@@ -436,8 +436,3 @@ and its tempting false neighbor before relation precision or epistemic precision
 - **Supports:** `E.11` as the pattern-language application above this neutral substrate
 
 ### A.6.RSIG:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L8573–L8995

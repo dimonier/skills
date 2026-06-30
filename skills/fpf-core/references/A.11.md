@@ -169,8 +169,3 @@ Constructional-ontology and BORO-like source lines add a second discipline: iden
 - **Does not replace:** universal-core testing in `A.8`, typed claim quantification in `C.3`, or naming discipline in Part F.
 
 ### A.11:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L20370–L20514

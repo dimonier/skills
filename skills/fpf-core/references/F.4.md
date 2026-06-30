@@ -358,8 +358,3 @@ Avoid as live vocabulary:
 A role description is the readable episteme that tells people what a role value means in a bounded context. It helps someone assign, check, name, or compare the role. It does not assign the role, prove capability, define the method, perform the work, grant permission, carry evidence, publish itself, or turn every useful episteme into a role holder.
 
 ### F.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L81692–L82024

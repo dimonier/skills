@@ -309,8 +309,3 @@ When computing **Γ\_epist^compile(E\_synth, Ctx, T)**:
 > **Γ\_epist** preserves provenance, penalizes poor conceptual fit, forbids reliability averaging, and makes context explicit—so that knowledge aggregates are conservative, auditable, and genuinely coherent.
 
 ### B.1.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L31619–L31904

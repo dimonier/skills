@@ -645,8 +645,3 @@ Useful outputs:
 > If a mathematical lens is used as input to assurance, readiness, reliability, release confidence, safety, trust, or engineering justification, write the assurance relation in `B.3` with the relevant evidence-provenance path and residual-use limits. A `C.29` output may be cited only as a lens-use result; mathematical elegance, validation regime, or a declared structure-preserving mapping does not raise assurance by itself. Evidence-provenance paths remain `A.10`; measurement construction and comparability remain `C.16`.
 
 ### B.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L34118–L34718

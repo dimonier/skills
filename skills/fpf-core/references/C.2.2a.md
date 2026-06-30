@@ -274,8 +274,3 @@ Minimum self-check:
 4. Are threshold claims explicit enough for the next position claim or endpoint decision?
 5. If the text compares two contexts, is there a real bridge or only a lexical resemblance?
 ### C.2.2a:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L38541–L38803

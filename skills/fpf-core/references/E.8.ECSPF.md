@@ -205,8 +205,3 @@ The split between `A.19.ECS` and `E.8.ECSPF` preserves the FPF distinction betwe
 | `C.29` | Governs mathematical-lens use when a mathematical structure defines or justifies coordinate choice. |
 
 ### E.8.ECSPF:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L66599–L66777

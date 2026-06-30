@@ -232,8 +232,3 @@ The old `DesignRunTag` warning is preserved as a rule rather than a label: do no
 - Coordinates with `C.27` for temporal-claim adequacy. When mathematical expression is selected, `C.29` governs lens-use adequacy, `E.18` governs selected transformation-flow structure, and `E.18.2` governs mathematical description of that selected structure.
 
 ### B.1.4:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L31906–L32114

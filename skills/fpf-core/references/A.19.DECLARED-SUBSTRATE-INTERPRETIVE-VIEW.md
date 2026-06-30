@@ -503,8 +503,3 @@ That is why `DeclaredSubstrateAtlasView` appears here as one richer interpretive
 - **Does not replace:** substrate declaration, selector outcome publication, shipping metadata, or live candidate-pool / enactment policy.
 
 ### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L26193–L26684

@@ -348,8 +348,3 @@ The pattern adapts BLP-style scale-amenability to architecture: prefer the alter
 - **Precision-restoration relation:** source wording recovered by `E.10`, `E.10.ARCH`, or `C.30.STRAT` is governed by C.31.ASAP only when the recovered claim being made is architecture scale preference over a declared alternative set, scale variable, and scale window.
 
 ### C.31.ASAP:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L58717–L59015

@@ -359,8 +359,3 @@ The **Working-Model layer remains the canonical publication face** for authors a
 * Part F unification practices (context of meaning, bridges, fit levels) by reinforcing the preference for human‑readable labels with explicit alignment notes rather than silent formal substitutions.
 
 ### E.14:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L71165–L71496

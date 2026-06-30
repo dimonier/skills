@@ -331,8 +331,3 @@ Heavier declaration comes only after the ordinary card already holds.
 - `A.20` and `A.21` when approval, gate, or adjudication becomes primary.
 
 ### E.17.AUD.OOTD:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L75613–L75930

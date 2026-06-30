@@ -199,8 +199,3 @@ A new local anchoring mode is justified only when it answers a distinct anchorin
 Anchoring mode often correlates with representation and articulation changes, but it does not govern them. Reject prose that uses `AM.ModelLatent`, `AM.EmbodiedFelt`, or `AM.OperatorLoop` as shorthand for being vague, early, trustworthy, or closed.
 
 ### C.2.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L39743–L39916

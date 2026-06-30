@@ -324,8 +324,3 @@ The role decision is especially important. If every slot position is called a ro
 `E.10`, `E.10.ARCH`, `F.18`, and `A.6.RSIR` govern wording-use triage and naming. They require each relation, signature, interface, role, slot, capability, method, function, concern, or interest word to be resolved under its direct governing pattern, using `A.6.5` when relation-position discipline is the current issue.
 
 ### A.6.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L16220–L16504

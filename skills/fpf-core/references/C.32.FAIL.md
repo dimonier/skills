@@ -281,8 +281,3 @@ These rows document transfers from source practice into C.32.FAIL. Each row stat
 `C.32.FAIL` governs conversion of a recognizable architecture-synthesis failure into one repair action over one architecture object under stress.
 
 ### C.32.FAIL:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L60756–L60990

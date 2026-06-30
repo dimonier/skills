@@ -256,8 +256,3 @@ The readiness question is practical and recurrent: should this intended work ent
 - **Does not replace:** target `U.WorkPlan`, `SlotFillingsPlanItem`, `U.Work`, `GateDecision`, source-restoration relation, resource aggregation, or transformation-flow structure.
 
 ### A.15.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L23118–L23336

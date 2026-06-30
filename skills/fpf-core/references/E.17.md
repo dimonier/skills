@@ -613,8 +613,3 @@ Multi-view publication is needed because one description can serve several conce
 > “We publish every **morphism** under a declared **set of viewpoints** using **MVPK**. Each **view** that claims functorial composition carries the local composition witness; without that witness it stays non-compositional or explanatory-only. Each face **adds no new claims** and pins **unit, scale, reference-plane, and edition** with **CHR and CG** references. **`InteropCard`** views clarify concerns and semantics only (concrete exchange lives outside Part E); **`AssuranceLane`** cites evidence carriers or provenance records through A.10/G.6 when reliance is current. Any cross-Context or cross-plane view cites **Bridge+CL** (Φ→R only). Publication build, render, or upload activity is **`U.Work` on carriers**, not a mechanism change.”
 
 ### E.17:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L73124–L73723

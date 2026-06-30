@@ -354,8 +354,3 @@ These rows document transfers from source practice into C.32.PAD. Keep a source 
 C.32.PAD closes when `ArchitectureDecisionRelation@Project` names the decision subject, candidate basis, selected architecture option or bounded exception, affected structures, architecture-characteristic trade-offs, accepted losses, rationale, consequences, architecture-description refs, method-use and work-split expectations, source-return condition, triggered holon-transition or BOSC refs, triggered structural-information lens uses, publication projection exit, and reopen or supersession conditions.
 
 ### C.32.PAD:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L60992–L61292

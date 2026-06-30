@@ -303,8 +303,3 @@ The pattern is intentionally conservative: it preserves ordinary direct-owner re
 - **Uses:** `B.2.P` when emergence-family, MHT, MET, MFT, synergy, or metric-mirage wording hides which claim kind is current before B.2 is applied.
 
 ### B.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L32659–L32934

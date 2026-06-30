@@ -466,8 +466,3 @@ Each entry follows: **claim → practice → source → alignment → adoption s
 **Publishes to:** UTS (refresh plan, refresh report, deprecations, edition bumps), and to the relevant governing patterns’ publication faces, forms, or units through delegated actions.
 
 ### G.11:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L92769–L93193

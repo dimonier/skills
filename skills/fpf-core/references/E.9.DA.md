@@ -303,8 +303,3 @@ The cheapest place to repair missing FPF decisions is the `DRR`, before pattern 
 | Architecture-facing FPF patterns | Receive architecture, structure, view, graph, publication, and source-use distinctions when the `DRR` decision uses them. |
 
 ### E.9.DA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L67126–L67403

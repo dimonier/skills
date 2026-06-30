@@ -183,8 +183,3 @@ This keeps AT **useful** without risking a “second G” or back‑door quality
 | **AT‑05** | If a Context catalogs AT, it **SHOULD** include it in Kind cards with signature **F**, subkinds, masks, bridges. |
 
 ### C.3.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L41337–L41498

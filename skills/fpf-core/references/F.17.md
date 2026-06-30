@@ -321,8 +321,3 @@ Constrains: any public, Core-facing, durable, or cross-context term sheet row th
 A Unified Term Sheet is not the ontology and not the object. It is the table that lets people reuse the naming decision without guessing. Each row says: what kind of thing is named, which direct pattern governs it, which local senses were used, which bridge is claimed, which Tech and Plain names were selected, and what use the row permits.
 
 ### F.17:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L86387–L86684

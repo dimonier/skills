@@ -482,8 +482,3 @@ This pattern aligns with post‑2015 best practice by:
 **Constrains:** any CAL/LOG/selector usage that consumes CHR (must treat CHR artefacts as typed/legal surfaces, not as prose hints).
 
 ### G.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L89096–L89532

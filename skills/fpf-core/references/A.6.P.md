@@ -876,8 +876,3 @@ Useful outputs:
 > **Mathematical-lens use relation.** `A.6.P` may select a stable mathematical substrate for relation precision restoration: arity, polarity, endpoint discipline, slot structure, and relation-kind repair. This does not by itself apply `C.29`. `C.29 Mathematical Lens Use` applies only when that substrate is used as a FPF-governed mathematical representation of a selected subject, relation, claim, or structure beyond relation repair. `A.6.P` does not by itself license source-domain ontology transfer.
 
 ### A.6.P:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L13692–L14518

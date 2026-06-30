@@ -74,7 +74,7 @@ Keep this token-status split explicit:
 - `SourceToOutcomeRelation` and `DistortionPosture` are local declaration fields. Their field names do not by themselves create one new generic ontology; the declaration requirement is satisfied only when their payload is explicit enough to audit.
 - `SourceSetFamily`, `SourceSetComposition`, and `DerivedViewKind` are local fields in this `SourceSetSpaceSubstrate` declaration. Whether any value later becomes a broader stable head is outside this pattern.
 - `BasePaletteRef`, `OutcomeMapRef`, `SpaceMetricRef`, `TransitionRelationRef`, `BridgeDistortionNote`, `DescriptorMapRef`, and `DistanceDefRef` are guarded neighboring refs or interpretive qualifiers reused here. This pattern may cite them, but it does not redefine them.
-- `carrier` inside `SourceToOutcomeRelation` names the declared line, declared object, or neighboring declared map ref / qualifier ref through which the relation is being realized in this local record. It is not a claim that the thing is `U.PresentationCarrier` or another carrier relation.
+- `carrier` inside `SourceToOutcomeRelation` names the declared line, declared object, or neighboring declared map ref / qualifier ref through which the relation is being realized in this local record. It is not a claim that the thing is `U.Carrier`.
 
 ### A.19.SOURCE-SET-SPACE-SUBSTRATE:0.b - First-minute operator cue and confusion guide
 
@@ -545,8 +545,3 @@ That is why this pattern stops before interpretive views and before publication 
 - **Does not replace:** selector outcome publication, shipping metadata, live pool policy, or enactment planning.
 
 ### A.19.SOURCE-SET-SPACE-SUBSTRATE:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L25656–L26189

@@ -339,8 +339,3 @@ Builds on: `A.1`, `A.2.1`, `A.3.1`, `A.3.2`, `A.15`, `C.18`, `C.19`, `C.20`, `C.
 Coordinates with: `A.3.3`, `C.11`, `C.16`, `C.27`, `C.29`, `C.30`, `C.30.AD`, `C.30.ASV`, and `E.18`.
 
 ### C.36:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L62356–L62656

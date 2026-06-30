@@ -123,8 +123,3 @@ The bridge implements open-ended parsimony: FPF can talk with many domains witho
 * **Used when:** a project term must be carried across bounded contexts, documents, diagrams, models, evidence records, or pattern applications without losing its governed FPF value.
 
 ### B.5.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L36445–L36537

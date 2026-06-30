@@ -496,8 +496,3 @@ As SoTA evolves, new bundles can be added or TEVB can gain a new edition with a 
 * **Non‑goals.** TEVB does not prescribe modelling notations (SysML, BPMN, IEC 61131‑3, etc.), storage formats, or tool APIs. It only fixes the **conceptual viewpoint bundle** that such tools must respect when claiming FPF alignment.
 
 ### E.17.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L72653–L73122

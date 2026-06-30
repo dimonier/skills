@@ -397,8 +397,3 @@ F.6 closes when the project knows whether the current local claim is:
 - or a non-F.6 status, evidence, source, publication, bridge, method, capability, gate, decision, or assurance claim.
 
 ### F.6:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L82317–L82691

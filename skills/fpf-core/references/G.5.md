@@ -716,8 +716,3 @@ Evidence-source clarification: peer-reviewed source references carry the most di
 Architecture discovery boundary: when a generated or discovered structure-bearing output is only a carrier, description, query result, graph, cluster, or search trace, use `C.35` before G.5. Use G.5 only when the live claim is publication of a selected set with selector-policy and selected-set identity.
 
 ### G.5:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L90005–L90681

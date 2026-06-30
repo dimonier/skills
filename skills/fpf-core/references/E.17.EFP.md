@@ -521,8 +521,3 @@ Action result from the explanation-faithfulness and retrieval-evaluation source 
 > When an explanation-facing rendering uses a mathematical lens as part of an explanation, `E.17.EFP` still governs rendering class, source relation, evidence relation, bounded faces, and forbidden downstream uses. The applicable `C.29` output for the stated use (`MathLensUse.LensCandidateNote`, `MathLensUse.OneLine`, `MathLensUse.MiniCard`, or `MathLensUse.FullCard` when required) can be cited only for the mathematical-lens use part: candidate mathematical object, lens mapping mode, preserved and lost structure, exposed invariant or distinction, `LensUseAdmissibilityValue`, bounded use, blocked downstream use, and stop condition. It does not make the explanation faithful, evidence-bearing, or bounded for downstream use by itself.
 
 ### E.17.EFP:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L73725–L74232

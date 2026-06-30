@@ -309,8 +309,3 @@ The pattern stays intentionally narrow. It does not turn every publication-unit 
 - **Boundary consequence:** when the publication unit can no longer stay honest inside this publication-unit stability pattern, apply the neighboring FPF pattern or name the project-side FPF kind and reference named by value instead of treating publication-unit stability as a general explanation, comparison, decision, gate, work, or reliance discipline.
 
 ### E.17.AUD:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L74951–L75246

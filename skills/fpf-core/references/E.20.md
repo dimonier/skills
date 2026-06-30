@@ -447,8 +447,3 @@ Governing-definition-directed authoring is a pragmatic compromise: it does not d
 * Any change set that introduces or revises mechanisms, suites, planned baselines, or wiring in a way that changes citeable loci.
 
 ### E.20:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L77863–L78268

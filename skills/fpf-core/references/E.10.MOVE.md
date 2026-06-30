@@ -255,8 +255,3 @@ The pattern is a child of E.10 because it starts as wording-use restoration. It 
 - **Selected by:** E.10 trigger scan when move or readiness wording has FPF-governed use and no direct governing pattern has already resolved the wording.
 
 ### E.10.MOVE:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L69139–L69360

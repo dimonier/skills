@@ -228,8 +228,3 @@ The pattern specializes `C.30.AD` for built assets because BIM, IFC, asset-infor
 - **Returns authority claims to:** `A.10`, `B.3`, `A.20`, `A.21`, `A.15`, `C.11`, and `C.28`.
 
 ### C.30.AD.BA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L55676–L55871

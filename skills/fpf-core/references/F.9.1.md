@@ -223,8 +223,3 @@ A reviewer can test stance-overlay integrity with five questions:
 
 Legacy prose about things being "really the same", "only a projection", or "just an operational version" should therefore be migrated by recovering bridge kind, direction, `CL`, and loss first, then adding an overlay only if it still adds disciplined interpretive value.
 ### F.9.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L83933–L84124

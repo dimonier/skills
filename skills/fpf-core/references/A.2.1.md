@@ -368,8 +368,3 @@ The open-world slot model is deliberate. FPF should not require dummy windows or
 - `A.6.5` relation-slot discipline. A.2.1 uses it for this assignment relation; it does not become a second slot discipline.
 
 ### A.2.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L2279–L2621

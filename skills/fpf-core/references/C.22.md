@@ -262,8 +262,3 @@ C.22 follows contemporary selector and optimization practice by refusing one uni
 When generating candidate solutions for a **TaskKind**, aim for **“goldilocks”** slots (feasible‑but‑hard) so that the TaskSignature is informative (neither trivial nor impossible); this aligns with **G.1** (goldilocks target, abductive provenance) and ensures the **TaskSignature is informative** (neither trivial nor impossible) for **G.5** selection.
 
 ### C.22:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L46649–L46882

@@ -101,8 +101,3 @@ add new renderers without Core edits.
 * **Instantiates pillars:** P‑1, P‑2, P‑5
 
 ### E.5.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L65602–L65679

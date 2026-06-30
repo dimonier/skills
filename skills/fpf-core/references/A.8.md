@@ -163,8 +163,3 @@ The pattern adapts three current practice lines. Ontology engineering distinguis
 - **Does not replace:** `E.24.UK` for U-kind admission, `A.11` for parsimony, or `C.3` for typed claim quantification.
 
 ### A.8:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L19702–L19840

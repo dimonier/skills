@@ -369,8 +369,3 @@ Worked-slice discipline from these rows:
 - Name boundary: `Viability-Envelope Boundary Regulation` names architecture work over a viability envelope and boundary/action conditions, not `Homeostasis Pattern`, `Allostasis Doctrine`, `Control Ontology`, `Quality Optimization Pattern`, or `Viability Substance`.
 
 ### C.26.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L49896–L50225

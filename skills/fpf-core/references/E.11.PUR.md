@@ -250,8 +250,3 @@ This keeps FPF action-guiding: users can still ask for a first useful move, whil
 - **Selected by:** `E.10.MOVE` when move wording recovers recommended pattern use rather than work, plan, gate, transformation, publication, architecture, or source use.
 
 ### E.11.PUR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L70659–L70880

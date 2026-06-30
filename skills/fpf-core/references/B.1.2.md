@@ -249,8 +249,3 @@ B.1.2 preserves the engineering payoff while requiring holon delimitation, bound
 - **Can contribute evidence to:** `B.2` when system aggregation no longer explains the whole-level claim and whole reidentification is needed.
 
 ### B.1.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L31393–L31617

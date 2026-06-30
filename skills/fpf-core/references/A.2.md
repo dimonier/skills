@@ -353,8 +353,3 @@ This is a compact architecture. It avoids type explosion, but it also avoids the
 **Precision-restoration applications:** If source wording uses "role" for interface, signature, argument, field, parameter, capability, method, function, concern, interest, status, evidence, or publication, apply `A.6.RSIR` only until the governed object or claim kind is recovered, then apply the direct governing pattern.
 
 ### A.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L1954–L2277

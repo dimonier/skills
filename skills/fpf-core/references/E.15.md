@@ -212,8 +212,3 @@ Each operator carries a default **Delta‑Class** and test obligations.
 **Refresh.** Reopen when SoTA (e.g., G‑suite authoring kit or CHR templates) evolves or when LAT misuse is seen in reviews.
 
 ### E.15:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L71498–L71682

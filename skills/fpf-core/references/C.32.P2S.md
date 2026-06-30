@@ -290,8 +290,3 @@ These rows document transfers from source practice into C.32.P2S. Software-syste
 `C.32.P2S` governs one reader-facing problem-to-structure architecturing flow: pressure and structural uncertainty become candidate, selected, expected, realized, and evaluated selected structures with owner-specific return or repair exits named by value.
 
 ### C.32.P2S:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L59336–L59570

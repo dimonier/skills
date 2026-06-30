@@ -347,8 +347,3 @@ This increases both evolvability (stable interface, externalized method semantic
   * `E.20` (governing-pattern discipline) and `F.18` (alias docking) for Phase‑3 canonicalization and ID continuity.
 
 ### A.19.USCM:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L28460–L28786

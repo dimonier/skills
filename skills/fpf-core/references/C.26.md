@@ -637,8 +637,3 @@ This section is intentionally short. It carries operational anchors for using th
 > `C.26` is a C.29-compatible specialization for quantum-like modeling. It carries a pre-filled adequacy profile for QL work: preserved structure includes order, probe, and contextual-probability effects when supported; lost structure includes physical quantum ontology; the canonical stop condition remains `QL-NQ`. A QL-lite note does not inherit a blank full `MathLensUse.FullCard`. A full C.29-compatible profile is needed only when the QL claim is decision-bearing, reusable, publication-bearing, assurance-bearing, bridge-bearing, or formal-model-bearing.
 
 ### C.26:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L48656–L49251

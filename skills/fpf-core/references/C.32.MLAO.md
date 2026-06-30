@@ -307,8 +307,3 @@ These rows document transfers from source practice into C.32.MLAO. Each row stat
 `C.32.MLAO` governs bounded residual-reducing architecture candidate frames. Upstream residual triage and downstream decision, gate, release, publication, or authority-relation claims use their own patterns.
 
 ### C.32.MLAO:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L60487–L60754

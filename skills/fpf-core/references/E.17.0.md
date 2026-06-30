@@ -416,8 +416,3 @@ When defining a new `U.MultiViewDescribing` species or using it in a discipline 
   Viewpoints' stakeholder families and concern entries may mention work-facing roles, holders, assignments, responsibilities, or role names, but those claims remain governed by `A.2`, `A.2.1`, `A.15`, and Part F. MultiViewDescribing does not overload `U.Role` as a slot value in EntityOfConcern and Description-episteme boundary and specification use or episteme slot relations.
 
 ### E.17.0:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L71891–L72279

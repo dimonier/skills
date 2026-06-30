@@ -292,8 +292,3 @@ A local optimum or successful local repair is therefore not treated as whole-arc
 Neighboring claims stay with their governing patterns: `C.30` for grounded architecture and selected-structure adequacy, `C.30.ASV` for structural-view adequacy, `A.22` for structure and structural-view discipline, `C.30.TFS-REL` for architecture-to-transformation-flow relation, `C.30.LCA` for control-structure view relation, `A.6.F` for function-use repair, `A.6.M` for module-interface repair, `C.16` or the local characteristic pattern for the characteristic under evaluation, `C.29` for mathematical-lens use, `C.31.ASAP` for architecture scale-preference, `C.32.P2S` for problem-to-structure carry-through after residual triage, `C.32.MLAO` and `C.32` for residual-reducing candidate work and candidate palettes, `G.5` for selected-set publication, `C.11` for final local choice, `C.28` for causal use, `A.10`, `B.3`, or `G.6` for evidence or assurance, `D.3` for interlevel ethical conflict structure, and `D.4` for mediation and decision use of that structure. `C.30.ILC` governs only cross-scope architecture residual triage.
 
 ### C.30.ILC:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L57376–L57626

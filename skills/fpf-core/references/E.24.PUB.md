@@ -271,8 +271,3 @@ Smallest source-currentness reopen trigger: reopen this SoTA slice when newer on
 - **Used by:** subject patterns that need a thin boundary between the subject ontic, its description, and the publication form without turning the pattern into generic semio instruction.
 
 ### E.24.PUB:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L79878–L80122

@@ -172,8 +172,3 @@ The pattern therefore focuses on the conflict EntityOfConcern: affected objects,
 - Coordinates with `C.30.ILC`, `A.10`, `B.3`, `C.28`, and `C.29` when architecture residual, evidence, assurance, causal, or mathematical-lens claims are current.
 
 ### D.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L63078–L63221

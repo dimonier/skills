@@ -22,8 +22,3 @@ FPF takes a more constructive stance. It does not only say "do not confuse the p
 That is why FPF's discipline around wording and descriptions should not make FPF look like a commission for checking speech. The repair matters, but it is not the center. The center is constructive: build reasoning arrangements in which whole classes of mistakes become harder because the thing under concern, claim kind, evidence path, publication use, decision, and work object are not allowed to collapse unnoticed.
 
 This changes the tone of FPF. It is not a list of warnings. It is a design language for better reasoning. The user should come away not only knowing what not to say, but knowing what to build next: an architecture question note, problem card, comparison frame, characteristic space, evidence-readiness note, naming card, repaired paragraph, modeling note, option portfolio, or improvement loop.
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L834–L845

@@ -412,8 +412,3 @@ Normative.
 **Clarifies:** The KD‑CAL meaning of reliability implicit in C.2:4.1 and the transport clauses referenced across B.3 and C.3.
 
 ### C.2.2:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L38166–L38539

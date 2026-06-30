@@ -504,8 +504,3 @@ Contract and SLA practice also distinguishes the promised content from the oblig
 * **Keep PBS and SBS clean.** *Services are not parts; they are promises.*
 
 ### A.2.3:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L2924–L3396

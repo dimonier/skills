@@ -53,8 +53,3 @@ dependencies:
 **Relations.** Constrains E.5.1 (Lexical Firewall) & E.5.2 (Notational Independence); Depends on E.9 (DRR).
 
 ### E.10.P:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L69768–L69796

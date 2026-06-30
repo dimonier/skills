@@ -173,8 +173,3 @@ The reader needs one place where the adaptation claim stays whole. `C.22` keeps 
 - `CC-C22.1-5` Downstream selector/parity pattern applications **SHALL** cite or consume the same published adaptation-signature field set rather than silently redefining threshold, prior-exposure, transfer, retention, downside, or corridor-entry terms.
 
 ### C.22.1:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L46884–L47031
