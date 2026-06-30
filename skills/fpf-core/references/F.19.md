@@ -269,4 +269,4 @@ Putting `F.19` beside wording-use restoration keeps `E.10` from becoming a phras
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L86290–L86521
+> **Source:** `FPF-Spec.md` lines L87136–L87367

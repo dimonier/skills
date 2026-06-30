@@ -260,4 +260,4 @@ The readiness question is practical and recurrent: should this intended work ent
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L22782–L23000
+> **Source:** `FPF-Spec.md` lines L23118–L23336

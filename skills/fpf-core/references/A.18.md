@@ -186,4 +186,4 @@ In essence, A.18 is the _infrastructure of meaning_ for metrics. It may appear a
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L24265–L24413
+> **Source:** `FPF-Spec.md` lines L24601–L24749

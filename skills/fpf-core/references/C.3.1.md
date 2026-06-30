@@ -152,4 +152,4 @@ Formal type systems, ontology engineering, and bounded-context modeling all dist
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L40213–L40336
+> **Source:** `FPF-Spec.md` lines L40551–L40674

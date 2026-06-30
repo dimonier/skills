@@ -754,4 +754,4 @@ To admit a **capability** for a specific **Work** step at **JobSlice**, the guar
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L41162–L41888
+> **Source:** `FPF-Spec.md` lines L41500–L42226

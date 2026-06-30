@@ -216,4 +216,4 @@ Each operator carries a default **Delta‑Class** and test obligations.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L70652–L70836
+> **Source:** `FPF-Spec.md` lines L71498–L71682

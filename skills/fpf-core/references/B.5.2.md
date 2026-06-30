@@ -330,4 +330,4 @@ Legacy prose that describes abduction as a flash, leap, or raw creative moment m
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L35444–L35740
+> **Source:** `FPF-Spec.md` lines L35780–L36076

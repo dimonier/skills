@@ -339,4 +339,4 @@ The coupling rule keeps the architecture compact: a durable U-kind needs an E.24
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L79278–L79585
+> **Source:** `FPF-Spec.md` lines L80124–L80431

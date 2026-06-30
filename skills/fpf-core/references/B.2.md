@@ -307,4 +307,4 @@ The pattern is intentionally conservative: it preserves ordinary direct-owner re
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L32323–L32598
+> **Source:** `FPF-Spec.md` lines L32659–L32934

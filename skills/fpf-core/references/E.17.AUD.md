@@ -313,4 +313,4 @@ The pattern stays intentionally narrow. It does not turn every publication-unit 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L74105–L74400
+> **Source:** `FPF-Spec.md` lines L74951–L75246

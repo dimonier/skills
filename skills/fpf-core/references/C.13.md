@@ -246,4 +246,4 @@ Constructional mereology, formal ontology, and model-based engineering all separ
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L42606–L42824
+> **Source:** `FPF-Spec.md` lines L42944–L43162

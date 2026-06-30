@@ -253,4 +253,4 @@ B.1.2 preserves the engineering payoff while requiring holon delimitation, bound
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L31057–L31281
+> **Source:** `FPF-Spec.md` lines L31393–L31617

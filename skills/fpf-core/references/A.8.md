@@ -167,4 +167,4 @@ The pattern adapts three current practice lines. Ontology engineering distinguis
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L19366–L19504
+> **Source:** `FPF-Spec.md` lines L19702–L19840

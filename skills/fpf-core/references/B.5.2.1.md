@@ -211,4 +211,4 @@ Contexts *may* monitor these—*not* as gates, but to improve practice:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L35935–L36105
+> **Source:** `FPF-Spec.md` lines L36271–L36441

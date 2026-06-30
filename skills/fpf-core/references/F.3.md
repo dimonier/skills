@@ -347,4 +347,4 @@ Part C Extention Patterns to ground examples and invariants in **Context‑true*
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L80527–L80844
+> **Source:** `FPF-Spec.md` lines L81373–L81690

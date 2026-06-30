@@ -33,4 +33,4 @@ This is why FPF patterns often look strict. The strictness is local. It lets a p
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L764–L782
+> **Source:** `FPF-Spec.md` lines L770–L788

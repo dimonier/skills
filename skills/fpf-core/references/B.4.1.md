@@ -260,4 +260,4 @@ Ask: if the selected route were denied, would the publication still contain enou
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L35055–L35282
+> **Source:** `FPF-Spec.md` lines L35391–L35618

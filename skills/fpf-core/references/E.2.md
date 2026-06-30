@@ -152,4 +152,4 @@ The pillars are distilled from systems engineering, philosophy of science, softw
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L63253–L63375
+> **Source:** `FPF-Spec.md` lines L63602–L63724

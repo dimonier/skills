@@ -33,4 +33,4 @@ Its positive scope is broader than those refusals. FPF is a compact language for
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L1044–L1062
+> **Source:** `FPF-Spec.md` lines L1046–L1064

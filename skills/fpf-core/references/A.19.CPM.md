@@ -358,4 +358,4 @@ Concrete comparator-family SoTA packages are cited through their current Part G 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L28747–L29080
+> **Source:** `FPF-Spec.md` lines L29083–L29416

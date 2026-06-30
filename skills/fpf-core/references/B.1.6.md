@@ -239,4 +239,4 @@ The pattern keeps the useful old `Gamma_work` notation, but only as notation ove
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L32110–L32321
+> **Source:** `FPF-Spec.md` lines L32446–L32657

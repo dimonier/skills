@@ -385,4 +385,4 @@ FPF is a conceptual framework for disciplined creative work, not a data governan
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L92760–L93100
+> **Source:** `FPF-Spec.md` lines L93606–L93946

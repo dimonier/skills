@@ -227,4 +227,4 @@ Legacy prose about things being "really the same", "only a projection", or "just
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L83087–L83278
+> **Source:** `FPF-Spec.md` lines L83933–L84124

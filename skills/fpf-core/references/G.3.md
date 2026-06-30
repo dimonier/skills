@@ -486,4 +486,4 @@ This pattern aligns with post‑2015 best practice by:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L88250–L88686
+> **Source:** `FPF-Spec.md` lines L89096–L89532

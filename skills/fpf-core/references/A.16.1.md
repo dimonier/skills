@@ -325,4 +325,4 @@ Migration from loose signal language should therefore reconstruct not just a vag
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L23609–L23902
+> **Source:** `FPF-Spec.md` lines L23945–L24238

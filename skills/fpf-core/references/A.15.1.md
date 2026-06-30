@@ -469,4 +469,4 @@ Refresh before cross-context acceptance, aggregation, comparison, result measure
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L21331–L21771
+> **Source:** `FPF-Spec.md` lines L21667–L22107

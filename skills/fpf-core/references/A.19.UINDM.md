@@ -311,4 +311,4 @@ By making indicatorization selection‑only, UINDM avoids “semantic alchemy”
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L27835–L28122
+> **Source:** `FPF-Spec.md` lines L28171–L28458

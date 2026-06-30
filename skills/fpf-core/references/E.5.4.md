@@ -110,4 +110,4 @@ while securing Pillars **P‑2, P‑7 Pragmatic Utility, P‑8**.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L64915–L64997
+> **Source:** `FPF-Spec.md` lines L65761–L65843

@@ -768,4 +768,4 @@ Bridge stances, articulation-state governing patterns, authority-reference field
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L14423–L15156
+> **Source:** `FPF-Spec.md` lines L14759–L15492

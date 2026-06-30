@@ -309,4 +309,4 @@ Any example placed in Part C or Part B **must** render its claim through this ca
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L85256–L85539
+> **Source:** `FPF-Spec.md` lines L86102–L86385

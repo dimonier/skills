@@ -405,4 +405,4 @@ Library governance should therefore prefer small, editioned, provenance-preservi
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L71435–L71805
+> **Source:** `FPF-Spec.md` lines L72281–L72651

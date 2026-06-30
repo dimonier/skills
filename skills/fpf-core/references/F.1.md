@@ -350,4 +350,4 @@ Extension patterns in Part C (Sys‑CAL, KD‑CAL, Kind-CAL, LCA‑CAL) plus the
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L79906–L80228
+> **Source:** `FPF-Spec.md` lines L80752–L81074

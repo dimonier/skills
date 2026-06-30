@@ -424,4 +424,4 @@ Does not replace: C.30 grounded architecture and selected-structure adequacy, C.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L15158–L15537
+> **Source:** `FPF-Spec.md` lines L15494–L15873

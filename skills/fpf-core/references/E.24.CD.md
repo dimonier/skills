@@ -335,4 +335,4 @@ Smallest source-currentness reopen trigger: reopen this SoTA slice when a newer 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L78726–L79030
+> **Source:** `FPF-Spec.md` lines L79572–L79876

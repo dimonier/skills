@@ -184,4 +184,4 @@ The chosen taxonomy mirrors FPF’s layered dependency: **Governance** rules how
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L63651–L63803
+> **Source:** `FPF-Spec.md` lines L64000–L64152

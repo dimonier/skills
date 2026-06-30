@@ -508,4 +508,4 @@ The design puts the positive carry-through table first because repeated negative
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L75664–L76123
+> **Source:** `FPF-Spec.md` lines L76510–L76969

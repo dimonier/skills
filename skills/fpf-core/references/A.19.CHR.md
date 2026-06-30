@@ -731,4 +731,4 @@ This pattern aligns with several post‑2015 practice lines while adapting them 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L26730–L27411
+> **Source:** `FPF-Spec.md` lines L27066–L27747

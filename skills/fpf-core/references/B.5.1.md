@@ -86,4 +86,4 @@ This pattern operationalizes the **Principle of State Explicitness (P-9)**. By g
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L35384–L35442
+> **Source:** `FPF-Spec.md` lines L35720–L35778

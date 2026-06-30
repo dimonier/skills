@@ -466,4 +466,4 @@ The pattern therefore specializes generic Description and publication machinery 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L54937–L55336
+> **Source:** `FPF-Spec.md` lines L55275–L55674

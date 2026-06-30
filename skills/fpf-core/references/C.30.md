@@ -654,4 +654,4 @@ Other claims stay with their governing patterns: `A.1` for the described holon, 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L54345–L54935
+> **Source:** `FPF-Spec.md` lines L54683–L55273

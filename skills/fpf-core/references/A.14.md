@@ -317,4 +317,4 @@ A.14 exists because part-whole words carry identity, aggregation, measure, time,
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L20606–L20894
+> **Source:** `FPF-Spec.md` lines L20942–L21230

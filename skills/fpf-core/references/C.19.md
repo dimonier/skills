@@ -432,4 +432,4 @@ Builds on: `C.18`, `C.16`, `A.19.CPM`, `A.19.SelectorMechanism`, and `B.3`. Coor
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L45387–L45778
+> **Source:** `FPF-Spec.md` lines L45725–L46116

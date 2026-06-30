@@ -402,4 +402,4 @@ Refresh before allowing the encountered source candidate to guide release, safet
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L22423–L22780
+> **Source:** `FPF-Spec.md` lines L22759–L23116

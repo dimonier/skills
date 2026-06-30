@@ -180,4 +180,4 @@ In essence, this pattern does not *invent* a new theory of agency. It **distills
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L20455–L20604
+> **Source:** `FPF-Spec.md` lines L20791–L20940

@@ -26,4 +26,4 @@ For humans, FPF gives a shared working memory for complex reasoning. For AI agen
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L730–L741
+> **Source:** `FPF-Spec.md` lines L736–L747

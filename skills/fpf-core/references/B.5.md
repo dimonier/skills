@@ -125,4 +125,4 @@ This pattern provides the engine that drives a hypothesis episteme through the `
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L35284–L35382
+> **Source:** `FPF-Spec.md` lines L35620–L35718

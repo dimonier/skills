@@ -418,4 +418,4 @@ Does not replace: `C.30.P` or `C.30.STRAT` wording-use precision restoration, `C
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L30234–L30609
+> **Source:** `FPF-Spec.md` lines L30570–L30945

@@ -473,4 +473,4 @@ A.6.9 turns a dangerous linguistic convenience into an explicit, reviewable, evo
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L17706–L18139
+> **Source:** `FPF-Spec.md` lines L18042–L18475

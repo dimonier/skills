@@ -36,4 +36,4 @@ This is one of FPF's central payoffs: a team can be inventive without losing its
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L742–L763
+> **Source:** `FPF-Spec.md` lines L748–L769

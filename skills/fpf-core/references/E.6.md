@@ -125,4 +125,4 @@ Primacy** and **P‑1 Cognitive Elegance** without weakening rigour.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L64999–L65097
+> **Source:** `FPF-Spec.md` lines L65845–L65943

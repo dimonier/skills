@@ -203,4 +203,4 @@ Anchoring mode often correlates with representation and articulation changes, bu
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L39405–L39578
+> **Source:** `FPF-Spec.md` lines L39743–L39916

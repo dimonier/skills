@@ -380,4 +380,4 @@ Builds on: `A.15` Role-Method-Work alignment (planning vs execution vs service),
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L47551–L47899
+> **Source:** `FPF-Spec.md` lines L47889–L48237

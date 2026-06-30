@@ -239,4 +239,4 @@ If no **ScaleLensPolicy** is declared, selection remains **neutral** with respec
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L70838–L71043
+> **Source:** `FPF-Spec.md` lines L71684–L71889

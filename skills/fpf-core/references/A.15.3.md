@@ -437,4 +437,4 @@ Refresh before the PlanItem is used for performed-work preparation, work-entry r
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L22021–L22421
+> **Source:** `FPF-Spec.md` lines L22357–L22757

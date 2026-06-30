@@ -32,4 +32,4 @@ The learning value is that FPF can be taught as a set of capabilities, not only 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L1026–L1043
+> **Source:** `FPF-Spec.md` lines L1028–L1045

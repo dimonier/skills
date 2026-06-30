@@ -717,4 +717,4 @@ For P2W carry-through, use `E.18.1` with the accepted problem-side material and 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L46695–L47346
+> **Source:** `FPF-Spec.md` lines L47033–L47684

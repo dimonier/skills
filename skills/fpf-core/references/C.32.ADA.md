@@ -311,4 +311,4 @@ C.32.ADA closes when `ArchitectureDecisionAdequacyEvaluation@Project` declares t
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L61178–L61441
+> **Source:** `FPF-Spec.md` lines L61516–L61779

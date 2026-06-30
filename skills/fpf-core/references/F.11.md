@@ -347,4 +347,4 @@ Part C patterns (Sys‑CAL, KD‑CAL, Kind-CAL, LCA‑CAL) and the method/work s
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L83532–L83852
+> **Source:** `FPF-Spec.md` lines L84378–L84698

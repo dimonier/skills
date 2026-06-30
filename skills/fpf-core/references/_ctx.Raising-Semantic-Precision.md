@@ -31,4 +31,4 @@ The success condition is not "the text now sounds precise". The success conditio
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L953–L969
+> **Source:** `FPF-Spec.md` lines L956–L972

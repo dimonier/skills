@@ -163,4 +163,4 @@ In summary, A.17 is the linchpin that turns a loose collection of measurement pr
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L24129–L24263
+> **Source:** `FPF-Spec.md` lines L24465–L24599

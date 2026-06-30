@@ -525,4 +525,4 @@ Action result from the explanation-faithfulness and retrieval-evaluation source 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L72879–L73386
+> **Source:** `FPF-Spec.md` lines L73725–L74232

@@ -294,4 +294,4 @@ Its job is narrower and architectural: to make the heavier trajectory account vi
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L23351–L23607
+> **Source:** `FPF-Spec.md` lines L23687–L23943

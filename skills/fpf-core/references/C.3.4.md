@@ -248,4 +248,4 @@ Use **`Guard_MaskedUse`** (Annex **C.3.A §4.3**). It requires:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L40775–L40997
+> **Source:** `FPF-Spec.md` lines L41113–L41335

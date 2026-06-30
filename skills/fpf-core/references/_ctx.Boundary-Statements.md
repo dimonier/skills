@@ -33,4 +33,4 @@ FPF's boundary discipline, especially around the `A.6` family, repairs such case
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L934–L952
+> **Source:** `FPF-Spec.md` lines L937–L955

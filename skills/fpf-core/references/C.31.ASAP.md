@@ -352,4 +352,4 @@ The pattern adapts BLP-style scale-amenability to architecture: prefer the alter
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L58379–L58677
+> **Source:** `FPF-Spec.md` lines L58717–L59015

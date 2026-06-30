@@ -438,4 +438,4 @@ Scope: Universal for the bridge calibration kit; any method‑family or discipli
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L90152–L90537
+> **Source:** `FPF-Spec.md` lines L90998–L91383

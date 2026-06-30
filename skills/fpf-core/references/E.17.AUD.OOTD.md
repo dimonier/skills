@@ -335,4 +335,4 @@ Heavier declaration comes only after the ordinary card already holds.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L74767–L75084
+> **Source:** `FPF-Spec.md` lines L75613–L75930

@@ -400,4 +400,4 @@ Scale legality note: whenever “fraction/percentage/share” appears in wholene
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L18580–L18942
+> **Source:** `FPF-Spec.md` lines L18916–L19278

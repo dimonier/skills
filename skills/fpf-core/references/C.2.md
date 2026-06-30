@@ -140,4 +140,4 @@ KD‑CAL turns the coarse legacy semiotic picture into **holonic composition** o
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L36210–L36317
+> **Source:** `FPF-Spec.md` lines L36546–L36653

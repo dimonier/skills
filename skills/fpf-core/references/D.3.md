@@ -176,4 +176,4 @@ The pattern therefore focuses on the conflict EntityOfConcern: affected objects,
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L62729–L62872
+> **Source:** `FPF-Spec.md` lines L63078–L63221

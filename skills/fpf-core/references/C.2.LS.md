@@ -281,4 +281,4 @@ Compare profiles facetwise unless a Context has published an explicit local aggr
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L38778–L39028
+> **Source:** `FPF-Spec.md` lines L39116–L39366

@@ -294,4 +294,4 @@ This pattern does not introduce new external SoTA sources beyond the source uses
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L14184–L14421
+> **Source:** `FPF-Spec.md` lines L14520–L14757

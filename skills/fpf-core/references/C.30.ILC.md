@@ -296,4 +296,4 @@ Neighboring claims stay with their governing patterns: `C.30` for grounded archi
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L57038–L57288
+> **Source:** `FPF-Spec.md` lines L57376–L57626

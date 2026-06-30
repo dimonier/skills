@@ -282,4 +282,4 @@ This row blocks scalar verdicts without declared scale and admissible use. It do
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L43280–L43528
+> **Source:** `FPF-Spec.md` lines L43618–L43866

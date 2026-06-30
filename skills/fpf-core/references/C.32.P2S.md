@@ -294,4 +294,4 @@ These rows document transfers from source practice into C.32.P2S. Software-syste
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L58998–L59232
+> **Source:** `FPF-Spec.md` lines L59336–L59570

@@ -697,4 +697,4 @@ Action result from the pattern-review and validation practice grounding: an `E.1
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L76336–L77015
+> **Source:** `FPF-Spec.md` lines L77182–L77861

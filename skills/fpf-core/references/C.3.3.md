@@ -263,4 +263,4 @@ Use the **`Guard_XContext_Typed`** macro (Annex C.3.A), which requires **both br
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L40539–L40773
+> **Source:** `FPF-Spec.md` lines L40877–L41111

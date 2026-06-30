@@ -507,4 +507,4 @@ That is why `DeclaredSubstrateAtlasView` appears here as one richer interpretive
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L25857–L26348
+> **Source:** `FPF-Spec.md` lines L26193–L26684

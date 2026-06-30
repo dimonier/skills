@@ -164,4 +164,4 @@ This keeps FPF usable in engineering, research, organizational, public, and AI-e
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L62457–L62590
+> **Source:** `FPF-Spec.md` lines L62806–L62939

@@ -351,4 +351,4 @@ This increases both evolvability (stable interface, externalized method semantic
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L28124–L28450
+> **Source:** `FPF-Spec.md` lines L28460–L28786

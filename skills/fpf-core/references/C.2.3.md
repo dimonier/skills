@@ -337,4 +337,4 @@ For the language-space extension, `F` does **not** govern `U.ArticulationExplici
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L38467–L38776
+> **Source:** `FPF-Spec.md` lines L38805–L39114

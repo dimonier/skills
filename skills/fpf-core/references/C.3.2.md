@@ -229,4 +229,4 @@ Guards must be **reproducible** and **auditable**: same `slice` ⇒ same members
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L40338–L40537
+> **Source:** `FPF-Spec.md` lines L40676–L40875

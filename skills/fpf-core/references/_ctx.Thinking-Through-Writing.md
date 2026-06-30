@@ -33,4 +33,4 @@ Thinking through writing is not paperwork. It is how thought becomes durable eno
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L841–L859
+> **Source:** `FPF-Spec.md` lines L846–L864

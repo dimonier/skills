@@ -389,4 +389,4 @@ This pattern aligns with post‑2015 best practice in evaluation and governance 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L86968–L87311
+> **Source:** `FPF-Spec.md` lines L87814–L88157

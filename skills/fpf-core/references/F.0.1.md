@@ -343,4 +343,4 @@ An artefact is **ready** with respect to F.0.1 when:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L79589–L79904
+> **Source:** `FPF-Spec.md` lines L80435–L80750

@@ -182,4 +182,4 @@ Do not treat this compact head pattern as the whole C.3 discipline when a case n
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L40059–L40211
+> **Source:** `FPF-Spec.md` lines L40397–L40549

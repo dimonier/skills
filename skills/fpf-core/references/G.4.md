@@ -512,4 +512,4 @@ All of these remain method‑specific semantics and therefore belong in `Extensi
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L88688–L89157
+> **Source:** `FPF-Spec.md` lines L89534–L90003

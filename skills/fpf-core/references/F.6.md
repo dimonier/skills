@@ -401,4 +401,4 @@ F.6 closes when the project knows whether the current local claim is:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L81471–L81845
+> **Source:** `FPF-Spec.md` lines L82317–L82691

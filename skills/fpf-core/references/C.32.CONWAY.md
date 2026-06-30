@@ -291,4 +291,4 @@ These rows document transfers from source practice into C.32.CONWAY. Each row st
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L59897–L60147
+> **Source:** `FPF-Spec.md` lines L60235–L60485

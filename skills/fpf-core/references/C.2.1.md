@@ -899,4 +899,4 @@ Together, these relations make `U.EpistemeSlotRelation` the **single normative c
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L36319–L37185
+> **Source:** `FPF-Spec.md` lines L36655–L37521

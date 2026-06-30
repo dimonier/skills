@@ -254,4 +254,4 @@ This keeps FPF action-guiding: users can still ask for a first useful move, whil
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L69813–L70034
+> **Source:** `FPF-Spec.md` lines L70659–L70880

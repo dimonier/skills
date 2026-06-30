@@ -259,4 +259,4 @@ This pattern is deliberately thin. B.2 owns whole reidentification; C.2.1 owns e
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L33111–L33342
+> **Source:** `FPF-Spec.md` lines L33447–L33678

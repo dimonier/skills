@@ -23,4 +23,4 @@ GitHub repository: https://github.com/ailev/FPF
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L660–L668
+> **Source:** `FPF-Spec.md` lines L666–L674

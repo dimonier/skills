@@ -641,4 +641,4 @@ This section is intentionally short. It carries operational anchors for using th
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L48318–L48913
+> **Source:** `FPF-Spec.md` lines L48656–L49251

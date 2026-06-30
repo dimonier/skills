@@ -232,4 +232,4 @@ The pattern specializes `C.30.AD` for built assets because BIM, IFC, asset-infor
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L55338–L55533
+> **Source:** `FPF-Spec.md` lines L55676–L55871

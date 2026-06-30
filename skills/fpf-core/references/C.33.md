@@ -56,6 +56,8 @@ dependencies:
 
 Use this pattern when an architect has a structure-bearing description, view, decision record, ADR-like projection, eval report, method handoff, generated relation graph, source model, or realized holon observation and needs to know which selected architecture-relevant structure is actually recoverable for the next architecture use.
 
+Use the same pattern when the carrier is a narrative rendering or principle-framework carrier for architecture work: the carrier may preserve a problem-to-structure route, problem-situation architecture, solution-move architecture, candidate trade-off, decision rationale, or source-return cue, but it may also hide selected structures that the next architecture use still needs. In architecture-mediated rendering, inspect the chain `carrier -> architecture description or view -> architecture as selected structures in context -> wider source structures`, because each step may have captured and lost different structure.
+
 Primary working reader: an architect, architecture reviewer, method owner, or AI-assisted architecture worker who must use one carrier or observation without letting it stand for the whole architecture, the project decision, evidence sufficiency, or realized structure.
 
 Typical entry phrases:
@@ -80,6 +82,7 @@ StructuralInformationAdequacyNote@Context:
   selectedStructureRefs:
   sourceStructureRefs?:
   sourceDescriptionOrViewRefs?:
+  narrativeRenderingRefs?:
   decisionOrRecordCarrierRefs?:
   realizedStructureObservationRefs?:
   capturedSelectedStructure:
@@ -143,7 +146,7 @@ Work in this order:
 
 1. Name the architecture claim or pre-claim described holon and bounded context.
 2. Name the selected structure refs or structure kinds being relied on. If they are not recoverable, stop and return to `C.30`, `C.30.ASV`, `A.22`, or `C.32.P2S`.
-3. Name the carrier, source structure, description, view, decision record, eval report, method handoff, generated relation graph, or realized observation being used.
+3. Name the carrier, source structure, description, view, narrative rendering, decision record, eval report, method handoff, generated relation graph, or realized observation being used.
 4. State the captured selected structure in relation terms: relations, constraints, invariants, allocations, compositions, variation classes, operations, dynamics refs, or preserved organization.
 5. State the expected but uncaptured structure when the next use needs it: hidden placement, data custody, runtime dependency, transformation-flow relation, source label semantics, confidence class, unexplored region, or missing bearer.
 6. State lost or hidden structure. If no loss is claimed, justify why the carrier is adequate for the declared use rather than for all uses.
@@ -161,6 +164,8 @@ Show - system case. An ADR-like record says "use event-carried integration with 
 Show - episteme case. A code-agent relation graph finds imports, call edges, inferred module roles, and candidate invariants. C.33 records source observation class `observed | inferred | unknownRegionPresent`, typed relation semantics, confidence class, active-passive gap when present, unexplored regions, and lost runtime or deployment structure. The graph can seed `C.34` preservation checks or `C.35` discovery, but it is not internal belief proof, release evidence, or full architecture adequacy.
 
 Show - neural architecture case. A neural-network architecture review says a model changed attention, SSM block, router, cache placement, pruning mask, and distillation path. C.33 recovers which selected structures are being described: dataflow relation, path-selection relation, memory placement, cache placement, block substitution, and affected characteristics such as latency, compute, memory, and robustness. Source labels remain source labels until recovered through `C.30.STRAT`, `C.30.TFS-REL`, `C.31`, `C.32`, `C.16`, or `C.32.ACE` as applicable.
+
+Show - architecture narrative case. A team narrative says "we moved from candidate A to candidate B because data custody forced placement P and made latency trade-off T acceptable." C.33 records which selected structures the narrative captures: candidate relation, data-custody constraint, placement constraint, trade-off, and source-return condition. It also records lost or hidden structure such as rejected candidate details, quantitative evals, module interfaces, and realization evidence. The narrative can help decision memory or team orientation; it is not by itself an architecture description, decision authority, or evidence of realized structure.
 
 The small working form is enough when it blocks a wrong next use. It is not enough when the next claim needs an architecture description, structural view, decision repair, eval program, evidence record, assurance case, gate, release, or work authorization. In those cases C.33 produces the source-return condition and then exits.
 
@@ -191,6 +196,7 @@ The small working form is enough when it blocks a wrong next use. It is not enou
 | --- | --- | --- |
 | Diagram as complete architecture | The diagram may show modules or links while hiding placement, runtime dependency, control authority, evidence structure, bearer constraints, or data custody. | Write the C.33 note from the diagram: captured structure, missing structure, lost relation semantics, admissible use, and source-return owner. |
 | ADR as realized structure proof | A decision record can carry decision memory and method expectation without showing what was built or how it behaves. | Use `C.32.PAD` or `C.32.ADR` for the decision claim; use C.33 only for the structural content and loss carried by the record; send realization claims to the architecture or evidence owner. |
+| Narrative as complete architecture | A narrative can preserve a route through selected structures while hiding placement, alternatives, measurements, interfaces, or realized structure. | Use `A.6.3.NAR` for the structure-to-narrative rendering relation and C.33 for captured and lost selected structure before architecture reuse. |
 | Code-agent graph as safe-change authority | A graph can expose observed and inferred relations while leaving unknown regions and hidden invariants. | Add observation class, confidence, unexplored regions, and non-admissible use. Route safe-change, assurance, gate, and release claims to their owners. |
 | Metric as structural adequacy | A score, entropy value, epiplexity estimate, benchmark trace, or dependency F1 is a reading only under the right measurement or eval owner. | Keep it as lens or reading context until `C.16`, `C.25`, or `C.32.ACE` defines what is measured and how it may be used. |
 | Neural label import | Terms such as attention, SSM, router, expert, cache, pruning, distillation, and NAS can hide several structure kinds and characteristics. | Recover the selected structure kind, relation, bearer, affected characteristic, preserved structure, lost structure, and receiving owner before using the label in architecture work. |
@@ -233,7 +239,7 @@ C.33 deliberately rejects a popular shortcut: "the richest available diagram, ma
 
 - **Builds on:** `A.22`, `C.30`, `C.30.AD`, `C.30.ASV`, `C.32.P2S`, and `C.32`.
 - **Uses:** `C.29` when a mathematical lens exposes or compresses structure; `C.16`, `C.25`, and `C.32.ACE` when a claim about captured or lost structure is recorded as a measurement, Q-bundle slot, criterion, or eval reading.
-- **Coordinates with:** `C.30.STRAT`, `C.30.TFS-REL`, `A.6.M`, `C.31`, `C.31.ASAP`, `C.32.PAD`, `C.32.ADR`, `G.5`, `C.18`, `C.19`, `E.18`, `F.9`, and `F.15`.
+- **Coordinates with:** `C.30.STRAT`, `C.30.TFS-REL`, `A.6.M`, `A.6.3.NAR`, `C.31`, `C.31.ASAP`, `C.32.PAD`, `C.32.ADR`, `G.5`, `C.18`, `C.19`, `E.18`, `F.9`, and `F.15`.
 - **Boundary:** C.33 governs structure-capture adequacy and source return for a declared architecture use. It does not ground architecture, select candidates, decide projects, publish records, measure values, supply evidence or assurance, authorize work, or claim realization.
 
 ### C.33:End
@@ -241,4 +247,4 @@ C.33 deliberately rejects a popular shortcut: "the richest available diagram, ma
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L61443–L61633
+> **Source:** `FPF-Spec.md` lines L61781–L61977

@@ -254,4 +254,4 @@ The pattern also protects local fields named by value. `LensUseAdmissibilityValu
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L25112–L25318
+> **Source:** `FPF-Spec.md` lines L25448–L25654

@@ -339,4 +339,4 @@ Worked-use-slice discipline from these rows:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L48915–L49213
+> **Source:** `FPF-Spec.md` lines L49253–L49551

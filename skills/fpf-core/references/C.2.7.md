@@ -203,4 +203,4 @@ Representation bundles may be compared across contexts only after the compared f
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L39580–L39753
+> **Source:** `FPF-Spec.md` lines L39918–L40091

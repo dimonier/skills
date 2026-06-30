@@ -279,4 +279,4 @@ The key distinction is ontological, not lexical. A result system is not a trigge
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L32858–L33109
+> **Source:** `FPF-Spec.md` lines L33194–L33445

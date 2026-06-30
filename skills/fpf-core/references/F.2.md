@@ -323,4 +323,4 @@ Extention patterns in Part C when referencing domain idioms (labels stay **conte
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L80230–L80525
+> **Source:** `FPF-Spec.md` lines L81076–L81371

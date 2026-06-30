@@ -321,4 +321,4 @@ Neighboring claims stay with their governing patterns: `A.22` for selected-struc
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L55783–L56051
+> **Source:** `FPF-Spec.md` lines L56121–L56389

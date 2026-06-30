@@ -623,4 +623,4 @@ Support-looking phrases that mean base-dependence are governed here: select a de
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L16170–L16743
+> **Source:** `FPF-Spec.md` lines L16506–L17079

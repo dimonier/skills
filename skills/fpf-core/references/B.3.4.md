@@ -142,4 +142,4 @@ Knowledge frameworks that ignore time degrade silently. By embedding entropy acc
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L34468–L34584
+> **Source:** `FPF-Spec.md` lines L34804–L34920

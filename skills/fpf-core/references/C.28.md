@@ -918,4 +918,4 @@ The pattern is not Pearl-only. SCM and PCH provide the rung discipline, but pote
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L52125–L52990
+> **Source:** `FPF-Spec.md` lines L52463–L53328

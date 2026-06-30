@@ -278,4 +278,4 @@ Minimum self-check:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L38203–L38465
+> **Source:** `FPF-Spec.md` lines L38541–L38803

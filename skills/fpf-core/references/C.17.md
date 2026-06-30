@@ -761,4 +761,4 @@ These cards are **thinking scaffolds**; they do not prescribe org process.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L44307–L45023
+> **Source:** `FPF-Spec.md` lines L44645–L45361

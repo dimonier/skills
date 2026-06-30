@@ -266,4 +266,4 @@ When generating candidate solutions for a **TaskKind**, aim for **“goldilocks�
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L46311–L46544
+> **Source:** `FPF-Spec.md` lines L46649–L46882

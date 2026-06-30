@@ -27,4 +27,4 @@ FPF is most useful when the cost of semantic drift, premature convergence, hidde
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L617–L629
+> **Source:** `FPF-Spec.md` lines L623–L635

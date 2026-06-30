@@ -209,4 +209,4 @@ Rigid templates, capitalized labels, or tidy sentence rhythm can simulate articu
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L39030–L39210
+> **Source:** `FPF-Spec.md` lines L39368–L39548

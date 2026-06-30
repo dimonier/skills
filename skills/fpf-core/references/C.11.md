@@ -761,4 +761,4 @@ C.11 may cite `C.26` as the common quantum-like modeling lens only for the resid
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L41890–L42604
+> **Source:** `FPF-Spec.md` lines L42228–L42942

@@ -278,4 +278,4 @@ This keeps Part F naming and bridge machinery useful while letting A.10, B.3, C.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L83280–L83530
+> **Source:** `FPF-Spec.md` lines L84126–L84376

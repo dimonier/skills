@@ -113,4 +113,4 @@ This pattern does not weaken the formal rigor established by other ADRs; it comp
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L70036–L70122
+> **Source:** `FPF-Spec.md` lines L70882–L70968

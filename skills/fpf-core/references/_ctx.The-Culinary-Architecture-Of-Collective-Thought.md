@@ -40,4 +40,4 @@ FPF does not replace expert judgment. It gives expert judgment a shared architec
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L1000–L1025
+> **Source:** `FPF-Spec.md` lines L1002–L1027

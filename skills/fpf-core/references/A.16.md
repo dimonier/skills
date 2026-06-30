@@ -384,4 +384,4 @@ This matrix keeps the integration layer narrow while still making its move seman
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L23002–L23349
+> **Source:** `FPF-Spec.md` lines L23338–L23685

@@ -31,4 +31,4 @@ It helps teams:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L600–L616
+> **Source:** `FPF-Spec.md` lines L606–L622

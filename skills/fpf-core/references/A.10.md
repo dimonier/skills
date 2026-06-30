@@ -458,4 +458,4 @@ Do not let the label `quantum-like` carry evidence weight by itself. The evidenc
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L19620–L20032
+> **Source:** `FPF-Spec.md` lines L19956–L20368

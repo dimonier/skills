@@ -457,4 +457,4 @@ Although FPF is conceptual (not a data governance framework), `G.Core` aligns Pa
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L86525–L86966
+> **Source:** `FPF-Spec.md` lines L87371–L87812

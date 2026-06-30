@@ -166,4 +166,4 @@ The pattern deliberately avoids a fixed ladder. It asks for declared levels and 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L62592–L62727
+> **Source:** `FPF-Spec.md` lines L62941–L63076

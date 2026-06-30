@@ -472,4 +472,4 @@ This chassis is designed to stay compatible with modern (post‑2015) practice w
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L87313–L87744
+> **Source:** `FPF-Spec.md` lines L88159–L88590

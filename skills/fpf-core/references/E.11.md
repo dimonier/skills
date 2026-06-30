@@ -356,4 +356,4 @@ After discharge, the remaining row is deleted because it only duplicates the `re
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L69486–L69811
+> **Source:** `FPF-Spec.md` lines L70332–L70657

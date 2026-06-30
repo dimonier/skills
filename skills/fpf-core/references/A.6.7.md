@@ -476,4 +476,4 @@ In modern multi-step evaluation pipelines (e.g., calibrated scoring, uncertainty
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L16745–L17184
+> **Source:** `FPF-Spec.md` lines L17081–L17520

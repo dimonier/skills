@@ -63,6 +63,7 @@ Typical entry phrases:
 "The generated graph matches the module graph; is the semantic relation the same?"
 "This candidate preserves dataflow but changes control authority."
 "The neural architecture replacement keeps shape but changes routing and memory placement."
+"The narrative order preserves the architecture trade-off; what source structure is still same enough for this use?"
 ```
 
 The first useful output is `StructuralPreservationAdequacyNote@Context`:
@@ -115,7 +116,7 @@ C.34 makes the preservation claim explicit before the result is used.
 | Equivalence vs use | Exact equivalence is rare and often unnecessary; the declared use decides how much preservation is enough. |
 | Formal rigor vs practitioner action | Formal mapping modes help only when preserved and lost structure are named in architecture terms. |
 | Shape vs semantics | Two graphs, views, or diagrams can have the same shape while their relation types differ. |
-| Compression vs loss | Projection, abstraction, coarsening, and simulation relations make work possible by dropping structure. |
+| Compression vs loss | Projection, abstraction, coarsening, and simulation relations make work possible by dropping structure. In a chain such as `source structures -> architecture -> architecture description or view -> narrative or framework carrier`, preservation must be checked arrow by arrow rather than claimed as one global sameness. |
 | Cross-context reach | A mapping across teams, source traditions, tool models, or holon levels needs bridge and conformance owners when substitution or transfer is claimed. |
 
 ### C.34:4 - Solution
@@ -133,8 +134,9 @@ Work in this order:
 5. State lost structure, hidden structure, directionality, and scope or scale window.
 6. Cite `C.29` only when a mathematical object, graph match, functor, invariant, entropy, or formal mapping is being used as a lens.
 7. Cite `C.30.ASV`, `C.30.AD`, or their correspondence records when the relation is view or architecture-description correspondence.
-8. Cite `F.9` or `F.15` when the claim crosses bounded contexts, source traditions, or later conformance strengthening.
-9. Stop when admissible use, non-admissible use, source-return condition, receiving owner, and receiving claim kind are named.
+8. Cite `A.6.3.NAR` when the target structure is a narrative rendering whose ordering rationale, preserved source structure, and source return must stay inspectable.
+9. Cite `F.9` or `F.15` when the claim crosses bounded contexts, source traditions, or later conformance strengthening.
+10. Stop when admissible use, non-admissible use, source-return condition, receiving owner, and receiving claim kind are named.
 
 ### C.34:5 - Archetypal Grounding
 
@@ -147,6 +149,8 @@ Show - source model and generated graph case. A code-agent dependency graph matc
 Show - candidate and realized structure case. A candidate architecture promises that a service split preserves interface substitutability, but the realized structure adds shared storage and a hidden orchestration dependency. C.34 records preserved interface signatures, lost runtime independence, changed coupling, and source return to `A.6.M`, `C.31`, `C.30`, and `C.32.PAD` before the decision is reused.
 
 Show - neural substitution case. A candidate replaces an attention block with an SSM block. C.34 asks which selected structures are preserved: sequence dataflow, routing interface, memory access, latency envelope, training resource boundary, or inference resource boundary. Shape sameness or benchmark improvement does not by itself preserve the architecture relation needed by the next claim.
+
+Show - source structure and narrative structure case. An architecture narrative orders a candidate set as "pressure, alternative, trade-off, decision, residual." C.34 records mapping mode `correspondence`, preserved structure `candidate alternative and selected trade-off relation`, lost structure `full Pareto-front detail and rejected-candidate evals`, directionality `source to narrative only`, and admissible use `team orientation and decision memory`. The narrative order is not exact equivalence and does not license implementation, evidence, or assurance use without the direct owner.
 
 ### C.34:6 - Bias-Annotation
 
@@ -177,6 +181,7 @@ Show - neural substitution case. A candidate replaces an attention block with an
 | Semantic-loss hiding | A projection or coarsening can look clean because it drops exactly the structure that the next decision needs. | Name lost structure and source-return condition before comparison, decision repair, or candidate admission. |
 | Exact-equivalence overclaim | Exact equivalence is stronger than most architecture uses need and is often false. | Choose the weakest adequate mapping mode: correspondence, projection, abstraction, coarsening, simulation relation, or near-sameness when that is enough. |
 | Generated graph proof overclaim | A generated graph can match labels or topology while hiding dynamic wiring, confidence, or unexplored regions. | Use C.34 only for the preservation claim; route generated-carrier admission to `C.35` and evidence, assurance, gate, or release claims to their owners. |
+| Narrative-order equivalence overclaim | A narrative can preserve a useful route through source structure while dropping alternatives, relation semantics, measurements, or directionality. | Record the weakest adequate correspondence, preserved structure, lost structure, directionality, and non-admissible use; use `A.6.3.NAR` for the narrative rendering relation. |
 | Formal lens laundering | A morphism, functor, entropy value, or graph match sounds rigorous but may be local to a mathematical object. | Route lens use to `C.29`; return to C.34 only after preserved structure, lost structure, mapping mode, and architecture use are stated. |
 | Bridge owner bypass | A cross-context or cross-tradition mapping can preserve local structure while losing local sense. | Use `F.9` for the bridge and `F.15` for later regression or conformance strengthening before substitution is relied on. |
 
@@ -219,7 +224,7 @@ C.34 rejects one common but weak practice: treating any formal-looking mapping a
 
 - **Builds on:** `A.22`, `C.30`, `C.30.ASV`, `C.30.AD`, `C.29`, and `F.9`.
 - **Uses:** `C.16`, `C.25`, and `C.32.ACE` when a preservation, similarity, distance, entropy, loss, or compression claim is recorded as a reading or eval result.
-- **Coordinates with:** `C.32`, `C.32.PAD`, `C.32.ADR`, `C.30.TFS-REL`, `C.30.STRAT`, `A.6.M`, `C.31`, `C.31.ASAP`, `E.18`, and `F.15`.
+- **Coordinates with:** `C.32`, `C.32.PAD`, `C.32.ADR`, `C.30.TFS-REL`, `C.30.STRAT`, `A.6.M`, `A.6.3.NAR`, `C.31`, `C.31.ASAP`, `E.18`, and `F.15`.
 - **Boundary:** C.34 governs declared preservation adequacy for an architecture use. It does not make a formalism ontology, select a candidate, decide a project, establish evidence or assurance, or authorize substitution across contexts without bridge and conformance owners.
 
 ### C.34:End
@@ -227,4 +232,4 @@ C.34 rejects one common but weak practice: treating any formal-looking mapping a
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L61635–L61814
+> **Source:** `FPF-Spec.md` lines L61979–L62163

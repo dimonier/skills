@@ -177,4 +177,4 @@ The reader needs one place where the adaptation claim stays whole. `C.22` keeps 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L46546–L46693
+> **Source:** `FPF-Spec.md` lines L46884–L47031

@@ -32,4 +32,4 @@ The ontology therefore serves action guidance. FPF does not replace domain ontol
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L860–L877
+> **Source:** `FPF-Spec.md` lines L865–L882

@@ -489,4 +489,4 @@ This pattern’s separation of **decision rules**, **acceptance thresholds**, **
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L90539–L91006
+> **Source:** `FPF-Spec.md` lines L91385–L91852

@@ -109,4 +109,4 @@ that innovation happens “below” without contaminating the timeless Core.
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L64835–L64913
+> **Source:** `FPF-Spec.md` lines L65681–L65759

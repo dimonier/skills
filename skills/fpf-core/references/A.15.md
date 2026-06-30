@@ -468,4 +468,4 @@ Refresh the `A.15` use before relying on it across a new context, new role assig
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L20896–L21329
+> **Source:** `FPF-Spec.md` lines L21232–L21665

@@ -266,4 +266,4 @@ C.32.ADR closes when `ArchitectureDecisionRecordProjection@Project` cites the de
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L60956–L61176
+> **Source:** `FPF-Spec.md` lines L61294–L61514

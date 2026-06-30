@@ -328,4 +328,4 @@ The role decision is especially important. If every slot position is called a ro
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L15884–L16168
+> **Source:** `FPF-Spec.md` lines L16220–L16504

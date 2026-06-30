@@ -370,4 +370,4 @@ These rows document transfers from source practice into C.32. Each row states wh
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L58679–L58996
+> **Source:** `FPF-Spec.md` lines L59017–L59334

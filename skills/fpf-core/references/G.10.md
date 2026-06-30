@@ -446,4 +446,4 @@ This pattern inherits order/illumination, evidence, and bridge/penalty legality 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L91519–L91919
+> **Source:** `FPF-Spec.md` lines L92365–L92765

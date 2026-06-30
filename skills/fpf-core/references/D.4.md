@@ -166,4 +166,4 @@ The pattern keeps refusal, evidence demand, and residual acceptance visible as o
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L62874–L63010
+> **Source:** `FPF-Spec.md` lines L63223–L63359

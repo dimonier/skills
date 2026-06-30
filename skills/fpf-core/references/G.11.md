@@ -470,4 +470,4 @@ Each entry follows: **claim → practice → source → alignment → adoption s
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L91923–L92347
+> **Source:** `FPF-Spec.md` lines L92769–L93193

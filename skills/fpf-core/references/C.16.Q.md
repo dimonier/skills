@@ -818,4 +818,4 @@ This pattern does not govern articulation-state characteristics, bridge stances,
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L43530–L44305
+> **Source:** `FPF-Spec.md` lines L43868–L44643

@@ -301,4 +301,4 @@ FPF keeps that discipline without overbuilding A.12. The transformation ontic li
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L20180–L20453
+> **Source:** `FPF-Spec.md` lines L20516–L20789

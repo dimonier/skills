@@ -111,4 +111,4 @@ This pattern transforms the assurance framework from a descriptive taxonomy into
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L34384–L34466
+> **Source:** `FPF-Spec.md` lines L34720–L34802

@@ -141,4 +141,4 @@ Packaging these insights as one memorisable quintet → **Cognitive Elegance** w
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L19506–L19618
+> **Source:** `FPF-Spec.md` lines L19842–L19954

@@ -349,4 +349,4 @@ Every verdict is **time‑bounded**. Changing the Window can change the result; 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L83854–L84176
+> **Source:** `FPF-Spec.md` lines L84700–L85022

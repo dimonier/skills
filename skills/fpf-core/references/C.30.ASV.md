@@ -757,4 +757,4 @@ Other claims stay with their governing patterns: `C.30` for grounded architectur
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L56053–L56767
+> **Source:** `FPF-Spec.md` lines L56391–L57105

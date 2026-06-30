@@ -447,4 +447,4 @@ SoTA is connected as **wiring** (packs/extensions) while UNM’s surface remains
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L27413–L27833
+> **Source:** `FPF-Spec.md` lines L27749–L28169

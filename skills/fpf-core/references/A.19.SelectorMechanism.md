@@ -378,4 +378,4 @@ Concrete selector-family SoTA packages are cited through their current Part G pa
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L29082–L29444
+> **Source:** `FPF-Spec.md` lines L29418–L29780

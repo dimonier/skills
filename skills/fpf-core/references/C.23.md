@@ -233,4 +233,4 @@ The ladder and LOG shells align with FPF’s **Assurance calculus**: **F** (form
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L47348–L47549
+> **Source:** `FPF-Spec.md` lines L47686–L47887

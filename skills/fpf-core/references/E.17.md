@@ -617,4 +617,4 @@ Multi-view publication is needed because one description can serve several conce
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L72278–L72877
+> **Source:** `FPF-Spec.md` lines L73124–L73723

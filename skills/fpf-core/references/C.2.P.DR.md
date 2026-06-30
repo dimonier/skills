@@ -336,4 +336,4 @@ This pattern uses external sources only for the representation-overread repair q
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L39755–L40057
+> **Source:** `FPF-Spec.md` lines L40093–L40395

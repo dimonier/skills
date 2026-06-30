@@ -308,4 +308,4 @@ Neighboring claims stay with their governing patterns: `C.30.STRAT` for stratifi
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L56769–L57036
+> **Source:** `FPF-Spec.md` lines L57107–L57374

@@ -502,4 +502,4 @@ Lower the decision before use when E.24 cannot decide among durable ontic, local
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L78256–L78724
+> **Source:** `FPF-Spec.md` lines L79102–L79570

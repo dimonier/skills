@@ -24,4 +24,4 @@ This is how a single framework can help in architecture, biology, manufacturing,
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L990–L999
+> **Source:** `FPF-Spec.md` lines L992–L1001

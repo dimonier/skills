@@ -261,4 +261,4 @@ Mathematical apparatus remains available. It becomes more useful after the gover
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L30613–L30845
+> **Source:** `FPF-Spec.md` lines L30949–L31181

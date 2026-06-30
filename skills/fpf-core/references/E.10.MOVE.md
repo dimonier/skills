@@ -259,4 +259,4 @@ The pattern is a child of E.10 because it starts as wording-use restoration. It 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L68293–L68514
+> **Source:** `FPF-Spec.md` lines L69139–L69360

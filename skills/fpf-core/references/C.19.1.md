@@ -169,4 +169,4 @@ When `E.23` selects between a Ralph-like general adaptive loop, a specialized ob
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L45780–L45919
+> **Source:** `FPF-Spec.md` lines L46118–L46257

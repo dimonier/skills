@@ -31,7 +31,9 @@ Multi-view publication is therefore a strength, not a defect. A safety case, arc
 
 This is also how FPF can work with distributed and AI-generated representations. A vector representation, solver model, graph, natural-language summary, and human-readable pattern can all be treated as descriptions or views when their relation to the project thing, source, viewpoint, and reliance boundary is declared. The question is not whether one carrier is more "real" than another. The question is what claim the publication can responsibly carry.
 
+A narrative or explanatory route is one such publication shape. It can help a reader follow complex structure over time, but it must still say what source structure it selected, what it preserved, what it deliberately coarsened, abstracted, omitted, or lost, whose viewpoint it uses, and where source return happens. If the route begins from an architecture description or view, that source may already be a coarsened account of actual, expected, or candidate structures; the narrative route must not hide that earlier loss. Narrative readability does not turn a rendering into evidence, assurance, permission, architecture, or the thing itself.
+
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L896–L915
+> **Source:** `FPF-Spec.md` lines L901–L922

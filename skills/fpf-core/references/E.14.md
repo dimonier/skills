@@ -363,4 +363,4 @@ The **Working-Model layer remains the canonical publication face** for authors a
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L70319–L70650
+> **Source:** `FPF-Spec.md` lines L71165–L71496

@@ -256,4 +256,4 @@ These checks keep `A.16.2` tied to explicit recovery and retirement rather than 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L23904–L24127
+> **Source:** `FPF-Spec.md` lines L24240–L24463

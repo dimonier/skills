@@ -469,4 +469,4 @@ Gate-publication result in attestation-shaped practice: green tiles, readiness b
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L29809–L30232
+> **Source:** `FPF-Spec.md` lines L30145–L30568

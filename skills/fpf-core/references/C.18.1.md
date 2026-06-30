@@ -169,4 +169,4 @@ The pattern also keeps SoTA scaling practice from overriding FPF ontology. Scali
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L45252–L45385
+> **Source:** `FPF-Spec.md` lines L45590–L45723

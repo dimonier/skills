@@ -319,4 +319,4 @@ Source-use boundary: external labels are evidence for local meaning or common pr
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L81180–L81469
+> **Source:** `FPF-Spec.md` lines L82026–L82315

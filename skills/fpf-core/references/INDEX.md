@@ -31,9 +31,10 @@
 | A.6.1 | U.Mechanism - Law-governed application to a SubjectKind over a RangedValueKind | — |
 | A.6.2 | `U.EffectFreeEpistemicMorphing` — Effect‑free morphisms of epistemes | — |
 | A.6.3 | `U.EpistemicViewing` — EntityOfConcern-preserving morphism | — |
-| A.6.3.CSC | Controlled Semantic Coarsening | controlled semantic coarsening, source-bearing episteme or source publication, coarsened rendering, narrower admissible use, non-admissible downstream use |
+| A.6.3.CSC | Controlled Semantic Coarsening | — |
 | A.6.3.CR | ConservativeRetextualization - entityOfConcernRef-preserving textual re-expression | — |
 | A.6.3.RT | Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition | — |
+| A.6.3.NAR | Structure-to-Narrative Rendering | — |
 | A.6.4 | `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism | — |
 | A.6.P | Relational Precision Restoration (RPR) — Kind‑Explicit Qualified Relation Discipline | relation precision restoration, under-specified relational language, support/support-headed wording, selected support reading, RelationKind |
 | A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, interface wording, role wording, slot wording, field |
@@ -191,8 +192,10 @@
 | E.2.DA | FPF Pillar-Adequacy Evaluation CharacteristicSpace | — |
 | E.3 | Principle Taxonomy & Precedence Model | taxonomy, precedence, conflict resolution, hierarchy, principles |
 | E.4 | FPF Ecosystem Family Architecture | — |
+| E.4.FPF | First Principles Framework Form and Publication-or-Access Carrier Assembly | — |
 | E.4.PFAD | Principle-Framework Architecture Decision | — |
-| E.4.DPF | Domain Principle Framework Authoring and Local-Monolith Landing | — |
+| E.4.DPF | Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly | — |
+| E.4.DPF.DA | Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace | — |
 | E.4.PFR | Pattern-Framework Relation and Edition Discipline | — |
 | E.5 | Four Guard-Rails of FPF | guardrails, constraints, architecture, rules, safety |
 | E.5.1 | DevOps Lexical Firewall | lexical firewall, jargon, tool-agnostic, conceptual purity, DevOps |

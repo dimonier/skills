@@ -319,4 +319,4 @@ SoTA here is treated as **method-family source publications and `G.2` claim shee
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L28452–L28745
+> **Source:** `FPF-Spec.md` lines L28788–L29081

@@ -32,4 +32,4 @@ This stance helps with human and AI work alike. A team can use general agents, s
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L878–L895
+> **Source:** `FPF-Spec.md` lines L883–L900

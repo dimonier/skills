@@ -1411,4 +1411,4 @@ Use this recognition menu only to identify a possible lens family and likely nei
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L52992–L54343
+> **Source:** `FPF-Spec.md` lines L53330–L54681

@@ -226,4 +226,4 @@ Each expanded entry-disambiguation case keeps recoverable:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L93108–L93316
+> **Source:** `FPF-Spec.md` lines L93954–L94162

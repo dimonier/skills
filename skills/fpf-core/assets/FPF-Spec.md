@@ -74,9 +74,10 @@ The public FPF readme section after the Table of Content gives human-facing firs
 | A.6.1 | **U.Mechanism - Law-governed application to a SubjectKind over a RangedValueKind** | Stable | Keywords: Mechanism, OperationAlgebra, LawSet, AdmissibilityConditions, Transport, Bridge‑only. Queries: "How to define a mechanism like USM/UNM?", "Where do operational guards live?", "How to handle cross‑context transport?" | **Builds on:** A.6.0, E.10.D1. **Instances:** USM (A.2.6), UNM (A.19). |
 | A.6.2 | **`U.EffectFreeEpistemicMorphing` — Effect‑free morphisms of epistemes** | Stable | Effect-free, law-constrained episteme-to-episteme morphisms over ClaimGraph, EntityOfConcern, grounding holon, viewpoint, reference scheme, representation scheme, and metadata; preserve or retarget EntityOfConcern only through declared change mode. | **Builds on:** A.1, A.6.0, A.6.1, A.6.5, C.2.1, E.10.D2, C.3.*. **Used by:** A.6.3, A.6.4, E.17.0, E.17, E.18, KD-CAL mapping rules. |
 | A.6.3 | **`U.EpistemicViewing` — EntityOfConcern-preserving morphism** | Stable | EntityOfConcern-preserving effect-free projection between epistemes: content, representation, viewpoint, or reference scheme may change, but `entityOfConcernRef` stays fixed unless A.6.4 retargeting is explicitly opened. | **Builds on:** A.6.0, A.6.2, A.6.5, A.7, E.10.D2, C.2.1, C.2. **Used by:** E.17.0, E.17, E.17.1, E.17.2, E.18, B.5.3, KD-CAL view operators. |
-| A.6.3.CSC | **Controlled Semantic Coarsening** | Stable | *Keywords:* controlled semantic coarsening, source-bearing episteme or source publication, coarsened rendering, narrower admissible use, non-admissible downstream use, reopen trigger, redaction, dashboard tile, lookup handle, state-representation shortcut. *Queries:* "When may a summary or redaction stand in only for narrow use?", "What is Controlled Semantic Coarsening in FPF?", "When must a coarsened rendering reopen the source-bearing episteme or source publication?" | **Builds on:** A.6.3, A.6.3.CR, A.6.3.RT, E.17.EFP, A.6.P, E.8, E.10, E.19, F.18. **Coordinates with:** C.26, C.26.1, E.17.ID.CR, F.9, F.9.1, A.15, A.6.4, A.20, A.21. |
+| A.6.3.CSC | **Controlled Semantic Coarsening** | Stable | Controlled semantic coarsening of a source-bearing episteme or publication into a narrower-use rendering, with selected preserved/lost structure, admissible use, non-admissible downstream use, source return, and reopen trigger visible. | **Builds on:** A.6.3, A.6.3.CR, A.6.3.RT, E.17.EFP, A.6.P, E.8, E.10, E.19, F.18. **Coordinates with:** A.6.3.NAR, C.26, C.26.1, E.17.ID.CR, F.9, F.9.1, A.15, A.6.4, A.20, A.21, C.33. |
 | A.6.3.CR | **ConservativeRetextualization - entityOfConcernRef-preserving textual re-expression** | Stable | Textual re-expression, summary, report rewrite, translation, or filtering that preserves `entityOfConcernRef`, keeps source tether and omission/loss visible, and exits to explanation, representation change, retargeting, bridge, work, evidence, gate, or assurance patterns when those claims are being made. | **Builds on:** A.6.3, A.6.2, A.7, E.10.D2, E.17.0, E.17, F.9, F.18, E.10. **Coordinates with:** A.6.3.CSC, A.6.3.RT, E.17.EFP, E.17.ID.CR, A.6.4, B.5.2, A.15. |
-| A.6.3.RT | **Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition** | Stable | Representation-scheme or reasoning-medium transition that preserves `entityOfConcernRef`, makes recoverability and loss visible, and blocks geometry, notation, carrier work, decode work, or transformation-flow language from becoming hidden ontology or action force. | **Builds on:** A.6.3, A.6.2, A.7, E.10.D2, C.2.7, E.17.0, E.17, F.9, F.18. **Coordinates with:** A.6.3.CSC, C.26, A.6.3.CR, E.17.EFP, E.17.ID.CR, A.6.4, A.15, A.20, A.21. |
+| A.6.3.RT | **Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition** | Stable | Representation-scheme or reasoning-medium transition that preserves `entityOfConcernRef`, makes recoverability and loss visible, and blocks geometry, notation, carrier work, decode work, or transformation-flow language from becoming hidden ontology or action force. | **Builds on:** A.6.3, A.6.2, A.7, E.10.D2, C.2.7, E.17.0, E.17, F.9, F.18. **Coordinates with:** A.6.3.CSC, A.6.3.NAR, C.26, A.6.3.CR, E.17.EFP, E.17.ID.CR, A.6.4, A.15, A.20, A.21. |
+| A.6.3.NAR | **Structure-to-Narrative Rendering** | Stable | EntityOfConcern-preserving rendering of selected source structure into a sequential narrative path for a declared reader or listener use, with source temporal posture, route family, narrator/reader roles, preserved/foregrounded/coarsened/lost structure, admissible use, and source return explicit. | **Builds on:** A.6.3, A.6.3.CSC, A.6.3.RT, A.22, C.33, C.34, E.17, E.10. **Coordinates with:** C.35, A.16.1, C.30, C.30.AD, C.30.ASV, C.32.P2S, E.4.DPF, E.4.DPF.DA. |
 | A.6.4 | **`U.EpistemicRetargeting` — EntityOfConcern retargeting morphism** | Stable | Effect-free episteme-to-episteme morphism that intentionally changes `entityOfConcernRef` under a declared KindBridge, invariant, loss boundary, and admissible use while preserving only the commitments that the bridge makes reviewable. | **Builds on:** A.6.2, A.6.3, A.6.5, A.7, C.2.1, C.2, C.3, F.9, E.10.D2, E.18. **Used by:** E.18 StructuralReinterpretation, KD-CAL/LOG-CAL retargeting rules, Fourier-style and data-model retargetings. |
 | A.6.P | **Relational Precision Restoration (RPR) — Kind‑Explicit Qualified Relation Discipline** | Stable | *Keywords:* relation precision restoration, under-specified relational language, support/support-headed wording, selected support reading, RelationKind, QualifiedRelationRecord, coupling, probe, measurement, export, endpoint referential compression, lexical guardrails, language-state seam. *Queries:* "How do I repair an overloaded relation word without lexicon-only cleanup?", "How do I unpack support without minting a generic SupportRelation?", "How do I keep coupling/probe/measurement/export wording kind-explicit?", "When should quality/action/sameness/wholeness/QL wording apply another governing pattern?" | **Builds on:** A.6, A.6.B, A.6.S, A.6.0, A.6.5, E.8, E.10, F.18. **Coordinates with:** A.2.4, A.2.6, A.7, A.10, C.2.1, C.2.2a, C.3.3, C.16.Q, C.26, E.17, F.9, F.17. **Specialised by:** A.6.A, A.6.5, A.6.6, A.6.8, A.6.9, A.6.H. |
 | A.6.RSIR | **Relation, Signature, Interface, Role, and Slot Precision Restoration** | Stable | *Keywords:* relation-signature-interface-role-slot recovery, interface wording, role wording, slot wording, field, parameter, endpoint, port, API, protocol, capability, affordance, method, function, concern, interest, shadow ontology. *Queries:* "How do I repair interface, role, slot, parameter, function, or concern wording before choosing the direct governing pattern?", "When is interface wording a port, API, protocol, signature, module boundary, or publication view?", "When is role wording U.Role, U.RoleAssignment, relation position, evidence use, status use, or source label?" | **Builds on:** E.10, E.10.ARCH, A.6.P, A.6.5, A.6.0, A.2, A.2.1, A.15, F.18, F.19. **Coordinates with:** A.6.M, A.6.F, A.6.A, C.2.P, C.2.P.DR, E.17, A.10, F.10, G.6. |
@@ -263,9 +264,11 @@ The public FPF readme section after the Table of Content gives human-facing firs
 | E.2 | **The Eleven Pillars** | Stable | *Keywords:* principles, constitution, pillars, invariants, core values, rules, P-1 to P-11. *Queries:* "What are the core principles of FPF?", "What are the eleven pillars?". | **Builds on:** E.1. **Prerequisite for:** E.3 and all normative patterns. |
 | E.2.DA | **FPF Pillar-Adequacy Evaluation CharacteristicSpace** | Stable | FPF-level object-under-improvement evaluation derived from the `E.2` Pillars for FPF as a whole, a corpus slice, release candidate, pattern family, projection set, or host set, including content-loss and excess-apparatus regressions. | **Builds on:** E.2, A.19.ECS. **Coordinates with:** E.21, E.9.DA, E.22, E.23, E.11, E.10, F.18, F.19. |
 | E.3 | **Principle Taxonomy & Precedence Model** | Stable | *Keywords:* taxonomy, precedence, conflict resolution, hierarchy, principles, classification, Gov, Arch, Epist, Prag, Did. *Queries:* "How does FPF resolve conflicting principles?", "What is the hierarchy of FPF rules?". | **Builds on:** E.2. **Constrains:** All patterns and DRRs. |
-| E.4 | **FPF Ecosystem Family Architecture** | Stable | FPF-grounded pattern ecosystem family architecture; separates Conceptual Core, foundational principle pattern set, FPF Core pattern set, domain principle frameworks, local practice frameworks, tooling, pedagogy, relation records, decisions, publication units, source/currentness/quality owners. | **Builds on:** E.1, E.2/P-5, E.5.3. **Coordinates with:** E.4.PFAD, E.4.DPF, E.4.PFR, E.11, E.17, G.2, G.5, G.11, C.33, C.34, C.35, F.18, E.21, E.23, E.19. |
+| E.4 | **FPF Ecosystem Family Architecture** | Stable | FPF-grounded pattern ecosystem family architecture; separates the FPF edition, domain principle frameworks, local practice frameworks, source packs, relation records, decisions, publication/access carriers, quality and refresh owners, while treating principle frameworks as reader-facing renderings of selected problem-solution architecture. | **Builds on:** E.1, E.2/P-5, E.5.3. **Coordinates with:** E.4.FPF, E.4.PFAD, E.4.DPF, E.4.DPF.DA, E.4.PFR, E.11, E.17, G.2, G.5, G.11, C.33, C.34, C.35, F.18, E.21, E.23, E.19. |
+| E.4.FPF | **First Principles Framework Form and Publication-or-Access Carrier Assembly** | Stable | Treats FPF itself as one first-principles framework edition with selected Core pattern set, publication/access carriers, relation and edition records, quality route through E.2.DA, currentness route, and blocked overreads. | **Builds on:** E.4, E.2.DA, E.11, E.17, E.21. **Coordinates with:** E.4.PFAD, E.4.PFR, E.4.DPF, E.4.DPF.DA, G.11, F.18. |
 | E.4.PFAD | **Principle-Framework Architecture Decision** | Stable | Framework-local architecture decision relation for a domain or local principle framework: selected pattern set, relation structure, publication unit, dependency boundary, source basis, quality route, and refresh or supersession. | **Builds on:** E.4, E.9, C.32.PAD. **Coordinates with:** C.32.ADR, E.17, E.4.PFR, F.18, G.2, G.11, E.21, E.19. |
-| E.4.DPF | **Domain Principle Framework Authoring and Local-Monolith Landing** | Stable | Authoring method for domain principle frameworks and local practice frameworks, including SoTA source packs, PFAD decisions, name-card route, pattern drafts, relation and edition records, local publication, quality loop, and currentness route. | **Builds on:** E.4, G.2, E.8, E.10, F.18. **Coordinates with:** E.4.PFAD, E.4.PFR, C.33, C.34, C.35, E.11, E.17, E.21, E.22, E.23, E.19, G.11. |
+| E.4.DPF | **Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly** | Stable | Authoring and assembly spine for domain principle frameworks and local practice frameworks, including SoTA source packs, PFAD decisions, name route, mature pattern bodies, relation and edition records, publication/access carriers, quality loop, and currentness route. | **Builds on:** E.4, G.2, E.8, E.10, F.18. **Coordinates with:** E.4.FPF, E.4.PFAD, E.4.DPF.DA, E.4.PFR, C.33, C.34, C.35, E.11, E.17, E.21, E.22, E.23, E.19, G.11. |
+| E.4.DPF.DA | **Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace** | Stable | DPF-specific package evaluation characteristic space for one declared domain or local use, covering domain scope, source basis, Core dependency, package form, pattern-set coverage, relation records, publication/access carriers, refresh, and adoption utility. | **Builds on:** E.4.DPF, E.4.PFAD, E.4.PFR, E.21, E.2.DA, E.22, E.23, A.19.ECS. **Coordinates with:** G.2, G.11, E.11, E.17, C.33, C.34, C.35. |
 | E.4.PFR | **Pattern-Framework Relation and Edition Discipline** | Stable | Relation and edition records for FPF-grounded pattern frameworks: relation functions, dependency direction, compatibility boundaries, publication, source/decision reuse, produced-carrier admission, deprecation, supersession, and refresh. | **Builds on:** E.5.3, E.4. **Coordinates with:** E.4.PFAD, E.11.PUR, E.11, E.17, G.5, F.18, G.11, E.21, E.22, E.23, C.33, C.34, C.35, G.2, E.9, A.10. |
 | E.5 | **Four Guard-Rails of FPF** | Stable | *Keywords:* guardrails, constraints, architecture, rules, safety, GR-1 to GR-4. *Queries:* "What are the main architectural constraints in FPF?". | **Builds on:** E.2, E.3. **Prerequisite for:** E.5.1, E.5.2, E.5.3, E.5.4. |
 | E.5.1 | **DevOps Lexical Firewall** | Stable | *Keywords:* lexical firewall, jargon, tool-agnostic, conceptual purity, DevOps, CI/CD, yaml. *Queries:* "Can I use terms like 'CI/CD' in FPF core patterns?". | **Refines:** E.5. **Constrains:** All Core patterns. |
@@ -383,6 +386,8 @@ FPF helps when a project has outgrown one clever conversation. It is useful when
 
 Use FPF as a reference model and pattern language, not as a linear textbook. Start from the working question you bring from your project. Bring in internal FPF terms only after they help you keep the work precise.
 
+This readme is a thin first-entry rendering of FPF for engineers, researchers, managers, reviewers, and AI-assisted project workers deciding where FPF can help. It foregrounds the project questions most likely to pay off first and deliberately coarsens, omits, or defers the full pattern language, source history, and relation structure. When a claim becomes important, return to the Preface, Table of Content, and governing pattern body rather than treating this readme as the specification.
+
 The plain starting move is: name the project thing at stake. FPF often calls it a holon when the thing is being treated as a whole with parts: a machine, product, organization, method, body of knowledge, publication system, AI-agent arrangement, or local framework. Once the thing is named, FPF asks what structure, claim, decision, evidence, description, work, or improvement question is actually live.
 
 ## Decide Whether FPF Fits
@@ -425,6 +430,7 @@ Core ideas in plain language:
 - say what "better" means before optimizing or scoring;
 - make trust depend on evidence, freshness, scope, and intended use;
 - publish different views for different readers without changing the underlying claim;
+- when source structure must become an explanation, route, or narrative for a reader, state what structure is preserved, deliberately coarsened, abstracted, omitted, or lost, and where source return happens;
 - use mathematics or formal models when they clarify what structure is preserved, what is lost, and what can be checked;
 - build domain or local FPF-grounded frameworks as dependents of FPF Core, not as silent rewrites of the Core.
 
@@ -568,13 +574,13 @@ First inspect: `G.0`, `G.1`, `G.2`, `G.5`, `G.10`, `G.11`, `C.18`, `C.19`, `A.19
 
 Use this when a team needs its own FPF-grounded guide for a domain, organization, role context, or local practice, such as a hydroponic-cucumber framework, neural-network architecture framework, enterprise architecture-review framework, or Codex-process framework.
 
-FPF helps you keep the FPF Core, domain principle framework, local practice framework, source pack, selected pattern set, relation records, edition dependencies, publication units, quality loop, and refresh route from collapsing into one local monolith or one useful checklist. This is the normal adoption path when a group wants FPF for its own field without turning local policy into a Core rule.
+FPF helps you keep the FPF Core, domain principle framework, local practice framework, source pack, selected pattern set, relation records, edition dependencies, publication/access carriers, quality loop, and refresh route from collapsing into one all-in-one carrier, one callable route, or one useful checklist. This is the normal adoption path when a group wants FPF for its own field without turning local policy into a Core rule.
 
 Typical first result: a family-and-structure map or principle-framework architecture decision that names the framework edition, bounded context, FPF Core dependency, selected first patterns, relation and publication carriers, source pack, quality route, and refresh route.
 
 In the first hour, write the context note, source-pack stub, first PFAD question, provisional name route, one to three pattern candidates, relation rows, first-entry carrier, quality route, and refresh trigger. Then open `E.4.DPF` for the full authoring spine.
 
-First inspect: `E.4`, `E.4.PFAD`, `E.4.DPF`, `E.4.PFR`, `G.2`, `E.8`, `E.11`, `E.17`, `F.18`, and `G.11`.
+First inspect: `E.4`, `E.4.FPF` when the form of FPF itself is live, `E.4.PFAD`, `E.4.DPF`, `E.4.DPF.DA`, `E.4.PFR`, `G.2`, `E.8`, `E.11`, `E.17`, `F.18`, and `G.11`.
 
 ## One-Minute Example
 
@@ -676,7 +682,7 @@ The reader should not need FPF vocabulary before this Preface becomes useful. He
 
 FPF is not a domain encyclopedia and not a project-management method. It is a framework for making hard project reasoning coherent when many kinds of things are easy to mix: systems, bodies of knowledge and models, architecture, descriptions, publications, concern-specific views, roles, methods, plans, performed work, evidence, decisions, options, commitments, and improvement criteria.
 
-FPF starts from holons: project entities that can be treated as wholes and as parts. For a first reader, a holon is simply the project thing we are treating as a whole with parts for this question. It can be a physical system, software system, organization, method, publication system, body of knowledge or model, research program, AI-agent arrangement, local practice framework, or another entity selected by a pattern. This is why FPF can be used across domains without flattening every domain into one vocabulary.
+FPF starts from holons: project entities that can be treated as wholes and as parts. A holon can be a physical system, software system, organization, method, publication system, body of knowledge or model, research program, AI-agent arrangement, or another entity selected by a pattern. This is why FPF can be used across domains without flattening every domain into one vocabulary.
 
 FPF is written as a pattern language. A pattern is not a tutorial, blog post, checklist bureaucracy, or local process script. It is a reusable action-guidance form. A mature FPF pattern lets a working practitioner recover:
 
@@ -691,6 +697,8 @@ FPF is written as a pattern language. A pattern is not a tutorial, blog post, ch
 The standard pattern form is governed by `E.8`. Review and refresh discipline is governed by `E.19`. Pattern-quality evaluation is governed by `E.21`. Decision-rationale records, or DRRs, are short records explaining why one bounded FPF content decision changed; they are governed by `E.9` and its specializations. Those patterns matter because the FPF corpus itself evolves by the same discipline it asks other projects to use: explicit decisions, visible losses, recoverable meanings, and repeated improvement.
 
 The FPF `readme` section at the beginning of the specification is the public first-practical-entry section. It starts from recognizable project questions: architecture review, method writing, problem shaping, comparison, evidence, naming, mathematical modeling, quality improvement, and portfolios of current best-known options. This Preface has a different job. It explains why those entries fit into one framework and how FPF can answer them without becoming a pile of disconnected tools.
+
+This Preface is also a reader-facing rendering of FPF's first-principles architecture. It is written for people who need the whole-framework picture before entering exact patterns. It foregrounds holons, descriptions, architecture, evidence, publication, choice, improvement, source currentness, and domain or local framework growth; it deliberately coarsens, omits, or defers individual pattern detail, source history, and many relation records. When a Preface claim becomes load-bearing, return to the governing pattern body.
 
 Use the `readme` when deciding where FPF may first help a project. Use this Preface when you need the whole-FPF picture. Use the Table of Content when you already know the pattern family or need a search-oriented overview. Use the pattern bodies after a project issue has proved important enough to need exact treatment.
 
@@ -724,8 +732,6 @@ Other publication families may sit around the Core:
 Those materials can be valuable, but they have different jobs. They may teach, demonstrate, implement, translate, or specialize. They do not replace the Core pattern that governs the claim. If a companion says something more clearly than the Core, the useful explanation can be brought back into a pattern. If a tool makes an FPF form easier to use, the tool still implements the conceptual form; it does not become the conceptual form.
 
 This separation protects both sides. The Core can stay tool-agnostic and pattern-centered. Companions and tools can be vivid, practical, and domain-rich without turning every example into a new norm. The Preface therefore speaks about FPF as a whole project while keeping the boundary clear: patterns govern, companions teach, tools implement, project-local material applies, and examples show.
-
-The same boundary now applies to FPF-grounded frameworks. FPF Core is not the same object as a domain principle framework or a local practice framework. A crop-production framework, neural-network architecture framework, enterprise architecture-review framework, or local Codex-process framework may depend on FPF Core, reuse its patterns, publish its own local monolith, and run its own quality and refresh loop. It should not silently rewrite the Core just because the local framework is useful.
 
 ## Why FPF Exists
 
@@ -796,7 +802,6 @@ FPF applies the same idea to reasoning:
 - characteristic spaces define what "better" means for the object under improvement;
 - precision-restoration patterns repair language when it begins to carry work;
 - state-of-the-art and option-portfolio patterns keep the frontier moving;
-- problem-to-structure architecture patterns carry pressure into candidate structures, selected structures, decisions, realization work, actual-structure feedback, and repair;
 - review and refresh patterns let FPF itself improve.
 
 The result is not one final answer. It is a way to keep producing, comparing, selecting, publishing, and improving answers without losing traceability or semantic integrity.
@@ -913,23 +918,21 @@ Multi-view publication is therefore a strength, not a defect. A safety case, arc
 
 This is also how FPF can work with distributed and AI-generated representations. A vector representation, solver model, graph, natural-language summary, and human-readable pattern can all be treated as descriptions or views when their relation to the project thing, source, viewpoint, and reliance boundary is declared. The question is not whether one carrier is more "real" than another. The question is what claim the publication can responsibly carry.
 
+A narrative or explanatory route is one such publication shape. It can help a reader follow complex structure over time, but it must still say what source structure it selected, what it preserved, what it deliberately coarsened, abstracted, omitted, or lost, whose viewpoint it uses, and where source return happens. If the route begins from an architecture description or view, that source may already be a coarsened account of actual, expected, or candidate structures; the narrative route must not hide that earlier loss. Narrative readability does not turn a rendering into evidence, assurance, permission, architecture, or the thing itself.
+
 ## Architecture As Structure Of Holons
 
-FPF treats architecture as selected structure of a holon in a context, not as a diagram, document, approval, promise, or implementation plan.
+FPF treats architecture as structure of a holon in a context, not as a diagram, document, approval, promise, or implementation plan.
 
-For a first reader, this means: before asking whether the architecture is good, name the thing whose structure matters. The thing may be a product, machine, organization, method, publication system, body of knowledge, AI-agent arrangement, local framework, or FPF itself. Then ask which structures are unknown, candidate, selected, expected, actual, captured in a description, lost in a view, or returned from operation.
+This makes architecture broad. There can be architecture of a physical system, software system, organization, work system, body of knowledge, publication system, research program, AI-agent arrangement, or FPF itself. Wherever holons have structure, architecture can be discussed.
 
-This makes architecture broad without making it vague. Architecture descriptions, structural views, viewpoints, diagrams, models, ADR-like records, and publication forms are descriptions or publications about architecture. They are valuable, but they do not replace the architecture itself. A decision record can preserve why a structure was selected; it is not proof that the structure was realized. A measurement can show stress or improvement; it is not the decision. A work plan can tell people how to act; it is not performed work.
+Architecture descriptions, structural views, viewpoints, diagrams, models, and publication forms are descriptions or publications about architecture. They are valuable, but they do not replace the architecture itself.
 
-The architecture patterns make the whole flow usable. `C.30` grounds an architecture claim over selected structures. `A.22` governs structure and structural views. `C.32.P2S` carries architecture-relevant pressure into candidate structures, selected structures, architecture decisions, work that realizes structures, and actual-structure feedback. `C.32` governs candidate synthesis. `C.32.PAD` governs project architecture decisions. `C.32.ADR` governs ADR-like publication. `C.33`, `C.34`, and `C.35` govern what structural content is captured, preserved, lost, or generated before architecture work relies on it.
+The architecture patterns make this distinction usable. `C.30` governs architecture as an EntityOfConcern. `A.22` governs architectural characteristics. `C.30.ASV` governs architecture structural views. `C.30.AD` governs architecture descriptions. `A.6.M` governs module-interface relation repair. `C.31` and related architecture patterns govern modularity, reusable structure, scale, selected structures, interlevel tension, and architecture-changing moves.
 
-This matters because architecture work is not only "draw the diagram". It is also "which holon is changing", "which structure matters", "what characteristic changes", "what alternatives must remain alive", "which decision closes enough for work", "which method or role can realize the selected structure", "what actual structure appeared", and "what feedback reopens the work".
+This matters because architecture work is not only "draw the diagram". It is also "which structure matters", "what characteristic changes", "what tradeoff is visible", "what description is needed", "what interface claim is being made", "what evidence would make this architecture decision responsible", and "which move changes the architecture rather than merely changing a document about it".
 
-When one holon changes another holon, FPF also asks whether the changing holon can produce the desired structure of the changed holon. A team, toolchain, work method, evidence practice, or supplier network has its own architecture. If that transformer architecture cannot realize the transformed holon's selected structure, the project has an architecture problem on both sides.
-
-Epiplexity is one important architecture characteristic. It names structural entanglement that makes a holon hard to understand, change, control, reuse, or improve. A low-epiplexity design is not merely simpler in ordinary speech. It is structurally easier to reason about under declared characteristics and concerns, and its descriptions usually lose less critical structure.
-
-The same architecture thinking now applies to the FPF ecosystem itself. FPF Core, domain principle frameworks, local practice frameworks, source packs, relation records, publication units, quality loops, and refresh routes are different objects. The public adoption path is not "copy all of FPF into your project." It is usually: depend on FPF Core, create a domain or local framework when needed, publish it for your readers, and keep its quality and refresh route explicit.
+Epiplexity is one important architecture characteristic. It names the structural entanglement that makes a holon hard to understand, change, control, reuse, or improve. A low-epiplexity design is not merely simpler in ordinary speech. It is structurally easier to reason about under declared characteristics and concerns.
 
 ## Boundary Statements
 
@@ -975,15 +978,14 @@ Several commitments make FPF more than a collection of patterns.
 2. The project thing under concern and its description are kept distinct so descriptions, views, diagrams, publications, and carriers do not replace what they describe.
 3. Context keeps meaning local, while bridges and term sheets let meanings travel without collapse.
 4. Role, method, plan, performed work, evidence, decision, and gate are different kinds of project objects.
-5. Architecture is selected structure of holons; architecture descriptions, decisions, work plans, and actual structures are kept distinct.
+5. Architecture is structure of holons, and architecture descriptions are descriptions of that structure.
 6. Evidence and assurance are first-class, so trust is not reduced to confidence prose.
-7. Comparison and improvement require declared characteristics, scales, candidate sets, trade-offs, conflicts, and current comparator fields.
+7. Comparison and improvement require declared characteristics, scales, candidate sets, and current comparator fields.
 8. Creativity is governed search over candidate possibilities, not an uninspectable burst of inspiration.
 9. State of the art is a refreshable publication object, not a frozen leaderboard.
 10. Semantic precision starts from ontology and, when useful, from mathematical modeling that preserves declared structure, not from synonym replacement.
 11. Pattern publication is itself part of the thinking architecture: patterns, DRRs, checks, and improvement loops keep FPF evolvable.
-12. FPF-grounded domain and local frameworks depend on FPF Core without silently rewriting it.
-13. Didactic primacy keeps the whole structure usable by working readers rather than only by authors of the specification.
+12. Didactic primacy keeps the whole structure usable by working readers rather than only by authors of the specification.
 
 These storylines are connected. Architecture needs characteristics. Characteristics need comparison. Comparison needs evidence. Evidence needs publication and source-use discipline. Language repair needs ontology. Ontology often benefits from a mathematical lens. Improvement needs state-of-the-art comparison. FPF's value comes from the composition.
 
@@ -1063,8 +1065,6 @@ Its positive scope is broader than those refusals. FPF is a compact language for
 ## How To Continue After The readme
 
 Start with the `readme` when you are deciding whether FPF can help a working project. Read this Preface when you want the ideas that make the first practical entries fit together. Use the Table of Content when you need to locate a pattern family. Then use the pattern body that governs the claim, relation, publication use, architecture, evidence, decision, work, name, mathematical lens, option portfolio, or improvement object you actually have.
-
-If your goal is to use FPF in a field or organization, do not begin by rewriting the Core. Start from the readme entry for domain or local FPF-grounded frameworks, then use `E.4`, `E.4.PFAD`, `E.4.DPF`, and `E.4.PFR` to decide what belongs in your dependent framework and what stays in FPF Core.
 
 Do not read the specification linearly unless that is your study goal. In project use, the first useful FPF pattern family is selected by the working question.
 
@@ -11663,7 +11663,7 @@ If all answers are crisp and the invariants EV-0...EV-6 are satisfied, the patte
 
 **EntityOfConcern preservation discipline.** Controlled coarsening stays under entityOfConcernRef-preserving viewing only when the C.2.1 `entityOfConcernRef` remains stable. When the source-bearing side is a declared source set, its membership, loss account, and reopen condition must also be bounded; that source-set discipline does not substitute for same-EntityOfConcern preservation. Any `entityOfConcernRef` shift leaves this pattern for `A.6.4`.
 
-**Use this when.** A summary, briefing, redaction, dashboard tile, lookup handle, didactic compression, or other readable coarsened rendering coarsens one source-bearing side by dropping or narrowing distinctions, recoverability, reliability transport, or admissible-use value, or when review discovers that the readable item can be retained only as a coarsened rendering.
+**Use this when.** A summary, briefing, redaction, dashboard tile, lookup handle, didactic compression, architecture description, architecture view, framework readme, preface, pattern-language carrier, or other readable coarsened rendering coarsens one source-bearing side by dropping or narrowing distinctions, recoverability, reliability transport, structural content, or admissible-use value, or when review discovers that the readable item can be retained only as a coarsened rendering. The source-bearing side may be a text, but it may also be wider source structure, architecture as selected structures in context, a model, a graph, a source pack, or a pattern set.
 
 **Plain recognition line.** A short version is useful only while the reader can still see what it came from, what it leaves out, and when to go back.
 
@@ -11828,6 +11828,7 @@ Aggregation or quotient-like coarsening remains inside this pattern only while t
 | --- | --- |
 | Same-entity textual rewording without a separate narrower-use card | `A.6.3.CR` |
 | Representation scheme or reasoning-medium shift | `A.6.3.RT` |
+| Source structure is ordered into a sequential narrative path and the ordering rationale is primary | `A.6.3.NAR` for the narrative rendering relation; keep CSC only for the coarsened narrower-use card when source distinctions are dropped or narrowed |
 | Explanation-facing class over existing source `U.Episteme` or `U.EpistemePublication` | `E.17.EFP` |
 | Bounded comparison over already pinned source epistemes or source publications | `E.17.ID.CR` |
 | Equivalence, substitution, interop row, or bridge or substitution use | `F.9` |
@@ -11862,6 +11863,8 @@ Neighboring governing patterns may point here when a coarsened rendering relatio
 **Redacted partner note.** The source-bearing side is a full incident record with actor identity, trace path, and recovery evidence. The coarsened rendering is a partner-facing redacted note that withholds actor identity and trace path. Its narrower admissible use is bounded disclosure and coordination. Accountability, legal, audit, readiness, and gate uses reopen the full incident record or name the relevant `authoritySourceRef` destination.
 
 **Redacted functional-description publication.** The source-bearing side is a functional architecture note that names flow relations, method-selection limits, work-plan prerequisites, result-measurement requirements, and two exception cases. The coarsened rendering is a partner-facing table that keeps the main flow relation and removes the exception cases and result-measurement details. Its narrower admissible use is bounded orientation for coordination. Work planning, gate passage, evidence, engineering justification, control-architecture use, and release permission reopen the source-bearing side or apply `A.15`, `A.10`, `B.3`, `A.20`, `A.21`, or `B.2.5` as the claim being made requires.
+
+**Coarsened narrative briefing.** The source-bearing side is an architecture candidate set with three candidates, two quality-characteristic trade-offs, and one unresolved placement constraint. The narrative briefing tells the useful story of why candidate C-2 is attractive and leaves the other candidates as source-return items. `A.6.3.NAR` governs the structure-to-sequence rendering relation. CSC governs the narrower admissible use: orientation for discussion only, not candidate selection, project decision, implementation authorization, or evidence of selected architecture.
 
 **Exceptional interop-facing simplification.** The source-bearing side is two pinned context notes plus their bridge or comparison source material. The coarsened rendering is: `For this exchange only, Field A is treated as broader than Field B; see source notes for exceptions.` The rendering may orient the exchange, but any equivalence, substitution, projection, bridge-row, or approval use applies `F.9` or `F.9.1` or reopens the source-bearing side source material.
 
@@ -11955,8 +11958,8 @@ The practical implication is the same across these traditions: coarsened readabl
 ### A.6.3.CSC:12 - Relations
 
 - **Specializes:** `A.6.3 U.EpistemicViewing` for declared source-loss mode in a same-lineage source-to-rendering relation.
-- **Coordinates with:** `A.6.3.CR`, `A.6.3.RT`, `E.17.EFP`, `E.17.ID.CR`, `F.9`, `F.9.1`, `A.15`, `A.6.4`, `A.20`, and `A.21`.
-- **Does not replace:** conservative retextualization, representation-scheme transition, explanation profiling, bounded comparative review, bridge-card discipline, stance overlay, changed-EntityOfConcern discipline, work authority, gate authority, or adjudication authority.
+- **Coordinates with:** `A.6.3.CR`, `A.6.3.RT`, `A.6.3.NAR`, `E.17.EFP`, `E.17.ID.CR`, `F.9`, `F.9.1`, `A.15`, `A.6.4`, `A.20`, and `A.21`.
+- **Does not replace:** conservative retextualization, representation-scheme transition, structure-to-narrative rendering, explanation profiling, bounded comparative review, bridge-card discipline, stance overlay, changed-EntityOfConcern discipline, work authority, gate authority, or adjudication authority.
 - **Entry relation:** neighboring patterns may hand off here when a coarsened rendering's narrower-use, non-admissible-use, and reopen card becomes the primary question.
 - **Governing-pattern relation wording:** this pattern is a `specialization under A.6.3`, not a bundle, suite, profile, overlay, or review pack. Its governing role is limited to the controlled-coarsening relation itself.
 
@@ -12031,7 +12034,7 @@ Use this pattern when one already available source line about the same EntityOfC
 
 **Reliance-facing use.** Open the fuller rewrite-admissibility record only when the rewritten text will be externally relied on, disputed, cited as a source-relation reason, used across context, or read as release, gate, work-preparation, engineering-justification, approval, or evidence justification.
 
-**Not this pattern when.** Not this pattern when the case is primarily explanatory rendering (`ExplanationFaithfulnessProfile`), representation-scheme change (`Representation-Scheme Transition`), changed EntityOfConcern (`A.6.4`), comparative review (`E.17.ID.CR`), bridge or substitution use (`F.9` or `F.9.1`), or a deliberately coarsened rendering whose narrower admissible use, non-admissible downstream use, and source-bearing return card has become primary. In that last case, use `A.6.3.CSC Controlled Semantic Coarsening`.
+**Not this pattern when.** Not this pattern when the case is primarily explanatory rendering (`ExplanationFaithfulnessProfile`), representation-scheme change (`RepresentationSchemeTransition`), changed EntityOfConcern (`A.6.4`), comparative review (`E.17.ID.CR`), bridge or substitution use (`F.9` or `F.9.1`), or a deliberately coarsened rendering whose narrower admissible use, non-admissible downstream use, and source-bearing return card has become primary. In that last case, use `A.6.3.CSC Controlled Semantic Coarsening`.
 
 ### A.6.3.CR:2 - Problem
 
@@ -12090,14 +12093,14 @@ These terms are only local review aids. They inherit the `E.17:5.1e` local-field
 **Out of scope**
 - any change of `entityOfConcernRef` or hidden change of EntityOfConcern (`A.6.4`);
 - explanation-facing renderings whose main purpose is explanatory rendering rather than same-entity rewrite (`ExplanationFaithfulnessProfile`);
-- representation-regime changes such as text→table, text→diagram, or text→latent form (`Representation-Scheme Transition`);
+- representation-regime changes such as text→table, text→diagram, or text→latent form (`RepresentationSchemeTransition`);
 - comparison, abductive-prompt, ranking, recommendation, bridge-mediated, substitution, or action-selection work that introduces new claims rather than restating available ones.
 
 #### A.6.3.CR:4.2.a - Reader guidance
 
 Use this pattern when the EntityOfConcern stays fixed and the published result still remains textual.
 - If the main change is explanatory, apply ExplanationFaithfulnessProfile.
-- If the main change is a representation-scheme shift, apply Representation-Scheme Transition.
+- If the main change is a representation-scheme shift, apply RepresentationSchemeTransition.
 - If the EntityOfConcern changes, apply A.6.4.
 
 #### A.6.3.CR:4.2.b - What the user checks first
@@ -12245,7 +12248,7 @@ When the generated-summary case needs the shared vocabulary rather than this CR-
 
 The summary may expose or cite the source slice it restates. It does not become that source slice by fluency, brevity, translation, layout, generated form, or reuse. If the source slice or required project-side FPF kind and reference named by value is missing, a repair request or source-gap note is only prospective; it does not retroactively make the earlier summary source-relation-admissible.
 
-If the generated summary is source-pointer-only, merely plausible, claim-widened, or carrying added linkage, do not treat it as a conservative source-equivalent summary. Either keep it as source-finding or orientation, repair it against the source, or apply A.6.3.CSC, ExplanationFaithfulnessProfile, Representation-Scheme Transition, E.17.ID.CR, A.15, A.10, or another governing pattern according to the claim being made.
+If the generated summary is source-pointer-only, merely plausible, claim-widened, or carrying added linkage, do not treat it as a conservative source-equivalent summary. Either keep it as source-finding or orientation, repair it against the source, or apply A.6.3.CSC, ExplanationFaithfulnessProfile, RepresentationSchemeTransition, E.17.ID.CR, A.15, A.10, or another governing pattern according to the claim being made.
 
 #### A.6.3.CR:5.2 - Same-EntityOfConcern rewrite via declared correspondence
 
@@ -12255,7 +12258,7 @@ If the generated summary is source-pointer-only, merely plausible, claim-widened
 
 **Published joint-review slice.** `For standard operating demand, Cooling loop CL-2 is described in both the design and safety views as maintaining the required temperature condition. This summary relies on CorrespondenceModel CM-12 and does not add claims beyond that declared overlap.`
 
-The synthesis may stay in this pattern only if the source relation remains explicit, every receiving claim remains recoverable to the design slice, the safety slice, or the declared `CorrespondenceModel`, and the text does not silently widen claims beyond the declared entityOfConcernRef-preserving overlap. Because correspondence witness is claim-bearing here, a claim-bearing review record is usually warranted.
+The synthesis may stay in this pattern only if the source relation remains explicit, every downstream claim remains recoverable to the design slice, the safety slice, or the declared `CorrespondenceModel`, and the text does not silently widen claims beyond the declared entityOfConcernRef-preserving overlap. Because correspondence witness is claim-bearing here, a claim-bearing review record is usually warranted.
 
 #### A.6.3.CR:5.2.b - Cross-language re-expression without hidden bridge work
 **Source slice.** `The backup controller stays in passive watch mode until the primary loop fails two consecutive heartbeat checks.`
@@ -12276,12 +12279,12 @@ This does **not** remain ordinary `ConservativeRetextualization`. The coarsened 
 A text is rewritten not mainly to restate the same source, but to explain why it matters, simplify reasoning for a learner, or narrate a mechanism. That move should leave `ConservativeRetextualization` and be reviewed under `ExplanationFaithfulnessProfile`.
 
 #### A.6.3.CR:5.4 - Boundary to representation-scheme transition
-A prose note is rewritten as a table, matrix, diagram, latent representation, or distributed representation. Even if the EntityOfConcern stays fixed, this is not only a textual rewrite; it belongs with `Representation-Scheme Transition`.
+A prose note is rewritten as a table, matrix, diagram, latent representation, or distributed representation. Even if the EntityOfConcern stays fixed, this is not only a textual rewrite; it belongs with `RepresentationSchemeTransition`.
 
 ### A.6.3.CR:6 - Bias-Annotation
 
 Lenses tested: **Arch**, **Onto**, **Epist**, **Prag**, **Did**.
-This pattern intentionally biases toward same-entity conservativity and away from explanation or retargeting inflation. The main mitigation is to apply `ExplanationFaithfulnessProfile`, `Representation-Scheme Transition`, `A.6.4`, or the downstream governing pattern when the same-entity textual interpretation stops being honest.
+This pattern intentionally biases toward same-entity conservativity and away from explanation or retargeting inflation. The main mitigation is to apply `ExplanationFaithfulnessProfile`, `RepresentationSchemeTransition`, `A.6.4`, or the downstream governing pattern when the same-entity textual interpretation stops being honest.
 
 ### A.6.3.CR:7 - Conformance Checklist
 
@@ -12298,7 +12301,7 @@ This pattern intentionally biases toward same-entity conservativity and away fro
 6. **CC-CR-6 — Local conservativity witness remains satisfied.**
    The reviewed case does not silently widen modality, remove caveats, raise reliability assessment, import bridge or substitution licence, or collapse declared alternatives beyond stated loss notes.
 7. **CC-CR-7 — Governing pattern is explicit on failure.**
-   If the case fails any of the checks above, the governing pattern for the changed claim is named explicitly (ExplanationFaithfulnessProfile, Representation-Scheme Transition, A.6.4, B.5.2, or another governing pattern).
+   If the case fails any of the checks above, the governing pattern for the changed claim is named explicitly (ExplanationFaithfulnessProfile, RepresentationSchemeTransition, A.6.4, B.5.2, or another governing pattern).
 8. **CC-CR-8 — Working-model first remains intact.**
    Ordinary same-entity rewrites stay lightweight; fuller explicit review records are reserved for claim-bearing cases.
 
@@ -12347,9 +12350,9 @@ This pattern is worth splitting out because same-entity textual re-expression is
 ### A.6.3.CR:12 - Relations
 
 - **Builds on:** `A.6.3`, `A.6.2`, `A.7`, `E.10.D2`, `E.17.0`, `E.17`, `F.9`, `F.18`, `E.10`
-- **Coordinates with:** `ExplanationFaithfulnessProfile`, `Representation-Scheme Transition`, `E.17.ID.CR ComparativeReviewUnit`, `A.6.4`, `B.5.2`, `A.15`
+- **Coordinates with:** `ExplanationFaithfulnessProfile`, `RepresentationSchemeTransition`, `E.17.ID.CR ComparativeReviewUnit`, `A.6.4`, `B.5.2`, `A.15`
 - **Impact radius:** primary touch `A.6.3`; secondary review relation `E.17.0`, `E.17`, `F.9`; failed conservativity cases apply `A.6.4`, `B.5.2`, or `A.15`
-- **Boundary notes:** explanation-facing cases apply `ExplanationFaithfulnessProfile`; representation-regime shifts apply `Representation-Scheme Transition`; bounded comparative review cases apply `E.17.ID.CR ComparativeReviewUnit`; EntityOfConcern changes apply `A.6.4`.
+- **Boundary notes:** explanation-facing cases apply `ExplanationFaithfulnessProfile`; representation-regime shifts apply `RepresentationSchemeTransition`; bounded comparative review cases apply `E.17.ID.CR ComparativeReviewUnit`; EntityOfConcern changes apply `A.6.4`.
 
 ### A.6.3.CR:End
 
@@ -12608,7 +12611,8 @@ Use this table after the positive field spine. It is not a second catalogue of e
 | --- | --- |
 | `entityOfConcernRef`, EntityOfConcern kind, ontology frame, admissible predicate set, or invariant-bearing receiving rendering changes | Apply `A.6.4` or the ontology-facing governing pattern. |
 | The receiving rendering is only a textual rewrite | Apply `ConservativeRetextualization`. |
-| The primary job is teaching, narration, or explanation-facing rendering | Apply `ExplanationFaithfulnessProfile` unless EntityOfConcern or ontology-frame change makes `A.6.4` primary. |
+| The primary job is explanation-use adequacy for an existing source on an MVPK face | Apply `ExplanationFaithfulnessProfile` unless EntityOfConcern or ontology-frame change makes `A.6.4` primary. |
+| Selected source structures are ordered into a sequential narrative for a declared reader or listener use | Apply `A.6.3.NAR`; keep RT only for the representation-scheme shift that remains after the narrative ordering, source loss, and source return are declared. |
 | The work is rendering, export, upload, serialization, OCR-style extraction, parsing-style extraction, or other carrier work | Keep carrier work outside RT; start with the pattern governing carrier or extraction use, such as `A.7` when source extraction is the current question. |
 | Geometry, notation, embedding space, feature clustering, decoded output, `PathSliceId`, `CrossingRef`, or `DecisionLogRef` is being used as ontology, continuity proof, gate, work, evidence, assurance, or transformation-flow currentness claim | Keep RT only for the representation shift and apply the governing pattern for the stronger claim. |
 | Problem formulation, temporal claim, dynamics claim, control claim, or transformation-flow claim becomes primary | Apply `B.5.2`, `C.27`, `A.3.3`, `E.18`, or the governing pattern for that claim. |
@@ -12688,6 +12692,14 @@ This also stays outside `RepresentationSchemeTransition`. The representation sch
 **Published dashboard tile.** `Service S: current dashboard view foregrounds cache-failover evidence; alternative branches and confidence bands remain in the incident worksheet.`
 
 This does **not** remain ordinary RepresentationSchemeTransition if the tile is treated as more than a narrow report view. The tile foregrounds one causal branch and suppresses uncertainty and alternative branches, so it stays honest only with source-bearing return to the source-bearing worksheet and a non-admissible downstream-use line. It is not a causal proof, service status verdict, or action cue. Once that narrower-use card becomes primary, ordinary entityOfConcernRef-preserving representation-scheme transition no longer governs; apply A.6.3.CSC Controlled Semantic Coarsening rather than treating it as a normal scheme shift.
+
+#### A.6.3.RT:5.4.d - Boundary to structure-to-narrative rendering
+
+**Source structure slice.** `Architecture candidate C-2 has module split M, data-custody constraint D, placement constraint P, and unresolved latency versus maintainability trade-off T.`
+
+**Published narrative slice.** `The team first tried to preserve module split M, then discovered that data custody D forced placement P, so candidate C-2 accepts latency residual T to keep maintainability within the selected range.`
+
+This does not stay ordinary `RepresentationSchemeTransition` merely because prose is one representation of architecture. The receiving rendering orders selected source structures into a narrative path for a reader. Apply `A.6.3.NAR` for ordering rationale, preserved and lost structure, admissible use, and source return. Use RT only for any remaining representation-scheme shift that does not depend on narrative ordering.
 
 #### A.6.3.RT:5.5 - Boundary to decode-mediated latent cases
 A user or decoding relation tries to restate a latent region or distributed feature cluster as explicit entity content or relation content. This stays outside the admissible entityOfConcernRef-preserving case under `A.6.3.RT` unless the pinned source claim or publication, decoding relation or access relation, recoverability evidence, admissible-use value, and remaining user action are already present. Readable decoded output alone is not enough.
@@ -12781,9 +12793,9 @@ This pattern is worth splitting out because representation changes are already h
 ### A.6.3.RT:12 - Relations
 
 - **Builds on:** `A.6.3`, `A.6.2`, `A.7`, `E.10.D2`, `C.2.7`, `E.17.0`, `E.17`, `F.9`, `F.18`
-- **Coordinates with:** `ConservativeRetextualization`, `A.6.3.CSC Controlled Semantic Coarsening`, `ExplanationFaithfulnessProfile`, `E.17.ID.CR ComparativeReviewUnit`, `A.6.4`, `F.9`, `F.9.1`, `E.18`, `A.15`, `A.10`, `B.3`, `B.5.2`, `A.20`, `A.21`, `C.27`, `A.3.3`, explicit decoding-access review
+- **Coordinates with:** `ConservativeRetextualization`, `A.6.3.NAR Structure-to-Narrative Rendering`, `A.6.3.CSC Controlled Semantic Coarsening`, `ExplanationFaithfulnessProfile`, `E.17.ID.CR ComparativeReviewUnit`, `A.6.4`, `F.9`, `F.9.1`, `E.18`, `A.15`, `A.10`, `B.3`, `B.5.2`, `A.20`, `A.21`, `C.27`, `A.3.3`, explicit decoding-access review
 - **Impact radius:** primary touch `A.6.3`; selected edit companion `A.6.4`; secondary review relation `C.2.7`, `E.17.0`, `E.17`, `F.9`, decode-mediated recoverability review, transformation-flow interpretation under `E.18`, and project-side governing patterns for claims not governed by this pattern
-- **Boundary notes:** textual same-regime rewrites stay with `ConservativeRetextualization`; explanation-facing renderings stay with `ExplanationFaithfulnessProfile`; bounded comparative review cases apply `E.17.ID.CR ComparativeReviewUnit`; EntityOfConcern changes apply `A.6.4`; coarsened source renderings apply `A.6.3.CSC`; bridge, work, evidence, assurance, gate, abductive, temporal, dynamics, and transformation-flow consequences remain bounded by explicit evidence and by the downstream governing pattern for the claim being made.
+- **Boundary notes:** textual same-regime rewrites stay with `ConservativeRetextualization`; source-structure-to-sequence narrative renderings apply `A.6.3.NAR`; explanation-facing renderings stay with `ExplanationFaithfulnessProfile`; bounded comparative review cases apply `E.17.ID.CR ComparativeReviewUnit`; EntityOfConcern changes apply `A.6.4`; coarsened source renderings apply `A.6.3.CSC`; bridge, work, evidence, assurance, gate, abductive, temporal, dynamics, and transformation-flow consequences remain bounded by explicit evidence and by the downstream governing pattern for the claim being made.
 
 ### A.6.3.RT:12a - Boundary with quantum-like state-representation shortcuts
 
@@ -12819,6 +12831,330 @@ Do not describe ordinary compression, low-bit implementation, diagramming, or re
 > When an entityOfConcernRef-preserving representation-scheme transition imports a contested or claim-bearing mathematical lens, `A.6.3.RT` still governs the source and receiving representation schemes, entityOfConcernRef-preserving relation, preserved and lost scheme features, and representation-scheme-transition boundary. The applicable `C.29` output for the stated use (`MathLensUse.LensCandidateNote`, `MathLensUse.OneLine`, `MathLensUse.MiniCard`, or `MathLensUse.FullCard` when required) may be cited only for adequacy of the mathematical lens used in that transition. It does not replace the representation-scheme-transition record or broaden the transition into bridge, evidence, or causal-claim-kind.
 
 ### A.6.3.RT:End
+
+## A.6.3.NAR - Structure-to-Narrative Rendering
+
+> **Type:** Specialization pattern
+> **Status:** Stable
+> **Normativity:** Normative unless explicitly marked informative
+
+### A.6.3.NAR:1 - Problem frame
+
+Use this pattern when selected source structure must become a sequential narrative rendering for a declared reader or listener use. Typical cases include a scientific mechanism turned into a paper section, an architecture trade-off turned into a team explanation, a conceptual graph turned into a lesson route, or an event graph turned into a generated story draft.
+
+Primary `EntityOfConcern`: one `A.6.3` epistemic-viewing relation in which a source-bearing episteme, publication, model, graph, architecture view, evidence set, or situation is rendered as a narrative path while the same EntityOfConcern is preserved or a declared correspondence is used.
+
+Plain starting vocabulary:
+
+| Term | Plain meaning |
+| --- | --- |
+| `source material` | The source-bearing content being rendered: episteme, publication, graph, model, architecture view, evidence set, or bounded source set. |
+| `selected source structures` | The relations, constraints, events, mechanisms, dependencies, conflicts, alternatives, or changes that must remain recoverable. |
+| `source-structure selection rationale` | The reason these structures, rather than other possible structures, are needed for the declared reader or listener use. |
+| `source temporal posture` | Whether the source structure is retrospective or reverse-engineered actual material, live unfolding material, prospective planned material, prospective fictional material, or a mixed case. |
+| `route family` | Whether the narrative rendering is direct source-structure narrativization or architecture-mediated narrativization through architecture understanding, description, view, viewpoint, decision, or telemetry. |
+| `narrating or rendering worker` | The person, team, or tool-mediated role arranging the source structures into the narrative path. This role is not the source authority by default. |
+| `reader or listener role` | The role and use whose interests constrain source selection, ordering, viewpoint, recoverability, engagement, and source return. This is narrower than a generic audience. |
+| `reader-interest or use hypothesis` | The explicit guess about what the reader or listener needs to do with the narrative and what problem the selected structures help solve. |
+| `narrative rendering` | The receiving sequential account that makes the source usable by a reader or listener. |
+| `ordering rationale` | The reason this sequence is used: event order, causal order, discovery order, didactic order, tension order, traversal rule, or another declared rule. |
+| `source return` | The condition under which the reader or later worker must return to the source-bearing material rather than relying on the narrative. |
+| `epiplexity question` | The question "how much selected source structure did this rendering pull into an inspectable description for this observer and use?" NAR supplies the relation fields; structural-information and evaluation owners answer the value claim. |
+
+First useful move: write one compact `StructureToNarrativeRenderingCase@Context` for the case. Name the source material, selected source structures, source-structure selection rationale, source temporal posture, route family, narrating or rendering worker, reader-interest or use hypothesis, receiving narrative rendering, intended reader or listener role and use, ordering rationale, preserved structure, foregrounded structure, coarsened or lost structure, recoverability, admissible use, non-admissible use, and source-return condition.
+
+What goes wrong if missed: a useful story becomes a substitute for the source structure. Readers remember a sequence, example, protagonist, conflict, or conclusion, but cannot reconstruct the source relations that made the narrative worth using.
+
+What this buys: the narrative can help human use without pretending to be neutral compression, proof, authority, ethics, evidence, architecture, or the source itself.
+
+Ordinary use: for low-reliance teaching, orientation, or internal explanation, one compact case note near the narrative is enough. It must still state what the narrative preserves, what it leaves behind, and when to return to the source.
+
+Reliance-facing use: use the full field spine when the narrative will guide architecture work, design decisions, policy communication, safety work, generated-output admission, external teaching, or cross-context reuse.
+
+Not this pattern when the current change is only same-regime wording (`A.6.3.CR`), only representation-scheme transition (`A.6.3.RT`), only coarsened narrower-use rendering (`A.6.3.CSC`), explanation-use adequacy on an existing MVPK face (`E.17.EFP`), changed EntityOfConcern (`A.6.4`), carrier export or serialization, generated-output admission (`C.35`), evidence, assurance, ethics, publication, or work authorization. Use the direct owner first and return here only when the structure-to-sequence narrative relation is live.
+
+### A.6.3.NAR:2 - Problem
+
+Projects often need narrative because source structures are too tangled for a reader to use directly. A mechanism, architecture, model, evidence set, or event graph may need a beginning, order, tension, action, update point, or learning route before humans can follow it.
+
+Without `A.6.3.NAR`:
+
+1. narrative is treated as style polish after the real work is done;
+2. narrative is treated as a lossy summary even when sequence-making is the main representational move;
+3. source structure, order, event model, and lost relations disappear behind fluent prose;
+4. engagement is allowed to raise confidence, authority, ethical permission, or policy force without a direct owner;
+5. generated narrative output is trusted because it is coherent or dramatic;
+6. teaching material can be smuggled into pattern bodies instead of being kept as a separate test-run publication carrier or ordinary publication carrier.
+
+### A.6.3.NAR:3 - Forces
+
+| Force | Tension |
+| --- | --- |
+| Source structure vs human sequence | A reader often needs an ordered path, while the source structure may be a graph, mechanism, option set, architecture, or evidence field rather than a line. |
+| Engagement vs truth boundary | Tension, viewpoint, protagonist, and pacing can help attention, but they do not widen truth, evidence, authority, ethical permission, or admissible downstream use. |
+| Compression vs recoverability | A narrative foregrounds some structure and leaves other structure behind. The useful loss must be visible. |
+| Event comprehension vs non-event structure | Some source structures involve events and actions; others involve dependencies, constraints, alternatives, or architectures. The pattern must support both without forcing a fiction model. |
+| Domain richness vs Core economy | Narratology, storycraft, cognitive narrative research, science communication, NLG, and teaching practice are rich, but most of their vocabulary belongs in domain narrative source packs or local and domain frameworks rather than FPF Core. |
+
+### A.6.3.NAR:4 - Solution
+
+Create a `StructureToNarrativeRenderingCase@Context` for the narrative relation.
+
+Use this compact form. Fill only fields that change the admissible use or block a likely overread.
+
+```text
+StructureToNarrativeRenderingCase@Context:
+  sourceMaterialRef:
+  selectedSourceStructureRefs:
+  sourceStructureSelectionRationale:
+  sourceTemporalPosture:
+  routeFamily: direct-source-structure | architecture-mediated | mixed
+  architectureMediationRef?:
+  sourceStructureOwnerRef?:
+  narratingOrRenderingWorkerRef?:
+  readerOrListenerRoleRefs:
+  readerInterestOrUseHypothesis:
+  preservedEntityOfConcernRef?:
+  declaredCorrespondenceRef?:
+  receivingNarrativeRenderingRef:
+  intendedReaderOrListenerUse:
+  orderingRationaleOrTraversalRule:
+  preservedStructure:
+  foregroundedStructure:
+  coarsenedOrLostStructure:
+  epiplexityOrStructuralInformationRef?:
+  recoverabilityClassOrSourceReturnCondition:
+  eventModelSupport?:
+  engagementOrMotivationClaim?:
+  admissibleUse:
+  nonAdmissibleDownstreamUse:
+  neighboringPatternExits:
+```
+
+Work in this order:
+
+1. Name the source material, the source structure that must survive, and its temporal posture: retrospective or reverse-engineered actual, live unfolding, prospective planned, prospective fictional, or mixed.
+2. State the source-structure selection rationale and the reader-interest or use hypothesis. If these are only implicit in a draft, treat the draft as a candidate carrier until the rationale is reconstructed.
+3. Name the route family. Use `direct-source-structure` for a situation, event stream, proof field, canon, or source pack rendered directly; use `architecture-mediated` when architecture understanding, architecture description, architecture view, architecture viewpoint, decision record, candidate structure, or telemetry is the mediating source.
+4. Name the narrating or rendering worker, the receiving narrative rendering, and the intended reader or listener role and use.
+5. State whether the same EntityOfConcern is preserved or whether a `C.34` correspondence is needed.
+6. Choose the ordering rationale: event order, causal order, discovery order, didactic order, tension order, graph traversal, architecture-decision route, live-commentary route, prospective-scenario route, source-publication order, or another declared rule.
+7. State preserved structure, foregrounded structure, coarsened or lost structure, and recoverability.
+8. If the live question is how much structure was pulled into the narrative, create or cite the structural-information or epiplexity note instead of answering with fluency. For architecture-relevant uses this routes to `C.33`; for declared narrative-quality evaluation this routes to the domain narrative evaluation owner, `A.19.ECS`, and `C.16` as applicable.
+9. Add event-model support when the narrative asks the reader to understand events, actions, mechanisms, goals, obstacles, state updates, or change.
+10. Add engagement or motivation only as a declared-use claim. If persuasion, harm, affected parties, policy influence, bias, value conflict, or ethical assurance is live, route the claim to `D.1` through `D.5`, `A.10`, or `B.3` as applicable.
+11. Close with admissible use, non-admissible downstream use, source-return condition, and neighboring-pattern exits.
+
+#### A.6.3.NAR:4.1 - Ordinary and claim-bearing cases
+
+Ordinary narrative renderings can stay lightweight. An internal explanation, teaching example, or orientation story usually needs only a compact note: source material, selected structure, sequence rule, visible loss, and source return.
+
+Claim-bearing cases need the fuller record. A case is claim-bearing when the narrative will be used for design, architecture, policy, safety, public science communication, generated-output admission, cross-context reuse, assurance-facing training, or a disputed interpretation.
+
+#### A.6.3.NAR:4.2 - Same-entity and correspondence-mediated profiles
+
+Use the same-entity profile when the receiving narrative is still a rendering of the same EntityOfConcern and the source tether remains visible.
+
+Use the correspondence-mediated profile when the narrative is produced from a source model, graph, architecture view, or generated relation set that corresponds to the source but is not the same representation. In that case, create or cite the `C.34` correspondence record before the narrative is treated as same enough for a downstream use.
+
+#### A.6.3.NAR:4.2.1 - Direct and architecture-mediated routes
+
+Use the direct source-structure route when the narrative worker renders a situation, event stream, domain model, proof dependency field, evidence set, fictional canon, or source pack directly into a narrative path. View and viewpoint discipline may still help, but the central owner is the NAR relation plus any domain owner, not the architecture line.
+
+Direct does not mean implicit. If the selected source structures, selection rationale, reader-interest hypothesis, ordering rationale, and loss account are left inside the writer's intuition, an LLM prompt, or a finished story, the output is only a candidate carrier or candidate prose, not an admitted narrative rendering. It can inspire a later NAR case, but reliance-facing use requires reconstructing and checking the missing selection and loss record.
+
+Use the architecture-mediated route when the source structure is actual or possible holon structure that has been understood through architecture work: reverse-engineering an existing holon, comparing candidate future structures, using architecture descriptions and views, applying architecture decisions, or checking telemetry after realization. In this route the return chain is `narrative rendering -> architecture description or view -> architecture as selected structures in context -> wider holon or source structures`. Each arrow can select, coarsen, abstract, omit, or order structure, and each arrow needs its own source-return condition when the loss becomes live. `C.33`, `C.34`, `C.32.*`, architecture-description owners, and architecture-decision owners remain live. NAR governs only the narrative rendering of that architecture-relevant structural information.
+
+The temporal posture matters in both routes. A historical reconstruction, a live football broadcast, a prospective project narrative, and a fictional continuation may all be narratives, but they have different source-return, evidence, uncertainty, ordering, and non-admissible-use obligations.
+
+#### A.6.3.NAR:4.3 - Ordering rationale
+
+The ordering rationale is not decoration. It is the structure-to-sequence rule.
+
+Common ordering rationales:
+
+| Ordering rationale | Use when |
+| --- | --- |
+| Event order | The source structure is a sequence of happenings or state changes. |
+| Causal order | The reader must understand mechanism, dependency, intervention, or consequence. |
+| Discovery order | The narrative teaches how a claim, design, or explanation was found. |
+| Didactic order | The source is reordered so a learner can build prerequisites and reconstruct the source later. |
+| Tension order | The narrative preserves conflicts, trade-offs, obstacles, failed attempts, or unresolved alternatives. |
+| Traversal rule | The source is a graph, architecture, relation set, or option field and the narrative follows a declared path through it. |
+
+If the source only changes carrier form, file format, export layout, OCR extraction, or byte order, this pattern is not open. Carrier serialization alone is not narrative rendering.
+
+#### A.6.3.NAR:4.4 - Event model, viewpoint, and agency
+
+If the narrative asks readers to understand events, actions, mechanisms, or change, state the event-model support. At minimum, name the event or mechanism type, participating holons or agents when present, causal or dependency links, update points, and what the narrative asks the reader to predict or revise.
+
+If viewpoint, narrator, focalized object, protagonist, or agency choices affect understanding, keep them in domain narrative vocabulary unless a direct FPF owner is live. In FPF Core, the reusable claim is simpler: the viewpoint choice foregrounds some source structure and hides or weakens another structure for a declared use.
+
+#### A.6.3.NAR:4.5 - Engagement, ethics, and assurance boundary
+
+Engagement is a real use claim, but it is not truth or permission.
+
+When an engagement or motivation claim matters, state:
+
+- intended effect for the declared use;
+- source structure that may not be distorted for that effect;
+- affected reader, listener, group, or decision context when relevant;
+- non-admissible uses that would overread the narrative;
+- owner for ethical, evidence, assurance, or policy claims.
+
+Use `D.1` for ethical value-frame entry, `D.2` through `D.4` for multilevel conflict and decision use, `D.5` for bias, human impact, or ethical assurance, `A.10` for evidence, and `B.3` for assurance. Narrative engagement never grants moral permission by itself.
+
+#### A.6.3.NAR:4.6 - Reopen, lower, and return rule
+
+A NAR case stays admissible only while its source material, selected source structures, intended use, ordering rationale, source-return condition, and neighboring-owner exits still match the narrative rendering's use. When one of these changes, repair the smallest affected part of the case before relying on the narrative again. Do not turn NAR into a general monitor for all narrative science; this rule is local to the declared NAR case and its owner-routing obligations.
+
+| Trigger | Required move |
+| --- | --- |
+| Selected source structures or source material change | Reopen the NAR case; restate preserved, foregrounded, coarsened, and lost structure; use `C.33` only when the narrative rendering is being used as architecture-relevant structural information, use the domain evaluation owner for non-architecture epiplexity, use `G.2` for source-pack claims, and lower admissible use until source return is restored. |
+| Intended reader or listener use becomes stronger, broader, or more reliance-facing | Lower the narrative to orientation-only use until the case is repaired; route publication or audience-unit claims to `E.17` or `E.17.AUD`, and route evidence, assurance, ethics, or policy force to `A.10`, `B.3`, or `D.1` through `D.5`. |
+| Ordering rationale or traversal rule changes | Reopen the ordering field and visible-loss account; use `A.6.3.RT` if the representation scheme changed, `A.6.3.CSC` if the source was deliberately coarsened for narrower use, and NAR only when source structure is still being ordered into a narrative path. |
+| Source-return condition is missing, stale, or no longer reachable | Lower downstream use, return to the source material, and refresh the source-return route before treating the narrative as reliance-facing. Use `G.11` when currentness or freshness is the live problem. |
+| Generated output, source plan, schema, or admission result changes | Return to `C.35` for generated-carrier admission and `G.2` for source-pack claims; reopen NAR only after the source-to-narrative relation, captured or lost structure, and correspondence obligations are again explicit. |
+| Domain narrative vocabulary, source-pack basis, or relevant narrative, NLG, or cognitive-source SoTA changes the meaning of a relied-on narrative field | Refresh the domain vocabulary or source-pack basis first; lower any NAR claim that depended on the old vocabulary or source line until the field meaning is replayable. |
+| Downstream owner requires stronger evidence, assurance, ethics, publication, or work authority than the NAR case carries | Keep NAR as a representation relation only; route the stronger claim to `A.10`, `B.3`, `D.1` through `D.5`, `E.17`, or the direct work or decision owner, and mark that downstream use non-admissible until that owner passes. |
+| Correspondence or preservation claim weakens after repair | Use `C.34` only for the weakened correspondence that remains; use `C.33` for captured and lost architecture-relevant structures, use the domain evaluation owner for non-architecture epiplexity, and lower any downstream use that required stronger sameness. |
+
+### A.6.3.NAR:5 - Archetypal Grounding
+
+Tell: `A.6.3.NAR` is the pattern for making an ordered narrative path from selected source structure while keeping the source relation inspectable. It is not a pattern for writing a better story in general.
+
+#### A.6.3.NAR:5.1 - Scientific mechanism narrative
+
+A chemistry paper has calculations, candidate mechanisms, failed synthesis attempts, and an unresolved tension between theory and experiment. The narrative uses discovery order: failed attempts, structural clue, revised mechanism, new experiment, remaining uncertainty.
+
+The NAR case records source structures `calculation set`, `mechanism candidates`, `experiment attempts`, and `unresolved tension`. It records preserved structure `candidate mechanism and failed-attempt relation`, foregrounded structure `discovery route`, lost structure `full calculation detail`, and source return `return to source calculations before using the narrative for mechanism proof`.
+
+This is not only conservative retextualization because ordering and tension carry the use. It is not proof because the narrative does not replace evidence.
+
+#### A.6.3.NAR:5.2 - Architecture trade-off narrative
+
+An architecture team explains why one candidate structure was selected. The source includes module structure, data custody, placement constraints, architecture characteristics, and rejected candidates.
+
+The route is architecture-mediated and prospective when the team is still choosing a future structure; it is retrospective when the team is reverse-engineering why an existing holon has the structure it has. The narrative follows tension order: current pain, candidate split, characteristic trade-off, rejected alternatives, selected structure, remaining residual. The NAR case records what structure the story preserves and which hidden structures remain non-admissible for implementation decisions until the architecture description, decision record, or synthesis owner is reopened.
+
+#### A.6.3.NAR:5.2.1 - Architecture narrative repair after source change
+
+Later, one rejected candidate gains a new measurement basis and a placement constraint changes. The old narrative still tells a coherent tension story, but it no longer preserves the live candidate set. The repair is local: lower the old narrative to historical orientation, reopen the NAR case, replace the selected-source-structure refs and ordering rationale, and add a new source-return condition pointing to the updated architecture source.
+
+The captured and lost structures move to `C.33`: old rejected-candidate relation preserved as history, new candidate-set relation captured, and obsolete measurement basis marked lost for current decision use. `C.34` may carry only the weakened correspondence that remains between the old narrative and the updated source. Implementation or decision use stays non-admissible until the architecture description, decision record, or synthesis owner is repaired.
+
+#### A.6.3.NAR:5.2.2 - Live unfolding event narrative
+
+A commentator narrates a football match while the source event is still unfolding. The route is direct source-structure and live. The source structures include score state, possession changes, tactical shape, player roles, momentum, and uncertainty about what the next play means.
+
+The NAR case records that the narrative can orient the listener during the event, but later analysis, statistics, rule disputes, injury reports, or official results require source return. Live commentary may use tension and prediction, but it cannot treat provisional interpretation as settled event evidence.
+
+#### A.6.3.NAR:5.3 - FPF seminar-route boundary
+
+A team tests whether a future seminar series can explain FPF. The narrative route may use `A.6.3.NAR` to declare how FPF source structures are ordered for learners: EntityOfConcern discipline, problem frames, pattern use, relation records, source return, framework authoring, and improvement loops.
+
+The probe evaluates whether NAR supports an external seminar-route publication carrier for declared teaching use. It is not a narrative-rendering quality result, not evidence that FPF is correct, and not permission to place seminar outlines, slides, scripts, or exercises inside Core pattern bodies.
+
+The actual seminar outline, slides, exercises, and script are not part of this pattern. They belong in a separate test-run publication carrier or teaching publication carrier. This pattern governs only the structure-to-sequence relation used by that carrier.
+
+#### A.6.3.NAR:5.4 - Franchise-continuation storycraft probe boundary
+
+A storycraft team tests whether a continuation-style narrative for a well-known space-opera franchise can preserve admitted source structures without becoming a fan-service list or an unauthorized publication plan. The source material is the admitted canon or local source pack. The selected source structures may include continuity constraints, premise, theme, character-agency treatment, causal plot structure, viewpoint, stakes, and source-return refs.
+
+`A.6.3.NAR` governs only the structure-to-sequence relation: which source structures are ordered into the proposed narrative path, which are foregrounded, which are lost or deferred, and when the worker must return to the source pack. Storycraft vocabulary, canon classification, generation method, rights or publication permission, and full narrative-quality evaluation stay outside Core. Use `G.2` for the canon or source-pack claim, domain narrative owners and direct FPF owners for agency, responsibility, and declared-use rendering-quality claims, `C.35` when generated drafts are used, and publication or rights owners when publication is live.
+
+#### A.6.3.NAR:5.5 - Homotopy-theory explanation probe boundary
+
+A teacher turns a graph-heavy mathematical source into a sequential explanation of homotopy theory. The selected source structures may include definitions, dependency order, examples, counterexamples, theorem prerequisites, proof-status boundaries, and source return to formal statements. The narrative order may be didactic dependency order rather than historical discovery order or proof order.
+
+`A.6.3.NAR` records the chosen sequence rule and visible loss: which mathematical structures remain reconstructible, which proof details or generalizations are deferred, and when the learner must return to formal source statements. It does not certify the mathematical proof, replace the formal text, or turn analogy recall into understanding. Use mathematical-lens, proof, source, evidence, publication, and teaching-evaluation owners when those claims are live.
+
+#### A.6.3.NAR:5.6 - Automated event-graph narrative
+
+An LLM or NLG system receives an event graph, agent goals, constraints, and a domain schema, then proposes a story scene.
+
+NAR records the relation only after source admission and generation owners have done their work. The case names source plan, selected event relations, ordering rule, preserved event constraints, coarsened or hallucinated structure, and source return. Generated fluency does not make the narrative authoritative; generated-output admission remains with `C.35`, source-pack claims with `G.2`, and evidence or assurance with their direct owners.
+
+### A.6.3.NAR:6 - Bias-Annotation
+
+| Bias | How NAR counters it |
+| --- | --- |
+| Story-substitution bias | Requires selected source structure, preserved structure, lost structure, admissible use, and source return before relying on the narrative. |
+| Engagement-authority bias | Treats engagement as a declared-use claim and routes ethics, evidence, assurance, and policy force to their owners. |
+| Sequence-naturalization bias | Requires the ordering rationale instead of letting a fluent order look inevitable. |
+| Carrier-serialization bias | Keeps file export, stream order, OCR, and layout changes outside NAR unless source structure is ordered into a narrative path. |
+| Generated-fluency bias | Keeps generated narratives as carriers or candidates until source relation, structure preservation, and owner routing are declared. |
+| Narratology-import bias | Keeps narratology and storycraft vocabulary in domain source packs or local and domain frameworks, not as automatic FPF Core ontology. |
+
+### A.6.3.NAR:7 - Conformance Checklist
+
+| Check | Pass condition |
+| --- | --- |
+| `CC-NAR-1` | Source material and selected source structures are named. |
+| `CC-NAR-2` | Source-structure selection rationale and reader-interest or use hypothesis are explicit enough to explain why these structures matter. |
+| `CC-NAR-3` | Source temporal posture, route family, narrating or rendering worker, receiving narrative rendering, and intended reader or listener role and use are named. |
+| `CC-NAR-4` | The case states whether the same EntityOfConcern is preserved or a `C.34` correspondence is required. |
+| `CC-NAR-5` | Ordering rationale or traversal rule is explicit. |
+| `CC-NAR-6` | Preserved, foregrounded, coarsened, and lost structures are stated enough to block overread. |
+| `CC-NAR-7` | Event-model support is present when events, mechanisms, goals, obstacles, or change are part of the use. |
+| `CC-NAR-8` | Engagement or motivation claims are bounded by declared use and do not widen truth, evidence, assurance, policy force, or ethical permission. |
+| `CC-NAR-9` | Admissible use, non-admissible downstream use, source-return condition, and neighboring-pattern exits are named. |
+| `CC-NAR-10` | Reused narrative cases are lowered, reopened, or routed through the owner named in `A.6.3.NAR:4.6` when source, use, ordering, generated-output, source-pack, SoTA, or downstream-authority conditions change. |
+
+### A.6.3.NAR:8 - Common Anti-Patterns and How to Avoid Them
+
+| Anti-pattern | What fails | Repair move |
+| --- | --- | --- |
+| Good story as source replacement | The narrative is memorable, but later users cannot recover the source structure. | Fill the NAR case: selected source structures, preserved and lost structure, source return, and non-admissible downstream use. |
+| Tacit selection as narrative success | The worker or model picked some structures, but no one can explain why those structures serve this reader use. | Reconstruct the source-structure selection rationale and reader-interest hypothesis; keep the output orientation-only until this passes. |
+| Sequence by habit | The author uses chronology, textbook order, or dramatic order without saying why that order preserves the source. | State the ordering rationale and what the chosen order hides. |
+| Engagement as evidence | Reader attention, transportation, or emotional uptake is treated as stronger truth or permission. | Keep engagement as a declared-use effect; route evidence to `A.10`, assurance to `B.3`, and ethics to `D.1` through `D.5`. |
+| Narratology word import | Terms such as plot, focalization, voice, protagonist, suspense, or narrator are used as Core FPF kinds. | Keep those terms in domain source packs or local and domain frameworks unless a later DRR admits a reusable Core distinction. |
+| Generated narrative by fluency | LLM output is accepted because it reads coherently. | Use `C.35` for generated carrier admission, then apply NAR only to a declared source-to-narrative relation. |
+| Teaching material inside pattern body | A seminar script or exercises are inserted into the pattern rather than testing the pattern. | Keep teaching material in a separate test-run publication carrier or teaching publication carrier; the pattern states the relation, checks, and source-return rule. |
+
+### A.6.3.NAR:9 - Consequences
+
+Positive consequences:
+
+- Narrative becomes a reviewable representation relation rather than ungoverned prose.
+- Readers can benefit from sequence, tension, viewpoint, and event support without losing source-return discipline.
+- Generated and human-authored narratives receive the same source-structure checks before downstream use.
+- FPF Core stays small while narrative-studies, narratology, NLG, pedagogy, and storycraft details can mature outside Core.
+
+Costs and trade-offs:
+
+- Authors must write a small relation note for reliance-facing narratives.
+- Some attractive narratives will be downgraded to orientation-only use because source structure is not recoverable.
+- Engagement claims can trigger ethics, evidence, or assurance owners, which may slow publication but prevents persuasion from becoming hidden authority.
+
+### A.6.3.NAR:10 - Rationale
+
+Narrative is a powerful way to make structure usable by humans. It can order events, mechanisms, evidence, options, architecture decisions, and learning paths. That strength is also the risk: a well-formed narrative can make a source look simpler, more certain, more complete, or more ethically acceptable than it is.
+
+The chosen Core pattern is therefore narrow. It does not make FPF a narratology, storycraft, teaching, or NLG framework. It adds one reusable relation under `A.6.3`: selected source structure is ordered into a sequential narrative rendering for declared use, while preservation, loss, admissibility, and source return remain visible.
+
+### A.6.3.NAR:11 - SoTA-Echoing
+
+| Source or practice line | Adopt, adapt, or reject | Concrete NAR locus changed | Boundary and currentness |
+| --- | --- | --- | --- |
+| Roald Hoffmann, "The Tensions of Scientific Storytelling" (American Scientist, 2014) | Adopt as practice-grounded evidence that scientific narratives often order calculations, attempts, mechanisms, unresolved theory and experiment tensions, and discoveries rather than merely decorate results. | Adds scientific mechanism and discovery-order worked slices; requires ordering rationale, unresolved tension, and source return. | Hoffmann is used as science-storytelling practice grounding, not current empirical cognitive SoTA and not authority over FPF ethics. |
+| Wolf Schmid, `Narratology: An Introduction` (2010), and Matei Chihaia, `Introductions to Narratology: Theory, Practice and the Afterlife of Structuralism` (2012) | Adapt Schmid's source material, story, narrative, and presentation constitution model and Chihaia's survey of narratology traditions as domain vocabulary: source material, selection, composition, ordering, viewpoint, and presentation matter. | Strengthens `orderingRationaleOrTraversalRule`, viewpoint loss, and the Core or domain boundary in the Solution and anti-patterns. | Fiction-bound narratology terms do not become FPF Core ontology unless a later DRR admits a reusable Core distinction. |
+| Tan T. Nguyen, "A Review of Mechanistic Models of Event Comprehension" (2024); Lijuan Chen and Xiaodong Xu, "Neural and Behavioral Evidence for Differential Processing of Narrative Perspective in Novel Reading" (2026); Christoph Mengelkamp, Stefanie Golke, and Markus Appel, "Effects of Reading Goal Instructions on the Comprehension and Metacomprehension of Informative Narratives" (2025); Antonios Georgiou, Tankut Can, Mikhail Katkov, and Misha Tsodyks, "Large-scale study of human memory for meaningful narratives" (2025) | Adopt as current cognitive pressure for event-model support, reconstruction tasks, memory loss, overconfidence, and viewpoint effects. | Adds `eventModelSupport?`, learner reconstruction boundary, and checks for prediction, update, recall, source-detail loss, and viewpoint-sensitive recovery. | These sources support NAR and later domain narrative use claims; they do not supply evidence, assurance, or ethics by themselves. |
+| Albert Gatt and Emiel Krahmer, "Survey of the State of the Art in Natural Language Generation" (2018); Amal Alabdulkarim, Siyan Li, and Xiangyu Peng, "Automatic Story Generation: Challenges and Attempts" (2021); Rogelio E. Cardona-Rivera, Joshua A. F. Ware, et al., "The Story So Far on Narrative Planning" (2024); Tuhin Chakrabarty, Vishakh Padmakumar, et al., "SceneCraft: Automating Interactive Narrative Scene Generation in Digital Games with Large Language Models" (2023); Yuan Ma, Richard Susilo, Patrik Haslum, and Hanna Suominen, "Text-to-Text Automatic Story Generation: A Survey" (2026); Aynigar Rahman, Aihe Yu, and Kyungeun Cho, "Game Knowledge Management System: Schema-Governed LLM Pipeline for Executable Narrative Generation in RPGs" (2026); Kien Nguyen-Trung and Ngoc Lan Nguyen, "Narrative-Integrated Thematic Analysis (NITA): How can LLMs support theme generation without coding?" (2026) | Adopt for automated narrativization boundaries: content planning, story planning, grounding, schema constraints, repair, evaluation limits, and human interpretive agency must be explicit. | Adds generated event-graph worked slice, generated-fluency bias, and owner exits to `C.35`, `G.2`, evidence, and assurance owners. | Current story-generation and tool-assisted narrative SoTA is used for domain automation duties. NAR does not make generated output authoritative. |
+| Melanie C. Green and Timothy C. Brock, "The Role of Transportation in the Persuasiveness of Public Narratives" (2000); Michael F. Dahlstrom and Shirley S. Ho, "Ethical Considerations of Using Narrative to Communicate Science" (2012); Hanna Meretoja, "Narrative and Human Existence: Ontology, Epistemology, and Ethics" (2014, abstract-level only here); FPF `D.1` through `D.5` ethics patterns | Adapt engagement as a real effect family with bounded use and ethical routing. | Adds engagement and motivation boundary, D-line owner routing, and anti-pattern against engagement as evidence or permission. | Engagement, persuasion, and narrative ethics vocabulary cannot widen truth, policy force, moral permission, or assurance without `D.1` through `D.5`, `A.10`, or `B.3`; Meretoja is background only until a source-pack claim sheet admits exact payload. |
+
+### A.6.3.NAR:12 - Relations
+
+- **Specializes:** `A.6.3` as a same-EntityOfConcern or declared-correspondence epistemic-viewing relation.
+- **Coordinates with:** `A.6.3.CR` for same-regime textual re-expression, `A.6.3.RT` for representation-scheme transition, `A.6.3.CSC` for controlled semantic coarsening, `A.6.4` for changed EntityOfConcern, and `E.17.EFP` for explanation-use adequacy.
+- **Uses:** `C.33` when the narrative rendering is being used as architecture-relevant structural information and its captured and lost structure must be made explicit, the domain evaluation owner when the same question is non-architecture narrative epiplexity, and `C.34` when source structure and narrative structure are treated as same enough for downstream use.
+- **Coordinates with:** `C.35` for generated or discovered carriers that may contain candidate narrative renderings, `G.2` for source-pack claims, `E.6` and `E.11` for learning-order and first-entry publication questions, and `E.17` or `E.17.AUD` for publication-face and audience-unit questions.
+- **Uses:** `G.11` when source-return currentness, freshness, telemetry, or source-pack decay is the live reason a NAR case must be refreshed before reuse.
+- **Routes to:** `D.1` through `D.5`, `A.10`, and `B.3` when value frame, multilevel harm, conflict, decision use, bias, impact, evidence, or assurance becomes live.
+- **Boundary:** NAR governs the structure-to-sequence narrative rendering relation. It does not publish the narrative, authorize reliance, prove the source, admit generated output, decide ethics, create a teaching script, or make a domain narrative vocabulary part of FPF Core.
+
+### A.6.3.NAR:End
 
 ## A.6.4 - `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism
 > **Status:** Stable
@@ -25380,7 +25716,7 @@ Keep this token-status split explicit:
 - `SourceToOutcomeRelation` and `DistortionPosture` are local declaration fields. Their field names do not by themselves create one new generic ontology; the declaration requirement is satisfied only when their payload is explicit enough to audit.
 - `SourceSetFamily`, `SourceSetComposition`, and `DerivedViewKind` are local fields in this `SourceSetSpaceSubstrate` declaration. Whether any value later becomes a broader stable head is outside this pattern.
 - `BasePaletteRef`, `OutcomeMapRef`, `SpaceMetricRef`, `TransitionRelationRef`, `BridgeDistortionNote`, `DescriptorMapRef`, and `DistanceDefRef` are guarded neighboring refs or interpretive qualifiers reused here. This pattern may cite them, but it does not redefine them.
-- `carrier` inside `SourceToOutcomeRelation` names the declared line, declared object, or neighboring declared map ref / qualifier ref through which the relation is being realized in this local record. It is not a claim that the thing is `U.Carrier`.
+- `carrier` inside `SourceToOutcomeRelation` names the declared line, declared object, or neighboring declared map ref / qualifier ref through which the relation is being realized in this local record. It is not a claim that the thing is `U.PresentationCarrier` or another carrier relation.
 
 ### A.19.SOURCE-SET-SPACE-SUBSTRATE:0.b - First-minute operator cue and confusion guide
 
@@ -37308,7 +37644,7 @@ Recover by sentence function and claim being made, not word form. For words such
 | `sentenceFunction` | Whether the span is definition, claim, instruction, comparison, publication description, evidence statement, gate statement, work statement, reliance statement, example, quote, or another named function. | `E.8`, `E.10`, and the local pattern being authored. |
 | `recoveredHeadKind` | The FPF kind named by value or explicit non-use disposition recovered from the phrase. | `F.18`, `A.6.P`, `A.7`, and the governing pattern for that kind. |
 | `laneAndKindSet` | The current side, kind, and relation set: FPF-side pattern text; project-side episteme, publication, and work; the `A.7` EntityOfConcern, Description episteme, and carrier distinction when current; publication form, generic publication face, MVPK face under E.17 constraints, `U.View`, `PublicationUnit`, carrier, front-end, and cue when current; and work named by value, evidence, gate, decision, or action-invitation value when current. | `A.7`, `E.17`, current episteme and publication patterns, and project-side FPF patterns. |
-| `publicationRelationSet` | `U.EpistemePublication`, publication form, generic publication face, MVPK face under E.17 constraints, bounded `PublicationUnit`, carrier, carrier relation, and front-end relation when that relation is being made. | `C.2.1`, `E.17.0`, `E.17`, MVPK, and `A.7`. |
+| `publicationRelationSet` | `U.EpistemePublication`, publication form, generic publication face, MVPK face under E.17 constraints, bounded `PublicationUnit`, `U.PresentationCarrier` when the C.2.1+ Tech kind is current, carrier relation, rendering relation, and front-end relation when that relation is being made. | `C.2.1`, `E.17.0`, `E.17`, MVPK, and `A.7`. |
 | `claimBearingEpistemeOrRecord` | Current claim-bearing `U.Episteme`, episteme-lane `U.View` with explicit episteme tether when the governing FPF pattern makes that view current, project record kind named by value and reference, or no claim-bearing episteme or record disposition. Publication form, generic publication face, carrier, `PublicationUnit`, and source cue stay in `publicationRelationSet` or `projectSideFPFRef` unless the claim is explicitly about that publication form, publication face, carrier, publication unit, or source cue. An MVPK face under E.17 constraints is handled through the episteme-lane `U.View` typing when that typing is current. | `C.2.1`, `E.17`, and the governing pattern for the record if current. |
 | `relationClaimSlice` | Empty, or a local note that `A.6.P` relation precision is current for this sentence. It must name the relation problem being handled: relation, comparison, dependency, support, sameness, grounding, mapping, endpoint claim, or cross-context bridge claim. The recovery then names `RelationKind`, `QualifiedRelationRecord`, relation phrase, candidate-set note, or bridge card when current. | `A.6.P`. |
 | `declaredUseBoundary` | The declared use boundary, blocked use outside that boundary, and L-, A-, D-, and E-claim split when the sentence makes a boundary-use claim. | `A.6.B`, `A.6`, and the governing pattern for the use. |
@@ -37320,6 +37656,8 @@ Recover by sentence function and claim being made, not word form. For words such
 
 Use the short form when only one field is current. Use the full record when several fields are current or when the phrase might otherwise create a grouped kind, hidden authority claim, project-side overclaim, conflict among publication, EntityOfConcern, and project-side action claims, contested source-use meaning, or procedure-like ordering of pattern applications.
 
+**Carrier-specific routing.** When the trigger span is `carrier`, `carried by`, `publication carrier`, `access carrier`, `framework carrier`, `front door`, `front-end`, `rendering`, `file`, `dashboard`, `screen`, `skill pack`, `MCP route`, or a close carrier-like phrase, first recover whether the sentence is naming `U.PresentationCarrier` or another carrier relation, publication/access exposure, source-finding cue, evidence or provenance carrier, generated or produced carrier, framework publication/access carrier, or project-side work/reliance use. Then route the recovered claim: `C.2.1` for episteme identity and slot discipline; `E.17` or `E.17.AUD` for publication face, publication unit, and access/publication relation; `A.10` and `G.11` for evidence, source-currentness, and provenance; `C.35` for generated or discovered produced carriers; `E.4.FPF`, `E.4.DPF`, `E.4.PFR`, or `E.4.DPF.DA` for framework package carriers; `A.15` or `A.15.4` for work or reliance use; and `C.30.P`, `C.33`, or `C.34` for architecture/structure use. Do not close with `carrier` alone: close with the recovered relation and downstream owner that carries the claim being made.
+
 #### C.2.P:4.1 - General Recovery Check
 Use this recovery check whenever text proposes a new term, repairs an episteme-publication-heavy term, asks for language precision, or relies on wording around `PublicationUnit`, `EntityOfConcern`, publication, view, face, carrier, source-side relation, source-use target relation, publication face, EntityOfConcern, or bounded publication-unit claim.
 
@@ -37327,7 +37665,7 @@ Use this recovery check whenever text proposes a new term, repairs an episteme-p
    Decide whether the current use is source-expression clarification over non-FPF prose or FPF-governed use. In source-expression clarification, preserve source-local nuance and do not force the whole source into FPF vocabulary. In FPF-governed use, the wording must satisfy `E.10` and the governing patterns named by the recovery.
 
 1. **E.10 trigger scan and head-kind recovery.**
-   Use `E.10:0.2` as the shared trigger scan. Decide what the head noun names before accepting the phrase: EntityOfConcern, Description episteme, or Description episteme selected for specification use, `U.Episteme`, `U.View`, publication form, generic publication face, MVPK face under E.17 constraints, carrier or rendering, project-side FPF kind and reference named by value, `A.15.1` dated `U.Work` occurrence, `A.6.A` action invitation, `A.2.9` `SpeechActRef`, `A.2.8` `U.Commitment`, `U.Method`, `U.MethodDescription`, document named for source, evidence, architecture, or review use, reviewed publication, review packet, review record, or review state, or source-local ordinary sense. Apply EntityOfConcern and Description-episteme boundary and specification use, Context, Tech, Plain, and carrier humility rules before treating a word as meaning-bearing.
+   Use `E.10:0.2` as the shared trigger scan. Decide what the head noun names before accepting the phrase: EntityOfConcern, Description episteme, or Description episteme selected for specification use, `U.Episteme`, `U.View`, publication form, generic publication face, MVPK face under E.17 constraints, `U.PresentationCarrier` or another carrier or rendering relation, project-side FPF kind and reference named by value, `A.15.1` dated `U.Work` occurrence, `A.6.A` action invitation, `A.2.9` `SpeechActRef`, `A.2.8` `U.Commitment`, `U.Method`, `U.MethodDescription`, document named for source, evidence, architecture, or review use, reviewed publication, review packet, review record, or review state, or source-local ordinary sense. Apply EntityOfConcern and Description-episteme boundary and specification use, Context, Tech, Plain, and carrier humility rules before treating a word as meaning-bearing.
 
 2. **F.18 naming pass when a stable term is being chosen.**
    If the phrase is becoming a reusable head, fill at least the lightweight Name Card facts: Context, Kind, purpose and use-domain, local sense, candidate head families, NQD-front reasoning, sense-seed read-through, and the lexical Q tuple `{SemanticFidelity, CognitiveErgonomics, MorphologicalActionFit, AliasRisk}`. Do not pick a label only because it is intuitive. Do not accept a replacement label until it passes the `E.10:0.2` replacement-candidate anti-umbrella rule.
@@ -37439,7 +37777,7 @@ The same local-aid rule applies to neighboring field names such as `sourceRelati
 | publication form | The typed form in which an episteme, view, or record is published. | The claim-bearing episteme itself, the face rendered for a reader, or the carrier holding bytes. |
 | generic publication face | Reader-facing publication projection or face. It is not `U.View` by default; it becomes a view only when the governing FPF pattern makes that relation current. | `U.View` by default, carrier, UI face, front-end display, MVPK face under E.17 constraints, or claim-bearing episteme. |
 | MVPK face under E.17 constraints | `E.17` face published under MVPK constraints from a source episteme or episteme-lane view, publication viewpoint, scope, pins, and face kind. It may be a `U.EpistemeView` when the MVPK profile makes that typing current. | Generic publication face, carrier, UI face, front-end display, or proof of evidence, work, gate, or authority by presentation. |
-| carrier, front-end, rendering | The system, medium, file, display, front-end, or rendering that bears or shows an encoding. | Episteme identity, publication form, `U.View`, proof of evidence, or authority-reference relation. |
+| carrier, front-end, rendering | Publication/access-side bearer or display relation. Use `U.PresentationCarrier` when the C.2.1+ Tech kind is current; otherwise name file carrier, transport carrier, rendering, front-end relation, access-carrier relation, or another carrier relation by sentence function. | Episteme identity, publication form, `U.View`, proof of evidence, or authority-reference relation. |
 | `PublicationUnit` | `E.17.AUD`-cluster head for one bounded unit inside a publication that a person inspects as one unit: a pattern body, section, table, note, card, sheet, screen block, or another bounded publication unit whose boundary is named. A card, sheet, or screen block counts only when its boundary is inside a named publication or generic publication face and the sentence needs that bounded unit as the inspected publication unit. It is part of or bounded by the publication face that renders or locates it, whether that face is generic or published under E.17 and MVPK constraints. It may carry or expose a claim-bearing episteme, view, record, cue, or local rendered content when that carried value and relation are named, but it is not identical with the carried value. | Authoring process, review work, file, carrier, front-end, UI behavior, dashboard behavior or export behavior, whole publication architecture, `U.Episteme`, `U.View`, publication form, generic publication face, MVPK face under E.17 constraints, or "anything written". |
 | project-side FPF kind and reference named by value | Evidence record, gate record, work record, status record, commitment record, role-assignment record, decision record, source `U.Episteme`, source `U.EpistemePublication`, status-register entry, or another project record whose governing FPF kind is named. | Semantic content in general, current process state, or a free-form note. |
 | source document | A document named for source use, evidence use, architecture use, or review use. Name that document use directly. | A governing source by folder proximity, the EntityOfConcern carried or exposed by that source document, or the authority-reference relation unless that relation is explicit. |
@@ -61450,6 +61788,8 @@ C.32.ADA closes when `ArchitectureDecisionAdequacyEvaluation@Project` declares t
 
 Use this pattern when an architect has a structure-bearing description, view, decision record, ADR-like projection, eval report, method handoff, generated relation graph, source model, or realized holon observation and needs to know which selected architecture-relevant structure is actually recoverable for the next architecture use.
 
+Use the same pattern when the carrier is a narrative rendering or principle-framework carrier for architecture work: the carrier may preserve a problem-to-structure route, problem-situation architecture, solution-move architecture, candidate trade-off, decision rationale, or source-return cue, but it may also hide selected structures that the next architecture use still needs. In architecture-mediated rendering, inspect the chain `carrier -> architecture description or view -> architecture as selected structures in context -> wider source structures`, because each step may have captured and lost different structure.
+
 Primary working reader: an architect, architecture reviewer, method owner, or AI-assisted architecture worker who must use one carrier or observation without letting it stand for the whole architecture, the project decision, evidence sufficiency, or realized structure.
 
 Typical entry phrases:
@@ -61474,6 +61814,7 @@ StructuralInformationAdequacyNote@Context:
   selectedStructureRefs:
   sourceStructureRefs?:
   sourceDescriptionOrViewRefs?:
+  narrativeRenderingRefs?:
   decisionOrRecordCarrierRefs?:
   realizedStructureObservationRefs?:
   capturedSelectedStructure:
@@ -61537,7 +61878,7 @@ Work in this order:
 
 1. Name the architecture claim or pre-claim described holon and bounded context.
 2. Name the selected structure refs or structure kinds being relied on. If they are not recoverable, stop and return to `C.30`, `C.30.ASV`, `A.22`, or `C.32.P2S`.
-3. Name the carrier, source structure, description, view, decision record, eval report, method handoff, generated relation graph, or realized observation being used.
+3. Name the carrier, source structure, description, view, narrative rendering, decision record, eval report, method handoff, generated relation graph, or realized observation being used.
 4. State the captured selected structure in relation terms: relations, constraints, invariants, allocations, compositions, variation classes, operations, dynamics refs, or preserved organization.
 5. State the expected but uncaptured structure when the next use needs it: hidden placement, data custody, runtime dependency, transformation-flow relation, source label semantics, confidence class, unexplored region, or missing bearer.
 6. State lost or hidden structure. If no loss is claimed, justify why the carrier is adequate for the declared use rather than for all uses.
@@ -61555,6 +61896,8 @@ Show - system case. An ADR-like record says "use event-carried integration with 
 Show - episteme case. A code-agent relation graph finds imports, call edges, inferred module roles, and candidate invariants. C.33 records source observation class `observed | inferred | unknownRegionPresent`, typed relation semantics, confidence class, active-passive gap when present, unexplored regions, and lost runtime or deployment structure. The graph can seed `C.34` preservation checks or `C.35` discovery, but it is not internal belief proof, release evidence, or full architecture adequacy.
 
 Show - neural architecture case. A neural-network architecture review says a model changed attention, SSM block, router, cache placement, pruning mask, and distillation path. C.33 recovers which selected structures are being described: dataflow relation, path-selection relation, memory placement, cache placement, block substitution, and affected characteristics such as latency, compute, memory, and robustness. Source labels remain source labels until recovered through `C.30.STRAT`, `C.30.TFS-REL`, `C.31`, `C.32`, `C.16`, or `C.32.ACE` as applicable.
+
+Show - architecture narrative case. A team narrative says "we moved from candidate A to candidate B because data custody forced placement P and made latency trade-off T acceptable." C.33 records which selected structures the narrative captures: candidate relation, data-custody constraint, placement constraint, trade-off, and source-return condition. It also records lost or hidden structure such as rejected candidate details, quantitative evals, module interfaces, and realization evidence. The narrative can help decision memory or team orientation; it is not by itself an architecture description, decision authority, or evidence of realized structure.
 
 The small working form is enough when it blocks a wrong next use. It is not enough when the next claim needs an architecture description, structural view, decision repair, eval program, evidence record, assurance case, gate, release, or work authorization. In those cases C.33 produces the source-return condition and then exits.
 
@@ -61585,6 +61928,7 @@ The small working form is enough when it blocks a wrong next use. It is not enou
 | --- | --- | --- |
 | Diagram as complete architecture | The diagram may show modules or links while hiding placement, runtime dependency, control authority, evidence structure, bearer constraints, or data custody. | Write the C.33 note from the diagram: captured structure, missing structure, lost relation semantics, admissible use, and source-return owner. |
 | ADR as realized structure proof | A decision record can carry decision memory and method expectation without showing what was built or how it behaves. | Use `C.32.PAD` or `C.32.ADR` for the decision claim; use C.33 only for the structural content and loss carried by the record; send realization claims to the architecture or evidence owner. |
+| Narrative as complete architecture | A narrative can preserve a route through selected structures while hiding placement, alternatives, measurements, interfaces, or realized structure. | Use `A.6.3.NAR` for the structure-to-narrative rendering relation and C.33 for captured and lost selected structure before architecture reuse. |
 | Code-agent graph as safe-change authority | A graph can expose observed and inferred relations while leaving unknown regions and hidden invariants. | Add observation class, confidence, unexplored regions, and non-admissible use. Route safe-change, assurance, gate, and release claims to their owners. |
 | Metric as structural adequacy | A score, entropy value, epiplexity estimate, benchmark trace, or dependency F1 is a reading only under the right measurement or eval owner. | Keep it as lens or reading context until `C.16`, `C.25`, or `C.32.ACE` defines what is measured and how it may be used. |
 | Neural label import | Terms such as attention, SSM, router, expert, cache, pruning, distillation, and NAS can hide several structure kinds and characteristics. | Recover the selected structure kind, relation, bearer, affected characteristic, preserved structure, lost structure, and receiving owner before using the label in architecture work. |
@@ -61627,7 +61971,7 @@ C.33 deliberately rejects a popular shortcut: "the richest available diagram, ma
 
 - **Builds on:** `A.22`, `C.30`, `C.30.AD`, `C.30.ASV`, `C.32.P2S`, and `C.32`.
 - **Uses:** `C.29` when a mathematical lens exposes or compresses structure; `C.16`, `C.25`, and `C.32.ACE` when a claim about captured or lost structure is recorded as a measurement, Q-bundle slot, criterion, or eval reading.
-- **Coordinates with:** `C.30.STRAT`, `C.30.TFS-REL`, `A.6.M`, `C.31`, `C.31.ASAP`, `C.32.PAD`, `C.32.ADR`, `G.5`, `C.18`, `C.19`, `E.18`, `F.9`, and `F.15`.
+- **Coordinates with:** `C.30.STRAT`, `C.30.TFS-REL`, `A.6.M`, `A.6.3.NAR`, `C.31`, `C.31.ASAP`, `C.32.PAD`, `C.32.ADR`, `G.5`, `C.18`, `C.19`, `E.18`, `F.9`, and `F.15`.
 - **Boundary:** C.33 governs structure-capture adequacy and source return for a declared architecture use. It does not ground architecture, select candidates, decide projects, publish records, measure values, supply evidence or assurance, authorize work, or claim realization.
 
 ### C.33:End
@@ -61652,6 +61996,7 @@ Typical entry phrases:
 "The generated graph matches the module graph; is the semantic relation the same?"
 "This candidate preserves dataflow but changes control authority."
 "The neural architecture replacement keeps shape but changes routing and memory placement."
+"The narrative order preserves the architecture trade-off; what source structure is still same enough for this use?"
 ```
 
 The first useful output is `StructuralPreservationAdequacyNote@Context`:
@@ -61704,7 +62049,7 @@ C.34 makes the preservation claim explicit before the result is used.
 | Equivalence vs use | Exact equivalence is rare and often unnecessary; the declared use decides how much preservation is enough. |
 | Formal rigor vs practitioner action | Formal mapping modes help only when preserved and lost structure are named in architecture terms. |
 | Shape vs semantics | Two graphs, views, or diagrams can have the same shape while their relation types differ. |
-| Compression vs loss | Projection, abstraction, coarsening, and simulation relations make work possible by dropping structure. |
+| Compression vs loss | Projection, abstraction, coarsening, and simulation relations make work possible by dropping structure. In a chain such as `source structures -> architecture -> architecture description or view -> narrative or framework carrier`, preservation must be checked arrow by arrow rather than claimed as one global sameness. |
 | Cross-context reach | A mapping across teams, source traditions, tool models, or holon levels needs bridge and conformance owners when substitution or transfer is claimed. |
 
 ### C.34:4 - Solution
@@ -61722,8 +62067,9 @@ Work in this order:
 5. State lost structure, hidden structure, directionality, and scope or scale window.
 6. Cite `C.29` only when a mathematical object, graph match, functor, invariant, entropy, or formal mapping is being used as a lens.
 7. Cite `C.30.ASV`, `C.30.AD`, or their correspondence records when the relation is view or architecture-description correspondence.
-8. Cite `F.9` or `F.15` when the claim crosses bounded contexts, source traditions, or later conformance strengthening.
-9. Stop when admissible use, non-admissible use, source-return condition, receiving owner, and receiving claim kind are named.
+8. Cite `A.6.3.NAR` when the target structure is a narrative rendering whose ordering rationale, preserved source structure, and source return must stay inspectable.
+9. Cite `F.9` or `F.15` when the claim crosses bounded contexts, source traditions, or later conformance strengthening.
+10. Stop when admissible use, non-admissible use, source-return condition, receiving owner, and receiving claim kind are named.
 
 ### C.34:5 - Archetypal Grounding
 
@@ -61736,6 +62082,8 @@ Show - source model and generated graph case. A code-agent dependency graph matc
 Show - candidate and realized structure case. A candidate architecture promises that a service split preserves interface substitutability, but the realized structure adds shared storage and a hidden orchestration dependency. C.34 records preserved interface signatures, lost runtime independence, changed coupling, and source return to `A.6.M`, `C.31`, `C.30`, and `C.32.PAD` before the decision is reused.
 
 Show - neural substitution case. A candidate replaces an attention block with an SSM block. C.34 asks which selected structures are preserved: sequence dataflow, routing interface, memory access, latency envelope, training resource boundary, or inference resource boundary. Shape sameness or benchmark improvement does not by itself preserve the architecture relation needed by the next claim.
+
+Show - source structure and narrative structure case. An architecture narrative orders a candidate set as "pressure, alternative, trade-off, decision, residual." C.34 records mapping mode `correspondence`, preserved structure `candidate alternative and selected trade-off relation`, lost structure `full Pareto-front detail and rejected-candidate evals`, directionality `source to narrative only`, and admissible use `team orientation and decision memory`. The narrative order is not exact equivalence and does not license implementation, evidence, or assurance use without the direct owner.
 
 ### C.34:6 - Bias-Annotation
 
@@ -61766,6 +62114,7 @@ Show - neural substitution case. A candidate replaces an attention block with an
 | Semantic-loss hiding | A projection or coarsening can look clean because it drops exactly the structure that the next decision needs. | Name lost structure and source-return condition before comparison, decision repair, or candidate admission. |
 | Exact-equivalence overclaim | Exact equivalence is stronger than most architecture uses need and is often false. | Choose the weakest adequate mapping mode: correspondence, projection, abstraction, coarsening, simulation relation, or near-sameness when that is enough. |
 | Generated graph proof overclaim | A generated graph can match labels or topology while hiding dynamic wiring, confidence, or unexplored regions. | Use C.34 only for the preservation claim; route generated-carrier admission to `C.35` and evidence, assurance, gate, or release claims to their owners. |
+| Narrative-order equivalence overclaim | A narrative can preserve a useful route through source structure while dropping alternatives, relation semantics, measurements, or directionality. | Record the weakest adequate correspondence, preserved structure, lost structure, directionality, and non-admissible use; use `A.6.3.NAR` for the narrative rendering relation. |
 | Formal lens laundering | A morphism, functor, entropy value, or graph match sounds rigorous but may be local to a mathematical object. | Route lens use to `C.29`; return to C.34 only after preserved structure, lost structure, mapping mode, and architecture use are stated. |
 | Bridge owner bypass | A cross-context or cross-tradition mapping can preserve local structure while losing local sense. | Use `F.9` for the bridge and `F.15` for later regression or conformance strengthening before substitution is relied on. |
 
@@ -61808,7 +62157,7 @@ C.34 rejects one common but weak practice: treating any formal-looking mapping a
 
 - **Builds on:** `A.22`, `C.30`, `C.30.ASV`, `C.30.AD`, `C.29`, and `F.9`.
 - **Uses:** `C.16`, `C.25`, and `C.32.ACE` when a preservation, similarity, distance, entropy, loss, or compression claim is recorded as a reading or eval result.
-- **Coordinates with:** `C.32`, `C.32.PAD`, `C.32.ADR`, `C.30.TFS-REL`, `C.30.STRAT`, `A.6.M`, `C.31`, `C.31.ASAP`, `E.18`, and `F.15`.
+- **Coordinates with:** `C.32`, `C.32.PAD`, `C.32.ADR`, `C.30.TFS-REL`, `C.30.STRAT`, `A.6.M`, `A.6.3.NAR`, `C.31`, `C.31.ASAP`, `E.18`, and `F.15`.
 - **Boundary:** C.34 governs declared preservation adequacy for an architecture use. It does not make a formalism ontology, select a candidate, decide a project, establish evidence or assurance, or authorize substitution across contexts without bridge and conformance owners.
 
 ### C.34:End
@@ -63810,17 +64159,17 @@ The chosen taxonomy mirrors FPF’s layered dependency: **Governance** rules how
 
 ### E.4:1 - Problem frame
 
-Use this pattern when an FPF user, framework author, or steward needs to create, extend, or use an FPF-grounded pattern ecosystem and must know what belongs to the FPF Core, what belongs to a domain or local framework, which records carry relation and edition claims, and which neighboring patterns own publication, naming, source, currentness, and quality work.
+Use this pattern when an FPF user, framework author, or steward needs to create, extend, or use an FPF-grounded pattern ecosystem and must know what belongs to FPF itself, what belongs to the FPF Core, what belongs to a domain or local framework, which records carry relation and edition claims, and which neighboring patterns own publication, access, naming, source, currentness, and quality work.
 
-Primary `EntityOfConcern`: the FPF-grounded pattern ecosystem in one bounded context. The first useful output is a family-and-structure map that names the framework family members, selected architecture-relevant structures, dependency direction, edition boundary, publication units, and receiving owners for source, currentness, quality, and decision claims.
+Primary `EntityOfConcern`: the FPF-grounded pattern ecosystem in one bounded context. The first useful output is a family-and-structure map that names the framework family members, selected architecture-relevant structures, recurring problem-situation structures, reusable solution-move structures, dependency direction, edition boundary, publication/access carriers, and receiving owners for source, currentness, quality, and decision claims.
 
-This pattern buys a practical distinction: a reader can tell whether a claim changes the FPF Core, creates a domain principle framework, creates a local practice framework, publishes or teaches existing content, or records a dependency on another framework edition. Use `E.11` and `E.17` for first-entry and publication questions; use `E.4.DPF` when the work is to author a domain or local framework.
+This pattern buys a practical distinction: a reader can tell whether a claim changes FPF itself as a first-principles framework edition, changes the FPF Core, creates a domain principle framework, creates a local practice framework, publishes or teaches existing content, exposes a skill or MCP access carrier, or records a dependency on another framework edition. Use `E.4.FPF` when the work is the form of FPF itself; use `E.11` and `E.17` for first-entry and publication questions; use `E.4.DPF` when the work is to author a domain or local framework.
 
 ### E.4:2 - Problem
 
-FPF has grown from a single core pattern set into an ecosystem of core rules, tools, companions, domain frameworks, local practice frameworks, source packs, decisions, quality records, and publication units. If those objects are described only by file names, abbreviations, or reader-facing tables of contents, several different kinds collapse:
+FPF has grown from a single core pattern set into an ecosystem of core rules, tools, companions, domain frameworks, local practice frameworks, source packs, decisions, quality records, publication carriers, and access carriers. If those objects are described only by file names, abbreviations, or reader-facing tables of contents, several different kinds collapse:
 
-- a pattern set is treated as a publication unit;
+- a pattern set is treated as a publication or access carrier;
 - a local practice framework is treated as an FPF Core amendment;
 - a relation record is treated as a method order;
 - a dependency on a framework edition is treated as a specialization relation;
@@ -63834,14 +64183,15 @@ The result is a framework that may look organized but cannot answer ordinary arc
 | --- | --- |
 | Core stability | The FPF Core must stay stable enough to govern other frameworks, while domain and local frameworks need faster evolution. |
 | Reuse and bounded context | Domain and local frameworks should reuse FPF Core distinctions, but they must not silently redefine Core meaning. |
-| Publication pressure | Readers need monoliths, tables of contents, cards, examples, and first-entry material, but those carriers do not by themselves settle architecture. |
+| Publication pressure | Readers need all-in-one carriers, tables of contents, cards, examples, and first-entry material, but those carriers do not by themselves settle architecture. |
 | Relation richness | Pattern ecosystems need recommendation, specialization, dependency, publication, preservation, evaluation, and source-use relations, but a single "related patterns" list hides the relation function. |
 | Source and generation pressure | Source summaries, relation graphs, and generated candidate sets speed work, but their losses and admissible use must be declared before architecture work relies on them. |
+| Problem-solving primacy | Frameworks need vocabulary and ontology, but a DPF is valuable only when those distinctions help a practitioner recognize typical problem situations and choose stronger solution moves. |
 | Evolution pressure | Framework editions, dependencies, and names change over time, so compatibility, deprecation, supersession, and refresh conditions must be explicit. |
 
 ### E.4:4 - Solution
 
-Describe an FPF-grounded pattern ecosystem as a family of framework editions and publication units over selected structures, then route each claim to the pattern that owns that kind of work.
+Describe an FPF-grounded pattern ecosystem as a family of framework editions and publication/access carriers over selected structures, then route each claim to the pattern that owns that kind of work. A principle framework edition is not merely a bundle of documents, an ontology catalogue, a literature survey, or a guide to talking about a domain. Its pattern language renders a selected architecture of recurring problem situations, forces, known failure modes, reusable SoTA solution moves, consequences, cases, relation records, evaluation routes, and refresh paths for a declared reader and use. Known failure modes include beginner mistakes and experienced-practitioner failures caused by stale, local-only, or non-SoTA practice.
 
 Create a family-and-structure map with these fields:
 
@@ -63851,9 +64201,14 @@ FPFFamilyAndStructureMap@Context:
   boundedContextRef
   frameworkFamilyMembers
   selectedPatternSetRefs
+  selectedProblemSituationStructureRefs
+  selectedKnownFailureModeRefs
+  selectedSoTASolutionMoveRefs
+  selectedSolutionMoveStructureRefs
   selectedRelationRecordRefs
+  frameworkCarrierRenderingRefs
   selectedDependencyAndEditionRefs
-  selectedPublicationUnitRefs
+  selectedPublicationOrAccessCarrierRefs
   selectedSourcePackRefs
   selectedDecisionRefs
   qualityAndImprovementRefs
@@ -63866,7 +64221,7 @@ This map is a context record. It is not a new root kind and not a substitute for
 
 Classify the family members as follows:
 
-`Conceptual Core` is the legacy authority and publication-family partition. `FPF Core pattern set` is the framework-edition view of the general FPF Core used for dependency, relation, and edition reasoning. They are two views over the Core, not two competing core objects.
+`Conceptual Core` is the legacy authority and publication-family partition. `First Principles Framework edition` is the whole scoped FPF framework edition as a transdisciplinary first-principles framework. `FPF Core pattern set` is the framework-edition view of the general FPF Core used for dependency, relation, and edition reasoning. These are related views and scopes, not competing core objects.
 
 | Family member | Architecture role | Main owners |
 | --- | --- | --- |
@@ -63874,6 +64229,7 @@ Classify the family members as follows:
 | Tooling Reference | Optional tools, schemas, scripts, machine checks, or helper publications that inspect or support FPF use. | `E.17`, `G.5`, relevant tool patterns |
 | Pedagogical Companion | Tutorials, playbooks, worked examples, and learning material that teach FPF without changing Core meaning. | `E.17`, didactic patterns |
 | Foundational principle pattern set | Foundational threshold material or principle patterns that may support FPF-grounded use but need settled names and dependency boundaries. | `F.18`, `E.4.PFR` |
+| First Principles Framework edition | The scoped FPF framework edition as a transdisciplinary first-principles framework with Core pattern set, publication/access carriers, relation records, and whole-FPF adequacy route. | `E.4.FPF`, `E.2.DA`, `E.4.PFR`, `E.11`, `E.17`, `G.11` |
 | FPF Core pattern set | The current general FPF pattern core as a framework edition. | `E.4`, `E.5.3`, Core pattern owners |
 | Domain principle framework | A domain-bounded framework grounded in FPF and in domain SoTA. | `E.4.DPF`, `G.2`, `E.4.PFAD`, `E.4.PFR` |
 | Local practice framework | A project, organization, or role-context framework grounded in FPF and often in a domain framework. | `E.4.DPF`, `E.4.PFAD`, `E.4.PFR`, `G.11` |
@@ -63882,37 +64238,39 @@ The ordinary method is:
 
 1. Declare the ecosystem scope and bounded context.
 2. Name the family member being created, used, or changed.
-3. List the selected structures that matter for the architecture claim: pattern set, pattern-use relations, pattern-framework relations, decision records, dependency and edition records, publication units, source packs, quality records, and currentness records.
-4. Apply `E.5.3`: dependencies point toward more stable framework editions. FPF Core does not depend on domain or local frameworks.
-5. Send publication and first-entry claims to `E.11` and `E.17`.
-6. Send pattern-use recommendation claims to `E.11.PUR`.
-7. Send architecture-decision claims for a framework to `E.4.PFAD`, and general project architecture decisions to `C.32.PAD`.
-8. Send relation, dependency, compatibility, deprecation, and edition claims to `E.4.PFR`.
-9. Send naming settlement to `F.18`.
-10. Send SoTA and source-pack claims to `G.2`.
-11. Send currentness, refresh, and edition-change claims to `G.11` and the edition owners.
-12. Before using a monolith, table of contents, relation graph, summary, or generated carrier as evidence, state source-return or preservation through `C.33`, `C.34`, or `C.35`.
-13. Evaluate framework and pattern adequacy through `E.21`, improve through `E.23`, and use `E.19` only when the local process asks for admission review.
+3. List the selected structures that matter for the architecture claim: recurring problem-situation structures, known failure modes, reusable SoTA solution-move structures, pattern set, pattern-use relations, pattern-framework relations, decision records, dependency and edition records, publication/access carriers, source packs, quality records, and currentness records. For PF work, the pattern-language publication carrier exposes a reader-facing expression of that problem-and-solution architecture, not a neutral list of topics.
+4. If the family member is FPF itself as a framework edition, open `E.4.FPF` for form, publication/access carriers, and whole-FPF adequacy routing.
+5. Apply `E.5.3`: dependencies point toward more stable framework editions. FPF Core does not depend on domain or local frameworks.
+6. Send publication and first-entry claims to `E.11` and `E.17`, and send framework-carrier structure-account questions to `E.4.FPF` for FPF itself or `E.4.DPF`/`E.4.DPF.DA` for domain and local frameworks.
+7. Send pattern-use recommendation claims to `E.11.PUR`.
+8. Send architecture-decision claims for a framework to `E.4.PFAD`, and general project architecture decisions to `C.32.PAD`.
+9. Send relation, dependency, compatibility, deprecation, and edition claims to `E.4.PFR`.
+10. Send naming settlement to `F.18`.
+11. Send SoTA and source-pack claims to `G.2`.
+12. Send currentness, refresh, and edition-change claims to `G.11` and the edition owners.
+13. Before using an all-in-one carrier, table of contents, relation graph, summary, skill pack, MCP-backed service, or generated carrier as evidence, state source-return or preservation through `C.33`, `C.34`, or `C.35`.
+14. Evaluate whole-FPF adequacy through `E.2.DA`, DPF or local-framework package adequacy through `E.4.DPF.DA`, individual pattern quality through `E.21`, improve through `E.23`, and use `E.19` only when the local process asks for admission review.
 
 Use this routing table when a proposed change is ambiguous:
 
 | Proposed work | Route to | Blocked overread |
 | --- | --- | --- |
+| The form of FPF itself changes: README, Preface, ToC, monolith, host set, skill pack, MCP-backed access, or whole-FPF publication/access route. | `E.4.FPF`, with `E.2.DA` for whole-FPF adequacy and `E.4.PFR` for relation or edition records. | Do not treat FPF as a DPF, do not use `E.4.DPF.DA` for whole-FPF adequacy, and do not treat a carrier as the framework edition. |
 | A distinction, rule, or pattern must govern ordinary FPF use across many domains and downstream frameworks depend on it. | FPF Core amendment through the current campaign and direct pattern owners. | Do not promote a local checklist or domain technique to Core merely because it is useful. |
 | A reusable principle supports FPF-grounded work but is not a general Core rule for all domains. | Foundational principle pattern set or other named framework edition, with `E.4.PFR` dependency records. | Do not hide a new framework edition inside the Core table of contents. |
 | A source tradition or professional domain needs FPF-shaped patterns. | Domain principle framework through `E.4.DPF`, `G.2`, `E.4.PFAD`, and `E.4.PFR`. | Do not treat a literature summary as the framework. |
 | One project, organization, role, or tool setting needs local practice guidance. | Local practice framework through `E.4.DPF`, with local source, owner, publication, quality, and refresh records. | Do not make local policy a general FPF rule. |
 | Existing material is hard to find, teach, or publish. | `E.11`, `E.17`, `G.5`, or the relevant publication and pedagogy owner. | Do not call publication repair architecture repair. |
 | A cross-reference claims use, specialization, dependency, publication, source reuse, preservation, quality, deprecation, or supersession. | `E.4.PFR` for the relation function and edition effect. | Do not let a link label decide the relation meaning. |
-| A framework split, dependency boundary, publication unit, or adoption consequence must be decided. | `E.4.PFAD`; use `C.32.PAD` or `C.32.ADR` for project architecture decisions. | Do not replace the decision with a diagram, folder, or package manifest. |
+| A framework split, dependency boundary, publication/access carrier, or adoption consequence must be decided. | `E.4.PFAD`; use `C.32.PAD` or `C.32.ADR` for project architecture decisions. | Do not replace the decision with a diagram, folder, or package manifest. |
 | A source, search result, transformed view, or generated carrier supplies candidate material. | `G.2`, `C.33`, `C.34`, or `C.35` before architecture use. | Do not treat a carrier as authoritative because it has plausible names. |
-| Quality, repeated improvement, admission gating, or currentness is the live problem. | `E.21`, `E.23`, `E.19`, and `G.11` according to the claim. | Do not run all quality gates when only one evaluation or refresh owner is live. |
+| Whole-FPF adequacy, DPF package adequacy, individual pattern quality, repeated improvement, admission gating, or currentness is the live problem. | `E.2.DA`, `E.4.DPF.DA`, `E.21`, `E.23`, `E.19`, and `G.11` according to the claim. | Do not average pattern scores into package adequacy or whole-FPF adequacy, and do not run all quality gates when only one evaluation or refresh owner is live. |
 
-This pattern should leave the reader with one architecture sentence: "This framework edition belongs to this family member, depends on these stable editions, publishes through these carriers, preserves these selected structures, and sends each non-owned claim to this receiving pattern."
+This pattern should leave the reader with one architecture sentence: "This framework edition belongs to this family member, expresses this selected architecture of recurring problems and solution moves in pattern-language form, depends on these stable editions, publishes or gives access through these carriers, preserves these selected structures, and sends each non-owned claim to this receiving pattern."
 
 ### E.4:5 - Archetypal Grounding
 
-Tell: A team creating a hydroponic-cucumber domain principle framework should not place every useful crop-growing rule into `FPF-Spec.md`. It creates a domain framework edition grounded in FPF Core and horticulture SoTA, declares its dependency on an FPF Core edition, records its source packs, drafts domain patterns under `E.8`, and publishes a local monolith for growers or agronomists.
+Tell: A team creating a hydroponic-cucumber domain principle framework should not place every useful crop-growing rule into `FPF-Spec.md`. It creates a domain framework edition grounded in FPF Core and horticulture SoTA, declares its dependency on an FPF Core edition, records its source packs, drafts domain patterns under `E.8`, and publishes an all-in-one publication carrier for growers or agronomists.
 
 Mini-example:
 
@@ -63921,13 +64279,13 @@ Mini-example:
 | `ecosystemScopeRef` | `HydroponicCucumberPrincipleFramework@GreenhouseCropDomain` |
 | `frameworkFamilyMembers` | domain principle framework; local grower practice framework as a later dependent edition |
 | `selectedPatternSetRefs` | crop-growth problem framing, nutrient-solution monitoring, climate-control interpretation, harvest-quality feedback patterns |
-| `selectedRelationRecordRefs` | source or decision reuse from horticulture source pack; specialization from general FPF authoring patterns; publication relation to local monolith |
+| `selectedRelationRecordRefs` | source or decision reuse from horticulture source pack; specialization from general FPF authoring patterns; publication relation to all-in-one carrier |
 | `selectedDependencyAndEditionRefs` | depends on `FPFCorePatternSet@Edition`; no reverse dependency from FPF Core |
-| `selectedPublicationUnitRefs` | domain local monolith plus readme as first-entry carrier |
+| `selectedPublicationOrAccessCarrierRefs` | domain all-in-one publication carrier plus readme as first-entry carrier |
 | `selectedSourcePackRefs` | greenhouse-control and crop-production `G.2` source packs |
 | `qualityAndImprovementRefs` | `E.21` pattern-quality evaluation and `E.23` improvement loop for drafted domain patterns |
 | `currentnessAndRefreshRefs` | `G.11` refresh condition when source pack, Core edition, or crop-production practice changes |
-| `blockedOverreadRefs` | do not read the local monolith as the architecture itself; do not read domain patterns as FPF Core changes |
+| `blockedOverreadRefs` | do not read the publication carrier as the architecture itself; do not read domain patterns as FPF Core changes |
 
 Show: A Codex-process local practice framework may depend on FPF Core and selected architecture-domain patterns. Its handoff patterns, prelanding patterns, and process runbooks can be local framework material. They do not define the FPF Core merely because they use FPF vocabulary and are useful to this workspace.
 
@@ -63935,7 +64293,7 @@ Show: A generated relation graph over pattern names can help inspect missing rel
 
 ### E.4:6 - Bias-Annotation
 
-The recurrent drift is publication-first architecture: the visible file, local monolith, card deck, table of contents, or graph is treated as the architecture because it is what a reader sees first. The repair is to name the selected structures and dependency direction first, then use publication patterns to expose them.
+The recurrent drift is publication-first architecture: the visible file, all-in-one carrier, card deck, table of contents, or graph is treated as the architecture because it is what a reader sees first. The repair is to name the selected structures and dependency direction first, then use publication patterns to expose them.
 
 Another recurrent drift is Core absorption: useful domain or local material is pulled into the Core because it is well written or broadly reusable. The repair is to ask which bounded context owns the claim and which framework edition should depend on which more stable edition.
 
@@ -63943,20 +64301,22 @@ Another recurrent drift is Core absorption: useful domain or local material is p
 
 | Check | Passing condition |
 | --- | --- |
-| CC-E4.1 Family member named | The work names whether it concerns Core, Tooling Reference, Pedagogical Companion, foundational principle pattern set, FPF Core, domain principle framework, or local practice framework. |
-| CC-E4.2 Selected structures named | The family-and-structure map names the selected pattern-set, relation, decision, publication, source, quality, dependency, and currentness structures that matter for the claim. |
+| CC-E4.1 Family member named | The work names whether it concerns Core, Tooling Reference, Pedagogical Companion, foundational principle pattern set, First Principles Framework edition, FPF Core, domain principle framework, or local practice framework. |
+| CC-E4.2 Selected structures named | The family-and-structure map names the selected problem-situation, known-failure, SoTA solution-move, pattern-set, relation, decision, publication/access, source, quality, dependency, and currentness structures that matter for the claim. |
 | CC-E4.3 E.5.3 respected | Dependency direction points toward more stable framework editions, and Core does not depend on domain or local frameworks. |
-| CC-E4.4 Publication separated | Monoliths, tables of contents, cards, readmes, and views are publication or discoverability records with their own owners. |
+| CC-E4.4 Publication/access separated | All-in-one carriers, tables of contents, cards, readmes, skill packs, MCP-backed routes, retrieval routes, assistant integrations, and views are publication, access, or discoverability records with their own owners. |
 | CC-E4.5 Relation owner named | Pattern-use, relation, dependency, decision, naming, source, currentness, quality, and preservation claims each have a receiving pattern owner. |
 | CC-E4.6 Source-return present | Any carrier used as architecture evidence states captured structure, lost structure, admissible use, and return owner. |
+| CC-E4.7 Framework carrier structure-account routed | README, Preface, ToC, all-in-one carrier, skill pack, MCP route, or other framework carrier states which framework structures its publication or access expression exposes for whom, or the work routes to `E.4.FPF`, `E.4.DPF`, and `E.4.DPF.DA` before adoption or adequacy claims are made. |
 
 ### E.4:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | What fails | Repair |
 | --- | --- | --- |
 | Core absorption | A domain or local framework is placed into the FPF Core because it is useful. | Create a separate framework edition with dependency records under `E.4.PFR`. |
-| File tree or package map as architecture | A folder layout, package descriptor, or manifest is read as the ecosystem architecture. | Use the file or manifest only as a carrier; recover the family-and-structure map, relation records, dependency records, source packs, quality records, publication units, and refresh routes. |
-| Publication-only architecture | A table of contents or local monolith is used as the architecture description. | Add a family-and-structure map and source-return note, then publish through `E.11` or `E.17`. |
+| File tree or package map as architecture | A folder layout, package descriptor, or manifest is read as the ecosystem architecture. | Use the file or manifest only as a carrier; recover the family-and-structure map, relation records, dependency records, source packs, quality records, publication/access carriers, and refresh routes. |
+| Publication-only architecture | A table of contents or all-in-one carrier is used as the architecture description. | Add a family-and-structure map and source-return note, then publish through `E.11` or `E.17`. |
+| Ontology or talk guide as framework | A framework names domain entities, terms, or conversation moves but does not identify recurring domain problems, known failure modes, SoTA solution moves, and worked repairs. | Keep the ontology, glossary, or communication guide as support material; create or repair the framework around problem situations, solution moves, cases, and quality routes. |
 | Relation flattening | Every cross-reference is treated as the same relation. | Use `E.4.PFR` to state relation function and direct owner. |
 | Source-carrier authority | A summary, graph, or generated candidate set is treated as authoritative. | Admit the carrier through `C.35` or record preservation through `C.33` and `C.34` before use. |
 
@@ -63968,7 +64328,7 @@ It also makes some attractive names and short labels provisional until `F.18` se
 
 ### E.4:10 - Rationale
 
-The ecosystem needs architecture because FPF patterns, frameworks, source packs, publication units, quality records, and decisions are not one kind of object. A file tree cannot preserve the differences among those objects. A relation graph cannot preserve decision rationale or dependency compatibility. A local monolith cannot preserve all source-return and currentness obligations. Architecture work must therefore name the selected structures and route non-owned claims to their owners.
+The ecosystem needs architecture because FPF patterns, frameworks, source packs, publication carriers, access carriers, quality records, and decisions are not one kind of object. A file tree cannot preserve the differences among those objects. A relation graph cannot preserve decision rationale or dependency compatibility. An all-in-one publication carrier or callable access carrier cannot preserve all source-return and currentness obligations by itself. Architecture work must therefore name the selected structures and route non-owned claims to their owners.
 
 The old Core, Tooling Reference, and Pedagogical Companion distinction remains valuable, but it is only one family partition. Domain and local principle frameworks need their own framework editions so they can depend on Core without redefining it.
 
@@ -63984,13 +64344,203 @@ The old Core, Tooling Reference, and Pedagogical Companion distinction remains v
 ### E.4:12 - Relations
 
 - **Builds on:** `E.2/P-5 FPF Layering` and `E.5.3` for modular extension, directed dependency, and family-order discipline.
+- **Coordinates with:** `E.4.FPF` when the work concerns FPF itself as a first-principles framework edition, its publication/access carriers, and whole-FPF adequacy route.
+- **Coordinates with:** `E.2.DA` when the scoped FPF object needs whole-FPF Pillar adequacy evaluation.
 - **Coordinates with:** `E.4.PFAD` when the family-and-structure map requires an architecture decision about a framework edition.
 - **Coordinates with:** `E.4.DPF` when the work is to author a domain principle framework or local practice framework.
 - **Coordinates with:** `E.4.PFR` when a relation, edition, dependency, compatibility, deprecation, or preservation claim must be recorded.
+- **Coordinates with:** `E.4.DPF.DA` when a domain or local framework package must be evaluated as a package rather than as an average of its pattern bodies.
 - **Coordinates with:** `E.11`, `E.11.PUR`, and `E.17` for publication, discoverability, and pattern-use recommendation claims.
 - **Coordinates with:** `G.2`, `G.11`, `C.33`, `C.34`, and `C.35` for source, currentness, preservation, and produced-carrier admission claims.
 
 ### E.4:End
+
+## E.4.FPF - First Principles Framework Form and Publication-or-Access Carrier Assembly
+
+> **Type:** Architectural (A)
+> **Status:** Stable
+> **Normativity:** Normative unless marked informative.
+
+### E.4.FPF:1 - Problem frame
+
+Use this pattern when an FPF steward, framework author, reviewer, or AI agent must treat FPF itself as one framework edition rather than as only a file, a table of contents, a pile of patterns, a DPF, or a set of helper tools.
+
+Primary `EntityOfConcern`: `FirstPrinciplesFrameworkEdition@Context`, the scoped FPF edition as a transdisciplinary first-principles framework. The first useful output is an FPF form map: first-principles scope, selected Core pattern set, cross-domain problem-situation and solution-move architecture, publication or access carriers, relation and edition records, quality route through `E.2.DA`, and blocked overreads.
+
+Use this when the work changes or assembles README, Preface, ToC, `FPF-Spec.md`, extracted hosts, first-entry views, skill packs, MCP-backed access services, or other carriers of FPF itself. Use `E.4.DPF` instead when the framework is a domain or local framework grounded in FPF. Use `E.4` when the live question is only family placement and routing among framework members.
+
+The practical payoff is simple: a reader can say "this is the FPF edition, these are its user-facing carriers, these are its access routes, this is how whole-FPF adequacy is evaluated, and this is why a DPF or local framework may depend on it without becoming it."
+
+### E.4.FPF:2 - Problem
+
+After DPF and local-framework publication forms become explicit, FPF itself can fall into the opposite omission: DPF packages get careful carrier, relation, naming, quality, and refresh rules, while FPF is treated as if its form were self-evident because it is "the main spec".
+
+That creates several failures:
+
+- `FPF-Spec.md`, README, Preface, ToC, host files, cards, skills, or MCP routes are mistaken for the FPF edition itself;
+- FPF is described as one more DPF, losing the first-principles and transdisciplinary burden that makes DPFs possible;
+- whole-FPF quality is checked by local pattern scores, landing status, or DPF package scales instead of `E.2.DA`;
+- adoption carriers grow user-facing explanations that quietly become shadow authority beside governing patterns;
+- skill or MCP access makes FPF look like a callable service, tool permission layer, or runtime dependency rather than a framework edition exposed through an access carrier.
+
+The repair is not to copy `E.4.DPF` under another name. FPF needs its own form rule because its burden is different: it must keep first-principles distinctions usable across domains while allowing domain and local frameworks to grow from it.
+
+### E.4.FPF:3 - Forces
+
+| Force | Tension |
+|---|---|
+| First principles vs domain knowledge | FPF must carry transdisciplinary ontology, epistemology, evidence, architecture, decision, work, publication, and improvement distinctions without becoming a doctrine of one domain. |
+| Public adoption vs governing authority | README, Preface, examples, cards, skills, and MCP access must help new users without becoming a second spec. |
+| Core stability vs evolution | FPF needs stable dependability for downstream DPFs, while the framework remains open to new patterns, better terminology, and source-front movement. |
+| Pattern-set quality vs whole-framework quality | Individual `E.21` results matter, but they do not equal whole-FPF Pillar adequacy. |
+| Carrier plurality vs identity | The same FPF edition can be exposed as monolith, host set, split docs, cards, skill pack, MCP-backed service, or retrieval route; those carriers must not create several competing FPFs. |
+| Access convenience vs architecture clarity | A callable access route can make FPF easier to use while hiding edition, currentness, source, and authority boundaries. |
+
+### E.4.FPF:4 - Solution
+
+Treat FPF as a `FirstPrinciplesFrameworkEdition`: a transdisciplinary framework edition whose selected Core pattern set, first-principles scope, cross-domain problem-situation and solution-move architecture, relation records, and publication or access carriers are distinct but coordinated. FPF patterns render recurring first-principles problem architectures and reusable solution moves in pattern-language form; the carriers expose that rendering without becoming the framework edition itself.
+
+Use these local names:
+
+| Local name | Kind and use |
+|---|---|
+| `FirstPrinciplesFrameworkEdition` | One scoped FPF edition carrying transdisciplinary first-principles distinctions and the Core pattern set that downstream frameworks depend on. |
+| `FPFCorePatternSet` | The selected governing pattern set for the edition. It is not the same kind as README, Preface, ToC, skill pack, or MCP route. |
+| `FPFPublicationCarrier` | Reader-facing carrier such as `FPF-Spec.md`, README, Preface, ToC, extracted host set, reviewable bundle, card set, or split documentation that publishes selected FPF content. |
+| `FPFAccessCarrier` | User-facing or agent-facing access carrier such as a skill pack, MCP-backed access service, retrieval route, assistant integration, or search or index carrier. It exposes FPF; it is not FPF architecture, source authority, quality proof, runtime dependency, or work permission by itself. |
+| `FPFFormMap` | Context record naming edition, Core set, carriers, relation records, quality route, currentness route, and blocked overreads. |
+| `FPFLevelAdequacyRoute` | Whole-FPF adequacy route through `E.2.DA`; individual pattern quality still uses `E.21`, and DRR quality still uses `E.9.DA`. |
+
+Create the FPF form map with this shape when FPF itself is being assembled, republished, exposed, or evaluated:
+
+```text
+FPFFormMap@Context:
+  firstPrinciplesFrameworkEditionRef: <FPF edition named by value>
+  firstPrinciplesScopeRef: <transdisciplinary scope and non-domain boundary>
+  selectedCorePatternSetRefs: <governing pattern set or selected host or monolith slice>
+  selectedFirstPrinciplesProblemSituationRefs: <recurring cross-domain problem situations and forces rendered by the edition>
+  selectedFirstPrinciplesSolutionMoveRefs: <reusable solution moves, consequences, and repair routes rendered by the edition>
+  selectedPublicationCarrierRefs: <README | Preface | ToC | FPF-Spec | hosts | cards | bundle | split docs>
+  selectedAccessCarrierRefs: <skill pack | MCP route | retrieval route | assistant integration | other access carrier>
+  relationAndEditionRefs: <E.4.PFR records, edition pins, dependency boundaries>
+  firstEntryAndProjectionRefs: <E.11, E.17, I.2, README, Preface, and ToC projection loci>
+  publicationSelfRenderingRefs: <README | Preface | ToC statements of reader, selected first-principles structures, deliberate coarsening, abstraction, omission, deferral, and return to governing patterns>
+  qualityAndImprovementRefs: <E.2.DA for FPF-level adequacy; E.21, E.23, and E.9.DA as evidence or local routes>
+  currentnessAndRefreshRefs: <G.11 and source and currentness owners>
+  blockedOverreadRefs: <carrier-as-framework | DPF-as-FPF | access-route-as-authority | local-quality-as-whole-FPF>
+```
+
+The ordinary method is:
+
+1. Name the scoped FPF edition by value: current monolith edition, selected host set, release candidate, or whole-FPF edition.
+2. State the first-principles scope: FPF supplies transdisciplinary distinctions that can be reused across domains, not a domain doctrine and not an encyclopedia of all domains.
+3. Identify the selected Core pattern set and any companion or projection loci that expose it.
+4. Separate publication carriers from access carriers. A README, Preface, ToC, monolith, host set, card deck, skill pack, MCP route, retrieval route, or assistant integration is a carrier, not the framework edition itself.
+5. Record relation, dependency, edition, deprecation, supersession, publication, and access relations through `E.4.PFR`.
+6. Keep downstream direction clear: DPFs and local practice frameworks may depend on FPF Core; FPF Core does not depend on them except by a deliberate Core amendment decision.
+7. For whole-FPF adequacy, use `E.2.DA` over the scoped FPF object and declared use. Use `E.21` for individual pattern bodies, `E.9.DA` for DRR, and `E.4.DPF.DA` only for DPF or local-framework packages.
+8. For first-entry and reader-facing exposure, use `E.11` and `E.17`; keep their projection text thin enough that governing pattern authority remains in the patterns.
+9. Make the FPF readme, Preface, and ToC structure-account-aware: they should state the reader and use they serve, which first-principles structures they foreground, what they deliberately coarsen, abstract, omit, or defer, and where the reader returns for governing pattern detail. This protects adoption text from becoming a second spec while still telling readers what FPF is about.
+10. For source-front, currentness, and refresh claims, use `G.2` and `G.11`; do not let a publication carrier become source-currentness proof.
+11. For skill packs or MCP-backed access, expose edition identity, dependency boundary, and currentness or refusal conditions. Generated candidate text goes to `C.35`; tool and work claims go to `A.15` and local tool or work owners; assurance, evidence, and decision authority go to their direct owners.
+Use this quick routing test:
+
+| Live question | Use |
+|---|---|
+| "What is the form of FPF itself, and how are its carriers separated from the framework edition?" | `E.4.FPF` |
+| "Does this whole-FPF object realize the Pillars for a declared use?" | `E.2.DA` |
+| "How do FPF, a DPF, and a local framework depend on one another?" | `E.4` and `E.4.PFR` |
+| "How do we author a domain or local framework grounded in FPF?" | `E.4.DPF` |
+| "Is this DPF package good enough for one declared domain or local use?" | `E.4.DPF.DA` |
+| "Is this individual pattern body good enough?" | `E.21` |
+| "How do new users find and read FPF?" | `E.11` and `E.17` |
+
+### E.4.FPF:5 - Archetypal Grounding
+
+Tell: A release pass updates README, Preface, ToC, several host files, and `FPF-Spec.md` after architecture and DPF campaigns. The FPF form map names one scoped FPF edition, lists the Core pattern set and carriers, records which entry text is only projection, and runs `E.2.DA` for whole-FPF adequacy. It does not say that README or Preface is the framework itself.
+
+Show: A domain principle framework for any one practice depends on FPF Core and may cite architecture, representation, precision, and improvement patterns from FPF. It is a DPF publication or access carrier for one domain or practice. Its package adequacy uses `E.4.DPF.DA`; it does not define the FPF Core and does not make FPF a framework for that domain.
+
+Show: An FPF skill pack exposes pattern lookup, first-entry guidance, and short-use prompts. The skill manifest carries access metadata. It can say which FPF edition it exposes and when to refresh, but a tool call, endpoint schema, or retrieval result is not FPF authority unless the retrieved governing pattern and edition are named.
+
+Mini-map:
+
+| Field | Filled slice |
+|---|---|
+| `firstPrinciplesFrameworkEditionRef` | `FPF@June2026SelectedHostEdition` |
+| `firstPrinciplesScopeRef` | transdisciplinary ontology, epistemology, decision, evidence, architecture, work, publication, and improvement distinctions |
+| `selectedCorePatternSetRefs` | selected Core hosts and monolith sections |
+| `selectedFirstPrinciplesProblemSituationRefs` | cross-domain problem situations where meaning, evidence, description, architecture, work, decision, publication, or improvement claims collapse |
+| `selectedFirstPrinciplesSolutionMoveRefs` | reusable pattern-language moves that separate kinds, recover source, route owners, compare options, publish views, and improve claims |
+| `publicationStructureAccountRefs` | README and Preface statements of intended reader, selected first-principles route, deliberately coarsened, abstracted, omitted, or deferred structures, and return to pattern bodies |
+| `selectedPublicationCarrierRefs` | README, Preface, ToC, `FPF-Spec.md`, extracted host set |
+| `selectedAccessCarrierRefs` | optional FPF skill pack or MCP-backed retrieval route |
+| `qualityAndImprovementRefs` | `E.2.DA` for whole-FPF adequacy, `E.21` for pattern bodies, `E.23` for improvement cycles |
+| `blockedOverreadRefs` | README-as-spec, skill-as-framework, DPF-as-FPF, local-score-as-whole-FPF |
+
+### E.4.FPF:6 - Bias annotation
+
+This pattern biases FPF stewardship toward explicit framework form. That is useful when adoption carriers multiply, but it can become bureaucracy if every small wording fix is forced through a whole-FPF form map.
+
+Use the pattern when FPF-level form, carriers, access, edition, or whole-FPF adequacy is live. Do not invoke it for one local sentence repair unless that repair changes how FPF itself is published, found, accessed, depended on, or evaluated.
+
+### E.4.FPF:7 - Conformance checklist
+
+| Check | Passing condition |
+|---|---|
+| CC-FPF.1 Edition named | The scoped FPF edition or selected FPF object is named by value. |
+| CC-FPF.2 First-principles scope explicit | The text states that FPF is transdisciplinary first-principles material, including cross-domain problem-situation and solution-move architecture, not a domain or local framework. |
+| CC-FPF.3 Core and carriers separated | Core pattern set, publication carriers, access carriers, relation records, source and currentness records, and quality records remain distinct. |
+| CC-FPF.4 Dependency direction protected | DPFs and local frameworks may depend on FPF Core; reverse dependency requires a deliberate Core amendment. |
+| CC-FPF.5 Quality route correct | Whole-FPF adequacy uses `E.2.DA`; individual patterns use `E.21`; DPF packages use `E.4.DPF.DA`; DRR uses `E.9.DA`. |
+| CC-FPF.6 Publication thinness preserved | README, Preface, ToC, cards, and other projection carriers help entry without becoming semantic authority beside governing patterns. |
+| CC-FPF.7 Access carrier bounded | Skill packs, MCP routes, retrieval, and assistant integrations expose edition identity, currentness, and refusal conditions without becoming framework authority, runtime dependency, or work permission. |
+| CC-FPF.8 Refresh route visible | Source-front, edition, entry-use, currentness, and evaluation changes have receiving owners such as `G.2`, `G.11`, `E.2.DA`, `E.21`, or direct pattern owners. |
+| CC-FPF.9 Carrier structure-account boundary visible | README, Preface, ToC, or equivalent FPF carrier states what first-principles route its publication expression tells, for which reader and use, what it deliberately coarsens, abstracts, omits, or defers, and where governing pattern detail resumes. |
+
+### E.4.FPF:8 - Common Anti-Patterns and How to Avoid Them
+
+| Anti-pattern | What fails | Repair |
+|---|---|---|
+| FPF as one DPF | FPF is treated as a domain package, so its first-principles and transdisciplinary burden disappears. | Use `E.4.FPF` for FPF form and `E.4.DPF` only for domain or local dependents. |
+| Carrier as FPF | README, Preface, ToC, monolith, host set, card deck, skill pack, or MCP route is treated as the framework edition itself. | Record carriers in `FPFFormMap`; route authority to Core pattern set and relation and edition owners. |
+| Invisible FPF entry route | README or Preface helps adoption but never says what first-principles structures it foregrounds, what it leaves to the pattern bodies, or who it is written for. | Add a carrier structure-account statement while preserving thin publication-carrier status. |
+| Whole-FPF quality by local score | Good `E.21` values or successful landing are treated as whole-FPF adequacy. | Run `E.2.DA` for the scoped FPF object and declared use; use local results only as evidence loci. |
+| DPF reverse dependency | A good DPF discovery is treated as a hidden Core dependency. | Return it through a Core amendment decision and direct pattern owners before FPF depends on it. |
+| Access route as authority | A skill, MCP endpoint, retrieval index, or assistant integration is read as source, decision, work, or currentness authority. | Keep it as an access carrier; route generated text, tool work, evidence, assurance, and refresh claims to their direct owners. |
+
+### E.4.FPF:9 - Consequences
+
+FPF adoption becomes easier to reproduce because authors can build README, Preface, ToC, monolith, host, skill, MCP, and retrieval carriers without changing what FPF is.
+
+The cost is one extra distinction for stewards: whole-FPF form is not the same problem as DPF authoring, package adequacy, individual pattern quality, or first-entry publication. That cost is acceptable because those problems have different evidence and failure modes.
+
+### E.4.FPF:10 - Rationale
+
+FPF is structurally close to a principle framework, but it is not a DPF. Its domain is not hydroponics, narrativization, architecture review, or enterprise practice. Its burden is to carry first-principles distinctions that can seed and discipline many domain and local frameworks.
+
+That makes FPF form a real architecture concern. If carriers and access routes are not separated from the framework edition, adoption work can silently create new authorities. If DPF scales are reused for FPF, the evaluation asks the wrong question. If whole-FPF adequacy is reduced to local pattern quality, the corpus can become locally polished and globally weaker.
+
+### E.4.FPF:11 - SoTA-Echoing
+
+| Claim | Exact source ref and status | Pattern locus changed | Adoption status |
+|---|---|---|---|
+| Architecture descriptions and publication forms must not be confused with the architecture or governed object. | `ISO/IEC/IEEE 42010:2022, Software, systems and enterprise - Architecture description`, official current standard ref already used by `E.4`. | `Solution` separates FPF edition, Core pattern set, publication carriers, and access carriers. | Adopt separation and correspondence discipline; adapt it to FPF framework-form stewardship. |
+| Reusable core assets need variation and dependency discipline across a family. | Nazar, `Software Product Line Engineering: Adoption, Tooling and AI Era Challenges`, arXiv:2605.21353, 2026 survey already used by `E.4`. | Dependency direction from FPF Core to DPF or local dependents is made a checklist item. | Adopt reusable-core discipline; reject software-product feature-model ontology as universal FPF architecture. |
+| Whole-language adequacy is not an average of local pattern quality. | `E.2.DA`, `E.21`, `E.22`, and `E.23` internal FPF evaluation lineage. | `Solution` routes whole-FPF evaluation to `E.2.DA` and pattern-body evaluation to `E.21`. | Adopt the object-under-improvement split; block all-`5` or landing-status substitutes. |
+| Access carriers need currentness and authority boundaries. | `E.11`, `E.17`, `G.11`, `C.35`, and `A.15` internal FPF publication, refresh, generated-carrier, and work-role lines. | Skill and MCP access is named as access carrier, not authority or work permission. | Adopt explicit access-carrier limits; route stronger claims to direct owners. |
+
+### E.4.FPF:12 - Relations
+
+- **Specializes:** `E.4` for the case where the framework family member under form work is FPF itself.
+- **Builds on:** `E.2` Pillars through `E.2.DA` for whole-FPF adequacy.
+- **Coordinates with:** `E.4.PFR` for relation, edition, dependency, publication, access, deprecation, and supersession records.
+- **Coordinates with:** `E.4.DPF` and `E.4.DPF.DA` as sibling patterns for domain and local frameworks, not as FPF-level substitutes.
+- **Coordinates with:** `E.11`, `E.17`, and `I.2` for first-entry, projection, and publication carriers.
+- **Coordinates with:** `G.2`, `G.11`, `C.33`, `C.34`, and `C.35` for source, currentness, structural preservation, and generated or transformed carriers.
+- **Coordinates with:** `E.21`, `E.22`, `E.23`, and `E.9.DA` when individual pattern quality, evaluation framing, improvement loops, or DRR adequacy provide evidence for FPF-level changes.
+
+### E.4.FPF:End
 
 ## E.4.PFAD - Principle-Framework Architecture Decision
 
@@ -64000,7 +64550,7 @@ The old Core, Tooling Reference, and Pedagogical Companion distinction remains v
 
 ### E.4.PFAD:1 - Problem frame
 
-Use this pattern when a framework author or steward must decide the architecture of one FPF-grounded domain principle framework or local practice framework: its purpose, selected pattern set, relation structure, publication unit, dependency boundary, names, source basis, quality route, and currentness route.
+Use this pattern when a framework author or steward must decide the architecture of one FPF-grounded domain principle framework or local practice framework: its purpose, selected pattern set, relation structure, publication or access carrier, dependency boundary, names, source basis, quality route, and currentness route.
 
 Primary `EntityOfConcern`: `PrincipleFrameworkArchitectureDecision@Context`, a framework-local architecture decision relation with explicit slots. The first useful output is a filled decision relation, not an ADR document and not the realized framework itself.
 
@@ -64008,7 +64558,7 @@ Use this pattern only when the decision has framework-specific obligations beyon
 
 ### E.4.PFAD:2 - Problem
 
-Framework architecture decisions recur in FPF-grounded work. A steward must decide whether a set of patterns belongs in Core, in a domain framework, in a local framework, or in publication and pedagogy. They must also decide how the framework depends on FPF Core, what edition boundary it has, what sources ground it, what names are admissible, and which carriers publish the decision.
+Framework architecture decisions recur in FPF-grounded work. A steward must decide whether a set of patterns belongs in Core, in a domain framework, in a local framework, or in publication and pedagogy. They must also decide how the framework depends on FPF Core, what edition boundary it has, what sources ground it, what names are admissible, and which carriers publish or expose the framework.
 
 If those decisions are hidden in prose, table shape, or an ADR-like file, later maintainers cannot tell which structure was selected, which alternative was rejected, what consequences were accepted, or when the decision should be repaired or superseded.
 
@@ -64040,13 +64590,14 @@ PrincipleFrameworkArchitectureDecision@Context:
   selectedPatternSetRefs
   selectedPatternRelationRefs
   publicationUnitRefs
+  accessCarrierRefs?
   dependencyAndEditionRefs
   qualityEvaluationRefs
   admissionReviewRefs
   rejectedAlternatives
   rationaleRefs
   consequences
-  localMonolithLandingRefs?
+  publicationCarrierRefs?
   sourceReturnConditions
   refreshOrSupersessionConditions
 ```
@@ -64057,19 +64608,19 @@ Fill the relation in this order:
 2. Name the bounded context, governed framework, and FPF Core edition dependency.
 3. List the source basis and SoTA synthesis packs that make the decision admissible.
 4. Select the pattern set and relation records, or state why the decision is not yet ready.
-5. Select the publication unit only after the structure being published is clear.
+5. Select the publication or access carrier only after the structure being exposed is clear.
 6. Record dependency and edition effects under `E.5.3` and `E.4.PFR`.
 7. Record naming decisions or required `F.18` name-card work.
 8. Record rejected alternatives, rationale, consequences, quality route, source-return route, and refresh or supersession conditions.
 9. Publish the decision projection through `C.32.ADR` or `E.17` only after the decision relation exists.
 
-`qualityEvaluationRefs` and `admissionReviewRefs` are distinct reference families. `qualityEvaluationRefs` point to `E.21` pattern or framework-quality evaluation and improvement evidence. `admissionReviewRefs` point to `E.19` only when the decision is being used to claim admission, profile gating, external-review readiness, or landing readiness.
+`qualityEvaluationRefs` and `admissionReviewRefs` are distinct reference families. `qualityEvaluationRefs` point to `E.4.DPF.DA` package adequacy, `E.21` pattern-quality evaluation, or `E.23` improvement evidence. `admissionReviewRefs` point to `E.19` only when the decision is being used to claim admission, profile gating, external-review readiness, or landing readiness.
 
 Demotion condition: if no framework-specific slots are live, do not keep this pattern in play. Use `E.9` for rationale, `C.32.PAD` for project architecture decision structure, and `C.32.ADR` for the publication projection.
 
 ### E.4.PFAD:5 - Archetypal Grounding
 
-Tell: A team wants a hydroponic-cucumber domain principle framework. The PFAD decision asks whether the framework depends directly on FPF Core only, or also on an agriculture-domain framework edition; which crop-growth concerns become first patterns; which source packs are strong enough; and which local monolith or publication unit will expose the framework.
+Tell: A team wants a hydroponic-cucumber domain principle framework. The PFAD decision asks whether the framework depends directly on FPF Core only, or also on an agriculture-domain framework edition; which crop-growth concerns become first patterns; which source packs are strong enough; and which publication or access carrier will expose the framework.
 
 Show: A Codex local practice framework has process patterns for baton handoff and prelanding checks. The decision records that these are local practice framework patterns, not FPF Core patterns. It names the FPF Core edition, selected local process patterns, local publication unit, source-return owners, and refresh conditions.
 
@@ -64089,14 +64640,16 @@ PrincipleFrameworkArchitectureDecision@HydroponicCucumberDomain:
   namingDecisionRefs: F18-HC-framework-name-card-required
   selectedPatternSetRefs: problem-framing, nutrient-monitoring, climate-control interpretation, harvest-feedback patterns
   selectedPatternRelationRefs: PFR-HC-source-reuse, PFR-HC-specialization, PFR-HC-publication
-  publicationUnitRefs: HC-local-monolith-readme-and-toc
+  publicationUnitRefs: HC-all-in-one-carrier-readme-and-toc
+  accessCarrierRefs: HC-grower-skill-pack-or-MCP-route-if-built
   dependencyAndEditionRefs: depends on FPFCorePatternSet@current; no Core reverse dependency
   qualityEvaluationRefs: E21-HC-first-pattern-evaluation
   admissionReviewRefs: none until admission is claimed
   rejectedAlternatives: land into FPF-Spec.md; publish only a crop checklist
   rationaleRefs: source-pack claim sheet and E.4 family map
   consequences: faster domain guidance; explicit refresh debt when sources or Core edition change
-  localMonolithLandingRefs: HC-local-monolith-draft
+  publicationCarrierRefs: HC-all-in-one-carrier
+  accessCarrierRefs: HC-grower-skill-pack-or-MCP-route-if-built
   sourceReturnConditions: return to G.2 when source pack loses a rival horticulture tradition
   refreshOrSupersessionConditions: G.11 refresh when Core edition or greenhouse practice changes
 ```
@@ -64112,7 +64665,7 @@ The second drift is child-pattern duplication: PFAD can become a local restateme
 | Check | Passing condition |
 | --- | --- |
 | CC-PFAD.1 Decision relation exists | A filled `PrincipleFrameworkArchitectureDecision@Context` relation exists before any ADR-like publication is treated as the decision. |
-| CC-PFAD.2 Framework-specific slots live | The decision uses at least one framework-specific slot: edition dependency, selected pattern set, relation graph, local monolith, name cards, source-return, quality route, or currentness route. |
+| CC-PFAD.2 Framework-specific slots live | The decision uses at least one framework-specific slot: edition dependency, selected pattern set, relation graph, publication carrier, access carrier, name cards, source-return, quality route, or currentness route. |
 | CC-PFAD.3 Generic owners reused | Rationale uses `E.9`; project architecture decision shape uses `C.32.PAD`; publication projection uses `C.32.ADR` or `E.17`. |
 | CC-PFAD.4 Alternatives and consequences present | Rejected alternatives, rationale, consequences, and repair or supersession conditions are recoverable. |
 | CC-PFAD.5 Source and name routes present | Source packs, source-return conditions, and required name-card work are named. |
@@ -64136,7 +64689,7 @@ The pattern also constrains ADR use. ADR-like records remain useful, but they be
 
 ### E.4.PFAD:10 - Rationale
 
-FPF already has decision, architecture decision, and ADR-projection patterns. The reason PFAD exists is narrower: framework authors repeatedly need the same framework-specific slots that generic decision patterns do not keep visible by default. Those slots are edition dependency, selected pattern set, relation structure, local monolith publication, source-return, naming, quality route, and currentness route.
+FPF already has decision, architecture decision, and ADR-projection patterns. The reason PFAD exists is narrower: framework authors repeatedly need the same framework-specific slots that generic decision patterns do not keep visible by default. Those slots are edition dependency, selected pattern set, relation structure, publication carrier, access carrier, source-return, naming, quality route, and currentness route.
 
 PFAD is therefore a specialization by obligation, not by vocabulary. If those obligations are not live, the specialization has no value.
 
@@ -64156,11 +64709,11 @@ PFAD is therefore a specialization by obligation, not by vocabulary. If those ob
 - **Coordinates with:** `C.32.ADR` and `E.17` for decision publication projections.
 - **Coordinates with:** `E.4` for family membership and selected structures.
 - **Coordinates with:** `E.4.PFR` for dependency, edition, compatibility, relation, and supersession effects.
-- **Coordinates with:** `F.18`, `G.2`, `G.11`, `E.21`, `E.23`, `C.33`, `C.34`, and `C.35` for name, source, currentness, quality, preservation, and produced-carrier claims.
+- **Coordinates with:** `F.18`, `G.2`, `G.11`, `E.4.DPF.DA`, `E.21`, `E.23`, `C.33`, `C.34`, and `C.35` for name, source, currentness, package adequacy, pattern quality, preservation, and produced-carrier claims.
 
 ### E.4.PFAD:End
 
-## E.4.DPF - Domain Principle Framework Authoring and Local-Monolith Landing
+## E.4.DPF - Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -64170,7 +64723,9 @@ PFAD is therefore a specialization by obligation, not by vocabulary. If those ob
 
 Use this pattern when a group needs to create a domain principle framework or local practice framework grounded in FPF: for example a hydroponic-cucumber framework, a neural-network architecture framework, or a Codex-process framework.
 
-Primary `EntityOfConcern`: the authoring method for a bounded FPF-grounded framework edition. The first useful output is not a list of candidate pattern names. It is an authoring spine with context, SoTA source pack, architecture decision, name-card route, pattern drafts, relation and edition records, publication unit, quality loop, and currentness route.
+Primary `EntityOfConcern`: the authoring method for a bounded FPF-grounded framework edition. The first useful output is not a list of candidate pattern names. It is an authoring spine with context, SoTA source pack, architecture decision, name-card route, pattern drafts, relation and edition records, publication carrier, access carrier, quality loop, and currentness route.
+
+Default artifact contract for a request such as "make a DPF about this topic" separates developer and user carriers. In a campaign or repository setting, create a developer decision carrier such as `SUBSTANTIVE-DRR.md` or `DPF-DRR.md` governed by `E.9` and checked by `E.9.DA`; it carries the source basis, selected architecture, PFAD decision, candidate pattern split, relation plan, quality plan, and rejected alternatives. Create a user-facing framework publication or access carrier named by the individual framework, such as `<DomainOrPractice>-PRINCIPLES-FRAMEWORK.md`, `<PublicFrameworkName>.md`, a split readme, pattern, and appendix set, a skill pack, or an MCP-backed access service; it is the access route through which readers or agents use the DPF edition. Optional source-pack, PFR, quality-run, package-evaluation, skill-manifest, or access-service files may be separate when they need independent maintenance, but they must not be copied into the user carrier as process state.
 
 Use this pattern when the work creates a framework. Use `E.11` or `E.17` when the work only changes how existing material is exposed to readers.
 
@@ -64183,15 +64738,19 @@ Plain vocabulary for adoption:
 | `Local Practice Framework` | A principle framework for one organization, project, team, role context, or local operating practice. |
 | `bounded context` | The domain or local situation where this framework's meanings hold. |
 | `framework edition` | One versioned state of the framework with dependency, compatibility, publication, quality, and refresh records. |
-| `local monolith` | A publication carrier for local readers, not the framework architecture itself. |
+| `framework publication carrier` | A reader-facing carrier for a framework edition: readme, preface, table of contents, pattern bodies, support maps, relation records, and refresh route as needed. |
+| `framework access carrier` | A user-facing or agent-facing access carrier for a framework edition: all-in-one publication carrier, split document set, card set, skill pack, MCP-backed access service, retrieval route, or assistant integration. It exposes the selected framework edition; it does not define the framework architecture, source pack, quality result, runtime dependency, or work authority by itself. |
+| `local monolith` | Workspace and editorial shorthand for one all-in-one framework publication carrier. Do not use it as the public framework name, and do not treat it as the framework architecture itself. |
 
 Old intake labels such as `SPF`, `TPF`, or broad `xPF` remain source aliases until `F.18` settles a durable public name and any admissible short form. `ZPF` has a campaign-local `F.18` name card that selects `FoundationalPrinciplePatternSet` / "foundational principle pattern set" as the primary name and keeps `ZPF` only as a mnemonic alias, not as a public "zero principles" framework name.
 
 ### E.4.DPF:2 - Problem
 
-Domain and local framework authors often have strong source material and urgent local needs, but they can lose FPF discipline in three ways. They copy FPF terms without settling the domain ontology. They publish a local monolith before deciding the framework architecture. Or they produce a useful checklist that is local process guidance but not yet an FPF-grounded pattern framework.
+Domain and local framework authors often have strong source material and urgent local needs, but they can lose FPF discipline in three ways. They copy FPF terms without settling the domain ontology. They publish a framework carrier before deciding the framework architecture. Or they produce a useful checklist that is local process guidance but not yet an FPF-grounded pattern framework.
 
 A working framework needs more than a good table of contents. It needs source-grounded pattern selection, architecture decisions, relation records, edition dependencies, names, worked cases, quality evaluation, and refresh conditions.
+
+A DPF is not a domain ontology, glossary, literature survey, or guide to talking about a topic. It exists so an intended practitioner or assisting agent can enter typical problem situations in the domain, avoid known failure modes, and apply source-grounded SoTA solution moves with visible boundaries and refresh conditions. Those failure modes include beginner mistakes and experienced-practitioner failures caused by stale, local-only, or non-SoTA practice. Ontology and vocabulary matter only insofar as they make those problem-solving moves safer and more reusable.
 
 ### E.4.DPF:3 - Forces
 
@@ -64199,8 +64758,9 @@ A working framework needs more than a good table of contents. It needs source-gr
 | --- | --- |
 | Domain urgency | The local team needs usable guidance soon, but premature durable names and pattern heads freeze poor ontology. |
 | Source richness | Domain traditions provide valuable methods and examples, but source summaries can hide rival traditions and lost evidence. |
+| Problem-solving primacy | A DPF may need terms and ontology, but those are supports for recognizing recurring domain problems and choosing SoTA solution moves, not the framework's payoff by themselves. |
 | FPF reuse | FPF Core gives strong authoring, relation, and quality patterns, but direct copying can mask domain-specific concerns. |
-| Publication need | A local monolith helps readers, but it can hide relation, dependency, and currentness records. |
+| Publication need | A framework publication carrier helps readers, but it can hide relation, dependency, and currentness records. |
 | Evolution | Domain and local frameworks must improve as sources, uses, and Core editions change. |
 
 ### E.4.DPF:4 - Solution
@@ -64211,14 +64771,14 @@ First-hour route for a first framework:
 
 1. Write a one-paragraph context note: domain or local context, intended reader, first use, and non-use boundary.
 2. Create a source-pack stub: source traditions to inspect, rival traditions to avoid losing, first examples, and claim status.
-3. Draft one PFAD question: what framework family is being created, what first pattern set is in scope, what depends on FPF Core, and what must not land in Core.
+3. Draft one PFAD question: what framework family is being created, which domain or local problem-situation architecture and solution-move architecture the first pattern set will render, what depends on FPF Core, and what must not land in Core.
 4. Mark public names provisional: use `Domain Principle Framework` or `Local Practice Framework` in prose, and send durable names or abbreviations to `F.18`.
-5. Draft one to three first pattern candidates through `E.8`, each with a recognizable problem frame, positive solution, worked slice, and local anti-pattern.
+5. Draft one to three first pattern candidates through `E.8`, each with a recognizable problem frame, known failure mode or local anti-pattern, positive SoTA-informed solution move, worked slice, and boundary. In the first hour these are pattern seeds unless they already pass the declared `E.21` pattern-quality use.
 6. Add relation and edition rows for those candidates: source reuse, specialization, publication, dependency, compatibility, or refresh as needed.
-7. Pick the first-entry carrier: local readme, preface, table of contents, card set, or local monolith.
+7. Pick the first-entry and publication or access carrier: readme, preface, table of contents, card set, all-in-one local carrier, split document set, skill pack, MCP-backed access service, or another access face.
 8. Name the first quality and refresh route: what will be evaluated, what can improve next, and what source, Core edition, or local-use change reopens the framework.
 
-Stop the first hour when those outputs exist, even if every pattern body is still rough. A rough framework with context, source basis, decision question, provisional names, first pattern candidates, relation rows, publication carrier, quality route, and refresh trigger is inspectable. A long monolith without those outputs is not yet an FPF-grounded framework.
+Stop the first hour when those outputs exist, even if every pattern body is still rough. A rough framework with context, source basis, decision question, provisional names, first pattern candidates, relation rows, publication carrier, quality route, and refresh trigger is inspectable. A long all-in-one carrier without those outputs is not yet an FPF-grounded framework. Do not promote this rough output to a reliance-bearing DPF publication carrier until the DRR or decision carrier is checked for the intended authoring use, the pattern bodies are hardened as normal FPF patterns, and the package is evaluated through `E.4.DPF.DA`.
 
 Prompt-shaped starter for SoTA harvesting and first candidate generation:
 
@@ -64233,28 +64793,52 @@ Rival traditions or schools not to lose:
 Local examples or internal sources:
 Adopted source payload to carry into pattern solutions:
 Rejected source payload and why rejected:
+Recurring domain or local problem situations and forces:
+Reusable solution moves and consequences:
 Candidate first patterns, each with problem frame, positive solution, worked slice, and local anti-pattern:
 Candidate relation functions among the patterns:
 Dependency on FPF Core or a domain framework edition:
-Publication carrier for first entry:
+Publication or access carrier for first entry:
 Quality route: which first drafts should be evaluated and improved:
 Refresh triggers: source change, Core edition change, local-use telemetry, or policy change:
 
-Return the result as a draft source-pack summary, PFAD question, candidate pattern list, relation-record candidates, publication carrier note, quality-route note, and refresh-trigger note.
+Return the result as a draft source-pack summary, PFAD question, candidate pattern list, relation-record candidates, publication or access carrier note, quality-route note, and refresh-trigger note. If the requester wants a ready DPF rather than a seed, return the developer DRR or decision carrier and the user DPF publication or access carrier as separate artifacts or clearly separated sections, then name which `E.21`, `E.4.DPF.DA`, and refresh checks remain before reliance.
 Do not present generated text as authoritative. State what must return to `G.2`, `C.35`, `E.4.PFAD`, `E.4.PFR`, `F.18`, `E.21`, and `G.11` before the framework can be relied on.
 ```
 
 1. **Context declaration.** State the domain or local bounded context, intended reader, first use, and non-use boundary.
 2. **Source pack.** Use `G.2` to gather SoTA traditions, claim sheets, examples, source-use decisions, rejected alternatives, and source-currentness notes.
-3. **Architecture decision.** Use `E.9` and `E.4.PFAD` to decide purpose, framework family, pattern split, relation structure, publication unit, dependency boundary, and source-return obligations.
+3. **Architecture decision.** Use `E.9` and `E.4.PFAD` to decide purpose, framework family, domain or local problem-and-solution architecture, pattern split, relation structure, publication carrier, access carrier, dependency boundary, and source-return obligations.
 4. **Name preparation.** Use `E.10` for kind discipline and `F.18` for durable names before public pattern heads or abbreviations are stabilized.
-5. **Carrier admission.** Use `C.33`, `C.34`, or `C.35` before relying on local monoliths, tables of contents, relation graphs, source summaries, search outputs, transformed views, or generated candidates as architecture evidence.
-6. **Pattern drafting.** Draft patterns with `E.8`: recognition text, positive solution, worked cases, boundary, local anti-patterns, SoTA-Echoing, conformance checks, and relations.
+5. **Carrier admission.** Use `C.33`, `C.34`, or `C.35` before relying on all-in-one carriers, tables of contents, relation graphs, source summaries, search outputs, transformed views, or generated candidates as architecture evidence.
+6. **Pattern drafting.** Draft patterns with `E.8`: recognition text, positive solution, worked cases, boundary, local anti-patterns, SoTA-Echoing, conformance checks, and relations. In a DPF, those pattern bodies are the pattern-language rendering of selected domain or local problem-situation architecture and solution-move architecture. `E.8` means a normal action-guiding pattern body, not only a section skeleton. A thin skeleton, prompt seed, or compressed design note remains a pattern seed until `E.21` says it is adequate for the declared DPF use.
 7. **Relation and edition discipline.** Use `E.4.PFR` for relation functions, dependency direction, compatibility boundary, deprecation, supersession, and edition effects.
-8. **Quality cycle.** Use `E.22` to frame the evaluation purpose, quality floor, trade-off question, and expected improvement proposal when that frame is not already scoped. Use `E.21` to evaluate pattern quality, `E.23` for repeated improvement, and `E.19` only when admission or profile gating is actually being claimed. If an evaluation result needs a carrier, publish or refresh that carrier through the direct publication or currentness owner rather than through `E.22`.
+8. **Quality cycle.** Use `E.22` to frame the evaluation purpose, quality floor, trade-off question, and expected improvement proposal when that frame is not already scoped. Use `E.4.DPF.DA` to evaluate the package as a DPF or local-framework package, `E.21` to evaluate individual pattern quality, `E.23` for repeated improvement, and `E.19` only when admission or profile gating is actually being claimed. If an evaluation result needs a carrier, publish or refresh that carrier through the direct publication or currentness owner rather than through `E.22`.
 9. **Admission review.** Use `E.19` when the local process asks whether a pattern or framework slice is ready for admission.
-10. **Local monolith landing.** Publish the framework in its own local monolith, readme, preface, table of contents, or equivalent first-entry carrier. Do not land domain or local frameworks into `FPF-Spec.md` by default.
+10. **Framework publication-or-access carrier assembly.** Publish or expose the framework in its own DPF or local-framework carrier: all-in-one local carrier, split readme, preface, and pattern files, table of contents, cards, skill pack, MCP-backed access service, retrieval route, or another first-entry form. Do not land domain or local frameworks into `FPF-Spec.md` by default.
 11. **Currentness route.** Use `G.11` for refresh plans, edition pins, source decay, deprecation, and supersession conditions.
+
+For an all-in-one DPF publication carrier, assemble the content in a reproducible order. This order is a publication shape, not a new framework kind:
+
+1. Public framework title and package edition ref: use a domain- or practice-specific framework name such as `<DomainOrPractice> Principles Framework`; `Principles Framework` alone is only the head or kind phrase, not an individual framework name. Do not put `local monolith`, `draft`, process status, or file-layout slang in the public title.
+2. Dependency declaration: FPF Core edition, depended-on DPF or local-framework editions, and blocked reverse dependency.
+3. Table of contents: pattern bodies first as the main language of use; support maps and relation records reachable but not front-loaded as required reading.
+4. Readme or first practical entries: intended reader, first use, non-use boundary, first outputs, and a short statement of which selected domain or local structures this carrier exposes for that reader.
+5. Preface or framework context: cross-cutting ideas that make the pattern set cohere, plus the selected structure families the carrier foregrounds, deliberately coarsens, defers, or sends back to sources and pattern bodies.
+6. Package carrier structure-account: intended reader and use, selected source-structure denominator, recurring problem-situation structures, reusable solution-move structures, captured structure, deliberately coarsened, abstracted, omitted, or lost structure, source-return condition, and quality or epiplexity route. This may be a short subsection in the readme or preface when the carrier is compact.
+7. Package boundary and owner routing: Core owners reused, local terms bounded, and source, evidence, assurance, publication, and refresh exits named.
+8. Pattern index: pattern ids, titles, first use, and any local prefix discipline.
+9. Pattern bodies: each drafted through `E.8`, with recognition text, positive solution, worked cases, local anti-patterns, SoTA-Echoing, conformance checks, and relations, and each evaluated or explicitly marked as a seed under `E.21` before the package is claimed for public, teaching, enterprise, or reliance-bearing use.
+10. Heterogeneous acceptance cases or transfer probes: examples that force the pattern set to work across unlike uses rather than only repeating the motivating case.
+11. Support maps or appendices: architecture bridge, source-use map, precision map, package-name route, or other reference material placed after pattern bodies unless a short front-door trigger table is needed.
+12. Source use and refresh map: source rows with adopted payload, rejected or bounded readings, currentness triggers, and `G.2`/`G.11` return conditions.
+13. Pattern-framework relation and edition records: `E.4.PFR` rows for dependency, specialization, publication, source reuse, evaluation, generated-carrier, teaching publication-carrier, ethics, deprecation, or supersession relations.
+14. Refresh route: what returns to source, pattern quality, package adequacy, edition dependency, or publication carrier when source, Core edition, local use, telemetry, or evaluation changes.
+Every DPF publication or access carrier bears or serves a publication/access expression that makes selected domain or local structures available for a declared reader and use; the carrier is not itself the framework edition, the domain, or a narrative by type. In an all-in-one publication carrier, the readme and preface usually carry the first explanatory route, and sometimes a narrative rendering, through the domain. They must therefore say what they are telling, for whom, which structures they foreground, which structures are deliberately coarsened, abstracted, omitted, or left to source return, and where a reader returns for fuller pattern, source, evidence, or relation detail. This is not only text-to-text summarization: the source-bearing side may be actual or possible holon structure, an architecture description, a view, a source pack, a model, a graph, or a pattern set. In architecture-mediated narrative-rendering use, read the return chain as `narrative rendering carried by a publication or access carrier -> architecture description or view -> architecture as selected structures in context -> wider source structures`. When no narrative rendering is present, read the first step as `framework publication or access carrier -> selected source structures`. Each step has selected structure, captured structure, coarsening, abstraction, omission, loss, and return conditions. An architecture description is often already a coarsened representation of selected real, expected, candidate, or actual structures, so the DPF carrier must not hide that second-step loss. This does not make every DPF a literary narrative or make every carrier a narrative; it makes the publication/access representation relation inspectable. When a sequential narrative rendering is load-bearing, use `A.6.3.NAR`; when the publication expression deliberately keeps only a narrower-use coarsened rendering, use `A.6.3.CSC`; for structure capture and loss, use `C.33`; for same-enough or preservation claims, use `C.34`; for first-entry publication, use `E.11` and `E.17`; for package adequacy, use `E.4.DPF.DA`.
+
+Keep process state out of the carrier. DRR text, handoff notes, ledger rows, review status, helper state, admission blockers, and landing evidence may shape the package, but the publication carrier should contain only durable user-facing package content, source-use boundaries, relation records, quality routes, and refresh conditions. A short source-use or relation record may appear in the user carrier when it helps readers and maintainers use the DPF; a DRR argument, review transcript, or quality proof does not.
+
+For skill packs and MCP-backed access, keep the same framework edition identity and relation records visible. A skill or endpoint may help a user find, select, retrieve, render, or apply DPF patterns, but it is an access carrier until another governing pattern makes a stronger claim. If the carrier generates candidate text, use `C.35`; if it performs work or triggers tools, use `A.15` and the local tool or work owner; if it claims currentness, evidence, assurance, or decision authority, use `G.11`, `A.10`, `B.3`, `E.9`, or the direct owner. Do not read a skill manifest, MCP tool name, endpoint schema, or protocol route as the DPF architecture.
 
 Starter evaluation characteristics for a principle-framework improvement loop:
 
@@ -64266,17 +64850,17 @@ Starter evaluation characteristics for a principle-framework improvement loop:
 | Relation typedness | Are pattern-use, specialization, dependency, publication, preservation, quality, and source-use relations separated? Use `E.4.PFR`. |
 | Compatibility impact | Can maintainers see what breaks or must migrate when Core, domain, or local editions change? Use `E.4.PFR`, `E.5.3`, and `G.11`. |
 | Refreshability | Are source decay, edition pins, local-use telemetry, and supersession conditions actionable? Use `G.11`. |
-| Package navigability | Can the selected pattern set, relation records, source packs, decision records, quality evidence, and first-entry carrier be found without treating the package as runtime machinery? Use `G.5`, `E.4.PFR`, and `E.11`. |
+| Package navigability | Can the selected pattern set, relation records, source packs, decision records, quality evidence, and first-entry or access carrier be found without treating the package as runtime machinery? Use `G.5`, `E.4.PFR`, and `E.11`. |
 | Adoption telemetry | Are repeated reader errors, skipped records, stale sources, and local-use failures routed to refresh or improvement? Use `G.11` and `E.23`. |
 | Didactic first use | Can a first-time domain or local author write the first useful output without prior FPF developer knowledge? Use `E.11`, `E.12`, `E.21`, and `E.23`. |
 
-These are evaluation characteristics for selecting and framing improvement work. They are not measurement programs by themselves. If the pass needs a measurement, eval, evidence, or adequacy record, create it through the pattern that owns that object, such as `E.21`, `E.9.DA`, `E.2.DA`, `C.16`, `A.10`, or the relevant architecture-characteristic pattern.
+These are evaluation characteristics for selecting and framing improvement work. They are not measurement programs by themselves. If the pass needs a DPF package adequacy result, use `E.4.DPF.DA`; if it needs individual pattern quality, use `E.21`; if it needs DRR adequacy, FPF-level Pillar adequacy, measurement, evidence, or architecture-characteristic evaluation, use the pattern that owns that object, such as `E.9.DA`, `E.2.DA`, `C.16`, `A.10`, or the relevant architecture-characteristic pattern.
 
-The spine is complete only when a reader can answer: what framework edition is being authored, which sources and decisions shaped it, which patterns and relations were selected, where it is published, how quality improves, and when it returns for refresh or repair.
+The spine is complete only when a reader can answer: what framework edition is being authored, what problem-and-solution architecture it renders, which sources and decisions shaped it, which patterns and relations were selected, where it is published, how quality improves, and when it returns for refresh or repair.
 
 ### E.4.DPF:5 - Archetypal Grounding
 
-Tell: A hydroponic-cucumber framework begins with crop-production concerns, horticulture and greenhouse-control sources, local examples, and FPF Core dependency. Its first local monolith is a publication unit for domain users, while relation records, source packs, and quality evaluations remain separately recoverable.
+Tell: A hydroponic-cucumber framework begins with crop-production concerns, horticulture and greenhouse-control sources, local examples, and FPF Core dependency. Its first all-in-one publication carrier is for domain users, while relation records, source packs, and quality evaluations remain separately recoverable.
 
 Show: A neural-network architecture framework may draw on dataflow architecture, model components, training and inference concerns, evaluation practice, and recent architecture-analysis work. The framework can describe layers, blocks, flows, optimization constraints, and interpretability concerns, but each pattern must still be grounded through `G.2`, drafted through `E.8`, and related through `E.4.PFR`.
 
@@ -64291,7 +64875,7 @@ Enterprise local-practice slice:
 | Local context | Which organization, product line, team, role context, and decision class is governed? |
 | Internal sources | Which policies, standards, review records, incidents, templates, and examples are adopted or rejected? |
 | Constraints | Which regulatory, confidentiality, intellectual-property, tool-access, and security boundaries constrain publication? |
-| Owners | Which steward owns the framework edition, source pack, relation records, local monolith, and refresh plan? |
+| Owners | Which steward owns the framework edition, source pack, relation records, publication or access carrier, and refresh plan? |
 | Approval route | Which management, engineering, safety, legal, or assurance reviews are needed before local use? |
 | Rollout and training | Which roles need first-use examples, training material, and migration support? |
 | Dependency | Which FPF Core edition and domain framework edition are depended on, and which reverse dependency is blocked? |
@@ -64304,19 +64888,19 @@ Replayable authoring slice:
 | --- | --- |
 | Context declaration | `GreenhouseCropDomain`, intended reader: crop-system architect and senior grower; first use: decide first pattern set for cucumber production guidance |
 | `G.2` source pack | greenhouse climate-control sources, crop nutrition sources, local production logs; rejected source: generic gardening advice without controlled-environment evidence |
-| Architecture decision | `PFAD-HC-001` selects four first patterns, local monolith carrier, FPF Core dependency, and no Core landing |
+| Architecture decision | `PFAD-HC-001` selects four first patterns, publication or access carrier, FPF Core dependency, and no Core landing |
 | Naming route | provisional `HydroponicCucumberPrincipleFramework`; `F.18` name card required before public abbreviation |
 | First pattern draft | `HC.NutrientMonitoring` drafted with `E.8`: problem frame, solution, worked greenhouse slice, SoTA row, conformance checks |
 | Relation and edition record | `PFR-HC-source-reuse` links nutrient pattern to source pack; dependency record points to `FPFCorePatternSet@current` |
 | Quality cycle | `E.22` frames evaluation purpose; `E.21` scores first draft; `E.23` records the next improvement loop |
-| Local publication | local monolith readme and table of contents expose the framework after source-return notes are present |
+| Local publication or access | framework readme, table of contents, skill pack, or MCP-backed access route exposes the framework after source-return notes are present |
 | Refresh route | `G.11` refresh when source pack, Core edition, or greenhouse-control practice changes |
 
 ### E.4.DPF:6 - Bias-Annotation
 
 The first drift is source-summary confidence: a summary feels sufficient because it names the right domain terms. The repair is to turn sources into a `G.2` source pack with adopted and rejected payload, then carry that payload into pattern solutions and examples.
 
-The second drift is monolith-first authoring. The repair is not to delay publication forever; it is to publish after the architecture decision, relation records, and source-return notes are recoverable.
+The second drift is publication-carrier-first authoring. The repair is not to delay publication forever; it is to publish after the architecture decision, relation records, and source-return notes are recoverable.
 
 ### E.4.DPF:7 - Conformance Checklist
 
@@ -64324,11 +64908,13 @@ The second drift is monolith-first authoring. The repair is not to delay publica
 | --- | --- |
 | CC-DPF.1 Context declared | Domain or local bounded context, intended reader, first use, and non-use boundary are named. |
 | CC-DPF.2 Source pack present | `G.2` source basis includes adopted payload, rejected alternatives, examples, claim status, and currentness notes. |
-| CC-DPF.3 Architecture decision present | `E.4.PFAD` or direct `E.9` plus `C.32.PAD` records purpose, pattern split, relation structure, publication unit, dependency boundary, and consequences. |
+| CC-DPF.3 Architecture decision present | `E.4.PFAD` or direct `E.9` plus `C.32.PAD` records purpose, domain or local problem-and-solution architecture, pattern split, relation structure, publication or access unit, dependency boundary, and consequences. |
 | CC-DPF.4 Names prepared | Durable public names and abbreviations have `F.18` name-card work or are explicitly provisional source aliases. |
-| CC-DPF.5 Carriers admitted | Any monolith, graph, generated set, source summary, or transformed view used as evidence has `C.33`, `C.34`, or `C.35` treatment. |
-| CC-DPF.6 Patterns drafted through E.8 | Pattern bodies carry recognition text, positive solution, worked cases, local anti-patterns, checklist, SoTA-Echoing, and relations. |
-| CC-DPF.7 Quality and refresh routes present | `E.22` frames evaluation purpose when needed; `E.21`, `E.23`, and `G.11` routes are named with edition or refresh conditions. |
+| CC-DPF.5 Carriers admitted | Any all-in-one carrier, skill pack, MCP-backed access route, graph, generated set, source summary, or transformed view used as evidence has `C.33`, `C.34`, or `C.35` treatment. |
+| CC-DPF.6 Patterns drafted through E.8 | Pattern bodies carry recognition text for recurring domain or local problem situations, positive SoTA-informed solution moves, worked cases, known failure modes or local anti-patterns, checklist, SoTA-Echoing, and relations. Skeletons, prompt seeds, and compressed design notes are named as seeds rather than treated as normal DPF patterns. |
+| CC-DPF.7 Quality and refresh routes present | `E.22` frames evaluation purpose when needed; `E.4.DPF.DA` package adequacy, `E.21` pattern quality, `E.23` improvement, and `G.11` refresh routes are named with edition or refresh conditions. Public, teaching, enterprise, or reliance-bearing DPF publication names the checked pattern-quality basis or remains `seedOnly`. |
+| CC-DPF.8 Carrier structure-account visible | Readme, Preface, or equivalent first-entry carrier says which domain or local problem-and-solution structures the framework exposes, for whom, what is foregrounded, deliberately coarsened, abstracted, omitted, deferred, or lost, and where source, pattern, evidence, or relation return happens. |
+| CC-DPF.9 Problem-solving primacy | The DPF tells which typical domain or local problems it helps solve, which known failure modes it blocks, and which source-grounded SoTA solution moves it offers. If it mainly provides vocabulary, ontology, commentary, or conversation guidance, it is not yet a reliance-bearing DPF. |
 
 ### E.4.DPF:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -64336,8 +64922,12 @@ The second drift is monolith-first authoring. The repair is not to delay publica
 | --- | --- | --- |
 | Checklist promoted to framework | Local tips are published as a principle framework without source, relation, or quality work. | Treat the checklist as local process text until `G.2`, `E.8`, `E.4.PFR`, and `E.21` are satisfied. |
 | Source summary as SoTA | A literature summary replaces adopted and rejected source payload. | Build a `G.2` source pack and carry each load-bearing source into solution, boundary, or example text. |
-| Local monolith as architecture | The publication unit hides relation and dependency records. | Add `E.4.PFAD`, `E.4.PFR`, and source-return records before relying on the monolith as architecture evidence. |
+| Ontology catalog as framework | The package classifies the domain or defines terms, but it does not tell a practitioner what typical problem is live or what SoTA solution move avoids a known failure. | Keep ontology as support material; draft or repair DPF patterns around problem frames, positive solution moves, worked cases, anti-patterns, and refresh. |
+| Publication carrier as architecture | The publication or access carrier hides relation and dependency records. | Add `E.4.PFAD`, `E.4.PFR`, and source-return records before relying on the carrier as architecture evidence. |
+| Invisible framework story | A DPF carrier reads as a neutral list of principles, but the reader cannot tell what source or domain structures were selected, why this route is for them, what was deliberately coarsened, abstracted, omitted, or left to source return, or whether the carrier is a second-step coarsening after an architecture description or view. | Add a short carrier structure-account in the readme, Preface, or equivalent carrier, then evaluate it through `E.4.DPF.DA` rather than scattering explanation into every pattern body. |
 | Generated candidate authority | Search or LLM output becomes the framework because it is fluent. | Use `C.35` for admission, then decide candidate selection through `E.4.PFAD` or `C.32`. |
+| Skeleton carrier as DPF | A file has a ToC, headings, and very short pattern-shaped sections, but readers still cannot apply the patterns without reconstructing the missing guidance from the DRR or source notes. | Keep it as `seedOnly`; harden each DPF pattern through `E.8`, evaluate through `E.21`, and only then assemble the user publication carrier. |
+| Access carrier as framework | A skill pack, MCP endpoint, retrieval route, or assistant integration is treated as the framework itself because it is what agents call. | Record it as an access carrier through `E.4.PFR`, expose framework edition and refresh refs, and route generated, tool, evidence, currentness, or work claims to their direct owners. |
 
 Adoption risk tripwires:
 
@@ -64355,7 +64945,7 @@ Adoption risk tripwires:
 
 The authoring spine adds overhead before a local framework becomes durable. That overhead prevents hidden source loss, hidden Core change, hidden relation semantics, and hidden currentness debt.
 
-The pattern also makes local publication more useful. Readers get a coherent local monolith or first-entry carrier, while maintainers can still inspect the framework edition, source pack, relation records, decision records, and quality route.
+The pattern also makes local publication more useful. Readers get a coherent publication carrier or first-entry carrier, while maintainers can still inspect the framework edition, source pack, relation records, decision records, and quality route.
 
 ### E.4.DPF:10 - Rationale
 
@@ -64368,9 +64958,9 @@ The pattern keeps the work practical by using existing FPF owners instead of inv
 | Claim | Exact source ref and status | Pattern locus changed | Adoption status |
 | --- | --- | --- | --- |
 | Domain-tailored frameworks need co-evolving ontology, examples, usability, and evaluation rather than only a term list. | Zhang, Struber, Hebig, `Development and Evolution of Xtext-based DSLs on GitHub: An Empirical Investigation`, arXiv:2501.19222, 2025 current empirical DSL-evolution source, `https://arxiv.org/abs/2501.19222`. | `Solution` requires context declaration, source pack, name preparation, carrier admission, and pattern drafting; `Common Anti-Patterns` blocks checklist promotion and source-summary substitution. | Adapt co-evolution discipline to FPF framework authoring; reject grammar, parser, metamodel, or code-generator ontology unless a framework deliberately specifies a language. |
-| Reusable core and domain variation require explicit family and dependency work. | Nazar, `Software Product Line Engineering: Adoption, Tooling and AI Era Challenges`, arXiv:2605.21353, 2026 current survey and reopen trigger for stronger future SPLE synthesis, `https://arxiv.org/abs/2605.21353`. | `Solution` steps for architecture decision, relation and edition discipline, and local monolith landing keep Core, domain framework, and local framework separate. | Adapt domain-engineering and reusable-core discipline; reject software-product feature-model ontology as FPF default. |
+| Reusable core and domain variation require explicit family and dependency work. | Nazar, `Software Product Line Engineering: Adoption, Tooling and AI Era Challenges`, arXiv:2605.21353, 2026 current survey and reopen trigger for stronger future SPLE synthesis, `https://arxiv.org/abs/2605.21353`. | `Solution` steps for architecture decision, relation and edition discipline, and publication-carrier assembly keep Core, domain framework, and local framework separate. | Adapt domain-engineering and reusable-core discipline; reject software-product feature-model ontology as FPF default. |
 | Pattern bodies need condition-based use, examples, validation, and improvement loops. | Riehle, Harutyunyan, Barcomb, `Pattern Discovery and Validation Using Scientific Research Methods`, arXiv:2107.06065, 2021 current validation-practice source; Iba, `Pattern Languages as Media for the Creative Society`, arXiv:1308.1178, lineage for pattern languages as practice media. | `Solution` step 6 requires `E.8` pattern drafting; replayable authoring slice shows source pack to pattern draft to quality cycle; `Checklist` requires `E.22`, `E.21`, `E.23`, and `G.11` routes. | Adopt validation and worked-example pressure; adapt through FPF quality and improvement owners. |
-| Architecture-description carriers help authoring only when their captured and lost structure is explicit. | `ISO/IEC/IEEE 42010:2022`, current official architecture-description standard ref, `https://www.iso.org/standard/74393.html`. | `Carrier admission` step and `Local monolith as architecture` anti-pattern require `C.33`, `C.34`, or `C.35` treatment before carriers seed architecture decisions. | Adopt architecture-description boundary discipline; adapt source-return and admission to FPF carriers. |
+| Architecture-description carriers help authoring only when their captured and lost structure is explicit. | `ISO/IEC/IEEE 42010:2022`, current official architecture-description standard ref, `https://www.iso.org/standard/74393.html`. | `Carrier admission` step and `Publication carrier as architecture` anti-pattern require `C.33`, `C.34`, or `C.35` treatment before carriers seed architecture decisions. | Adopt architecture-description boundary discipline; adapt source-return and admission to FPF carriers. |
 
 ### E.4.DPF:12 - Relations
 
@@ -64379,10 +64969,263 @@ The pattern keeps the work practical by using existing FPF owners instead of inv
 - **Coordinates with:** `E.4` for family membership and `E.4.PFAD` for architecture decisions.
 - **Coordinates with:** `E.4.PFR` for relation, dependency, edition, compatibility, deprecation, and supersession records.
 - **Coordinates with:** `C.33`, `C.34`, and `C.35` for carrier preservation and admission.
-- **Coordinates with:** `E.22` for quality-evaluation framing when needed, `E.21` for pattern-quality evaluation, `E.23` for repeated improvement, `E.19` for admission or profile gating when claimed, and `G.11` for currentness.
+- **Coordinates with:** `E.22` for quality-evaluation framing when needed, `E.4.DPF.DA` for DPF package adequacy, `E.21` for pattern-quality evaluation, `E.23` for repeated improvement, `E.19` for admission or profile gating when claimed, and `G.11` for currentness.
 - **Exits to:** `E.11` and `E.17` when the live problem is publication or first-entry discoverability rather than framework authoring.
 
 ### E.4.DPF:End
+
+## E.4.DPF.DA - Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace
+
+> **Type:** Evaluation (E)
+> **Status:** Stable
+> **Normativity:** Normative unless marked informative.
+
+### E.4.DPF.DA:1 - Problem frame
+
+Use this pattern when a framework author, reviewer, steward, or AI agent must decide whether one Domain Principle Framework or Local Practice Framework package is good enough for one declared domain or local use.
+
+Primary `EntityOfConcern`: `DPFPackageAdequacyEvaluation@Context`, an authored evaluation over one bounded framework package edition. The package may be a DPF seed, selected pattern host set, all-in-one publication carrier, card set, skill pack, MCP-backed access service, source-pack-backed pattern family, or enterprise local practice framework edition. The first useful output is a coordinate table with values, short rationales, evidence loci, and repair proposals.
+
+Do not use `E.2.DA` directly as the ordinary DPF package evaluation. `E.2.DA` asks whether FPF-level objects realize the FPF Pillars for broad FPF use. A DPF package has a narrower burden: it must serve one declared domain or local context while depending on FPF Core without redefining it. Use `E.2.DA` only when the DPF package changes or claims FPF-level Pillar adequacy.
+
+Use `E.21` for the quality of individual DPF pattern bodies. Use this pattern for the package as a whole: domain scope, source basis, Core dependency, DPF-wide publication-carrier form, pattern-set coverage, relation and edition records, local publication, evaluation route, refresh route, and adoption utility.
+
+### E.4.DPF.DA:2 - Problem
+
+DPF packages will often be produced quickly from source material, prompts, external literature, local practice, or generated candidates. Some are good enough as seeds; some can answer a domain question for an AI agent; some are public-ready publication carriers; some are only source summaries wearing pattern headings.
+
+Without a DPF-specific adequacy evaluation, teams tend to use one of three wrong substitutes:
+
+- they apply `E.2.DA` and ask whether the package is "FPF-like in general", even though the package is meant for one domain;
+- they average `E.21` scores of individual patterns and miss package-level failures such as missing source packs, broken dependency direction, poor first entry, or stale edition records;
+- they inspect section presence and conclude that an all-in-one carrier, map, or seed package is adequate because it has patterns, a table of contents, a readme, a preface, maps, and sources.
+
+The result is adoption risk. A reader may get a fluent local framework that does not know its domain boundary, does not preserve rival source traditions, duplicates FPF Core ontology, hides relation functions, has no refresh route, or cannot tell a practitioner what typical problem is live, which known failure mode to avoid, and which SoTA solution move to try first.
+
+### E.4.DPF.DA:3 - Forces
+
+| Force | Tension |
+| --- | --- |
+| Domain boundedness vs FPF generality | The DPF must be strong for one domain or local context, not a second FPF Core. |
+| Pattern quality vs package quality | Strong individual patterns can still form a weak package if source, relation, publication, or refresh structures are missing. |
+| Fast seeds vs reliance-bearing packages | A seed may be useful for exploration, but public or operational use needs higher evidence and repair routes. |
+| Source richness vs source theatre | A long bibliography can decorate the package while missing adopted payload, rejected alternatives, currentness, and pattern consequences. |
+| Local usability vs formal assurance | Readers need first moves and worked cases, while maintainers need edition, dependency, relation, quality, and refresh records. |
+| Improvement vs proxy optimization | Adding maps, source rows, all-`5` claims, or review proof can make the package less usable. |
+
+### E.4.DPF.DA:4 - Solution
+
+Evaluate one DPF package edition for one declared use through a DPF-specific adequacy characteristic space. The evaluation is derived from the shape of `E.2.DA`, but it is not the FPF Pillar evaluation. It asks whether the package realizes FPF-grounded domain value for a declared domain or local context.
+
+```text
+DPFPackageAdequacyEvaluation@Context:
+  evaluatedPackageRef:
+  packageKind: domain-principle-framework | local-practice-framework | seed | selected-host-set | all-in-one-publication-carrier | skill-pack | mcp-backed-access-service | mixed
+  declaredDomainOrLocalContext:
+  intendedReaderOrOperator:
+  declaredUse:
+  nonUseBoundary:
+  fpfCoreEditionRef:
+  dependencyAndEditionRefs:
+  sourceBasisRefs:
+  pfadDecisionRefs:
+  patternSetRefs:
+  relationRecordRefs:
+  publicationCarrierRefs:
+  accessCarrierRefs:
+  qualityEvidenceRefs:
+  refreshRefs:
+  evaluationEvidenceBasis:
+  coordinateTable:
+  protectedTradeoffSet:
+  status:
+  firstRepairOrNoProposalDisposition:
+  reopenCondition:
+```
+
+#### E.4.DPF.DA:4.1 - Ordinal scale
+
+| Value | Label | Meaning |
+| --- | --- | --- |
+| `0` | `wrongKindOrNoBasis` | The object is not an evaluable DPF package for the declared use, or required basis is absent. |
+| `1` | `namedOnly` | The package name or topic exists, but the package cannot guide domain or local work. |
+| `2` | `partialSeed` | Useful source, prompt, or pattern-seed material exists, but package obligations are incomplete or fragile. |
+| `3` | `locallyUsableWithVisibleLimits` | The package can support bounded exploration or local use with explicit limits and repairs. |
+| `4` | `wellGroundedForDeclaredDPFUse` | The package is coherent, source-grounded, FPF-dependent, navigable, and refreshable for the declared use. |
+| `5` | `exceptionallyGroundedForDeclaredDPFUse` | The package is replayable across source basis, pattern set, relation records, heterogeneous cases, publication carriers, improvement route, refresh route, and blocked overreads. |
+
+Default floor is `4` for public, teaching, enterprise, operational, or reliance-bearing DPF use. A fast seed or exploratory prompt output may use floor `3` only when non-use, missing evidence, and next repair are explicit.
+
+#### E.4.DPF.DA:4.2 - Required coordinates
+
+Every `E.4.DPF.DA` run evaluates every coordinate below. Do not drop a coordinate because the package is "only a seed"; assign the value that the seed earns.
+
+In this pattern, `known failure modes` means beginner mistakes and experienced-practitioner failures caused by stale, local-only, or non-SoTA practice. Do not narrow the check to novice errors only.
+
+| Coordinate | Evaluation question | Good state |
+| --- | --- | --- |
+| `D1DomainScopeAndUseAdequacy` | Is the domain or local context, reader, declared use, and non-use boundary recoverable? | The package tells whom it is for, what domain situation it covers, what it does first, and what it must not be used for. |
+| `D2DidacticEntryAndAdoptionAdequacy` | Can the intended reader or assisting agent find the first useful entry and get a first working result without FPF developer knowledge? | ToC, readme, preface, pattern-use routes, skill entries, MCP access cues, and examples make adoption cheap and non-magical, while support maps are reached from work triggers rather than front-loaded as required reading. |
+| `D3ScalableFormalityAndAssurancePathAdequacy` | Can the package move from plain local use toward stronger records, evaluation, evidence, or assurance without rewriting the package? | Plain guidance, typed records, source pins, evaluation rows, and stronger owners are staged. |
+| `D4CoreDependencyAndDomainBoundaryAdequacy` | Does the package depend on FPF Core while keeping domain knowledge inside the DPF? | Core owners are reused; local terms do not redefine Core; possible Core amendment candidates are explicit; FPF Core and the main monolith do not depend on this DPF except through a deliberate Core amendment. |
+| `D5PackageFormLayeringAndRelationAdequacy` | Are pattern set, support maps or appendices, relation records, edition dependencies, publication carriers, access carriers, source packs, and quality records separated? | `E.4.PFR`, `E.4.PFAD`, source, publication, access, quality, support-map, appendix, and refresh loci remain distinct, findable, and reached from the right work triggers. |
+| `D6DomainLexiconAndKindSettlementAdequacy` | Are domain terms, local vocabulary, candidate ontics, and FPF owners settled well enough for use? | Local terms have kind, owner, admissible use, blocked overread, and naming route when needed. |
+| `D7PracticeUtilityAndProblemResolutionAdequacy` | Does the package change real domain or local action, diagnosis, design, explanation, teaching, or repair? | Patterns solve recognizable domain problems with positive SoTA-informed moves, known failure modes or anti-patterns, and worked cases, not only taxonomy, ontology, commentary, or talk guidance. |
+| `D8HeterogeneousCaseAndTransferAdequacy` | Has the package been tested against diverse enough domain cases, reader roles, or local situations? | Heterogeneous probes show where the same pattern set works, fails, or needs a neighbouring owner. |
+| `D9EditionStateAndCurrentnessAdequacy` | Are package edition, source currentness, dependency pins, qualification window, and status of carriers explicit? | Readers can tell what version they use, what source state supports it, and what changes it. |
+| `D10ImprovementAndRefreshAdequacy` | Can the package improve through `E.22`/`E.23` and refresh through `G.11` without giant reopen or process theatre? | Low values produce repair rows; source, edition, telemetry, and use failures have smallest reopen routes. |
+| `D11DomainSoTAAlignmentAdequacy` | Does current domain or local SoTA discipline pattern selection, solution, examples, boundaries, and reopen triggers? | Sources change the package content; they are not bibliography, claim theatre, or authority by citation. |
+
+#### E.4.DPF.DA:4.3 - Result row shape
+
+An `E.4.DPF.DA` result uses this table shape:
+
+| Coordinate | Value | ShortRationale | EvidenceLocus | RepairOrNoProposal |
+| --- | --- | --- | --- | --- |
+| `<D1..D11>` | `<0..5>` | `<why this value, why lower would understate evidence, why higher would overstate it or what would lower or reopen a 5>` | `<package section, source row, relation record, pattern body, readme, ToC, skill entry, MCP route, worked case, quality result, refresh route, missing locus>` | `<repair, no-proposal with checked loci, or owning neighbour>` |
+
+A prose verdict, a checklist-count result, a table without evidence loci, or an average of `E.21` pattern values is not an `E.4.DPF.DA` result.
+
+#### E.4.DPF.DA:4.3a - DPF-wide package-form checks
+
+Run this subpass for any all-in-one DPF publication carrier, selected-host-set, card set, skill pack, MCP-backed access service, or package publication or access carrier. These checks do not replace the eleven coordinates; they supply package-level evidence mainly for `D1`, `D2`, `D4`, `D5`, `D7`, `D8`, `D9`, `D10`, and `D11`.
+
+| Package-form check | Passing condition | Primary affected coordinates |
+| --- | --- | --- |
+| `PFM1 Front-door order` | The package front door has a usable ToC, readme, and preface or equivalent first-entry carrier before pattern bodies; the reader can choose a first pattern without reading support apparatus first. | `D2`, `D5` |
+| `PFM2 Pattern-language primacy` | Pattern bodies remain the main language of use. Large maps, source-use tables, relation records, edition notes, and package architecture material appear after pattern bodies or in appendices or support sections unless they are a short first-entry aid. | `D2`, `D5`, `D7` |
+| `PFM3 Map discoverability` | Every support map or appendix has at least one live entry route from ToC or readme, a pattern `Relations` section, low-value repair action, source-return condition, or package-refresh condition. A map that cannot be reached from work lowers package adequacy even if the map is correct. | `D2`, `D5`, `D10` |
+| `PFM4 Dependency direction` | The DPF may cite FPF Core and explicitly depended-on upstream DPFs or local frameworks; FPF Core and the main monolith do not cite this DPF as required authority. If a DPF discovery belongs in Core, it returns through a Core amendment decision rather than a reverse dependency. | `D4`, `D5`, `D9` |
+| `PFM5 Publication-and-access-carrier boundary` | The all-in-one carrier, readme, preface, ToC, card set, maps, skill pack, MCP-backed access route, retrieval route, and assistant integration are publication or access carriers. They do not become the framework architecture, source pack, quality result, admission status, process state, runtime dependency, work authority, evidence source, or currentness proof by being visible or callable. | `D5`, `D9` |
+| `PFM6 Public package naming` | The public title and primary file or package name use a domain- or practice-specific framework name such as `<DomainOrPractice> Principles Framework`, with the domain or practice head visible. `Principles Framework` alone is only a kind or head phrase, not an individual framework name. Format slang such as `local monolith`, process state such as `draft`, and file-layout labels stay out of public package identity unless the carrier is explicitly a workspace-only artifact. | `D1`, `D2`, `D5`, `D6`, `D9` |
+| `PFM7 Development-state absence` | Package carriers contain user-facing package content and durable package relations, not scattered `draft`, `DRR`, handoff, ledger, review-status, admission-blocker, helper-state, or process-run residue. | `D5`, `D9`, `D10` |
+| `PFM8 Cross-DPF relation discipline` | References to another DPF or local framework are recorded as dependency, specialization, source reuse, publication, selected-set, or other `E.4.PFR` relation with blocked stronger reading and refresh condition. | `D4`, `D5`, `D9` |
+| `PFM9 Normal-pattern maturity` | Every pattern body claimed as part of a public, teaching, enterprise, or reliance-bearing DPF is a normal action-guiding FPF-style pattern for its declared use: it is drafted through `E.8`, evaluated through `E.21`, and not merely a heading skeleton, seed note, prompt output, compressed DRR recap, term sheet, ontology catalog, or commentary about the domain. The pattern should show the typical problem, known failure mode or anti-pattern, SoTA-informed solution move, worked case, and boundary. Seeds are allowed only when the package status says `seedOnly` or the affected pattern is explicitly non-reliance-bearing. | `D2`, `D7`, `D8`, `D11` |
+| `PFM10 Access-currentness and callable-use boundary` | Skill packs and MCP-backed access services expose framework edition, dependency, source and currentness, bounded use, and refresh route. Generated outputs route to `C.35`; tool and work actions route to `A.15` or the local work owner; evidence, assurance, decision, and currentness claims route to their direct owners. | `D2`, `D5`, `D9`, `D10` |
+| `PFM11 Carrier structure-account and controlled structural coarsening` | Readme, Preface, or equivalent first-entry carrier provides a structure-account: what the package exposes for whom, which domain or local structures and source denominator it foregrounds, what it deliberately coarsens, abstracts, omits, loses, or sends to appendices and sources, and how a reader returns to pattern bodies, source packs, evidence owners, or relation records. This is source-structure-to-publication/access accounting, not only text summarization. The carrier is not itself the framework edition, the domain, or a narrative by type. In architecture-mediated narrative-rendering cases, the return chain is `narrative rendering carried by a publication or access carrier -> architecture description or view -> architecture as selected structures in context -> wider source structures`; when no narrative rendering is present, the first step is `framework publication or access carrier -> selected source structures`. Every arrow has its own selection, coarsening, abstraction, omission, preservation, and loss account. If package-level structure-capture or epiplexity is claimed, its declared use and lowering reason are explicit. | `D1`, `D2`, `D5`, `D7`, `D8`, `D10`, `D11` |
+
+A failure in this subpass lowers the affected coordinate even when individual pattern bodies pass `E.21`. Repair the package carrier, relation record, first-entry route, dependency record, or support-map placement; do not copy the package-form proof into pattern bodies.
+
+#### E.4.DPF.DA:4.4 - Evidence basis and neighbouring owners
+
+Use these owners instead of expanding this pattern into a package bureaucracy:
+
+| Evidence or defect | Owner |
+| --- | --- |
+| Source payload, rejected alternatives, source currentness, and source-use boundary | `G.2`, `G.11` |
+| Framework architecture decision, selected pattern set, publication carrier, dependency boundary | `E.4.PFAD`, `E.4`, `E.4.PFR` |
+| Individual pattern quality | `E.21` |
+| Pattern admission or profile gating | `E.19` |
+| First-entry and publication carrier | `E.11`, `E.17` |
+| Carrier structure-account, captured/coarsened/lost structure, package-level source return, and structure-capture or epiplexity account | `E.4.DPF`, `E.11`, `E.17`, `A.6.3.CSC`, `C.33`, `C.34`, and `A.6.3.NAR` when sequential narrative rendering is load-bearing |
+| Naming and local vocabulary | `E.10`, `F.18`, direct governing pattern |
+| Generated or searched package candidate | `C.35`, then `E.4.PFAD` or direct owner |
+| Carrier capture, loss, and preservation | `C.33`, `C.34` |
+| Improvement framing and repeated improvement | `E.22`, `E.23` |
+| FPF-level Pillar effect | `E.2.DA`, only when the package changes FPF-level adequacy |
+
+When a coordinate is below floor, return a finding or repair proposal. When a coordinate is at `4` and improvement is requested, search for a substantive non-dominated improvement. Do not raise a value by adding proof apparatus, more maps, more citations, or quality-status prose unless the package becomes easier to use, more source-grounded, more accurately bounded, or more refreshable.
+
+#### E.4.DPF.DA:4.5 - Status
+
+| Status | Meaning |
+| --- | --- |
+| `admissibleForDeclaredDPFUse` | All coordinates meet the declared floor for the stated DPF use, with non-use and reopen conditions named. |
+| `repairBeforeDPFUse` | One or more coordinates are below floor for the stated use. |
+| `seedOnly` | The package is useful as a seed or prompt output but not for reliance-bearing use. |
+| `holdForPFADDecision` | The package architecture, pattern set, dependency, or publication unit needs a framework architecture decision. |
+| `holdForCoreAmendmentDecision` | A package claim may belong in FPF Core and must not be hidden inside a DPF. |
+| `refreshNeeded` | The package was adequate before, but source, Core edition, local use, telemetry, or dependency state has changed. |
+
+### E.4.DPF.DA:5 - Archetypal Grounding
+
+Tell: A personal-development DPF is generated in one short run. It may have useful principles and pattern seeds. `E.4.DPF.DA` can mark it `seedOnly` with high values for first-entry utility and low values for source-currentness, heterogeneous probes, relation records, or refresh. That is not failure; it is an honest package status and a next repair route.
+
+Show: A domain DPF all-in-one publication carrier contains domain patterns, a source-use map, a Core-bridge map, relation records, and heterogeneous acceptance cases for several user situations. `E.4.DPF.DA` asks whether those cases actually force the pattern set to solve different domain problems, whether source rows changed pattern obligations, whether maps are reachable during work, and whether the package's local evaluation pattern can feed `E.22`/`E.23` without becoming a hidden Core dependency.
+
+Show: A hydroponic-cucumber DPF has excellent crop-control sources but no relation records and no first-entry carrier. `E.21` may find that individual crop patterns are good, but `D5PackageFormLayeringAndRelationAdequacy` and `D2DidacticEntryAndAdoptionAdequacy` stay below floor until relation records and first-use routes exist.
+
+Near miss: A DPF all-in-one publication carrier has a huge map before the pattern bodies. The map is correct but cold readers do not know when to open it. `D2` and `D5` fall unless pattern relations, low-value repair actions, or first-entry text route readers into the map from a real work trigger.
+
+Near miss: A DPF has polished readme and Preface prose, but neither says what selected domain structure the publication/access expression exposes, what it deliberately coarsens or abstracts, or where a reader returns for fuller source and pattern detail. If the carrier is based on an architecture description, view, model, or graph, it also hides the fact that the intermediate source already selected and coarsened structure on the route `source structures -> architecture -> architecture description or view -> publication/access expression`. `D1`, `D2`, `D5`, `D7`, `D8`, and `D11` fall because the carrier may be pleasant but its structure-capture claim is not inspectable.
+
+### E.4.DPF.DA:6 - Bias-Annotation
+
+The first drift is whole-FPF overreach: a DPF package is judged as if it had to cover every domain. Repair by declaring one domain or local context and evaluating adequacy for that context.
+
+The second drift is local excellence laundering: good-looking patterns, a polished monolith, or generated fluency hides missing source, relation, edition, and refresh structures. Repair by evaluating the package coordinates, not only pattern bodies.
+
+The third drift is quality proof leakage: evaluation results, review status, or package architecture evidence are copied into user-facing pattern prose. Repair by moving quality evidence to this evaluation, `E.21`, `E.19`, `E.11`, `I.2`, or publication evidence loci, and keep only the user-facing move or boundary in pattern bodies.
+
+The fourth drift is invisible carrier narration: the package is presented as a transparent list of principles, so nobody asks which domain structures were selected, coarsened, abstracted, omitted, or already transformed through `source structures -> architecture -> architecture description or view -> publication/access expression` before the publication carrier was written. Repair by making the readme, Preface, or access front door provide a short carrier structure-account and checking it through `PFM11`.
+
+### E.4.DPF.DA:7 - Conformance Checklist
+
+| Check | Passing condition |
+| --- | --- |
+| CC-DPFDA.1 Object and use declared | Evaluated package edition, package kind, domain or local context, intended reader, declared use, and non-use boundary are named. |
+| CC-DPFDA.2 All coordinates evaluated | All eleven coordinates receive value, short rationale, evidence locus, and repair or no-proposal disposition. |
+| CC-DPFDA.3 E.2.DA boundary respected | The result does not claim FPF-level Pillar adequacy unless `E.2.DA` is separately invoked. |
+| CC-DPFDA.4 E.21 not averaged | Individual pattern-quality results are evidence only where they change package adequacy. |
+| CC-DPFDA.5 Source and SoTA payload checked | Source rows change pattern selection, solution, examples, boundaries, or refresh; decorative citation lowers `D11`. |
+| CC-DPFDA.6 Relation and publication separated | Maps, manifests, readmes, prefaces, ToCs, all-in-one carriers, source packs, relation records, quality records, and pattern bodies keep their owners. |
+| CC-DPFDA.6a Package-form subpass complete | `PFM1` through `PFM11` have explicit pass, fail, or not-applicable-with-reason dispositions before D1, D2, D4, D5, D7, D8, D9, D10, and D11 values are assigned. |
+| CC-DPFDA.6b Reverse dependency blocked | The result checks that FPF Core and the main monolith do not depend on this DPF; any needed Core-level content returns through a Core amendment decision. |
+| CC-DPFDA.6c Structure-account checked | The result checks whether readme, Preface, ToC, all-in-one carrier, skill entry, or MCP front door states reader, selected or exposed structure, controlled coarsening, abstraction, omission, loss, source return, and any structure-capture or epiplexity claim before adoption or package adequacy values are raised. |
+| CC-DPFDA.7 Improvement route concrete | Below-floor coordinates return smallest useful repair slices; above-floor improvement proposals are substantive or explicitly dominated. |
+| CC-DPFDA.8 Seed status honest | Seed, prompt-output, and generated candidates are not promoted to reliance-bearing package status without evidence, admission, quality, and refresh routes. |
+
+### E.4.DPF.DA:8 - Common Anti-Patterns and How to Avoid Them
+
+| Anti-pattern | What fails | Repair |
+| --- | --- | --- |
+| `E.2.DA` as DPF review | The package is judged against whole-FPF Pillars and domain adequacy is blurred. | Use `E.4.DPF.DA`; invoke `E.2.DA` only for FPF-level effects. |
+| `E.21` averaging | Strong individual pattern scores hide weak package architecture. | Evaluate package coordinates directly; use `E.21` only as evidence. |
+| Source bibliography as adequacy | Sources are listed but do not change the package. | Return to `G.2`; carry adopted and rejected payload into pattern moves and boundaries. |
+| Publication carrier as package proof | The carrier is readable but relation, edition, source, and refresh structures are unrecoverable. | Add `E.4.PFAD`, `E.4.PFR`, source-use, quality, and refresh loci; keep publication as carrier. |
+| Invisible carrier structure-account | The carrier never tells what domain or local structure it selected, coarsened, abstracted, or omitted for the intended reader, so readers mistake the package for the domain itself or cannot judge coverage. | Add readme, Preface, ToC, skill-entry, or access-front-door carrier structure-account text, including source-return and structure-capture boundary, then rerun `PFM11`. |
+| Skill or MCP access as package proof | The package is callable through a skill or endpoint, so the access carrier is treated as if it proved the framework edition, source, quality, or currentness. | Record the skill or endpoint as an access carrier, expose edition and relation refs, and evaluate the underlying package and patterns through `E.4.DPF.DA` and `E.21`. |
+| Skeleton patterns as package proof | The package has pattern headings and canonical sections, but the bodies do not teach a working reader what to do, how to judge boundaries, or how source payload changes action. | Treat the package as `seedOnly`, then harden each body through `E.8` and `E.21` before public or reliance-bearing use. |
+| Ontology or conversation package as DPF | The package explains terms, roles, or ways to talk about the domain, but it does not help the intended practitioner resolve typical domain problems with SoTA moves. | Lower `D7` and usually `D11`; keep the ontology or conversation guide as support material and add problem frames, solution moves, worked cases, and anti-pattern repairs. |
+| Map hoarding | Huge maps appear before patterns and no work trigger leads to them. | Move maps after pattern bodies or make pattern relations and low-value repairs route to them. |
+| Reverse dependency leak | FPF Core or the main monolith starts citing a DPF as required authority. | Move the claim into a Core amendment if it belongs in Core; otherwise keep the dependency one-directional from DPF to Core. |
+| Process-state leakage | The package carrier includes `draft`, `DRR`, handoff, ledger, review, admission, or helper-state residue as package content. | Remove process state from package carriers and keep only durable user-facing package content, relation records, source-use boundaries, and refresh routes. |
+| Seed promotion | A fast prompt result is treated as public DPF. | Mark `seedOnly`, name missing coordinates, and run `E.23` hardening. |
+| Citation-driven `5` | Values rise because more sources, review proof, or maps were added. | Raise values only when action, source grounding, owner routing, adoption, or refresh improves. |
+
+### E.4.DPF.DA:9 - Consequences
+
+The pattern adds one package-level evaluation on top of individual pattern checks. The cost is worthwhile when DPF packages become reusable across domains, enterprises, AI-agent prompt packs, teaching materials, or local practice frameworks.
+
+It also prevents a common false choice. A DPF seed can be useful without pretending to be public-ready, and a public-ready package can remain domain-bounded without pretending to be FPF Core.
+
+### E.4.DPF.DA:10 - Rationale
+
+FPF needed `E.2.DA` because a local edit can improve one pattern while harming the whole language. DPF packages need the analogous but narrower instrument: a package can have good patterns while failing as a domain framework. Domain source grounding, relation architecture, first-entry adoption, package publication, and refresh are package-level effects.
+
+The coordinate set mirrors the spirit of the FPF Pillars but changes the adequacy question. FPF asks whether the whole framework remains broadly first-principle and cross-domain. A DPF asks whether one bounded domain or local framework is strong enough for its declared use while preserving dependency on FPF Core and source-return to its domain traditions.
+
+### E.4.DPF.DA:11 - SoTA-Echoing
+
+| Claim | Exact source ref and status | Pattern locus changed | Adoption status |
+| --- | --- | --- | --- |
+| Domain frameworks need co-evolving terminology, examples, usability, and evaluation rather than a static term list. | Zhang, Struber, Hebig, `Development and Evolution of Xtext-based DSLs on GitHub: An Empirical Investigation`, arXiv:2501.19222, 2025 current empirical DSL-evolution source. | Coordinates `D1`, `D2`, `D6`, `D9`, and `D10` require bounded context, adoption route, vocabulary settlement, edition state, and refresh. | Adapt co-evolution discipline to FPF-grounded frameworks; reject grammar or metamodel ontology unless a specific DPF owns it. |
+| Reusable-core and domain-variation work needs explicit dependency, adoption, tooling, and evolution discipline. | Nazar, `Software Product Line Engineering: Adoption, Tooling and AI Era Challenges`, arXiv:2605.21353, 2026 current survey and reopen trigger for stronger future SPLE synthesis. | Coordinates `D4`, `D5`, `D9`, and `D10`, plus `PFM4` and `PFM7`, require Core dependency, relation records, edition pins, blocked reverse dependency, and refresh. | Adapt reusable-core discipline; reject software feature-model semantics as the default DPF ontology. |
+| Pattern-language validation needs worked cases and near misses, not only section presence. | Riehle, Harutyunyan, Barcomb, `Pattern Discovery and Validation Using Scientific Research Methods`, arXiv:2107.06065, 2021 current validation-practice source; Iba, `Pattern Languages as Media for the Creative Society`, arXiv:1308.1178, lineage for pattern-language use. | Coordinate `D8`, `Archetypal Grounding`, and anti-patterns require heterogeneous probes and transfer checks. | Adopt validation pressure; route detailed pattern-body quality to `E.21`. |
+| Architecture descriptions and publication carriers do not equal the architecture or package adequacy. | `ISO/IEC/IEEE 42010:2022`, current architecture-description standard ref. | Coordinates `D5` and `D9`, publication-carrier anti-pattern, and map-hoarding near miss separate publication carriers from package structures. | Adopt description-boundary discipline; adapt through `C.33`, `C.34`, `E.11`, and `E.17`. |
+| Quality measures can become targets and make the object worse. | Goodhart, Campbell, management-accounting surrogation, specification-gaming, and reward-hacking lines already carried through `E.2.DA`, `E.13`, `E.21`, `E.22`, and `E.23`. | `Solution`, `Conformance Checklist`, and anti-patterns forbid all-`5`, source-count, map-count, or review-proof targeting. | Adopt proxy-risk discipline; values rise only through package-use improvement. |
+
+### E.4.DPF.DA:12 - Relations
+
+- **Builds on:** `A.19.ECS` for evaluation characteristic-space construction.
+- **Specializes by object:** `E.2.DA` supplies the adjacent form for complete multi-coordinate adequacy evaluation, but this pattern changes the evaluated object from FPF-level object to DPF package edition.
+- **Coordinates with:** `E.4`, `E.4.DPF`, `E.4.PFAD`, and `E.4.PFR` for framework family, authoring spine, architecture decisions, relation records, edition dependencies, and package architecture.
+- **Coordinates with:** `G.2` and `G.11` for source packs, source currentness, and refresh.
+- **Coordinates with:** `E.21`, `E.19`, `E.22`, and `E.23` for individual pattern quality, admission review, evaluation framing, and repeated improvement.
+- **Coordinates with:** `E.11`, `E.17`, `F.18`, `C.33`, `C.34`, and `C.35` for first entry, publication, naming, preservation, correspondence, and produced-carrier admission.
+- **Exits to:** `E.2.DA` when a DPF package change claims FPF-level Pillar adequacy or proposes Core amendment effects.
+
+### E.4.DPF.DA:End
 
 ## E.4.PFR - Pattern-Framework Relation and Edition Discipline
 
@@ -64392,7 +65235,7 @@ The pattern keeps the work practical by using existing FPF owners instead of inv
 
 ### E.4.PFR:1 - Problem frame
 
-Use this pattern when an FPF framework needs to record how patterns, framework editions, publication units, source packs, decisions, generated carriers, and quality records relate without collapsing every relation into dependency, method order, inheritance, or cross-reference.
+Use this pattern when an FPF framework needs to record how patterns, framework editions, publication carriers, access carriers, source packs, decisions, generated carriers, and quality records relate without collapsing every relation into dependency, method order, inheritance, runtime/API relation, or cross-reference.
 
 Primary `EntityOfConcern`: relation and edition records for an FPF-grounded pattern framework. The first useful output is one or more relation records with a relation function, direct governing pattern, dependency or edition effect when present, blocked stronger reading, and return condition.
 
@@ -64400,7 +65243,7 @@ Use this pattern for relation, dependency, compatibility, deprecation, supersess
 
 ### E.4.PFR:2 - Problem
 
-Pattern frameworks need many relation functions. One pattern may specialize another. A local framework may depend on a domain framework edition. A local monolith may publish a selected pattern set. A generated graph may suggest relation candidates. A quality result may evaluate a pattern version. These relations have different meanings and different owners.
+Pattern frameworks need many relation functions. One pattern may specialize another. A local framework may depend on a domain framework edition. An all-in-one publication carrier may publish a selected pattern set. A skill pack or MCP-backed service may expose access to that set. A generated graph may suggest relation candidates. A quality result may evaluate a pattern version. These relations have different meanings and different owners.
 
 If they are all recorded as "related patterns" or "dependencies", maintainers cannot tell which relation can be used for what purpose, which stronger reading is blocked, what breaks when an edition changes, or which owner receives repair.
 
@@ -64463,23 +65306,24 @@ Use relation functions by what they do:
 | Governing-pattern relation | Says which pattern owns a claim, relation, value, boundary, or publication form. | Direct governing pattern |
 | Specialization | Narrows a parent pattern's EntityOfConcern, use, or publication form with inherited and changed obligations. | Parent pattern and `E.8` |
 | Architecture decision link | Connects a decision relation to selected framework structures and consequences. | `E.4.PFAD`, `C.32.PAD` |
-| Publication relation | Exposes selected content through monolith, readme, preface, card, view, or table of contents. | `E.11`, `E.17` |
+| Publication relation | Exposes selected content through all-in-one carrier, readme, preface, card, view, or table of contents. | `E.11`, `E.17` |
+| Access relation | Exposes selected framework content or pattern-use routes through a skill pack, MCP-backed access service, retrieval route, or assistant integration with edition, bounded use, and blocked runtime/build overread. | `E.11`, `E.17`, with `C.35`, `A.15`, `A.10`, `B.3`, `E.9`, or `G.11` when generated output, work/tool action, evidence, assurance, decision, or currentness claims are live. |
 | Framework edition dependency | Declares reliance on a more stable framework edition with compatibility and refresh conditions. | `E.5.3`, `G.11` |
 | Preservation relation | Claims that one carrier, edition, profile, or projection preserves selected structure for a licensed use. | `C.34`, with `C.33` when loss is local to one carrier |
 | Produced-carrier admission | Allows generated, searched, mined, or transformed carriers to seed framework work under declared conditions. | `C.35` |
-| Quality framing, evaluation, or improvement | Frames the evaluation question, evaluates one pattern or framework slice, or records repeated improvement. | `E.22` for framing, `E.21` for evaluation, `E.23` for improvement |
+| Quality framing, evaluation, or improvement | Frames the evaluation question, evaluates FPF-level adequacy, one DPF package, or one pattern, or records repeated improvement. | `E.22` for framing, `E.2.DA` for whole-FPF adequacy, `E.4.DPF.DA` for DPF package adequacy, `E.21` for individual pattern quality, `E.23` for improvement |
 | Selected-set publication | Publishes a selected set with scope and selection conditions. | `G.5` |
 | Source or decision reuse | Uses a source line, SoTA pack, `DRR`, accepted decision, or evidence/source claim by value for a bounded relation use. | `G.2` for source packs and SoTA, `E.9` for accepted DRR or decision rationale, `A.10` when an evidence or currentness claim is made |
 
-Apply the edition rule: domain and local frameworks depend toward more stable editions. A local practice framework may depend on a domain principle framework and FPF Core. A domain principle framework may depend on FPF Core. FPF Core does not depend on domain or local frameworks.
+Apply the edition rule: domain and local frameworks depend toward more stable editions. A local practice framework may depend on a domain principle framework and FPF Core. A domain principle framework may depend on FPF Core. FPF itself as a First Principles Framework edition is handled through `E.4.FPF`; FPF Core does not depend on domain or local frameworks except through a deliberate Core amendment.
 
 Use compatibility practice narrowly: state compatibility boundary, dependency impact, deprecation, supersession, and refresh conditions. Do not import software build or performed-work semantics into pattern relations.
 
-Use `FrameworkPackageManifest@Context` only when authors need one package-like index for a domain principle framework or local practice framework. The manifest lists the selected pattern set publication, relation records, dependency pins, edition status, deprecation or supersession refs, source-pack pins, quality evidence, refresh plan, and first-entry carrier. It does not create imports, APIs, runtime dependencies, build semantics, module calls, or authority over pattern-use relations. If the selected pattern set itself is being published, use `G.5`; if currentness is being planned, use `G.11`; if the manifest is used as architecture evidence, use `C.33` or `C.34` for captured and lost structure.
+Use `FrameworkPackageManifest@Context` only when authors need one package-like index for a domain principle framework or local practice framework. For the form of FPF itself, use `E.4.FPF` and its `FPFFormMap`; do not force FPF into the DPF/local manifest shape. The manifest lists the selected pattern set publication, access carriers, relation records, dependency pins, edition status, deprecation or supersession refs, source-pack pins, quality evidence, refresh plan, and first-entry carrier. Listing a skill package, MCP endpoint, API route, or assistant integration records a framework access route only; it does not create imports, APIs, runtime dependencies, build semantics, module calls, tool permission, or authority over pattern-use relations. If the selected pattern set itself is being published, use `G.5`; if currentness is being planned, use `G.11`; if the manifest is used as architecture evidence, use `C.33` or `C.34` for captured and lost structure.
 
 ### E.4.PFR:5 - Archetypal Grounding
 
-Tell: A hydroponic-cucumber framework edition depends on an FPF Core edition. It has a publication relation to its local monolith, a source relation to greenhouse-control source packs, a specialization relation where one pattern narrows an FPF authoring pattern for crop-domain use, and quality relations for evaluated pattern drafts.
+Tell: A hydroponic-cucumber framework edition depends on an FPF Core edition. It has a publication relation to its all-in-one publication carrier, an access relation to a grower-assistant skill pack or MCP-backed advisory route when those are built, a source relation to greenhouse-control source packs, a specialization relation where one pattern narrows an FPF authoring pattern for crop-domain use, and quality relations for evaluated pattern drafts.
 
 Show: A local Codex process framework depends on FPF Core and on selected architecture patterns. Its baton-handoff pattern may coordinate with `E.11.PUR`, but that relation is not an instruction to perform that method. The relation record states the governed use and the direct pattern owner.
 
@@ -64530,7 +65374,7 @@ The second drift is software-package analogy overreach. Compatibility and deprec
 | CC-PFR.3 Dependency separated | Framework edition dependency is separated from specialization, publication, pattern-use recommendation, and preservation. |
 | CC-PFR.4 E.5.3 respected | Dependency direction points toward stable framework editions and Core does not depend on domain or local frameworks. |
 | CC-PFR.5 Compatibility boundary present | Edition dependencies that carry compatibility claims name boundary, deprecation, supersession, and refresh conditions. |
-| CC-PFR.6 Carrier relation routed | Publication, preservation, and produced-carrier claims use `E.11`, `E.17`, `C.33`, `C.34`, or `C.35` as appropriate. |
+| CC-PFR.6 Carrier relation routed | Publication, access, preservation, and produced-carrier claims use `E.11`, `E.17`, `C.33`, `C.34`, `C.35`, `A.15`, or `G.11` as appropriate. |
 | CC-PFR.7 Source and decision reuse routed | Source-line, SoTA-pack, DRR, accepted-decision, evidence, and currentness reuse claims route to `G.2`, `E.9`, or `A.10` instead of relation-label prose. |
 
 ### E.4.PFR:8 - Common Anti-Patterns and How to Avoid Them
@@ -64541,6 +65385,7 @@ The second drift is software-package analogy overreach. Compatibility and deprec
 | Dependency as specialization | A framework edition dependency is read as child-pattern inheritance. | Use `FrameworkEditionDependencyRecord@Context` and state any specialization separately. |
 | Compatibility by version label | A new edition number is assumed to settle impact. | Add compatibility boundary, deprecation, supersession, and refresh conditions. |
 | Generated graph as relation authority | A produced graph decides relation meaning. | Use `C.35` for admission, then record relation functions through PFR. |
+| Callable route as dependency | A skill, MCP endpoint, API route, or assistant integration is read as framework edition dependency, runtime import, or method order. | Record an `Access relation` with bounded use and blocked stronger reading; route tool/work behavior, generated outputs, and currentness claims to their owners. |
 | Source prose as relation authority | A paragraph says a source or DRR "supports" a pattern but does not state bounded use, owner, or return condition. | Record `Source or decision reuse` with `G.2`, `E.9`, or `A.10` as owner and a source-return condition. |
 
 ### E.4.PFR:9 - Consequences
@@ -64568,11 +65413,12 @@ The pattern adopts the useful part of package and versioning practice, but only 
 
 - **Builds on:** `E.5.3` for directed dependency and family-order discipline.
 - **Coordinates with:** `E.4` for family membership and selected structure architecture.
+- **Coordinates with:** `E.4.FPF` when relation and edition records concern FPF itself as a first-principles framework edition or one of its publication/access carriers.
 - **Coordinates with:** `E.4.PFAD` when a relation or dependency is selected by an architecture decision.
 - **Coordinates with:** `E.11.PUR` for pattern-use recommendation and sequencing.
 - **Coordinates with:** `E.11`, `E.17`, and `G.5` for publication and selected-set exposure.
 - **Coordinates with:** `F.18` for relation and framework names.
-- **Coordinates with:** `G.11` for refresh, `E.22` for quality-evaluation framing, `E.21` for quality evaluation, and `E.23` for repeated improvement.
+- **Coordinates with:** `G.11` for refresh, `E.22` for quality-evaluation framing, `E.2.DA` for whole-FPF adequacy evaluation, `E.4.DPF.DA` for DPF package adequacy evaluation, `E.21` for individual pattern-quality evaluation, and `E.23` for repeated improvement.
 - **Coordinates with:** `C.33`, `C.34`, and `C.35` for carrier loss, preservation, and produced-carrier admission.
 
 ### E.4.PFR:End
@@ -66568,7 +67414,7 @@ The cheapest place to repair missing FPF decisions is the `DRR`, before pattern 
 
 ### E.10:0 - Use this when
 
-**What goes wrong if missed.** Precision repair turns into taste or synonym replacement. A broad head such as `support`, `surface`, `route`, `mapping`, `kind`, `basis`, `force`, `load`, `bearing`, `object`, or `record` is replaced by another broad head, while the relation, source-use relation, admissible use, or direct governing FPF pattern application remains unrecovered.
+**What goes wrong if missed.** Precision repair turns into taste or synonym replacement. A broad head such as `support`, `surface`, `carrier`, `route`, `mapping`, `kind`, `basis`, `force`, `load`, `bearing`, `object`, or `record` is replaced by another broad head, while the relation, source-use relation, admissible use, or direct governing FPF pattern application remains unrecovered.
 
 **What this buys.** `E.10` gives one cheap trigger scan before heavier repair. Ordinary wording stays ordinary, local lexical mistakes close locally, and FPF-governed wording uses the smallest pattern that can recover the governed object, relation, claim, admissible use, and remaining reader use. The result is precise enough to compose with FPF without replacing one umbrella word with another or turning every phrase into a new pattern, card, or review artifact.
 
@@ -66634,7 +67480,7 @@ Classification is not closure. A conforming result must end in one of these by-v
 | Relation-like wording or relation-bearing use | Apply `A.6.P` or a retained A.6 relation specialization. | Named relation kind, slots and qualifiers, admissible relation use, blocked overread, and remaining reader use. |
 | Relation, signature, interface, role, assignment, enactment, slot, field, parameter, argument, endpoint, port, API, protocol, connector, capability, affordance, method, function, concern, interest, or role-holder wording whose current governed object or claim kind is hidden | Apply `A.6.RSIR` only when the direct governing pattern is not already clear. If the current object is already recovered, use the direct pattern instead: `A.6.P`, `A.6.5`, `A.6.0`, `A.2`, `A.2.1`, `A.15`, `A.6.M`, `A.6.F`, `A.6.A`, method and work patterns, publication and episteme patterns, evidence patterns, status patterns, gate patterns, or another governing pattern named by value. | Recovered project concern, current EntityOfConcern or claim kind, selected direct governing pattern, slot-discipline need, retained source-label use, blocked overread, and stop before minting generic `U.Interface`, a standalone role-slot ontology, `U.Concern`, `U.Interest`, or episteme-role ontology. |
 
-| Source-expression, publication, publication form, face, `PublicationUnit`, FPF-governed use, or `reading`, `read`, or `quality-read` wording whose entity or construction is not yet recovered | Apply `C.2.P` first. If the recovered entity or construction is evaluation for improvement, then use the evaluation pattern governing that evaluation claim, such as `E.22`, `E.21`, or `E.9.DA`. | Source-local meaning, publication relation set, publication-form relation when that relation is being made, EntityOfConcern, project-side FPF kind, use disposition, evaluation claim or bundle named by value when that evaluation claim is being made, adjacent overread blocked, and remaining reader use. |
+| Source-expression, publication, publication form, face, carrier, rendering, `PublicationUnit`, framework publication/access carrier, FPF-governed use, or `reading`, `read`, or `quality-read` wording whose entity or construction is not yet recovered | Apply `C.2.P` first. If the recovered construction is only publication/access exposure, use `E.17`, `E.17.AUD`, or `E.4.*` as applicable; if it is evidence, source-currentness, generated-output admission, work/reliance, or architecture/structure use, use `A.10`/`G.11`, `C.35`, `A.15.4`, or `C.30.P`/`C.33`/`C.34` after `C.2.P` recovers the carrier relation set. If the recovered entity or construction is evaluation for improvement, use the evaluation pattern governing that evaluation claim, such as `E.22`, `E.21`, or `E.9.DA`. | Source-local meaning, publication and carrier relation set, publication-form relation when that relation is being made, EntityOfConcern, project-side FPF kind, use disposition, downstream owner named by value when the carrier is evidence, currentness, generation, framework publication/access, work/reliance, architecture/structure, or evaluation, adjacent overread blocked, and remaining reader use. |
 | Ontic, ontic candidate, concept cluster, semantic area, ontological neighborhood, slot relation, schema, data structure, record, card, table, or publication-form wording whose EntityOfConcern and publication boundary are hidden | Apply `E.24.CD` when repeated material may require an ontic candidate decision; apply `E.24.PUB` when the confusion is among ontic, ontic-description episteme, publication form, view, record, card, table, schema, or data-structure expression. Use `E.24` or the direct governing pattern when the ontic or subject pattern is already recovered. | Candidate ontic cluster, EntityOfConcern, slot relation or slot-position, subject pattern, ontic-description episteme, publication form or source relation, admissible use, blocked publication-form overread, and remaining reader use. |
 | Admissibility-like, external-rule-looking, authority-looking, readiness-looking, validity-looking, pass-looking, fail-looking, or conformance-looking wording whose bearer, claim kind, source relation, value frame, bounded use, or governing pattern is hidden | Use the direct governing pattern when recoverable: evidence, assurance, gate, constraint validity, work, work plan, publication use, temporal use, source restoration, external-rule claim, pattern-quality result, state-like value, or another claim-specific pattern. If the word is only the trigger, restore by `E.10.ARCH` and the claim-specific pattern; do not mint a generic admissibility object. | Bearer, claim kind, value frame or decision class, source relation when that relation is being made, bounded admissible use, non-admissible overread, reopen or stop condition, and governing pattern; otherwise quote-only, reduced-use, or blocked-use. |
 | Method, algorithm, program, solver, proof, recipe, workflow, process, procedure, access-path, query-plan, control-strategy, method algebra, method graph, selector calculus, or programming-paradigm wording whose slot or method-side relation is hidden | Recover the slot or method relation structure before rewriting: `A.3.1 U.Method`, `MethodRelationStructure@BoundedContext` when method composition or method-family relation is current, `A.3.2 U.MethodDescription`, `A.6.0` formal-substrate declaration, `C.29` mathematical-lens use, `A.6.1` with `E.20` mechanism claim, `A.15.2 U.WorkPlan`, `A.15.1 U.Work`, `G.5` method-family registry or selector outcome, `A.10` evidence relation, quote-only source wording, or another direct governing pattern. | Pre-repair and post-repair kind or relation position, current ontic slot, relation position, use relation, or claim kind, admissible use, blocked overread, and remaining reader use. Do not replace one umbrella with `method`, `mechanism`, `algorithm`, `workflow`, or `method algebra` by taste. |
@@ -66827,7 +67673,7 @@ Split `target` into EntityOfConcern, target `U.Episteme`, review target, governi
 
 Generic `object` and `target` are not final recovered kinds. Keep them only when the sentence is explicitly declaring a variable slot, such as `ObjectKindUnderImprovement`, `ObjectVersionUnderImprovement`, `ObjectVersionUnderQualityEvaluation`, `review target`, or one named relation endpoint whose endpoint kind is supplied by value nearby. When the kind named by value is known, write the kind named by value: FPF pattern version, `DRR`, FPF corpus slice, publication form, `PublicationUnit`, file carrier, system carrier, declared transformation result, candidate proposal, evidence or provenance relation, gate decision, work plan, method description, object-under-improvement evaluation, or another named FPF kind.
 
-Do not recover an FPF pattern, publication form, `PublicationUnit`, pattern body, or view as a `carrier`. Use `carrier` only for the system, medium, file, rendering, or transport object that bears or renders a publication or symbol. If the text means the FPF pattern publication form, write `FPF pattern publication form`; if it means the file or rendered medium, write file carrier, system carrier, rendering, or another carrier kind named by value.
+Do not recover an FPF pattern, publication form, `PublicationUnit`, pattern body, or view as a `carrier`. In C.2.1+ the Tech kind is `U.PresentationCarrier`; ordinary carrier wording names a publication-side relation to the system, medium, file, rendering, front-end, or transport object that bears or renders a publication or symbol. If the text means the FPF pattern publication form, write `FPF pattern publication form`; if it means the file, rendered, front-end, or transport side, write file carrier, rendering, front-end relation, transport carrier, or another carrier relation named by value.
 
 Common repair examples:
 
@@ -67474,7 +68320,7 @@ The retained clauses below apply only within that selected problem and only inso
 > **Rule V‑0 (Strata).** Every lexical item in a conformant text belongs to exactly one **stratum**:
 
 1. **Kernel** — admitted `U.*` names, core relation kinds, invariants (e.g., `U.Holon`, `U.Role`, `U.Method`, `U.Work`, `U.PromiseContent`).
-2. **Extension patterns** — CAL, LOG, and CHR exports (e.g., **Sys‑CAL**, **KD‑CAL**, **C.9 Agency Characteristic Profile**) that **extend** but do not override Kernel.
+2. **Extension patterns** — CAL, LOG, and CHR exports (e.g., **Sys‑CAL**, **KD‑CAL**, **Agency‑CHR**) that **extend** but do not override Kernel.
 3. **Context** — a **`U.BoundedContext`** with its **Glossary, Invariants, Roles**, and **Bridges** (local Context of meaning).
 4. **Instance** — concrete identifiers (holders, role assignments, works, carriers).
 
@@ -67504,13 +68350,13 @@ The retained clauses below apply only within that selected problem and only inso
 * **Extension:** Apply the same morphology to non-method EntitiesOfConcern where appropriate: `TransformationFlowStructureDescription`, `TransformationFlowStructureSpec`, `SystemDescription`, and `SystemSpec`.
 * **Do:** `SamplingMethod` - `SamplingMethodDescription` - `SamplingMethodSpec`.
 * **Don’t:** `SamplingAlgorithm` (when it is just prose), `SamplingProcessSpec` (head not signalling kind).
-**Onto3 — Roles, RoleAssignments, and episteme-symbol carriers (holonic)**  *(ref. A.2, A.2.1, F.4, and F.5)*
-* **Rule:** A work-facing role value may use a Tech label ending in **`…Role`** and is described through **F.4 Role Description**, e.g., `SafetyOfficerRole`, `ReviewerRole`. Role-characteristic spaces, role-state relations, and role relation structures are separate governed values; they are not hidden inside the role name. The concrete assignment relation is a **`U.RoleAssignment`** with explicit `holderRef`, `roleRef`, `boundedContextRef`, and optional `windowRef`; do not use a compact role-assignment display string as the normative model. **Carrier** is **reserved for a system that carries or makes available a symbol of episteme** (`U.Episteme`, `Tradition`, `Lineage`, `Profile`, repertoire) **independent of any concrete role assignment**, e.g., `LeanTraditionCarrier`, `CalibrationLineageCarrier`. Avoid **`Artefact`** as a head in the kernel: it is ambiguous between an episteme-symbol carrier, a system made by a transformer, or an episteme abstracted from its carrier.
+**Onto3 — Roles, RoleAssignments, and carrier-relation separation (holonic)**  *(ref. A.2, A.2.1, F.4, F.5, C.2.1+, C.2.P, E.17, A.10, and C.35)*
+* **Rule:** A work-facing role value may use a Tech label ending in **`…Role`** and is described through **F.4 Role Description**, e.g., `SafetyOfficerRole`, `ReviewerRole`. Role-characteristic spaces, role-state relations, and role relation structures are separate governed values; they are not hidden inside the role name. The concrete assignment relation is a **`U.RoleAssignment`** with explicit `holderRef`, `roleRef`, `boundedContextRef`, and optional `windowRef`; do not use a compact role-assignment display string as the normative model. **Carrier** is not a free holon/system kind. In Tech use, recover the governed carrier relation: `U.PresentationCarrier` or `PresentationCarrierSlot` when C.2.1+ publication/presentation discipline is current; file, transport, rendering, front-end, or access-carrier relation under `E.17`; evidence or source-currentness carrier under `A.10`/`G.11`; generated or produced carrier under `C.35`; or a named episteme-symbol carrier relation only when a tradition, lineage, profile, repertoire, or other episteme is made available independently of any role assignment. Avoid **`Artefact`** as a head in the kernel: it is ambiguous between a carrier relation, a system made by a transformer, or an episteme abstracted from its carrier.
 * **Register note:** Job titles (`Reviewer`, `Owner`, `Lead`) belong in the **Plain** register and MUST twin-map to explicit Tech `…Role` tokens.
-* **Why:** This resolves inconsistent “role carrier” and “role-assigned holon/system” usage: use **`U.RoleAssignment`** for the contextual assignment of a holon/system to a `…Role`; keep **“Carrier”** for the system that carries or makes available a symbol of episteme.
-* **Rewrite note.** `…CarrierRole` used for a role-assigned holon/system **MUST be rewritten** to an explicit `U.RoleAssignment(holderRef=..., roleRef=...Role, boundedContextRef=..., windowRef?=...)`. Use SCR-LEX to enforce the rewrite.
-* **Do:** `ReviewerRole` (or `AssessorRole`), `U.RoleAssignment(holderRef=TeamAlpha, roleRef=ReviewerRole, boundedContextRef=JournalIssue42Context)`; `LeanTraditionCarrier (U.Holon)`, independent of any particular role assignment.
-**Don’t:** `Reviewer` (as a U-kind), `ReviewerCarrier` (to mean a role-assigned holon/system), `SystemReviewer` (role collapsed into a system kind).
+* **Why:** This resolves inconsistent “role carrier”, “role-assigned holon/system”, and generic carrier-kind usage: use **`U.RoleAssignment`** for the contextual assignment of a holon/system to a `…Role`; use `U.PresentationCarrier` or another direct owner only for the recovered carrier relation.
+* **Rewrite note.** `…CarrierRole` used for a role-assigned holon/system **MUST be rewritten** to an explicit `U.RoleAssignment(holderRef=..., roleRef=...Role, boundedContextRef=..., windowRef?=...)`. Any `…Carrier` KernelToken must name the direct owner and relation it uses, or be rewritten through `C.2.P`/`E.10.D2`. Use SCR-LEX to enforce the rewrite.
+* **Do:** `ReviewerRole` (or `AssessorRole`), `U.RoleAssignment(holderRef=TeamAlpha, roleRef=ReviewerRole, boundedContextRef=JournalIssue42Context)`; `LeanTraditionCarrier` only when declared as an episteme-symbol carrier relation over a holon independent of any particular role assignment.
+**Don’t:** `Reviewer` (as a U-kind), `ReviewerCarrier` (to mean a role-assigned holon/system), `SystemReviewer` (role collapsed into a system kind), or `Carrier` as an unstated system kind.
 **Onto4 — Domain only as a catalog mark**  *(ref. E.10.D1 D.CTX; publish stitching on UTS)*
 * **Rule:** `Domain` is **not a kernel kind** and carries **no semantics, inheritance, or reasoning rights**. It is a **catalog mark** that groups several `U.BoundedContext` entries.
 * **Required stitching (see D.CTX and UTS).** Any use of `Domain` **MUST** present: 1. the enumerated list of `ContextId` in **D.CTX**, and 2. the corresponding **UTS strings** (F.17) with twin labels.
@@ -67550,10 +68396,10 @@ The retained clauses below apply only within that selected problem and only inso
 **Checklist before minting a KernelToken**
 * Head noun signals kind (Onto1).
 * EntityOfConcern and Description-episteme boundary and specification-use morphology correct (Onto2).
-* If role-related: **Role, RoleAssignment, and episteme-symbol carrier** separation observed; holonic scope explicit (Onto3).
+* If role-related or carrier-related: **Role, RoleAssignment, and carrier-relation** separation observed; holonic scope explicit and direct carrier owner named (Onto3).
 * Any Domain mention stitched to D.CTX and UTS; **no norms on Domain** (Onto4, Onto6).
 * Object‑of‑talk declared (Onto5).
-* SCR-LEX rewrites checked for current role-assignment and episteme-symbol carrier separation (Onto6).
+* SCR-LEX rewrites checked for current role-assignment and carrier-relation separation (Onto6).
 > **Note on registers.** Keep figurative or business-casual terms in the **Plain** register only, with strict **twin-label** links to the Tech token under current `E.10`. In the **Tech** register, speak in KL-CAL: **episteme-about-epistemes** (Tradition, Lineage, Profile), not in catalogue-admin idioms.
 
 * **Onto‑Deon — Deontic lexicon guard (Core register)**
@@ -67932,7 +68778,7 @@ Example: using a `KernelToken` in a Context constraint may require a Bridge or a
 
 **Notes.**
 1) Scope‑sensitive guards **must** declare the **Γ_time** window selector used for admission checks.
-2) Proper names of patterns and components that already include “Agent” or “Agency” (e.g., *C.9 Agency Characteristic Profile*, *Agent‑Tools‑CAL*) are permitted as **titled terms**; avoid re‑introducing “agent” as a free‑standing noun in new prose.
+2) Proper names of patterns and components that already include “Agent” or “Agency” (e.g., *Agency‑CHR*, *Agent‑Tools‑CAL*) are permitted as **titled terms**; avoid re‑introducing “agent” as a free‑standing noun in new prose.
 
 #### E.10:8.9 - LEX-CHR-STRICT — Reserve *Characteristic* for CSLC-measurable aspects
 
@@ -69248,7 +70094,7 @@ If any condition is absent, use `...Description` and state the live criteria inf
 
 #### E.10.D2:4.1.4 - Publication, carrier, and work boundary
 
-`U.Carrier` encodes an episteme. A publication face, publication form, or publication unit makes an episteme available. A rendering, UI rendering, or front-end view displays it. A work occurrence uses it or acts under it. None of those relations changes the EntityOfConcern or upgrades a Description episteme to specification use by itself.
+`U.PresentationCarrier` or another explicitly named carrier relation bears, encodes, transports, or renders an episteme publication; it is publication-side in C.2.1+ rather than a semantic part of `U.Episteme`. A publication face, publication form, or publication unit makes an episteme available. A rendering, UI rendering, or front-end view displays it. A work occurrence uses it or acts under it. None of those relations changes the EntityOfConcern or upgrades a Description episteme to specification use by itself.
 
 ### E.10.D2:5 - Naming discipline
 
@@ -69340,7 +70186,7 @@ The main bias is entity-description collapse: readers let a description, publica
 | **Entity-description collapse** | "The method is the document"; "the architecture is the diagram"; "the role contains the checklist". | Name the EntityOfConcern, then name the Description episteme or publication relation separately. |
 | **Spec by name** | Any detailed write-up is called `...Spec`. | Use `...Description` unless specification-use admission conditions are present. |
 | **Publication as authority** | A card, dashboard, schema, generated view, or file is treated as permission, evidence, gate, assurance, decision, or work. | Apply the neighboring pattern that governs the exact claim being made; keep the publication relation separate. |
-| **Carrier identity** | The file path or repository entry is treated as the episteme or EntityOfConcern. | Say the carrier encodes or renders the episteme. |
+| **Carrier identity** | The file path or repository entry is treated as the episteme or EntityOfConcern. | Say the `U.PresentationCarrier` or carrier relation bears, encodes, transports, or renders the publication, and keep the episteme and EntityOfConcern separate. |
 | **Context erasure** | A context-local Description episteme is read as a global definition. | Restore `BoundedContextRef` and `ViewpointRef`, or use F.9, A.6.3, or A.6.4 for cross-context relations. |
 | **Status-state leakage** | Evidence, requirement, approval, or standard status becomes a role-state value. | Keep statuses over epistemes distinct from role-state relations and runtime state attestations. |
 | **Episteme-role shortcut** | "The standard plays the compliance role"; "the evidence has the approval role"; "the source authorizes work". | Recover the typed relation: standard-use, evidence-use, status-use, source-use, assurance-use, gate-use, publication-use, or work-relevance relation. Use `U.RoleAssignment` only for work-facing holder-role claims. |
@@ -69439,7 +70285,7 @@ Use these repairs when live FPF prose violates this pattern:
 1. Replace old `DescribedEntity*`, `EntityOfInterest`, `EoI`, and `EoIClass` wording with `EntityOfConcern`, `EntityOfConcernRef`, `EntityOfConcernClass`, or the local FPF kind named by value. Retain old spellings only as source-side trigger wording.
 2. Replace peer-layer I-D-S wording with EntityOfConcern, Description episteme, and specification-use admission wording.
 3. Replace "contains role characteristic space, role-state relation, or checklist" with "is characterized through the Description episteme by role characteristic space, role-state relation, or checklist".
-4. Replace carrier identity with "carrier encodes" or "publication exposes" wording.
+4. Replace carrier identity with "`U.PresentationCarrier` or carrier relation bears or renders" and "publication exposes" wording.
 5. Replace generic "object under description" talk with the EntityOfConcern named by value and its `DescriptionContext`.
 6. Replace `...Spec` names that lack specification-use admission with `...Description`.
 

@@ -127,4 +127,4 @@ The bridge implements open-ended parsimony: FPF can talk with many domains witho
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L36109–L36201
+> **Source:** `FPF-Spec.md` lines L36445–L36537

@@ -209,4 +209,4 @@ The split between `A.19.ECS` and `E.8.ECSPF` preserves the FPF distinction betwe
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L65753–L65931
+> **Source:** `FPF-Spec.md` lines L66599–L66777

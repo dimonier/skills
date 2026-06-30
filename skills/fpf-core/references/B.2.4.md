@@ -252,4 +252,4 @@ B.2.4 exists to keep that mixed evidence disciplined. It does not rename all of 
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L33344–L33566
+> **Source:** `FPF-Spec.md` lines L33680–L33902

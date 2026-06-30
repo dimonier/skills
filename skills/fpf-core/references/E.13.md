@@ -220,4 +220,4 @@ The pattern is intentionally small. Goodhart-style failure is not repaired by an
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L70124–L70317
+> **Source:** `FPF-Spec.md` lines L70970–L71163

@@ -291,4 +291,4 @@ B.2.P follows the E.10.ARCH algorithm: recover ontology first, then choose wordi
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L32600–L32856
+> **Source:** `FPF-Spec.md` lines L32936–L33192

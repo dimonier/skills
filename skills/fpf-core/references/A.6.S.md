@@ -484,4 +484,4 @@ Grounding pointers in the current FPF draft (for alignment while integrating):
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L18141–L18578
+> **Source:** `FPF-Spec.md` lines L18477–L18914

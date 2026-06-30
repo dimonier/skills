@@ -313,4 +313,4 @@ When computing **Γ\_epist^compile(E\_synth, Ctx, T)**:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L31283–L31568
+> **Source:** `FPF-Spec.md` lines L31619–L31904

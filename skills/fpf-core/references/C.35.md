@@ -244,4 +244,4 @@ C.35 rejects the popular shortcut that a generated output, Pareto point, or clus
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L61816–L62005
+> **Source:** `FPF-Spec.md` lines L62165–L62354

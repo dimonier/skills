@@ -733,4 +733,4 @@ The gain is practical: a team can compare available source epistemes or source p
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L73388–L74103
+> **Source:** `FPF-Spec.md` lines L74234–L74949

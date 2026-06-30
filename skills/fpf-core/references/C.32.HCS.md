@@ -233,4 +233,4 @@ C.32.HCS closes when the practitioner can name a holon-family starter pack, star
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L59234–L59429
+> **Source:** `FPF-Spec.md` lines L59572–L59767

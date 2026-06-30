@@ -187,4 +187,4 @@ This keeps AT **useful** without risking a “second G” or back‑door quality
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L40999–L41160
+> **Source:** `FPF-Spec.md` lines L41337–L41498

@@ -408,4 +408,4 @@ The mature-pattern parity coordinate is deliberately strict because recent short
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L77424–L77793
+> **Source:** `FPF-Spec.md` lines L78270–L78639

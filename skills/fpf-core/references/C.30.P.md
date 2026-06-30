@@ -302,4 +302,4 @@ This row belongs in this pattern because it blocks diagram-as-architecture, grap
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L55535–L55781
+> **Source:** `FPF-Spec.md` lines L55873–L56119

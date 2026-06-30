@@ -225,4 +225,4 @@ Add three follow-up checks:
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L35742–L35933
+> **Source:** `FPF-Spec.md` lines L36078–L36269

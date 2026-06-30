@@ -355,4 +355,4 @@ Related claims stay with their governing patterns: `C.30.STRAT` for stratificati
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L57290–L57629
+> **Source:** `FPF-Spec.md` lines L57628–L57967

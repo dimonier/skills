@@ -87,4 +87,4 @@ Pattern E.1 governs **E.2 Eleven Pillars** and the Guard‑Rail set **A.5–A.8*
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L63192–L63251
+> **Source:** `FPF-Spec.md` lines L63541–L63600

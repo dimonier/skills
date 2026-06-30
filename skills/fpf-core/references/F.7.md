@@ -303,4 +303,4 @@ Part C patterns for didactic alignment pages; Part B trust calculus (B.3) may co
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L81847–L82118
+> **Source:** `FPF-Spec.md` lines L82693–L82964

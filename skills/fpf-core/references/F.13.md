@@ -322,4 +322,4 @@ All Part C patterns when editions shift; all examples and tutorials when teachin
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L84178–L84474
+> **Source:** `FPF-Spec.md` lines L85024–L85320

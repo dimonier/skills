@@ -621,4 +621,4 @@ Agent-loop diagrams often contain both kinds. A monitor/retry/escalate loop over
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L75086–L75662
+> **Source:** `FPF-Spec.md` lines L75932–L76508

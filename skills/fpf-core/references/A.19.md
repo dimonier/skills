@@ -483,4 +483,4 @@ Currentness is therefore inherited through that chain. Reopen A.19 when any gove
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L24417–L24858
+> **Source:** `FPF-Spec.md` lines L24753–L25194

@@ -720,4 +720,4 @@ Architecture discovery boundary: when a generated or discovered structure-bearin
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L89159–L89835
+> **Source:** `FPF-Spec.md` lines L90005–L90681

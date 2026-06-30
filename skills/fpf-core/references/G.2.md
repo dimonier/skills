@@ -551,4 +551,4 @@ This pattern aligns its *method options* (via Extensions and authoring practice)
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L87746–L88246
+> **Source:** `FPF-Spec.md` lines L88592–L89092

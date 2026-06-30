@@ -273,4 +273,4 @@ Refresh before relying on a WorkPlan for cross-context coordination, budget rese
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L21773–L22019
+> **Source:** `FPF-Spec.md` lines L22109–L22355

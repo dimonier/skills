@@ -39,4 +39,4 @@ The table is not a checklist for every project. It shows the kind of quality FPF
 
 ---
 
-> **Source:** `FPF-Spec.md` lines L804–L828
+> **Source:** `FPF-Spec.md` lines L809–L833
