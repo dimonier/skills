@@ -17,7 +17,7 @@ description: |
 
 `U.Role` = mask; `U.RoleAssignment` = `System#Role:Context`. Roles NEVER in parts lists. Holarchies = substantive holons only.
 
-Γ aggregation: weakest-link. `F_eff = min(F_i)`, `R_eff = max(0, min(R_i) − Φ(CL_min))`. All 5 Quintet invariants checked per Γ block.
+Γ aggregation: weakest-link. `F_eff = min(F_i)`, `R_eff = max(0, min(R_i) − Φ(CL_min))`. All 5 Quintet invariants checked when `[aggregation]` present.
 
 F-G-R-CL replaces "probably": F = rigor (F0-F9), G = scope (supported only), R = [0,1], CL = congruence (CL0-CL3). Φ(CL): lower CL → larger penalty.
 
@@ -25,7 +25,7 @@ Evidence: `verifiedBy` (formal), `validatedBy` (empirical). SCR: `scr://<domain>
 
 ADI: ≥3 hypotheses in Abduction. ≥1 prediction per hypothesis. ≥2 tested in Induction (✓/✗). Never 1 hypothesis. Never delete falsified.
 
-5 strict distinctions: Role≠Function, MethodDesc≠Method≠Work, System≠Episteme, Episteme≠Carrier, Collective≠Set. Scan every output before emitting.
+Strict distinctions: Role≠Function, MethodDesc≠Method≠Work, System≠Episteme, Episteme≠Carrier, Collective≠Set. Scan every output before emitting.
 
 ---
 
@@ -42,127 +42,77 @@ ADI: ≥3 hypotheses in Abduction. ≥1 prediction per hypothesis. ≥2 tested i
 
 Rules: Default F0. Upgrade only per table. Any downstream consumer in chain needs F4-F5 → entire chain renders F4-F5. Consumer unknown → F3 hybrid. Teaching → F0-F2.
 
+Template: always `Episteme(id, context)`. No choice needed. Section names come from source structure.
+
 ---
 
 ## OUTPUT TEMPLATES
 
-Pick one. Fill all slots. Do not invent new templates.
+One template for all sources.
 
-**Diag(issue)**
+**Episteme(id, context)**
 ```
-Diag(<issue-id>):
-  RootCause: <cause> [confidence: high/medium/low]
-  Trigger: <chain with →>
-  Path: <execution path>
-  Fix:
-    - <action> [confidence: high/medium/low]
-  Evidence:
-    verifiedBy: [<proof-id>, src: <scr-ref>]
-    validatedBy: [<test-id>, src: <scr-ref>]
-    valid_until: <ISO-date | null>
-    ED: <number>
-  Reasoning:
-    Abduction: H₁…H₅
-    Deduction: H₁ → …
-    Induction: test(H₁) → result
-```
+Episteme(id, context: U.BoundedContext):
+ section:
+  claim-value [confidence: high/medium/low] [src: scr-ref]
+  claim-value:
+   sub-value
 
-**ADR(topic)**
-```
-ADR(<topic>):
-  Decision: <decision>
-  Context: <U.BoundedContext>
-  Rationale:
-    Γ_team: <argument>
-    Γ_sys: <argument>
-    Γ_failure: <argument>
-  Tradeoffs:
-    +<cost>: <description>
-    +<overhead>: <description>
-  Assurance:
-    F: <Fk>
-    G: <scope>
-    R: <[0,1]>
-    CL: <CLk>
-  Evidence:
-    verifiedBy: [<proof-ids>]
-    validatedBy: [<test-ids>]
-```
-
-**Review(target)**
-```
-Review(<target-id>):
-  Issue: <name>
-  Current: <state with →>
-  Problem: <description>
-  Fix: <fix>
-  Rationale: <justification>
-  Severity: critical/high/medium/low
-  Evidence: [src: <id>]
-```
-
-**Status(project)**
-```
-Status(<project>):
-  Progress: <N>%
-  Done: [<items>]
-  InProgress: <item> (ETA: <date>)
-  Blocked: <item>
-    Issue: <description>
-    RootCause: <cause>
-    Fix: <status>
-  Overall: on-track/at-risk/off-track, ETA: <date>
-  Work:
-    - W₁: <desc> @ <time>, performedBy: <System#Role:Ctx>
-```
-
-**Assurance(Holon, Claim | Context, Scope)**
-```
-Assurance(<Holon>, Claim: <C> | Context: <K>, Scope: <S>):
-  F_eff = min(F₁, F₂, …) = <value>
-  G_eff = SpanUnion({G_i}) = <coverage>
-  R_raw = min(R_i) = <value>
-  R_eff = max(0, R_raw − Φ(CL_min)) = <value>
-  CL_min = <CLk> (<edge description>)
-  Cutset: <bottleneck path>
-  SCR: [<carrier-ids>]
-  ED: <value> (valid_until: <date>)
-```
-
-**Γ_sys(Name) / Γ_epist(Name) / … — system composition**
-```
-Γ_<flavor>(<Name>):
-  parts: [<holon₁>, <holon₂>, …]
-  graph: <acyclic; dependencies>
-  aggregation:
-    F_eff = min(F_i)
-    R_raw = min(R_i) along <cutset>
-    R_eff = max(0, R_raw − Φ(CL_min))
-    G_eff = SpanUnion({G_i}) constrained by support
+ [aggregation]:           # fpfMetadata — only when claims compose
+  F_eff = min(F_i)
+  R_raw = min(R_i) along cutset
+  R_eff = max(0, R_raw − Φ(CL_min))
+  G_eff = SpanUnion({G_i})
   invariants:
-    IDEM: ✓/✗
-    COMM: ✓/✗ (<reason if ✗>)
-    LOC: ✓/✗
-    WLNK: <enforced/cutset>
-    MONO: <holds/conditional>
-  SCR: [<carrier-ids>]
-  emergence: none | MHT: <description>
+   IDEM: ✓/✗  COMM: ✓/✗  LOC: ✓/✗  WLNK: enforced/cutset  MONO: holds/conditional
+
+ [assurance]:             # fpfMetadata — only when trust assessment needed
+  F_eff = value
+  G_eff = coverage
+  R_eff = max(0, min(R_i) − Φ(CL_min))
+  CL_min = CLk (edge description)
+  Cutset: bottleneck path
+
+ [reasoning]:             # fpfMetadata — only when diagnostic/ADR reasoning
+  Abduction:
+   H₁: hypothesis
+   ...  (≥3, recommend 5)
+  Deduction:
+   H₁ → prediction
+   ...
+  Induction:
+   test(H₁): method → result ✓/✗
+   test(H₂): method → result ✓/✗  (≥2 tested)
+   src: scr-ref
+
+ [evidence]:              # fpfMetadata — only when source has evidence
+  verifiedBy: [proof-ids | pending]
+  validatedBy: [test-ids | pending]
+  valid_until: ISO-date | null
+  ED: number
 ```
 
-**ReflexiveSplit(System)**
-```
-ReflexiveSplit(<System>):
-  Regulator: <Sub₁>#TransformerRole:<InternalCtx>
-  Regulated: <Sub₂>
-  Boundary: <U.Boundary description>
-  Interaction: <U.Interaction description>
-  Method: <U.Method>
-  MethodDescription: <U.MethodDescription> [src: scr://…]
-  Work: <U.Work> @ <time>, resources: <Γ_work>
-  Evidence:
-    externalObserver: <System#ObserverRole:Ctx>
-    verifiedBy: [<proof-ids>]
-```
+**Rules:**
+- Section names: free-form, source-derived. Dotted-notation for hierarchy.
+- Claims: indented values. No `claim:` prefix. Deeper indent = sub-claim.
+- `[confidence]` only when source expresses uncertainty.
+- `[src]` only when source has explicit reference.
+- `[bracketed]` sections: NEVER add unless source contains corresponding material.
+- `[aggregation]`: all-or-nothing. If present → all 5 invariants + fields present.
+- `[reasoning]`: ≥3 hypotheses, ≥2 tested. Never 1 hypothesis. Never delete falsified.
+- `[evidence]`: SCR format: `scr://domain/id`. ED formula. valid_until null = perpetual.
+- Reconstruction: claims → prose. `[bracketed]` → omitted.
+
+**Patterns (illustrative, not templates):**
+| Source type | Typical sections | Typical bracketed |
+|---|---|---|
+| Diagnostic | RootCause, Trigger, Path, Fix | [reasoning] + [evidence] |
+| ADR | Decision, Context, Rationale, Tradeoffs | [assurance] + [evidence] |
+| Review | Issue, Current, Problem, Fix | usually none |
+| Status | Progress, Done, InProgress, Blocked | usually none |
+| Composition | parts | [aggregation] |
+| Trust claim | claim | [assurance] |
+| Explanation/body | source-derived | none |
 
 ---
 
@@ -170,10 +120,11 @@ ReflexiveSplit(<System>):
 
 Block structure:
 ```
-<Type>(<target>):
-  <Slot>: <value>
-  <NestedSlot>:
-    <SubSlot>: <value>
+Episteme(id, context):
+ section:
+  claim-value [markers]
+  claim-value:
+   sub-value
 ```
 
 **Markers**
@@ -215,49 +166,33 @@ Block structure:
 
 ---
 
-## FPF BLOCK STRUCTURE
-
-When emitting a Γ block, separate:
-
-| Source claims | Computed metadata |
-|---|---|
-| `parts` entries | `graph` |
-| Factual slot values | `aggregation` (F_eff, R_raw, R_eff, G_eff) |
-| | `invariants` (IDEM, COMM, LOC, WLNK, MONO) |
-| | `emergence` |
-| | `Assurance(...)` block |
-
 ---
 
 ## RECONSTRUCTION CONSTRAINTS
 
 When reconstructing prose from an FPF block:
 
-**Take ONLY source claims.** Omit all computed metadata.
+**Take ONLY source claims.** Omit all `[bracketed]` content.
 
 **NEVER include in reconstructed prose:**
 
-Metadata values:
-- F_eff, R_eff, R_raw, G_eff values
-- Quintet invariants (IDEM, COMM, LOC, WLNK, MONO)
-- Emergence descriptions (MHT, etc.)
-- Assurance blocks
-- Aggregation formulas
-- Graph dependency descriptions
-- Cutset names
-- SCR references (computed or source — SCR is FPF-internal tracking)
-- Evidence block content (valid_until, ED, verifiedBy, validatedBy)
+`[bracketed]` section content:
+- `[aggregation]` values: F_eff, R_eff, R_raw, G_eff, Quintet invariants
+- `[assurance]` blocks: F, G, R, CL values, Cutset description
+- `[reasoning]` blocks: hypotheses, deduction chains, induction results
+- `[evidence]` blocks: valid_until, ED, verifiedBy, validatedBy anchors
+- Any content inside `[bracketed]` sections
 
-FPF terminology — translate to domain language:
-- `U.*` prefixes (U.MethodDescription, U.Work, U.Method) → plain words ("description", "work", "method")
-- `Tᴰ` / `Tᴿ` markers → omit or use ordinary equivalents ("design", "execution")
-- `[confidence: high/medium/low]` → omit; use ordinary qualifiers if needed ("likely", "confirmed")
+FPF markers and notation — omit or translate to plain language:
+- `[confidence: high/medium/low]` → omit; use ordinary qualifiers ("likely", "confirmed")
 - `[src: scr://...]` → omit entirely
-- `[pending]` → omit; do NOT render as "unverified", "pending evidence" etc.
-- `ComponentOf`, `ConstituentOf`, etc. → "part of", "belongs to", or restructure
-- `Γ_epist`, `Γ_sys`, operator names → never appear
+- `[pending]` → omit
+- `U.*` prefixes → plain words
+- `Tᴰ` / `Tᴿ` → omit or use ordinary equivalents ("design", "execution")
+- `Γ_epist`, `Γ_sys` → never appear
+- `ComponentOf`, `ConstituentOf` → "part of", "belongs to", or restructure
 
-**Emit clean prose.** No service markers, no brackets, no reference tokens, no FPF vocabulary. Prose must be indistinguishable in form from fresh original source text.
+**Emit clean prose.** No brackets, no reference tokens, no FPF vocabulary. Prose must be indistinguishable in form from fresh original source text.
 
 ---
 
@@ -279,33 +214,38 @@ F0 (250 tokens):
 
 F4-F5 (80 tokens, 68% savings):
 ```
-Diag(AuthService crashes):
-  RootCause: JWTVerify executes after RateLimit [confidence: high]
-  Trigger: unauth reqs → RL exhaustion → legit lockout → cascade fail
-  Path: RateLimit → JWTVerify → null user → NPE → crash
-  Fix:
-    - reorder: JWTVerify → RateLimit [confidence: high]
-    - add null-check before user.* [confidence: medium]
-  Evidence:
-    verifiedBy: [proof: middleware-order.sc, src: scr://proof/mw-042]
-    validatedBy: [test: auth-load-2025-07, src: scr://test/alt-789]
-    valid_until: 2026-01-01
-    ED: 0
-  Reasoning:
-    Abduction:
-      H₁: middleware order incorrect (JWT after RL)
-      H₂: RL pool exhaustion under unauth flood
-      H₃: missing null-check on user object
-      H₄: race in token refresh under load
-      H₅: config mismatch session timeout vs refresh interval
-    Deduction:
-      H₁ → unauth reqs counted against RL
-      H₁ → RL exhaustion blocks legit users
-      H₂ → cascade: RL full → 429 → retry storm → crash
-    Induction:
-      test(H₁): reorder middleware → crashes stop ✓
-      test(H₄): load test 1000 req/s → no race ✗
-      src: scr://test/repro-2025-07-03
+Episteme(AuthService crashes, context: ProductionOps):
+ RootCause:
+  JWTVerify executes after RateLimit [confidence: high]
+ Trigger:
+  unauth req → RL exhaustion → legit lockout → cascade fail
+ Path:
+  RateLimit → JWTVerify → null user → NPE → crash
+ Fix:
+  reorder: JWTVerify → RateLimit [confidence: high]
+  add null-check before user.* [confidence: medium]
+
+ [reasoning]:
+  Abduction:
+   H₁: middleware order incorrect (JWT after RL)
+   H₂: RL pool exhaustion under unauth flood
+   H₃: missing null-check on user object
+   H₄: race in token refresh under load
+   H₅: config mismatch session timeout vs refresh interval
+  Deduction:
+   H₁ → unauth reqs counted against RL
+   H₁ → RL exhaustion blocks legit users
+   H₂ → cascade: RL full → 429 → retry storm → crash
+  Induction:
+   test(H₁): reorder middleware → crashes stop ✓
+   test(H₄): load test 1000 req/s → no race ✗
+   src: scr://test/repro-2025-07-03
+
+ [evidence]:
+  verifiedBy: [proof: middleware-order.sc, src: scr://proof/mw-042]
+  validatedBy: [test: auth-load-2025-07, src: scr://test/alt-789]
+  valid_until: 2026-01-01
+  ED: 0
 ```
 
 ### ADR
@@ -315,25 +255,31 @@ F0 (300 tokens):
 
 F4-F5 (100 tokens, 67% savings):
 ```
-ADR(PrimaryDB: PostgreSQL):
-  Decision: PostgreSQL v16 as primary OLTP store
-  Context: NewPlatform#DataLayer:StorageCtx
-  Rationale:
-    Γ_team: existing PostgreSQL operational knowledge; no MongoDB/CockroachDB ops experience
-    Γ_sys: PostgreSQL handles projected load with ≥3x headroom
-    Γ_failure: PostgreSQL proven reliability vs MongoDB unknown failure modes for team
-  Tradeoffs:
-    +cost: higher than managed NoSQL; acceptable within budget
-    +overhead: ORM layer required; acceptable for team productivity
-  Assurance:
-    F: F2 (structured plan, not yet deployed)
-    G: OLTP workload; analytical queries out of scope
-    R: 0.85 (team experience strong; load projection not yet validated)
-    CL: CL1 (plausible; pending load test validation)
-  Evidence:
-    validatedBy: [load-projection-model, src: scr://plan/capacity-2025-07]
-    validatedBy: [team-survey, src: scr://hr/skills-matrix-2025]
-    valid_until: 2026-01-01
+Episteme(PrimaryDB, context: DataLayer):
+ Decision:
+  PostgreSQL v16 as primary OLTP store
+ Context:
+  NewPlatform#DataLayer:StorageCtx
+ Rationale:
+  team: existing PostgreSQL operational knowledge; no MongoDB/CockroachDB ops experience
+  system: PostgreSQL handles projected load with ≥3x headroom
+  failure: PostgreSQL proven reliability vs MongoDB unknown failure modes for team
+ Tradeoffs:
+  +cost: higher than managed NoSQL; acceptable within budget
+  +overhead: ORM layer required; acceptable for team productivity
+
+ [assurance]:
+  F_eff = F2 (structured plan, not yet deployed)
+  G_eff = OLTP workload; analytical queries out of scope
+  R_eff = max(0, 0.85 − Φ(CL1))
+  CL_min = CL1 (plausible; pending load test validation)
+  Cutset: load projection validation gap
+
+ [evidence]:
+  validatedBy: [load-projection-model, src: scr://plan/capacity-2025-07]
+  validatedBy: [team-survey, src: scr://hr/skills-matrix-2025]
+  valid_until: 2026-01-01
+  ED: 0
 ```
 
 ### Status
@@ -343,16 +289,21 @@ F0 (140 tokens):
 
 F4-F5 (55 tokens, 61% savings):
 ```
-Status(AuthModule):
-  Progress: 72%
-  Done: [Registration, Login]
-  InProgress: PasswordReset (ETA: 2026-07-08)
-  Blocked: TwoFactorAuth
-    Issue: SMS provider contract pending
-    RootCause: legal review not complete
-    Fix: awaiting signature [pending]
-  Overall: on-track, ETA: 2026-07-15
-    Risk: if SMS contract unsigned by Jul 9 → descope 2FA from release
+Episteme(AuthModule, context: ProjectTracking):
+ Progress: 72%
+ Done:
+  Registration
+  Login
+ InProgress:
+  PasswordReset (ETA: 2026-07-08)
+ Blocked:
+  TwoFactorAuth
+  Issue: SMS provider contract pending
+  RootCause: legal review not complete
+  Fix: awaiting signature [pending]
+ Overall:
+  on-track, ETA: 2026-07-15
+  Risk: if SMS contract unsigned by Jul 9 → descope 2FA from release
 ```
 
 ---
@@ -364,23 +315,17 @@ Answer all. If any answer is NO, repair.
 | # | Check | Must be YES |
 |---|---|---|
 | 1 | Formality from decision table (not default)? | YES |
-| 2 | All required template slots filled? | YES |
-| 3 | Every slot value typed (U.-type, [confidence], [src], or typed sub-slot)? | YES |
-| 4 | All uncertain claims marked [confidence] or [pending]? | YES |
-| 5 | Zero prose sentences as slot values? | YES |
-| 6 | Zero preambles, zero pleasantries? | YES |
-| 7 | All action verbs on System#Role:Context (no Episteme acting)? | YES |
-| 8 | Evidence block has ≥1 verifiedBy / validatedBy / [pending]? | YES |
-| 9 | (Diag/ADR) ADI block has ≥3 hypotheses in Abduction? | YES |
-| 10 | (Diag/ADR) ≥2 hypotheses tested in Induction (✓/✗)? | YES |
-| 11 | (Γ blocks) All 5 Quintet invariants checked (✓/✗)? | YES |
-| 12 | (Γ blocks) Cutset explicitly named (not "min")? | YES |
-| 13 | All slot values in English? (exceptions: proper names, quoted material) | YES |
-| 14 | (Γ block) parts = source claims, rest = computed metadata? | YES |
-| 15 | (Reconstruction) No FPF metadata (R_eff, F_eff, invariants, emergence, Assurance, Evidence) in prose? | YES |
-| 16 | (Reconstruction) No U.* prefixes, Tᴰ/Tᴿ markers, [confidence], [src], [pending] in prose? | YES |
-| 17 | (Reconstruction) No Γ operator names or mereological terms (ComponentOf, etc.) in prose? | YES |
-| 18 | (Reconstruction) Prose clean — no FPF vocabulary, indistinguishable from fresh text? | YES |
+| 2 | At least one section with at least one indented claim? | YES |
+| 3 | `[confidence]` only on claims where source has uncertainty? | YES |
+| 4 | `[src]` only on claims where source has explicit reference? | YES |
+| 5 | Zero preambles, zero pleasantries, zero `claim:` prefix? | YES |
+| 6 | All action verbs on System#Role:Context (no Episteme acting)? | YES |
+| 7 | No fabricated `[bracketed]` sections (check each against source)? | YES |
+| 8 | `[aggregation]` present → all 5 Quintet invariants + aggregation fields present? | YES |
+| 9 | `[reasoning]` present → ≥3 hypotheses, ≥2 tested (✓/✗), falsified visible? | YES |
+| 10 | `[evidence]` present → ≥1 verifiedBy/validatedBy/pending? | YES |
+| 11 | All claim values in English? (exceptions: proper names, quoted material) | YES |
+| 12 | (Reconstruction) No `[bracketed]` content, no U.*/Tᴰ/Tᴿ/markers in prose? | YES |
 
 ---
 
