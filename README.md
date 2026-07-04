@@ -28,6 +28,7 @@ The skills transform the AI into a specialized assistant that follows proven met
 
 - [Frameworks \& Methodologies](#frameworks--methodologies)
   - [First Principles Framework (FPF Core)](#-first-principles-framework-fpf-core)
+  - [FPF Narrative Prose](#-fpf-narrative-prose)
   - [FPF Literacy \& DPF Authoring](#-fpf-literacy--dpf-authoring)
   - [Layered Framework Workspace Architecture](#-layered-framework-workspace-architecture)
 - [Business Analysis \& Requirements Engineering](#business-analysis--requirements-engineering)
@@ -60,6 +61,23 @@ Root framework providing auditable thinking, evidence chains, and systematic pro
 **Reference:** [GitHub Repository of the original First Principles Framework by Anatoly Levenchuk](https://github.com/ailev/FPF)
 
 **Location:** `skills/fpf-core/`
+
+### ⚡ FPF Narrative Prose
+
+Generates compact, unambiguous FPF-structured output at F4-F5 formality level using typed-slot notation. Designed for AI agent consumers and FPF-literate humans where token economy and auditability matter — diagnostics, architecture decisions, code reviews, status reports, trust assessments, system compositions. Replaces verbose prose (~65% token savings, lossless).
+
+**Depends on:** `fpf-core`
+
+**Use when:**
+- Writing diagnostics, ADRs, code reviews, or status reports for AI agent consumers
+- Composing trust/assurance assessments with F-G-R-CL tuples
+- Building Γ (gamma) system/epistemic compositions with Quintet invariants
+- Reconstructing clean prose from FPF blocks (removing all metadata)
+- Any context where token economy AND auditability matter
+
+**Do NOT use for:** casual chat, teaching, non-technical audiences, creative tasks.
+
+**Location:** `skills/fpf-narrative/`
 
 ### 📖 FPF Literacy & DPF Authoring
 

@@ -355,8 +355,3 @@ The chosen Core pattern is therefore narrow. It does not make FPF a narratology,
 - **Boundary:** NAR governs the structure-to-sequence narrative rendering relation. It does not publish the narrative, authorize reliance, prove the source, admit generated output, decide ethics, create a teaching script, or make a domain narrative vocabulary part of FPF Core.
 
 ### A.6.3.NAR:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L12835–L13157

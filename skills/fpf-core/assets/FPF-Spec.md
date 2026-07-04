@@ -46,7 +46,7 @@ The public FPF readme section after the Table of Content gives human-facing firs
 | A.1.1 | **U.BoundedContext Semantic Frame** | Stable | Semantic-frame ontology for local meaning, local vocabulary, invariant set, local role taxonomy, bridge relations, and non-container context boundary. | **Builds on:** A.1, E.10.D1. **Coordinates with:** F.0.1, F.9, F.18, E.24. |
 | A.2 | **Role Taxonomy** | Stable | *Keywords:* role, assignment, holder, context, function vs identity, responsibility, U.RoleAssignment. *Queries:* "How to model responsibilities?", "What is the difference between what a thing *is* and what it *does*?" | **Builds on:** A.1, A.1.1. **Prerequisite for:** A.2.1-A.2.6, A.13, A.15. |
 | A.2.1 | **`U.RoleAssignment`: Contextual Role Assignment** | Stable | *Keywords:* Standard, holder, role, context, RoleEnactmentFact, performedBy, RCS/RSG. *Queries:* "How to formally assign a role in FPF?", "How do I attribute performed work through a role assignment?", "What is the Holder#Role:Context Standard?" | **Refines:** A.2. **Prerequisite for:** A.15. |
-| A.2.2 | **`U.Capability`: System Ability (dispositional property)** | Stable | *Keywords:* ability, skill, performance, action, work scope, measures. *Queries:* "How to separate ability from permission?", "What is a capability in FPF?" | **Builds on:** A.2. **Informs:** A.15, A.2.3. |
+| A.2.2 | **`U.Capability`: System Ability Envelope and Measures** | Stable | *Keywords:* holder-dependent capability instance, ability envelope, measure set, qualification window, currentness, capability-fit condition. *Queries:* "What is a capability in FPF?", "How do I separate capability from capability statements, evidence, dashboards, and fit predicates?" | **Builds on:** A.2, E.24.UK. **Informs:** A.15, A.2.3. |
 | A.2.3 | **`U.PromiseContent` (Promise Content)** | Stable | *Keywords:* promise content, promise content, accessSpec, acceptanceSpec, SLO, SLA, claim scope (G), Work evidence, provider/consumer roles. *Queries:* "What is a promise content in FPF?", "Promise content vs Work vs MethodDescription", "How do access and acceptance differ?", "How is SLO/SLA adjudicated from Work evidence?" | **Builds on:** A.2.2. **Prerequisite for:** F.12. **Used by:** A.2.8, A.6.C, A.6.8. |
 | A.2.4 | **Episteme Evidence-Use and Status-Use Relations** | Stable | *Keywords:* evidence-use, status-use, source-use, episteme, claim, provenance. *Queries:* "How is an episteme used as evidence?", "How do I keep evidence use from becoming a role?", "How do I model status use around an episteme?" | **Builds on:** A.2. **Informs:** A.10, B.3. |
 | A.2.5 | **RoleStateRelation@BoundedContext - Role State Space and Enactable-State Admission** | Stable | *Keywords:* state machine, RSG, role state, enactability, role-state evolution. *Queries:* "How to model the state of a role?", "What is a Role State Graph?" | **Builds on:** A.2.1. **Prerequisite for:** A.15. |
@@ -56,8 +56,8 @@ The public FPF readme section after the Table of Content gives human-facing firs
 | A.2.9 | **`U.SpeechAct` (Communicative Work Object)** | Stable | *Keywords:* speech act, communicative work, approval/authorization/publication/revocation, provenance, act≠utterance≠carrier, judgement context, window/freshness, institutes.*. *Queries:* "How to model approvals/authorizations as Work?", "How to separate act vs utterance vs carrier?", "How to link commitments to instituting acts without commitment-by-publication?" | **Refines:** A.2. **Builds on:** A.2.1, A.2.6, A.7, A.10, A.15.1. **Used by:** A.2.8, A.6.C (utterance/instituting-act hook). |
 | ***Cluster A.II - Transformation Engine*** | | | | |
 | A.3 | **Transformer Constitution (Quartet)** | Stable | *Keywords:* action, causality, change, System-in-Role, MethodDescription, Method, Work. *Queries:* "How does FPF model an action or a change?", "What is the transformer quartet?" | **Builds on:** A.2. **Prerequisite for:** A.3.1, A.3.2, A.15. |
-| A.3.1 | **`U.Method`: The Abstract Way of Doing** | Stable | *Keywords:* recipe, how-to, procedure, abstract process. *Queries:* "What is a Method in FPF?", "Difference between Method and Work." | **Refines:** A.3. **Prerequisite for:** A.15. |
-| A.3.2 | **`U.MethodDescription`: The Recipe for Action** | Stable | *Keywords:* specification, recipe, SOP, code, model, `U.Episteme`. *Queries:* "How to document a method?", "What is a MethodDescription?" | **Refines:** A.3. **Informs:** A.15. |
+| A.3.1 | **`U.Method`: Context-Defined Way of Doing** | Stable | *Keywords:* method, way of doing, submethod, method composition, non-agentive holon, method vs method description vs work. *Queries:* "What is a Method in FPF?", "When is a step a recovered submethod rather than a work part or description node?", "How is Method different from Work?" | **Refines:** A.3. **Prerequisite for:** A.15, B.1.5. |
+| A.3.2 | **`U.MethodDescription`: Description Episteme for a Way of Doing** | Stable | *Keywords:* method description, recipe, SOP, code, model, source, `U.Episteme`, method vs description vs work. *Queries:* "How do I document a method without treating the document as enacted work?", "What is a MethodDescription?" | **Refines:** A.3. **Informs:** A.15, A.15.1. |
 | A.3.3 | **U.Dynamics: State-Space and Transition-Law Episteme** | Stable | *Keywords:* dynamics, state space, transition law, observation relation, prediction, simulation, calibration. *Queries:* "How do I model a reusable law of state change?", "When is a process label a dynamics episteme rather than method, work, or transformation?" | **Builds on:** A.1.1, A.19. **Coordinates with:** A.3.1, A.3.2, A.3.4, A.15.1, A.15.2, A.6.1, C.27, C.27.TA, C.29, A.10, B.3, A.20, A.21. |
 | A.3.4 | **`U.Transformation`: Bounded Change Under Conditions** | Stable | *Keywords:* transformation, bounded change, transformed entity, transformer, input/output conditions, functioning, transformation-flow structure. *Queries:* "What exactly is changing?", "Who or what is the transformer?", "How do method, mechanism, work, dynamics, function, and evidence stay distinct around one change?" | **Builds on:** A.3, A.1.1, A.6.0, A.6.5. **Coordinates with:** A.3.1, A.3.2, A.3.3, A.6.1, A.15.1, A.15.2, E.18, E.18.2, C.27.TA, C.27, C.29, A.6.F, C.30.ASV, A.10, B.3. |
 | A.3.4.P | **Transformation Ontic Precision Restoration** | Stable | Repairs change-situation wording such as transformation, flow, process, workflow, pipeline, dataflow, network, circuit, path, functioning, method, mechanism, work, or evidence by recovering the `U.Transformation` slot relation and current governing pattern before rewriting. | **Builds on:** E.10, E.10.ARCH, A.3.4, E.18, E.18.2, A.6.F, C.2.P.DR, C.29, F.18, F.19. **Coordinates with:** A.3.1, A.3.2, A.6.1, A.15, A.10, B.3, C.30, C.30.ASV, C.27.TA, C.27. |
@@ -101,7 +101,7 @@ The public FPF readme section after the Table of Content gives human-facing firs
 | A.13 | **The Agential Role & Agency Spectrum** | Stable | *Keywords:* agency as role, agency spectrum, contextual role assignment, autonomy grading, substrate-neutral autonomy. *Queries:* "How does FPF model agency without minting a root agent kind?", "How do I grade autonomy on an evidence-backed spectrum?" | **Builds on:** A.2, A.2.1, A.12. **Informs:** C.9 Agency Characteristic Profile, E.16. |
 | A.14 | **Advanced Mereology: Components, Portions, Aspects & Phases** | Stable | *Keywords:* mereology, part-of, ComponentOf, PortionOf, PhaseOf, composition. *Queries:* "How to model different kinds of 'part-of' relationships?" | **Refines:** A.1. **Prerequisite for:** B.1.1. |
 | A.15 | **Role-Method-Work Alignment (Contextual Enactment)** | Stable | *Keywords:* role-method-work distinction, `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, actual `U.Work`, work-entry readiness, contextual enactment, coordinated-work evidence, work admission display, source-restoration boundary. *Queries:* "How do role, method, plan, readiness, and work stay distinct in FPF?", "When can coordinated work evidence a state that no one report carries?", "When is authorization-looking material a source-restoration problem rather than work enactment?", "When does something that looks like permission or prohibition to start work need the governing FPF pattern and project-side record behind it first?" | **Integrates:** A.2, A.4, A.12. **Builds on / coordinates with:** A.6, A.10, B.3, E.17, E.17.EFP, A.20, A.21, and C.26.2. **Prerequisite for:** A.15.1-A.15.5, C.24, E.16. |
-| A.15.1 | **`U.Work`: The Record of Occurrence** | Stable | *Keywords:* execution, event, run, actuals, log, occurrence. *Queries:* "What is a Work record?", "Where are actual resource costs stored?" | **Refines:** A.15. **Used by:** B.1.6, all Part D. |
+| A.15.1 | **`U.Work`: Dated Performed Work Occurrence** | Stable | *Keywords:* work occurrence, performed enactment, actuals, trace, `TemporalPartOf_work`, `EpisodeOf_work`, operational work part, concurrent work part. *Queries:* "What is a Work occurrence?", "How do I distinguish a time slice, episode, operational part, and submethod?", "Where are actual resource costs stored?" | **Refines:** A.15. **Used by:** B.1.6, all Part D. |
 | A.15.2 | **`U.WorkPlan`: The Schedule of Intent** | Stable | *Keywords:* plan, schedule, intent, forecast. *Queries:* "How to model a plan or schedule?", "Difference between a WorkPlan and a MethodDescription." | **Refines:** A.15. **Informs:** `U.Work`. |
 | A.15.3 | **`SlotFillingsPlanItem` — Planned Slot-Fillings Baseline (WorkPlanning PlanItem)** | Stable | *Keywords:* planned baseline, slot-bearing description, planned filler, edition pins, `Γ_time` selector, guard pins, WorkPlanning, P2W seam, variance trail. *Queries:* "What is SlotFillingsPlanItem in FPF?", "How to keep planned slot filling separate from FinalizeLaunchValues?", "How to pin editions and time in WorkPlanning baselines?" | **Builds on:** A.15.2, A.6.5, E.10.D1, E.17, E.18, E.19. **Used by:** A.6.7 (suite spec pins), Part G universalization, suite-specific and kit-specific planned baselines. |
 | A.15.4 | **Work-Relevant Source Restoration** | Stable | *Keywords:* work-relevant source restoration, dashboard display, credential view, generated explanation, copied statement, provenance mark, required project-side FPF kind and reference, relation-governed current use, blocked overread, P2W load and position, approval-looking display. *Queries:* "Which project-side FPF kind and reference is needed before a dashboard or explanation can guide work?", "When is a visible item only source-finding before work support or reliance support?", "How do I keep publication, display, or cue separate from work, readiness, evidence, gate passage, or engineering justification?" | **Builds on:** A.15, E.17, C.2.1. **Coordinates with:** A.10, B.3, A.6, A.2.1, A.2.8, A.2.9, A.15.5, A.20, A.21, and E.17.EFP. |
@@ -138,7 +138,7 @@ The public FPF readme section after the Table of Content gives human-facing firs
 | B.1.2 | **System Aggregation and Holon Delimitation** | Stable | Repairs system aggregation, system delimitation, boundary-crossing relation, and acting-system admission without minting generic boundary, interaction, or system-subtype ontology. | **Builds on:** B.1, A.1, A.12, A.14, C.13. **Coordinates with:** A.3.4, A.15.1, C.30. |
 | B.1.3 | **Γ_epist — Knowledge-Specific Aggregation** | Stable | *Keywords:* knowledge aggregation, epistemic, provenance, trust, KD-CAL. *Queries:* "How to combine epistemes?", "How does trust propagate in FPF?" | **Builds on:** B.1, A.1, C.2. |
 | B.1.4 | **Contextual and Temporal Aggregation** | Stable | Aggregates bounded-context slices, temporal slices, phases, windows, and context-local whole claims without treating context, time, or process wording as generic interaction ontology. | **Builds on:** B.1, A.1.1, A.14, C.27.TA. **Coordinates with:** A.15.1, A.3.4, C.29. |
-| B.1.5 | **Γ_method — Order-Sensitive Method Composition & Work Enactment** | Stable | *Keywords:* method composition, workflow, sequential, concurrent, plan vs run. *Queries:* "How to combine methods or workflows?", "How does FPF model complex procedures?" | **Builds on:** B.1, B.1.4, A.3.1. |
+| B.1.5 | **Gamma_method - Order-Sensitive Method Composition and Work Enactment** | Stable | *Keywords:* method composition, submethod, order-sensitive method, method relation structure, MIC, typed join, capability continuity, work enactment, method/work granularity, assurance hooks. *Queries:* "How do I combine methods?", "When is a step a submethod rather than a work part, plan item, or description node?", "How do MIC, typed joins, Gamma_ctx, Gamma_work, and B.3 assurance hooks stay distinct?" | **Builds on:** B.1, B.1.4, A.3.1. **Coordinates with:** A.15.1, B.1.6, B.3. |
 | B.1.6 | **Work-Resource Aggregation** | Stable | Aggregates dated work-resource use and work occurrence holarchy while keeping method structure, work plans, resource ledgers, evidence, and mathematical notation with direct owners. | **Builds on:** B.1, A.15.1, A.14. **Coordinates with:** A.3.4, A.15.2, C.29, B.2. |
 | B.2 | **Meta-Holon Transition - Whole Reidentification** | Stable | Whole-reidentification pattern for MHT claims: existing whole, candidate result holon kind, trigger profile, changed-content owner, evidence or source relation, and blocked overread. | **Builds on:** A.1, A.14, B.1, C.13. **Coordinates with:** B.2.P, B.2.2, B.2.3, B.2.4, C.16, C.29, C.30.ILC. |
 | B.2.P | **Emergence and MHT Precision Restoration** | Stable | Repairs emergence, synergy, higher-level property, MHT, MET, MFT, metric mirage, and collection words entangled with whole-reidentification by recovering the claim kind first. | **Builds on:** E.10, E.10.ARCH, B.2, A.14, C.13, B.3.5. **Coordinates with:** B.2.2, B.2.3, B.2.4, C.16, A.2.2, A.6.F, A.3.4, C.30.ILC. |
@@ -1338,11 +1338,11 @@ Typical moments:
 - a list, batch, fleet, pool, clientele, community, or supplier base is expected to act, but no acting system has been admitted;
 - architecture or selected-structure claims need the holon whose structure is being selected.
 
-**First useful move.** Name the `U.Entity` under concern. Then decide whether the current claim also admits it as `U.Holon`, and whether a direct governing pattern admits a more specific holon kind such as `U.System`, `U.Episteme`, `U.Work`, `U.BoundedContext`, or `U.Discipline`.
+**First useful move.** Name the `U.Entity` under concern. Then decide whether the current claim also admits it as `U.Holon`, and whether a direct governing pattern admits a more specific holon kind such as `U.System`, `U.Episteme`, `U.Method`, `U.Work`, `U.BoundedContext`, or `U.Discipline`.
 
 **What goes wrong if missed.** A document edits itself, a theory gets ports, a list becomes an organization, a lathe becomes the super-holon of the workpiece it changes, and architecture is discussed without naming the holon whose structure is selected.
 
-**What this buys.** FPF gets one compact part-whole foundation without turning every whole into a physical system: identity starts at `U.Entity`; part-whole treatment starts at `U.Holon`; acting work attaches to `U.System`; claim-bearing knowledge is carried by `U.Episteme`; other admitted holon kinds keep their own governing patterns.
+**What this buys.** FPF gets one compact part-whole foundation without turning every whole into a physical system: identity starts at `U.Entity`; part-whole treatment starts at `U.Holon`; acting work attaches to `U.System`; claim-bearing knowledge is carried by `U.Episteme`; method holonhood is governed by `U.Method`; other admitted holon kinds keep their own governing patterns.
 
 **Not this pattern when.**
 
@@ -1365,7 +1365,7 @@ A.1 separates four questions that are often collapsed:
 - **acting eligibility:** what can be admitted as `U.System`;
 - **claim-bearing knowledge:** what can be admitted as `U.Episteme`.
 
-Other admitted holon kinds are not created by title, slot position, or ordinary-language label. They remain governed by their direct patterns. Current accepted examples include `U.Work` under `A.15.1`, `U.BoundedContext` under `A.1.1`, and `U.Discipline` under `C.20`.
+Other admitted holon kinds are not created by title, slot position, or ordinary-language label. They remain governed by their direct patterns. Current accepted examples include `U.Method` under `A.3.1`, `U.Work` under `A.15.1`, `U.BoundedContext` under `A.1.1`, and `U.Discipline` under `C.20`.
 
 ### A.1:2 - Problem
 
@@ -1398,6 +1398,7 @@ U.Entity
   U.Holon
     U.System
     U.Episteme
+    U.Method           only under A.3.1 and direct method-composition patterns
     U.Work             only under A.15.1
     U.BoundedContext   only under A.1.1
     U.Discipline       only under C.20
@@ -1432,7 +1433,7 @@ HolonSlotRelation@Context:
   holonDelimitationRelationRefs?
   holonBoundaryCrossingRelationRefs?
   containingWholeRefs?
-  admittedHolonKindRef?: U.System | U.Episteme | U.Work | U.BoundedContext | U.Discipline | named C.3 U.Kind admitted by a direct governing pattern
+  admittedHolonKindRef?: U.System | U.Episteme | U.Method | U.Work | U.BoundedContext | U.Discipline | named C.3 U.Kind admitted by a direct governing pattern
 ```
 
 This relation is a selected SlotRelation expression, not a new U-kind and not a record that acts. Under open-world discipline, an omitted slot means "not current or not recovered for this claim", not "absent in the world".
@@ -1445,9 +1446,14 @@ Current accepted holon-kind examples are:
 - `U.Episteme`, governed here only as a non-agentive claim-bearing holon, with full slot discipline in `C.2.1`;
 - `U.Work`, governed by `A.15.1` as a dated 4D occurrence holon;
 - `U.BoundedContext`, governed by `A.1.1` as a semantic-frame holon;
-- `U.Discipline`, governed by `C.20` as a field-level practice-and-knowledge holon.
+- `U.Discipline`, governed by `C.20` as a field-level practice-and-knowledge holon;
+- `U.Method`, governed by `A.3.1` and method-composition patterns such as `B.1.5` as a non-agentive method holon whose submethods compose into a whole method across levels.
 
 No blank "other kind" escape hatch is selected. If a source claims another holon kind, the current FPF use must name the concrete C.3 `U.Kind`, the part-whole relation, the direct governing pattern, and the slot discipline that makes holon treatment admissible before any part-whole, architecture, role, work, evidence, or source-use claim relies on it.
+
+Holon admission is decided by own constructive assembly with meta-holon transition, not by agentivity or wording. A candidate kind can be treated holonically when a bounded context can select the participating objects from the surrounding practice or world, fix their boundaries, assemble them through a current part-whole relation into a whole, and recover a whole-level property, capability, constraint, function, claim-bearing structure, or other characteristic that belongs to the assembled whole rather than to any single part or to a label. The resulting whole must also be eligible to become a part in a larger assembly. Grounding is the agreement discipline for that construction: it fixes the selected objects, boundaries, part relation, assembly operation, MHT evidence, and governing patterns. Relations may arrange, constrain, assign, qualify, or describe parts; those relations do not become parts by that fact.
+
+`U.Role` and `U.Method` are therefore not decided by whether they act. `U.Episteme` already shows that a non-agentive object can be a holon. The ontology decision is: `U.Method` is a non-agentive holon kind, and `U.Role` is not a holon kind. A method can have submethods composing into whole methods with whole-level preconditions, effects, invariants, interfaces, constraints, and assurance hooks; the resulting method can participate in a larger method. A step label or step description is not a method part by label: it must first be recovered as a `U.Method` submethod rather than as a method-description node, order relation, work-plan item, or work occurrence. A role value names what a holder is being in a context; its assignment, state, capability, responsibility, permission, commitment, obligation, method participation, and role relation structure are neighboring objects, relation positions, or descriptions, not role parts.
 
 #### A.1:4.4 - U.System
 
@@ -1475,7 +1481,7 @@ SystemParticipationRelation@Context:
   dynamicsAspectRefs?
 ```
 
-This relation links acting-system participation across role, capability, method, mechanism, work, transformation, functioning, evidence, assurance, temporal, and dynamics concerns. It does not collapse those concerns into one kind. Role assignment remains role discipline; method remains method discipline; performed work remains work discipline; transformation remains `U.Transformation`; functioning and functional element remain their direct owners.
+This relation links acting-system participation across role, capability, method, mechanism, work, transformation, functioning, evidence, assurance, temporal, and dynamics concerns. It does not collapse those concerns into one kind. Role assignment remains role discipline; method remains method discipline; performed work remains work discipline; transformation remains `U.Transformation`; functioning and functional element remain with their direct governing patterns.
 
 #### A.1:4.5 - U.Episteme
 
@@ -1495,7 +1501,7 @@ Use `HolonBoundaryCrossingRelation@Context` when the current claim is about a re
 
 Do not call every boundary an interface. Use interface language only when a governing signature, module, architecture, port, or interface pattern makes interface meaning current.
 
-External holon vocabularies do not admit FPF kinds by label. If a source says `AgentHolon`, `OrganisationHolon`, `DataHolon`, `ProcessHolon`, `Portal`, `Projection`, or a similar semantic-web holon class, recover the FPF claim before using it. Acting-agent and organization claims require `U.System` admission; data, document, and projected-content claims usually require `U.Episteme`, publication, source, evidence, or description owners; process-holon wording requires work, method, work-plan, or transformation owners; portal or traversal wording requires an access, boundary-crossing, policy, or evidence relation. A.1 admits only the holon or system claim when that claim is current.
+External holon vocabularies do not admit FPF kinds by label. If a source says `AgentHolon`, `OrganisationHolon`, `DataHolon`, `ProcessHolon`, `Portal`, `Projection`, or a similar semantic-web holon class, recover the FPF claim before using it. Acting-agent and organization claims require `U.System` admission; data, document, and projected-content claims usually require `U.Episteme`, publication, source, evidence, or description patterns; process-holon wording requires work, method, work-plan, or transformation patterns; portal or traversal wording requires an access, boundary-crossing, policy, or evidence relation. A.1 admits only the holon or system claim when that claim is current.
 
 Do not call a Markov blanket a holon boundary, interface, interface module, physical component, statistical separator, or agency proof until the current claim is recovered. If source wording says `Markov blanket`, first decide whether it names accepted local Markov dynamics, a mathematical or probabilistic lens, a holon delimitation or boundary-crossing relation, a physical interface module or component, a functional element, a boundary description or publication, or an agency-threshold claim. Apply the direct governing pattern. A.1 admits only the holon and delimitation claim when those are current.
 
@@ -1508,10 +1514,10 @@ First recover whether the source claims:
 - membership only, governed by A.14 relation vocabulary;
 - collection-as-whole constructive grounding, governed by C.13 and B.3.5 where assurance grounding is current;
 - whole-level characteristic, governed by C.16;
-- acting collective system, governed by `U.System` admission plus A.15 and role, method, and work owners;
+- acting collective system, governed by `U.System` admission plus A.15 and role, method, and work patterns;
 - whole reidentification, governed by B.2.
 
-An acting collective `U.System` needs boundary, coordination, role assignments, capability or method evidence, and work-facing participation. If those are not current, keep the object as a collection or collection-as-whole claim under direct owners.
+An acting collective `U.System` needs boundary, coordination, role assignments, capability or method evidence, and work-facing participation. If those are not current, keep the object as a collection or collection-as-whole claim under direct governing patterns.
 
 #### A.1:4.8 - Constructional Grounding
 
@@ -1612,7 +1618,7 @@ This pattern intentionally resists:
 | `CC-A1-7` | Collection membership, collection-as-whole, acting collective system, whole-level characteristic, and B.2 whole reidentification are kept distinct. |
 | `CC-A1-8` | Boundary wording recovers `HolonDelimitationRelation@Context` or another direct object; interaction wording recovers `HolonBoundaryCrossingRelation@Context`, `U.Transformation`, source use, publication use, evidence relation, probe relation, control relation, or another direct relation. |
 | `CC-A1-9` | A system changing another holon is not treated as that holon's super-holon unless a separate part-whole relation is admitted. |
-| `CC-A1-10` | A.14, C.13, and B.3.5 remain the direct owners for relation vocabulary, constructive grounding, and Working-Model assurance grounding. |
+| `CC-A1-10` | A.14, C.13, and B.3.5 remain the direct governing patterns for relation vocabulary, constructive grounding, and Working-Model assurance grounding. |
 | `CC-A1-11` | Publication forms and descriptions of holons are kept distinct from the holons they describe. |
 
 ### A.1:8 - Common Anti-Patterns and How to Avoid Them
@@ -1655,7 +1661,7 @@ The constructional stance is conservative: FPF avoids unrestricted composition a
 | Source family | Current lesson for A.1 | FPF decision |
 | --- | --- | --- |
 | Florio and Linnebo 2024 constructional ontology frame | Construction, identity, dependency, and process distinctions discipline when a whole is being constructed rather than merely named. | A.1 admits holon treatment only with bounded context, identity or recognition rule, current part relation, and direct governing pattern. |
-| Core Constructional Ontology and BORO applied ontology lineage | Applied part-whole and identity work needs explicit constructional and refactoring discipline. | A.14, C.13, and B.3.5 remain direct owners for relation vocabulary, constructive grounding, and assurance grounding. |
+| Core Constructional Ontology and BORO applied ontology lineage | Applied part-whole and identity work needs explicit constructional and refactoring discipline. | A.14, C.13, and B.3.5 remain direct governing patterns for relation vocabulary, constructive grounding, and assurance grounding. |
 | Contemporary holonic systems literature | Holon work is often system-facing and useful for coordination, closure, and system-wide outcomes. | `U.System` is retained as acting holon kind, but `U.Holon` is broader than system. |
 | Knowledge-representation, provenance, and publication practice | Claim-bearing objects and their publication forms must be separated from acting systems. | `U.Episteme` is a non-agentive holon; systems in role create, publish, cite, compare, or use epistemes. |
 | Digital-twin and systems-engineering practice | Models and descriptions need boundary-consistent grounding objects. | Architecture and structure patterns name the described holon before treating selected structure, view, or description as current. |
@@ -1961,21 +1967,22 @@ Source use and currentness: domain-driven bounded-context practice is the select
 
 **Plain name.** Work-facing role value.
 
-Use this pattern when a project needs to say what a system, organization, person, team, tool, agent, machine, or other acting holon is being in a bounded context before method, plan, work, evidence, responsibility, or naming claims can be made safely.
+Use this pattern when a project needs to say what an admitted `U.System` holder, such as a system, organization-as-system, person, team, tool, agent, machine, motor, pump, or component, is being in a bounded context before method, plan, work, transformation, functioning, evidence, responsibility, or naming claims can be made safely.
 
 Typical moments:
 
-- a project sentence says "engineer", "reviewer", "operator", "supplier", "model verifier", "agent", "service provider", or another role-like name, and it is unclear what holder, context, and work claim are current;
+- a project sentence says "engineer", "reviewer", "operator", "supplier", "model verifier", "agent", "service provider", "drive motor", "cooling circulator", "load-bearing brace", or another role-like name, and it is unclear what holder, context, and work, transformation, or functioning claim are current;
 - a team treats a role name as if it created capability, commitment, obligation, permission, method, work, or evidence;
 - a standard, report, dataset, model card, publication, requirement, or definition is described as having a "role" in evidence, status, assurance, source use, or publication use;
 - a method, plan, work occurrence, or result is attributed to a role without naming the holder and role assignment under which the work is performed;
-- role names must be kept reusable across contexts without making each context-local role into a new system kind.
+- role names must be kept reusable across contexts without making each context-local role into a new system kind;
+- a role boundary is being decomposed into factors, states, responsibilities, or method participation, and the project must recover the current neighboring object instead of treating role as a holon.
 
-**Primary EntityOfConcern.** The EntityOfConcern is `U.Role`: a context-bound role value in the role `ontologicalNeighborhood`. A role value names what an acting system or acting holon is being for a bounded context. It is not the holder, not the assignment relation, not a capability, not a method, not a work occurrence, not a commitment, not an obligation, not a permission, not a description, and not a slot kind.
+**Primary EntityOfConcern.** The EntityOfConcern is `U.Role`: a context-bound enactment-facing role value in the role `ontologicalNeighborhood`. A role value names what an admitted `U.System` holder is being for a bounded context when method admission, role-state checking, transformation or functioning participation, or work attribution depends on that role. `U.Role` is a root U-kind, but it is not an admitted holon kind: role decompositions resolve to assignment, state, capability, responsibility, permission, commitment, obligation, method, work, or role-relation owners rather than to role parts.
 
 **Primary working reader.** The first reader is an engineer-manager, analyst, or FPF author who must separate role value, holder, role assignment, method, plan, work, evidence, and source-use claims before acting or writing a pattern. The downstream reader is the project participant who needs role language to answer who held what role, in which context, for which claim.
 
-**First useful move.** Name the role value, the bounded context, and whether the current claim is about role identity, a role assignment, role description, role state, role relation structure, capability requirement, method requirement, planned work, performed work, or an episteme used as evidence, source, standard, requirement, definition, explanation, status bearer, or publication.
+**First useful move.** Name the role value, the bounded context, and whether the current claim is about role identity, a role assignment, role description, role state, role relation structure, capability-fit condition, functional or transformation participation, method role-admission condition, planned work, performed work, or an episteme used as evidence, source, standard, requirement, definition, explanation, status bearer, or publication.
 
 **What goes wrong if missed.** Role words become an ontology shortcut. A document becomes a "verifier role"; a capability becomes a role; a role name is treated as evidence that work happened; a method is treated as a role's hidden behavior; a publication is treated as if it acted. FPF then grows a second role ontology for epistemes, status labels, access labels, relation arguments, and source labels.
 
@@ -1986,7 +1993,7 @@ Typical moments:
 - If the current claim is the assignment relation linking holder, role, context, and window, use `A.2.1`.
 - If the current claim is capability, use `A.2.2`.
 - If the current claim is role state, use `A.2.5`.
-- If the current claim is role-requirement substitution, incompatibility, qualification, or bundles, use `A.2.7`.
+- If the current claim is role-admission substitution, incompatibility, qualification, or bundles, use `A.2.7`.
 - If the current claim is method, method description, work plan, or performed work alignment, use `A.15`.
 - If the current claim is an episteme used as evidence, source, standard, definition, requirement, explanation, status bearer, publication, or assurance input, use the direct evidence-use, status-use, source-use, publication-use, requirement-use, definition-use, explanation-use, or assurance pattern. Do not force it through `U.Role`.
 - If the current issue is only a confusing role-like word, first use `A.6.RSIR` to recover the governed object or claim kind.
@@ -1997,7 +2004,7 @@ FPF needs role language because the same holon can be used, treated, expected, o
 
 At the same time, role language is dangerous. Everyday phrases such as "the role of this standard", "the role of this dataset", "the role of this theorem", "the role of this dashboard", or "the role of this interface" can hide several different FPF claims. They may be evidence-use, source-use, publication-use, status-use, requirement-use, explanation-use, interface, signature, capability, method, or work claims. They are not automatically `U.Role` claims.
 
-A.2 therefore keeps `U.Role` real, but narrow. A role is a work-facing context-bound role value. It becomes operational through neighboring relations, especially `U.RoleAssignment` in `A.2.1` and role-method-work alignment in `A.15`. It does not absorb every relation in which a value participates.
+A.2 therefore keeps `U.Role` real, but narrow. A role is a context-bound enactment-facing role value. Enactment-facing does not mean "human job" or "social agent only": a motor can be assigned as a drive motor, a pump can be assigned as a cooling circulator, and a valve can be assigned as a regulator inside a functional or transformation context. A method or method description may name role-admission conditions; performed work cites a `U.RoleAssignment`; transformation and functioning claims may also need the same role value. A role becomes operational through neighboring relations, especially `U.RoleAssignment` in `A.2.1`, role-method-work alignment in `A.15`, transformation participation in `A.3.4`, and functional precision restoration in `A.6.F` when function wording is current. It does not absorb every relation in which a value participates.
 
 ### A.2:2 - Problem
 
@@ -2010,6 +2017,7 @@ Without this pattern:
 5. **Role and evidence collapse.** A document, dataset, standard, proof, or model card is treated as a role holder because it is used as evidence or source material.
 6. **Role and work collapse.** A role label is treated as evidence that work was performed.
 7. **Argument-position drift appears.** "Role" is used for relation argument positions or slot positions, competing with `A.6.5` SlotSpec discipline.
+8. **Role-whole overclaim.** A role is decomposed into factors, responsibilities, states, permissions, obligations, or method participation and then treated as a holon, although `U.Role` is not admitted as a holon kind. The recoverable objects are neighboring relations or values, not role parts.
 
 ### A.2:3 - Forces
 
@@ -2017,15 +2025,16 @@ Without this pattern:
 | --- | --- |
 | Context reuse vs type explosion | One role value can be reused inside a bounded context; making every contextual use a system subtype loses reuse. |
 | Role identity vs assignment relation | `U.Role` must stay a role value, while `U.RoleAssignment` links holder, role, context, and window. |
+| Role boundary vs false role holon | A role decomposition may be useful, but A.2 must route factors, responsibilities, permissions, obligations, role states, capability-fit conditions, and method role-admission conditions to their direct owners instead of treating them as role parts. |
 | Ordinary speech vs FPF kind discipline | "Role of X" is common language, but FPF must recover whether X is a holder, source, evidence, status bearer, method, work, relation argument, or publication. |
-| Work-facing roles vs episteme use | Systems and acting holons perform work; epistemes are used, cited, asserted, published, evaluated, refreshed, or relied on through direct relations. |
-| Minimal kernel vs practical traceability | A small role kernel is useful only if it can still connect to role descriptions, role states, role relation structure, capability requirements, method requirements, work, and evidence about performed work. |
+| Work-facing roles vs episteme use | Systems perform work, including physical and operational work by motors, pumps, devices, organisms, services, teams, and people; epistemes are used, cited, asserted, published, evaluated, refreshed, or relied on through direct relations. |
+| Minimal kernel vs practical traceability | A small role kernel is useful only if it can still connect to role descriptions, role states, role relation structure, capability-fit conditions, method role-admission conditions, work, and evidence about performed work. |
 
 ### A.2:4 - Solution
 
 Use `U.Role` as a context-bound role value, not as a generic contextual classifier.
 
-`U.Role` answers the question: **what is this acting system or acting holon being, in this bounded context, for the current work-facing claim?**
+`U.Role` answers the question: **what is this admitted `U.System` holder being, in this bounded context, for the current method, transformation, functioning, or work claim?**
 
 It does not answer by itself:
 
@@ -2042,27 +2051,31 @@ Those claims belong to neighboring patterns.
 
 #### A.2:4.1 - Core Definitions
 
-**`U.Role`.** A `U.Role` is a context-bound role value: a reusable value that names what an acting system or acting holon is being in a bounded context. It is work-facing because its primary practical use is to govern or explain role assignment, method requirements, work attribution, role-state checks, role naming, and role-related evidence about work.
+**`U.Role`.** A `U.Role` is a context-bound enactment-facing role value: a reusable value that names what an admitted `U.System` holder is being in a bounded context. It is enactment-facing because its primary practical use is to govern or explain role assignment, method role-admission conditions, transformation or functioning participation, work attribution, role-state checks, role naming, and role-related evidence about work.
 
-Plain gloss: a role is a contextual functional mask. The gloss is helpful only if the normative object stays clear: the role value is not the holder and not the work.
+Plain gloss: a role is a contextual functional mask. The gloss is helpful only if the normative object stays clear: the role value is not the holder, not a system part, not the function itself, and not the work.
 
 **`U.RoleAssignment`.** A `U.RoleAssignment` is a typed assignment relation value governed by `A.2.1`. It links a holder, a `U.Role`, a bounded context, and any current assignment window. A.2 names why this relation is needed; A.2.1 governs its SlotSpecs.
 
-**Role holder.** A holder of a `U.RoleAssignment` is a `U.System` or acting holon admitted by the governing work or method pattern as a system-like performer for the bounded context. An episteme is not admitted as holder merely because it is used as evidence, source, standard, requirement, definition, explanation, status bearer, publication, or assurance input.
+**Role holder.** A holder of a `U.RoleAssignment` is an admitted `U.System` selected by the governing work, transformation, functioning, or method pattern as the system-like performer for the bounded context. The word "performer" here includes physical and operational performance by motors, pumps, valves, organisms, teams, services, and devices; it does not imply consciousness, social agency, or responsibility unless a neighboring pattern makes that claim current. An episteme is not admitted as holder merely because it is used as evidence, source, standard, requirement, definition, explanation, status bearer, publication, or assurance input.
 
 **Role description.** A role description is an episteme that describes, constrains, teaches, publishes, or stores a role value or role assignment. The description is not the role value by default.
+
+**Role boundary.** A role boundary is grounded by a bounded context, the holder class or known holders, the assignment or admission use, the method, transformation, functioning, or work claim, and any current role description, role-state relation, role-relation structure, capability-fit condition, method role-admission condition, or evidence about performed work. A proposed decomposition of a role does not supply role holonhood. Recover whether the decomposed objects are role-admission fit relations, factors or qualifications, bundle expressions, separate role values, role-state refinements, capability-fit conditions, responsibility, permission, commitment, or obligation relations, or coupled method/work structures.
+
+Do not infer role parts from slots or relation richness. Systems hold roles. Role assignments, role states, evidence uses, and other relation-bearing structures may have SlotSpecs. Epistemes such as role descriptions may have constituent parts. Those slots and description parts are not parts of the `U.Role` value.
 
 **Role relation-neighborhood.** A role value is surrounded by relations that are not parts of the role:
 
 | Relation family | Governing pattern | What it preserves |
 | --- | --- | --- |
 | Role identity and role description | `A.2`, Part F role-description and naming patterns | The role value and the descriptions that make it recognizable. |
-| Role assignment | `A.2.1`, `A.6.5` | Holder, role value, bounded context, window, and assignment-specific work-role qualifiers. |
-| Capability requirements | `A.2.2` | Ability constraints of a holder; a role name does not create ability. |
+| Role assignment | `A.2.1`, `A.6.5` | Holder, role value, bounded context, window, and assignment-specific work, transformation, or functioning qualifiers. |
+| Capability-fit conditions | `A.2.2` | Ability constraints of a holder under stated conditions; a role name does not create ability. |
 | Role characterization and role state | `A.2`, `A.2.5`, `A.19` when current | Characteristic scales and state predicates used to accept or reject role use. |
-| Role relation structure | `A.2.7` | Context-local role-requirement substitution, incompatibility, qualification, and role bundles. |
-| Method requirements | `A.15`, `A.3.1`, `A.3.2` | Method or method-description requirements and exclusions linked to a role or assignment. |
-| Work attribution | `A.15`, `A.15.1` | Work is performed by the holder under a role assignment. |
+| Role relation structure | `A.2.7` | Context-local role-admission substitution, incompatibility, qualification, and role bundles. |
+| Method role-admission conditions | `A.15`, `A.3.1`, `A.3.2` | Method or method-description preconditions, capability-fit conditions, role-admission conditions, constraints, interface commitments, or exclusions linked to a role or assignment. |
+| Work and transformation attribution | `A.15`, `A.15.1`, `A.3.4`, `A.6.F` when function wording is current | Work or transformation participation is attributed to the holder under a role assignment; the role value itself does not act. |
 | Evidence and status about role claims | `A.10`, `B.3`, `F.10`, `C.2.1`, direct evidence-use and status-use patterns | Epistemes used as evidence or status bearers stay outside `U.RoleAssignment`. |
 
 Do not turn every relation in this neighborhood into a slot of `U.Role`. Use SlotSpec discipline only when the governing pattern declares a slot-bearing relation.
@@ -2085,7 +2098,7 @@ RoleAssignmentCoreSlotSpec:
   AssignmentWindowSlot:
 ```
 
-`HolderSlot` is filled by a `U.System` or acting holon admitted as system-like performer for the current work or method claim.
+`HolderSlot` is filled by an admitted `U.System` selected as system-like performer for the current work, transformation, functioning, or method claim.
 
 `RoleValueSlot` is filled by `U.Role`.
 
@@ -2107,7 +2120,7 @@ The following are not role values merely because source language says "role":
 | "the role of this status badge" | status assertion, status-use relation, gate result, or assurance-use relation. |
 | "the role of this parameter" | SlotKind, ValueKind, RefKind, method parameter, model parameter, or source label according to the governing pattern. |
 | "the role of this interface" | module-interface claim, port, signature, API, protocol, service-access package, publication face, or boundary claim. |
-| "the role of this capability" | capability requirement, holder capability, method requirement, or role description claim. |
+| "the role of this capability" | capability-fit condition, holder capability, method role-admission condition, or role description claim. |
 | "the role of this relation argument" | SlotKind or relation position under `A.6.5`, not `U.Role`. |
 
 If the direct kind is not yet clear, use `A.6.RSIR`.
@@ -2116,13 +2129,13 @@ If the direct kind is not yet clear, use `A.6.RSIR`.
 
 Inside one bounded context, roles may be organized by:
 
-- role-requirement substitution;
+- role-admission substitution;
 - role incompatibility;
 - role bundles;
 - role-state predicates;
 - holder eligibility constraints;
-- capability requirements;
-- method requirements or exclusions;
+- capability-fit conditions;
+- method role-admission conditions or exclusions;
 - naming and description conventions.
 
 `A.2.7` governs role relation structure. It is context-local role architecture in life, not mereology, not class subsumption for systems, not generic concern algebra, not `MethodRelationStructure@BoundedContext`, and not method algebra. Algebraic, graph, matrix, embedding, or neural descriptions are only lenses over selected role relation structure when a project explicitly uses them.
@@ -2131,12 +2144,14 @@ Typical work-facing role families include:
 
 | Role family | Ordinary use | Boundary |
 | --- | --- | --- |
-| `TransformerRole` | A system or acting holon changes, produces, maintains, selects, derives, or controls an EntityOfConcern by work under a method. | The role does not change anything by itself; the holder performs work. |
-| `ObserverRole` | A system or acting holon measures, samples, inspects, monitors, or records. | The measurement record is an episteme; the observing work remains work by the holder. |
-| `VerifierRole` | A system or acting holon checks a claim, result, method, or work product. | The report or proof produced by verification is evidence or publication, not the verifying role holder. |
-| `CoordinatorRole` | A system or acting holon coordinates other role assignments, plans, or work occurrences. | Coordination work is still dated work under method and plan claims. |
+| `TransformerRole` | An admitted `U.System` holder changes, produces, maintains, selects, derives, or controls an EntityOfConcern by work under a method or transformation relation. | The role does not change anything by itself; the holder performs work or participates in the transformation. |
+| `DriveMotorRole` | A motor supplies mechanical drive in a bounded machine, pump, vehicle, or plant context. | The motor is the holder; the role is not a component of the motor and not the motor's capability envelope. |
+| `CoolingCirculatorRole` | A pump circulates coolant in a plant or machine context. | Circulation capability, method, actual work occurrence, and evidence remain neighboring claims. |
+| `ObserverRole` | An admitted `U.System` holder measures, samples, inspects, monitors, or records. | The measurement record is an episteme; the observing work remains work by the holder. |
+| `VerifierRole` | An admitted `U.System` holder checks a claim, result, method, or work product. | The report or proof produced by verification is evidence or publication, not the verifying role holder. |
+| `CoordinatorRole` | An admitted `U.System` holder coordinates other role assignments, plans, or work occurrences. | Coordination work is still dated work under method and plan claims. |
 
-Domains may define roles such as `CoolingCirculatorRole`, `BridgeInspectorRole`, `ClinicalTrialCoordinatorRole`, `ModelCardReviewerRole`, or `ShipyardOperatorRole`. Define them in their bounded context and connect them to role assignment, capability, method, work, and evidence only when those claims are current.
+Domains may define roles such as `DriveMotorRole`, `CoolingCirculatorRole`, `BridgeInspectorRole`, `ClinicalTrialCoordinatorRole`, `ModelCardReviewerRole`, or `ShipyardOperatorRole`. Define them in their bounded context and connect them to role assignment, capability, method, transformation, work, and evidence only when those claims are current.
 
 #### A.2:4.5 - Reduced Use and Reopen Conditions
 
@@ -2148,7 +2163,7 @@ Use the fuller role pattern when a claim based on the role-like word would chang
 - use `A.2.1` when holder, role value, context, window, assignment source, or work-role qualifier is current;
 - use `A.2.2` when ability or capability is current;
 - use `A.2.5` when role-state admission, currentness, or role-state gate is current;
-- use `A.2.7` when role-requirement substitution, incompatibility, qualification, or role bundles are current;
+- use `A.2.7` when role-admission substitution, incompatibility, qualification, or role bundles are current;
 - use `A.15` when method, method description, work plan, or performed work is current;
 - use direct episteme-use patterns when evidence, status, source, publication, requirement, definition, explanation, assurance, or gate use of an episteme is current;
 - use `A.6.5` when the word "role" is only a relation position or SlotKind.
@@ -2175,7 +2190,7 @@ This does not say the pump has the capability to circulate under every condition
 Current FPF expression:
 
 - the RFC publication is an episteme or publication used as source, standard, requirement, or method-description source;
-- the design service, engineer, or team is the system or acting holon holding any work-facing role;
+- the design service, engineer, or team is the admitted `U.System` holding any work-facing role;
 - the design work is performed by that holder under a role assignment;
 - the RFC does not perform the work and does not hold `U.Role`.
 
@@ -2193,45 +2208,48 @@ In a relation signature, "role" may mean an argument position. If the claim is a
 | --- | --- | --- |
 | Semio-bias | The pattern starts talking mainly about descriptions of roles, cards, records, and publications. | Keep `U.Role` as the EntityOfConcern. Descriptions and publications are neighboring epistemes. |
 | Episteme-as-agent drift | A document, proof, standard, dataset, or model card is treated as if it acted. | Use evidence-use, source-use, status-use, publication-use, requirement-use, definition-use, explanation-use, or assurance-use relations. |
-| Slot-role drift | Role is used as a generic slot position. | Use `A.6.5` for SlotKind and relation positions; keep `U.Role` for work-facing role values. |
-| Capability-role drift | A role name is treated as ability. | Use `A.2.2` for capability; role assignment may cite capability requirements but does not create ability. |
+| Slot-role drift | Role is used as a generic slot position. | Use `A.6.5` for SlotKind and relation positions; keep `U.Role` for enactment-facing role values. |
+| Capability-role drift | A role name is treated as ability. | Use `A.2.2` for capability; role assignment may cite capability-fit conditions but does not create ability. |
 | Method-role drift | A role name is treated as the method itself. | Use `A.15`, `A.3.1`, and `A.3.2` for method and method-description claims. |
 
 ### A.2:7 - Working Guidance
 
 1. Start with the source phrase and recover the current project concern.
-2. If the phrase names what an acting system or acting holon is being in a bounded context, recover a `U.Role` value.
+2. If the phrase names what an admitted `U.System` holder is being in a bounded context, recover a `U.Role` value.
 3. If the phrase names the holder-role-context-window relation, recover `U.RoleAssignment` under `A.2.1`.
-4. If the phrase names ability, recover capability under `A.2.2`.
-5. If the phrase names performed work, intended work, or governing method, use `A.15` and its neighboring method and work patterns.
-6. If the phrase names evidence, source, standard, requirement, definition, explanation, publication, status, assurance, or gate use of an episteme, use the direct episteme-use relation pattern.
-7. If the phrase only names a relation position, field, parameter, or argument, use `A.6.5`.
+4. If the claim decomposes a role, do not open role mereology. Use `A.2.7` and neighboring owners to recover role-admission fit, factor or qualification, bundle expression, separate role value, role-state refinement, capability-fit condition, responsibility, permission, commitment, or obligation relation, or coupled method/work structure.
+5. If the phrase names ability, recover capability under `A.2.2`.
+6. If the phrase names performed work, intended work, or governing method, use `A.15` and its neighboring method and work patterns.
+7. If the phrase names evidence, source, standard, requirement, definition, explanation, publication, status, assurance, or gate use of an episteme, use the direct episteme-use relation pattern.
+8. If the phrase only names a relation position, field, parameter, or argument, use `A.6.5`.
 
 ### A.2:8 - Conformance Checklist
 
 | ID | Check |
 | --- | --- |
 | CC-A2.1 | A `U.Role` is a role value, not a system subtype, part, capability, method, work occurrence, commitment, obligation, permission, description, publication, or SlotKind. |
-| CC-A2.2 | A `U.RoleAssignment` holder is a `U.System` or acting holon admitted as system-like performer by the governing work or method pattern. |
+| CC-A2.2 | A `U.RoleAssignment` holder is an admitted `U.System` selected as system-like performer by the governing work, transformation, functioning, or method pattern. |
 | CC-A2.3 | An episteme used as evidence, source, standard, definition, requirement, explanation, status bearer, publication, or assurance input is not a `U.RoleAssignment` holder. |
 | CC-A2.4 | Role claims name or recover the bounded context that gives the role value its local meaning. |
-| CC-A2.5 | Work claims cite the holder under `U.RoleAssignment`; the role value itself does not act. |
-| CC-A2.6 | Capability requirements are governed by `A.2.2`, not hidden inside the role value. |
-| CC-A2.7 | Method and method-description requirements are governed by `A.15`, `A.3.1`, and `A.3.2`, not hidden inside the role value. |
-| CC-A2.8 | Role-requirement substitution, incompatibility, qualification, and bundles are context-local role relation structure under `A.2.7`, not mereology and not system-kind subsumption. |
+| CC-A2.5 | Work, transformation, and functioning claims cite the holder under `U.RoleAssignment` when role attribution is current; the role value itself does not act. |
+| CC-A2.6 | Capability-fit conditions are governed by `A.2.2`, not hidden inside the role value. |
+| CC-A2.7 | Method role-admission conditions, method-description acceptance conditions, preconditions, constraints, and interface commitments are governed by `A.15`, `A.3.1`, and `A.3.2`, not hidden inside the role value. |
+| CC-A2.8 | Role-admission substitution, incompatibility, qualification, and bundles are context-local role relation structure under `A.2.7`, not mereology and not system-kind subsumption. |
 | CC-A2.9 | Relation argument positions and SlotKinds are governed by `A.6.5`; they do not become `U.Role`. |
-| CC-A2.10 | Role descriptions, role cards, registers, and publications describe, cite, or store role values or assignments; they are not the role value by default. |
+| CC-A2.10 | Role decomposition claims are recovered as role-admission fit, factor or qualification, bundle expression, separate role value, role-state refinement, capability-fit condition, responsibility, permission, commitment, or obligation relation, or coupled method/work structure; `U.Role` is not placed in a role `partOf` chain. |
+| CC-A2.11 | Role descriptions, role cards, registers, and publications describe, cite, or store role values or assignments; they are not the role value by default. |
 
 ### A.2:9 - Common Anti-Patterns
 
 | Anti-pattern | Why it fails | Repair |
 | --- | --- | --- |
-| `TransformerSystem` as a system subtype | It fuses system identity with a contextual role. | Use `U.RoleAssignment(holderRef=<system-or-acting-holon>, roleRef=TransformerRole@Context, boundedContextRef=<context>)` when a holder role assignment is current. |
-| "The PDF enforced the rule" | The episteme did not perform work. | Name the system or acting holon that performed enforcement work, and name the PDF's source, requirement, or evidence use separately. |
+| `TransformerSystem` as a system subtype | It fuses system identity with a contextual role. | Use `U.RoleAssignment(holderRef=<system>, roleRef=TransformerRole@Context, boundedContextRef=<context>)` when a holder role assignment is current. |
+| `AssistantReviewerRole partOf ReviewerRole` | It treats a role boundary as role mereology, but no role-part constructive assembly has been recovered. | Use `A.2.7`: decide whether the current object is role-admission fit, factor or qualification, bundle expression, separate role value, role-state refinement, capability-fit condition, responsibility, permission, commitment, or obligation relation, or method/work decomposition. |
+| "The PDF enforced the rule" | The episteme did not perform work. | Name the admitted `U.System` that performed enforcement work, and name the PDF's source, requirement, or evidence use separately. |
 | "The report has EvidenceRole" | It treats evidence use as a role held by an episteme. | Use an evidence-use relation around the report, target claim, grounding holon when current, claim scope, polarity, relevance window, and provenance constraints. |
-| "The role grants capability" | A role name does not create ability. | Name capability under `A.2.2` and link it as a requirement or checked value when current. |
+| "The role grants capability" | A role name does not create ability. | Name capability under `A.2.2` and link it through the current capability-fit or checking relation when current. |
 | "The role contains the method" | A role value is not a method. | Name method and method description through `A.15`, `A.3.1`, and `A.3.2`. |
-| "Argument role equals U.Role" | A relation position is not a work-facing role value. | Use `A.6.5` SlotKind and relation signature discipline. |
+| "Argument role equals U.Role" | A relation position is not an enactment-facing role value. | Use `A.6.5` SlotKind and relation signature discipline. |
 
 ### A.2:10 - Consequences
 
@@ -2253,7 +2271,7 @@ The selected ontology keeps three levels separate:
 2. `U.RoleAssignment`: the typed relation value linking holder, role, context, and window.
 3. Neighboring values: capability, method, method description, work plan, work occurrence, evidence-use relation, status-use relation, source-use relation, publication-use relation, and role description.
 
-This is a compact architecture. It avoids type explosion, but it also avoids the opposite error of making role a generic slot word for anything that participates in anything else. A role is a real role value when an acting system or acting holon is being something in a bounded context. Other participation claims use their own relation patterns.
+This is a compact architecture. It avoids type explosion, but it also avoids the opposite error of making role a generic slot word for anything that participates in anything else. A role is a real role value when an admitted `U.System` holder is being something in a bounded context for work, transformation, functioning, method, or attribution. Other participation claims use their own relation patterns.
 
 ### A.2:12 - SoTA-Echoing
 
@@ -2286,43 +2304,43 @@ This is a compact architecture. It avoids type explosion, but it also avoids the
 
 **Plain name.** Work-role assignment.
 
-Use this pattern when a project must say which system, organization, person, team, service, agent, device, or other acting holon holds which `U.Role` in which bounded context, and when that assignment is current enough to admit, check, plan, or attribute work.
+Use this pattern when a project must say which admitted `U.System` holder, such as a system, organization-as-system, person, team, service, agent, device, motor, pump, or component, holds which enactment-facing `U.Role` in which bounded context, and when that assignment is current enough to satisfy a method role-admission condition, check role state, plan or attribute work, transformation participation, or functioning.
 
 Typical moments:
 
-- a work record says that "Alice reviewed", "Robot-7 inspected", "CI bot deployed", or "the operations team approved" and the role, holder, bounded context, or assignment window is missing;
-- a method or method description names required roles, but the project has not linked those roles to concrete performers;
-- a role state, capability requirement, separation-of-duties rule, or work gate depends on who holds the role now;
+- a work record says that "Alice reviewed", "Robot-7 inspected", "CI bot deployed", "Motor-M1 drove Pump-A", or "the operations team approved" and the role, holder, bounded context, or assignment window is missing;
+- a method or method description names role-admission conditions, but the project has not linked those roles to concrete performers;
+- a role state, capability-fit condition, separation-of-duties rule, or work gate depends on who holds the role now;
 - a source phrase gives an episteme an "evidence role", "standard role", "status role", or "requirement role" and the text must be normalized without making epistemes into work performers;
 - a local notation such as `Holder#Role:Context@Window` is useful, but the notation must not replace the typed relation it abbreviates.
 
-**Primary EntityOfConcern.** The EntityOfConcern is `U.RoleAssignment`: a typed work-facing assignment relation value. It links an admitted acting holder, a `U.Role`, a `U.BoundedContext`, and any assignment-currentness window or assignment source that is current for the claim.
+**Primary EntityOfConcern.** The EntityOfConcern is `U.RoleAssignment`: a typed assignment relation value for enactment-facing roles. It links an admitted system holder, a `U.Role`, a `U.BoundedContext`, and any assignment-currentness window or assignment source that is current for the claim. The holder may be a person, team, organization, service, device, motor, pump, component, organism, or other `U.System`; role holding does not imply human agency or responsibility unless a neighboring pattern makes that stronger claim current.
 
-**Primary working reader.** The first reader is an engineer-manager, analyst, or FPF author who needs work attribution, role admission, role-state checks, method requirements, or responsibility language to remain inspectable across contexts and editions.
+**Primary working reader.** The first reader is an engineer-manager, analyst, or FPF author who needs work attribution, role admission, role-state checks, method role-admission conditions, or responsibility language to remain inspectable across contexts and editions.
 
-**First useful move.** Recover the four core slots of the assignment relation: holder, role value, bounded context, and assignment window when current. Then recover any direct work-role qualifier, role-state admission, capability requirement, method requirement, work-plan relation, or work occurrence through its governing pattern.
+**First useful move.** Recover the four core slots of the assignment relation: holder, role value, bounded context, and assignment window when current. Then recover any direct work-role qualifier, role-state admission, capability-fit condition, method role-admission condition, work-plan relation, or work occurrence through its governing pattern.
 
 **What goes wrong if missed.** Role labels float without holders or contexts. A method appears to have been enacted by a document. A work record names a person but not the role under which the work was admitted. A report or standard is treated as if it held a role because it is used as evidence or requirement source. The corpus then grows one role ontology for work and a second role ontology for epistemes.
 
-**What this buys.** `U.RoleAssignment` gives one narrow relation for work-facing role holding. It keeps role values reusable, work attribution replayable, method requirements checkable, and episteme evidence or status uses outside the role-assignment relation.
+**What this buys.** `U.RoleAssignment` gives one narrow relation for holder-in-role admission. It keeps role values reusable, method role-admission conditions checkable, work attribution replayable, and episteme evidence or status uses outside the role-assignment relation.
 
 **Not this pattern when.**
 
 - If the current claim is the role value itself, role taxonomy, or role relation-neighborhood, use `A.2`.
 - If the current claim is ability or operating envelope, use `A.2.2`.
 - If the current claim is role state, role-state predicate, or enactable-state admission, use `A.2.5`.
-- If the current claim is role-requirement substitution, incompatibility, qualification, or role bundle, use `A.2.7`.
+- If the current claim is role-admission substitution, incompatibility, qualification, or role bundle, use `A.2.7`.
 - If the current claim is method, method description, work plan, performed work, or role-method-work alignment, use `A.15` and the direct A.15 subpattern.
 - If the current claim is evidence, source, standard, requirement, definition, explanation, publication, status, assurance, gate, or decision use of an episteme, use the direct pattern for that relation. Do not make the episteme a `U.RoleAssignment` holder.
 - If "role" means a relation position, use `A.6.5` SlotSpec discipline.
 
 ### A.2.1:1 - Problem Frame
 
-Work-facing roles are useful only after they are connected to concrete holders in a bounded context. "Reviewer", "operator", "deployer", "inspector", "authorizer", and "coordinator" are not enough by themselves. The project needs to know which holder bears the role, in which context, for which window or current claim, and under which neighboring role-state, capability, method, plan, and work relations.
+Work-facing roles are useful only after they are connected to concrete holders in a bounded context. "Reviewer", "operator", "deployer", "inspector", "authorizer", "coordinator", "drive motor", and "cooling circulator" are not enough by themselves. The project needs to know which holder bears the role, in which context, for which window or current claim, and under which neighboring role-state, capability, method, plan, transformation, functioning, and work relations.
 
-The assignment relation must be narrow. It should not absorb capability, method, work, evidence, status, or publication use. A standard used as a requirement source can constrain work, but it does not hold a work-facing role. A report can be used as evidence, but it does not perform the review that produced it. A method description can require `ReviewerRole`, but the method description is not the reviewer.
+The assignment relation must be narrow. It should not absorb capability, method, work, evidence, status, or publication use. A standard used as a requirement source can constrain work, but it does not hold an enactment-facing role. A report can be used as evidence, but it does not perform the review that produced it. A method description can state `ReviewerRole` as a role-admission condition, but the method description is not the reviewer.
 
-A.2.1 therefore defines `U.RoleAssignment` as a typed relation value using `A.6.5` SlotSpec discipline. The relation is work-facing: its holder is a `U.System` or acting holon admitted as system-like performer by the governing work or method pattern. Epistemes stay in evidence-use, status-use, source-use, publication-use, requirement-use, definition-use, explanation-use, assurance-use, gate-use, or decision-use relations.
+A.2.1 therefore defines `U.RoleAssignment` as a typed relation value using `A.6.5` SlotSpec discipline. The relation is enactment-facing: its holder is an admitted `U.System` selected as system-like performer by the governing method, work, transformation, or functioning pattern. "Performer" includes physical and operational performance by machines, components, organisms, services, teams, and people; it does not imply consciousness, intention, legal accountability, or ethical responsibility unless a neighboring pattern makes that stronger claim current. Epistemes stay in evidence-use, status-use, source-use, publication-use, requirement-use, definition-use, explanation-use, assurance-use, gate-use, or decision-use relations.
 
 ### A.2.1:2 - Problem
 
@@ -2345,11 +2363,11 @@ Without this pattern:
 | Open-world use vs heavy forms | Some assignment claims need only holder, role, and context; other claims need window, state assertion, assignment source, capability, or method details. Missing optional-in-use slots must not force dummy values. |
 | Role state vs work occurrence | A role assignment can be current while the holder is not in an enactable role state; work occurrence is still a separate dated occurrence. |
 | Ordinary notation vs ontology | `Holder#Role:Context@Window` is memorable, but it is notation for a typed assignment relation, not the relation's ontology. |
-| Episteme use vs work performance | Epistemes can be used as evidence, standard, requirement, definition, explanation, status bearer, publication, or assurance input; they do not perform work by holding work-facing roles. |
+| Episteme use vs work performance | Epistemes can be used as evidence, standard, requirement, definition, explanation, status bearer, publication, or assurance input; they do not perform work by holding enactment-facing roles. |
 
 ### A.2.1:4 - Solution
 
-Use `U.RoleAssignment` for the typed relation that assigns a work-facing `U.Role` to an admitted acting holder in one bounded context.
+Use `U.RoleAssignment` for the typed relation that assigns an enactment-facing `U.Role` to an admitted system holder in one bounded context.
 
 ```text
 RoleAssignmentCoreSlotSpec:
@@ -2367,7 +2385,7 @@ This is a relation value. A record, registry row, publication, diagram, or file 
 
 | SlotKind | ValueKind | Slot-use disposition | Meaning |
 | --- | --- | --- | --- |
-| `HolderSlot` | `U.System` or acting holon admitted as system-like performer by the governing work or method pattern | identity slot | The holder that bears the role in the bounded context. `U.Episteme` is not admitted here merely because it is used as evidence, source, standard, requirement, explanation, status bearer, publication, or assurance input. |
+| `HolderSlot` | admitted `U.System` selected as system-like performer by the governing work, transformation, functioning, or method pattern | identity slot | The holder that bears the role in the bounded context. `U.Episteme` is not admitted here merely because it is used as evidence, source, standard, requirement, explanation, status bearer, publication, or assurance input. |
 | `RoleValueSlot` | `U.Role` | identity slot | The context-bound role value governed by `A.2`. It is not a SlotKind and not a capability. |
 | `BoundedContextSlot` | `U.BoundedContext` | identity slot | The context that gives the role value its local meaning. |
 | `AssignmentWindowSlot` | assignment-currentness window, role-state window, or temporal-validity value governed by the temporal pattern current in the project | optional-in-use; currentness-required when the claim depends on current assignment validity | Missing window means not recovered or not current for the claim, not that no window exists. |
@@ -2385,7 +2403,7 @@ Invariant RA-S1 (Local role):
   RoleValueSlot content is a U.Role admitted in the BoundedContextSlot content.
 
 Invariant RA-S2 (Holder admission):
-  HolderSlot content is a U.System or an acting holon admitted as system-like performer by the governing work or method pattern.
+  HolderSlot content is an admitted U.System selected as system-like performer by the governing work, transformation, functioning, or method pattern.
 
 Invariant RA-S3 (No role-as-holder):
   HolderSlot content is not U.Role and not U.RoleAssignment.
@@ -2421,7 +2439,7 @@ For example, a quick staffing note may only need holder, role, and context. A sa
 
 `U.RoleAssignment` does not contain a role-state relation or a role-state description. The `U.Role` and its role description may be linked to:
 
-- RoleCharacteristicSpace, the characteristic space used to describe role variants or role requirements in one bounded context;
+- RoleCharacteristicSpace, the characteristic space used to describe role variants or role-admission conditions in one bounded context;
 - Role State Relation, the state-family relation used to decide whether a role assignment is in an enactable state;
 - state assertions or evaluations governed by `A.2.5` and the relevant evidence or evaluation pattern.
 
@@ -2429,7 +2447,7 @@ A work attribution claim may depend on those neighboring values. The assignment 
 
 #### A.2.1:4.5 - Role Assignment and Work
 
-Work is not performed by the role value. Work is performed by the holder under a role assignment.
+Work is not performed by the role value. Work is performed by the holder under a role assignment. For machines and components, this includes physical or operational work such as driving, pumping, regulating, heating, cooling, sensing, stabilizing, or transforming a state under the governing functional or transformation context.
 
 Use the direct relation:
 
@@ -2440,8 +2458,10 @@ Work.performedBy = RoleAssignment
 Then check neighboring claims:
 
 - the work occurrence is governed by `A.15.1`;
+- the bounded transformation is governed by `A.3.4` when the work is claimed as transformation participation;
+- functional wording is restored through `A.6.F` when the role is named by what the holder does functionally;
 - the selected method is governed by `A.3.1`;
-- the method description or required-role declaration is governed by `A.3.2` and `A.15`;
+- the method description or role-admission declaration is governed by `A.3.2` and `A.15`;
 - the work plan is governed by `A.15.2`;
 - role-state admission is governed by `A.2.5`;
 - capability is governed by `A.2.2`.
@@ -2491,6 +2511,7 @@ Use it only as a readable notation for the typed assignment relation.
 Examples:
 
 - `Robot_7#InspectorRole:MaintenanceLine_A@2026-06-15T09:00..2026-06-15T11:00`
+- `Motor_M1#DriveMotorRole:WaterPumpAssembly_A@installed-window`
 - `OpsTeam#IncidentCommanderRole:PlantIncident_2026@open`
 - `CI_Service#DeployerRole:ReleaseTrain_2026@2026-Q2`
 
@@ -2508,28 +2529,39 @@ Robot_7#InspectorRole:MaintenanceLine_A@2026-06-15T09:00..2026-06-15T11:00
 
 The holder is a system. The role value is `InspectorRole`. The bounded context is `MaintenanceLine_A`. The assignment window covers the planned inspection shift.
 
-This does not assert that the robot has the required sensor capability. Capability stays under `A.2.2`. It does not assert that inspection work already occurred. Performed work stays under `A.15.1`. It only gives later method, plan, role-state, and work-attribution claims a typed assignment relation to cite.
+This does not assert that the robot satisfies the sensor capability-fit condition. Capability stays under `A.2.2`. It does not assert that inspection work already occurred. Performed work stays under `A.15.1`. It only gives later method, plan, role-state, and work-attribution claims a typed assignment relation to cite.
 
-#### A.2.1:5.2 - Software Deployment
+#### A.2.1:5.2 - Motor Assigned as Drive Motor
 
-A release train has a deployment method description with a step requiring `DeployerRole`.
+A water-pump assembly assigns a motor to the drive role for an installed window.
+
+```text
+Motor_M1#DriveMotorRole:WaterPumpAssembly_A@installed-window
+Work PumpingRun_2026-07-01 performedBy Motor_M1#DriveMotorRole:WaterPumpAssembly_A
+```
+
+The holder is the motor as a `U.System`. The role value is `DriveMotorRole`. The bounded context is the pump assembly or plant context that gives the role its meaning. The assignment does not say the motor is a part of the role; it says the motor bears that role in this system context. Torque capability, electrical supply, thermal limits, functional port claims, the pump's transformation-flow structure, and the dated pumping run remain neighboring claims under their own patterns.
+
+#### A.2.1:5.3 - Software Deployment
+
+A release train has a deployment method description with a step that states `DeployerRole` as a role-admission condition.
 
 ```text
 CI_Service#DeployerRole:ReleaseTrain_2026@2026-Q2
 Work DeploymentRun_418 performedBy CI_Service#DeployerRole:ReleaseTrain_2026
 ```
 
-The assignment relation admits a candidate performer. The work occurrence still needs the method or method-description relation, the assignment window, and any enactable role-state assertion required by `A.2.5`. A green test suite, ticket approval, or policy rule may justify the assignment or the work gate, but those are neighboring evidence, gate, or policy relations, not hidden role values.
+The assignment relation admits a candidate performer. The work occurrence still needs the method or method-description relation, the assignment window, and any enactable role-state assertion needed under `A.2.5`. A green test suite, ticket approval, or policy rule may justify the assignment or the work gate, but those are neighboring evidence, gate, or policy relations, not hidden role values.
 
-#### A.2.1:5.3 - Review Report and Reviewer
+#### A.2.1:5.4 - Review Report and Reviewer
 
 A human reviewer or review service can hold `ReviewerRole` in a review context. The review report produced by that work is an episteme.
 
 Later, another team may use the report as evidence for a claim. That later relation is evidence-use around the report. The report does not hold `ReviewerRole`; the reviewer holder did.
 
-#### A.2.1:5.4 - Standard Used in Safety Work
+#### A.2.1:5.5 - Standard Used in Safety Work
 
-The source sentence "ISO 26262 has the normative standard role in this safety case" is repaired as a standard-use or requirement-use relation around an episteme. If a safety engineer performs work using that standard, the engineer or engineering team may hold a work-facing role assignment. The standard constrains, defines, or supplies source material; it does not perform work and does not become a holder in `U.RoleAssignment`.
+The source sentence "ISO 26262 has the normative standard role in this safety case" is repaired as a standard-use or requirement-use relation around an episteme. If a safety engineer performs work using that standard, the engineer or engineering team may hold an enactment-facing role assignment. The standard constrains, defines, or supplies source material; it does not perform work and does not become a holder in `U.RoleAssignment`.
 
 ### A.2.1:6 - Bias-Annotation
 
@@ -2546,7 +2578,7 @@ The source sentence "ISO 26262 has the normative standard role in this safety ca
 | ID | Check |
 | --- | --- |
 | `CC-A2.1-1` | A `U.RoleAssignment` identifies holder, role value, and bounded context. |
-| `CC-A2.1-2` | The holder is a `U.System` or acting holon admitted as system-like performer by the governing work or method pattern. |
+| `CC-A2.1-2` | The holder is an admitted `U.System` selected as system-like performer by the governing work, transformation, functioning, or method pattern. |
 | `CC-A2.1-3` | No `U.Role`, `U.RoleAssignment`, or `U.Episteme` is used as holder merely because source language says "role". |
 | `CC-A2.1-4` | Any claim depending on current assignment validity names the assignment window, inherits a declared bounded-context default, or lowers or blocks the stronger claim. |
 | `CC-A2.1-5` | The assignment relation is not used as evidence of capability, selected method, planned work, performed work, gate passage, commitment, permission, or evidence-use relation. |
@@ -2561,7 +2593,7 @@ The source sentence "ISO 26262 has the normative standard role in this safety ca
 | Anti-pattern | Why it fails | Repair |
 | --- | --- | --- |
 | Contextless assignment: "Alice is reviewer" | No bounded context, role identity, or assignment window is recoverable. | Recover `Alice#ReviewerRole:ReviewContext` and state window disposition when current. |
-| Episteme as holder: "The report has EvidenceRole" | The report is being used in an evidence relation, not holding a work-facing role. | Use evidence-use relation with target claim, scope, polarity, and relevance window when current. |
+| Episteme as holder: "The report has EvidenceRole" | The report is being used in an evidence relation, not holding an enactment-facing role. | Use evidence-use relation with target claim, scope, polarity, and relevance window when current. |
 | Assignment as capability | The role assignment is treated as evidence that the holder can perform the work. | Use `A.2.2` for capability and connect capability evidence only when the claim depends on it. |
 | Assignment as work | The assignment is treated as if work already happened. | Use `A.15.1` for dated work and cite `performedBy = RoleAssignment`. |
 | `U.RoleEnactment` as root object | A derived performed-by fact becomes a second run-time ontology. | Use `RoleEnactmentFact` only as a named fact over work and assignment, or write direct `Work.performedBy` relation. |
@@ -2572,7 +2604,7 @@ The source sentence "ISO 26262 has the normative standard role in this safety ca
 
 `A.2.1` makes work attribution and role admission replayable. A reader can ask: who is the holder, what role value is assigned, which bounded context gives that role meaning, and which window or source is current for the claim?
 
-The benefit is compactness. FPF can keep one role-assignment relation for work-facing roles instead of multiplying role kinds for documents, standards, reports, dashboards, interfaces, method descriptions, and relation arguments.
+The benefit is compactness. FPF can keep one role-assignment relation for enactment-facing roles instead of multiplying role kinds for documents, standards, reports, dashboards, interfaces, method descriptions, and relation arguments.
 
 The cost is discipline. Authors must recover neighboring claims instead of putting them into assignment prose. Capability, role state, method, work plan, performed work, evidence, status, publication, assurance, gate, and decision claims each keep their governing pattern.
 
@@ -2610,7 +2642,7 @@ The open-world slot model is deliberate. FPF should not require dummy windows or
 - `A.2.5` for role state, role-state relation, role characterization, and enactable-state admission.
 - `A.2.7` for context-local role relation structure.
 - `A.15`, `A.15.1`, and `A.15.2` for method, work plan, work occurrence, and performed-by relation.
-- `A.3.1` and `A.3.2` for method and method-description required-role relations.
+- `A.3.1` and `A.3.2` for method and method-description role-admission relations.
 - `A.10`, `B.3`, `C.2.1`, `C.28`, `F.10`, `G.6`, `E.17`, and `E.10.D2` for evidence-use, status-use, source-use, publication-use, assurance, causal-use, and description-boundary cases that source text tries to express as episteme roles.
 
 **Does not replace.**
@@ -2625,17 +2657,17 @@ The open-world slot model is deliberate. FPF should not require dummy windows or
 
 `U.Capability` is the FPF object for "can do within bounds".
 
-Use this pattern when a project claim says that a person, team, machine, software service, organization, composite cell, or other system can produce a kind of result, perform a class of work, or meet a performance threshold. The claim is about ability, not about who is assigned, which method is described, which work occurred, or what was promised to another party.
+Use this pattern when a project claim says that a person, team, machine, software service, organization, composite cell, or other system can produce a kind of result, perform a class of work, or meet a performance threshold. The claim is about a holder's capability instance, not about who is assigned, which method is described, which work occurred, or what was promised to another party.
 
-**Primary EntityOfConcern.** The EntityOfConcern is `U.Capability`: a dispositional property of a `U.System` that states the system's ability to perform or produce a class of work results within a declared envelope and measured bounds.
+**Primary EntityOfConcern.** The EntityOfConcern is `U.Capability`: an `E.24.UK`-admitted dependent durable U-kind name for holder-dependent capability instances. An individual `U.Capability` instance is a holder-dependent concrete governed object of a named `U.System`, recognized as that system's ability to perform a work family or produce a result class within a declared envelope, measure set, qualification window, and currentness condition. A statement, report row, certification, evidence relation, source-use relation, dashboard display, or currentness assessment about that instance is a neighboring governed record or relation, not the capability instance itself.
 
-**Primary working reader.** A manager, architect, engineer, safety assessor, scheduler, or model author who needs to decide whether a holder can be used for a work claim, method step, service promise, or architecture move without smuggling role assignment, method description, or past work into the ability claim.
+**Primary working reader.** A manager, architect, engineer, safety assessor, scheduler, or model author who needs to decide whether a holder can be used for a work claim, method step, service promise, or architecture move without smuggling role assignment, method description, past work, evidence, or quality wording into the capability instance.
 
-**First useful move.** Ask: who is the holder system, what work family or result class is claimed, under what envelope, with what measures, during which qualification window, and by which current evidence or source-use relation?
+**First useful move.** Ask: who is the holder system, what work family or result class is the ability about, under what envelope, with what declared measures, during which qualification window, and which separate statement, evidence relation, source-use relation, or currentness assessment currently supports reliance on that capability?
 
 **What goes wrong if missed.** A role label becomes a hidden proof of ability, a method description is treated as if it can perform work, a single successful run is generalized into a stable ability, or a promise is made without a measured capability behind it.
 
-**What this buys.** Capability becomes checkable and reusable: a work-admission claim can test role assignment, role state, method requirements, and capability thresholds separately.
+**What this buys.** Capability becomes checkable and reusable: a work-admission claim can test role assignment, role state, method-side admission conditions, and capability thresholds separately.
 
 **Not this pattern when.**
 
@@ -2646,6 +2678,9 @@ Use this pattern when a project claim says that a person, team, machine, softwar
 - If the current claim is dated performed work or planned work, use `A.15`, `A.15.1`, or `A.15.2`.
 - If the current claim is a promise to others, use the promise-content and commitment patterns.
 - If the current claim is evidence, source, status, assurance, publication, or description use of an episteme, use the direct episteme-use pattern. Do not make the episteme a capability holder.
+- If the current claim is one measured aspect with a declared scale, use `U.Characteristic` through `C.16.P`, `A.19`, and the current characteristic or scale owner.
+- If the current claim is a composite quality family such as availability, resilience, security, or maintainability, use `C.25` Q-Bundle.
+- If the current claim is an architecture-characteristic starter head, project criteria row, architecture eval reading, or architecture-description concern, use `C.32.HCS`, `C.32.ACS`, `C.32.ACE`, or `C.30` as applicable.
 
 ### A.2.2:1 - Problem Frame
 
@@ -2657,7 +2692,7 @@ In ordinary work, the same sentence often carries several typed values:
 - "The robot welded batch B at 10:20."
 - "The supplier promises 12 seams per minute."
 
-Only the second sentence is a `U.Capability` claim. The others may be role assignment, method description, performed work, or promise content. When FPF collapses them, project reasoning becomes brittle:
+Only the second sentence can support a `U.Capability` instance when the holder, work family, envelope, measures, and currentness conditions are recoverable. The sentence itself is a statement about the capability instance. The others may be role assignment, method description, performed work, or promise content. When FPF collapses them, project reasoning becomes brittle:
 
 1. **Role assignment becomes fake ability.** "Assigned as verifier" is treated as "able to verify".
 2. **Method description becomes fake ability.** A recipe or algorithm is treated as if it can execute itself.
@@ -2668,34 +2703,58 @@ Only the second sentence is a `U.Capability` claim. The others may be role assig
 
 ### A.2.2:2 - Kind and Boundary
 
-`U.Capability` is a system-side ability claim.
+`U.Capability` is retained as a dependent durable U-kind name under `E.24.UK`. A concrete `U.Capability` instance is the holder-dependent capability instance of a named `U.System`; its identity is grounded by the holder, work family or result class, envelope, measure set, qualification window, and currentness condition. The statement that asserts the ability, the evidence that supports reliance, and the fit predicate that tests work admission are separately governed records or relations rather than the `U.Capability` instance.
 
 ```text
-Capability:
+CapabilityUKindAdmissionDecision:
+  CandidateSpelling: U.Capability
+  Disposition: retained as dependent durable U-kind name
+  E24Settlement: dependent capability instance under the named U.System holder settlement, governed here by A.2.2
+  RootSubjectUKind: U.System holder whose ability is being stated
+  DependentInstance: holder-dependent concrete U.Capability instance
+  semanticArea: system ability, work admission, capability planning, and method threshold use
+  ontologicalNeighborhood: U.System holder, U.RoleAssignment, U.Method, U.MethodDescription, U.WorkPlan, U.Work, U.Characteristic, Q-Bundle, architecture-characteristic row, evidence relation, source-use relation, currentness assessment, and capability-fit predicate
+  IdentityGroundingOrRecognitionRule: holder plus work family or result class plus envelope plus measure set plus qualification window plus currentness condition
+  admissibleUse: state or test that a named holder can perform a work family or produce a result class within declared bounds for planning, promise support, role-method-work admission, or architecture move feasibility
+  nonUseBoundary: do not use U.Capability for statements, reports, evidence, source-use relations, currentness assessments, characteristics, Q-Bundles, architecture-characteristic rows, fit predicates, role assignments, method descriptions, work plans, or work occurrences
+  NonUSubstitutionBoundary: statements, evidence, source-use relations, currentness assessments, Q-Bundles, characteristics, architecture-characteristic rows, and fit predicates do not become U.Capability
+
+ConcreteCapabilityInstance:
   CapabilityHolderRef: U.System
   WorkFamilyOrResultClassRef:
   CapabilityEnvelope:
   CapabilityMeasureSet:
   QualificationWindow:
-  EvidenceOrSourceUseRefs:
-  CapabilityCurrentnessPredicate:
+  CapabilityCurrentnessCondition:
+  DependentInstancePolicy: dependent on holder identity and declared envelope/measure/window boundary
+
+SupportAndUseReferencesAroundCapability:
+  CapabilityStatementRefs?: governed episteme or publication records that describe the instance
+  EvidenceRelationRefs?: governed evidence relations that support reliance
+  SourceUseRelationRefs?: governed source-use relations used to justify or constrain the statement
+  CurrentnessAssessmentRefs?: dated assessment relations evaluating the currentness condition
+  CapabilityFitConditionRefs?: admission predicates or gate relations that test this instance for a use
 ```
 
 **CapabilityHolderRef.** The holder is a `U.System`: a physical system, cyber system, socio-technical system, organization, team, composite cell, software service as deployed system, or other acting holon admitted as system for the claim. A role assignment, method, method description, work record, episteme, publication, standard, or dashboard is not the capability holder merely because it appears in the sentence.
 
 **WorkFamilyOrResultClassRef.** The ability is about a class of work results or a method family the holder can enact. It may refer to a `U.Method`, `U.MethodDescription`, method family, result class, or work family, but the reference does not turn the method or description into the holder.
 
-**CapabilityEnvelope.** The envelope states the bounded conditions under which the ability is claimed: input range, environment, resources, configuration, system version, calibration state, staffing composition, access constraints, safety limits, or other current conditions.
+**CapabilityEnvelope.** The envelope states the bounded conditions under which the ability holds: input range, environment, resources, configuration, system version, calibration state, staffing composition, access constraints, safety limits, or other current conditions.
 
-**CapabilityMeasureSet.** The measures state the achieved or required bounds with units, scales, tolerances, success predicates, reliability, throughput, latency, precision, defect rate, or other characteristics.
+**CapabilityMeasureSet.** The measures state achieved or required bounds with units, scales, tolerances, success predicates, reliability, throughput, latency, precision, defect rate, or other declared characteristics. A measure may cite a `U.Characteristic`, Q-Bundle slot, or architecture-characteristic criteria row as an input for a capability-fit check, but that characteristic, Q-Bundle, or architecture row does not become the capability.
 
-**QualificationWindow.** Capability is stable enough to plan with but not timeless. A claim may depend on software version, calibration horizon, team training state, wear, operating season, regulatory state, or other temporal currentness relation.
+**QualificationWindow.** Capability is stable enough to plan with but not timeless. The instance may depend on software version, calibration horizon, team training state, wear, operating season, regulatory state, or other temporal currentness relation.
 
-**EvidenceOrSourceUseRefs.** Evidence, tests, certifications, prior work summaries, simulations, audit records, standards, and model results can justify a capability claim through direct evidence or source-use relations. They do not become the capability.
+**CapabilityStatementRefs.** A `CapabilityStatement` is a governed episteme or publication-side record that says a capability instance exists, describes its holder, envelope, measures, and window, or cites it for planning. It is not `U.Capability`, but it is still a governed record under its own episteme or publication pattern.
 
-**CapabilityCurrentnessPredicate.** The claim states what keeps the ability current and what lowers or reopens it.
+**EvidenceRelationRefs and SourceUseRelationRefs.** Evidence, tests, certifications, prior work summaries, simulations, audit records, standards, and model results can justify a capability statement through direct evidence or source-use relations. These are governed relations or records. They do not become the capability and do not become its holder.
 
-**Neighboring-term boundary.** When a neighboring pattern uses `U.WorkScope`, recover the set-valued condition part of `CapabilityEnvelope`: the inputs, environment, resources, configuration, and assumptions against which an intended work slice is checked. When it uses `U.WorkMeasures`, recover `CapabilityMeasureSet`. `JobSlice` names the intended work slice for a work-admission check. `QualificationWindow` names the temporal currentness relation for the capability claim. These are neighboring governed terms, not substitute names for `U.Capability`.
+**CurrentnessAssessmentRefs.** A currentness assessment is a dated assessment relation saying whether the capability instance remains usable under its qualification window and current conditions. It is not the capability instance, but it is still a governed assessment relation. `CapabilityCurrentnessCondition` states what must remain true; an assessment evaluates that condition.
+
+**CapabilityFitConditionRefs.** A capability-fit condition is an admission predicate, threshold, or gate relation that tests a holder capability and any declared characteristic, Q-Bundle, or architecture-characteristic inputs against a current role, method step, work plan, work occurrence, bounded context, or gate need. It is a governed relation or predicate. Unless a separate E.24.UK admission is written, it is not a `U.*` kind.
+
+**Neighboring-term boundary.** When a neighboring pattern uses `U.WorkScope`, recover the set-valued condition part of `CapabilityEnvelope`: the inputs, environment, resources, configuration, and assumptions against which an intended work slice is checked. When it uses `U.WorkMeasures`, recover `CapabilityMeasureSet`. `JobSlice` names the intended work slice for a work-admission check. `QualificationWindow` names the temporal currentness relation for the capability instance. These are neighboring governed terms, not substitute names for `U.Capability`.
 
 
 
@@ -2703,16 +2762,26 @@ Capability:
 
 Use `U.Capability` when the object under discussion is the holder's ability to achieve a result class within a declared envelope and measure set.
 
-Minimal capability statement:
+Minimal capability instance:
 
 ```text
-CapabilityStatement:
+ConcreteCapabilityInstance:
   holder: U.System
   canDo: WorkFamilyOrResultClass
   envelope: CapabilityEnvelope
   measures: CapabilityMeasureSet
   qualificationWindow: QualificationWindow
-  evidenceOrSourceUse: EvidenceOrSourceUseRefs
+  currentnessCondition: CapabilityCurrentnessCondition
+```
+
+Separate supporting record:
+
+```text
+CapabilityStatementRecord:
+  describedCapabilityRef: ConcreteCapabilityInstance
+  statementSourceRef:
+  evidenceOrSourceUseRefs:
+  currentnessAssessmentRefs?:
 ```
 
 Plain sentence form:
@@ -2725,7 +2794,7 @@ during <qualification window>,
 with <evidence or source-use relation>.
 ```
 
-This form is deliberately not a method description. It does not list the step order or algorithm. It also does not assign the holder to a role or assert that a work occurrence happened.
+This sentence form is a publication or statement about the capability instance. It is deliberately not a method description. It does not list the step order or algorithm. It also does not assign the holder to a role, assert that a work occurrence happened, prove an architecture characteristic, or make the evidence relation into the capability.
 
 ### A.2.2:4 - Separation From Neighboring Values
 
@@ -2735,9 +2804,9 @@ This form is deliberately not a method description. It does not list the step or
 | "The robot is assigned as welder." | `U.RoleAssignment`; add `U.Capability` only if the claim also says the robot can meet a welding envelope and measures. |
 | "The solver has the scheduling algorithm." | `U.MethodDescription` or deployed software-system relation; `U.Capability` only for the deployed system's ability to produce schedules within bounds. |
 | "The report has evidence capability." | Evidence-use relation around an episteme; no capability holder unless a system can perform evidential work. |
-| "The team did one successful run." | `U.Work` occurrence; capability only after a separate ability claim with envelope, measures, and currentness. |
-| "We promise five-day close." | Promise content and commitment; capability is the internal holder ability that makes the promise credible. |
-| "The architecture provides resilience capability." | Architecture or structure claim plus capability claim for the relevant system or composite, with measured resilience characteristics. |
+| "The team did one successful run." | `U.Work` occurrence; capability only after a separate capability instance is established with envelope, measures, and currentness. |
+| "We promise five-day close." | Promise content and commitment; capability is the holder-dependent capability instance that makes the promise credible. |
+| "The architecture provides resilience capability." | Architecture-characteristic or Q-Bundle material under `C.30`, `C.32.HCS`, `C.32.ACS`, and `C.25`; add `U.Capability` only when a named holder system has a capability instance to produce or maintain a result class within a capability envelope. Resilience characteristics may constrain a capability-fit condition; they are not capability by name. |
 
 ### A.2.2:5 - Work-Admission Use
 
@@ -2748,7 +2817,8 @@ WorkAdmissionCheck:
   roleAssignmentCurrent: A.2.1
   roleStateAdmitsWork: A.2.5
   methodStepRequires: A.3.1 or A.3.2
-  holderCapabilityMeets: A.2.2
+  holderCapabilityRef: A.2.2
+  capabilityFitCondition: admission predicate over declared capability measures and any named characteristic, Q-Bundle, or architecture-characteristic inputs
   performedWorkRecord: A.15.1 after execution
 ```
 
@@ -2757,10 +2827,11 @@ The checks are separate:
 - role assignment says who is acting in which context;
 - role state says whether that assignment is in a work-admitting state;
 - method or method description says what capability threshold is required;
-- capability says whether the holder can meet that threshold within the envelope and window;
+- capability names the holder's capability instance within the envelope, measure set, and window;
+- capability-fit condition tests whether that instance meets the current threshold or gate need;
 - performed work says what actually happened.
 
-Do not put the threshold into the role name. Do not treat a role assignment as proof of ability. Do not let a capability claim perform the work.
+Do not put the threshold into the role name. Do not treat a role assignment as proof of ability. Do not let a capability instance perform the work. Do not treat a fit predicate, Q-Bundle, architecture-characteristic row, evidence relation, or currentness assessment as the capability instance.
 
 ### A.2.2:6 - Worked Cases
 
@@ -2768,15 +2839,17 @@ Do not put the threshold into the role name. Do not treat a role assignment as p
 
 `RobotArm_A` is assigned as `WelderRole` on `AssemblyLine_2026`. That assignment alone says who is eligible to act in the line context.
 
-The capability claim is separate:
+The capability instance is separate; a statement or record may describe it:
 
 ```text
-Capability:
+ConcreteCapabilityInstance:
   holder: RobotArm_A
   canDo: Weld_MIG_v3 seam family
   envelope: steel grades S235-S355, ambient 18-30 C, argon mix 92-95 percent, torch T-MIG-07
   measures: bead width 6.0 mm plus or minus 0.2 mm, throughput up to 12 seams per minute, defect rate below 0.5 percent
   qualificationWindow: calibration valid through 2026-09-30
+  currentnessCondition: calibration and configuration remain inside the qualification window
+SupportAndUseReferencesAroundCapability:
   evidenceOrSourceUse: latest welding test report and calibration source relation
 ```
 
@@ -2786,39 +2859,39 @@ If a method step requires `WelderRole` and bead width tolerance below 0.2 mm, th
 
 `PlannerService_v4` is a deployed system. It may have capability to generate job-shop schedules for 50-500 jobs and 5-40 machines, with benchmark optimality above 0.95 and latency below 20 ms in `PlantScheduling_2026`.
 
-The algorithm paper and method description are not the capability. The deployed system has the capability only while its version, dependencies, input range, and operational measurements keep the claim current.
+The algorithm paper and method description are not the capability. The deployed system has the capability only while its version, dependencies, input range, and operational measurements satisfy the declared currentness condition; a benchmark report or model card is support for a statement about that instance.
 
 #### A.2.2:6.3 - Organization or Team
 
 `FinanceDept` can close books for eight legal entities under IFRS with ERP v12, staffing at or above six qualified people, and close duration below five business days. That is a capability of the organizational system.
 
-The monthly-close service promise is a promise content claim. The actual close for March 2026 is performed work. Staff assignments and role states are neighboring role claims. The capability claim keeps the ability of the department visible and measurable.
+The monthly-close service promise is a promise content claim. The actual close for March 2026 is performed work. Staff assignments and role states are neighboring role claims. The capability instance keeps the ability of the department visible and measurable; the management report describing it is a statement about that instance.
 
 #### A.2.2:6.4 - Episteme Anti-Case
 
-"ISO 26262 has safety capability" is not a capability claim. The standard is an episteme used as source, requirement, or assurance input. A safety engineering team or toolchain may have a capability to perform safety-case work using that standard within a declared envelope.
+"ISO 26262 has safety capability" is not a capability statement about a holder-dependent capability instance. The standard is an episteme used as source, requirement, or assurance input. A safety engineering team or toolchain may have a capability to perform safety-case work using that standard within a declared envelope.
 
 ### A.2.2:7 - Capability Currentness and Lowering
 
-Lower or reopen a capability claim when any of these changes:
+Lower or reopen a capability instance, or lower reliance on a statement about it, when any of these changes:
 
 - the holder system changes composition, version, calibration, staffing, training state, toolchain, or environment;
 - the envelope no longer covers the intended work slice;
 - measures no longer meet the required threshold;
 - the qualification window expires or becomes contested;
-- evidence, source-use, test, audit, or simulation relations become stale or are reclassified;
+- evidence, source-use, test, audit, or simulation relations become stale or are reclassified, lowering the support or currentness assessment rather than becoming the capability;
 - the method or method description changes the required capability threshold;
 - the role assignment or role state changes, causing a work-admission claim to fail even though capability remains true;
 - a composite holder changes dependency conditions.
 
-Repair the smallest value that changed. A stale calibration window lowers the capability claim; it does not rewrite the role value. A failed role assignment lowers work admission; it does not by itself lower the holder's measured ability.
+Repair the smallest object that changed. A stale calibration window lowers the capability currentness assessment and may lower reliance on the capability instance; it does not rewrite the role value. A failed role assignment lowers work admission; it does not by itself lower the holder's measured ability. A stale report lowers a statement or evidence relation before it lowers the capability instance itself.
 
 ### A.2.2:8 - Composite Capability
 
 A composite system may have a capability that none of its parts has alone. Treat the composite as the holder.
 
 ```text
-Capability:
+ConcreteCapabilityInstance:
   holder: Cell_3
   canDo: place 12 PCB per minute
   envelope: feeder, vision, head, controller, and operator conditions
@@ -2827,35 +2900,38 @@ Capability:
   dependencyNotes: feeder and vision subsystem conditions
 ```
 
-The capability belongs to `Cell_3`, not to every part and not to the method description. Dependencies may be named, but the whole-system capability remains a property of the composite holder.
+The concrete capability instance is asserted for `Cell_3`, not for every part and not for the method description. Dependencies may be named, but the bounded capability claim is about the composite holder.
 
 ### A.2.2:9 - Checklist
 
 | Check | Question |
 |---|---|
 | `CC-A2.2-01` | Is the holder a `U.System` or acting holon admitted as system for this claim? |
-| `CC-A2.2-02` | Does the capability statement name the work family or result class? |
-| `CC-A2.2-03` | Does it name the envelope: inputs, environment, configuration, resources, constraints, or conditions? |
-| `CC-A2.2-04` | Does it name measurable bounds with units, scales, thresholds, or predicates? |
-| `CC-A2.2-05` | Does it name the qualification window or other currentness predicate? |
-| `CC-A2.2-06` | Are evidence and source-use relations expressed as neighboring episteme-use values, not as capability holders? |
-| `CC-A2.2-07` | Are role assignment, role state, method requirement, performed work, and promise content kept separate? |
-| `CC-A2.2-08` | For work admission, are role and capability checks both visible when both are current? |
+| `CC-A2.2-02` | Does the capability instance name the work family or result class? |
+| `CC-A2.2-03` | Does the capability instance name the envelope: inputs, environment, configuration, resources, constraints, or conditions? |
+| `CC-A2.2-04` | Does the measure set bind measurable bounds to units, scales, thresholds, predicates, declared `U.Characteristic` values, Q-Bundle slots, or architecture-characteristic rows without making those inputs the capability? |
+| `CC-A2.2-05` | Does the capability instance name the qualification window and currentness condition, while dated currentness assessments remain separate relations? |
+| `CC-A2.2-06` | Are statements, evidence, source-use relations, certifications, reports, dashboards, and currentness assessments expressed as neighboring support records or relations, not as `U.Capability` or capability holders? |
+| `CC-A2.2-07` | Are role assignment, role state, method-side admission or fit condition, performed work, and promise content kept separate? |
+| `CC-A2.2-08` | For work admission, are role, capability instance, and capability-fit predicate all visible when all are current? |
 | `CC-A2.2-09` | For composite holders, is the capability stated at the whole whose ability is being claimed? |
-| `CC-A2.2-10` | Are lowering and reopen conditions local enough to change only the affected value? |
+| `CC-A2.2-10` | Are lowering and reopen conditions local enough to change only the affected capability instance, statement, evidence relation, currentness assessment, or fit predicate? |
 
 ### A.2.2:10 - Anti-Patterns and Repairs
 
 | Anti-pattern | Symptom | Repair |
 |---|---|---|
-| Role-as-capability | "The inspector role can detect this defect." | Keep the role value and role assignment; state capability for the holder system if measured detection ability is current. |
-| Assignment-as-capability | "Assigned, therefore able." | Use A.2.1 for assignment and A.2.2 for the ability claim. |
+| Role-as-capability | "The inspector role can detect this defect." | Keep the role value and role assignment; state capability for the holder system only when a currentness assessment supports reliance on the measured detection capability instance. |
+| Assignment-as-capability | "Assigned, therefore able." | Use A.2.1 for assignment and A.2.2 for the holder-dependent capability instance. |
 | Method-description-as-capability | "The procedure has capability." | Use `U.MethodDescription` for the episteme; use `U.Capability` for the system that can enact the method within bounds. |
-| Work-as-capability | "We did it once, so we can." | Keep the work occurrence; add a separate capability claim only when envelope, measures, and currentness are justified. |
+| Work-as-capability | "We did it once, so we can." | Keep the work occurrence; add a separate capability instance only when envelope, measures, and currentness are justified. |
 | Promise-as-capability | "The SLA is our capability." | Use promise content or commitment for what is offered; capability is the internal measured ability that makes the promise credible. |
 | Episteme-as-holder | "The report has assessment capability." | Use evidence, source, status, or assessment relation for the episteme; capability holder remains a system. |
 | Unbounded capability | "The tool can machine titanium." | Add material grade, tolerances, feed range, environment, version, qualification window, and measurement evidence. |
-| Capability threshold in role name | `HighPrecisionWelderRole` hides a measured threshold. | Keep role name clean; put precision threshold in method requirement and holder capability. |
+| Capability threshold in role name | `HighPrecisionWelderRole` hides a measured threshold. | Keep role name clean; put the precision threshold in the method-side admission or fit condition and the holder capability instance. |
+| Characteristic-as-capability | "Low latency is a capability." | Use `U.Characteristic` with declared scale for latency; add `U.Capability` only when a named holder can produce a result class within an envelope that includes the latency measure. |
+| Q-Bundle-as-capability | "Resilience is our capability." | Use `C.25` for the composite quality family; cite a capability only when a currentness assessment supports reliance on a holder-dependent capability instance and a fit predicate tests the relevant bundle slot. |
+| Architecture-row-as-capability | "Maintainability row gives capability." | Use `C.32.ACS` for the architecture-characteristic criteria row; it may constrain a capability-fit condition but is not `U.Capability`. |
 
 ### A.2.2:11 - Consequences
 
@@ -2863,7 +2939,7 @@ The capability belongs to `Cell_3`, not to every part and not to the method desc
 
 - Planning separates "can do" from "is assigned now".
 - Method steps can name capability thresholds without putting extra meaning into role names.
-- Work records can be judged against the capability claim current at the time of work.
+- Work records can be judged against the capability instance and fit predicate current at the time of work.
 - Promise content becomes less magical because the internal ability and measured envelope are explicit.
 - Composite-system ability can be stated at the right holder instead of scattered across parts.
 
@@ -2879,10 +2955,10 @@ The cost is intentional: without it, FPF cannot distinguish authorization, abili
 
 | Current practice or research line | What FPF takes | Practical implication |
 |---|---|---|
-| Capability-based planning in defense and enterprise architecture keeps ability, mission need, activities, systems, and portfolio planning separate. | `U.Capability` is ability with envelope and measures; it is not a role, method, work record, or promise. | A capability claim can be compared across candidate systems without selecting the implementation too early. |
-| Current model-based systems engineering, including SysML v2 work, increases semantic precision and traceability between system model elements, requirements, measures, and stakeholder concerns. | Capability claims name holder, result class, envelope, measures, evidence, and currentness as separate typed values. | The reader can see which value changed when a requirement, holder, measure, or context changes. |
-| Current uncertainty and verification work for cyber-physical and autonomous systems treats operating conditions and currentness as first-class modeling concerns. | Qualification windows, evidence or source-use refs, and lowering triggers are part of the capability pattern, not later paperwork. | A stale calibration, changed version, or out-of-envelope input lowers the capability claim locally. |
-| Modern access-control and zero-trust practice separates subject, role or attribute relation, current state, policy decision, and resource action. | A role assignment or role state may admit a work attempt, but it does not grant capability. | "Allowed to act" and "able to achieve the measured result" remain separate checks. |
+| Capability-based planning in defense and enterprise architecture keeps ability, mission need, activities, systems, and portfolio planning separate. | The `U.Capability` name governs holder-dependent capability instances with envelope and measures; each instance is not a role, method, work record, promise, statement, evidence record, or quality bundle. | A capability instance can be compared across candidate systems without selecting the implementation too early. |
+| Current model-based systems engineering, including SysML v2 work, increases semantic precision and traceability between system model elements, requirements, measures, and stakeholder concerns. | Capability instances name holder, result class, envelope, measures, and qualification window; statements, evidence, and currentness assessments remain separate typed values. | The reader can see which object changed when a requirement, holder, measure, source, or context changes. |
+| Current uncertainty and verification work for cyber-physical and autonomous systems treats operating conditions and currentness as first-class modeling concerns. | Qualification windows and lowering triggers are part of the capability instance boundary; evidence, source-use refs, and currentness assessments support or lower reliance without becoming capability. | A stale calibration, changed version, or out-of-envelope input lowers the currentness assessment or capability instance locally. |
+| Modern access-control and zero-trust practice separates subject, role relation, current state, policy decision, and resource action. | A role assignment or role state may admit a work attempt, but it does not grant capability. | "Allowed to act" and "able to achieve the measured result" remain separate checks. |
 
 Source-currentness note: DoDAF and TOGAF are used here as stable capability-planning practice lineage, not as the full current frontier. Current pressure comes from SysML v2 and 2025-2026 MBSE work on semantic precision, uncertainty, stakeholder-context formalization, and model integration. The NIST zero-trust line is used only for the split between current authorization and measured ability.
 
@@ -2894,16 +2970,19 @@ Source-currentness note: DoDAF and TOGAF are used here as stable capability-plan
 | `A.2` | Governs `U.Role`; role values do not carry capability by label. |
 | `A.2.1` | Governs `U.RoleAssignment`; assignment relation can cite a holder that separately has capability. |
 | `A.2.5` | Governs role states and enactable-state admission; role state is not capability. |
-| `A.2.7` | Governs role relation structure; role-requirement substitution or incompatibility does not create capability structure. |
+| `A.2.7` | Governs role relation structure; role-admission substitution or incompatibility does not create capability structure. |
 | `A.3.1` | Governs `U.Method`; method may require capability thresholds. |
 | `A.3.2` | Governs `U.MethodDescription`; a method description can describe required capability. |
-| `A.3.3` | Governs `U.Dynamics`, the state-space and transition-law episteme; dynamics may explain or predict capability but is not the holder ability. |
+| `A.3.3` | Governs `U.Dynamics`, the state-space and transition-law episteme; dynamics may explain or predict capability but is not the holder-dependent capability instance. |
 | `A.15`, `A.15.1`, `A.15.2` | Govern method, plan, and performed work alignment; capability is one input to work admission, not work itself. |
 | `A.6.5` | Supplies SlotSpec discipline for capability relation fields and capability-use relations. |
 | `A.6.F` | Repairs function and functionality wording that may hide capability, method, work, math function, or functional-architecture claims. |
 | `A.6.RSIR` | Recovers relation, signature, interface, role, and slot wording before capability repair when the source sentence is mixed. |
 | `C.27` | Governs temporal currentness, windows, rhythm, and drift when capability timing is material. |
-| `C.2.1`, `A.10`, `B.3`, `C.28`, `F.10`, `E.17` | Govern episteme, evidence, assurance, counterfactual, status, and publication-use relations that may justify or qualify a capability claim. |
+| `C.2.1`, `A.10`, `B.3`, `C.28`, `F.10`, `E.17` | Govern episteme, evidence, assurance, counterfactual, status, and publication-use relations that may justify or qualify a statement or reliance use about a capability instance. |
+| `C.16.P`, `A.19` | Govern characteristic, scale, and characteristic-space recovery when capability measures depend on declared measured aspects. |
+| `C.25` | Governs composite quality families and Q-Bundles that may supply slots for capability-fit checks. |
+| `C.30`, `C.32.HCS`, `C.32.ACS`, `C.32.ACE` | Govern architecture-characteristic material, project criteria rows, and eval readings that may constrain capability use without becoming `U.Capability`. |
 | Promise-content and commitment patterns | Govern outward promise and commitment relations; a promise or commitment claim may cite a capability relation, but capability does not become promise or commitment. |
 
 ### A.2.2:14 - Excluded Objects
@@ -2915,9 +2994,13 @@ Do not use `U.Capability` as the current object for:
 - work plan, work occurrence, run record, or measurement trace;
 - evidence graph, source record, model card, standard, report, dashboard, publication, or specification-use relation;
 - promise content, commitment, permission, authority relation, or policy decision;
+- `U.Characteristic`, scale row, coordinate, score, metric, indicator, or threshold;
+- `C.25` Q-Bundle, quality-family label, mechanism, status, or evidence slot;
+- architecture-characteristic starter head, project criteria row, eval program, eval reading, selected-structure adequacy claim, or architecture-description concern;
+- capability-fit predicate, gate, admission relation, or work-entry readiness record;
 - structural part, module, interface, port, or functional structure unless the current claim is the ability of a holder system expressed through that structure.
 
-These values may be related to a capability claim. They do not become the capability by adjacency.
+These values may be related to a capability instance, a statement about it, or a fit check over it. They do not become the capability by adjacency. Name the neighboring value, record, relation, or predicate through its own governing pattern when that neighboring claim is current.
 
 ### A.2.2:End
 
@@ -4942,7 +5025,7 @@ A.2.6 needs a scope mechanism because scope is neither evidence freshness nor ex
 
 ### A.2.7:0.1 - Kind Settlement
 
-**Use this pattern when** a project needs context-local role substitution, incompatibility, factor, qualification, or bundle relations without turning labels or role-algebra notation into a second ontology.
+**Use this pattern when** a project needs context-local role substitution, incompatibility, factor, qualification, bundle relations, or role-decomposition repair without turning labels or role-algebra notation into a second ontology.
 
 **What goes wrong if missed.** Role labels start carrying type, capability, method, work, evidence, or permission claims, and a representation lens starts replacing the role relation structure in life.
 
@@ -4952,17 +5035,17 @@ A.2.7 does not admit `U.RoleAlgebra` as a durable U-kind. The governed object is
 
 `RoleRelationStructure@BoundedContext` is the FPF object for context-local relations among role descriptions, declared role values, local role expressions, role-bundle expressions, and role-assignment-admission uses. It is not a new `U.*` kind beside `U.Role`; it is a selected relation structure over role-side values inside one bounded context. When project prose calls this "role architecture", the FPF object is still the selected role-relation structure in life; a role-algebra, graph, matrix, embedding, distributed, or neural description is a lens over that structure, not the structure itself and not an operation on holder systems. Coupled method relations are governed symmetrically as `MethodRelationStructure@BoundedContext` under `A.3.1`, `A.3.2`, `A.15`, `G.5`, or a direct method-composition pattern when current; A.2.7 names the role-relation side and the bridge to role-method naming.
 
-Use this pattern when a method, work-admission rule, staffing rule, safety case, governance rule, or role description needs to say that one role value can satisfy another role requirement, two roles cannot be held together by the same holder during the same window, a role expression has a factor or domain qualification, or a frequent conjunction of roles is worth naming.
+Use this pattern when a method, work-admission rule, staffing rule, safety case, governance rule, or role description needs to say that one role value can satisfy a role-admission condition stated with another role value, two roles cannot be held together by the same holder during the same window, a role expression has a factor or domain qualification, a role-decomposition claim needs grounding, or a frequent conjunction of roles is worth naming.
 
 **Primary EntityOfConcern.** The EntityOfConcern is `RoleRelationStructure@BoundedContext`: a context-local role-relation and role-expression structure in one `U.BoundedContext`. Algebraic notation, matrices, partial orders, products, graphs, embeddings, neural representations, or other mathematical or representation expressions are descriptions or lenses of that structure. The role architecture in life is the selected relation structure among role values and role expressions; the lens is not the holder, not the performed work, not the living system, not the method, and not the role assignment.
 
-**Primary working reader.** A manager, architect, method author, safety assessor, or model author who needs role-requirement substitution, separation-of-duties, role-factor or qualification expression, role-bundle expression, or ordinary name guidance without turning the role relation structure into capability, method, holder, work, evidence, status, or kind hierarchy.
+**Primary working reader.** A manager, architect, method author, safety assessor, or model author who needs role-admission substitution, separation-of-duties, role-factor or qualification expression, role-bundle expression, or ordinary name guidance without turning the role relation structure into capability, method, holder, work, evidence, status, or kind hierarchy.
 
-**First useful move.** Name the bounded context, the role descriptions or role values being related, the local role expression or relation being claimed, and the assignment, method, work-admission, naming, or bridge check that will use that relation. Use a role-algebra lens only when mathematical notation helps state or check that relation.
+**First useful move.** Name the bounded context, the role descriptions or role values being related, the local role expression or relation being claimed, and the assignment, method, work-admission, naming, or bridge check that will use that relation. If the claim decomposes a role, first decide whether the recovered object is role-admission substitution, factor or qualification, bundle expression, separate role value, role-state refinement, capability-fit condition, responsibility, permission, commitment, or obligation relation, method/work decomposition, or only ordinary prose. Use a role-algebra lens only when mathematical notation helps state or check that relation.
 
 **What goes wrong if missed.** Role names start acting like type hierarchy, org-chart hierarchy, permission policy, capability model, method family, staffing plan, or cross-context translation. Then FPF grows a second ontology beside `U.Role`, `U.RoleAssignment`, `U.Capability`, and method or work patterns, or treats algebraic notation as if it were the object in life.
 
-**What this buys.** Context-local role relation structure gives a small, replayable set of role relations for role assignment, method-step checks, naming, and bridge work while keeping ability, work, method, evidence, and status claims in their governing patterns. Role-algebra notation remains a lens for describing those relations, not a substitute ontology.
+**What this buys.** Context-local role relation structure gives a small, replayable set of role relations for role assignment, method role-admission checks, naming, and bridge work while keeping ability, work, method, evidence, and status claims in their governing patterns. Role-algebra notation remains a lens for describing those relations, not a substitute ontology.
 
 **Not this pattern when.**
 
@@ -4981,13 +5064,15 @@ Use this pattern when a method, work-admission rule, staffing rule, safety case,
 
 **What goes wrong if missed.** Role labels act as type hierarchy, org chart, permission, capability, method family, staffing plan, or cross-context equivalence; mathematical notation then starts replacing the role relation structure in life.
 
-**What this buys.** Role-requirement substitution, incompatibility, role factors, and role bundles become inspectable local relations while role assignment, capability, method, work, evidence, source, status, and publication claims stay with their governing patterns.
+**What this buys.** Role-admission substitution, incompatibility, role factors, and role bundles become inspectable local relations while role assignment, capability, method, work, evidence, source, status, and publication claims stay with their governing patterns.
 
 Work governed by role values and role assignments often needs three small claims:
 
-1. One role value can satisfy another role requirement in the same context when a role-requirement substitution relation is declared.
+1. One role value can satisfy a role-admission condition stated with another role value in the same context when a role-admission substitution relation is declared.
 2. Two roles are incompatible for the same holder during overlapping windows.
 3. A recurring conjunction of roles can be named as a role bundle expression.
+
+Role decomposition is not a fourth primitive and not evidence of role holonhood. It prompts recovery of one of the declared relations above, a role-state refinement under `A.2.5`, a separate role value under `A.2`, a capability, responsibility, permission, commitment, or obligation relation under its direct owner, or a coupled method/work decomposition under `A.15`.
 
 Without a local role relation structure, teams usually encode those claims in the wrong objects:
 
@@ -4995,19 +5080,19 @@ Without a local role relation structure, teams usually encode those claims in th
 - a separation-of-duties rule is written as a deontic slogan rather than an incompatibility relation over assignments;
 - a role bundle becomes a new holder, capability, work product, or method;
 - a cross-context label match is treated as role equivalence;
-- method requirements smuggle capability or work claims into role names.
+- method role-admission wording smuggles capability or work claims into role names.
 
 A.2.7 keeps the role relation structure small and local. It says how role values, role descriptions, and role expressions relate; it does not say who holds them, whether holders are able, whether work happened, or whether an episteme proves something. Algebraic, graph, factor, embedding, distributed, neural, or other mathematical descriptions are optional lenses over that structure.
 
 ### A.2.7:1.0 - Problem
 
-A combined role expression such as engineer-roboticist, inspector-auditor, or musician-teacher can hide several different claims: a local role-requirement substitution, a role bundle, an incompatibility, a holder assignment, a capability claim, or a method/work coupling. The problem is to recover the local role relation structure without minting a new universal role kind or treating an algebraic, graph, factor, embedding, or neural description as the role structure itself.
+A combined role expression such as engineer-roboticist, inspector-auditor, or musician-teacher can hide several different claims: a local role-admission substitution, a role bundle, a factor or qualification, an incompatibility, a holder assignment, a capability claim, a responsibility, permission, commitment, or obligation relation, a role-state refinement, or a method/work coupling. The problem is to recover the local role relation structure without minting a new universal role kind, treating role decomposition as mereological parthood, or treating an algebraic, graph, factor, embedding, or neural description as the role structure itself.
 
 ### A.2.7:1.1 - Forces
 
 | Force | Tension |
 |---|---|
-| Local relation vs universal type | A role-requirement substitution is valid inside one bounded context; it must not become kind subsumption or a universal role taxonomy. |
+| Local relation vs universal type | A role-admission substitution is valid inside one bounded context; it must not become kind subsumption or a universal role taxonomy. |
 | Life structure vs representation lens | Algebra, graph, matrix, embedding, or neural representation may describe the selected role relation structure; the lens is not the holder, role assignment, capability, method, or work. |
 | Compact naming vs hidden bundle | Ordinary names such as engineer-roboticist can help when the context declares the relation or bundle; they hide work when they silently combine independent roles or methods. |
 | Role-method coupling vs collapse | Role and method relation structures often appear together, but method, method family, work plan, and performed work keep their direct governing patterns. |
@@ -5022,7 +5107,7 @@ RoleRelationStructure:
   RoleDescriptionRefs?:
   RoleValueSet:
   RoleExpressionSet?:
-  RoleRequirementSubstitutionSet:
+  RoleAdmissionSubstitutionSet:
   IncompatibilityRelationSet:
   FactorOrQualificationExpressionSet?:
   BundleExpressionSet:
@@ -5036,9 +5121,9 @@ RoleRelationStructure:
 
 **RoleValueSet.** The structure ranges over `U.Role` values governed by `A.2`.
 
-**RoleExpressionSet.** The structure may include context-local role expressions such as qualified roles, bundle expressions, or labels that ordinary prose uses before a durable role value is declared.
+**RoleExpressionSet.** The structure may include context-local role expressions such as qualified roles, bundle expressions, decomposition candidates, or labels that ordinary prose uses before a durable role value is declared.
 
-**RoleRequirementSubstitutionSet.** The context may declare `AcceptedRoleForRequirement <= RequiredRole` as a role-requirement substitution relation. This is a local admissibility relation for method, work-admission, staffing, safety, or governance checks. It is not kind subsumption, org-chart rank, capability evidence, source-label equivalence, or public naming.
+**RoleAdmissionSubstitutionSet.** The context may declare `AcceptedAssignmentRole <= AdmissionConditionRole` as a role-admission substitution relation. This is a local admissibility relation for method, work-admission, staffing, safety, or governance checks. It is not kind subsumption, org-chart rank, capability evidence, source-label equivalence, or public naming.
 
 **IncompatibilityRelationSet.** The context may declare `RoleA incompatibleWith RoleB`. This means the same holder cannot use overlapping role assignments for both roles in the same bounded context and window when that incompatibility is current for the work claim.
 
@@ -5052,17 +5137,32 @@ RoleRelationStructure:
 
 ### A.2.7:3 - Role-Relation Expressions
 
-#### A.2.7:3.1 - Role-Requirement Substitution
+#### A.2.7:3.0 - Role Decomposition Boundary
 
-Use role-requirement substitution when one role value can satisfy another required role in the same bounded context.
+Start from the object claim, not from the word used for it. If a role is decomposed, the admissible repairs are:
+
+- role-admission substitution when one role assignment may satisfy a role-admission condition stated with another role value;
+- factor or qualification when one role expression narrows a role by domain, practice, method family, work field, or context;
+- bundle expression when several independent role assignments must be held together;
+- separate role value when the bounded context needs its own role description, state expectations, capability-fit conditions, and method or work relations;
+- role-state refinement under `A.2.5` when only enactable-state detail changes;
+- capability-fit condition, responsibility relation, permission, commitment, or obligation under the direct owner when the decomposition actually names those objects;
+- method or work decomposition under `A.15` when the source actually divides method into submethods or work into work-part relations.
+
+Do not use role `partOf`. `U.Role` is a root work-facing role value under `A.2`, not an admitted holon kind under `A.1`.
+Do not infer role parts from slots. `RoleAssignment`, role-state relations, evidence-use relations, and role-relation structures may declare SlotSpecs under `A.6.5`; those SlotSpecs are relation positions. Role descriptions may have episteme constituents. Neither case supplies parts of the `U.Role` value.
+
+#### A.2.7:3.1 - Role-Admission Substitution
+
+Use role-admission substitution when one role value can satisfy a role-admission condition stated with another role value in the same bounded context.
 
 ```text
 SeniorWeldingInspector <= WeldingInspector
 ```
 
-Read this as: an assignment to `SeniorWeldingInspector` may satisfy a method or work-admission requirement for `WeldingInspector` when the bounded context declares that substitution and the assignment window is current.
+Read this as: an assignment to `SeniorWeldingInspector` may satisfy a method or work-admission condition stated with `WeldingInspector` when the bounded context declares that substitution and the assignment window is current.
 
-The relation is not kind subsumption. `SeniorWeldingInspector` is not a subtype of a system kind; it is a role value related to another role value for local requirement satisfaction. It is also not capability evidence, public naming, or method identity. A senior inspector role may still require a separate capability claim under `A.2.2`, a method relation under `A.3.1`/`A.3.2`, or a naming settlement under `F.5`/`F.18`.
+The relation is not kind subsumption. `SeniorWeldingInspector` is not a subtype of a system kind; it is a role value related to another role value for local admission satisfaction. It is also not capability evidence, public naming, or method identity. A senior inspector role may still need a separate capability-fit claim under `A.2.2`, a method relation under `A.3.1`/`A.3.2`, or a naming settlement under `F.5`/`F.18`.
 
 #### A.2.7:3.2 - Role Incompatibility
 
@@ -5084,16 +5184,17 @@ IncidentLeadOnCall := IncidentCommander and Communicator and DecisionMaker
 
 The bundle expression is satisfied by current assignments to all component roles under the same bounded context and required window. It is not a product of role values, not a new holder, not a method, and not a capability.
 
-A bundle expression becomes a durable role value only when the bounded context declares it as a role with its own role description, role-state expectations, capability requirements, and method or work relations where current.
+A bundle expression becomes a durable role value only when the bounded context declares it as a role with its own role description, role-state expectations, capability-fit conditions, and method or work relations where current.
 
 ### A.2.7:4 - How Role Relation Structure Is Used
 
 Role relation structure is normally used by neighboring patterns as one selected structure, sometimes informally called the local role architecture:
 
 ```text
-MethodStepRequirement:
-  requiredRole: WeldingInspector
-  acceptedAssignmentRole: SeniorWeldingInspector
+MethodRoleAdmissionCheck:
+  methodRef: WeldInspectionMethod
+  requiredRoleValue: WeldingInspector
+  proposedAssignmentRoleValue: SeniorWeldingInspector
   substitutionRef: SeniorWeldingInspector <= WeldingInspector
 ```
 
@@ -5105,11 +5206,11 @@ WorkAdmissionCheck:
   window: AssignmentWindow
 ```
 
-The role relation structure supplies one relation used by the check. The method, method family, method relation structure, work plan, performed work, capability envelope, and evidence use remain governed by their direct patterns. When a method relation or method composition structure also needs to be named, the current object is `MethodRelationStructure@BoundedContext` under `A.3.1`, `A.3.2`, `A.15`, `G.5`, or a direct method-composition pattern when current; method-algebra notation is a lens over that structure, not a hidden product of roles.
+The role relation structure supplies one role-substitution relation used by the method role-admission or work-admission check. The method, method family, method relation structure, work plan, performed work, capability envelope, and evidence use remain governed by their direct patterns. When a method relation or method composition structure also needs to be named, the current object is `MethodRelationStructure@BoundedContext` under `A.3.1`, `A.3.2`, `A.15`, `G.5`, or a direct method-composition pattern when current; method-algebra notation is a lens over that structure, not a hidden product of roles.
 
 #### A.2.7:4.1 - Naming role-relation and role-method expressions
 
-Role relation work may leave behind something people need to name in ordinary project prose. The named object is not always an atomic `U.Role` value. It may be a holder-in-role statement, a context-local role expression, a role-requirement substitution relation, an incompatibility relation, a role-bundle expression, a durable combined role value, a coupled role-method expression, a method name, or a work name.
+Role relation work may leave behind something people need to name in ordinary project prose. The named object is not always an atomic `U.Role` value. It may be a holder-in-role statement, a context-local role expression, a role-admission substitution relation, an incompatibility relation, a role-bundle expression, a durable combined role value, a coupled role-method expression, a method name, or a work name.
 
 Recover the named object before choosing the label:
 
@@ -5127,11 +5228,11 @@ Recover the named object before choosing the label:
 
 Hyphenation is not algebra by itself. Use a hyphenated ordinary label when it helps a reader see a recovered factor, domain, practice, method-family qualification, or combined role expression. Use "and" when the current point is multiple independent role assignments. Do not mechanically concatenate operands into a Tech label.
 
-The math-lens boundary is narrow. A role-algebra, graph, matrix, embedding, distributed, or neural representation is a lens over role values, role-requirement substitution relations, incompatibility relations, role-factor or qualification expressions, and role-bundle expressions. The lens is not itself the role, holder, assignment, method, work, or capability. The name attaches to the recovered object or expression, not to the notation that helped recover it.
+The math-lens boundary is narrow. A role-algebra, graph, matrix, embedding, distributed, or neural representation is a lens over role values, role-admission substitution relations, incompatibility relations, role-factor or qualification expressions, and role-bundle expressions. The lens is not itself the role, holder, assignment, method, work, or capability. The name attaches to the recovered object or expression, not to the notation that helped recover it.
 
 ### A.2.7:5 - Archetypal Grounding - Worked Cases
 
-#### A.2.7:5.1 - Role-Requirement Substitution Without Capability Smuggling
+#### A.2.7:5.1 - Role-Admission Substitution Without Capability Smuggling
 
 `PlantMaintenance_2026` declares:
 
@@ -5139,7 +5240,7 @@ The math-lens boundary is narrow. A role-algebra, graph, matrix, embedding, dist
 SeniorHydraulicsTechnician <= HydraulicsTechnician
 ```
 
-A method step requiring `HydraulicsTechnician` may accept an assignment to `SeniorHydraulicsTechnician`. This does not prove that the technician has the pressure-test capability. The method step may separately require `PressureTestCapability` under `A.2.2`.
+A method-description source or work-admission check that states `HydraulicsTechnician` as a role-admission condition may accept an assignment to `SeniorHydraulicsTechnician`. This does not prove that the technician has the pressure-test capability. The same source or admission check may separately state `PressureTestCapability` as a capability-fit condition under `A.2.2`.
 
 #### A.2.7:5.2 - Incompatibility for Independence
 
@@ -5159,7 +5260,7 @@ The same holder cannot use overlapping assignments for both roles when approving
 IncidentLeadOnCall := IncidentCommander and Communicator and DecisionMaker
 ```
 
-This is a reusable role-bundle expression for method requirements. It does not state that one person has incident-management capability; that remains a capability claim. It does not state that incident work happened; that remains a work claim.
+This is a reusable role-bundle expression for method role-admission checks. It does not state that one person has incident-management capability; that remains a capability claim. It does not state that incident work happened; that remains a work claim.
 
 #### A.2.7:5.4 - Naming Engineer-Roboticist and Musician
 
@@ -5192,7 +5293,7 @@ Robot-engineering, music performance, and teaching robots music are method or wo
 
 Role relation structure is context-local. Matching role labels across contexts are not enough.
 
-`ArticleAssessorRole:JournalContext` and `SafetyAssessorRole:SafetyCaseContext` may share a source label, but a role-requirement substitution or incompatibility relation in one context does not transfer to the other context by label. Cross-context reuse, bridge, translation, public naming, or semantic alignment uses F-family context and naming patterns.
+`ArticleAssessorRole:JournalContext` and `SafetyAssessorRole:SafetyCaseContext` may share a source label, but a role-admission substitution or incompatibility relation in one context does not transfer to the other context by label. Cross-context reuse, bridge, translation, public naming, or semantic alignment uses F-family context and naming patterns.
 
 ### A.2.7:6.1 - Bias-Annotation
 
@@ -5204,23 +5305,25 @@ A.2.7 blocks two biases. The first is role nominalism: a convenient role label s
 |---|---|
 | `CC-A2.7-01` | Is the bounded context named? |
 | `CC-A2.7-02` | Are the related values `U.Role` values governed by A.2? |
-| `CC-A2.7-03` | Is each `<=` claim framed as same-context role-requirement substitution rather than kind hierarchy or generic specialization? |
+| `CC-A2.7-03` | Is each `<=` claim framed as same-context role-admission substitution rather than kind hierarchy or generic specialization? |
 | `CC-A2.7-04` | Is incompatibility checked over role assignments, holders, and overlapping windows rather than over labels alone? |
 | `CC-A2.7-05` | Is a bundle expression kept separate from holder, capability, method, and performed work? |
-| `CC-A2.7-06` | Do capability requirements use A.2.2? |
-| `CC-A2.7-07` | Do assignment and state checks use A.2.1 and A.2.5? |
-| `CC-A2.7-08` | Do method claims use A.3 patterns and work claims use A.15 patterns? |
-| `CC-A2.7-09` | Do cross-context equivalence and translation claims use F-family patterns? |
-| `CC-A2.7-10` | Does any evidence, source, approval, status, assurance, publication, description, or strict-distinction claim use `C.2.1`, `A.10`, `B.3`, `E.17.*`, `E.24.PUB`, or `A.7` rather than expressed as role relation structure or a lens over it? |
+| `CC-A2.7-06` | Has any role decomposition claim been recovered as role-admission substitution, factor or qualification, bundle, separate role value, role-state refinement, capability-fit condition, responsibility, permission, commitment, or obligation relation, method/work decomposition, or ordinary prose rather than role `partOf`? |
+| `CC-A2.7-07` | Do capability-fit conditions use A.2.2? |
+| `CC-A2.7-08` | Do assignment and state checks use A.2.1 and A.2.5? |
+| `CC-A2.7-09` | Do method claims use A.3 patterns and work claims use A.15 patterns? |
+| `CC-A2.7-10` | Do cross-context equivalence and translation claims use F-family patterns? |
+| `CC-A2.7-11` | Does any evidence, source, approval, status, assurance, publication, description, or strict-distinction claim use `C.2.1`, `A.10`, `B.3`, `E.17.*`, `E.24.PUB`, or `A.7` rather than expressed as role relation structure or a lens over it? |
 
 ### A.2.7:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Symptom | Repair |
 |---|---|---|
 | Role relation structure as type hierarchy | `EngineerRole <= HumanSystem`. | Keep role relation over `U.Role` values; use kind taxonomy only for kinds. |
-| Role relation structure as org chart | "Manager is above Engineer, therefore satisfies Engineer." | Declare same-context role-requirement substitution only when that role-requirement relation is intended. |
-| Role-requirement substitution as capability model | "Senior role implies precision capability." | Keep the substitution relation separate; add `U.Capability` claim for measured ability if current. |
+| Role relation structure as org chart | "Manager is above Engineer, therefore satisfies Engineer." | Declare same-context role-admission substitution only when that admission relation is intended. |
+| Role-admission substitution as capability model | "Senior role implies precision capability." | Keep the substitution relation separate; add `U.Capability` claim for measured ability if current. |
 | Bundle as new holder | `IncidentLeadOnCall` is treated as a person or team. | Treat it as role-bundle expression unless a role value or holder is separately declared. |
+| Role decomposition as role part | `AssistantReviewerRole partOf ReviewerRole` is asserted. | Recover the relation: role-admission substitution, factor or qualification, bundle expression, separate role value, role-state refinement, capability-fit condition, responsibility, permission, commitment, or obligation relation, method/work decomposition, or ordinary prose. Do not use role `partOf` for `U.Role`. |
 | Incompatibility as slogan | "Approver is independent" without relation. | State the incompatible role values, holder relation, bounded context, and overlapping window condition. |
 | Cross-context label equivalence | Same role label in two contexts is treated as the same role relation structure. | Use F-family bridge or naming patterns; do not import role relations by label. |
 | Episteme as role relation structure | A standard, report, or dashboard is put into role relation structure. | Use `C.2.1`, `A.10`, `B.3`, `E.17.*`, `E.24.PUB`, or `A.7` for the source, evidence, status, assurance, publication, description, or strict-distinction claim being made. |
@@ -5229,7 +5332,7 @@ A.2.7 blocks two biases. The first is role nominalism: a convenient role label s
 
 **Benefits.**
 
-- Method requirements can accept declared role substitutions without encoding taxonomy in every method step.
+- Method role-admission checks can use declared role substitutions without encoding taxonomy in every method-description source.
 - Separation-of-duties and independence claims become inspectable relations over assignments and windows.
 - Frequent role conjunctions can be named without creating fake holders or capabilities.
 - Role relation structure remains small enough to use in ordinary project work.
@@ -5238,7 +5341,7 @@ A.2.7 blocks two biases. The first is role nominalism: a convenient role label s
 
 - Contexts need to declare their role relations instead of relying on job-title intuition.
 - Some role-like source labels need F-family cross-context repair before role relation structure can be reused.
-- Capability and method requirements need separate claims when role labels used to hide them.
+- Capability-fit conditions and method role-admission conditions need separate claims when role labels used to hide them.
 
 ### A.2.7:10 - Rationale
 
@@ -5261,7 +5364,7 @@ Source-currentness note: RBAC and separation-of-duties are stable lineage, not t
 |---|---|
 | `A.1.1` | Supplies `U.BoundedContext`, the locality boundary for role relation structure. |
 | `A.2` | Governs `U.Role` values ranged over by role relation structure. |
-| `A.2.1` | Governs `U.RoleAssignment`, the relation checked when role-requirement substitutions, incompatibilities, or bundles are used for real holders. |
+| `A.2.1` | Governs `U.RoleAssignment`, the relation checked when role-admission substitutions, incompatibilities, or bundles are used for real holders. |
 | `A.2.2` | Governs capability; role relation structure does not grant ability. |
 | `A.2.5` | Governs role state and enactable-state admission; role relation structure does not prove current state. |
 | `A.3.1`, `A.3.2`, `A.15`, `A.15.1`, `A.15.2` | Govern method, method description, plan, and performed work uses that may cite a role relation. |
@@ -6167,17 +6270,17 @@ Terms used here (TransformerRole, Work, Method, MethodDescription, PortionOf, Ph
 
 ### A.3.1:1 - Problem frame
 
-Use this pattern when a project needs to say **how something is done in principle** without prematurely treating that method claim as a document, program, workflow diagram, plan, run log, role assignment, capability statement, mechanism claim, or mathematical-model claim before those positions are recovered.
+Use this pattern when a project needs to say **how something is done in principle** without prematurely treating that method or practice claim as a document, program, workflow diagram, plan, run log, role assignment, capability statement, mechanism claim, cultural tradition, discipline position, or mathematical-model claim before those positions are recovered.
 
 Typical moments:
 
 * a team says "the method is the code", "the process is the BPMN", "the workflow is the evidence", or "the solver model is the operation";
-* a procedure, protocol, proof script, optimization model, control strategy, or recipe must be reused across many runs;
+* a practice, procedure, protocol, proof script, optimization model, control strategy, or recipe must be reused across many runs;
 * two descriptions look different but may describe the same way of doing;
 * a graph, query, table, dashboard, checklist predicate, or mathematical representation is being interpreted as if it were an instruction sequence;
-* work planning, dated work, method description, formal substrate, mechanism, and evidence are starting to collapse into one vague "method" word.
+* work planning, dated work, method description, formal substrate, mechanism, role assignment, cultural-evolution, discipline, and evidence are starting to collapse into one vague "method" or "practice" word.
 
-**Primary EntityOfConcern.** The `EntityOfConcern` is the `U.Method`: the context-local semantic way of doing a kind of transformation or enactment.
+**Primary EntityOfConcern.** The `EntityOfConcern` is the `U.Method`: the context-local semantic way of doing a kind of transformation or enactment. `U.Method` is a non-agentive holon kind: methods can have submethods, compose into whole methods, and participate as submethods of larger methods. This does not make a method an actor, a method description, a work plan, or a dated work occurrence. A step label or step description is not a method part unless the recovered object is itself a `U.Method`.
 
 **First useful move.** Name the context-local way of doing, the transformation or enactment it is about, and the `EntityOfConcern` whose state, result, selection, derivation, control relation, or maintained condition changes or is preserved.
 
@@ -6211,6 +6314,8 @@ The practical harm is fragile reliance. Changing a publication looks like changi
 
 `U.Method` is the **context-defined semantic way of doing a kind of transformation or enactment**.
 
+It is a non-agentive holon kind. Part methods can be selected, bounded, ordered, joined, adapted, and hidden or exposed through method interfaces to form a whole method with whole-level preconditions, effects, invariants, constraints, and assurance hooks. The whole method may then be used as a part method in a larger method.
+
 It is not the text, code, diagram, model, plan, run, role, capability, or evidence relation that may be associated with that way of doing. A `U.Method` is:
 
 * **context-defined**: its identity, admissible inputs, conditions, effects, and bounds are interpreted inside a `U.BoundedContext`;
@@ -6218,19 +6323,22 @@ It is not the text, code, diagram, model, plan, run, role, capability, or eviden
 * **transformation-facing**: it concerns a possible or intended transformation, enactment, or produced result, including physical, informational, organizational, mathematical, or hybrid transformations;
 * **description-independent**: one method may be described by several `U.MethodDescription` epistemes;
 * **run-independent**: one method may be enacted by many `U.Work` occurrences;
-* **assignment-independent**: method requirements may name role kinds or capability requirements, but named holders and dated assignments belong elsewhere.
+* **assignment-independent**: method admission conditions may name role kinds or capability-fit conditions, but named holders and dated assignments belong elsewhere.
 
-The primary repair action is not to replace the word "method" with one better word. Recover the current slot first:
+The primary repair action is not to replace the word "method" or "practice" with one better word. In ordinary source speech, `practice` often works as a synonym for method-like wording, but it can also name enacted work, role arrangement, discipline, tradition, source label, or cultural-evolution material. Recover the current slot first:
 
 | If the text is really about... | Govern it as... |
 | --- | --- |
 | semantic way of doing | `A.3.1 U.Method` |
 | relation or composition among methods, method families, or local method expressions | `A.3.1` with `A.3.2`, `A.15`, `G.5`, or a direct method-composition pattern such as `B.1.5` when current; algebraic or graph notation is only `C.29` lens or method-description representation |
 | description of that way of doing: SOP, program, proof script, solver model, protocol, diagram, process model, recipe text | `A.3.2 U.MethodDescription` |
+| source phrase such as practice, technique, school, tradition, or local method label whose current object is unclear | recover the claim kind first through `E.10` and this table; use `A.1.1` when the phrase names a bounded context, and use `C.36.P` when the cultural-evolution, tradition, style, canon, recognition, selection, or mediation context is current |
 | selected formal substrate or mathematical declaration | `A.6.0` and `C.29` when mathematical-lens use is current |
 | mechanism declaration or realization relation | `A.6.1` and `E.20` |
+| role assignment, role relation, responsibility allocation, or holder eligibility hidden under a practice or method phrase | `A.2`, `A.2.1`, `A.2.7`, and `A.15` as applicable |
 | planned dated work or authorization to prepare work | `A.15.2 U.WorkPlan` plus the relevant gate, authority, or commitment pattern |
 | dated work occurrence, run, trace-backed execution, result record | `A.15.1 U.Work` and evidence or source patterns when an evidence relation or source relation is current |
+| field-level discipline, bounded context, community tradition, canon or memory episteme, recognition or selection regime, mediation system, variant set, or cultural-evolution intervention | `A.1.1`, `C.20`, `C.36`, `C.36.P`, `F.17`, `F.18`, `F.9`, `C.18`, `C.19`, `G.5`, or `G.11` according to the recovered claim |
 | evidence or provenance relation for a claim | `A.10` |
 | graph path, path slice, flow valuation, state predicate, query, table, dashboard, publication face, or pattern relation overread as a method or work sequence | `C.2.P.DR` first, then the direct governing pattern named by the recovery |
 
@@ -6257,7 +6365,7 @@ Method statement:
 
 Do not decide the method and mechanism question by vocabulary. When a source expression or project concern appears to name changing, producing, selecting, deriving, controlling, or maintaining an `EntityOfConcern`, use `E.10.ARCH:3.1` to recover the project concern first and then assign separately governed typed FPF values.
 
-For this host, keep the local question thin: does the current claim state a `U.Method`, the context-local way of doing a transformation or enactment? If the source label also raises mechanism, formal-substrate, work-plan, dated-work, evidence, source, gate, result, publication, or temporal claims, keep those values linked only by explicit relation positions and apply their own governing patterns.
+For this host, keep the local question thin: does the current claim state a `U.Method`, the context-local way of doing a transformation or enactment? If the source label also raises mechanism, formal-substrate, work-plan, dated-work, role-assignment, cultural-evolution, discipline, evidence, source, gate, result, publication, or temporal claims, keep those values linked only by explicit relation positions and apply their own governing patterns.
 * In **method position**, the current claim is the context-local way of doing a transformation or enactment.
 * In **mechanism position**, the current claim is a law-governed declaration or revision of operations, laws, admissibility predicates, transport, audit relation set, and monotone realizations under `A.6.1` and `E.20`.
 
@@ -6275,7 +6383,7 @@ This gives the working distinction:
 
 A method may cite a mechanism, be selected by a mechanism, be constrained by a mechanism, or be one value in a mechanism's slot. A mechanism may govern an operation algebra whose operations include applying, selecting, composing, or normalizing methods. Those links do not collapse the typed values or their governing claims. If both claims are current, write both: the `U.Method` statement for the way of doing, and the `U.Mechanism` statement for the law-governed declaration or realization relation.
 
-Fail closed when neither position can be recovered. Do not repair `algorithm`, `program`, `workflow`, `process`, `solver`, `proof`, `recipe`, or `control strategy` to `method` or `mechanism` merely because the replacement sounds more technical.
+Fail closed when neither position can be recovered. Do not repair `practice`, `algorithm`, `program`, `workflow`, `process`, `solver`, `proof`, `recipe`, or `control strategy` to `method` or `mechanism` merely because the replacement sounds more technical.
 
 #### A.3.1:4.3 - Method, MethodDescription, WorkPlan, Work
 
@@ -6302,7 +6410,7 @@ A useful `U.Method` statement can usually recover these fields in ordinary proje
 | EntityOfConcern under transformation | the material object, information object, organization, episteme, holon, or state whose transformation matters |
 | Preconditions | what must already hold for the method to be applicable |
 | Effects or postconditions | what successful enactment is meant to produce or preserve |
-| Interface or signature | inputs, outputs, ports, resources, constraints, or role-kind requirements needed to state the method without naming this run |
+| Interface or signature | inputs, outputs, ports, resources, constraints, or role-kind admission conditions needed to state the method without naming this run |
 | Capability requirements | thresholds or envelopes to be checked against a holder's capability, not baked into the method identity |
 | Failure and stop conditions | when the method is blocked, when a description must be revised, or when work must not start |
 | Description relation | which `U.MethodDescription` epistemes currently describe it |
@@ -6327,7 +6435,7 @@ Use this discipline:
 * If the text states an evidence relation or provenance relation, use `A.10`.
 * If the text turns a graph, path, query, table, dashboard, predicate, publication face, or pattern relation into a route, call sequence, dispatch, or work procedure by metaphor, use `C.2.P.DR` before choosing the direct governing pattern.
 
-This is why "algorithm" is not repaired to "method" automatically. An algorithm-looking expression may indicate a method description, formal substrate, mechanism, control strategy, work plan, work occurrence, evidence relation, or quoted source wording. The repair must recover the slot.
+This is why "algorithm" and "practice" are not repaired to "method" automatically. An algorithm-looking expression may indicate a method description, formal substrate, mechanism, control strategy, work plan, work occurrence, evidence relation, or quoted source wording. A practice-looking expression may indicate a method, method family, method relation structure, method description, work plan, dated work, role assignment, bounded context, discipline position, cultural-evolution case, canon or memory episteme, recognition or selection regime, mediation system, evidence relation, or quoted source wording. The repair must recover the slot.
 
 #### A.3.1:4.6 - Constructor and process-theory settlement
 
@@ -6361,9 +6469,9 @@ When variants differ only by parameter ranges, equipment envelope, or local repr
 
 #### A.3.1:4.8 - Method relation structure, composition, and work enactment
 
-Methods may compose into larger methods. Work occurrences may compose into larger work histories. These are related but different claims.
+Methods may compose into larger method holons. Work occurrences may compose into larger work histories. These are related but different claims.
 
-When the current question is one semantic way of doing, the governed object is `U.Method`. When the current question is a relation among methods, method families, local method expressions, method-description links, or work-facing method-use relations, the governed object is `MethodRelationStructure@BoundedContext`: a context-local structure over method-side values.
+When the current question is one semantic way of doing, the governed object is `U.Method`. When submethods are assembled into a whole method, the governed object is still `U.Method`, now under method-holon composition. When the current question is only a relation among methods, method families, local method expressions, method-description links, or work-facing method-use relations, the governed object is `MethodRelationStructure@BoundedContext`: a context-local structure over method-side values.
 
 A method relation structure may include:
 
@@ -6376,11 +6484,18 @@ A method relation structure may include:
 - decomposition;
 - parameterization;
 - method-family membership, selection, fallback, or dispatch relation;
-- a relation from method requirement to accepted role assignment when work admission depends on it.
+- a relation from method role-admission condition to accepted role assignment when work admission depends on it.
 
 Those relations are design-side or definition-side claims about ways of doing. They are not dated work merely because an implementation, graph, process model, or workflow-looking diagram can be executed or followed.
 
-Work composition is occurrence-side: dated work may interleave, split, merge, retry, fail, recover, or be recorded in traces differently from the method description or method relation structure.
+Method-holon composition is not A.14 structural component mereology. `SerialStepOf`, `ParallelFactorOf`, guarded choice, iteration, typed joins, adapters, and method-interface exposure are arrangement or constraint relations over recovered `U.Method` submethods. Method-description nodes may describe those relations, but they are not method parts unless the governed object is recovered as a `U.Method`. Use `B.1.5` when order-sensitive method composition is current, and use `B.2` when the composite method requires whole reidentification.
+
+Work composition is occurrence-side: dated work may interleave, split, merge, retry, fail, recover, or be recorded in traces differently from the method description or method relation structure. Method decomposition and work decomposition are coupled because work enacts method, but they are not isomorphic. A temporal work part may enact the same whole method during a slice. An episode may record continuity under one method or mode while spanning several operational parts, repeating a fragment, or being split by evidence policy. A work part corresponds to a submethod only when the candidate factor is recovered as a `U.Method` with method-level preconditions, effects, interface or boundary, and whole-method relation under `B.1.5`.
+
+**Quick distinction for readers.** If the source names a step, stroke, graph node, detector component, event-log segment, telemetry interval, work-plan item, or document section, ask two questions before using method-part wording:
+
+1. Does this candidate name a reusable way of doing with method-level preconditions, effects, interface, and whole-method relation? If yes, recover a `U.Method` submethod.
+2. Does this candidate instead name what happened, when it happened, which resources burned, which component behaved, or which evidence slice was recorded? If yes, use `U.Work`, `TemporalPartOf_work`, `EpisodeOf_work`, `OperationalPartOf_work`, evidence, mechanism, system-component behavior, or method-description constituent under the direct pattern.
 
 Algebraic, graph, categorical, process-calculus, effect-calculus, matrix, embedding, distributed, or neural notation may describe or analyze a selected `MethodRelationStructure@BoundedContext`. That notation is a mathematical or representation lens under `C.29` or a `U.MethodDescription` representation when the description itself is current. Do not name it `U.MethodAlgebra` or treat the lens as the method, method family, work plan, performed work, mechanism, role relation structure, or selector registry.
 
@@ -6412,7 +6527,7 @@ The MILP formulation, solver configuration, and acceptance tests are method desc
 
 `Gauss_Elimination` can be a method for deriving a result under a mathematical context.
 
-A textbook explanation, proof-assistant script, and formal rule set are method descriptions. A proof run in a concrete assistant session is work. The algebraic structure may be a formal substrate. The claim that this proof is used as evidence for a project decision is an evidence or assurance claim, not part of the method merely because the method produced a derivation.
+A textbook explanation, proof-assistant script, and formal rule set are method descriptions. A concrete proof-assistant run is work. The algebraic structure may be a formal substrate. The claim that this proof is used as evidence for a project decision is an evidence or assurance claim, not part of the method merely because the method produced a derivation.
 
 #### A.3.1:5.4 - Graph or query overread
 
@@ -6431,6 +6546,7 @@ The protocol PDF, order-set screen, and decision-support rule are method descrip
 This pattern mainly blocks six recurring biases:
 
 * **description-as-method bias**: a publication, program, diagram, or protocol is treated as the method instead of a method description;
+* **practice-as-method bias**: a source says "practice" and the repair silently chooses `U.Method` without checking whether the current claim is work, role assignment, discipline, cultural-evolution, evidence, source label, or method relation structure;
 * **run-as-method bias**: a trace, log, run, or result record is treated as the reusable way of doing;
 * **software-notation bias**: code, algorithm, workflow, or programming-paradigm language becomes the default ontology for every method;
 * **mechanism-overread bias**: law-governed mechanism or formal-substrate material is treated as if it already selected the project method;
@@ -6447,7 +6563,7 @@ The repair is the same in each case: recover the `U.Method` slot when the semant
 
 **CC-A3.1-3 (Description relation).** A method should have at least one named `U.MethodDescription` when work, assurance, gate, or audit reliance depends on it. Several descriptions may describe the same method only under a stated method-identity relation or criterion.
 
-**CC-A3.1-4 (Assignment-free method).** A method may state role-kind requirements or capability requirements. It does not bind named people, teams, organizations, or calendar slots.
+**CC-A3.1-4 (Assignment-free method).** A method may state role-kind admission conditions or capability-fit conditions. These are method-side admissibility conditions, not deontic obligations by default. The method does not bind named people, teams, organizations, or calendar slots.
 
 **CC-A3.1-5 (Runtime-free method).** Dated runs, timestamps, telemetry, logs, and work-result records belong to `U.Work` and associated evidence patterns or source patterns, not to the method identity.
 
@@ -6459,11 +6575,13 @@ The repair is the same in each case: recover the `U.Method` slot when the semant
 
 **CC-A3.1-9 (Graph and representation guard).** A graph path, path slice, query, predicate, table, dashboard, publication face, or pattern relation is not a method or work sequence by layout. Use `C.2.P.DR` when representation wording is overread as imperative action.
 
-**CC-A3.1-10 (Method relation structure and work composition distinction).** Method composition, method-family selection, fallback, refinement, substitution, iteration, decomposition, and work-occurrence composition must stay separate even when they correspond. When method-side relations are current, recover `MethodRelationStructure@BoundedContext`; algebraic, graph, categorical, process-calculus, effect-calculus, matrix, embedding, distributed, or neural notation is a lens or representation over that structure unless a governing pattern states a different object by value.
+**CC-A3.1-10 (Method holon, method relation structure, and work composition distinction).** Method-holon composition, method-family selection, fallback, refinement, substitution, iteration, decomposition, and work-occurrence composition must stay separate even when they correspond. When submethods are assembled into a whole method, govern the result as `U.Method` with `B.1.5` when order-sensitive composition is current. A step label, step description, order edge, work-plan item, event-log segment, telemetry interval, engine stroke label, detector component, or graph node is not a submethod until it is recovered as a `U.Method` with method-level preconditions, effects, interface or boundary, and whole-method relation. A temporal work part may enact the same whole method during a slice, and an episode may split continuity without changing method identity. When method-side relations are current without whole-method assembly, recover `MethodRelationStructure@BoundedContext`. Algebraic, graph, categorical, process-calculus, effect-calculus, matrix, embedding, distributed, or neural notation is a lens or representation over the selected method object or method relation structure unless a governing pattern states a different object by value.
 
-**CC-A3.1-11 (Parameter and variant discipline).** Parameters may be declared at method or method-description level; concrete values are bound in work planning or work occurrence. Variant identity must be justified by effects, bounds, accepted inputs, and context.
+**CC-A3.1-11 (Practice wording recovery).** When source wording says `practice`, record the recovered claim kind before accepting a method statement: `U.Method`, method family or method relation structure, `U.MethodDescription`, `U.WorkPlan`, dated `U.Work`, role assignment or role relation, bounded context, discipline, cultural-evolution case, canon or memory episteme, recognition or selection regime, mediation system, evidence relation, source label, or quote-only wording.
 
-**CC-A3.1-12 (Evidence and assurance boundary).** A method or method description does not by itself prove that work happened, that a result is warranted for the claimed use, that a gate is passed, or that action is authorized. Those claims use the relevant evidence, assurance, gate, temporal, authority, work-plan, or work patterns.
+**CC-A3.1-12 (Parameter and variant discipline).** Parameters may be declared at method or method-description level; concrete values are bound in work planning or work occurrence. Variant identity must be justified by effects, bounds, accepted inputs, and context.
+
+**CC-A3.1-13 (Evidence and assurance boundary).** A method or method description does not by itself prove that work happened, that a result is warranted for the claimed use, that a gate is passed, or that action is authorized. Those claims use the relevant evidence, assurance, gate, temporal, authority, work-plan, or work patterns.
 
 ### A.3.1:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -6474,14 +6592,14 @@ The repair is the same in each case: recover the `U.Method` slot when the semant
 | "The graph path routes the decision." | If it is graph structure, use `E.18`; if it is overread as route or action, use `C.2.P.DR`; if a gate or authority claim is current, use the direct gate or authority pattern. |
 | "The optimization model is the process." | Recover whether the current claim is formal substrate, method description, method semantics, work plan, work, or evidence. |
 | "The protocol approval proves safe execution." | Separate publication-state claim, gate or authorization claim, evidence claim or assurance claim, work plan, and dated work. |
-| "The team is the method." | Keep holders and assignments in role assignment; keep capability in capability; keep method requirements context-local. |
+| "The team is the method." | Keep holders and assignments in role assignment; keep capability in capability; keep method admission conditions context-local. |
 
 ### A.3.1:9 - Consequences
 
 * Method-like language becomes reusable across physical, informational, organizational, and mathematical work without privileging software code or ordered instructions.
 * Teams can compare descriptions, variants, and implementations without confusing them with dated work.
 * Work planning and evidence become more reliable because a method no longer smuggles in authority, proof, schedule, or performed-work claims.
-* The cost is explicit slot recovery: when wording says "method", "algorithm", "workflow", "process", "procedure", "program", "recipe", "proof", or "solver", the user must recover which FPF object or claim position is current before relying on it.
+* The cost is explicit slot recovery: when wording says "method", "practice", "algorithm", "workflow", "process", "procedure", "program", "recipe", "proof", or "solver", the user must recover which FPF object or claim position is current before relying on it.
 
 #### A.3.1:9.1 - Lowering and refresh conditions
 
@@ -6490,11 +6608,12 @@ Lower confidence in a `U.Method` use when:
 * the text cannot state transformation or enactment kind, `EntityOfConcern`, preconditions, and intended effects;
 * the method name is only a document, repository, diagram, model, run log, team name, supplier label, or authorization claim;
 * the same typed value is assigned as both `U.Method` and `U.Mechanism` without a governing pattern admitting the dual typing;
+* practice wording has not been recovered to method, method relation structure, work, role assignment, bounded context, discipline, cultural-evolution, evidence, source label, or quote-only use before method reliance begins;
 * the first usable move requires a long related-pattern catalogue before the method slot is visible;
 * graph, path, query, table, or predicate wording is treated as ordered execution without `C.2.P.DR` recovery;
 * a later `U.MethodDescription`, `U.WorkPlan`, `U.Work`, `U.Mechanism`, `C.29`, `E.18`, or evidence pattern changes the slot relation on which the method statement relied.
 
-The smallest useful repair is usually local: rewrite the method statement, split the neighboring value into its governing pattern, or add one `ClaimBoundary` line. Reopen the wider method family only when repeated project material shows that `U.Method`, `U.MethodDescription`, `U.WorkPlan`, `U.Work`, `U.Mechanism`, formal substrate, or mathematical-lens use can no longer be separated by the current slot rules.
+The smallest useful repair is usually local: rewrite the method statement, split the neighboring value into its governing pattern, or add one `ClaimBoundary` line. Reopen the wider method family only when repeated project material shows that `U.Method`, `U.MethodDescription`, `U.WorkPlan`, `U.Work`, `U.Mechanism`, formal substrate, role assignment, bounded context, discipline, cultural-evolution material, evidence, or mathematical-lens use can no longer be separated by the current slot rules.
 
 ### A.3.1:10 - Rationale
 
@@ -6511,12 +6630,12 @@ The distinction between method and mechanism is especially important because the
 | Current graph and equivalence representation work | Tiurin, Barrett, Ghica, and Hu, "Equivalence Hypergraphs: DPO Rewriting for Monoidal E-Graphs", arXiv:2406.15882, v2 revised 2025-05-20. | Adapt: graph, query, equivalence, and rewrite structures can be representations without being ordered instructions. | Graph path, query, and table overreads are repaired with `C.2.P.DR` unless a direct graph, method, work, evidence, or gate claim is recovered. |
 | Historical declarative versus imperative programming contrasts | Codd 1970; Kowalski 1979; Selinger et al. 1979; van der Aalst, Pesic, and Schonenberg 2009; Van Roy and Haridi 2004; Deutsch 2013; Deutsch and Marletto 2015. | Reject as current SoTA; retain only as lineage and regression contrast. | Older slogans such as "declarative versus imperative" are used only as recognition cues; the repair recovers FPF kind and slot. |
 
-Refresh this pattern when current work on constructor theory, process theory, effect systems, process modeling, graph and equivalence representations, or FPF's own method, work, and mechanism patterns changes the governing distinction among method, method description, formal substrate, mechanism, work plan, dated work, and evidence.
+Refresh this pattern when current work on constructor theory, process theory, effect systems, process modeling, practice theory, cultural-evolution work, graph and equivalence representations, or FPF's own method, work, role, discipline, and mechanism patterns changes the governing distinction among method, method description, formal substrate, mechanism, role assignment, work plan, dated work, cultural-evolution material, and evidence.
 
 ### A.3.1:12 - Relations
 
 * **Builds on:** `A.1` holonic foundation, `A.1.1 U.BoundedContext`, `A.2` role, `A.2.1 U.RoleAssignment`, `A.2.2 U.Capability`.
-* **Coordinates with:** `A.3.2` for method descriptions and method-relation descriptions; `A.3.3` for dynamics; `A.6.0` for formal-substrate declarations; `A.6.1` and `E.20` for mechanism claims; `C.29` for mathematical-lens use; `G.5` for method-family registries and selector outcomes; direct method-composition patterns such as `B.1.5` when order-sensitive method composition is current; `A.15.2` for work plans; `A.15.1` for dated work; `A.10` for evidence relations or provenance relations; `C.2.P.DR` for declarative representations overread as imperative routes or work sequences.
+* **Coordinates with:** `A.3.2` for method descriptions and method-relation descriptions; `A.3.3` for dynamics; `A.6.0` for formal-substrate declarations; `A.6.1` and `E.20` for mechanism claims; `C.29` for mathematical-lens use; `G.5` for method-family registries and selector outcomes; direct method-composition patterns such as `B.1.5` when order-sensitive method composition is current; `A.1.1` for bounded-context meanings hidden by practice wording; `A.2`, `A.2.1`, and `A.2.7` for role values, role assignments, and role relations hidden by practice wording; `A.15.2` for work plans; `A.15.1` for dated work; `C.20`, `C.36`, and `C.36.P` for discipline and cultural-evolution practice wording; `A.10` for evidence relations or provenance relations; `C.2.P.DR` for declarative representations overread as imperative routes or work sequences.
 * **Informs:** `E.18` and `E.18.1` when transformation-flow-structure or P2W wording must keep flow-structure descriptions, graph/path mathematical expressions, method claims, and work claims separate.
 
 ### A.3.1:End
@@ -6670,6 +6789,8 @@ If the source turns a graph path, evidence path, query plan, predicate, checklis
 #### A.3.2:4.8 - Method-relation descriptions and algebra lenses
 
 A method description may describe not only one `U.Method`, but also a selected `MethodRelationStructure@BoundedContext`: the relation structure by which methods or method families compose, refine, substitute, iterate, dispatch, or fall back in one bounded context.
+
+Description nodes, workflow boxes, code blocks, proof-script blocks, diagram paths, and table rows are representation constituents. They do not become method parts by position in the description. A node can participate in method-holon composition only after the recovered object is itself a `U.Method` value governed by `A.3.1` and, when order-sensitive composition is current, `B.1.5`.
 
 Keep the positions separate:
 
@@ -21237,30 +21358,30 @@ A.14 exists because part-whole words carry identity, aggregation, measure, time,
 
 **At a glance.** This pattern is the enactment-alignment pattern for engineer-managers when the real confusion is not "what component is this" but `who is responsible`, `how the work is supposed to happen`, `when the plan applies`, and `what actually happened`.
 
-**Use this when.** Use this pattern when the real job is to separate role, method, plan, capability, and actual work before a team treats one cue, one schedule, one display, one copied or generated statement, or one document as if it already counted as the role assignment, the method, the work plan, execution evidence, or the work itself.
+**Use this when.** Use this pattern when the real job is to separate role, method, plan, holder `U.Capability` instance, any capability statement or currentness assessment relied on, capability-fit checks, and performed work before a team treats one cue, one schedule, one display, one copied or generated statement, or one document as if it already counted as the role assignment, the method, the work plan, execution evidence, or the work itself.
 
-**Start here when.** The dominant ambiguity is role vs method vs schedule vs actual run, and the team keeps arguing over a source-side "process" cue without separating recipe, plan, capability, and executed work.
+**Start here when.** The dominant ambiguity is role vs method vs schedule vs performed work occurrence, and the team keeps arguing over a source-side "process" cue without separating recipe, plan, capability, and executed work.
 
-**First output.** One explicit separation of `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work`, plus the shortest traceable chain that already exists from `U.RoleAssignment` through the governing `U.Method` and its method-description source to the intended `U.WorkPlan` or actual `U.Work` occurrence, or an explicit source gap that blocks admission of the claim.
+**First output.** One explicit separation of `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work`, plus the shortest traceable chain that already exists from `U.RoleAssignment` through the governing `U.Method` and its method-description source to the intended `U.WorkPlan` or dated performed `U.Work` occurrence, or an explicit source gap that blocks admission of the claim.
 
-**Working enactment-alignment spine.** Role, method, plan, and work confusion -> separate role, holder, bounded context, method description, intended `U.WorkPlan`, and actual `U.Work` -> choose proceed, plan, bounded probe, narrow, apply the direct governing pattern for any non-A.15 claim, or stop -> output the smallest alignment frame needed for the next work-family use -> use `A.15.4` only when an encountered episteme publication, display, credential view, explanation, copied statement, provenance mark, dashboard tile, schema wording, API wording, or composed source chain begins to carry or justify a work claim or reliance claim.
+**Working enactment-alignment spine.** Role, method, plan, and work confusion -> separate role, holder, bounded context, method description, intended `U.WorkPlan`, and dated performed `U.Work` -> choose proceed, plan, bounded probe, narrow, apply the direct governing pattern for any non-A.15 claim, or stop -> output the smallest alignment frame needed for the next work-family use -> use `A.15.4` only when an encountered episteme publication, display, credential view, explanation, copied statement, provenance mark, dashboard tile, schema wording, API wording, or composed source chain begins to carry or justify a work claim or reliance claim.
 
 **Working alignment applications.**
 1. Name the role, holder, and context distinction under repair.
 2. Name the method or method description that is meant to govern the work.
-3. Name the intended `U.WorkPlan` or actual `U.Work` occurrence being claimed.
+3. Name the intended `U.WorkPlan` or dated performed `U.Work` occurrence being claimed.
 4. Choose the next governed use: proceed inside the recovered relation, plan, run a bounded reversible probe, narrow scope, apply the governing FPF pattern and project-side FPF kind and reference named by value for the claim or effect being made, or stop.
 5. If an encountered source candidate or display is being used by appearance for a work claim, reliance claim, or source-restoration claim, apply `A.15.4 Work-Relevant Source Restoration` to that source-restoration claim; keep `A.15` only for the `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work` separation.
 
-**Action-pattern protection.** This pattern is not about classifying encountered publications, displays, or cues. It keeps role, method, plan, capability, and actual work distinct so the acting engineer-manager can choose the next admissible work-family or reliance use. Work-relevant source restoration is handled by the related `A.15.4` cluster member.
+**Action-pattern protection.** This pattern is not about classifying encountered publications, displays, or cues. It keeps role, method, plan, holder `U.Capability` instance, separately governed capability-support records and relations, capability-fit checks, and performed work distinct so the acting engineer-manager can choose the next admissible work-family or reliance use. Work-relevant source restoration is handled by the related `A.15.4` cluster member.
 
 **Minimum sufficient governed use.** Choose the minimum sufficient governed use, recover only the project-side FPF kind and reference named by value needed for that use, and do not raise the claim beyond that recovered relation, source, or admissible-use boundary.
 
 **Recovered-source sufficiency condition.** If the required project-side FPF kind and reference named by value is present and its scope and window match the role, method, plan, or work-family claim under repair, proceed inside that recovered scope and window. If not, narrow scope, run a bounded reversible probe, source-find, or create only the smallest source-restoration request, decision-request record, prospective work-plan entry, source-gap note, or missing-source admission block needed for the next governed use.
 
-**Ordinary use.** If the team only needs to separate role, method, plan, capability, and actual work for orientation or planning, one separation sentence or small working card is enough.
+**Ordinary use.** If the team only needs to separate role, method, plan, holder `U.Capability` instance, capability-fit checks, and performed work for orientation or planning, one separation sentence or small working card is enough.
 
-**Reliance-bearing use.** Use the fuller alignment frame when an encountered source candidate or display is about to guide planned work, actual work, role attribution, role-state attribution, release reliance, disputed responsibility, or cross-context use. Use `A.15.4` when the issue under repair is whether that source candidate exposes the project-side FPF kind and reference named by value needed for that work claim or reliance claim.
+**Reliance-bearing use.** Use the fuller alignment frame when an encountered source candidate or display is about to guide planned work, performed work, role attribution, role-state attribution, release reliance, disputed responsibility, or cross-context use. Use `A.15.4` when the issue under repair is whether that source candidate exposes the project-side FPF kind and reference named by value needed for that work claim or reliance claim.
 
 **Stop condition.** Stop once the separation changes no next admissible work-family use or reliance use and blocks no concrete overclaim about role, role-state, method, plan, work, approval, evidence, or release.
 
@@ -21272,9 +21393,9 @@ A.14 exists because part-whole words carry identity, aggregation, measure, time,
 
 **Alignment frame in plain terms.** One alignment frame linking `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work` through `U.RoleAssignment`; not a single work occurrence, not a checklist, not a language-style repair pattern, and not a mere cue note.
 
-**First admissible work-family use in plain terms.** Keep design-time role, method, and work plan distinct from run-time work while making the chain between them inspectable enough for enactment, audit, and source restoration.
+**First admissible work-family use in plain terms.** Keep role value, holder assignment, semantic method, method-description source, intended work plan, and dated performed work distinct while making the chain between them inspectable enough for enactment, audit, and source restoration.
 
-**What goes wrong if missed.** Teams collapse role, recipe, plan, capability, and actual run into one fuzzy source-side "process" label, then mistake documentation for execution, capability for evidence, schedule for occurrence, or a narrower briefing for the source that makes work admissible.
+**What goes wrong if missed.** Teams collapse role, recipe, plan, capability, and performed work occurrence into one fuzzy source-side "process" label, then mistake documentation for execution, capability for evidence, schedule for occurrence, or a narrower briefing for the source that makes work admissible.
 
 **What this buys.** One inspectable enactment frame that lets a team ask who held what role, which method governed, what plan existed, and what work actually occurred before treating follow-on work, blame, or approval as if those distinctions were the same.
 
@@ -21292,18 +21413,18 @@ A.14 exists because part-whole words carry identity, aggregation, measure, time,
 
 ### A.15:1 - Problem frame
 
-In any complex system, from a software project to a biological cell, there is a fundamental distinction between **what something is** (its structure), **what it is supposed to do** (its role and specified capability), and **what it actually does** (its work). Confusing these distinctions is a primary source of design flaws, budget overruns, and failed projects. Teams argue over a source-side "process" cue without clarifying whether the FPF object under repair is a `U.Method`, a `U.MethodDescription`, a `U.Capability`, a `U.WorkPlan`, or a specific `U.Work` occurrence that happened last Tuesday.
+In any complex system, from a software project to a biological cell, there is a fundamental distinction between **what something is** (its structure), **what a holder is being in context** (role value and `U.RoleAssignment`), **how work is done** (`U.Method` and `U.MethodDescription`), **which holder `U.Capability` instance is relied on** (`A.2.2`), **which statement, evidence relation, or currentness assessment supports that reliance**, **which separate capability-fit, threshold, gate, or admission check is applied when fit is current**, **what work is intended** (`U.WorkPlan`), and **what dated work occurred** (`U.Work`). Confusing these distinctions is a primary source of design flaws, budget overruns, and failed projects. Teams argue over a source-side "process" cue without clarifying whether the FPF object under repair is a `U.Method`, a `U.MethodDescription`, a holder `U.Capability` instance, a statement about that instance, a separate capability-fit condition, a `U.WorkPlan`, or a specific `U.Work` occurrence that happened last Tuesday.
 
-This pattern provides the canonical alignment for modeling contextual enactment in FPF. It applies the **Strict Distinction Principle (A.7)** to the passage from intended work to planned and actual `U.Work`, without making A.15 the whole strict-distinction ontology. It weaves together current governing relations into a single, coherent model:
-*   **A.2 and A.2.1:** Provide `U.Role` values and `U.RoleAssignment` as the typed work-facing assignment relation with holder, role, bounded-context, window, and justification slots governed through A.6.5-style slot discipline.
+This pattern provides the canonical alignment for modeling contextual enactment in FPF. It applies the **Strict Distinction Principle (A.7)** to the passage from holder-in-role assignment and selected method to intended `U.WorkPlan` and dated performed `U.Work`, without making A.15 the whole strict-distinction ontology. It weaves together current governing relations into a single, coherent model:
+*   **A.2 and A.2.1:** Provide enactment-facing `U.Role` values and `U.RoleAssignment` as the typed assignment relation with holder, role, bounded-context, window, and justification slots governed through A.6.5-style slot discipline.
 *   **A.15.2 and A.15.1:** Separate `U.WorkPlan` intent windows from dated `U.Work` occurrences.
 *   **A.3.1 and A.3.2:** Separate `U.Method` from `U.MethodDescription`, so recipes, algorithms, procedures, and source-side "process" cues do not become performed work by word choice.
 *   **A.3.4:** Provides `U.Transformation` for bounded change under conditions when the actual change, affected entity, pre/post state, mechanism, method, or work relation is current.
 *   **A.10, C.2.1, and E.17:** Keep evidence, source, publication, and carrier relations outside the work-facing role assignment unless a system or acting holon is actually assigned a role for performed work.
 
-The intent of this pattern is to establish a normative, unambiguous vocabulary and set of relations for describing the passage from role and method capability to planned and actual, resource-consuming `U.Work`.
+The intent of this pattern is to establish a normative, unambiguous vocabulary and set of relations for connecting holder-in-role assignment, recovered method, method-description source, holder `U.Capability` instances when relied on, separate capability statements or currentness assessments when those are used, separate capability-fit conditions when current, intended work plan, and dated resource-consuming `U.Work`.
 
-To keep plan-run separation explicit, this pattern references **A.15.2 `U.WorkPlan`** for **schedules and calendars** and **A.15.1 `U.Work`** for **dated execution**. Ambiguous source terms like "process", "workflow", "activity", and "schedule" are handled by `E.10` and `E.10.ARCH`: recover the project concern first, then assign the source cue to `U.Method`, `U.MethodDescription`, `U.WorkPlan`, `U.Work`, or another direct governing pattern.
+To keep plan-occurrence separation explicit, this pattern references **A.15.2 `U.WorkPlan`** for **schedules and calendars** and **A.15.1 `U.Work`** for **dated execution**. Ambiguous source terms like "process", "workflow", "activity", and "schedule" are handled by `E.10` and `E.10.ARCH`: recover the project concern first, then assign the source cue to `U.Method`, `U.MethodDescription`, `U.WorkPlan`, `U.Work`, or another direct governing pattern.
 
 **Terminology note.** The words _action_ and _activity_ are not normative kernel names by themselves. When a generic "doing" cue appears, recover the FPF kind being claimed: **`U.Method`**, **`U.MethodDescription`**, **`U.Work`**, **`U.WorkPlan`**, or a neighboring governed value such as `U.Transformation`, `U.Dynamics`, evidence, gate, source, or publication use.
 
@@ -21314,15 +21435,15 @@ Without this formal framework, models suffer from a cascade of category errors:
 1.  **Role-as-Part:** A Role (e.g., `AuditorRole`) is incorrectly placed inside a structural parts list (`ComponentOf`), making the system's architecture brittle and nonsensical.
 2.  **Specification-as-Execution:** A `MethodDescription` (the "recipe") is treated as evidence that the work was done. This leads to "paper compliance," where a system is considered complete simply because its documentation exists.
 3.  **Capability-as-Work:** A team's *ability* to perform a task (`Capability`) is conflated with the *actual performance* of that task (`Work`). This obscures the reality of resource consumption and actual outcomes.
-4.  **Work-without-Context:** An instance of work is logged without a clear link back to the role, capability, and specification that governed it, making the work unauditable and its results impossible to reproduce.
-5.  **Ambiguous source-side "process" or "activity" cue:** The overloaded term "process" is used indiscriminately to refer to all of the above, creating a fog of miscommunication. Repair generic doing or activity terms through `E.10` and `E.10.ARCH` to `U.Method`, `U.MethodDescription` (recipe), `U.WorkPlan` (schedule), `U.Work` (run), or another direct governing pattern.
+4.  **Work-without-Context:** An instance of work is logged without a clear link back to the role assignment, recovered method, method-description source, and capability-fit or admission condition that made it admissible, making the work unauditable and its results impossible to reproduce.
+5.  **Ambiguous source-side "process" or "activity" cue:** The overloaded term "process" is used indiscriminately to refer to all of the above, creating a fog of miscommunication. Repair generic doing or activity terms through `E.10` and `E.10.ARCH` to `U.Method`, `U.MethodDescription` (recipe), `U.WorkPlan` (schedule), `U.Work` (performed occurrence), or another direct governing pattern.
 
 ### A.15:3 - Forces
 
 | Force | Tension |
 | :--- | :--- |
-| **Structure vs. Contextual Enactment** | The need to model stable structural decomposition (`mereology`) vs. the need to model holder-in-role assignment, capability expectation, method, plan, and dated work occurrence. |
-| **Design vs. Run** | The need for a timeless, reusable description of a capability (`design-time`) vs. the need for a specific, dated record of its execution (`run-time`). |
+| **Structure vs. Contextual Enactment** | The need to model stable structural decomposition (`mereology`) vs. the need to model holder-in-role assignment, holder capability instances, capability support relations, capability-fit conditions, method, plan, and dated work occurrence. |
+| **Method, plan, and occurrence** | The need for reusable method and description values, intended-work planning, and a specific dated record of performed work. |
 | **Clarity vs. Jargon** | The need for a precise, formal vocabulary to prevent ambiguity vs. the reality that teams use informal, domain-specific source cues like "process" or "workflow." |
 | **Accountability vs. Complexity** | The need for a complete, end-to-end audit trail for every decision-relevant work occurrence vs. the desire to keep models simple and avoid excessive documentation. |
 
@@ -21332,26 +21453,26 @@ Without this formal framework, models suffer from a cascade of category errors:
  When a source-side "process", "algorithm", "solver", "workflow", "procedure", or similar label points to changing, producing, selecting, deriving, controlling, or maintaining an `EntityOfConcern`, use `E.10.ARCH:3.1` to recover the project concern first and then assign separately governed typed values. A.15 carries only the alignment among role, method, method-description, work-plan, and performed-work references. Formal substrate, mathematical-lens use, mechanism declaration or realization, evidence, gate, source, result, publication, and temporal claims are governed by their own patterns.
 
 When methods are related to one another, A.15 keeps only the alignment use of that relation. The method-side object is `MethodRelationStructure@BoundedContext` under `A.3.1`, `A.3.2`, `G.5`, or a direct method-composition pattern when current. A method algebra, workflow graph, process calculus, matrix, category, embedding, or neural representation is a lens or method description over that structure, not a role relation, work plan, dated work occurrence, or assignment relation.
-The solution is a stratified alignment that cleanly separates the `design-time` and `run-time` for contextual **enactment**. The bridge between these worlds is the **`U.RoleAssignment`**.
+The solution is a stratified alignment that cleanly separates semantic method, method-description source, holder-in-role assignment, holder `U.Capability` instances when relied on, separate capability statements or currentness assessments when those are used, separate capability-fit conditions when current, intended work plan, and dated performed work. The work-facing assignment relation is **`U.RoleAssignment`**.
 
 #### A.15:4.1 - The Core Entities: A Strict Distinction
 
 FPF mandates the use of the following distinct, non-overlapping entities to model method, plan, and work enactment. Using them interchangeably is a conformance violation.
 
-**A) Design-Time Entities (The World of Potential):**
+**A) Method, Description, Capability, And Plan Values:**
 
-*   **`U.Role`:** A contextual "mask" or "job title" (e.g., `TesterRole`). It specifies expected contribution or responsibility in a bounded context; it is not the holder, method, capability, work plan, or work occurrence.
+*   **`U.Role`:** A context-bound role value naming what a holder is being in a bounded context. Expected contribution, responsibility, permission, commitment, obligation, capability-fit, and admission conditions are neighboring relations governed by their direct patterns; the role value is not the holder, method, capability, work plan, or work occurrence.
 *   **`U.Method`:** The **abstract way-of-doing** inside a context (paradigm-agnostic; may be imperative, functional, logical, or hybrid).
 *   **`U.MethodDescription`:** A **`U.Episteme` describing a `U.Method`**; it may be expressed in an SOP, algorithm, proof, recipe, or other method-description publication.
-*   **`U.Capability`:** An **attribute** of a `U.System` that represents its **ability** to enact the declared `U.Method` under stated conditions. A `MethodDescription` may describe that method; the capability is not the description and not the work occurrence.
+*   **`U.Capability`:** The `A.2.2` admitted dependent durable U-kind for holder-dependent capability instances. A concrete instance is a `U.System` holder's ability to perform a work family or produce a result class within a declared envelope, measure set, qualification window, and currentness condition. A `CapabilityStatement`, evidence relation, source-use relation, or currentness assessment may support relying on that instance; a capability-fit condition may test it. The capability instance is not the method, method description, support record, fit predicate, work plan, or work occurrence.
 *   **`U.WorkPlan`:** An **`U.Episteme`** declaring **intended `U.Work` occurrences** (windows, dependencies, intended performers as role kinds, budgets) - see **A.15.2**.
 
 **B) The Bridge Entity:**
-*   **`U.RoleAssignment`:** The typed work-facing assignment relation that links a holder system or acting holon, a `U.Role`, a `U.BoundedContext`, any current window, and justification or source references when they matter.
+*   **`U.RoleAssignment`:** The typed assignment relation for enactment-facing roles. It links a holder system or acting holon, a `U.Role`, a `U.BoundedContext`, any current window, and justification or source references when they matter.
 
-**C) Run-Time Entity (The World of Actuality):**
+**C) Performed Occurrence:**
 
-*   **`U.Work`:** An **occurrence** or **event**. It is the concrete, dated, resource-consuming enactment or execution of a `U.Method` by a `Holder` acting under a `U.RoleAssignment`; capability checks are evaluated at run time against the holder, and `methodDescriptionRef` names the source episteme used to identify or constrain the method when that source is being used for the work claim. This is the only entity that has a start and end time and consumes resources.
+*   **`U.Work`:** An **occurrence** or **event**. It is the concrete, dated, resource-consuming enactment or execution of a `U.Method` by a holder under a `U.RoleAssignment`; capability-fit checks are evaluated against that holder for the occurrence, and `methodDescriptionRef` names the source episteme used to identify or constrain the method when that source is being used for the work claim. This is the only value in this alignment that has a start and end time and consumes resources.
 
 **Kinds of Work and the primary target**
 
@@ -21369,7 +21490,7 @@ This model can be easily understood using the analogy of a chef in a restaurant.
 
 *   **`ChefRole`** is the **Role**. It's a job title with certain expectations.
 *   A **Cookbook (`U.MethodDescription`)** contains the **recipe** for a Souffle. It's a piece of knowledge.
-*   The chef's **skill** in making souffles is their **`U.Capability`**. They have this skill even when they are not cooking.
+*   The chef's **skill** in making souffles is their **`U.Capability`** instance. They have this skill even when they are not cooking, while a certificate or review about the skill is a separate support record.
 *   The restaurant's rulebook (`U.BoundedContext`) states that a holder assigned to `ChefRole` needs the capability to follow the recipes in the cookbook before the relevant cooking work is admitted.
 *   The actual act of **making a souffle** on Tuesday evening - using eggs and butter, taking 25 minutes, and consuming gas - is the **`U.Work`**.
 
@@ -21381,17 +21502,19 @@ The entities are connected by precise, normative relations that form a traceable
 
 ```mermaid
 graph TD
-    subgraph Design-Time Scope (Tᴰ)
+    subgraph Method, Role, and Plan Scope
         A[U.BoundedContext] -- defines --> B(U.Role)
         M[U.Method] -- isDescribedBy --> D[U.MethodDescription]
-        Cap[U.Capability] -- is capability for --> M
+        Cap[U.Capability instance] -- ability-for method family --> M
+        Fit[CapabilityFitCondition] -- tests declared measures of --> Cap
+        Fit -- may cite --> Q[U.Characteristic value, Q-Bundle slot, or architecture-characteristic row]
         H(U.System as Holder) --> RB(U.RoleAssignment)
         B -- is the role in --> RB
         A -- is the context for --> RB
-        A -- bindsCapability(Role,Capability) --> Cap
+        A -- declares work-admission condition --> Fit
     end
 
-    subgraph Run-Time Scope (Tᴿ)
+    subgraph Performed Work Occurrence
         W[U.Work]
     end
 
@@ -21401,6 +21524,8 @@ graph TD
     style A fill:#e6f3ff,stroke:#36c,stroke-width:2px
     style B fill:#fff2cc,stroke:#d6b656,stroke-width:2px
     style Cap fill:#d5e8d4,stroke:#82b366,stroke-width:2px
+    style Fit fill:#d5e8d4,stroke:#82b366,stroke-width:2px,stroke-dasharray: 4 4
+    style Q fill:#fff2cc,stroke:#d6b656,stroke-width:2px,stroke-dasharray: 4 4
     style M fill:#d5e8d4,stroke:#82b366,stroke-width:2px
     style D fill:#f8cecc,stroke:#b85450,stroke-width:2px
     style H fill:#e1d5e7,stroke:#9673a6,stroke-width:2px
@@ -21408,14 +21533,14 @@ graph TD
     style W fill:#ffe6cc,stroke:#d79b00,stroke-width:2px,font-weight:bold
 ```
 
-*   **`bindsCapability(Role, Capability)`:** A `U.BoundedContext` asserts that a given `Role` requires a specific `Capability`. This is a `design-time` rule.
+*   **Capability-fit condition:** A bounded context, method-description source, work plan, or work-admission rule may state that the holder under a `U.RoleAssignment` must satisfy a capability threshold or envelope for a method or work claim. The fit condition tests the holder's `U.Capability` instance and may cite declared capability measures, `U.Characteristic` values, Q-Bundle slots, or architecture-characteristic criteria rows. The role value does not own the capability, the support record does not become the capability, and the fit condition is not a second capability kind.
 *   **`isDescribedBy(Method, MethodDescription)`:** A `U.Method` is formally described by one or more `MethodDescription`s. This links the abstract way-of-doing to the method-description episteme and to the publication used when that source is being used for the method claim.
-*   **`enactsMethod(Work, Method)`:** A specific `U.Work` is a run-time enactment of a `U.Method` under a `U.RoleAssignment`. Capability checks are evaluated against the holder at run time; the `MethodDescription` remains the source episteme or method-description reference used to identify, constrain, or justify the method when that source is being used for the work claim.
+*   **`enactsMethod(Work, Method)`:** A specific `U.Work` is a dated performed enactment of a `U.Method` under a `U.RoleAssignment`. Capability-fit checks are evaluated against the holder for that occurrence; the `MethodDescription` remains the source episteme or method-description reference used to identify, constrain, or justify the method when that source is being used for the work claim.
 *   **`performedBy(Work, RoleAssignment)`:** A `U.Work` is performed by the holder named through a specific `U.RoleAssignment`. This links the work occurrence to the holder-in-role-in-context.
 
-_At run time, capability thresholds declared by the context or specification are **checked** against the holder; `U.Work` outcomes provide **evidence** for capability conformance._
+For a performed occurrence, capability thresholds declared by the context, method-description source, work plan, or work-admission rule are **checked** against the holder; `U.Work` outcomes provide **evidence** for capability conformance only through the governing evidence or evaluation relation.
 
-This chain provides complete traceability: a specific instance of `U.Work` can be traced back to the `U.Method` it enacts, the `MethodDescription` or source publication used to identify or constrain that method, and the `U.RoleAssignment` relation whose holder, role, bounded-context, and current-window slots make the work-facing assignment explicit.
+This chain provides complete traceability: a specific instance of `U.Work` can be traced back to the `U.Method` it enacts, the `MethodDescription` or source publication used to identify or constrain that method, and the `U.RoleAssignment` relation whose holder, role, bounded-context, and current-window slots make the holder-in-role admission explicit.
 
 #### A.15:4.3 - Bounded specialization scouting and `CheckpointReturn`
 
@@ -21431,15 +21556,15 @@ Every `CheckpointReturn` carries:
 - the recommended next work-family use or reliance use: continue probing, commit to planned work, narrow the method or claim, apply the direct governing pattern for a non-A.15 claim, or stop
 - the commit trigger named by value that would justify leaving the bounded probe
 
-The return is candidate-approach evidence, burned and residual budget amounts, observed result, and commit-trigger condition. It is not the selected method, `U.WorkPlan`, performed `U.Work`, execution evidence/provenance relation, or rollout decision. Those claims need the project-side FPF kind and reference named by value before committed rollout.
+The return is candidate-approach evidence, burned and residual budget amounts, observed result, and commit-trigger condition. It is not the selected method, `U.WorkPlan`, performed `U.Work`, execution evidence relation, evidence-provenance relation, or rollout decision. Those claims need the project-side FPF kind and reference named by value before committed rollout.
 
-Low-human-overlap approaches remain admissible here only while they stay tied to the declared outcome criterion, budget limits, and evidence/provenance relation by value.
+Low-human-overlap approaches remain admissible here only while they stay tied to the declared outcome criterion, budget limits, and evidence relation or evidence-provenance relation by value.
 
 #### A.15:4.4 - Boundary to A.15.4 Work-Relevant Source Restoration
 
 Use `A.15.4` when an encountered episteme, episteme publication, display, credential view, generated explanation, copied statement, provenance mark, dashboard tile, schema wording, API wording, or composed source chain is being used by appearance for a work claim, reliance claim, role-assignment currentness claim, role-state currentness claim, source-currentness claim, approval, authorization, gate passage, evidence, engineering justification, release reliance, or performed `U.Work`.
 
-`A.15` itself keeps the kernel separation: `U.Role`, holder, context, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, actual `U.Work`, and the `U.RoleAssignment` chain between them. The source-restoration question recovers the project-side FPF kind and reference named by value before the encountered source candidate or display can carry the work claim, reliance claim, or effect claim being made; that question belongs to `A.15.4` or to the source-restoration pattern governing that reliance named there.
+`A.15` itself keeps the kernel separation: `U.Role`, holder, context, `U.Method`, `U.MethodDescription`, `U.WorkPlan`, dated performed `U.Work`, and the `U.RoleAssignment` chain between them. The source-restoration question recovers the project-side FPF kind and reference named by value before the encountered source candidate or display can carry the work claim, reliance claim, or effect claim being made; that question belongs to `A.15.4` or to the source-restoration pattern governing that reliance named there.
 
 A principle scheme, functional diagram, scenario, screen, or explanation that makes an `E.18.1` P2W carry-through structure recoverable may help the team plan work or find the needed source.
 
@@ -21455,16 +21580,16 @@ The role-method-work alignment applies whenever the question under repair is hol
 
 | Archetype | **`U.System` Archetype (Manufacturing)** | **`U.Episteme` Archetype (Scientific Peer Review)** |
 | :--- | :--- | :--- |
-| **`BoundedContext`** | `FactoryFloor:ProductionLine_B` | `Journal:PhysicsLetters_A` |
-| **`Role`** | `WeldingRobotRole` | `PeerReviewRole` |
+| **`U.BoundedContext`** | `FactoryFloor:ProductionLine_B` | `Journal:PhysicsLetters_A` |
+| **`U.Role`** | `WeldingRobotRole` | `PeerReviewRole` |
 | **`Holder`** | `ABB_Robot_Model_IRB_6700` (`U.System`) | `Dr_Alice_Smith` (modeled as a `U.System`) |
 | **`U.RoleAssignment`** | assignment with holder slot `ABB_Robot_Model_IRB_6700`, role slot `WeldingRobotRole`, context slot `Line_B`, and current-window slots and source-reference slots when they matter | assignment with holder slot `Dr_Alice_Smith`, role slot `PeerReviewRole`, context slot `PhysicsLetters_A`, and current-window slots and source-reference slots when they matter |
-| **`MethodDescription` (`U.Episteme`)** | `Welding_Procedure_WP-28A.pdf` (SOP) | `Peer_Review_Guidelines_v3.docx` |
-| **`Capability` (Attribute of Holder)** | `executeWeldingSeam(Type: 3F)` | `evaluateManuscript(Field: QuantumOptics)` |
-| **`Work` (`Occurrence`)** | Manufacturing Work: `Weld_Job_#78345` (15:32-15:34 UTC, consumed 1.2 kWh, 5g Argon) - **enactsMethod** `WeldingMethod`, with `methodDescriptionRef = Welding_Procedure_WP-28A.pdf` | Peer-review Work: `Review_of_Manuscript_#PL-2025-018` (Completed 2025-08-15, took 4 hours) - **enactsMethod** `PeerReviewMethod`, with `methodDescriptionRef = Peer_Review_Guidelines_v3.docx` |
+| **`U.MethodDescription`** | `Welding_Procedure_WP-28A.pdf` (SOP) | `Peer_Review_Guidelines_v3.docx` |
+| **`U.Capability` instance of holder** | `executeWeldingSeam(Type: 3F)` within declared envelope, measures, and currentness condition | `evaluateManuscript(Field: QuantumOptics)` within declared envelope, measures, and currentness condition |
+| **`U.Work` occurrence** | Manufacturing work: `Weld_Job_#78345` (15:32-15:34 UTC, consumed 1.2 kWh, 5g Argon) - **enactsMethod** `WeldingMethod`, with `methodDescriptionRef = Welding_Procedure_WP-28A.pdf` | Peer-review work: `Review_of_Manuscript_#PL-2025-018` (completed 2025-08-15, took 4 hours) - **enactsMethod** `PeerReviewMethod`, with `methodDescriptionRef = Peer_Review_Guidelines_v3.docx` |
 
 **Key takeaway from grounding:**
-This side-by-side comparison reveals the power of the framework. A seemingly different activity like welding a car chassis and reviewing a scientific paper are shown to have the same underlying enactment structure. Both involve a `Holder` (a system) acting in a `Role` within a `Context`, using a `Capability` to enact a `U.Method`, citing a `MethodDescription` when a recipe or source is used to identify or constrain the method, and producing a specific, auditable instance of `Work`. This universality is what allows FPF to compare and align disparate domains without collapsing their local structure.
+This side-by-side comparison reveals the power of the framework. A seemingly different activity like welding a car chassis and reviewing a scientific paper are shown to have the same underlying enactment structure. Both involve a `Holder` (`U.System`) under `U.RoleAssignment` within a `U.BoundedContext`, a recovered `U.Method`, a holder `U.Capability` instance when a currentness assessment supports reliance on that instance, any separate capability statement used for that reliance, a separate capability-fit condition or admission check over that capability instance when fit is current for the work claim, a cited `U.MethodDescription` when a recipe or source is used to identify or constrain the method, and a specific, auditable `U.Work` occurrence. This universality is what allows FPF to compare and align disparate domains without collapsing their local structure.
 
 #### A.15:5.1.a - Briefing guides orientation, not execution
 
@@ -21478,9 +21603,9 @@ This briefing may orient the team and cue attention. If the team wants to execut
 
 **Source set.** A team has a principle scheme that shows an `E.18.1` P2W carry-through structure for a fabrication task: signature or principle episteme, method-family selection, selected method, `U.WorkPlan`, performed `U.Work`, work-result record, and result measurement.
 
-**Published slice.** `For this batch family, method M-2 is selected from the declared method family; prepare work plan WP-17 before any run is recorded.`
+**Published slice.** `For this batch family, method M-2 is selected from the declared method family; prepare work plan WP-17 before any work occurrence is recorded.`
 
-This publication may guide method inspection and work-planning preparation under `A.15`. A conforming use keeps selected method, `U.WorkPlan`, actual `U.Work`, work-result record, and result measurement distinct. If the publication is used for evidence, provenance, engineering justification, gate or constraint decision, material carrier, screen, export, OCR behavior, or publication-use, apply the governing pattern for that claim being made. If no project-side kind and reference named by value exists, create only a source-restoration request, decision-request record for the next decision, prospective work-plan entry, or explicit source-gap note.
+This publication may guide method inspection and work-planning preparation under `A.15`. A conforming use keeps selected method, `U.WorkPlan`, dated performed `U.Work`, work-result record, and result measurement distinct. If the publication is used for evidence, provenance, engineering justification, gate or constraint decision, material carrier, screen, export, OCR behavior, or publication-use, apply the governing pattern for that claim being made. If no project-side kind and reference named by value exists, create only a source-restoration request, decision-request record for the next decision, prospective work-plan entry, or explicit source-gap note.
 
 #### A.15:5.1.c - Scenario guides method selection, not performed work
 
@@ -21497,9 +21622,9 @@ Lenses tested: **Gov**, **Arch**, **Onto and Epist**, **Prag**, **Did**. Scope: 
 Bias risks and mitigations:
 
 * **Governance bias (Gov):** teams may over-treat role labels or approval displays as enough evidence that work happened.
-  *Mitigation:* keep `U.RoleAssignment`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work` distinct, and let only `U.Work` carry actuals and resource use.
-* **Architectural bias (Arch):** modelers may pull roles or capabilities into structural part hierarchies because those diagrams are already present.
-  *Mitigation:* preserve role and capability as context-bound assignment and ability values, not parts.
+  *Mitigation:* keep `U.RoleAssignment`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work` distinct, and let only `U.Work` carry performed values and resource use.
+* **Architectural bias (Arch):** modelers may pull roles, capability instances, fit predicates, or capability support records into structural part hierarchies because those diagrams are already present.
+  *Mitigation:* preserve role as a context-bound value, `U.Capability` as the `A.2.2` admitted capability instance, capability statements and currentness assessments as separately governed support relations, capability-fit as a separate checking or admission condition over that instance, and all of them outside structural part decomposition.
 * **Epistemic bias (Onto and Epist):** a documented recipe or schedule can be mistaken for proof of execution.
   *Mitigation:* require the traceability chain from `U.RoleAssignment` and `U.MethodDescription` to dated `U.Work`.
 * **Pragmatic bias (Prag):** teams may keep using one overloaded source-side "process" word because it feels faster.
@@ -21515,12 +21640,12 @@ To preserve role-method-work modeling, check the following predicates.
 | :--- | :--- | :--- |
 | **CC-A15-1 (Entity Distinction)** | Keep `U.Role`, `U.Method`, `U.MethodDescription`, `U.Capability`, `U.WorkPlan`, and `U.Work` as distinct values. | This is the core use of A.7 strict distinction for role-method-work alignment. |
 | **CC-A15-1a (Work target and kind predicate)** | A `U.Work` record satisfies `A15-WF-1`: `primaryTarget` and `kind` are present. Missing target or kind lowers the work-record conformance claim. | Keeps target and work kind enforceable as work-record predicates without RFC deontic prose. |
-| **CC-A15-2 (Temporal Scope)** | `U.Method`, `U.MethodDescription`, and `U.WorkPlan` are design-time or plan-side values; `U.Work` is the dated performed occurrence. Operational events do not mutate method descriptions or work plans. | Preserves design-time and run-time separation. |
+| **CC-A15-2 (Kind Scope)** | `U.Method` is the semantic way of doing, `U.MethodDescription` is the description episteme, `U.WorkPlan` is the intended-work episteme, and `U.Work` is the dated performed occurrence. Operational events do not mutate method descriptions or work plans. | Preserves method, description, plan, and occurrence separation. |
 | **CC-A15-3 (RoleAssignment link)** | A `U.Work` record links through `performedBy` to a `U.RoleAssignment` satisfying the governing role, holder, bounded-context, and window constraints. | Gives every work occurrence a context-bound actor without making the role act by itself. |
-| **CC-A15-4 (Traceability Chain)** | Each `U.Work` occurrence can be traced through `Work -performedBy-> RoleAssignment`, `Work -enactsMethod-> Method`, and, when a description or source is used to identify or constrain the method, `Method -isDescribedBy-> MethodDescription` or `methodDescriptionRef`. Capability checks are evaluated against the holder at run time. | Keeps auditability from occurrence back to method and the method-description source when that source is used. |
-| **CC-A15-5 (No Roles in Mereology)** | Do not place `U.Role` or `U.Capability` in a mereological `partOf` hierarchy. | Blocks role-as-part and capability-as-part mistakes. |
-| **CC-A15-6 (Resource Honesty)** | Associate resource consumption with `U.Work`, not with `U.MethodDescription`, `U.WorkPlan`, or `U.Capability`. | Keeps costs tied to actual occurrences rather than recipes, plans, or abilities. |
-| **CC-A15-7 (Plan and Run Split)** | Represent schedules and calendars as `U.WorkPlan` under A.15.2. Do not use a `U.WorkPlan` as evidence that execution occurred; only `U.Work` carries actuals. | Preserves plan-side and run-time separation and prevents schedule-as-actual drift. |
+| **CC-A15-4 (Traceability Chain)** | Each `U.Work` occurrence can be traced through `Work -performedBy-> RoleAssignment`, `Work -enactsMethod-> Method`, and, when a description or source is used to identify or constrain the method, `Method -isDescribedBy-> MethodDescription` or `methodDescriptionRef`. Capability-fit checks are evaluated against the holder's `U.Capability` instance and any declared `U.Characteristic` value, Q-Bundle slot, or architecture-characteristic input for that occurrence. | Keeps auditability from occurrence back to method, method-description source, holder capability instance, and fit condition when those are used. |
+| **CC-A15-5 (No Roles in Mereology)** | Do not place `U.Role`, `U.Capability`, separately governed capability-support records or relations, or capability-fit predicates in a mereological `partOf` hierarchy. | Blocks role-as-part, capability-as-part, support-as-part, and fit-predicate-as-part mistakes. |
+| **CC-A15-6 (Resource Honesty)** | Associate resource consumption with `U.Work`, not with `U.MethodDescription`, `U.WorkPlan`, `U.Capability`, separately governed capability-support records or relations, or capability-fit predicates. | Keeps costs tied to performed occurrences rather than recipes, plans, abilities, statements, or admission checks. |
+| **CC-A15-7 (Plan and Occurrence Split)** | Represent schedules and calendars as `U.WorkPlan` under A.15.2. Do not use a `U.WorkPlan` as evidence that execution occurred; only `U.Work` carries performed values. | Preserves intended-work and performed-work separation and prevents schedule-as-performed-work drift. |
 | **CC-A15-8 (Source-cue resolution)** | Interpret unqualified "process", "workflow", "activity", or "schedule" source cues through `E.10` and `E.10.ARCH`: recover whether the cue points to `U.Method`, `U.MethodDescription`, `U.WorkPlan`, `U.Work`, or another direct governing pattern. | Keeps source vocabulary auditable without creating a generic process object. |
 | **CC-A15-9 (Enactment)** | A `U.Work` record enacts a `U.Method` under a `U.RoleAssignment`; a `MethodDescription` is the source episteme or method-description reference when the method is identified, constrained, or justified by a source. Spontaneous physical evolution without role-method-work alignment is modeled as `U.Dynamics`, not as `U.Work`. | Prevents background dynamics and recipe documents from being miscast as governed work. |
 | **CC-A15-10 (Gate split)** | A speech act that institutes a role, authorization, or gate-relevant effect is a distinct communicative `U.Work` occurrence when the act itself is being modeled. It may create a gate-relevant condition for later operational work, but it is not that operational work. | Preserves communicative effects as distinct acts. |
@@ -21531,10 +21656,10 @@ To preserve role-method-work modeling, check the following predicates.
 
 ### A.15:8 - Common Anti-Patterns and How to Avoid Them
 
-- **Role-as-part.** Do not place `U.Role` or `U.Capability` inside structural `partOf` decomposition; keep role as contextual assignment value and capability as ability value under stated conditions.
+- **Role-as-part.** Do not place `U.Role`, `U.Capability`, capability-support records or relations, or capability-fit predicates inside structural `partOf` decomposition; keep role as contextual assignment value, capability as the `A.2.2` admitted capability instance, support records or relations under their own governing patterns, and fit predicates as admission checks.
 - **Recipe-as-evidence.** A `U.MethodDescription` or SOP may identify or constrain a method; dated `U.Work` records carry the occurrence claim.
-- **Plan-as-actual.** Do not let schedules, calendars, or intended assignments stand in for actual execution; use `U.WorkPlan` for intent and `U.Work` for actuals.
-- **Capability-as-work.** Do not treat possession of a capability as if the task has already been performed; capability enables execution under conditions but is not execution.
+- **Plan-as-performed-work.** Do not let schedules, calendars, or intended assignments stand in for performed execution; use `U.WorkPlan` for intent and `U.Work` for performed occurrence values.
+- **Capability-as-work.** Do not treat possession of a capability instance, a statement about it, or a passing fit predicate as if the task has already been performed; capability enables execution under conditions but is not execution.
 - **Approval collapse.** Keep approval or authorization speech acts distinct from the operational step they permit; model them as communicative `U.Work` when they institute a role, gate, or commitment effect.
 - **Process soup.** Do not leave "process", "workflow", or "activity" uninterpreted in FPF-governed passages; resolve the source cue to `U.Method`, `U.MethodDescription`, `U.WorkPlan`, or `U.Work`.
 - **Briefing-as-execution-cue.** A lighter review note, rollout summary, or redacted operations note may orient work; use `A.15.4` or the source-restoration pattern governing that reliance before relying on it for execution, approval, gate, evidence, or plan claims.
@@ -21546,16 +21671,16 @@ To preserve role-method-work modeling, check the following predicates.
 | Benefits | Trade-offs and Mitigations |
 | :--- | :--- |
 | **Unambiguous Communication:** Provides a shared, precise vocabulary for teams to discuss roles, methods, work plans, work occurrences, and results, eliminating the ambiguity of source terms like "process." | **Initial Learning Curve:** Requires teams to learn and internalize the distinctions between the core entities. *Mitigation:* The "Chef" analogy and clear archetypes serve as powerful didactic tools. FPF tooling can guide users with templates. |
-| **End-to-End Traceability:** The framework creates a traceability relation that links each admitted operational event (`U.Work`) back to its role assignment, context, method-description source, plan when current, and evidence/provenance relations. This is critical for regulated industries and for root-cause analysis. | **Increased Formality:** Requires more explicit modeling than informal approaches. *Mitigation:* This is a strategic investment. The upfront cost of formal modeling is offset by downstream savings in debugging, re-work, and compliance efforts. |
-| **Enables True Modularity:** By separating capability from execution, the framework allows for easier substitution. A `MethodDescription` can be updated without invalidating past `Work` records. A `Holder` can be replaced with another, as long as it possesses the same `Capability`. | - |
-| **Foundation for role-source accountability:** The model makes it possible to state role-bound work rules without making the role or publication act. For example: "Only a holder acting under `AuditorRole` in a `U.RoleAssignment` satisfying the governing role, holder, and bounded-context constraints can perform the `U.Work` that instantiates the `ApproveRelease` capability." | - |
+| **End-to-End Traceability:** The framework creates a traceability relation that links each admitted operational event (`U.Work`) back to its role assignment, context, method-description source, plan when current, and evidence relations or evidence-provenance relations. This is critical for regulated industries and for root-cause analysis. | **Increased Formality:** Requires more explicit modeling than informal approaches. *Mitigation:* This is a strategic investment. The upfront cost of formal modeling is offset by downstream savings in debugging, re-work, and compliance efforts. |
+| **Enables True Modularity:** By separating capability-fit from execution, the framework allows for easier substitution. A `MethodDescription` can be updated without invalidating past `Work` records. A holder can be replaced with another when the replacement holder satisfies the governing capability-fit condition. | - |
+| **Foundation for role-source accountability:** The model makes it possible to state role-bound work rules without making the role or publication act. For example: "Only a holder acting under `AuditorRole` in a `U.RoleAssignment` satisfying the governing role, holder, bounded-context, method, and capability-fit or gate conditions can perform the communicative `ApproveRelease` approval work." | - |
 
 ### A.15:10 - Rationale
 
 This pattern solves a problem that has plagued systems modeling for decades: the conflation of what a system *is* with what it *does*. Its rigor is not arbitrary but is grounded in several key intellectual traditions.
 
 *   **Ontology Engineering:** The pattern is a direct application of best practices from foundational ontologies (like UFO), which have long insisted on the distinction between *endurants* (objects like a `U.System`) and *perdurants* (events and performed occurrences such as `U.Work`), and between intrinsic properties and relational roles. FPF makes these powerful distinctions accessible to practicing engineers.
-*   **Process-theory source tradition:** Formalisms like the Pi-calculus or Petri Nets model dynamic interactions under terms often translated as processes. A.15 does not import `process` as a new FPF object; it maps the useful local use to `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and dated `U.Work`. The `U.Work` entity can be seen as an occurrence recognized by such a source tradition, but FPF adds the crucial context of the `Role`, `Capability`, enacted `U.Method`, and `MethodDescription` source that make the occurrence inspectable.
+*   **Process-theory source tradition:** Formalisms like the Pi-calculus or Petri Nets model dynamic interactions under terms often translated as processes. A.15 does not import `process` as a new FPF object; it maps the useful local use to `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and dated `U.Work`. The `U.Work` entity can be seen as an occurrence recognized by such a source tradition, but FPF adds the crucial context of role assignment, holder `U.Capability` instance when capability reliance is current, any separate capability statement or currentness assessment used for that reliance, any separate capability-fit condition over that capability instance when work admission is current, enacted `U.Method`, and `MethodDescription` source that make the occurrence inspectable.
 *   **Pragmatism and Practice:** The framework is deeply pragmatic. The distinctions it makes (e.g., between a `MethodDescription` and `U.Work`) are precisely the ones that matter in the real world of project management, compliance, and debugging. When a failure occurs, a manager needs to know: was the recipe wrong (`MethodDescription`), did the chef lack the skill (`Capability`), or did they just make a mistake this one time (`U.Work`)? This framework provides the vocabulary to ask and answer that question precisely.
 
 By creating this clean, stratified alignment for enactment, FPF provides a stable and scalable foundation for downstream resource accounting, decision, constraint, gate, evidence, assurance, ethics, and transformation patterns without letting any one of those neighboring claims collapse into A.15.
@@ -21570,13 +21695,13 @@ By creating this clean, stratified alignment for enactment, FPF provides a stabl
 
 **Claim 2.** Best-known current accountability practice keeps actor-in-context explicit rather than attributing work to a role label or a document.
 
-**Practice source, local alignment, and adoption decision.** Contemporary service delivery, incident practice, and role-accountability practice distinguish accountable assignee, governing procedure, and actual run record because after-the-fact review depends on knowing who acted, under what role, and under which method. In the slices above, that is why the welding robot or peer-review assignee acts under `U.RoleAssignment` rather than the role or guideline acting on its own. This pattern **adopts** explicit actor-in-context attribution through `U.RoleAssignment`, **adapts** it to bounded-context semantics, and **rejects** anonymous work logs and role-as-part modeling.
+**Practice source, local alignment, and adoption decision.** Contemporary service delivery, incident practice, and role-accountability practice distinguish accountable assignee, governing procedure, and performed-work record because after-the-fact review depends on knowing who acted, under what role, and under which method. In the slices above, that is why the welding robot or peer-review assignee acts under `U.RoleAssignment` rather than the role or guideline acting on its own. This pattern **adopts** explicit actor-in-context attribution through `U.RoleAssignment`, **adapts** it to bounded-context semantics, and **rejects** anonymous work logs and role-as-part modeling.
 
 **Claim 3.** Best-known current approval and execution practice treats communicative gate acts and operational acts as distinct kinds of work.
 
 **Practice source, local alignment, and adoption decision.** Contemporary release, compliance, and safety-critical practice separates approval, authorization, and review acts from the operational steps they permit because authority change and world change are not the same event. In the examples above, that means an approval is not the same work as a deployment or a weld. This pattern **adopts** that split, **adapts** it through communicative versus operational `U.Work` kinds, and **rejects** the collapse of approval into the thing being approved.
 
-**Local claim.** The FPF-governed SoTA claim for this pattern is practical and narrow: contextual enactment remains reviewable only when role, method, plan, and work stay distinct enough that audits can tell whether the problem was in the assignment, the recipe, the schedule, the capability, or the run itself.
+**Local claim.** The FPF-governed SoTA claim for this pattern is practical and narrow: contextual enactment remains reviewable only when role, method, plan, and work stay distinct enough that audits can tell whether the problem was in the assignment, the recipe, the schedule, the capability, or the performed occurrence itself.
 
 **Claim 4.** Best-known current agentic work practice treats fast bounded specialization as a checkpointed scout and probe discipline rather than as a naked winner claim.
 
@@ -21584,8 +21709,8 @@ By creating this clean, stratified alignment for enactment, FPF provides a stabl
 
 | Claim need | Source idea and current source | Current source reference | Local FPF invariant and practical local test | Adopted invariant, adapted invariant, and rejected shortcut |
 | --- | --- | --- | --- | --- |
-| Recipe, plan, case, decision, and executed occurrence stay separable. | Case-management, decision-modeling, and service-change practice distinguish discretionary case work, decision logic, planned change source material, and the realized service or product change. | OMG CMMN 1.1 (2016); OMG DMN 1.5 (2024); ITIL 4 Practitioner: Change Enablement (2023); source maturity = mature modeling standards plus current practitioner guidance. | The manufacturing, peer-review, and rollout slices keep `U.MethodDescription`, `U.WorkPlan`, approval work, and `U.Work` separate so a calendar or procedure never counts as the weld, review, deployment, or actual run. | **Adopt and adapt.** Adopt the separation of case, decision, plan, and occurrence; adapt it to FPF's `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work`; reject an undifferentiated "process" label as an FPF object. |
-| Architecture and digital-thread practice need traceable views without confusing description, authority, and occurrence. | Architecture-description and model-based systems practice treat descriptions, viewpoints, requirements, behavior, verification, and traceability as explicit review targets. | ISO/IEC/IEEE 42010:2022; OMG SysML v2.0 Language Specification (2025); source maturity = mature standard plus current technical specification. | `A.15` uses actor-in-context, role assignment, method description, and work occurrence so after-the-fact review can ask whether the problem was assignment, capability, recipe, plan, approval, or run. | **Adopt and adapt.** Adopt explicit trace and viewpoint discipline; adapt it to role, method, work-plan, and work-occurrence alignment; reject attributing work to a role label or document alone. |
+| Recipe, plan, case, decision, and executed occurrence stay separable. | Case-management, decision-modeling, and service-change practice distinguish discretionary case work, decision logic, planned change source material, and the realized service or product change. | OMG CMMN 1.1 (2016); OMG DMN 1.5 (2024); ITIL 4 Practitioner: Change Enablement (2023); source maturity = mature modeling standards plus current practitioner guidance. | The manufacturing, peer-review, and rollout slices keep `U.MethodDescription`, `U.WorkPlan`, approval work, and `U.Work` separate so a calendar or procedure never counts as the weld, review, deployment, or performed occurrence. | **Adopt and adapt.** Adopt the separation of case, decision, plan, and occurrence; adapt it to FPF's `U.Method`, `U.MethodDescription`, `U.WorkPlan`, and `U.Work`; reject an undifferentiated "process" label as an FPF object. |
+| Architecture and digital-thread practice need traceable views without confusing description, authority, and occurrence. | Architecture-description and model-based systems practice treat descriptions, viewpoints, requirements, behavior, verification, and traceability as explicit review targets. | ISO/IEC/IEEE 42010:2022; OMG SysML v2.0 Language Specification (2025); source maturity = mature standard plus current technical specification. | `A.15` uses actor-in-context, role assignment, method description, and work occurrence so after-the-fact review can ask whether the problem was assignment, capability, recipe, plan, approval, or performed occurrence. | **Adopt and adapt.** Adopt explicit trace and viewpoint discipline; adapt it to role, method, work-plan, and work-occurrence alignment; reject attributing work to a role label or document alone. |
 | Approval and execution are distinct practical acts. | Change-enablement and decision-modeling practice separates risk assessment, authorization, scheduling, decision logic, and the work that realizes change. | ITIL 4 Practitioner: Change Enablement (2023); OMG DMN 1.5 (2024); source maturity = current practitioner guidance plus mature modeling standard. | In the release and gate examples, an approval or authorization institutes an authorization or gate-relevant effect; it is not the same work as deployment, welding, or other operational occurrence. | **Adopt.** Adopt the distinction between communicative work and operational work, and reject collapse of approval into the thing approved. |
 | Fast bounded exploration does not become committed rollout by convenience. | Contemporary agentic tool-use and adaptive-work practice, including ReAct, Toolformer, and Reflexion-style tool-use and self-correction lines, allows bounded probing while preserving explicit transition from option exploration to committed change. | Current agentic tool-use and self-correction practice; ITIL 4 Practitioner: Change Enablement (2023); ISO/IEC/IEEE 42010:2022; OMG SysML v2.0 Language Specification (2025); source maturity = current technical and practitioner guidance plus mature and current modeling standards. | The scout and probe moment returns candidate-approach evidence, observed result, burned and residual budget amounts, and a commit trigger rather than a selected method, `U.WorkPlan`, performed `U.Work`, or rollout decision. | **Adapt and reject.** Adapt bounded scout and probe discipline to FPF role, method, work-plan, and work-occurrence splits; reject the shortcut where an early probe silently becomes a committed method choice, work plan, or rollout. |
 
@@ -21594,7 +21719,7 @@ For visible credential, provenance, dashboard, explanation, or composed-source c
 The nearest recovery loci are the manufacturing, peer-review, rollout briefing, `CC-A15-7`, `CC-A15-10`, `CC-A15-12`, and the boundary to `A.15.4`. If a SoTA row cannot be recovered through those local checks, do not let the source citation stand in for the local `A.15` rule.
 
 ### A.15:12 - Relations
-*   **Architecture method/work boundary:** `C.32.P2S` and `C.32.PAD` may cite method descriptions, pattern-use refs, responsible roles, readiness exits, and expected structure effects as architecturing or decision-output duties. `C.32.ADR` may publish those refs. A.15 still governs method, method description, work plan, work-entry readiness, performed work, and role enactment claims.
+*   **Architecture method/work boundary:** `C.32.P2S` and `C.32.PAD` may cite method descriptions, pattern-use refs, responsibility-bearing role assignments, readiness exits, and expected structure effects as architecturing or decision-output duties. `C.32.ADR` may publish those refs. A.15 still governs method, method description, work plan, work-entry readiness, performed work, and role enactment claims.
 
 *   **Directly applies:** `A.7 Strict Distinction` for the role, method, method-description, plan, and work split.
 *   **Builds upon:** `A.2` for `U.Role`, `A.2.1` for `U.RoleAssignment`, `A.2.2` for `U.Capability`, `A.2.5` for role-state admission, `A.2.7` for role relation structure, `A.6.5` for slot-relation discipline used by assignment and relation declarations, `A.3.1` for `U.Method`, `A.3.2` for `U.MethodDescription`, `A.3.3` for `U.Dynamics`, `A.3.4` for `U.Transformation`, `A.15.1` for `U.Work`, `A.15.2` for `U.WorkPlan`, `A.15.3` for slot-filling plan items, and `A.15.5` for work-entry readiness.
@@ -21646,7 +21771,7 @@ WorkPlanning may place evidence-reference hooks and source-currentness requests 
 
 When `E.18.1` reaches performed work, this family keeps the current kind as `U.Work`. WorkEnactment wording is explanatory only: it points to dated performed work, not to a second work kind.
 
-A performed-work record may cite a `U.WorkPlan` and planned baseline, while recording launch values, actuals, substitutions, variance, telemetry, outputs, outcome, and result-related records in the performed-work occurrence. Comparator, transport, `PrincipleFrame`, `U.Signature(profile=FormalSubstrate)`, evidence, assurance, and gate relations are named separately when those claims are being made.
+A performed-work record may cite a `U.WorkPlan` and planned baseline, while recording launch values, performed values, substitutions, variance, telemetry, outputs, outcome, and result-related records in the performed-work occurrence. Comparator, transport, `PrincipleFrame`, `U.Signature(profile=FormalSubstrate)`, evidence, assurance, and gate relations are named separately when those claims are being made.
 
 ### A.15:12e - P2W Integration As Role Enactability
 
@@ -21680,7 +21805,7 @@ Refresh the `A.15` use before relying on it across a new context, new role assig
 1. Name the candidate occurrence and the work-facing claim that depends on it.
 2. Recover the `U.RoleAssignment`, enacted `U.Method`, method-description source, time window, accountable `U.System` or system in subsystem position, affected referent, parameters, resources, outcome, and evidence relation when current.
 3. Decide whether the encountered record, trace, or source candidate or display is performed `U.Work`, only a plan (`A.15.2`), only a method (`A.3.1`), only a method description (`A.3.2`), only evidence for work (`A.10`), only a publication-use relation (`E.17`), only a declarative representation (`C.2.P.DR` or the direct representation pattern), or a work-relevant source-restoration case (`A.15.4`).
-4. For composite, repeated, interrupted, or overlapping occurrences, declare the work-part relation and aggregation policy before using totals or identity claims.
+4. For composite, repeated, interrupted, or overlapping occurrences, declare the work-part relation, naming threshold, and aggregation policy before using totals or identity claims. Do not name a work part when a temporal relation, evidence slice, telemetry segment, or source-gap note is the actual object needed.
 5. If the required occurrence references cannot be recovered, lower the claim to a source-gap note, work-evidence note, plan note, publication-use note, declarative-representation note, or source-restoration request; do not backdate work.
 
 **Ordinary use.** For a simple occurrence, one compact work card with performer, method, time window, affected referent, resources, and outcome is enough.
@@ -21699,22 +21824,22 @@ Refresh the `A.15` use before relying on it across a new context, new role assig
 
 After we have separated **who is assigned** (via `U.RoleAssignment`), **what capability is being relied on** (via `U.Capability`), and **how in principle** the work is done (via `U.Method` or `U.MethodDescription`), we still need a precise concept for **what happened as performed work** in real time and space.
 
-That concept is **`U.Work`**: the **dated run-time occurrence** of enacting a `U.Method` by a specific performer under a `U.RoleAssignment`, with concrete parameter bindings, resource consumption, and outcomes, **naming the domain referent changed by the occurrence** (asset, product, or dataset) - **not** merely the manipulation of records about that referent. Managers care about Work because cost, time, defects, and result evidence are booked on performed occurrences. Architects care because Work ties plans and method descriptions to accountable performed work.
+That concept is **`U.Work`**: the **dated performed occurrence** of enacting a `U.Method` by a specific performer under a `U.RoleAssignment`, with concrete parameter bindings, resource consumption, and outcomes, **naming the domain referent changed by the occurrence** (asset, product, or dataset) - **not** merely the manipulation of records about that referent. Managers care about Work because cost, time, defects, and result evidence are booked on performed occurrences. Architects care because Work ties plans and method descriptions to accountable performed work.
 
 ### A.15.1:2 - Problem (what breaks without a clean notion of Work)
 
-1. **Plan and run confusion.** Schedules and diagrams get mistaken for performed work, so audits and KPIs attach to plans or representations instead of dated occurrences.
+1. **Plan and occurrence confusion.** Schedules and diagrams get mistaken for performed work, so audits and KPIs attach to plans or representations instead of dated occurrences.
 2. **Method-description and work conflation.** A method description, code artifact, or SOP is reported as if it were performed work; conversely, logs are treated as recipes.
 3. **Who and when leakage.** People and calendars are baked into method descriptions; reuse and staffing agility collapse.
 4. **Resource dishonesty.** Energy, money, and tool wear are booked to methods or roles, not to performed work occurrences; costing and sustainability measures drift.
-5. **Mereology muddle.** Teams hand-wave over sub-runs, retries, overlaps, or long-running episodes; roll-ups double-count or miss work.
+5. **Mereology muddle.** Teams hand-wave over work parts, retries, overlaps, or long-running episodes; roll-ups double-count or miss work.
 
 ### A.15.1:3 - Forces (what the definition must balance)
 
 | Force                              | Tension we resolve                                                                                    |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | **Universality vs. domain detail** | One Work notion for surgery, welding, ETL, proofs, lab cycles—while letting each keep its vocabulary. |
-| **Granularity vs. aggregation**    | Atomic runs vs. composite operations; we need roll‑up without double‑count.                           |
+| **Granularity vs. aggregation**    | Atomic occurrences vs. composite operations; we need roll-up without double-count.                           |
 | **Concurrency vs. order**          | Parallel or overlapped activities need clear part and overlap semantics.                              |
 | **Identity vs. retries**           | A failed attempt, a retry, and a resumed episode—what is “the same” work?                             |
 | **Time realism vs. simplicity**    | We need intervals and coverage but cannot bury users in temporal logic notation.                      |
@@ -21723,7 +21848,7 @@ That concept is **`U.Work`**: the **dated run-time occurrence** of enacting a `U
 
 #### A.15.1:4.1 - Definition
 
-**`U.Work`** is a **4D occurrence holon**: a **dated run-time enactment** of a `U.Method` by a performer designated through a `U.RoleAssignment`, **executed within a concrete `U.System`**, including a system in subsystem position when the larger-holon part relation is current, inside a `U.BoundedContext`, that binds concrete parameters, consumes and produces resources, and leaves an auditable trace. When a method-description source is current, `methodDescriptionRef` names the `U.MethodDescription` used to identify, constrain, or justify the enacted method.
+**`U.Work`** is a **4D occurrence holon**: a **dated performed enactment** of a `U.Method` by a performer designated through a `U.RoleAssignment`, **executed within a concrete `U.System`**, including a system in subsystem position when the larger-holon part relation is current, inside a `U.BoundedContext`, that binds concrete parameters, consumes and produces resources, and leaves an auditable trace. When a method-description source is current, `methodDescriptionRef` names the `U.MethodDescription` used to identify, constrain, or justify the enacted method.
 When the current claim needs a formal state-change witness, represent the occurrence through a **morphism** `Δ` on a declared **state-plane** (`StatePlaneRef`), mapping pre-state plus inputs to post-state plus outputs for one or more **affected referents**. The work itself remains the dated occurrence; the morphism is the selected mathematical-lens expression for its delta claim.
 
 > **Memory aid:** *Work = “how it went this time”* (dated, resourced, accountable).
@@ -21735,58 +21860,67 @@ When you describe a Work instance in a review, answer these prompts:
 1. **Window** — start and end timestamps and, where relevant, location or asset.
 2. **Method-description source** — `methodDescriptionRef -> U.MethodDescription` when the description source is current; edition pinned when reliance depends on edition.
 3. **Performer** — `performedBy → U.RoleAssignment` (whose holder slot, role value, and bounded-context slot admit the performer).
-4. **Parameters** — concrete values bound for this run (from the **MethodDescription** parameter declarations).
+4. **Parameters** — concrete values bound for this occurrence (from the **MethodDescription** parameter declarations).
 5. **Inputs and outputs** — materials, information, or product states used or produced by the Work; service delivery is judged through the Outcome row.
 6. **Resources** — energy, materials, machine time, money (the **only** place we book them).
 7. **Outcome** — success and failure classes, quality measures, acceptance verdicts (**map-then-compare** per **ComparatorSet** under **CG-Spec**; pin editions).
-8. **Links** — predecessor, successor, and overlap relations to other Work, plus step or run nesting if part of a bigger operation.
-9. **Context** — the bounded context under which this run is judged, normally inherited from the method-description source and `U.RoleAssignment`; see A.15 for cross-checks.
+8. **Links** — predecessor, successor, overlap, containment, temporal-part, episode-part, operational-part, concurrent-part, or another declared work relation to other `U.Work` occurrences when composite work is current.
+9. **Context** — the bounded context under which this occurrence is judged, normally inherited from the method-description source and `U.RoleAssignment`; see A.15 for cross-checks.
 10. **Effect (Δ)** — `affected → {referent(s)}` + **pre-state reference** and **post-state reference** (or a declared **Δ-predicate** evaluated on evidence) on the declared state-plane (**StatePlaneRef**).
 11. **System** — `executedWithin -> U.System`; if ordinary speech says subsystem, name the `U.System` in subsystem position plus the part relation to the larger holon under A.1, A.14, or B.1.2 (required for admitting the performed-work claim).
-12. **Evidence and telemetry references (when current)** — if the run feeds G.11 refresh or QD and OEE archives, cite the telemetry, evidence, archive, and policy references declared by the governing comparison, archive, evidence, or refresh pattern; do not elevate telemetry into dominance without the governing comparison or archive policy.
+12. **Evidence and telemetry references (when current)** — if the occurrence feeds G.11 refresh or QD and OEE archives, cite the telemetry, evidence, archive, and policy references declared by the governing comparison, archive, evidence, or refresh pattern; do not elevate telemetry into dominance without the governing comparison or archive policy.
 
 #### A.15.1:4.3 - Clear distinctions (the four‑slot grammar in action)
 
 | You are pointing at…                          | The right FPF concept  | Litmus                                                          |
 | --------------------------------------------- | ---------------------- | --------------------------------------------------------------- |
-| The **recipe, code artifact, or diagram**     | **MethodDescription**         | Is it an episteme or publication describing a way of doing?     |
-| The **semantic "way of doing"**               | **Method**             | Same method identity across notations?                         |
+| The **recipe, code artifact, or diagram**     | **`U.MethodDescription`**         | Is it an episteme or publication describing a way of doing?     |
+| The **semantic "way of doing"**               | **`U.Method`**             | Same method identity across notations?                         |
 | The **assignment** ("who is being what")     | **`U.Role` value plus `U.RoleAssignment` relation** | Can be reassigned without changing the system?                  |
-| The **ability** (“can do within bounds”)      | **Capability**         | Would remain even if not assigned?                             |
-| The **dated occurrence** with logs, resources | **Work**               | Did it happen at (t₀, t₁), consume resources, produce outcomes? |
-| The **state change observed for this occurrence** | **Work.Δ**             | Did the referent change from pre→post on the declared state-plane? |
+| The **ability** ("can do within bounds")      | **`U.Capability`**         | Would remain even if not assigned?                             |
+| The **dated occurrence** with logs, resources | **`U.Work`**               | Did it happen at (t0, t1), consume resources, produce outcomes? |
+| The **state change observed for this occurrence** | **`U.Work` delta claim**             | Did the referent change from pre to post on the declared state-plane? |
 
 #### A.15.1:4.4 - Publication-use boundary for `U.Work`
 
-A `U.Work` publication projects an already declared work occurrence; it does not create the occurrence, add run-time facts, or make a plan, source reconstruction, dashboard, or publication face count as performed work.
+A `U.Work` publication projects an already declared work occurrence; it does not create the occurrence, add performed-occurrence facts, or make a plan, source reconstruction, dashboard, or publication face count as performed work.
 
 Preparation work is `U.Work` only when preparation has actually occurred and has its own performer, method, time window, affected referent, resources, and outcome. The readiness relation that asks whether intended work is ready enough to enter a work boundary is `WorkEntryReadiness@Context` under `A.15.5`; a readiness label, full-kit checklist, or launch-looking cue is not a performed occurrence.
 
 | Publication-use pressure | Work-local rule |
 |---|---|
-| PlainView, TechCard, InteropCard, or AssuranceLane presents work material | Project only occurrence references: time window, performer, enacted method-description source, parameter-binding occurrence, resource-ledger reference, state-change references, outcome, and acceptance-verdict reference when current. |
+| PlainView, TechCard, InteropCard, or AssuranceLane presents work material | Project only occurrence references: time window, performer, enacted method, method-description source when current, parameter-binding occurrence, resource-ledger reference, state-change references, outcome, and acceptance-verdict reference when current. |
 | numeric, comparable, aggregation, or benchmark content appears | Pin the comparator, aggregation policy, CG-Spec, reference plane, and transport edition needed by the claimed comparison; do not hide scalarization in the publication face. |
-| publication cites design-time material or cross-context material | Keep the `U.Work` occurrence run-time; cite the design-time or cross-context material through Bridge relation, UTS relation, `DesignRunTag`, reference-plane, or edition relation as needed. |
-| reconstructed records look like a run | Do not synthesize surrogate `U.Work`; a publication may cite only work occurrences that meet the occurrence references in this pattern. |
+| publication cites method-description, work-plan, or cross-context material | Keep the `U.Work` occurrence as the dated performed occurrence; cite method-description sources, work-plan references, cross-context material, Bridge relation, UTS relation, reference-plane, or edition relation only through the direct governing pattern named for that citation. |
+| reconstructed records look like a performed occurrence | Do not synthesize surrogate `U.Work`; a publication may cite only work occurrences that meet the occurrence references in this pattern. |
 
 #### A.15.1:4.5 - Crossing visibility for work publications
 
-When a work publication crosses design-time state, run-time state, context, reference plane, unit, or edition, publish the crossing relation used by the publication. Penalties and reliability changes belong to the relevant comparison, bridge, publication, or evidence relation; they do not change the identity of the `U.Work` occurrence.
+When a work publication crosses method-description source, work-plan reference, performed-work occurrence state, context, reference plane, unit, or edition, publish the crossing relation used by the publication. Penalties and reliability changes belong to the relevant comparison, bridge, publication, or evidence relation; they do not change the identity of the `U.Work` occurrence.
 
-Launch values bind only at the occurrence. Plan-time proposals remain proposals; do not back-fill plan publications with run-time bindings. Pre-state and post-state references bind to the occurrence: pre at start, post at completion or at declared checkpoints.
+Launch values bind only at the occurrence. Planned proposals remain proposals; do not back-fill plan publications with performed-work bindings. Pre-state and post-state references bind to the occurrence: pre at start, post at completion or at declared checkpoints.
 
-### A.15.1:5 - Work mereology (how runs form holarchies)
+### A.15.1:5 - Work mereology (how occurrences form holarchies)
 
 We adopt a **4D extensional** stance for occurrences: a Work is identified primarily by its **spatiotemporal extent** and its occurrence references (method-description source when current, performer, parameterization). This avoids double-counting and keeps aggregation sound. FPF adapts insights from BORO and constructive ontologies to Work while staying practical.
 
-#### A.15.1:5.1 - Parts and wholes of Work (design‑neutral, run‑time facts)
+#### A.15.1:5.1 - Parts and wholes of Work (occurrence facts)
 
-* **Temporal‑part (`TemporalPartOf_work`).** A proper **time‑slice** of a Work (e.g., the first 10 minutes of a 2‑hour run). Useful for monitoring and SLAs.
-* **Episode‑part (`EpisodeOf_work`).** A **resumption fragment** after an interruption (same run identity if policy deems it one episode; see 5.5).
-* **Operational-part (OperationalPartOf_work).** A **sub-run** that enacts a **factor** of the Method or method-description source, for example, an incision run within an appendectomy run, possibly **overlapping** with others in time.
-* **Parallel‑part (`ConcurrentPartOf_work`).** Two sub‑runs that **overlap** in their windows, coordinated by the same higher‑level run.
+* **Temporal-part (`TemporalPartOf_work`).** A proper **time-slice relation** over one selected `U.Work` occurrence or work phase. The selected part is grounded by parent work identity plus interval and, when needed, a named aspect such as resource use, telemetry, SLA coverage, or interval-local evidence. A temporal part is useful for monitoring, utilization, lead time, and interval-local evidence. It has no independent method-switch identity by that fact.
+* **Episode-part (`EpisodeOf_work` or `WorkEpisode`).** A **policy-governed, event-bounded, maximally continuous enactment fragment** of one parent work occurrence. It starts at a work-entry, resumption, mode-switch, or switch-to-method event and ends at interruption, switch-away, completion, or a policy-declared pause. It is not an arbitrary time slice. It remains under the parent work identity only when the bounded-context episode policy says the interrupted or resumed activity is still the same `U.Work`.
+* **Operational-part (`OperationalPartOf_work`).** A **work-part occurrence** that may enact a factor of a recovered `U.Method`, for example, an incision occurrence within an appendectomy occurrence, possibly **overlapping** with others in time. If a method-description source is current, it identifies, describes, constrains, or evidences that method factor; the source itself is not enacted. If no `U.Method` factor is recovered, govern the material as a work part, evidence segment, telemetry segment, mechanism material, system-component behavior, or source-gap note under the direct pattern.
+* **Parallel-part (`ConcurrentPartOf_work`).** Two work-part occurrences that **overlap** in their windows, coordinated by the same higher-level occurrence.
 
-**Didactic rule:** **Method composition ≠ proof of Work decomposition.** Sub‑runs often map to method factors, but retries, batching, pipelining, and failures make the mapping non‑isomorphic.
+**Naming threshold.** Do not mint a durable public U-kind, durable named work object, or separate work occurrence for every interval, telemetry segment, pause, or episode-looking source phrase. Use a derivative part relation unless the downstream use needs a named work part with its own resources, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return role. Otherwise lower to a temporal relation, evidence slice, telemetry segment, method-description constituent, source-gap note, or the neighboring object that is actually current.
+
+**Didactic rule:** **Method composition is not proof of Work decomposition, and Work decomposition is not proof of method composition.** A temporal work part may enact the same whole method during a slice. An episode may continue one method or mode, span several operational parts, repeat the same method fragment, or be split by evidence policy without changing method identity. An operational part may correspond to a method factor only when that factor is recovered as `U.Method`.
+
+**Quick choice test.**
+
+- Ask **"which interval or aspect of the parent work do I need?"** If that is enough, use `TemporalPartOf_work`.
+- Ask **"which continuous attempt under the episode policy do I need?"** If entry, resumption, mode-switch, interruption, switch-away, completion, or policy pause is the boundary, use `EpisodeOf_work`.
+- Ask **"which performed sub-occurrence has its own resources, affected referent, evidence, outcome, or aggregation role?"** If that is current, use `OperationalPartOf_work` or another declared work-part relation.
+- Ask **"which way-of-doing part is being composed?"** If the answer needs preconditions, effects, interface, and whole-method relation, recover a `U.Method` submethod under `A.3.1` and `B.1.5`; do not make the work part itself carry the method identity.
 
 #### A.15.1:5.2 - Key relations among Work
 
@@ -21795,9 +21929,9 @@ We adopt a **4D extensional** stance for occurrences: a Work is identified prima
 * **`contains` or `within`** — one Work's window contains another's.
 * **Causal-use relation reference** — if one work occurrence is claimed to explain, trigger, or cause another, keep the work-occurrence link separate from the causal-use claim governed by `C.28` or another causal-use pattern named by value.
 * **`retryOf`** — a new Work instance re‑attempting the same MethodDescription with revised parameters.
-* **`resumptionOf`** — a Work episode that **continues** an interrupted run (policy decides identity; see 5.5).
+* **`resumptionOf`** — an episode or later occurrence that **continues** after interruption; policy decides whether it is under the same parent `U.Work` identity or a separate `U.Work` linked to the earlier occurrence.
 
-These relations are **run‑time facts**, not design assumptions.
+These relations are **occurrence facts**, not method-design assumptions.
 
 #### A.15.1:5.3 - Operators for roll‑ups (Γ\_time and Γ\_work)
 
@@ -21825,10 +21959,11 @@ If any of these differ (or the context declares equivalence absent), they are **
 #### A.15.1:5.5 - Interruptions, retries, resumptions (episode policy)
 
 * **Retry:** **new Work** with its own window and parameters; link via `retryOf`.
-* **Resumption:** **same Work identity** split into **episodes** if the context’s **episode policy** declares so (e.g., “power loss under 5 minutes keeps identity”).
-* **Rework:** **new Work** initiated after a failure in earlier Work; link the occurrences and put any causal attribution in the governing causal-use pattern.
+* **Episode under same parent work:** same `U.Work` identity split into event-bounded episodes when the context's episode policy declares the interruption, resumption, mode switch, or policy pause to remain inside the same parent occurrence.
+* **Separate occurrence after interruption or change:** a separate `U.Work` when the policy treats interruption, retune, rework, retry, changed parameter set, changed method-description edition, changed affected referent, switch-away, or restart as a new occurrence. Link via `retryOf`, `resumptionOf`, `precedes`, `overlaps`, `contains`, or another declared relation.
+* **Rework:** **new Work** initiated after a failure in earlier Work unless the bounded-context policy explicitly keeps the rework inside the same parent occurrence; link the occurrences and put any causal attribution in the governing causal-use pattern.
 
-**Why it matters:** plans, costs, and quality stats depend on whether you treat a disruption as **one episode** or **a new run**. Declare the policy **in the bounded context**.
+**Why it matters:** plans, costs, quality stats, telemetry evidence, and method-reliance claims depend on whether you treat a subinterval as a temporal part, an event-bounded episode, an operational part, or a new occurrence. Declare the policy **in the bounded context** before using the relation.
 
 #### A.15.1:5.6 - Compositionality of effects (Δ)
 
@@ -21838,19 +21973,19 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 
 #### A.15.1:6.1 - Surgical case (overlap and episodes)
 
-* **Top run:** `Appendectomy_Case_2025-08-10T0905_1142`.
+* **Top work occurrence:** `Appendectomy_Case_2025-08-10T0905_1142`.
 * **Method-description source:** `Appendectomy_v5`.
 * **Performer:** `U.RoleAssignment` with holder slot `OR_Team_A`, role value `SurgicalTeamRole`, bounded-context slot `Hospital_2025`, and current-window slot covering the surgery interval.
 * **Operational parts:** `Incision` (09:15–09:22), `Exploration` (overlaps with monitoring), `Closure` (11:10–11:35).
-* **Episode:** brief power dip 10:02–10:07 → **resumptionOf** same run (per hospital policy).
+* **Episode:** brief power dip 10:02-10:07 -> **resumptionOf** same occurrence (per hospital policy).
 * **Γ\_time:** union for OR utilization; hull for patient lead time.
-* **Γ\_work:** totals consumables and staff time once (no double‑count for overlapping sub‑runs).
+* **Gamma_work:** totals consumables and staff time once (no double-count for overlapping work-part occurrences).
 
 #### A.15.1:6.2 - ETL pipeline (parallelism and retries)
 
-* **Top run:** `ETL_Nightly_2025‑08‑11T01:00–01:47`.
+* **Top work occurrence:** `ETL_Nightly_2025-08-11T01:00-01:47`.
 * **Method-description source:** `ETL_v12.bpmn`.
-* **Performer:** `U.RoleAssignment` with holder slot `ETL_Runtime`, role value `TransformerRole`, bounded-context slot `DataOps_2025`, and current-window slot covering the ETL run.
+* **Performer:** `U.RoleAssignment` with holder slot `ETL_Runtime`, role value `TransformerRole`, bounded-context slot `DataOps_2025`, and current-window slot covering the ETL occurrence.
 * **Parallel parts:** `Extract_A` ‖ `Extract_B`; `Transform` starts when either completes (overlap).
 * **Retry:** `WarehouseWrite` failed at 01:36; retried with batch size ↓ — **new Work** linked via `retryOf`.
 * **Γ\_time:** hull for SLA, union for cluster utilization.
@@ -21860,17 +21995,44 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 
 * **Run:** `Carnot_Cycle_Run_2025-08-09T1300_1306`.
 * **Method-description source:** `Carnot_Cycle_Spec` with Dynamics model.
-* **Performer:** `U.RoleAssignment` with holder slot `LabRig_7`, role value `TransformerRole`, bounded-context slot `ThermoLab`, and current-window slot covering the lab run.
-* **Work identity:** the occurrence is identified by the run interval plus occurrence references; the thermodynamic state-plane trace is a dynamics or geometry relation used to describe the change, not a work-control relation or ordered instruction sequence.
+* **Performer:** `U.RoleAssignment` with holder slot `LabRig_7`, role value `TransformerRole`, bounded-context slot `ThermoLab`, and current-window slot covering the lab occurrence.
+* **Work identity:** the occurrence is identified by the occurrence interval plus occurrence references; the thermodynamic state-plane trace is a dynamics or geometry relation used to describe the change, not a work-control relation or ordered instruction sequence.
 * **Γ\_time:** straightforward interval; **Γ\_work:** integrates energy exchange; no “steps” required.
 
-### A.15.1:6.4 - Bias-Annotation
+#### A.15.1:6.4 - Claim handling (episodes versus monitoring slices)
+
+* **Top work occurrence:** `ClaimHandling_Case_8142_2026-06-03`.
+* **Method-description source:** `Claims_Method_v7`.
+* **Performer:** `U.RoleAssignment` with holder slot `ClaimsTeam_A`, role value `ClaimsHandlerRole`, bounded-context slot `InsuranceOps_2026`, and current-window slot covering the work occurrence.
+* **Episode policy:** a customer callback interruption under one hour keeps the same parent work identity and creates two `EpisodeOf_work` fragments: `InitialReview_09:00-09:42` and `ResumedResolution_10:11-10:38`.
+* **Temporal monitoring slice:** `MonitoringSlice_09:15-09:20` is `TemporalPartOf_work` for queue-latency evidence. It is not a new work occurrence and not an episode unless downstream reliance needs a named part with its own evidence, KPI, acceptance, repair, or aggregation role.
+* **Method relation:** both episodes enact the same claim-handling method. The five-minute slice does not prove a submethod.
+
+#### A.15.1:6.5 - Internal-combustion engine (cycle parts without human-only boundary language)
+
+* **Top work occurrence:** `EngineRun_Cell7_2026-06-03T1300_1330`.
+* **Method-description source:** `FourStrokeOperationSpec_v4`.
+* **Performer:** `U.RoleAssignment` with holder slot `Engine_Cell7`, role value `EngineOperationRole`, bounded-context slot `TestBench_2026`, and current-window slot covering the run.
+* **Episodes:** start, stop, mode-change, fuel/ignition policy, or diagnosis policy may bound `EpisodeOf_work` fragments. The definition uses boundary events and policy, not a human-attention metaphor.
+* **Temporal parts:** crank-angle intervals or one-second telemetry windows are `TemporalPartOf_work` unless the context declares a named work part for resource, evidence, KPI, acceptance, repair, or aggregation use.
+* **Method factors:** intake, compression, combustion-expansion, and exhaust are method factors only if recovered as `U.Method` submethods with method-level preconditions, effects, interfaces, and whole-method relation. Actual strokes are work parts or temporal parts of engine work, not submethods by label.
+
+#### A.15.1:6.6 - Detector radio receiver (component behavior, method factor, work part)
+
+* **Top work occurrence:** `ReceiverReception_Rx42_2026-06-03T2115_2120`.
+* **Method-description source:** `EnvelopeDetectionMethod_v2`.
+* **Performer:** `U.RoleAssignment` with holder slot `Receiver_Rx42`, role value `DetectorReceiverRole`, bounded-context slot `RadioLab_2026`, and current-window slot covering the reception occurrence.
+* **Episodes:** a continuous reception interval between retune, on/off, interruption, or declared diagnostic mode events is `EpisodeOf_work` only under the receiver's episode policy.
+* **Temporal parts:** a one-second reception slice is `TemporalPartOf_work` for signal-quality evidence or telemetry aggregation. It is not a new occurrence merely because it appears in a trace.
+* **Method and mechanism split:** tuning, rectification, smoothing, and acoustic output may be recovered as method factors, system-component behaviors, mechanism material, evidence traces, or operational work parts depending on the current claim. A detector component or waveform segment does not become a submethod or a work part by label.
+
+### A.15.1:6.7 - Bias-Annotation
 
 | Bias | How A.15.1 prevents it |
 | --- | --- |
 | Plan-as-work bias | `U.WorkPlan`, schedules, method descriptions, and intended parameter bindings stay separate from the dated occurrence. |
 | Log-as-work bias | Telemetry, dashboards, provenance rows, and work publications can evidence or describe a work occurrence; they do not become the occurrence. |
-| Method-as-occurrence bias | `U.Method` and `U.MethodDescription` identify or constrain the way of doing; `U.Work` records the run-time enactment. |
+| Method-as-occurrence bias | `U.Method` and `U.MethodDescription` identify or constrain the way of doing; `U.Work` records the dated performed enactment. |
 | Evidence-as-authority bias | Evidence, assurance, gate, release, and causal-use claims keep their governing patterns and do not follow from a work record by appearance. |
 | Record-only transformation bias | Record manipulation qualifies as `U.Work` only when the context declares the record or dataset as the affected product referent. |
 
@@ -21878,12 +22040,12 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 
 * **Applicability:** Use the same occurrence test for pragmatic costing, architectural accountability, teaching examples, and source or evidence questions; when the current claim is only about a description, publication, source, or evidence relation, apply the governing pattern for that claim.
 * **Scope declaration:** Universal; temporal semantics and episode policy are **context‑local** via `U.BoundedContext`.
-* **Rationale:** Gives FPF a clean, actionable notion of **occurrence** compatible with `U.RoleAssignment`, direct `Work.performedBy = RoleAssignment` wording, and derived `RoleEnactmentFact` when a named fact is needed, so that costing, quality, and audit rest on **runs**, not on plans or recipes.
+* **Rationale:** Gives FPF a clean, actionable notion of **occurrence** compatible with `U.RoleAssignment`, direct `Work.performedBy = RoleAssignment` wording, and derived `RoleEnactmentFact` when a named fact is needed, so that costing, quality, and audit rest on **work occurrences**, not on plans or recipes.
 
 ### A.15.1:8 - Conformance Checklist (admission checks)
 
 **CC-A15.1-1 (Strict distinction).**
-`U.Work` is a dated run-time occurrence. It is not a `U.Method` (semantic way), not a `U.MethodDescription` (description), not a `U.Role` or `U.RoleAssignment` (assignment), and not a `U.WorkPlan` (plan or schedule).
+`U.Work` is a dated performed occurrence. It is not a `U.Method` (semantic way), not a `U.MethodDescription` (description), not a `U.Role` or `U.RoleAssignment` (assignment), and not a `U.WorkPlan` (plan or schedule).
 
 **CC-A15.1-2 (Required links).**
 A conforming `U.Work` claim names:
@@ -21920,7 +22082,7 @@ Success and failure classes and quality grades are determined by the acceptance 
 Performed consumptions and costs (energy, materials, machine-time, money, tool wear) are booked to `U.Work`, not to `U.Method`, `U.MethodDescription`, `U.Role`, or `U.Capability`. Estimates belong in method descriptions or plans; performed values belong in work occurrences.
 
 **CC-A15.1-10 (Mereology declared).**
-When a work occurrence has parts, the selected part relation is declared: temporal-part, episode-part, operational-part, or concurrent-part. Ambiguous mixtures lower aggregation and identity claims.
+When a work occurrence has parts, the selected part relation is declared: temporal-part, episode-part, operational-part, or concurrent-part. Ambiguous mixtures lower aggregation and identity claims. A `TemporalPartOf_work` claim names parent work identity plus interval or aspect; an `EpisodeOf_work` claim names the event-bounded continuity policy; an `OperationalPartOf_work` claim names the occurrence-side part and any recovered method factor separately.
 
 **CC-A15.1-11 (Temporal coverage selection).**
 For a roll-up, the judgement context declares which temporal coverage operator applies: union for utilization or convex hull for lead time. Silent mixing lowers the KPI or comparison claim.
@@ -21929,7 +22091,7 @@ For a roll-up, the judgement context declares which temporal coverage operator a
 Aggregation of resource ledgers across work parts names an overlap policy, such as attributing shared machine-time to the parent only, before totals are used.
 
 **CC-A15.1-13 (Identity and retries).**
-A retry is a new `U.Work` occurrence linked via `retryOf`. Interruptions treated as the same run are represented as episodes (`resumptionOf`) under a context-declared episode policy.
+A retry is a new `U.Work` occurrence linked via `retryOf`. Interruptions treated as the same occurrence are represented as episodes (`resumptionOf`) under a context-declared episode policy. Interruption, retune, rework, changed parameter set, changed method-description edition, changed affected referent, switch-away, or restart become a separate `U.Work` when the bounded-context policy declares a new occurrence.
 
 **CC-A15.1-14 (Concurrency and ordering).**
 Overlaps and precedences among work occurrences use interval relations (`overlaps`, `precedes`, `contains`, or `within`). Implicit "step order" claims are not admitted as performed-work evidence.
@@ -21938,7 +22100,7 @@ Overlaps and precedences among work occurrences use interval relations (`overlap
 If a work occurrence is accepted in multiple contexts, either re-judge it in each context or provide bridge relations that map acceptance criteria, units, and role-assignment relations. Name identity alone does not carry cross-context acceptance.
 
 **CC-A15.1-16 (Method-description source changes during work).**
-If the method-description version changes mid-run, split the work into episodes bound to respective method-description source editions, or record an explicit method-description override event in the judgement context. Silent substitution lowers the work claim.
+If the method-description version changes mid-occurrence, split the work into episodes bound to respective method-description source editions, or record an explicit method-description override event in the judgement context. Silent substitution lowers the work claim.
 
 **CC-A15.1-17 (Distributed performers).**
 If multiple `U.RoleAssignment` values jointly perform the same top-level work occurrence, either designate a lead `U.RoleAssignment` with concurrent parts, or model the top-level occurrence as a parent work with child work occurrences per `U.RoleAssignment`.
@@ -21950,10 +22112,10 @@ Logs and telemetry evidence a work occurrence only after they are bound to metho
 Each `U.Work` claim names at least one affected referent, such as asset, product, batch, dataset, or document, through `affected -> {...}`.
 
 **CC-A15.1-20 (State-change witness).**
-Each `U.Work` claim carries either explicit pre-state and post-state references on the declared state-plane or a delta predicate evaluable on evidence. A no-op run is flagged as such.
+Each `U.Work` claim carries either explicit pre-state and post-state references on the declared state-plane or a delta predicate evaluable on evidence. A no-op occurrence is flagged as such.
 
 **CC-A15.1-21 (Affected-referent declaration vs. record handling).**
-A run whose only effect is copying or reformatting records qualifies as `U.Work` only when the judgement context declares those records to be the product referent, such as data-product manufacture.
+A work occurrence whose only effect is copying or reformatting records qualifies as `U.Work` only when the judgement context declares those records to be the product referent, such as data-product manufacture.
 
 **CC-A15.1-22 (Executed-within declaration).**
 Each `U.Work` claim names `executedWithin -> U.System`; when the accountable system is a subsystem in ordinary speech, name the system and its part relation to the larger holon. When that system differs from the asset of change, keep `affected` explicit.
@@ -21971,13 +22133,19 @@ Publication views reference Gamma operators and policies by id when showing aggr
 Publication views do not restate method-description input and output lists; they publish presence pins and source references only under the publication-use pattern governing that view.
 
 **CC-A15.1-27 (Comparator ordering and return sets).**
-Across-run comparison presented on a `U.Work` publication view uses a declared `ComparatorSet` (map-then-compare), returns sets when order is partial, and lowers hidden scalarization or ordinal-mean claims.
+Across-occurrence comparison presented on a `U.Work` publication view uses a declared `ComparatorSet` (map-then-compare), returns sets when order is partial, and lowers hidden scalarization or ordinal-mean claims.
 
 **CC-A15.1-28 (Comparator and transport pins).**
 Numeric or comparable acceptance or KPI claims on a `U.Work` publication view pin `ComparatorSet.edition`, comparator-spec edition, and, where conversions occur, `TransportRegistry.edition` with the selected transport policy ids. Bridge ids carry cross-context or cross-plane reuse; penalties affect the reliability relation only.
 
 **CC-A15.1-29 (Telemetry-reference pins, when applicable).**
 If a work occurrence feeds G.11 or QD and OEE portfolios, the evidence relation cites the telemetry, archive, and policy references declared by the governing comparison, archive, evidence, or refresh pattern. Illumination remains report-only telemetry unless a governing comparison, archive, or selection pattern promotes that use.
+
+**CC-A15.1-30 (Part naming parsimony).**
+Do not create a durable named work part for every interval, telemetry segment, pause, event-log row, engine stroke label, detector component, or source phrase. Name a work part only when downstream use needs its own resources, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return role. Otherwise lower to a temporal relation, evidence slice, telemetry segment, method-description constituent, source-gap note, or another direct neighboring object.
+
+**CC-A15.1-31 (Method and work granularity are coupled but not isomorphic).**
+A work part may enact a recovered submethod, but the correspondence is not automatic. A temporal work part usually enacts the same whole method during a slice. An episode records continuity under one method or mode and may span several operational parts, repeat the same method fragment, or be split by evidence policy without changing method identity. An operational work part corresponds to a method factor only when that factor is recovered as `U.Method` under `A.3.1` and `B.1.5`; otherwise govern the material as a work part, method-description node, evidence segment, mechanism material, or system-component behavior under the direct pattern.
 
 ### A.15.1:9 - Temporal & Aggregation Semantics (normative operators & invariants)
 
@@ -22031,12 +22199,16 @@ When a Work is recorded, perform these **three quick checks**:
 
 ### A.15.1:11 - Common Anti-Patterns and How to Avoid Them
 
-* **"The log is the performed run."** Dumping telemetry without occurrence references (method-description source when current, performer, time window, affected referent, context) -> **Not Work**. Create a work-occurrence record and link the log as evidence.
+* **"The log is the performed occurrence."** Dumping telemetry without occurrence references (method-description source when current, performer, time window, affected referent, context) -> **Not Work**. Create a work-occurrence record and link the log as evidence.
 * **Record-only transforms.** ETL or replication of records with no declared affected referent (product or dataset as product) -> **Not Work** in this context; either declare the dataset as the product referent or treat the material under `U.WorkPlan` or the relevant operations pattern.
 * **Silent cross‑context acceptance.** “Ops accepted it, so audit accepts it.” → Add a **Bridge** or re‑judge in audit context.
-* **Method-description edition drift in mid-run.** Swapping SOP v5->v6 without recording -> split into episodes or record method-description override.
+* **Method-description edition drift in mid-occurrence.** Swapping SOP v5->v6 without recording -> split into episodes or record method-description override.
 * **Budget on the method.** Charging costs to Method or Role -> Book **only** to Work; keep estimates in method descriptions or plans.
 * **Part ambiguity.** Mixing retries, episodes, and operational parts with no declared relation → Choose and declare the part relation.
+* **Slice-as-episode.** A monitoring interval, telemetry window, crank-angle segment, or one-second reception trace is called an episode only because it has timestamps -> Use `TemporalPartOf_work`, an evidence relation, or a telemetry relation unless a declared episode policy supplies event-bounded continuity.
+* **Episode-as-new-work by habit.** A pause, retune, or interruption is always recorded as a new occurrence -> Apply the bounded-context episode policy. Keep the same parent work with `EpisodeOf_work` when the policy preserves identity; create a separate `U.Work` only when the policy declares a new occurrence.
+* **Method-factor-as-work-part by label.** A step, stroke, receiver component, graph node, or method-description section is treated as a work part or submethod by name -> Recover the current object: `U.Method` factor, `U.MethodDescription` constituent, `TemporalPartOf_work`, `OperationalPartOf_work`, evidence segment, mechanism material, system-component behavior, or source-gap note.
+* **Granularity inflation.** Every interval or trace row receives a durable work-part name -> Name the work part only when a current resource, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return use hangs on it.
 * **Union-hull confusion.** Changing KPI coverage silently between reports -> declare `Γ_time` policy per KPI.
 * **Double‑count in overlaps.** Summing child and parent resource ledgers → Declare and apply an overlap policy.
 
@@ -22044,17 +22216,19 @@ When a Work is recorded, perform these **three quick checks**:
 
 1. **Backfill links.** For existing logs, create work-occurrence records and attach `enactsMethod`, `methodDescriptionRef` when current, and `performedBy`.
 2. **Name the context.** Pick the judgement context explicitly; add Bridges if multiple contexts accept.
-3. **Record the episode policy.** Decide when an interruption keeps identity or forces a new run.
-4. **Choose Γ\_time per KPI.** Put "union" or "hull" in the KPI definition so disputes expose the coverage policy instead of hiding it.
-5. **Set an overlap policy.** Write one sentence on how shared costs are allocated; apply consistently.
-6. **Pull plans out.** Move calendars to `U.WorkPlan`; let Work record performed values.
-7. **Parameter blocks.** Make parameters explicit and bind them at start; root-cause analyses become easier.
+3. **Record the episode policy.** Decide when an interruption keeps identity or forces a new occurrence.
+4. **Separate slice, episode, and operational part.** Use interval/aspect for `TemporalPartOf_work`, event-bounded continuity for `EpisodeOf_work`, and recovered occurrence-side part plus any separately recovered method factor for `OperationalPartOf_work`.
+5. **Name only useful work parts.** If no current resource, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return use hangs on the candidate part, keep it as a relation, evidence slice, or telemetry slice.
+6. **Choose Γ\_time per KPI.** Put "union" or "hull" in the KPI definition so disputes expose the coverage policy instead of hiding it.
+7. **Set an overlap policy.** Write one sentence on how shared costs are allocated; apply consistently.
+8. **Pull plans out.** Move calendars to `U.WorkPlan`; let Work record performed values.
+9. **Parameter blocks.** Make parameters explicit and bind them at start; root-cause analyses become easier.
 
 ### A.15.1:13 - Consequences
 
 | Benefits                                                                                                                 | Trade-offs and mitigations                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| **Auditable reality.** Costs, time, and quality attach to concrete runs; root‑cause analysis and accountability improve. | **More records.** You create Work instances; mitigate with templates and automation.       |
+| **Auditable reality.** Costs, time, and quality attach to concrete work occurrences; root-cause analysis and accountability improve. | **More records.** You create Work instances; mitigate with templates and automation.       |
 | **Sound roll-ups.** Γ\_time and Γ\_work turn roll-ups from hand-waving into declared policy; KPIs become comparable.     | **Policy discipline.** Choose union or hull and an overlap policy before using the roll-up; write that policy once. |
 | **Cross‑context clarity.** CAC checks prevent silent model drift; bridges make acceptance explicit.                      | **Bridge upkeep.** Keep mappings short and focused; review at releases.                    |
 | **4D extensional coherence.** Parts, overlaps, and retries stop double-counting and identity confusion.                  | **Learning curve.** Teach episode vs retry; include examples in onboarding.                |
@@ -22071,7 +22245,7 @@ When a Work is recorded, perform these **three quick checks**:
 | --- | --- | --- | --- |
 | Occurrent and 4D occurrence ontology | ISO/IEC 21838-2:2021 / BFO 2020; BORO-style extensionalism used as historical lineage for identity criteria. | `U.Work` is an occurrence with temporal extent and occurrence references; parts, retries, resumptions, and overlaps stay explicit. | Treating a method factor, diagram, role label, or log entry as proof of a performed occurrence. |
 | Object-centric event logging and process mining | OCEL 2.0 Specification (2024) and object-centric process-mining practice. | Event records can enter an evidence or provenance relation for work only after they are bound to involved objects, performer or role-assignment relation, method, time window, context, and affected referent. | Treating telemetry or event rows alone as `U.Work`. |
-| Observability and telemetry practice | OpenTelemetry Specification 1.57.0 and current traces, metrics, and logs practice. | Telemetry is an evidence relation or archive input. It can replay, measure, or diagnose a work occurrence, but the occurrence still needs performer, method, context, time window, affected referent, resources, and outcome. | Counting trace, metric, or log existence as the performed work or as dominance evidence without the governing comparison or archive policy. |
+| Observability and telemetry practice | OpenTelemetry Specification 1.58.0 and current traces, metrics, and logs practice. | Telemetry is an evidence relation or archive input. It can replay, measure, or diagnose a work occurrence, but the occurrence still needs performer, method, context, time window, affected referent, resources, and outcome. | Counting trace, metric, or log existence as the performed work or as dominance evidence without the governing comparison or archive policy. |
 | Provenance and evidence-provenance practice | W3C PROV mature recommendation plus 2024 PROV-O/BFO alignment work. | Work records state evidence-provenance relation references and currentness notes without letting evidence, assurance, gate, or provenance claims replace the occurrence. | Using a provenance relation, assurance statement, or gate result as if it were the performed work. |
 | Temporal-interval and aggregation practice | Interval-algebra lineage plus current operations-management use of utilization, lead-time, and resource-ledger roll-ups. | Roll-ups require declared `Gamma_time`, `Gamma_work`, and overlap policy; partial order and overlap are not hidden in step labels. | Mixing union, hull, parent cost, child cost, and ordinal comparison without a declared policy. |
 
@@ -22087,7 +22261,7 @@ When a Work is recorded, perform these **three quick checks**:
 * **Four-slot grammar:** Who? **RoleAssignment**. Can? **Capability**. How? **Method or MethodDescription**. Did? **Work**.
 * **CAC checks:** **Context** (judgement), **assignment** (covering `U.RoleAssignment`), **Standard** (acceptance criteria).
 * **Roll‑ups:** `Γ_time = union` (utilization) or `hull` (lead time); `Γ_work` with a declared overlap policy.
-* **Episodes vs retries:** same run split vs new run; write the policy.
+* **Episodes vs retries:** same occurrence split vs new occurrence; write the policy.
 * **Resource honesty:** performed values booked **only** to Work; estimates belong in method descriptions or plans.
 
 ### A.15.1:15a - P2W Performed-Work Use Relation
@@ -22098,7 +22272,7 @@ A `U.Work` occurrence may cite a `U.WorkPlan`, `SlotFillingsPlanItem`, or prior 
 
 ### A.15.1:16 - Lowering, Repair, and Refresh Conditions
 
-Lower a candidate `U.Work` claim when performer, enacted method, method-description source when current, time window, `executedWithin`, affected referent, parameter bindings, resources, outcome, or state-change witness cannot be named at the granularity required by the next performed-work use. The acceptable lowered record is a plan note, readiness-gap note, evidence note, source-gap note, source-restoration request, or method-description reference, not a backdated work occurrence.
+Lower a candidate `U.Work` claim when performer, enacted method, method-description source when current, time window, `executedWithin`, affected referent, parameter bindings, resources, outcome, or state-change witness cannot be named at the granularity required by the next performed-work use. Lower a candidate work-part claim when the downstream use does not need a named work part or when the candidate is only an interval, event-log row, telemetry segment, method-description constituent, component behavior, mechanism material, or source cue. The acceptable lowered record is a temporal relation, plan note, readiness-gap note, evidence note, telemetry slice, method-description reference, source-gap note, source-restoration request, or direct neighboring object, not a backdated work occurrence or a gratuitous work part.
 
 Repair the work record when a subsequent source changes the work interval, performer, role assignment, enacted method, method-description edition, parameter binding, resource ledger, outcome, affected referent, state-plane reference, pre-state reference, post-state reference, overlap policy, or aggregation policy. Repair only the changed relation: do not rewrite the method when only evidence changed, do not rewrite evidence when only work time changed, and do not convert a plan or source-restoration request into work.
 
@@ -22112,20 +22286,20 @@ Refresh before cross-context acceptance, aggregation, comparison, result measure
 > **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
-**At a glance.** Use `U.WorkPlan` when the current claim is intended work: horizon, planned window, intended role requirements, planned constraints, resource budgets, dependencies, acceptance targets, and baselines for subsequent variance against performed `U.Work`.
+**At a glance.** Use `U.WorkPlan` when the current claim is intended work: horizon, planned window, intended role values or role-admission conditions, planned constraints, resource budgets, dependencies, acceptance targets, and baselines for subsequent variance against performed `U.Work`.
 
 **Use this when.** Use this pattern when a schedule, calendar, rota, Kanban ticket, Gantt bar, shift plan, rollout plan, reservation, planning cue, or P2W preparation note is being treated as a method, method description, performed work, evidence, approval, gate result, publication cue, query-plan representation, or database query-optimizer representation. `U.WorkPlan` is an episteme for intended `U.Work`; it can coordinate intended work, but it does not make work happen.
 
-**First output.** One plan record or `PlanItem` naming horizon, cadence, target `U.Method`, method-description source when current, planned window, intended role requirements or proposed `U.RoleAssignment`, planned constraints, resource budgets, dependencies, acceptance targets, planned preparation or full-kit tasks when current, planned baseline, and the variance relation expected when `U.Work` occurs.
+**First output.** One plan record or `PlanItem` naming horizon, cadence, target `U.Method`, method-description source when current, planned window, intended role values, role-admission conditions, capability-fit conditions, or proposed `U.RoleAssignment`, planned constraints, resource budgets, dependencies, acceptance targets, planned preparation or full-kit tasks when current, planned baseline, and the variance relation expected when `U.Work` occurs.
 
 **First-use checks.**
 1. Name the intended work occurrence or work family that needs planning.
-2. Recover target method, method-description source when current, planned window, role requirements, planned resources, dependencies, acceptance targets, baseline, and context.
+2. Recover target method, method-description source when current, planned window, intended role values, role-admission conditions, capability-fit conditions, planned resources, dependencies, acceptance targets, baseline, and context.
 3. Decide whether the encountered record, cue, or plan element is a `U.WorkPlan`, a method description, performed `U.Work`, a `SlotFillingsPlanItem`, `WorkEntryReadiness@Context`, evidence, gate claim, source-restoration case, publication-use cue, or declarative representation.
 4. Declare `PlanItem` decomposition, dependency relation, and planned-baseline policy before using the plan for coordination or variance.
 5. When work occurs, connect the `U.Work` record back to the `PlanItem` and record variance rather than rewriting the plan as if it had happened.
 
-**Ordinary use.** For simple coordination, a compact `PlanItem` with intended method, window, role requirement, resource budget, dependency, acceptance target, and baseline is enough.
+**Ordinary use.** For simple coordination, a compact `PlanItem` with intended method, window, intended role value or role-admission condition, resource budget, dependency, acceptance target, and baseline is enough.
 
 **Reliance-bearing use.** Use the fuller WorkPlan record when cross-role coordination, budget reservation, delivery commitment, gate preparation, audit expectation, cross-context acceptance, release preparation, evidence-reference notes, source-currentness requests, or P2W carry-through depends on the plan.
 
@@ -22133,25 +22307,25 @@ Refresh before cross-context acceptance, aggregation, comparison, result measure
 
 **What goes wrong if missed.** Teams treat calendars, tickets, reservations, or rollout notes as if work already happened, or treat a plan as method, evidence, gate result, approval, or publication authority.
 
-**What this buys.** One intended-work record that keeps horizon, window, intended role requirements, constraints, budgets, dependencies, acceptance targets, baseline, and subsequent variance against performed `U.Work` inspectable.
+**What this buys.** One intended-work record that keeps horizon, window, intended role values, role-admission conditions, capability-fit conditions, constraints, budgets, dependencies, acceptance targets, baseline, and subsequent variance against performed `U.Work` inspectable.
 
 **Not this pattern when.** Not this pattern when the current claim is a dated performed work occurrence (`A.15.1`), a `SlotFillingsPlanItem` (`A.15.3`), work-entry readiness or full-kit condition (`A.15.5`), a visible source cue needing work-relevant restoration (`A.15.4`), a method (`A.3.1`), a method description (`A.3.2`), evidence or assurance (`A.10` or `B.3`), a gate or constraint decision (`A.20` or `A.21`), publication-use behavior (`E.17`), or a declarative representation overread as a work-control or method claim (`C.2.P.DR`).
 
 ### A.15.2:1 - Context (plain‑language motivation)
 
-Operations happen in **time**. Even with perfect roles, abilities, and methods, nothing ships unless teams decide when and by whom concrete runs are intended to happen, under what **constraints** and **budgets**. Teams need a first-class concept for **plans and schedules** that does **not** get confused with:
+Operations happen in **time**. Even with perfect roles, abilities, and methods, nothing ships unless teams decide when and by whom concrete work occurrences are intended to happen, under what **constraints** and **budgets**. Teams need a first-class concept for **plans and schedules** that does **not** get confused with:
 
 * the **semantic “way of doing”** (that is `U.Method`),
 * the **written recipe** (that is `U.MethodDescription`),
 * the **performed work occurrence** (that is `U.Work`), or
-* the **state laws** (that is `U.Dynamics`).
+* the **state-change model** (that is `U.Dynamics`).
 
 `U.WorkPlan` is that missing intended-work record.
 
 ### A.15.2:2 - Problem (what breaks without `WorkPlan`)
 
 1. **“Workflow = schedule” conflation.** Flowcharts or code are used as calendars; resource clashes and SLA misses follow.
-2. **Plan and run blur.** Gantt bars or Kanban tickets are reported as if the work already happened; audits and costing degrade.
+2. **Plan and occurrence blur.** Gantt bars or Kanban tickets are reported as if the work already happened; audits and costing degrade.
 3. **Specification and time leakage.** People and calendars creep into MethodDescriptions; reuse and staffing agility collapse.
 4. **No variance model.** Without planned baselines, deviations in time, cost, and quality cannot be explained or improved.
 5. **Structure entanglement.** BoM and org charts get baked into “process” views; plans become brittle and unmaintainable.
@@ -22163,14 +22337,14 @@ Operations happen in **time**. Even with perfect roles, abilities, and methods, 
 | **Universality vs. domain idioms** | One plan concept that fits hospitals, fabs, data centers, and research labs—while honoring local terms. |
 | **Commitment vs. flexibility**     | Plans need enough firmness to coordinate, while remaining easy to update as reality changes.                         |
 | **Intended performer vs. performed-work assignee** | Plans may name intended performers; the assignment used for performed work is still checked for the work interval. |
-| **Budgets vs. actuals**            | Plans state targets and reservations; only `U.Work` records actual spend.                                   |
-| **Decomposition vs. fulfilment**  | Plan tasks decompose conveniently; they do not force a shape on actual Work runs.                       |
+| **Budgets vs. performed resource use**            | Plans state targets and reservations; only `U.Work` records performed resource use.                                   |
+| **Decomposition vs. fulfilment**  | Plan tasks decompose conveniently; they do not force a shape on performed Work occurrences.                       |
 
 ### A.15.2:4 - Solution - `U.WorkPlan` as the time-bound intention for `U.Work`
 
 #### A.15.2:4.1 - Definition
 
-**`U.WorkPlan`** is an **`U.Episteme`** that **declares intended `U.Work` occurrences** over a horizon, with **planned windows**, **dependencies**, **intended performer requirements** as `U.Role` values or proposed `U.RoleAssignment`s, **resource budgets and reservations**, and **acceptance targets** within a `U.BoundedContext`.
+**`U.WorkPlan`** is an **`U.Episteme`** that **declares intended `U.Work` occurrences** over a horizon, with **planned windows**, **dependencies**, **intended role values, role-admission conditions, or proposed `U.RoleAssignment`s**, **resource budgets and reservations**, and **acceptance targets** within a `U.BoundedContext`.
 
 > **Strict distinction (memory aid):**
 > **Method** = *how in principle*. **MethodDescription** = *how it is written*.
@@ -22183,35 +22357,35 @@ A `U.WorkPlan` **contains `PlanItem` values** (think: scheduled tasks or operati
 
 1. **Target Method and specification** — the **Method** to be enacted and the **MethodDescription** intended for enactment.
 2. **Planned window** — e.g., earliest start and latest finish, timebox, recurrence (cron-like), blackout periods.
-3. **Role requirements** — required `U.Role` values, not people; optional proposed `U.RoleAssignment`s if pre-assignment is admitted in the context.
-4. **Capability thresholds** — minimal abilities required of the performer, checked for the performed-work interval.
+3. **Role-admission conditions** — intended `U.Role` values and role conditions, not people; optional proposed `U.RoleAssignment`s if pre-assignment is admitted in the context.
+4. **Capability-fit conditions** — minimal abilities or envelopes expected of the performer, checked for the performed-work interval.
 5. **Resource budgets and reservations** — planned energy, materials, machine windows, money, and reservations on assets.
 6. **Dependencies** — precedence, overlap constraints, required gate references, and required approval references.
 7. **Acceptance targets** — quality windows and SLA targets to be judged when Work completes.
-8. **Location and asset constraints** — where the run is expected to take place.
+8. **Location and asset constraints** — where the work occurrence is expected to take place.
 9. **Links to Service promises** (if any) — external commitments that this plan aims to satisfy.
 
-> **Didactic guardrail:** **No logs or actuals** belong in a WorkPlan; **no step logic** or solver internals either - that is the Method or MethodDescription.
+> **Didactic guardrail:** **No logs or performed occurrence values** belong in a WorkPlan; **no step logic** or solver internals either - that is the Method or MethodDescription.
 
 #### A.15.2:4.3 - Clear distinctions for schedule, process, and workflow wording
 
 | If you say…                                 | In FPF it is…                                        | Why                                               |
 | ------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------- |
-| "The **schedule** for tomorrow's surgeries" | **`U.WorkPlan`**                                     | Calendar of intended runs with who and when constraints. |
+| "The **schedule** for tomorrow's surgeries" | **`U.WorkPlan`**                                     | Calendar of intended work occurrences with who and when constraints. |
 | "The **workflow** for appendectomy"         | **`U.MethodDescription`** and `U.Method`             | Recipe and semantic way, not a calendar.          |
-| "The **process** already ran at 10:00"      | **`U.Work`**                                         | A dated run with resources and outcomes.          |
+| "The **process** already ran at 10:00"      | **`U.Work`**                                         | A dated performed occurrence with resources and outcomes.          |
 | "The **thermodynamic trajectory**"        | **`U.Work`** occurrence plus **`U.Dynamics`** model  | A realized trajectory plus its model, not a plan. |
 | "The **plan** assigns Dr. Lee"              | **WorkPlan** naming an intended `U.RoleAssignment`   | Assignment is still checked for the work interval.        |
 | "The **budget** for Shift-B"                | **WorkPlan** (planned ledger)                        | Actual costs land on **Work**, not on the plan.   |
 
 > **Schedule-word guard.** Schedule-like words do not determine the kind by themselves. Use `U.WorkPlan` only when intended work, horizon or window, role constraints, resource constraints, dependencies, acceptance target, and baseline are current; otherwise recover method, method description, work, evidence, gate, publication-use, or declarative-representation claims separately.
 
-#### A.15.2:4.4 - Plan mereology (composition of plans ≠ composition of methods or runs)
+#### A.15.2:4.4 - Plan mereology (composition of plans ≠ composition of methods or work occurrences)
 
 Keep three separations crystal‑clear:
 
-* **Method composition** (design-time semantics) -> produces **new Methods**.
-* **Work composition** (run-time occurrences) -> produces **parent and child runs** with overlaps and episodes.
+* **Method composition** -> admits a composite **`U.Method`** when recovered submethods, whole-forming relations, and whole-level commitments are current.
+* **Work composition** -> relates performed **`U.Work`** occurrences as temporal parts, episodes, operational parts, concurrent parts, predecessors, successors, overlaps, containment, or another declared work relation.
 * **Plan mereology** (epistemic structure) -> organizes **`PlanItem` values** for coordination (phases, sprints, shifts), with **precedence** and **resource reservations**.
 
 **Common relations among `PlanItem` values:**
@@ -22228,7 +22402,7 @@ Keep three separations crystal‑clear:
 When reality happens, each `U.Work` may:
 
 * **Fulfil** a `PlanItem` — link `plannedAs → PlanItem`.
-* **Partially fulfil** — multiple Work instances share one `PlanItem` (e.g., split run), or one Work fulfils several `PlanItem` values (e.g., consolidated batch).
+* **Partially fulfil** — multiple Work instances share one `PlanItem` (for example, a split occurrence), or one Work fulfils several `PlanItem` values (for example, consolidated batch).
 * **Deviate** - occur with method or method-description substitution, different window, different performer, or policy exception.
 * **Be unplanned** — Work with no `PlanItem` (emergency or ad hoc); record it as unplanned when that relation matters for variance, audit, or improvement.
 
@@ -22248,8 +22422,8 @@ Use this as a human-facing checklist (not a rigid schema):
 
 1. **Horizon & cadence** (e.g., “W36 surgeries, daily ETL”).
 2. **`PlanItem` values** with: target Method and MethodDescription, planned windows, dependencies.
-3. **Role requirements** (`U.Role` values) and **intended assignments** (optional, context-admitted).
-4. **Capability thresholds** and **safety envelopes**.
+3. **Role-admission conditions** (`U.Role` values and conditions), **capability-fit conditions**, and **intended assignments** (optional, context-admitted).
+4. **Safety envelopes**, constraints, and other admissibility conditions for planned work.
 5. **Resource budgets** and **reservations** on assets.
 6. **Acceptance targets** (SLA and quality windows).
 7. **Bridges** if plan spans **multiple contexts** (operations, audit, or regulatory).
@@ -22264,7 +22438,7 @@ Use this as a human-facing checklist (not a rigid schema):
 * **WorkPlan:** `OR_DayPlan_2025‑08‑12`.
 * **`PlanItem` values:** `Case_1_Appendectomy`, `Case_2_Hernia`, with windows, context assignments, and surgeon `U.Role` values; anesthetist intended `U.RoleAssignment` provided.
 * **Budgets:** OR time blocks, consumables envelopes.
-* **Fulfilment:** Each surgery Work links to its `PlanItem`; variances computed (over-run time, substitutions).
+* **Fulfilment:** Each surgery Work links to its `PlanItem`; variances computed (duration overrun, substitutions).
 
 #### A.15.2:6.2 - Fab maintenance weekend (asset reservations)
 
@@ -22290,10 +22464,10 @@ Use this as a human-facing checklist (not a rigid schema):
 
 | ID | Requirement | Practical test |
 | --- | --- | --- |
-| CC-A15.2-1 | A conforming `U.WorkPlan` names intended `U.Work`, not performed work. | The record can state planned windows and baselines without claiming actuals. |
-| CC-A15.2-2 | Each reliance-bearing `PlanItem` names target `U.Method`, method-description source when current, planned window, role requirement, planned resource budget, dependencies, and acceptance target. | A performer can prepare the intended work without treating the plan as performed work. |
+| CC-A15.2-1 | A conforming `U.WorkPlan` names intended `U.Work`, not performed work. | The record can state planned windows and baselines without claiming performed values. |
+| CC-A15.2-2 | Each reliance-bearing `PlanItem` names target `U.Method`, method-description source when current, planned window, intended role value or role-admission condition, planned resource budget, dependencies, and acceptance target. | A performer can prepare the intended work without treating the plan as performed work. |
 | CC-A15.2-3 | Proposed `U.RoleAssignment`s remain intended assignments until checked for the performed-work interval by A.15 and A.15.1. | The plan does not accept the role assignment for that interval by publication alone. |
-| CC-A15.2-4 | Actual cost, resource use, launch values, substitutions, telemetry, and outcomes belong to performed `U.Work`. | The plan points to the work record for actuals and variance. |
+| CC-A15.2-4 | Performed cost, resource use, launch values, substitutions, telemetry, and outcomes belong to performed `U.Work`. | The plan points to the work record for performed values and variance. |
 | CC-A15.2-5 | `PlanItem` decomposition does not force the same shape on performed work. | Fulfilment and variance relations explain split, consolidated, emergency, or substituted work. |
 | CC-A15.2-6 | Cross-context planning names bridges before reusing planned windows, budgets, or acceptance targets across contexts. | Audit, regulatory, operations, and delivery contexts can judge the plan without hidden equivalence. |
 | CC-A15.2-7 | Evidence, assurance, gate, launch-value, and result-measurement claims stay in the patterns that govern those relations. | The WorkPlan may state evidence-reference notes or requests, but it does not become evidence, assurance, gate passage, or result measurement. |
@@ -22302,9 +22476,9 @@ Use this as a human-facing checklist (not a rigid schema):
 ### A.15.2:7b - Common Anti-Patterns and How to Avoid Them
 
 - **Plan-as-actual.** Do not treat a Gantt bar, Kanban ticket, shift rota, or calendar booking as performed work; create or cite the `U.Work` occurrence when work happens.
-- **Workflow-as-schedule.** Do not treat a method description or flowchart as a plan; make a `U.WorkPlan` only when intended windows, constraints, role requirements, and baselines are current.
+- **Workflow-as-schedule.** Do not treat a method description or flowchart as a plan; make a `U.WorkPlan` only when intended windows, constraints, role-admission conditions or intended role values, and baselines are current.
 - **Assignment-by-plan.** Do not treat an intended performer in the plan as a `U.RoleAssignment` satisfying the governing role, holder, and bounded-context constraints for the work interval; validate assignment when the work occurrence is prepared or recorded.
-- **Budget-as-cost.** Do not book planned budgets as actual resource use; actuals belong to `U.Work`.
+- **Budget-as-cost.** Do not book planned budgets as performed resource use; performed values belong to `U.Work`.
 - **Plan-shape overreach.** Do not force performed work to match plan decomposition; use fulfilment and variance relations.
 - **Evidence-note-as-claim.** Do not treat evidence-reference notes, gate-preparation notes, or source-currentness requests as evidence, gate passage, assurance, or release authorization.
 
@@ -22321,7 +22495,7 @@ Use this as a human-facing checklist (not a rigid schema):
 
 | Source tradition | Local invariant adopted | Shortcut rejected |
 | --- | --- | --- |
-| ISO 21502:2020 project-management guidance and PMBOK Guide Eighth Edition (2025) | A plan is an intended-work coordination episteme: horizon, selected delivery approach or method family, baseline, dependencies, resource expectations, and acceptance targets are declared before performed work and compared with actuals after performed work. | Treating a schedule, ticket, or baseline as evidence that the work already occurred. |
+| ISO 21502:2020 project-management guidance and PMBOK Guide Eighth Edition (2025) | A plan is an intended-work coordination episteme: horizon, selected delivery approach or method family, baseline, dependencies, resource expectations, and acceptance targets are declared before performed work and compared with performed values after work occurs. | Treating a schedule, ticket, or baseline as evidence that the work already occurred. |
 | ISO 55000:2024 asset-management practice | Asset reservations, maintenance windows, lifecycle objectives, risk, and value expectations belong in planning until actual work changes asset state or resource use. | Treating planned asset availability or reserved capacity as actual asset intervention or actual resource consumption. |
 | ISO 9001:2015 with Amendment 1:2024 quality-management practice | Planned quality objectives, acceptance targets, change notes, and performance evaluation stay replayable so variance can drive improvement. | Editing the plan after the fact so that quality, cost, or schedule variance disappears. |
 | Case-management and adaptive-work notation practice such as OMG CMMN 1.1 | Weakly structured or ad hoc work can still be related to a plan through case, exception, fulfilment, and variance relations. | Forcing every emergency, adaptive, or consolidated work occurrence into the original plan shape. |
@@ -22334,7 +22508,7 @@ Use this as a human-facing checklist (not a rigid schema):
 
 ### A.15.2:8 - P2W WorkPlanning Use Relation
 
-When `E.18.1` reaches WorkPlanning, `U.WorkPlan` states intended work occurrences, planned windows, intended role requirements, planned constraints, resource budgets, acceptance targets, evidence-reference notes, source-currentness requests, and `PlanItem` values.
+When `E.18.1` reaches WorkPlanning, `U.WorkPlan` states intended work occurrences, planned windows, intended role values, role-admission conditions, capability-fit conditions, planned constraints, resource budgets, acceptance targets, evidence-reference notes, source-currentness requests, and `PlanItem` values.
 
 When the P2W use also needs a readiness question, the WorkPlan may supply target PlanItems, planned preparation tasks, reservations, and planned baselines. `A.15.5` carries the `WorkEntryReadiness@Context` relation that judges full-kit condition, commitment disposition, resource readiness, WIP or flow policy, and launch-gate refs when those are current.
 
@@ -22346,9 +22520,9 @@ For P2W use, `U.WorkPlan` may state planned values, planned fillers, constraints
 
 ### A.15.2:10 - Lowering, Repair, and Refresh Conditions
 
-Lower a candidate `U.WorkPlan` claim when horizon, planned window, target method, method-description source when current, role requirement, planned constraint, resource budget, dependency, acceptance target, or baseline cannot be named at the granularity required by the next planning use. The acceptable lowered result is a planning cue, method-description note, source-gap note, source-restoration request, publication-use cue, declarative-representation note, readiness-gap note for `A.15.5`, or evidence-reference note, not a conforming WorkPlan.
+Lower a candidate `U.WorkPlan` claim when horizon, planned window, target method, method-description source when current, intended role value or role-admission condition, planned constraint, resource budget, dependency, acceptance target, or baseline cannot be named at the granularity required by the next planning use. The acceptable lowered result is a planning cue, method-description note, source-gap note, source-restoration request, publication-use cue, declarative-representation note, readiness-gap note for `A.15.5`, or evidence-reference note, not a conforming WorkPlan.
 
-Repair the WorkPlan when a subsequent source changes the intended method, planned window, role requirement, planned resource budget, dependency, acceptance target, baseline, version, bridge, or exception policy. Repair the plan; do not rewrite performed `U.Work` unless the work record itself changed, and do not make the repaired plan into evidence that the work occurred.
+Repair the WorkPlan when a subsequent source changes the intended method, planned window, intended role value or role-admission condition, planned resource budget, dependency, acceptance target, baseline, version, bridge, or exception policy. Repair the plan; do not rewrite performed `U.Work` unless the work record itself changed, and do not make the repaired plan into evidence that the work occurred.
 
 Refresh before relying on a WorkPlan for cross-context coordination, budget reservation, release preparation, gate preparation, work-entry readiness, evidence-reference use, performed-work entry, result measurement, or P2W carry-through. If the claim being made after refresh is work-entry readiness, performed work, evidence, assurance, gate passage, publication use, declarative representation, or source restoration, use the governing pattern for that relation and keep only the returned WorkPlan relation here.
 
@@ -32113,333 +32287,321 @@ The old `DesignRunTag` warning is preserved as a rule rather than a label: do no
 
 ### B.1.4:End
 
-## B.1.5 - Γ_method — Order‑Sensitive Method Composition & Work Enactment
-> **► decided‑by: A.14 Advanced Mereology**
-**A.14 compliance —** Methods compose over **SerialStepOf/ParallelFactorOf** on **MethodDescription/Method** graphs (order, not parthood); stuff‑like inputs are modelled via **PortionOf** on resources and accounted in **Γ_work**; method/version history uses **PhaseOf**; mapping quality is handled via **CL** (B.3).
+## B.1.5 - Gamma_method - Order-Sensitive Method Composition and Work Enactment
 
-> **Plain‑English headline.**
-> **Γ\_method** composes **ordered step specifications** into a **single MethodDescription** (design‑time) that **describes** a composite **Method**, and governs its **run‑time enactment as Work** (pre/post, capability typing, MIC honouring) while delegating **resource accounting** to **Γ\_work** and **order semantics** to **Γ\_ctx**.
+> **Type:** Part B composition and grounding pattern
+> **Status:** Stable
+> **Normativity:** Normative unless a section is explicitly informative
 
-### B.1.5:1 - Problem frame
+### B.1.5:0 - Use This When
 
-* **Strict Distinction (A.15)** separates **what a holon is** (structure), **how steps are ordered** (order), **how it unfolds** (time), **what it spends** (work/resources), and **what it values** (objectives).
-* **Method, MethodDescription, and Work.**
+Use this pattern when a project must decide whether several recovered methods compose into one larger `U.Method`, and when order, guarded choice, parallel branches, typed joins, adapters, or method-interface exposure changes the identity of that whole method.
 
-  * **Method** is the **timeless semantic “way of doing”** (a context‑scoped capability; A.3.1): it specifies admissible preconditions, effects, and bounds, independent of any particular run.
-  * **MethodDescription** is a **design‑time description** of a Method (knowledge on a carrier). It may be an **imperative step‑graph** (this pattern’s focus) or another admissible description form (functional/logical/dynamics/solver, etc.; A.3.2:4.2).
-  * **Work** is the **dated run‑time occurrence** that enacts a pinned MethodDescription under a `U.RoleAssignment`, records concrete **slot fillings** (parameters/carriers), and books the **resource ledger** (A.15.1).
-    Calling the description a “process” is common in some domains, but in FPF we keep **Method ≠ MethodDescription ≠ Work** to avoid category errors.
-* **A.15 (Role–Method–Work Alignment)** supplies the **typed ordered relations** we need: **SerialStepOf** (strict precedence) and **ParallelFactorOf** (order‑concurrent branches with a join).
-* **B.1.4 (Γ\_ctx/Γ\_time)** already handles **non‑commutativity** (order matters) and **temporal slicing**; **B.1.6 (Γ\_work)** handles **resource spending** and **efficiency**.
-  **Γ\_method** sits **between** them: it composes methods **by order and capability** and **delegates** resource accounting to **Γ\_work**.
+Typical moments:
+
+- a procedure, workflow, algorithm, pipeline, proof route, clinical protocol, manufacturing recipe, inference pipeline, or operational playbook has named steps or branches;
+- changing the order of two candidate submethods changes the result or the admissible conditions of use;
+- a source diagram or code file looks like a method, but it may be only a method description, a work plan, a dated work trace, a selector registry, or a mathematical lens;
+- a larger method must expose some interactions at its boundary while hiding internal steps;
+- assurance needs to know which joins, adapters, cutsets, or exposed interfaces make the composite method reliable enough to enact.
+
+**Primary EntityOfConcern.** The EntityOfConcern is an order-sensitive method-composition claim: a claim that recovered `U.Method` values form one composite `U.Method` under a bounded context.
+
+**First useful move.** For each apparent step or branch, recover the governed object before composing anything: `U.Method`, `U.MethodDescription`, `U.WorkPlan`, dated `U.Work`, `MethodRelationStructure@BoundedContext`, method-family registry or selector outcome, mathematical lens, mechanism, formal substrate, or quote-only source wording.
+
+**What goes wrong if missed.** A flowchart becomes the method, a plan item becomes a submethod, an event log becomes proof that a method was enacted, an order edge becomes a part, or a registry of alternatives is treated as one composed method. Then work starts from a description or label whose method identity, joins, interfaces, and failure conditions were never recovered.
+
+**What this buys.** The project can admit a composite `U.Method` only when method parts, whole-forming relations, whole identity, interface exposure, assurance hooks, and enactment boundary are explicit. If that threshold is not met, the project still has a useful lower object: a selected method relation structure, description, plan, work record, lens, or source-restoration request.
+
+**Not this pattern when.**
+
+- If the current claim is one semantic way of doing with no order-sensitive composition question, use `A.3.1`.
+- If the current claim is a representation that describes a method or method relation structure, use `A.3.2`.
+- If the current claim is intended work, use `A.15.2`.
+- If the current claim is a dated occurrence, use `A.15.1`.
+- If the current claim is structural component parthood, use `A.14`, `C.13`, and `B.3.5`.
+- If the current claim is only a method-family registry, selector, fallback relation, or alternative set without one whole-method assembly, use `G.5` or `MethodRelationStructure@BoundedContext`.
+
+### B.1.5:1 - Problem Frame
+
+`U.Method` is a non-agentive method holon kind. A method can have submethods and can participate as a submethod in a larger method. This does not mean every step-looking node, document section, file module, graph edge, work-plan item, or work occurrence is a method part.
+
+Order-sensitive method composition is a narrow constructive question:
+
+```text
+Given recovered U.Method parts in one bounded context,
+which whole-forming relations assemble them into one larger U.Method,
+and what whole-level commitments make the resulting method reidentifiable and enactable?
+```
+
+The whole method is not the diagram, code, schedule, event log, or work history that may describe, plan, record, or evidence it. Work enacts the method; the method does not perform work.
+
+`Gamma_method` is the name for this method-composition discipline. It is not a new root U-kind, not a workflow notation, not a resource-accounting operator, and not a substitute for `U.Work`.
 
 ### B.1.5:2 - Problem
 
-Without a dedicated, order‑aware method operator:
+Without B.1.5:
 
-1. **DesignRunTag conflation.** Authors mix **MethodDescription** (blueprint) and **Work** (execution), producing artifacts that have both planned and executed attributes.
-2. **Order erasure.** Sequences with crucial **pre/post‑conditions** get collapsed into sets; reordering breaks correctness while still “passing” naive aggregation.
-3. **Capability mismatches.** Step outputs do not match the next step’s required inputs, but this is hidden in untyped edges; composite methods become non‑executable.
-4. **Work leakage.** Costs and resource flows are **inlined** into method definitions; later models double‑count or violate conservation (Γ\_work was created to prevent this).
-5. **Synergy by arithmetic.** Throughput or quality jumps caused by **proper joins** or **coordination** are misreported as simple sums or averages—violating WLNK and obscuring when a **Meta‑Holon Transition (B.2)** should be declared.
+1. **Source-wording composition.** "Step", "stage", "activity", "task", "procedure", "workflow", "pipeline", or "algorithm" wording is accepted as method composition without recovering the actual objects.
+2. **Description-as-method.** A workflow diagram, BPMN model, code repository, proof script, table, checklist, or graph path is treated as the composite method itself.
+3. **Order as mereology.** `SerialStepOf`, `ParallelFactorOf`, guarded choice, or fallback relation is placed in a structural part-whole chain.
+4. **Typed joins disappear.** One submethod's output is assumed to satisfy the next submethod's precondition without an adapter, bridge, conversion, or declared equivalence.
+5. **Interface exposure is hidden.** Callers rely on internal interactions that should be encapsulated, or fail to see interactions that the composite method must expose.
+6. **Run-time leakage.** Resources, timestamps, telemetry, performed values, and outcomes are baked into the method instead of being recorded on `U.Work`.
+7. **False whole method.** A method-family registry, fallback table, selector rule, or local relation structure is treated as one whole method although no whole-method identity has been recovered.
 
 ### B.1.5:3 - Forces
 
-| Force                                    | Tension                                                                                                 |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **Order fidelity vs. simplicity**        | Keep the **true sequence** (non‑commutative) ↔ Provide a **small** operator set.                        |
-| **Type safety vs. flexibility**          | Enforce **capability typing** and **pre/post** checks ↔ Allow modular reuse of steps across contexts.   |
-| **Design vs. run**                       | Compose **MethodDescription** for planning ↔ Produce **Work** for execution without mixing them.                  |
-| **Parallelism vs. correctness**          | Maximise concurrency on **independent branches** ↔ Guarantee **sound joins** and reproducible outcomes. |
-| **Parsimony vs. separation of concerns** | Keep Γ small ↔ Keep **work** and **assurance** in their own lanes (Γ\_work, B.3).                       |
+| Force | Tension |
+| --- | --- |
+| Method reuse vs source concreteness | Teams need a reusable way of doing, while sources often show only one description, run, or plan. |
+| Order fidelity vs compact modeling | Important sequences and joins must remain explicit without turning every diagram edge into ontology. |
+| Whole-method identity vs relation usefulness | Some method-side relations are useful without asserting one composite method whole. |
+| Interface exposure vs encapsulation | A composite method must state which interactions callers may rely on and which remain internal. |
+| Assurance vs execution | Assurance needs joins, adapters, cutsets, and failure conditions; execution evidence belongs to work and evidence patterns. |
 
 ### B.1.5:4 - Solution
 
-#### B.1.5:4.1 - Terms (didactic recap)
+Admit one composite `U.Method` only when all composition coordinates are recovered.
 
-* **U.MethodDescription** — a design‑time description of a `U.Method` (A.3.2): typically an imperative **step‑graph** with **SerialStepOf/ParallelFactorOf**, step **capability types**, **pre/post‑conditions**, and required **external interactions**. (Other admissible description forms exist; B.1.5 focuses on the step‑graph case.)
-* **U.Method** — the timeless semantic “way of doing” (capability) described by ≥1 MethodDescription and enacted as `U.Work` (A.3.1, A.15.1).
-* **U.Work** — the run‑time, dated enactment occurrence: `performedBy → U.RoleAssignment`, `isExecutionOf → U.MethodDescription` (edition‑pinned), plus concrete slot fillings and resource ledger (A.15.1).
-* **U.StepSpec / U.StepMethod** — step‑level specialisations: each `StepSpec` describes a `StepMethod`; a composite `MethodDescription` relates them by order. (Run‑time step occurrences are **Work parts**, not “StepMethods”.)
-* **Capability type** — the **state/action signature** a step requires and produces (not to be confused with resources; those belong to Γ\_work).
-* **Method Interface Standard (MIC)** — the **order‑aware** analogue of BIC: a short, declarative statement of what **external interactions** of the steps are **Promoted / Forwarded / Encapsulated** at the composite method boundary.
-
-> **Separation reminder.**
-> Method composition ≠ resource spending. Keep **resource budgets, yields, dissipation** in **Γ\_work**; **Γ\_method** only checks and composes **order and capability**.
-
-#### B.1.5:4.2 - The operator family (two companion flavours)
-
-To respect the DesignRunTag split, **Γ\_method** is presented as two companion operators sharing the same intent but acting at different `DesignRunTag` positions (spec vs run).
-
-1. **Planning (design‑time) — compose specifications**
-
-   ```
-   Γ_method^plan : ( D_spec : OrderedDependencyGraph< U.StepSpec >,
-                     σ       : OrderSpec,
-                     MIC_in  : optional boundary hints )
-                   → U.MethodDescription
-   ```
-
-   * **Domain.** `D_spec` contains step specifications linked by **SerialStepOf** / **ParallelFactorOf** (**A.15**).
-   * **Result.** A single **U.MethodDescription** whose **MIC** is computed from step interfaces using the **Promote / Forward / Encapsulate** quartet (cf. BIC in B.1.2). The resulting MethodDescription **SHALL** declare the `U.Method` it describes (A.3.2); in the step‑graph case this is the semantic serial/parallel composition of the described `StepMethod`s (A.3.1:9).
-
-2. **Enactment (run‑time) — produce Work**
-
-   ```
-   Γ_method^run  : ( M_spec : U.MethodDescription,
-                     RA     : U.RoleAssignment,
-                     Fill   : carrier & parameter slot fillings )
-                   → U.Work
-   ```
-
-   * **Domain.** A previously composed **MethodDescription**, a performer designated via **RoleAssignment** (the holder bears the required role in context), and concrete **slot fillings** (carriers, parameters) consistent with the MethodDescription’s declared SlotKinds/ValueKinds (A.6.5).
-   * **Result.** A **U.Work** record (the dated run) provided that **capability checks** and **pre/post‑conditions** hold and the MIC is honoured.
-
-**Relationship to Γ\_ctx.**
-Both flavours **reuse Γ\_ctx** invariants for order (non‑commutative composition with **NC‑1..3** reproducibility). **Γ\_method** specialises the **typing and boundary rules** for methods and introduces **MIC**.
-
-#### B.1.5:4.3 - Core aggregation rules (design‑time composition)
-
-When computing **Γ\_method^plan(D\_spec, σ)**:
-
-1. **Order preservation.**
-   Respect the **OrderSpec σ**; independent branches may be folded in any **topological sort** (Γ\_ctx NC‑3). **SerialStepOf** enforces strict precedence; **ParallelFactorOf** allows concurrency with a **join**.
-
-2. **Capability continuity (typed joins).**
-   Every join must be **type-sound**: the **post-condition and output signature** of each incoming branch must **meet** the next step's **pre-conditions** (logical entailment or declared **adapter** steps). Missing adapters are **defects**, not assumptions.
-
-3. **MIC synthesis (boundary behaviour).**
-   For each external interaction of a step, decide **Promote / Forward / Encapsulate** into the composite **MIC**. This inherits the clarity of BIC (B.1.2) for methods.
-
-   * *Promote*: becomes a direct composite interaction (e.g., top‑level “start/stop”).
-   * *Forward*: remains step‑local but exposed under the composite boundary (namespaced).
-   * *Encapsulate*: becomes internal; callers cannot rely on it.
-
-4. **Assurance hooks (without computing assurance).**
-   Record where **B.3 assurance** will later hang: (i) the **cutset** steps that bound reliability/quality, (ii) the **integration edges** whose **CL** will penalise poor fit (mappings, fragile joins), and (iii) the **envelope** (G) intended for the method’s validity.
-
-5. **No costs here.**
-   If a step lists resources/yields, **do not** aggregate them here. Instead, add a pointer to the corresponding **Γ\_work** composition to be executed with the same order/joins at run‑time.
-
-#### B.1.5:4.4 - Core aggregation rules (run‑time enactment)
-
-When executing **Γ\_method^run(M\_spec, RA, Fill)**:
-
-1. **Role–Method–Spec alignment (A.2 / A.3 / A.15).**
-   Confirm that `RA.role` is eligible to enact the `U.Method` described by `M_spec` (or a declared equivalent/refinement in the same context), and that the Work’s `performedBy` and `executedWithin` anchors can be satisfied (A.15.1). If this fails, you may still record an attempted run, but it is **not** a conformant “execution of `M_spec`”.
-
-2. **Pre/post enforcement.**
-   Before each step, verify **pre‑conditions** against **Fill** and the evolving carrier state; after, check **post‑conditions** hold. Failing these means the run cannot be certified as a conformant `U.Work` execution of `M_spec`.
-
-3. **Typed state flow.**
-   The **state/action types** produced by a step must make the next step **well‑typed**; if not, an **adapter method** (itself with a MethodDescription) must be present in the graph.
-
-4. **Order determinism (Γ\_ctx).**
-   Respect the `OrderSpec σ` declared in `M_spec`. Parallel branches may execute independently **only if** they share no state that would break **NC‑1..3**; otherwise they must synchronise at the declared join.
-
-5. **MIC honouring.**
-   Interactions exposed by **MIC** are the **only** external commitments the composite method makes. Any additional ad‑hoc external interaction is a **model violation** (or requires updating the MIC and re‑planning).
-
-6. **Γ\_work hand‑off.**
-   Invoke **Γ\_work** to compute **spent resources, yields, dissipation** along the same order/join structure. The resulting ledgers and work-result records **annotate the Work** but are **not** part of Γ\_method’s aggregation.
-
-> **Invariant intuition.**
->
-> * **IDEM:** a single step‑method composed alone yields the same method.
-> * **COMM/LOC:** replaced by Γ\_ctx **NC‑1..3** (determinism given `σ`, context hash of `σ`, and partial‑order soundness).
-> * **WLNK:** quality/throughput of the composite is bounded by the **critical path** steps (identified for later B.3 assurance).
-> * **MONO:** strengthening a step (better pre/post, stronger type, improved adapter) **cannot** make the composite worse.
-
-#### B.1.5:4.5 - Didactic contrasts (to prevent common confusions)
-
-* **Method vs Work.**
-  Method = the semantic “way of doing” (what transformations are admissible); **Work** = what happened this time, including **resources spent / yields / dissipation** when enacting it (Γ\_work). Keep them distinct.
-
-* **Method vs Structure.**
-  Method composes **ordered steps**; structure composes **parts** (Γ\_sys). Do not use **ComponentOf** where **SerialStepOf/ParallelFactorOf** are intended.
-
-* **Step vs part vs specialization.**
-  A “step” in `SerialStepOf/ParallelFactorOf` is a **factor in an order algebra**, not a mereological part and not a type‑specialisation.
-  – Use **ComponentOf/PartOf** for structural wholes (A.14).
-  – Use **`≤ₘ` refinement / equivalence / substitution** for Method specialisation (A.3.1).
-  – Use **Kind‑CAL (`⊑`)** for kind/subkind.
-
-* **Method vs Phase.**
-  Method composition is **order**; **PhaseOf** (Γ\_time) is **temporal progression** of the **same carrier**. If a phase boundary also introduces **closure/supervision/context rebase**, that is **MHT** (B.2), not mere phasing.
-
-* **MethodDescription vs Work.**
-  Keep **planning** artefacts (MethodDescription) separate from **run‑time occurrences** (Work). `Γ_method^plan` produces MethodDescriptions; `Γ_method^run` produces Work that cites an edition‑pinned MethodDescription and records effective slot fillings and ledgers (A.15.1).
-
-### B.1.5:5 - Archetypal grounding (worked, didactic)
-
-#### B.1.5:5.1 - System archetype — **Assemble‑Paint‑Test** as one Method
-
-* **Design‑time (Γ\_method^plan).**
-  `D_spec` contains `StepSpec`s: `AssembleChassis`, `InstallPowertrain`, `PaintBody`, `RunFunctionalTest`.
-  Relations: `AssembleChassis → InstallPowertrain` (**SerialStepOf**), `PaintBody ∥ RunFunctionalTest` after a structural seal (**ParallelFactorOf**).
-  Capability typing:
-
-  * Output of `InstallPowertrain` **meets** input of `RunFunctionalTest` (functional harness attached).
-  * `PaintBody` requires sealed surfaces from `InstallPowertrain` (pre‑condition).
-    MIC outcome:
-  * **Promote:** `Start()`, `Abort()`, `CertificationReport`.
-  * **Forward:** `RunFunctionalTest.Diagnostics` (namespaced).
-  * **Encapsulate:** `PrimerMixingPort`, internal seal checks.
-
-* **Run‑time (Γ\_method^run).**
-  The holder designated by the relevant `U.RoleAssignment` enacts the `MethodDescription` on concrete carriers, producing a `U.Work` record. Pre/post checks gate each step; parallel branches run after pre‑conditions met; a join waits for both to finish.
-
-* **Assurance hooks (B.3).**
-  Cutset steps for WLNK: `InstallPowertrain` (torque tolerances) and `RunFunctionalTest` pass/fail; integration edges carry **CL** for harness mapping and paint/seal specification.
-  **Γ\_work** is invoked to compute energy/material spend and dissipation; Γ\_method does not tally costs itself.
-
-#### B.1.5:5.2 - Episteme archetype — **Evidence‑Synthesis‑Publish** as one Method
-
-* **Design‑time (Γ\_method^plan).**
-  Steps: `CollectDatasets`, `NormalizeSchemas`, `EstimateModel`, `CrossValidate`, `DraftManuscript`.
-  Ordering: `CollectDatasets → NormalizeSchemas → EstimateModel → CrossValidate → DraftManuscript`.
-  Capability typing: `NormalizeSchemas` outputs a typed feature space that **entails** `EstimateModel`’s input; adapters specified for legacy datasets.
-  MIC outcome:
-
-  * **Promote:** `Submit()`, `ReleaseArtifacts()`.
-  * **Forward:** `CrossValidate.Folds(k)`.
-  * **Encapsulate:** ad‑hoc scrubbing utilities.
-
-* **Run‑time (Γ\_method^run).**
-  The same order executes as `U.Work`; **Γ\_work** accounts for compute/storage spend.
-  Assurance hooks: cutset at `CrossValidate`; integration **CL** for schema mappings; post‑condition for `DraftManuscript` includes provenance SCR.
-
-### B.1.5:6 - Method Interface Standard (MIC) — template & examples
-
-#### B.1.5:6.1 - MIC template (normative content)
-
-```
-Method Interface Standard (MIC)
-  name:                human-readable identifier
-  version:             semantic label of this MIC
-  orderSpecHash:       hash(OrderSpec σ + step signatures)
-  externalInteractions:
-    - id:              external op name
-      mode:            {Promote | Forward | Encapsulate}
-      signature:       state/action types (typed interface)
-      preconditions:   predicates that must hold at call
-      postconditions:  predicates guaranteed on return
-      qosEnvelope:     optional envelope (throughput, latency, quality)
-  invariants:
-    - textual/logical invariants preserved by the method
-  notes:
-    - rationale for Promote/Forward/Encapsulate choices
+```text
+OrderSensitiveMethodComposition:
+  WholeMethodRef: U.Method
+  BoundedContextRef: U.BoundedContext
+  PartMethodRefs: non-empty set of U.Method
+  WholeFormingRelations:
+    serial | parallel | guardedChoice | iteration | refinement | substitution | fallback | adapter | typedJoin
+  WholeIdentity:
+    preconditions
+    effects or postconditions
+    invariants
+    accepted inputs and outputs
+    failure and stop conditions
+  MethodInterfaceExposure:
+    exposed interactions
+    forwarded interactions
+    encapsulated interactions
+  MHTOrWholeReidentification:
+    whole-level commitment or B.2 relation when needed
+  AssuranceHooks:
+    typed joins, adapters, fragile branches, cutsets, evidence targets
+  EnactmentBoundary:
+    which U.Work may enact this method and which U.MethodDescription describes it
+  LoweredDispositionIfNotComposite:
+    MethodRelationStructure | U.MethodDescription | U.WorkPlan | U.Work | G.5 selector | lens | source-restoration request
 ```
 
-#### B.1.5:6.2 - MIC excerpts (didactic)
+#### B.1.5:4.1 - Recover Parts Before Composition
 
-* **Manufacturing method MIC excerpt**
+Do not start from the word "step". Start from the object claim.
 
-  ```
+An apparent step can be:
+
+- a `U.Method` submethod;
+- a description constituent inside `U.MethodDescription`;
+- a plan item inside `U.WorkPlan`;
+- a dated `U.Work` occurrence or work part;
+- an order relation, fallback relation, or selector relation inside `MethodRelationStructure@BoundedContext`;
+- a mathematical or representation lens over a relation structure;
+- mechanism or formal-substrate material;
+- quote-only source wording.
+
+Only the first case can be a method part. Do not mint `U.StepSpec`, `U.StepMethod`, `U.MethodStep`, or `U.MethodAlgebra` for the others.
+
+#### B.1.5:4.2 - Admit The Composite Method
+
+When the apparent parts are recovered as `U.Method` values, compose them only after naming the whole-forming relations:
+
+- **serial composition** when one submethod's accepted result is a precondition for the next;
+- **parallel composition** when branches can proceed independently under a declared join condition;
+- **guarded choice** when one branch is selected by a declared predicate;
+- **iteration** when a submethod repeats until a stop condition is met;
+- **refinement or substitution** when a submethod can stand in for another under declared bounds;
+- **fallback or dispatch** when a selector chooses a method family member;
+- **adapter** when a conversion method is needed to make a typed join admissible.
+
+For order-sensitive composition, the method-composition claim also needs the order apparatus by reference: `OrderSpecRef`, any context hash or partial-order reproducibility condition inherited from `B.1.4`, and the typed join or adapter evidence that says one submethod's accepted outputs meet the next submethod's preconditions. This preserves the old capability-continuity obligation without treating "capability type" as the capability instance itself.
+
+The result is one composite `U.Method` only when the whole has its own identity: preconditions, effects, invariants, accepted inputs and outputs, failure conditions, and work-facing acceptance relation. If those whole-level commitments cannot be named, lower the claim to `MethodRelationStructure@BoundedContext` or another neighboring object.
+
+#### B.1.5:4.3 - Keep Order Out Of Structural Mereology
+
+`SerialStepOf`, `ParallelFactorOf`, guarded choice, iteration, fallback, adapter, and typed join are method-composition or method-relation claims. They are not A.14 component parthood.
+
+Use A.14, C.13, and B.3.5 when the claim is about structural parts of a holon. Use B.1.5 when the claim is about how ways of doing compose into a larger way of doing. The same project may need both, but they are different relation families.
+
+When the current method-composition claim needs explicit order aggregation, context hash, partial-order soundness, or `Gamma_ctx` notation, use `B.1.4` for that ordered-relation apparatus. `B.1.4` can express the order discipline; B.1.5 still decides whether the recovered ordered methods are enough to admit one composite `U.Method`.
+
+When the current claim is temporal phasing of the same carrier or method-description edition history, use the phase or temporal owner rather than B.1.5. A phase boundary becomes a B.2-family question only when the boundary also introduces whole reidentification, closure, supervision, or context rebase. Order, phase, structural parthood, and MHT are different claims even when one source diagram uses one line for all of them.
+
+#### B.1.5:4.4 - Expose The Composite Method Interface
+
+A composite method needs an interface exposure decision:
+
+- **exposed:** a caller may rely on the interaction as part of the whole method;
+- **forwarded:** a caller may address an internal submethod interaction through a declared namespace or adapter;
+- **encapsulated:** the interaction is internal and cannot be relied on from outside the whole method.
+
+The interface exposure decision is part of the composite method identity when outside work, assurance, planning, or substitution relies on it. It is not a publication layout decision.
+
+#### B.1.5:4.4.1 - Method Interface Card (MIC)
+
+When an interface exposure decision is reliance-bearing, publish it as a compact Method Interface Card (MIC). The MIC is a method-description or assurance-facing card about the composite method; it is not a new U-kind and not the method itself.
+
+```text
+MethodInterfaceCard:
+  methodRef: U.Method
+  methodDescriptionRef?: U.MethodDescription
+  orderSpecRef?: B.1.4 order apparatus
   externalInteractions:
-    - id: Start
-      mode: Promote
-      signature: Start(): Promise<BatchId>
-      preconditions: LineReady & MaterialsAvailable
-      postconditions: BatchId issued
-    - id: PrimerMixingPort
-      mode: Encapsulate
-  invariants:
-    - FunctionalTest.Pass implies TorqueTolerance ≤ δ
-  ```
+    - interactionName
+      exposureMode: exposed | forwarded | encapsulated
+      acceptedInputOrCallSignature
+      preconditions
+      postconditionsOrEffects
+      qualityEnvelopeRefs?
+  invariants
+  adapterOrTypedJoinRefs?
+  assuranceHookRefs?
+  rationale
+```
 
-* **Evidence method MIC excerpt**
+Use a MIC when callers, planners, auditors, or substituting methods may rely on the composite boundary. For lightweight internal use, a few exposure lines may be enough; do not create a separate card by ritual.
 
-  ```
-  externalInteractions:
-    - id: Submit
-      mode: Promote
-      signature: Submit(): Promise<SubmissionId>
-      preconditions: ManuscriptReady & SCRComplete
-      postconditions: DOI assigned on accept
-    - id: CrossValidate.Folds
-      mode: Forward
-      signature: Folds(k: Int): Report
-  invariants:
-    - Report.metrics computed on held-out data only
-  ```
+#### B.1.5:4.5 - Keep Method Admission And Work Occurrence Separate
 
-### B.1.5:7 - Proof obligations (normative)
+B.1.5 admits and grounds a composite `U.Method`. It may require a `U.MethodDescription` to describe the composition. It does not by itself create performed work.
 
-**At planning time (Γ\_method^plan):**
+A performed enactment is `U.Work` under `A.15.1`. The work record cites:
 
-1. **PO‑PLAN‑ORDER.** Provide `OrderSpec σ`; produce `orderSpecHash`.
-2. **PO‑PLAN‑TYPE.** For every edge, show **capability continuity**: `OutType(step_i) ⊢ InType(step_j)` or provide a typed **adapter StepSpec**.
-3. **PO‑PLAN‑MIC.** For each step interaction, decide **Promote/Forward/Encapsulate** and justify in MIC.
-4. **PO‑PLAN‑CL‑POINTS.** Identify integration edges whose **CL** will matter for B.3; record intended sources of mapping evidence.
-5. **PO‑PLAN‑NO‑WORK.** Confirm that costs/resources are **not** aggregated here; point to the planned **Γ\_work** composition (by reference).
+- the enacted `U.Method`;
+- the method-description source when current;
+- the performer through `U.RoleAssignment`;
+- the time window, parameter bindings, affected referent, resource ledger, outcome, and evidence relations.
 
-**At run time (Γ\_method^run) producing `U.Work`:**
+Resource aggregation, elapsed time, telemetry, retries, and work outcomes belong to `U.Work`, `Gamma_work`, and evidence patterns. They do not become parts of the method.
 
-1. **PO‑RUN‑PRE/POST.** Demonstrate that pre‑conditions hold before each step; check post‑conditions after.
-2. **PO‑RUN‑NC.** Show compliance with Γ\_ctx **NC‑1..3** (determinism with σ, context hash, partial‑order soundness).
-3. **PO‑RUN‑MIC‑HONOUR.** Record that only MIC‑declared external interactions occurred.
-4. **PO‑RUN‑WORK.** Attach the **Γ\_work** result (spent resources, yields, dissipation) aligned with the same order/join structure.
-5. **PO‑RUN‑ASSURANCE.** Provide the observed values for the cutset steps and the actual **CL** of integration mappings to feed B.3 assurance.
+The composition link is not one-to-one. A work occurrence may enact the whole method without exposing every submethod as a separate work part. A temporal work slice often enacts the same whole method during a selected interval. An episode may span several method factors, repeat one factor, or be split by evidence policy without changing the method identity. A work part enacts a submethod only when that submethod has already been recovered as `U.Method`; otherwise the current object is a work part, method-description node, evidence segment, mechanism material, system-component behavior, or source-restoration request.
 
-### B.1.5:8 - Conformance Checklist (normative)
+**Reader check.** Before saying that a work part enacts a submethod, name both sides:
 
-| ID            | Requirement                                                                                                                                                   | Purpose                             |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| **CC‑B1.5.1** | Γ\_method **SHALL** be used in two flavours only: `Γ_method^plan` for specifications, `Γ_method^run` for Work enactments.                                         | Enforce DesignRunTag separation.      |
-| **CC‑B1.5.2** | Planning inputs **SHALL** use **SerialStepOf / ParallelFactorOf** edges with a declared **OrderSpec σ**.                                                      | Preserve order semantics.           |
-| **CC‑B1.5.3** | All joins **SHALL** be **type‑sound** (capability continuity) or include explicit typed adapters.                                                             | Prevent non‑executable composites.  |
-| **CC‑B1.5.4** | A **MIC** **SHALL** be produced for `Γ_method^plan` and **SHALL** be honoured by `Γ_method^run`.                                                              | Make external commitments explicit. |
-| **CC‑B1.5.5** | Resource spending/yields **SHALL** be computed via **Γ\_work** and MUST NOT be inlined into Γ\_method aggregation.                                            | Maintain separation of concerns.    |
-| **CC‑B1.5.6** | Γ\_ctx **NC‑1..3** invariants **SHALL** hold for both flavours (determinism under σ, hash, partial‑order soundness).                                          | Guard non‑commutative correctness.  |
-| **CC‑B1.5.7** | If joining branches produces apparent super‑additivity beyond WLNK not explainable within Γ\_method, an **MHT** **SHALL** be considered and recorded per B.2. | Prevent “synergy by arithmetic”.    |
+- the occurrence-side object: parent `U.Work`, part relation, interval or boundary event, performer, resources or evidence role;
+- the method-side object: recovered `U.Method` submethod, whole-forming relation, preconditions, effects, interface, and whole-method identity.
 
-### B.1.5:9 - Anti‑patterns & repairs
+If either side is missing, lower only that side. Do not repair a missing submethod by inventing a work part, and do not repair a missing work part by inventing a submethod.
 
-| Anti‑pattern           | Symptom                                                       | Repair                                                                             |
-| ---------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Flattened set of steps** | Order lost; results become nondeterministic | Use Γ\_ctx to restore `σ`, then apply Γ\_method^plan. |
-| **Cost‑in‑method** | Resources embedded in method definition | Remove costs; move to Work/Γ\_work. |
-| **DesignRunTag Chimera** | Spec contains runtime measures; enactment adds planning edges | Split into `MethodDescription` (design) vs `Work` (run); rerun Γ\_method per flavour.                   |
-| **DesignRunTag Chimera** | Spec contains runtime measures; enactment adds planning edges | Split into `MethodDescription` vs `Method`; rerun Γ\_method per flavour.                  |
-| **Orderless Set**      | Steps modelled as unordered; reordering breaks correctness    | Provide `OrderSpec σ` and recompose with Γ\_method/Γ\_ctx.                         |
-| **Silent Adapter**     | A join assumes implicit conversion                            | Add explicit typed **adapter StepSpec/Method** and re‑prove capability continuity. |
-| **Inline Costs**       | Method sums time/energy                                       | Move to **Γ\_work**; link the work composition to the same order.                  |
-| **Boundary Fog**       | External calls occur ad‑hoc                                   | Define/Update **MIC**; Promote/Forward/Encapsulate explicitly.                     |
-| **Emergence by Join**  | Throughput leaps past WLNK with no story                      | Either (i) prove within Γ\_method (cutset/CL/order) or (ii) declare **MHT** (B.2). |
+#### B.1.5:4.5.1 - Planning And Performed-Work Obligations
 
-### B.1.5:10 - Consequences
+B.1.5 has two common use positions, but they are positions in use, not two U-kinds:
 
-**Benefits**
+- **Planning or description-side use.** Recover the submethods, order apparatus, typed joins or adapters, method interface exposure, invariants, and whole-level commitments. The output is a composite `U.Method` claim and, when a representation is needed, a `U.MethodDescription` or MIC that describes that method.
+- **Performed-work use.** A `U.Work` occurrence may cite the composite `U.Method` and the method-description source it used. The work record checks role assignment, capability-fit or admission conditions when current, preconditions, postconditions, order conformance, MIC-honouring interactions, resource ledger handoff, and evidence relations. These checks annotate or support the performed work; they do not become parts of the method.
+- **Assurance use.** Identify cutset submethods, fragile typed joins, adapter points, mapping congruence or CL-sensitive edges, and the envelope or scope in which the composite method is expected to hold. B.3 and related assurance patterns evaluate those hooks; B.1.5 only makes them visible.
 
-* **Didactic clarity.** Readers see **what** is being composed (order & capability) vs **what** is spent (Γ\_work) vs **what** is assured (B.3).
-* **Deterministic execution semantics.** Γ\_ctx‑backed order with explicit joins yields reproducible composites.
-* **Robust interfaces.** MIC prevents accidental external dependencies and preserves modularity.
-* **Cross‑scale fit.** Same pattern works for physical, organizational, and epistemic methods.
+Useful invariants remain: a single recovered submethod composed alone does not create a surprising new method; order is deterministic only under the declared order apparatus; composite quality or throughput is constrained by critical path and weakest-link considerations unless a B.2-family whole reidentification claim is separately admitted; strengthening a submethod, adapter, or typed join should not make the composite method worse unless a stated side condition changes.
 
-**Trade‑offs**
+#### B.1.5:4.6 - Use MethodRelationStructure Below Whole-Method Threshold
 
-* **More explicitness up‑front.** Capability typing and MIC authorship require care; in return, later integration is safer.
-* **Adapter discipline.** Modellers must create adapters rather than assuming conversions—this avoids hidden brittleness.
+Use `MethodRelationStructure@BoundedContext` when method-side relations are current but one whole method is not admitted. Typical cases:
 
-### B.1.5:11 - Rationale (informative)
+- a fallback registry selects among alternatives;
+- a workflow diagram relates method descriptions but does not recover method parts;
+- a method family has refinement, substitution, or dispatch relations;
+- a graph or algebra analyzes method relations as a lens;
+- a cross-context source uses the same method names without a bridge for method identity;
+- a work plan orders tasks but does not define one reusable method.
 
-* **Order is semantic.** Many failures stem from pretending that order does not matter; Γ\_method makes **non‑commutativity** explicit (via Γ\_ctx) while keeping the operator set small.
-* **Strict Distinction.** The split between **Method** (semantic), **MethodDescription** (spec), **Work** (occurrence), **Γ\_method** (order/type checks), **Γ\_work** (resource ledgers), and **assurance** implements A.15, preventing category errors (semantics vs execution vs claims).
-* **Mereology alignment.** Using **SerialStepOf / ParallelFactorOf** (A.14) keeps method composition orthogonal to structural composition (**ComponentOf**) and temporal phasing (**PhaseOf**).
-* **Assurance readiness.** Identifying cutsets and mapping CL points during planning makes B.3 application straightforward and auditable.
-* **Interfaces matter.** MIC prevents accidental coupling and makes integration points auditable.
-* **Separation of concerns.** Γ\_method composes behaviour; Γ\_work accounts resources; B.3 assesses quality—keeping algebraic reasoning sound.
+This lower object is not a failure. It is the right governed object when relation structure is useful but method holon composition is not current.
 
-### B.1.5:12 - Relations
+### B.1.5:5 - Worked Slices
 
-* **Builds on:** A.12 (Transformer Role), A.14 (Mereology Extension), A.15 (Strict Distinction); B.1.1 dependency-structure and relation-grounding checks; B.1.4 (Γ\_ctx/Γ\_time).
-* **Coordinates with:** B.1.6 (Γ\_work) for resource accounting; B.3 (Assurance) for WLNK cutsets and CL penalties.
-* **Triggers/Complements:** B.2 (MHT) when new closure/supervision or context re‑base appears at method level.
-* **Used by:** Later domain patterns that define canonical methods in specific disciplines (without altering Γ\_method).
+#### B.1.5:5.1 - Manufacturing Recipe
 
-> **One‑sentence takeaway.**
-> **Γ\_method** composes **ordered, typed steps** into a reliable method, keeps **interfaces explicit** (MIC), leaves **costs to Γ\_work**, and provides clean hooks for **assurance** and **emergence**.
+`AssembleFrame`, `InstallMotor`, and `RunFunctionalTest` are recovered as `U.Method` values in a bounded manufacturing context. `InstallMotor` must precede `RunFunctionalTest`; the test accepts the installed harness as input; an adapter method is needed when a supplier motor uses a different connector.
+
+The composite `BuildAndVerifyPumpUnit` is admitted as a `U.Method` only after the whole states its preconditions, accepted inputs, final effect, exposed start and abort interactions, encapsulated internal calibration interactions, and failure conditions. The actual Tuesday build is `U.Work`; resource burn and test telemetry are not method parts.
+
+#### B.1.5:5.2 - Emergency Intake
+
+`RegisterPatient`, `AssessVitals`, `ClassifyUrgency`, and `RouteToCare` may compose into `EmergencyIntake@Hospital`. The guarded choice is driven by declared vital-sign and symptom predicates. A role assignment and capability check determine who may enact the work, but they are not parts of the method.
+
+If the source only provides a wall poster with boxes and arrows, the current object is first `U.MethodDescription`. The composite `U.Method` is admitted only when the hospital context recovers the methods, guards, typed joins, failure response, and interface exposure.
+
+#### B.1.5:5.3 - Learned Model Pipeline
+
+A neural-network pipeline may describe feature extraction, embedding, attention, retrieval, ranking, and explanation generation. Some blocks may be formal substrate or mechanism material, some may be `U.MethodDescription`, and some may be recovered as `U.Method` values.
+
+The pipeline is one composite `U.Method` only when it has accepted inputs, outputs, invariants or admissibility conditions, typed joins, fallback behavior, failure conditions, and work-facing acceptance criteria. Otherwise keep the graph as a method description, mathematical lens, mechanism material, or `MethodRelationStructure@BoundedContext`.
+
+#### B.1.5:5.4 - Evidence Synthesis And Publication
+
+`CollectDatasets`, `NormalizeSchemas`, `EstimateModel`, `CrossValidate`, and `DraftManuscript` can compose into `EvidenceSynthesisPublish@ResearchContext` only when each candidate is recovered as a `U.Method` and the typed joins are explicit. `NormalizeSchemas` must produce a feature or evidence space acceptable to `EstimateModel`; legacy datasets may need adapter methods; `CrossValidate` may be a critical cutset for later assurance; `DraftManuscript` may require a provenance or SCR condition before publication work is admitted.
+
+A paper draft, workflow diagram, repository, or notebook is first a `U.MethodDescription` or another episteme. The publication work is `U.Work`. Compute, storage, reviewer time, and artifact-release resource costs belong to `U.Work` and `Gamma_work`. The MIC may expose `Submit()` and `ReleaseArtifacts()`, forward a parameterized `CrossValidate.Folds(k)` interaction, and encapsulate ad hoc scrubbing utilities.
+
+### B.1.5:6 - Conformance Checks
+
+| Check | Requirement |
+| --- | --- |
+| `CC-B1.5-1` | Every claimed method part is recovered as a `U.Method` value before method-holon composition is admitted. |
+| `CC-B1.5-2` | Step wording, description nodes, plan items, work occurrences, file modules, graph edges, and source wording are not method parts by position or wording. |
+| `CC-B1.5-3` | Serial, parallel, guarded, iterative, fallback, adapter, and typed-join relations are method-composition or method-relation claims, not structural component parthood. |
+| `CC-B1.5-4` | The composite method states whole-level preconditions, effects, invariants, accepted inputs and outputs, failure conditions, and work-facing acceptance relation. |
+| `CC-B1.5-5` | Interface exposure distinguishes exposed, forwarded, and encapsulated interactions when outside reliance depends on the method boundary. |
+| `CC-B1.5-6` | `U.MethodDescription`, `U.WorkPlan`, `U.Work`, mechanism, formal substrate, mathematical lens, evidence, and publication-use claims remain with their direct patterns. |
+| `CC-B1.5-7` | If whole-method identity is not recovered, the claim is lowered to `MethodRelationStructure@BoundedContext` or another neighboring object without demoting `U.Method` as a holon kind. |
+| `CC-B1.5-8` | When the composite method needs whole reidentification or emergence-family explanation, use `B.2` in addition to B.1.5. |
+| `CC-B1.5-9` | A work part is not evidence of a submethod unless the method-side candidate is recovered as `U.Method`; temporal slices, episodes, event-log segments, telemetry intervals, engine strokes, detector components, and work-plan items stay with their direct patterns until that recovery is made. |
+| `CC-B1.5-10` | Order-sensitive composition that relies on order semantics names the `B.1.4` order apparatus, including `OrderSpecRef`, context hash, partial-order soundness, or equivalent order evidence when current. |
+| `CC-B1.5-11` | Typed joins show capability-continuity evidence as input/output, pre/post, adapter, bridge, or equivalence claims without turning those signatures into `U.Capability` instances. |
+| `CC-B1.5-12` | Reliance-bearing composite boundaries publish MIC or equivalent exposure lines and performed work honours only the exposed or forwarded interactions unless the method is revised. |
+| `CC-B1.5-13` | Resource costs, yields, dissipation, telemetry, and resource ledgers are handed to `U.Work`, `B.1.6`, and evidence patterns; B.1.5 may point to them but does not aggregate them. |
+| `CC-B1.5-14` | Assurance hooks name cutsets, fragile joins, adapter points, CL-sensitive mappings, and envelope or scope refs for B.3; apparent super-additivity is returned to B.2-family whole reidentification instead of being averaged into the method. |
+
+### B.1.5:7 - Anti-Patterns And Repairs
+
+| Anti-pattern | Repair |
+| --- | --- |
+| "The workflow diagram is the composite method." | First govern the diagram as `U.MethodDescription`; admit a composite `U.Method` only after recovered submethods and whole-forming relations are named. |
+| "Step A is part of the method because it is a box." | Recover whether the box denotes a `U.Method`, description node, plan item, work occurrence, relation edge, or lens expression. |
+| "Parallel branches can join because the picture rejoins." | State the typed join, adapter, or equivalence relation; otherwise the composite method is not admitted. |
+| "The selector table is the method." | Use `G.5` or `MethodRelationStructure@BoundedContext` unless one whole method with whole-level commitments is recovered. |
+| "The run proved the method structure." | Record the run as `U.Work` and evidence separately; use it as evidence only through the governing evidence or assurance relation. |
+| "The phase is a method step." | Use phase or temporal relation discipline for carrier phases and use B.2 only when the phase boundary changes whole identity, supervision, closure, or context. |
+| "The join improves throughput, so the method has emergence." | First name critical path, cutsets, typed joins, and CL-sensitive mappings for assurance; open B.2 only when the whole-level reidentification claim remains. |
+| "The MIC is a nice diagram." | Treat MIC as reliance-bearing method-interface description only when callers, planners, auditors, or substitutions depend on exposed, forwarded, or encapsulated interactions. |
+
+#### B.1.5:7.1 - Consequences And Rationale
+
+B.1.5 buys deterministic method composition without confusing method, method description, work occurrence, resource ledger, and assurance argument. The practitioner sees what is being composed by order and typed joins, what is spent by performed work, and what is later assessed by assurance.
+
+The cost is explicitness: submethods, order apparatus, typed joins, adapters, interface exposure, and assurance hooks must be named before the composite method can be relied on. That cost prevents hidden brittleness at joins and accidental external dependencies at method boundaries.
+
+The rationale is the old strict distinction in updated ontology. Order is semantic but not structural parthood. A method can be a non-agentive holon, but a step label, graph node, phase, source section, or work part is not a method part until the `U.Method` object is recovered. `Gamma_method` composes ways of doing; `Gamma_work` accounts resources; B.3 evaluates assurance; B.2 handles whole reidentification when the composed method participates as a new whole.
+
+### B.1.5:8 - SoTA-Echoing
+
+| Source line | Selected source examples already carried by neighbouring hosts | What FPF takes | What FPF does not take |
+| --- | --- | --- | --- |
+| Current workflow, case, decision, process-mining, and object-centric event-log practice separates process models from event logs and resource records. | `A.15` carries BPMN, CMMN, DMN, DDD, service-design, and ITIL source use; `A.15.1` carries dated work-occurrence identity. | B.1.5 keeps method, method description, work plan, dated work, event trace, and resource aggregation separate while still allowing evidence return from work occurrence to method admission. | A workflow notation, event log, or trace is not the composite method. |
+| Typed functional, effect, protocol, and workflow-composition practice treats composition as constrained by interfaces, preconditions, postconditions, handlers, and admissible order. | `A.3.1` and `A.3.2` carry method versus method-description separation, constructor/process-theory source use, scoped-effect analogy, and source-return discipline. | B.1.5 requires typed joins, adapters, exposed or encapsulated interactions, preconditions, outputs, and failure conditions before admitting a composite method. | A type signature, process theory, or source description alone does not ground dated work occurrence. |
+| Systems and software architecture practice uses interface exposure and encapsulation to make composed behavior reliable and substitutable. | `A.15.2` carries plan versus occurrence discipline; `A.15` carries role-assignment and method-enactment alignment. | B.1.5 makes method-interface exposure part of method identity when outside work, planning, substitution, or assurance relies on it. | Publication layout or diagram position does not decide whether an interaction is exposed, forwarded, or encapsulated. |
+| FPF holon and whole-reidentification patterns require parts, whole-forming relations, whole-level commitments, and higher-level participation. | `A.1`, `B.2`, `A.14`, `C.13`, and `B.3.5` provide neighbouring holon, whole-reidentification, and structural-parthood tests. | Composite method admission is a method-holon grounding question with method-side whole-forming relations, not a structural-component parthood shortcut. | Method-composition order is not automatically A.14 component parthood. |
+
+### B.1.5:9 - Relations
+
+- Builds on `A.1` for holon admission and non-agentive holon kinds.
+- Builds on `B.1.4` when the method-composition claim uses `Gamma_ctx`, ordered-relation aggregation, context hash, or partial-order soundness.
+- Builds on `A.3.1` for `U.Method`.
+- Builds on `A.3.2` for `U.MethodDescription`.
+- Coordinates with `A.15`, `A.15.1`, and `A.15.2` for role, method, work-plan, and performed-work separation.
+- Coordinates with `B.1.6` and `Gamma_work` for work-resource aggregation.
+- Coordinates with `B.3` for weakest-link, cutset, CL-sensitive mapping, and assurance evidence use.
+- Coordinates with `A.14`, `C.13`, and `B.3.5` when structural parthood and constructive grounding are current.
+- Coordinates with `B.2` when whole reidentification, MHT, or emergence-family explanation is current.
+- Coordinates with `G.5` when method-family registry, selector, fallback, or candidate-set relation is current.
+- Coordinates with `C.29`, `A.6.0`, `A.6.1`, and `E.20` when mathematical lens, formal substrate, or mechanism claim is current.
+- Coordinates with `E.10` for method, step, process, workflow, owner, requirement, and source wording precision recovery.
 
 ### B.1.5:End
 
@@ -67483,13 +67645,13 @@ Classification is not closure. A conforming result must end in one of these by-v
 | Source-expression, publication, publication form, face, carrier, rendering, `PublicationUnit`, framework publication/access carrier, FPF-governed use, or `reading`, `read`, or `quality-read` wording whose entity or construction is not yet recovered | Apply `C.2.P` first. If the recovered construction is only publication/access exposure, use `E.17`, `E.17.AUD`, or `E.4.*` as applicable; if it is evidence, source-currentness, generated-output admission, work/reliance, or architecture/structure use, use `A.10`/`G.11`, `C.35`, `A.15.4`, or `C.30.P`/`C.33`/`C.34` after `C.2.P` recovers the carrier relation set. If the recovered entity or construction is evaluation for improvement, use the evaluation pattern governing that evaluation claim, such as `E.22`, `E.21`, or `E.9.DA`. | Source-local meaning, publication and carrier relation set, publication-form relation when that relation is being made, EntityOfConcern, project-side FPF kind, use disposition, downstream owner named by value when the carrier is evidence, currentness, generation, framework publication/access, work/reliance, architecture/structure, or evaluation, adjacent overread blocked, and remaining reader use. |
 | Ontic, ontic candidate, concept cluster, semantic area, ontological neighborhood, slot relation, schema, data structure, record, card, table, or publication-form wording whose EntityOfConcern and publication boundary are hidden | Apply `E.24.CD` when repeated material may require an ontic candidate decision; apply `E.24.PUB` when the confusion is among ontic, ontic-description episteme, publication form, view, record, card, table, schema, or data-structure expression. Use `E.24` or the direct governing pattern when the ontic or subject pattern is already recovered. | Candidate ontic cluster, EntityOfConcern, slot relation or slot-position, subject pattern, ontic-description episteme, publication form or source relation, admissible use, blocked publication-form overread, and remaining reader use. |
 | Admissibility-like, external-rule-looking, authority-looking, readiness-looking, validity-looking, pass-looking, fail-looking, or conformance-looking wording whose bearer, claim kind, source relation, value frame, bounded use, or governing pattern is hidden | Use the direct governing pattern when recoverable: evidence, assurance, gate, constraint validity, work, work plan, publication use, temporal use, source restoration, external-rule claim, pattern-quality result, state-like value, or another claim-specific pattern. If the word is only the trigger, restore by `E.10.ARCH` and the claim-specific pattern; do not mint a generic admissibility object. | Bearer, claim kind, value frame or decision class, source relation when that relation is being made, bounded admissible use, non-admissible overread, reopen or stop condition, and governing pattern; otherwise quote-only, reduced-use, or blocked-use. |
-| Method, algorithm, program, solver, proof, recipe, workflow, process, procedure, access-path, query-plan, control-strategy, method algebra, method graph, selector calculus, or programming-paradigm wording whose slot or method-side relation is hidden | Recover the slot or method relation structure before rewriting: `A.3.1 U.Method`, `MethodRelationStructure@BoundedContext` when method composition or method-family relation is current, `A.3.2 U.MethodDescription`, `A.6.0` formal-substrate declaration, `C.29` mathematical-lens use, `A.6.1` with `E.20` mechanism claim, `A.15.2 U.WorkPlan`, `A.15.1 U.Work`, `G.5` method-family registry or selector outcome, `A.10` evidence relation, quote-only source wording, or another direct governing pattern. | Pre-repair and post-repair kind or relation position, current ontic slot, relation position, use relation, or claim kind, admissible use, blocked overread, and remaining reader use. Do not replace one umbrella with `method`, `mechanism`, `algorithm`, `workflow`, or `method algebra` by taste. |
+| Method, practice, technique, algorithm, program, solver, proof, recipe, workflow, process, procedure, access-path, query-plan, control-strategy, method algebra, method graph, selector calculus, or programming-paradigm wording whose slot or method-side relation is hidden | Recover the slot or method relation structure before rewriting: `A.3.1 U.Method`, `MethodRelationStructure@BoundedContext` when method composition or method-family relation is current, `A.3.2 U.MethodDescription`, `A.6.0` formal-substrate declaration, `C.29` mathematical-lens use, `A.6.1` with `E.20` mechanism claim, `A.15.2 U.WorkPlan`, `A.15.1 U.Work`, `A.2.1` role assignment, `A.2.7` role relation structure, `A.1.1` bounded context, `C.20` discipline position, `C.36.P` when practice/technique is cultural-evolution wording, `G.5` method-family registry or selector outcome, `A.10` evidence relation, quote-only source wording, or another direct governing pattern. | Pre-repair and post-repair kind or relation position, current ontic slot, relation position, use relation, or claim kind, admissible use, blocked overread, and remaining reader use. Do not replace one umbrella with `method`, `practice`, `mechanism`, `algorithm`, `workflow`, or `method algebra` by taste. |
 | Transformation, change, pipeline, dataflow, flow, network, circuit, path, slice, workflow, process, operation, or close change-situation wording whose object or slot is hidden | Apply `A.3.4.P` first. If `U.Transformation`, `TransformationFlowStructure`, mathematical description, method, method description, mechanism, work plan, dated work, functioning relation, temporal aspect, evidence, source, publication, gate, decision, assurance, result, or quote-only source wording is already recovered, use the direct governing pattern. | Recovered transformation identity or non-transformation value, recovered slot or filler, governing pattern, retained use, blocked overread, and remaining reader use. Do not replace one source label with `flow`, `network`, `process`, `method`, `function`, or `transformation` by taste. |
 | Move-like wording such as first move, working move, next move, pattern move, project move, architecture move, local move, or readiness move whose project concern and governed value are hidden | Apply `E.10.MOVE` first unless a local governing pattern has already recovered the exact local object, such as A.16 language-state move, C.24 `nextPlannedAction`, or C.30 architecture candidate use. | Recovered project concern; source-use class; direct governed value such as `PatternUseRecommendation@Context`, `PatternUseSequence@Context`, P2W carry-through, WorkPlan, `WorkEntryReadiness@Context`, GateDecision, performed `U.Work`, A.16 local move, C.24 next action, C.30 architecture candidate use, ordinary prose, quote-only wording, or blocker. Do not mint root `U.Move`. |
 | Declarative representation wording overread as imperative action, method, work, deontic permission, work authorization, release authorization, evidence, or pattern dispatch: graph path, path slice, flow valuation, evidence-path wording, state predicate, SQL-like query, checklist predicate, table, dashboard, publication face, mathematical representation, method-description representation, source-chain relation, file path, or FPF pattern relation | Apply `C.2.P.DR` unless the direct governing pattern already closes the repair. Accepted direct cases include `E.18` graph path or `PathSlice`, `A.10 evidence relation or evidence-provenance relation for a claim, effect, or use`, `A.19.SPR` state predicate or value, `E.17` publication face, `C.29` mathematical-lens use, `A.3.1` method, `A.3.2` method description, `A.15.2` work plan, `A.15.1` work occurrence, carrier file path, source-chain relation, and declarative pattern relation under `E.8` or `F.19`. | Encountered representation, representation kind, represented object or claim, source expression or publication face when that relation is being made, tempting imperative overread, recovered governing pattern, admissible use now, non-admissible overread, stop or reopen condition. |
 | Architecture or structure wording with hidden selected structure, `ArchitectureOf@Context` relation, architecture-description use, structural-view use, source-return condition, or named C.30 subcase | Apply `C.30.P`. If `A.22`, `C.30`, `C.30.ASV`, or a named C.30 subpattern is already recoverable, use it directly. | Recovered selected structure, `ArchitectureOf@Context`, architecture description, structural view, source-return condition, governing-pattern result, or stop. |
 | Holon, system, episteme-as-holon, collection, part-whole, multilevel, interlevel, boundary, interaction, functioning, capability, emergence, BOSC, MHT, MET, MFT, `post`-like, or promotion-like wording whose object kind, part-whole relation, boundary-crossing relation, transformation relation, architecture relation, ethical conflict relation, or admissible-use boundary is hidden | Recover the object kind and relation first. Use `B.2.P` only for emergence-family, MHT-family, MET-family, MFT-family, synergy, metric-mirage, whole-reidentification, and collection wording entangled with those ambiguities. After recovery use the direct governing pattern: `A.1` for the holon or system claim, `C.2.1` or the publication pattern named by value for episteme and publication claims, the part-whole or collection governing pattern named by value, `B.2` for whole reidentification, `B.2.2` for result-system MHT, `B.2.3` for result-episteme MHT, `B.2.4` for capability or functioning whole reidentification, `B.2.5` for supervisor-subholon feedback relation, `A.3.4.P` for transformation wording, `A.6.F` for functioning or capability-like wording, `C.30`, `C.30.ASV`, `C.30.LCA`, `C.30.ILC`, `C.30.STRAT`, `D.2`, `D.3`, `D.4`, or another governing pattern named by value. | Recovered holon, system, episteme, collection, part-whole relation, boundary-crossing relation, transformation relation, architecture relation, supervisor-subholon feedback relation, interlevel ethical conflict, mediation use, source-label repair, admissible use, non-admissible overread, and stop. Do not mint `U.Level`, `U.SystemLevel`, `U.HolonLevel`, `U.Frustration`, `U.Emergence`, or treat owner selection as procedural control flow. |
-| Culture, cultural evolution, style, tradition, genre, scene, technique, practice, platform, regime, measurement regime, attractor, developmental machinery, or close cultural-evolution wording whose current object is hidden | Immediate disposition: recover the current object first: method family, work family, role assignment, discipline, canon or memory episteme, recognition or selection regime, mediation system or architecture, measurement or visibility relation, publication label, variant set, dynamics or mathematical-lens claim, bounded context, development-loop relation, or cultural-evolution case. Use `C.36` when a collective-holon or discipline-facing cultural-evolution case is current; use `C.36.P` for repeated wording-use recovery; use `F.17`, `F.18`, and `F.9` for durable terms and bridges; use `A.3.1`, `A.3.2`, `A.15`, `C.20`, `C.23`, `A.3.3`, `C.27`, `C.29`, `C.18`, `C.19`, `G.5`, `G.11`, `E.18.1`, `C.22.2`, `C.16`, `A.19`, or `C.11` according to the recovered object. | One root cultural ontology by source word, root `U.Culture`, `U.Style`, `U.Tradition`, `U.Practice`, `U.Platform`, `U.PlatformRegime`, `U.MeasurementRegime`, `U.DevelopmentalMachine`, loose style-as-attractor ontology, or one umbrella replacement word. |
+| Culture, cultural evolution, style, tradition, genre, scene, technique, practice, platform, regime, measurement regime, attractor, developmental machinery, or close cultural-evolution wording whose current object is hidden | Immediate disposition: recover the current object first: method family, work family, role assignment, discipline, canon or memory episteme, recognition or selection regime, mediation system or architecture, measurement or visibility relation, publication label, variant set, dynamics or mathematical-lens claim, bounded context, development-loop relation, or cultural-evolution case. Use the method-like row above when `practice` or `technique` is just the ordinary word for a way of doing; use `C.36` when a collective-holon or discipline-facing cultural-evolution case is current; use `C.36.P` for repeated wording-use recovery; use `F.17`, `F.18`, and `F.9` for durable terms and bridges; use `A.3.1`, `A.3.2`, `A.15`, `C.20`, `C.23`, `A.3.3`, `C.27`, `C.29`, `C.18`, `C.19`, `G.5`, `G.11`, `E.18.1`, `C.22.2`, `C.16`, `A.19`, or `C.11` according to the recovered object. | One root cultural ontology by source word, root `U.Culture`, `U.Style`, `U.Tradition`, `U.Practice`, `U.Platform`, `U.PlatformRegime`, `U.MeasurementRegime`, `U.DevelopmentalMachine`, loose style-as-attractor ontology, or one umbrella replacement word. |
 | External holon-class or Holon Graph Architecture (HGA) graph-expression wording such as `AgentHolon`, `OrganisationHolon`, `DataHolon`, `ProcessHolon`, `Portal`, `Projection`, event envelope, provenance, target holon, projection envelope, projected content, envelope, payload, RDF graph, node, edge, traversal, or boundary-governed payload whose FPF object is hidden | Recover the claim before importing the source label. Use `A.1` for admitted system or holon claims; `C.2.1`, `E.17`, architecture-description, publication, source, or evidence owners for data, document, projected content, description, publication, view, or evidence claims; `A.10`, source-relation, evidence-relation, dated-work, or publication owners for event and provenance claims; `A.3.4.P`, method owners, work-plan owners, or work owners for process-like wording; `A.6.RSIR`, `A.6.P`, `A.6.0`, `A.6.5`, `A.6.M`, `A.6.C`, `A.6.8`, or policy owners for portal, access, traversal, boundary-crossing, signature, module-interface, service-access, protocol, agreement-like, or evidence-relation claims; `C.29`, `A.22`, `C.30.ASV`, `C.30.AD`, `E.17`, or source/publication owners for graph, RDF, node, edge, or traversal expression claims; use `A.6.B` only for L, A, D, or E statement classification inside a boundary package. | W3C Community Group Holon Graph Architecture (HGA) vocabulary is retained as a serious source cue or comparison term only after the recovered FPF object is named and differences from FPF are explicit. Do not mint source-class U-kinds such as `U.AgentHolon`, `U.DataHolon`, `U.ProcessHolon`, `U.Portal`, `U.Projection`, `U.Envelope`, or `U.Payload`; do not turn semantic-web class names or graph-expression vocabulary into FPF ontology. |
 | Markov blanket, Markov border, computational boundary, boundary leak, or active-inference boundary wording whose object kind or claim kind is hidden | Recover whether the source phrase names accepted local Markov dynamics, a mathematical or probabilistic lens, holon delimitation, boundary-crossing relation, relation precision, signature or slot declaration, interface, interface module, functional element, physical component, boundary description or publication, boundary-package statement classification, or agency-threshold claim. | Use `A.3.3`, `C.29`, `C.26`, `C.26.3`, `A.1`, the direct relation owner, `A.6.RSIR`, `A.6.P`, `A.6.0`, `A.6.5`, `A.6.M`, `A.6.F`, `A.14`, `C.13`, `B.3.5`, `C.30.AD`, `E.17`, `A.13`, `A.19`, or `C.16` according to recovered claim; use `A.6.B` only for L, A, D, or E statement classification inside a boundary package. Do not mint `U.MarkovBlanket`, generic `U.Boundary`, generic `U.Interface`, or binary `U.Agent`; do not collapse statistical separation, physical boundary, interface module, description, boundary-package classification, and agency threshold. |
 | Stratification or structure-source-label wording such as `layer`, `level`, `tier`, `stack`, `ladder`, `rung`, `block`, `expert`, `cache`, `router`, or `gate` when the FPF kind under repair, relation, claim-use, or source-use disposition is not yet recovered | Apply `C.30.STRAT` first. If a control-layer relation, module-interface relation, architecture-to-`TransformationFlowStructure` relation, mathematical scale relation, coarse-graining relation, publication relation set, gate relation, or other governed use named by value is already recovered, use that governing pattern directly. | Recovered FPF kind, relation, claim-use, source-use disposition, and governing pattern; `StratificationSourceLabelRepairNote`; ordinary source label; quote-only, reduced-use, or blocked-use disposition; or stop. |
@@ -67551,13 +67713,13 @@ They are words that must trigger kind recovery when they carry ontology, authori
 | `context`, `scope`, `frame` | bounded context, project operational context, review context packet, source context, reference frame, viewpoint frame, or claim scope | world, situation, authority, authority-reference status, or hidden qualifier |
 | `state`, `status`, `posture`, `readiness`, `stance`, `currentness`, or close state-family compounds | state-like claim over a named bearer, state frame or governing pattern, value or classification, admissible use, non-admissible overread, and reopen condition; apply `A.19.SPR` when hidden | maturity adjective, authority, gate passage, deontic permission, release authorization, evidence, assurance, source authority, work completion, or process state by appearance |
 | `claim`, `claim content`, `claim referent` | claim node or claim content in a claim-bearing episteme, claim-bearing publication, admissibility target, EntityOfConcern, or referent relation | sentence, opinion, text fragment, document with named source-basis, evidence-basis, architecture-basis, or review-basis relation/use, or whole publication unit |
-| `evidence`, `witness`, `ground`, `proof` | evidence record or evidence/provenance relation, witness, grounding relation, source pin, observation, validation result, or assurance argument component | authority, approval, gate, engineering justification, or truth by label |
+| `evidence`, `witness`, `ground`, `proof` | evidence record, evidence relation, evidence-provenance relation, witness, grounding relation, source pin, observation, validation result, or assurance argument component | authority, approval, gate, engineering justification, or truth by label |
 | `authority`, `permission`, `approval`, `commitment`, `obligation` | role assignment, speech act, commitment record, authority relation, gate record, decision record, or policy claim | visible label, author confidence, reviewer praise, explanation, or provenance mark |
 | `admissible`, `lawful`, `legal`, `legality`, `allowed`, `permitted`, `authorized`, `valid`, `pass`, `ready`, `conformant`, `eligible`, or close admissibility-like compounds | claim-specific value, gate decision, constraint-validity result, evidence or assurance use, source-currentness relation, work-plan readiness, dated-work result, external-rule claim, publication-use boundary, state-like value, pattern-quality result, or bounded admissible use whose bearer, source relation, value frame, non-admissible overread, reopen condition, and governing pattern are named | generic deontic permission, generic authorization, external-rule truth, gate passage, evidence strength, release decision, work completion, source authority, or conformance by label alone |
 | `algorithm`, `program`, `solver`, `proof`, `recipe`, `method`, `workflow`, `process`, `procedure`, `access path`, `query plan`, `control strategy`, `method algebra`, `method graph`, `selector calculus`, or programming-paradigm labels | `U.Method` as semantic way of doing, `MethodRelationStructure@BoundedContext` when method-side relations or compositions are current, `U.MethodDescription` as episteme describing a method or method relation structure, `U.Signature(profile=FormalSubstrate)`, mathematical-lens use, `U.Mechanism` declaration or realization, `U.WorkPlan`, dated `U.Work`, method-family registry or selector outcome, evidence relation, control relation, source quote, or another direct governing pattern selected by current ontic slot, relation position, use relation, or claim kind | one generic method, software-only algorithm, method algebra as root object, mechanism by default, performed work by description, or instruction sequence by representation style |
 | `transformation`, `change`, `pipeline`, `dataflow`, `flow`, `network`, `circuit`, `path`, `slice`, `workflow`, `process`, `operation`, or close change-situation labels | apply `A.3.4.P` when wording points to a situation of change; recover `U.Transformation`, transformed object, transformer or system-in-context, method, method description, mechanism, work plan, dated work, functioning or functional structure, `TransformationFlowStructure`, mathematical description, dynamics, temporal aspect, evidence, source, publication, gate, decision, assurance, result, quote-only source wording, or another direct governing pattern by value | one source-label ontology, generic flow or network head, continuity by source label alone, graph proof, path proof, method by default, work by default, function by default, or transformation occurrence by wording alone |
 | `holon`, `system`, `episteme`, `collection`, `level`, `boundary`, `interaction`, `functioning`, `capability`, `emergence`, `BOSC`, `MHT`, `MET`, `MFT`, `post`, `promotion`, or close multilevel-holon labels | recover the object kind and relation being claimed: system holon, episteme holon, collection relation, part-whole relation, grounding holon, boundary-crossing relation, transformation relation, functioning or capability relation, architecture relation, control relation, supervisor-subholon feedback relation, interlevel ethical conflict, mediation use, source-label repair, or quote-only source wording. Use `B.2.P` only for emergence-family, MHT-family, MET-family, MFT-family, synergy, metric-mirage, whole-reidentification, and collection wording entangled with those ambiguities; then use `A.1`, `C.2.1`, the part-whole or collection governing pattern named by value, `B.2`, `B.2.2`, `B.2.3`, `B.2.4`, `B.2.5`, `A.3.4.P`, `A.6.F`, `C.30`, `C.30.ASV`, `C.30.LCA`, `C.30.ILC`, `C.30.STRAT`, `D.2`, `D.3`, `D.4`, or the direct governing pattern named by value | generic holon hierarchy, system-only architecture, episteme-as-document collapse, false level kind, boundary-as-proof, interaction-as-part-whole, emergence as proof word, MHT/BOSC/MET/MFT as free heuristic, generic loop owner, promotion as process travel, or `post` as an unexplained new phase |
-| `culture`, `cultural evolution`, `style`, `tradition`, `genre`, `scene`, `technique`, `practice`, `platform`, `regime`, `measurement regime`, `attractor`, `developmental machinery`, or close cultural-evolution labels | Detailed trigger repair after the immediate disposition row has selected the current object: recover method family, work family, role assignment, discipline, canon or memory episteme, recognition or selection regime, mediation system or architecture, measurement or visibility relation, publication label, variant set, dynamics or mathematical-lens claim, bounded context, development-loop relation, or cultural-evolution case before use. Apply `C.36` for cultural-evolution cases, `C.36.P` for repeated wording-use recovery, `F.17`, `F.18`, and `F.9` for term and bridge work, and the direct governing pattern for method, work, discipline, dynamics, archive, selected-set, choice, measurement, architecture, or refresh claims. | root culture or style kind by label, platform or regime as root ontology, loose attractor metaphor as dynamics claim, genre tree as proof of cultural identity, or replacing one broad source word with another broad FPF-looking word |
+| `culture`, `cultural evolution`, `style`, `tradition`, `genre`, `scene`, `technique`, `practice`, `platform`, `regime`, `measurement regime`, `attractor`, `developmental machinery`, or close cultural-evolution labels | Detailed trigger repair after the immediate disposition row has selected the current object: recover method family, work family, role assignment, discipline, canon or memory episteme, recognition or selection regime, mediation system or architecture, measurement or visibility relation, publication label, variant set, dynamics or mathematical-lens claim, bounded context, development-loop relation, or cultural-evolution case before use. If `practice` or `technique` is only the ordinary word for a way of doing, use the method-like recovery row and `A.3.1` route first. Apply `C.36` for cultural-evolution cases, `C.36.P` for repeated wording-use recovery, `F.17`, `F.18`, and `F.9` for term and bridge work, and the direct governing pattern for method, work, discipline, dynamics, archive, selected-set, choice, measurement, architecture, or refresh claims. | root culture or style kind by label, platform or regime as root ontology, loose attractor metaphor as dynamics claim, genre tree as proof of cultural identity, or replacing one broad source word with another broad FPF-looking word |
 | `route`, `path`, `workflow`, `lifecycle`, `dispatch`, `exit`, `receiver`, `call`, `invoke`, `run`, `flow`, `EvidencePath`, or close movement and control metaphors over representations or pattern relations | `C.2.P.DR` repair, `E.18` graph path or `PathSlice`, `A.10 evidence relation or evidence-provenance relation for a claim, effect, or use`, state predicate, checklist predicate, SQL-like query, table representation, dashboard representation, publication face, source-chain relation, carrier file path, mathematical-lens use, method claim, method-description claim, work plan, dated work occurrence, or declarative FPF pattern relation under `E.8` or `F.19` | imperative program, action route, deontic-permission route, work-authorization route, release-authorization route, evidence route, pattern dispatch, or work sequence unless that governing kind is recovered by value |
 | `profile`, `harness`, `catalog`, `registry`, `index`, `map` | profile with a named source-basis relation, evidence-basis relation, architecture-basis relation, or review-basis relation/use; review harness; entry index; registry record; source-reference map with a named map kind; navigation index; catalog publication; benchmark harness; publication form; companion publication; publication-companion relation; or governing record named by value | governing FPF pattern, governing source, ontology, method, or release decision unless named by value |
 | `entry`, `front door`, `corridor`, `route` | navigation aid, recognition entry, navigation-bearing publication, corridor overview, or movement, control, and temporal relation | governing pattern body, mandatory process sequence, release readiness, or proof that the target publication or target record is complete |
@@ -68815,12 +68977,12 @@ Example: using a `KernelToken` in a Context constraint may require a Bridge or a
 
 | **L‑rule**   | **Ambiguous or low-precision word (Ban)**                  | **Canonical FPF target(s)**                                                                                                                                                                     | **EntityOfConcern and Description-episteme boundary and specification-use gate**                                                                       | **TokenClass gate**                         | **Notes**                                                                                            |
 | ------------ | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **L‑PROC**   | *process*, *procedure*, *workflow*, *activity*, process-like function step, method-algebra, method-graph, or selector-calculus wording | Recover the current family before choosing the value: `A.3.4.P` for change-situation wording; `U.Method` for semantic way of doing; `MethodRelationStructure@BoundedContext` for method-side composition, substitution, iteration, fallback, selector, or method-family relation; `U.MethodDescription` for description episteme; `U.WorkPlan` for planned work window; dated `U.Work` for occurrence; `U.Transformation` or `TransformationFlowStructure` only when the transformation or transformation-flow-structure claim is named by value; `C.29` when algebraic or graph notation is the selected lens. | EntityOfConcern side for `Method`, method relation structure, `U.Transformation`, and `TransformationFlowStructure`; Description episteme for `MethodDescription` and `WorkPlan`; dated occurrence for `Work`; lens-use for method-algebra notation | Kernel or Context for types; Context for occurrences; lens/register when representation is current | “Industrial process” as **line role** -> model system plus `...Role`; chemistry in `U.Transformation`, `U.Dynamics`, or `Method` only after the claim is recovered. |
+| **L‑PROC**   | *process*, *practice*, *procedure*, *workflow*, *activity*, process-like function step, method-algebra, method-graph, or selector-calculus wording | Recover the current family before choosing the value: `A.3.4.P` for change-situation wording; `U.Method` for semantic way of doing; `MethodRelationStructure@BoundedContext` for method-side composition, substitution, iteration, fallback, selector, or method-family relation; `U.MethodDescription` for description episteme; `U.WorkPlan` for planned work window; dated `U.Work` for occurrence; role assignment or role relation when the phrase says who holds what work-facing position; bounded context when the phrase names local norms, vocabulary, or admissible moves; discipline or `C.36.P` when practice is a field, tradition, canon, or cultural-evolution label; `U.Transformation` or `TransformationFlowStructure` only when the transformation or transformation-flow-structure claim is named by value; `C.29` when algebraic or graph notation is the selected lens. | EntityOfConcern side for `Method`, method relation structure, `U.Transformation`, and `TransformationFlowStructure`; Description episteme for `MethodDescription` and `WorkPlan`; dated occurrence for `Work`; role-assignment relation; bounded context; discipline/cultural-evolution source label; lens-use for method-algebra notation | Kernel or Context for types; Context for occurrences; lens/register when representation is current | “Industrial process” as **line role** -> model system plus `...Role`; chemistry in `U.Transformation`, `U.Dynamics`, or `Method` only after the claim is recovered; “practice” is not a root kind and is not automatically `U.Method`. |
 | **L‑FUNC**   | *function*, *functional*, *functionality*, *effect* | Apply `A.6.F` first when kind or relation is hidden. Possible recovered values include `U.Capability`, `U.PromiseContent`, `U.Method`, dated `U.Work`, mathematical function or operator under `C.29`, and functional-architecture or architecture-to-`TransformationFlowStructure` relation under `C.30`, `C.30.ASV`, or `C.30.TFS-REL`. | EntityOfConcern side for Capability, PromiseContent, Method, mathematical object, architecture relation, or transformation-flow relation; dated occurrence for Work | Kernel or Context | Never use *function* as a Core type name or as default architecture meaning. |
 | **L‑SERV**   | *service* used for team, system, API, ticket, or process | Always unpack to the facet: `U.PromiseContent` (service offering or promise clause), `U.Commitment` (SLA obligation), `U.SpeechAct` (promise or offer act), `accessSpec : U.MethodDescription` (API or interface spec), **service access point** (`SystemRef`, addressable endpoint), **service delivery system** (`SystemRef`), **service delivery method** (`U.MethodDescription`), or `U.Work` (delivery run, case, or ticket). | EntityOfConcern side for PromiseContent, Commitment, and Method; Description episteme for specs; system-side for systems; run record for Work                                        | Kernel, Context, or Discriminator, per facet | “API = service” is forbidden; name the facet head phrase (A.6.8).                                                           |
 | **L‑SLA**    | *SLA* or *service level agreement* used for SLO, contract, or document | Unpack: (i) SLOs or acceptance thresholds -> `U.PromiseContent.acceptanceSpec`; (ii) binding obligation or penalty -> `U.Commitment`; (iii) packaged “the SLA” -> Contract Bundle (A.6.C); (iv) published terms -> `U.SpeechAct` + clause carrier (`U.Episteme`). | EntityOfConcern side for PromiseContent and Commitment; Description episteme for clause carriers and specs; run record for Work plus evidence | Kernel, Context, or Discriminator | Treat “SLA” as polysemic shorthand; never store it as a single type name. |
 | **L‑SCHED**  | *schedule*, *plan*, or *calendar* as execution    | `U.WorkPlan` as intent window; `U.Work` as actuals or telemetry                                                                                                                                    | Description episteme versus run record                                                                             | Context                                     | Never attach actuals to a plan.                                                                      |
-| **L‑ACT**    | *activity*, *action*, or *task* as type           | `U.Work` (execution); **steps** belong to `U.MethodDescription` (with `requiredRoles`, capability bounds)                                                                                       | run record versus Description episteme                                                                             | Context                                     | Reserve verbs: *assign* for role assignment, *admit* for role-state relation, *execute* for Work, *actuate* for System, and *approve* for SpeechAct Work. |
+| **L‑ACT**    | *activity*, *action*, *task*, or *step* as type           | Recover the governed object before choosing the value: `U.Work` for dated execution; `U.Method` only when the step is recovered as a submethod in an admitted composite method; `U.MethodDescription` when the step is a description constituent; `U.WorkPlan` when it is a planned item; `MethodRelationStructure@BoundedContext` when only order, fallback, substitution, or dispatch relation is current. | run record, method value, description episteme, plan item, or selected method relation structure | Context | Reserve verbs: *assign* for role assignment, *admit* for role-state relation, *execute* for Work, *actuate* for System, and *approve* for SpeechAct Work. |
 | **L‑AGENT**  | *agent, actor, or doer* (bare)                     | recover the acting system or holon as role-assignment holder and name the `U.RoleAssignment(holderRef, roleRef, boundedContextRef)` when a work-facing role is current; use `AgentialRole@Context` only where the role value itself is being named                                                                                                                        | system or holon plus role-assignment relation                                                                                    | Kernel or Context                              | Org titles (Owner, Operator, Reviewer) are role values assigned in a Context.                                    |
 | **L‑OWNER**  | *owner of X* (global)                             | Recover ownership wording as a work-facing role value plus `U.RoleAssignment` in a `U.BoundedContext` when actual responsibility is being assigned (e.g., `OwnerRole:ITIL_2020` assigned to a holder); otherwise recover commitment, authority, source-maintenance, or publication-use relation by direct governing pattern. | role value plus assignment relation, or the direct non-role relation | Context | No global “owner” property in Kernel. |
 | **L‑CAP**    | *capability* for assignment, recipe, run, or promise | `U.Capability` only = ability with envelope; assignments are `…Role`; recipes `U.Method` or `U.MethodDescription`; runs `Work`; promises `U.PromiseContent` (service promise clause or offering)                                                       | EntityOfConcern side, Description episteme, or run record                                                                        | Kernel or Context                              | Holder of a Capability is a `U.System`.                                                              |
@@ -68858,7 +69020,7 @@ A text **passes** LEX if all answers are **Green**:
 6. **Cross‑context reuse.** Any reuse across Contexts cites a **Bridge id** with kind, direction, congruence level, loss, and scope. Apply **A.6.9 (RPR‑XCTX)** when the published prose uses “same”, “equivalent”, “align”, “map”, or similar bridge wording.
 7. **MG-DA ok.** New or refactored tokens pass **§ 7 MG-DA** (anchored head noun; collision check; CharacteristicSpace for enums).
 8. **Morphology ok.** Suffix, prefix, and casing respect **§ 8 LEX.Morph** (e.g., `…Role`, `MethodDescription`, `Work`, reserved prefixes).
-9. **Banned tokens absent or recovered.** No *process*, *function*, *task*, or *activity* in Kernel senses unless the sentence applies the selected recovery pattern (`A.3.4.P`, `A.6.F`, work patterns, method patterns, or another governing pattern) and names the recovered value by value; no tooling or file suffixes in Kernel tokens.
+9. **Banned tokens absent or recovered.** No *process*, *practice*, *function*, *task*, or *activity* in Kernel senses unless the sentence applies the selected recovery pattern (`A.3.4.P`, `A.6.F`, work patterns, method patterns, `C.36.P`, or another governing pattern) and names the recovered value by value; no tooling or file suffixes in Kernel tokens.
 10. **State gating present (when needed).** Readiness is expressed via a role-state relation value plus **StateAssertion**, not vague “approved” or “ready”.
 
 #### E.10:9.4 - Coordination map (how LEX plugs into the rest of FPF)
@@ -69096,7 +69258,7 @@ Re-review your prose when any of these happen:
 * **Recipes gain or lose steps** → update **`MethodDescription`**, not service labels or `Role` names.
 * **Evidence verbs creep into actor sentences** → re-apply L-rules (documents do not act).
 * **A generic head or support-headed compound acquires FPF-governed claim or admissible use** (`comparative`, `safe`, `interactive`, `reliable`, `support`, `supported`, `supporting`, `support-looking`, and similar modifiers or heads) → restore the head kind first, then unpack the qualifier claim or support-like interpretation before broader publication.
-* **Method, algorithm, program, proof, solver, workflow, process, procedure, access path, query plan, control-strategy, method-algebra, method-graph, or selector-calculus wording changes** -> recover the slot or method-side relation before rewriting: `U.Method`, `MethodRelationStructure@BoundedContext`, `U.MethodDescription`, formal-substrate declaration, mathematical-lens use, `U.Mechanism`, `U.WorkPlan`, dated `U.Work`, method-family registry or selector outcome, evidence relation, or quote-only source wording. Do not replace one umbrella with another.
+* **Method, practice, technique, algorithm, program, proof, solver, workflow, process, procedure, access path, query plan, control-strategy, method-algebra, method-graph, or selector-calculus wording changes** -> recover the slot or method-side relation before rewriting: `U.Method`, `MethodRelationStructure@BoundedContext`, `U.MethodDescription`, formal-substrate declaration, mathematical-lens use, `U.Mechanism`, `U.WorkPlan`, dated `U.Work`, role assignment or role relation, bounded context, discipline or cultural-evolution source label, method-family registry or selector outcome, evidence relation, or quote-only source wording. Do not replace one umbrella with another.
 * **A declarative representation starts to sound imperative** (graph path, path slice, evidence-path wording, query, predicate, table, dashboard, publication face, mathematical representation, method-description representation, source-chain relation, carrier path, or FPF pattern relation "runs", "routes", "calls", "dispatches", "authorizes", or "flows" without a recovered kind) → apply `C.2.P.DR` or the direct governing pattern such as `E.18`, `A.10`, `A.19.SPR`, `E.17`, `C.29`, `A.3.1`, `A.3.2`, `A.15.2`, `A.15.1`, `E.8`, or `F.19`.
 * **New token minted** → ensure `LEX.TokenClass` declared; perform collision checks; add CharacteristicSpace if enum.
 * **Suffix drift** (e.g., `…Work` on a plan) → fix via **LEX.Morph**.
@@ -80139,13 +80301,13 @@ Typical moments:
 - a slot name, relation position, record field, diagram node, table column, graph expression, or publication form has acquired a `U.*` spelling;
 - a single E.24 ontic settlement appears to govern one root value plus several dependent durable values.
 
-**Primary EntityOfConcern.** The EntityOfConcern is the U-kind admission relation for one candidate `U.*`, type, kind, or subkind name. The pattern governs whether the candidate is retained as a durable U-kind, retained as a dependent durable value under a root settlement, governed by C.3 typed-reasoning law, or treated as a non-U object governed elsewhere.
+**Primary EntityOfConcern.** The EntityOfConcern is the U-kind admission relation for one candidate `U.*`, type, kind, or subkind name. The pattern governs whether the candidate is retained as a durable U-kind, retained as a dependent durable value under a root settlement, governed by C.3 typed-reasoning rules, or treated as a non-U object governed elsewhere.
 
 **Primary working reader.** The first reader is an FPF pattern author or reviewer deciding whether a public FPF name should remain `U.*`. The downstream reader is the practitioner who uses public pattern titles, headings, ToC rows, and names as orientation cues and needs those cues to point to the real governed object.
 
-**First useful move.** Recover the current governed object and the current use before judging the spelling. Then ask which existing FPF law governs the value: E.24 ontic settlement, C.3 typed reasoning, A.8 universal-core admission, A.11 parsimony, F.8 mint-or-reuse, F.5 naming, a direct subject pattern, or E.10 precision restoration.
+**First useful move.** Recover the current governed object and the current use before judging the spelling. Then ask which existing FPF rule set governs the value: E.24 ontic settlement, C.3 typed reasoning, A.8 universal-core admission, A.11 parsimony, F.8 mint-or-reuse, F.5 naming, a direct subject pattern, or E.10 precision restoration.
 
-**What goes wrong if missed.** FPF grows a shadow ontology by punctuation. A slot label becomes a kind, a publication form becomes an ontic, type and kind wording becomes active beside ontic law, and a useful title survives because it is searchable rather than because it names the governed object.
+**What goes wrong if missed.** FPF grows a shadow ontology by punctuation. A slot label becomes a kind, a publication form becomes an ontic, type and kind wording becomes active beside ontic settlement, and a useful title survives because it is searchable rather than because it names the governed object.
 
 **What this buys.** Public `U.*` names become trustworthy. Root U-kinds, dependent durable values, C.3 `U.Kind` values, Concept-Set rows, slot names, relation structures, records, publication forms, lenses, local frames, and source wording outside current FPF use are separated before naming.
 
@@ -80169,14 +80331,14 @@ The same token shape can name different kinds of things:
 - type, kind, or subkind wording whose governed value must be recovered before current FPF use;
 - a slot position, relation structure, selected structure, record form, publication form, math lens, representation lens, local frame, or source expression.
 
-E.24.UK governs that separation. It is an E.24 subpattern because U-kind admission depends on ontic settlement, but it is not the head E.24 pattern. E.24 remains the head pattern for `U.Ontic` and ontic introduction. E.24.UK owns the detailed U-kind law.
+E.24.UK governs that separation. It is an E.24 subpattern because U-kind admission depends on ontic settlement, but it is not the head E.24 pattern. E.24 remains the head pattern for `U.Ontic` and ontic introduction. E.24.UK owns the detailed U-kind admission rules.
 
 ### E.24.UK:2 - Problem
 
 Without this pattern:
 
 1. **`U.*` spelling substitutes for admission.** A public name is retained because it looks like a kind.
-2. **Unsettled type and kind wording competes with U-kind admission law.** Type, kind, subkind, Concept-Set rows, U-kind names, and E.24 ontics become overlapping ontologies.
+2. **Unsettled type and kind wording competes with U-kind admission rules.** Type, kind, subkind, Concept-Set rows, U-kind names, and E.24 ontics become overlapping ontologies.
 3. **Dependent values become root values.** A value whose identity is held by a root settlement gets treated as a new root kind.
 4. **Structural names over-admit.** Titles, filenames, headings, and ToC rows advertise kindhood more strongly than the pattern body establishes.
 5. **Slot names and lenses become objects.** Relation positions, graph expressions, tuple views, table columns, and publication forms receive `U.*` names.
@@ -80233,7 +80395,7 @@ Retain or introduce a candidate `U.*` name as a durable U-kind only if all of th
 3. The admission cites an identity, grounding, or recognition rule: direct governing pattern, C.3 membership and extent rule, Concept-Set witness set, A.6 `SubjectBlock` with `RangedValueKind`, imported signature symbol, CT2R/Compose-CAL constructive grounding for structural claims, formal-substrate or principle-frame declaration when current, or another accepted operational identity test.
 4. FPF users need to make action-facing claims about that value, not only about a wording choice.
 5. Existing root U-kinds plus slot and relation combinatorics cannot express the claim without losing reviewable distinctions.
-6. The candidate has a primary governing pattern or a selected governing pattern in the same landing set.
+6. The candidate has a primary governing pattern or another selected governing pattern in the same governed source set.
 7. The candidate has an E.24-compatible settlement: root subject, SlotRelation when needed, semanticArea, ontologicalNeighborhood, admissible use, non-use boundary, and dependent-value policy.
 8. Dependent patterns rely on this value by value or are expected to rely on it after the selected amendments.
 9. F.18 and F.17 can name and publish the term without turning a local slot label into a kernel kind.
@@ -80245,7 +80407,7 @@ If any row fails, the candidate is not admitted as a durable U-kind in the curre
 
 A root U-kind is the subject value whose identity is held by the primary settlement.
 
-A dependent durable U-kind is a reusable governed value whose identity is kept by the same primary settlement as a root U-kind, while the head pattern states the exact dependence relation and the governing pattern for the dependent value. It is not automatically:
+A dependent durable U-kind is a reusable public U-kind name for governed individual instances whose identity is kept through the same primary settlement as a root U-kind. The head pattern states the exact dependence relation and the governing pattern for those instances. It is not automatically:
 
 - a C.3 subkind;
 - a slot name;
@@ -80254,6 +80416,26 @@ A dependent durable U-kind is a reusable governed value whose identity is kept b
 - a synonym for the root;
 - a title convenience.
 
+Read the words carefully:
+
+- A **U-kind name** such as `U.WorkPlan`, `U.RoleAssignment`, `U.MethodDescription`, or `U.Capability` names a reusable governed kind admitted by this pattern and by its direct owner.
+- An **individual instance of that U-kind** is one concrete governed object under that kind, for example one work plan, one role assignment, one method description, or one holder capability. It is not a second kind named `Value`, not a slot filler by that fact, and not a record field.
+- **Dependent durable** means that the individual instance has durable identity for FPF use, but its identity is held through another settlement and declared dependence relation. It is not a root beside that settlement.
+- The dependency relation is an identity and governance relation, not parthood by default. A `U.RoleAssignment` depends on role, holder, bounded context, and window; that does not make the assignment a part of the role. A `U.Capability` may depend on a holder `U.System`; that does not make the capability a system part or a `U.Characteristic`.
+- A statement, record, evidence relation, publication, dashboard row, source expression, or fit predicate about a dependent individual remains a neighboring object unless its own governing pattern admits it as a governed object.
+- Avoid bare **value** when the contrast is kind versus instance. Use **individual**, **instance**, or **concrete governed object**. Reserve slot-filler wording for actual slot relations and record-field wording for records.
+
+Use this small reading table when authoring:
+
+| Form in prose | Ontological reading |
+| --- | --- |
+| "`U.WorkPlan` is dependent durable" | The public U-kind name is admitted, but its instances depend on method, role, time, and intended-work relations rather than forming a root beside `U.Work`. |
+| "this `U.WorkPlan` instance" | One concrete intended-work episteme or plan record governed by the work-plan pattern. |
+| "`U.RoleAssignment` is dependent" | Assignment instances depend on role, holder, bounded context, window, and work-facing use. |
+| "this `U.RoleAssignment` instance" | One concrete assignment relation, not the role, not the holder, and not performed work. |
+| "`U.Capability` is dependent" | The public U-kind name is admitted for holder-dependent capability instances under the system-holder settlement. |
+| "this `U.Capability` instance" | One concrete holder capability under envelope, measures, qualification window, and currentness condition; not the statement, evidence, currentness assessment, characteristic, Q-Bundle, architecture row, or fit predicate around it. |
+
 Examples:
 
 | Candidate | Disposition |
@@ -80261,18 +80443,18 @@ Examples:
 | `U.Episteme` | root U-kind governed by the episteme ontic settlement. |
 | `U.EpistemePublication` | dependent durable value only when the episteme/publication settlement states the dependence relation. |
 | `U.View` and `U.Viewpoint` | dependent or directly governed values under episteme and multi-view settlement, not automatic roots. |
-| `U.Method` | root U-kind for semantic way-of-doing when governed by the method pattern. |
+| `U.Method` | root U-kind for semantic way-of-doing and admitted non-agentive method holon kind when governed by `A.3.1` and direct method-composition patterns. |
 | `U.MethodDescription` | dependent value: description episteme for a method, not a C.3 subkind by default. |
 | `U.Work` | root U-kind for dated performed occurrence. |
 | `U.WorkPlan` | dependent value under method, work, role, and time settlement; it does not show that work occurred. |
 | `U.Role` | root work-facing role value under role patterns. |
 | `U.RoleAssignment` | dependent typed assignment relation value under role, holder, bounded-context, and work settlement. |
 | `RoleRelationStructure` | non-U selected relation structure unless E.24.UK evidence admits durable U-kindhood. |
-| `MethodRelationStructure` | non-U selected relation structure unless direct method-composition law admits durable U-kindhood. |
+| `MethodRelationStructure` | non-U selected relation structure for method-side relations that do not assert one `U.Method` whole assembled from method parts; direct method-composition patterns govern composite `U.Method` claims without promoting this relation structure to a U-kind. |
 
 #### E.24.UK:4.3 - Combined Admission Order
 
-Use existing law in this order:
+Use existing rules in this order:
 
 1. Recover the source use and governed EntityOfConcern.
 2. If the current question is typed claim quantification, apply C.3 and C.3.1 first. `U.Kind` is the context-local intensional value; `U.SubkindOf` is a partial-order relation over those values.
@@ -80308,7 +80490,7 @@ Then select the FPF object:
 
 | Source construct use | FPF recovery |
 | --- | --- |
-| claim quantification, membership, extent, subkind, or kind bridge | C.3 `U.Kind`, C.3.1 `U.SubkindOf`, and typed-reasoning law |
+| claim quantification, membership, extent, subkind, or kind bridge | C.3 `U.Kind`, C.3.1 `U.SubkindOf`, and typed-reasoning rules |
 | public durable FPF kind needed across patterns | E.24.UK durable U-kind admission, then E.24-compatible settlement |
 | a reusable cluster of slots, fillers, and governing relations | E.24 ontic settlement with one root subject U-kind or explicit reuse of an existing root |
 | imported formal symbol or declared range in a signature or mechanism | A.6 `SubjectBlock` with `RangedValueKind`, imported signature symbol, Concept-Set row, or admitted durable U-kind |
@@ -80356,11 +80538,11 @@ A structural title that names an action-invitation precision-restoration move as
 
 #### E.24.UK:5.3 - Dependent Durable Value
 
-`U.WorkPlan` is not performed work. It may remain a dependent durable value when the work-plan pattern states dependence on method, role, time, and intended work relations. The dependence relation is not `U.SubkindOf` unless C.3 typed-reasoning law explicitly says so.
+`U.WorkPlan` is not performed work. It may remain a dependent durable value when the work-plan pattern states dependence on method, role, time, and intended work relations. The dependence relation is not `U.SubkindOf` unless C.3 typed-reasoning rules explicitly say so.
 
 #### E.24.UK:5.4 - Type And Kind Governance Passage
 
-A passage that says a proposed type must pass A.8 or A.11 is a kernel-level U-kind admission question. A passage that says `U.Kind` and `U.SubkindOf` are used for typed reasoning remains C.3 law. A naming passage in F.5 or F.8 waits until the recovered value and admission decision are stable.
+A passage that says a proposed type must pass A.8 or A.11 is a kernel-level U-kind admission question. A passage that says `U.Kind` and `U.SubkindOf` are used for typed reasoning remains under C.3 rules. A naming passage in F.5 or F.8 waits until the recovered value and admission decision are stable.
 
 #### E.24.UK:5.5 - Lower-level Heading
 
@@ -80368,7 +80550,7 @@ A C.2.1 heading such as `U.ClaimGraph` or `U.Viewpoint` does not admit kindhood 
 
 ### E.24.UK:5.6 - Bias-Annotation
 
-This pattern blocks punctuation-bias and taxonomy-bias. A `U.*` spelling, title, filename, table row, or imported type word is not enough to create a durable FPF kind. First recover the governed object, its current use, the owning ontic or typed-reasoning law, and the slot or relation position. Only then decide whether the public name should be a root U-kind, dependent durable value, C.3 `U.Kind`, Concept-Set row, slot name, relation structure, record, publication form, lens, or local frame.
+This pattern blocks punctuation-bias and taxonomy-bias. A `U.*` spelling, title, filename, table row, or imported type word is not enough to create a durable FPF kind. First recover the governed object, its current use, the owning ontic settlement or typed-reasoning rule set, and the slot or relation position. Only then decide whether the public name should be a root U-kind, dependent durable value, C.3 `U.Kind`, Concept-Set row, slot name, relation structure, record, publication form, lens, or local frame.
 
 ### E.24.UK:6 - Conformance Checklist
 
@@ -80381,7 +80563,7 @@ This pattern blocks punctuation-bias and taxonomy-bias. A `U.*` spelling, title,
 | `CC-E24UK-5` | Structural locations retain `U.*` only with settlement evidence or direct reference to an already governed value. |
 | `CC-E24UK-6` | Non-U objects are classified as slot, relation, record, form, lens, local frame, expression, or source wording outside current FPF use, with the direct governing pattern named where the claim remains current. |
 | `CC-E24UK-7` | F.8, F.5, F.18, and F.17 are used only after the recovered value and admission decision are stable. |
-| `CC-E24UK-8` | E.24 remains the head ontic pattern; this pattern owns detailed U-kind law and does not duplicate it back into E.24. |
+| `CC-E24UK-8` | E.24 remains the head ontic pattern; this pattern owns detailed U-kind admission rules and does not duplicate them back into E.24. |
 
 ### E.24.UK:6.1 - Common Anti-Patterns and How to Avoid Them
 
@@ -80389,7 +80571,7 @@ This pattern blocks punctuation-bias and taxonomy-bias. A `U.*` spelling, title,
 | --- | --- | --- |
 | **U-dot by punctuation.** A heading or filename contains `U.` and therefore survives as a kind. | Public spelling outruns admission. | Apply the durable U-kind test; otherwise rename to the governed object. |
 | **Slot becomes kind.** `EvidenceRole`, `MethodRole`, or `DescriptionRole` is admitted because a value fills a relation position. | Slot-position label becomes a false ontology branch. | Keep SlotKind, ValueKind, RefKind, and governing pattern separate. |
-| **Source type import.** A BFO, ISO, OWL, database, or programming-language type is copied as an FPF U-kind. | Source ontology and FPF ontic law become mixed. | Use the source conversion guide and name the FPF governed object. |
+| **Source type import.** A BFO, ISO, OWL, database, or programming-language type is copied as an FPF U-kind. | Source ontology and FPF ontic admission rules become mixed. | Use the source conversion guide and name the FPF governed object. |
 | **Searchable title wins.** A memorable heading remains public even though the body governs a record, publication form, relation structure, or local frame. | Discoverability replaces ontology. | Keep the searchable phrase in entry or retrieval material if useful, and put the governed object in the public pattern name. |
 | **Dependent value promoted.** A value that depends on an existing ontic settlement is admitted as an independent root U-kind. | FPF grows duplicate roots for one ontological neighborhood. | Keep the root settlement and state the dependent durable value relation explicitly. |
 
@@ -80418,7 +80600,7 @@ The coupling rule keeps the architecture compact: a durable U-kind needs an E.24
 
 | Source line | Use in this pattern | Practical implication |
 | --- | --- | --- |
-| Foundational and applied ontology distinguish classes, individuals, relations, roles, qualities, functions, and representation forms. | Adapt: FPF does not copy one source taxonomy as U-kind law; it recovers the governed object and its admission basis. | A source `type`, `class`, or `category` becomes an FPF U-kind only after FPF admission, not by translation. |
+| Foundational and applied ontology distinguish classes, individuals, relations, roles, qualities, functions, and representation forms. | Adapt: FPF does not copy one source taxonomy as U-kind admission rules; it recovers the governed object and its admission basis. | A source `type`, `class`, or `category` becomes an FPF U-kind only after FPF admission, not by translation. |
 | Modular ontology and ontology-design-pattern practice use reusable fragments rather than one flat taxonomy. | Adopt for E.24 coupling: public durable names are backed by ontic settlement and neighboring-pattern obligations. | A durable U-kind must be usable across patterns without forcing a new taxonomy branch for every slot position. |
 | Naming and controlled-vocabulary practice separate labels from the objects they label. | Adopt through F.5, F.8, F.17, and F.18 after the governed value is recovered. | A good title can remain searchable while the body names the actual governed object and avoids false U-kind admission. |
 

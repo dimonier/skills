@@ -213,8 +213,3 @@ That makes FPF form a real architecture concern. If carriers and access routes a
 - **Coordinates with:** `E.21`, `E.22`, `E.23`, and `E.9.DA` when individual pattern quality, evaluation framing, improvement loops, or DRR adequacy provide evidence for FPF-level changes.
 
 ### E.4.FPF:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L64358–L64543

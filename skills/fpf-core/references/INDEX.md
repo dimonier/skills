@@ -7,7 +7,7 @@
 | A.1.1 | U.BoundedContext Semantic Frame | — |
 | A.2 | Role Taxonomy | role, assignment, holder, context, function vs identity |
 | A.2.1 | `U.RoleAssignment`: Contextual Role Assignment | Standard, holder, role, context, RoleEnactmentFact |
-| A.2.2 | `U.Capability`: System Ability (dispositional property) | ability, skill, performance, action, work scope |
+| A.2.2 | `U.Capability`: System Ability Envelope and Measures | holder-dependent capability instance, ability envelope, measure set, qualification window, currentness |
 | A.2.3 | `U.PromiseContent` (Promise Content) | promise content, promise content, accessSpec, acceptanceSpec, SLO |
 | A.2.4 | Episteme Evidence-Use and Status-Use Relations | evidence-use, status-use, source-use, episteme, claim |
 | A.2.5 | RoleStateRelation@BoundedContext - Role State Space and Enactable-State Admission | state machine, RSG, role state, enactability, role-state evolution. |
@@ -16,8 +16,8 @@
 | A.2.8 | `U.Commitment` (Deontic Commitment Object) | commitment, deontics, obligation, permission, prohibition |
 | A.2.9 | `U.SpeechAct` (Communicative Work Object) | speech act, communicative work, approval/authorization/publication/revocation, provenance, act≠utterance≠carrier |
 | A.3 | Transformer Constitution (Quartet) | action, causality, change, System-in-Role, MethodDescription |
-| A.3.1 | `U.Method`: The Abstract Way of Doing | recipe, how-to, procedure, abstract process. |
-| A.3.2 | `U.MethodDescription`: The Recipe for Action | specification, recipe, SOP, code, model |
+| A.3.1 | `U.Method`: Context-Defined Way of Doing | method, way of doing, submethod, method composition, non-agentive holon |
+| A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method description, recipe, SOP, code, model |
 | A.3.3 | U.Dynamics: State-Space and Transition-Law Episteme | dynamics, state space, transition law, observation relation, prediction |
 | A.3.4 | `U.Transformation`: Bounded Change Under Conditions | transformation, bounded change, transformed entity, transformer, input/output conditions |
 | A.3.4.P | Transformation Ontic Precision Restoration | — |
@@ -31,9 +31,10 @@
 | A.6.1 | U.Mechanism - Law-governed application to a SubjectKind over a RangedValueKind | — |
 | A.6.2 | `U.EffectFreeEpistemicMorphing` — Effect‑free morphisms of epistemes | — |
 | A.6.3 | `U.EpistemicViewing` — EntityOfConcern-preserving morphism | — |
-| A.6.3.CSC | Controlled Semantic Coarsening | controlled semantic coarsening, source-bearing episteme or source publication, coarsened rendering, narrower admissible use, non-admissible downstream use |
+| A.6.3.CSC | Controlled Semantic Coarsening | — |
 | A.6.3.CR | ConservativeRetextualization - entityOfConcernRef-preserving textual re-expression | — |
 | A.6.3.RT | Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition | — |
+| A.6.3.NAR | Structure-to-Narrative Rendering | — |
 | A.6.4 | `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism | — |
 | A.6.P | Relational Precision Restoration (RPR) — Kind‑Explicit Qualified Relation Discipline | relation precision restoration, under-specified relational language, support/support-headed wording, selected support reading, RelationKind |
 | A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, interface wording, role wording, slot wording, field |
@@ -56,7 +57,7 @@
 | A.13 | The Agential Role & Agency Spectrum | agency as role, agency spectrum, contextual role assignment, autonomy grading, substrate-neutral autonomy. |
 | A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | mereology, part-of, ComponentOf, PortionOf, PhaseOf |
 | A.15 | Role-Method-Work Alignment (Contextual Enactment) | role-method-work distinction, `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan` |
-| A.15.1 | `U.Work`: The Record of Occurrence | execution, event, run, actuals, log |
+| A.15.1 | `U.Work`: Dated Performed Work Occurrence | work occurrence, performed enactment, actuals, trace, `TemporalPartOf_work` |
 | A.15.2 | `U.WorkPlan`: The Schedule of Intent | plan, schedule, intent, forecast. |
 | A.15.3 | `SlotFillingsPlanItem` — Planned Slot-Fillings Baseline (WorkPlanning PlanItem) | planned baseline, slot-bearing description, planned filler, edition pins, `Γ_time` selector |
 | A.15.4 | Work-Relevant Source Restoration | work-relevant source restoration, dashboard display, credential view, generated explanation, copied statement |
@@ -88,7 +89,7 @@
 | B.1.2 | System Aggregation and Holon Delimitation | — |
 | B.1.3 | Γ_epist — Knowledge-Specific Aggregation | knowledge aggregation, epistemic, provenance, trust, KD-CAL. |
 | B.1.4 | Contextual and Temporal Aggregation | — |
-| B.1.5 | Γ_method — Order-Sensitive Method Composition & Work Enactment | method composition, workflow, sequential, concurrent, plan vs run. |
+| B.1.5 | Gamma_method - Order-Sensitive Method Composition and Work Enactment | method composition, submethod, order-sensitive method, method relation structure, MIC |
 | B.1.6 | Work-Resource Aggregation | — |
 | B.2 | Meta-Holon Transition - Whole Reidentification | — |
 | B.2.P | Emergence and MHT Precision Restoration | — |
@@ -191,8 +192,10 @@
 | E.2.DA | FPF Pillar-Adequacy Evaluation CharacteristicSpace | — |
 | E.3 | Principle Taxonomy & Precedence Model | taxonomy, precedence, conflict resolution, hierarchy, principles |
 | E.4 | FPF Ecosystem Family Architecture | — |
+| E.4.FPF | First Principles Framework Form and Publication-or-Access Carrier Assembly | — |
 | E.4.PFAD | Principle-Framework Architecture Decision | — |
-| E.4.DPF | Domain Principle Framework Authoring and Local-Monolith Landing | — |
+| E.4.DPF | Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly | — |
+| E.4.DPF.DA | Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace | — |
 | E.4.PFR | Pattern-Framework Relation and Edition Discipline | — |
 | E.5 | Four Guard-Rails of FPF | guardrails, constraints, architecture, rules, safety |
 | E.5.1 | DevOps Lexical Firewall | lexical firewall, jargon, tool-agnostic, conceptual purity, DevOps |

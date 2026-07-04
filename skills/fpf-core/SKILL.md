@@ -47,4 +47,4 @@ load those too from `references/`. Each reference lists its own dependencies.
 
 ## References Status
 
-**Ready** — 274 pattern reference files + INDEX + 31 context sections.
+**Ready** — 277 pattern reference files + INDEX + 32 context sections.

@@ -51,5 +51,6 @@ Core ideas in plain language:
 - say what "better" means before optimizing or scoring;
 - make trust depend on evidence, freshness, scope, and intended use;
 - publish different views for different readers without changing the underlying claim;
+- when source structure must become an explanation, route, or narrative for a reader, state what structure is preserved, deliberately coarsened, abstracted, omitted, or lost, and where source return happens;
 - use mathematics or formal models when they clarify what structure is preserved, what is lost, and what can be checked;
 - build domain or local FPF-grounded frameworks as dependents of FPF Core, not as silent rewrites of the Core.

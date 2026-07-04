@@ -283,8 +283,3 @@ The coordinate set mirrors the spirit of the FPF Pillars but changes the adequac
 - **Exits to:** `E.2.DA` when a DPF package change claims FPF-level Pillar adequacy or proposes Core amendment effects.
 
 ### E.4.DPF.DA:End
-
-
----
-
-> **Source:** `FPF-Spec.md` lines L64977–L65228
