@@ -60,7 +60,7 @@
 | A.15.1 | `U.Work`: Dated Performed Work Occurrence | work occurrence, performed enactment, actuals, trace, `TemporalPartOf_work` |
 | A.15.2 | `U.WorkPlan`: The Schedule of Intent | plan, schedule, intent, forecast. |
 | A.15.3 | `SlotFillingsPlanItem` — Planned Slot-Fillings Baseline (WorkPlanning PlanItem) | planned baseline, slot-bearing description, planned filler, edition pins, `Γ_time` selector |
-| A.15.4 | Work-Relevant Source Restoration | work-relevant source restoration, dashboard display, credential view, generated explanation, copied statement |
+| A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, reliance appearance, work or reliance use, required claim before use, required instituted effect before use |
 | A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, resource-readiness refs |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
 | A.16.0 | `U.LanguageStateMoveTrajectory` - Optional trajectory-account normal form over the language-state `U.CharacteristicSpace` | trajectory account, lineage, fork, merge, supersedes |
@@ -84,6 +84,7 @@
 | A.20 | Flow Constraint Validity — Eulerian | flow, ConstraintValidity, Eulerian, TransformationFlowStructure, GateFit |
 | A.21 | GateProfilization: `OperationalGate(profile)` (GateFit core) | OperationalGate, GateFit, GateProfile, GateChecks, join-semilattice |
 | A.22 | Structure and Structural Views (STRUCT-CAL) | structure, structural view, selected structure, preserved and lost structure, source return |
+| A.22.CGUS | Constraint-Governed Unfolding Structure | — |
 | B.1 | Holon Aggregation and Part-Whole Construction | — |
 | B.1.1 | Dependency Structure and Relation Grounding | — |
 | B.1.2 | System Aggregation and Holon Delimitation | — |
@@ -167,8 +168,8 @@
 | C.31.RSA | Reusable Structure Accounting | reusable-structure accounting, reusable share, bespoke residue, accounting basis, report-only share |
 | C.31.ASAP | Architecture Scale-Amenability Preference | architecture scale preference, scale amenability, ScaleClaimTriage, scale variable, scale window |
 | C.32 | Architecture Candidate Synthesis | architecture candidate synthesis, CandidateArchitecturePalette@Project, selected structures, architecture characteristics, synthesis structure map |
-| C.32.P2S | Problem-to-Structure Architecturing Transformation Flow | problem-to-structure architecturing flow, ProblemToStructureArchitecturingFlowCard@Project, structural uncertainty, selected structures, actual-structure feedback |
-| C.32.HCS | Holon-Family Architecture Characteristic Starter Packs | holon-family architecture characteristic starter pack, architecture characteristic heads, source catalogue narrowing, first criteria questions, characteristic transfer. |
+| C.32.P2S | Problem-to-Structure Architecturing Unfolding | problem-to-structure architecturing unfolding, ProblemToStructureArchitecturingFlowCard@Project, ArchitectureUnfoldingStructureUse@Project, structural uncertainty, candidate structures |
+| C.32.HCS | Architecture-Bearing Family Characteristic Starter Packs | architecture-bearing family characteristic starter pack, architecture characteristic heads, source catalogue narrowing, first criteria questions, characteristic transfer. |
 | C.32.ACS | Architecture Characteristic Criteria Set for Improvement Cycles | architecture characteristic criteria set, criteria row, Q-Bundle, improvement cycle, proxy risk |
 | C.32.ACE | Architecture Characteristic Eval Programs | architecture-characteristic eval program, eval result, measurement boundary, parity frame, missing-data policy |
 | C.32.CONWAY | Transformer and Transformed Architecture Correspondence | Conway correspondence, inverse Conway maneuver, transformer holon, transformed holon, changing relation |
@@ -177,7 +178,7 @@
 | C.32.PAD | Project Architecture Decision After Candidate Synthesis | project architecture decision, ArchitectureDecisionRelation@Project, selected architecture option, affected selected structure, architecture-characteristic trade-off |
 | C.32.ADR | Architecture Decision Record Projection | architecture decision record, ADR projection, ArchitectureDecisionDescription@Project, ArchitectureDecisionRecordProjection@Project, section function |
 | C.32.ADA | Architecture Decision Adequacy Scales | architecture decision adequacy, ArchitectureDecisionAdequacyEvaluation@Project, declared use, complete coordinate set, E.21 labels |
-| C.33 | Structural Information Adequacy for Architecture Capture and Source Return | structural information adequacy, captured structure, lost structure, source return, carrier |
+| C.33 | Structural Information Adequacy for Architecture Capture and Missing-Structure Return | structural information adequacy, captured selected structure, missing structure, lost structure, missing-structure return |
 | C.34 | Structural Correspondence, Equivalence, and Morphism Adequacy | structural correspondence, equivalence, morphism, mapping mode, preserved structure |
 | C.35 | Structural Synthesis and Discovery Adequacy | structural synthesis, structural discovery, generated carrier, produced carrier, described structure |
 | C.36 | Cultural Evolution and Cultural-Evolution Engineering | — |
@@ -233,6 +234,7 @@
 | E.18 | Transformation Flow Structure | transformation flow structure, selected transformations, flow valuation, crossings, guards |
 | E.18.1 | Principles-to-Work Carry-Through | P2W, principles-to-work, carry-through record, accepted ProblemCard@Context, formal substrate |
 | E.18.2 | Transformation Flow Mathematical Description | mathematical description, transformation-flow math, graph expression, path expression, algebraic description |
+| E.18.3 | Constraint-Governed Transformation-Flow Unfolding Structure | — |
 | E.19 | Pattern Quality Gates: Review and Refresh Profiles | — |
 | E.20 | Mechanism Introduction Protocol (MIP) | mechanism introduction, authoring protocol, governing-definition assignment, MIP-run manifest, canonical card-first |
 | E.21 | FPF Pattern-Quality Evaluation CharacteristicSpace | — |

@@ -48,7 +48,7 @@ Use this pattern when one already available source line about the same EntityOfC
 
 **What goes wrong if missed.** A summary, translation, or manager-readable rewrite is treated as harmless editing after it has started hiding explanation work, bridge work, changed authority relation, or a narrower-use card.
 
-**What this buys.** One honest same-entity textual rewrite with visible source tether, visible omission or loss notes, and a named governing pattern when the case stops being only conservative retextualization.
+**What this buys.** One honest same-entity textual rewrite with visible source-relation tether, visible omission or loss notes, and a named governing pattern when the case stops being only conservative retextualization.
 
 **Ordinary use.** If the rewrite is admissible only for orientation, source-finding, review, comparison, or planning preparation, one source-slice to published-slice sentence or mini-card with the admissible use and visible omission or source-loss note is enough.
 

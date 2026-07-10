@@ -46,17 +46,17 @@ Typical moments:
 
 - a procedure, workflow, algorithm, pipeline, proof route, clinical protocol, manufacturing recipe, inference pipeline, or operational playbook has named steps or branches;
 - changing the order of two candidate submethods changes the result or the admissible conditions of use;
-- a source diagram or code file looks like a method, but it may be only a method description, a work plan, a dated work trace, a selector registry, or a mathematical lens;
+- a diagram or code file looks like a method, but it may be only a method description, a work plan, a dated work trace, a selector registry, or a mathematical lens;
 - a larger method must expose some interactions at its boundary while hiding internal steps;
 - assurance needs to know which joins, adapters, cutsets, or exposed interfaces make the composite method reliable enough to enact.
 
 **Primary EntityOfConcern.** The EntityOfConcern is an order-sensitive method-composition claim: a claim that recovered `U.Method` values form one composite `U.Method` under a bounded context.
 
-**First useful move.** For each apparent step or branch, recover the governed object before composing anything: `U.Method`, `U.MethodDescription`, `U.WorkPlan`, dated `U.Work`, `MethodRelationStructure@BoundedContext`, method-family registry or selector outcome, mathematical lens, mechanism, formal substrate, or quote-only source wording.
+**First useful move.** For each apparent step or branch, recover the governed object before composing anything: `U.Method`, `U.MethodDescription`, `U.WorkPlan`, dated `U.Work`, `MethodRelationStructure@BoundedContext`, method-family registry or selector outcome, mathematical lens, mechanism, formal substrate, or quoted wording that does not yet carry a method claim.
 
 **What goes wrong if missed.** A flowchart becomes the method, a plan item becomes a submethod, an event log becomes proof that a method was enacted, an order edge becomes a part, or a registry of alternatives is treated as one composed method. Then work starts from a description or label whose method identity, joins, interfaces, and failure conditions were never recovered.
 
-**What this buys.** The project can admit a composite `U.Method` only when method parts, whole-forming relations, whole identity, interface exposure, assurance hooks, and enactment boundary are explicit. If that threshold is not met, the project still has a useful lower object: a selected method relation structure, description, plan, work record, lens, or source-restoration request.
+**What this buys.** The project can admit a composite `U.Method` only when method parts, whole-forming relations, whole identity, interface exposure, assurance hooks, and enactment boundary are explicit. If that threshold is not met, the project still has a useful lower object: a selected method relation structure, description, plan, work record, lens, or `A.15.4` appearance-based reliance repair request.
 
 **Not this pattern when.**
 
@@ -133,7 +133,7 @@ OrderSensitiveMethodComposition:
   EnactmentBoundary:
   which U.Work may enact this method and which U.MethodDescription describes it
   LoweredDispositionIfNotComposite:
-  MethodRelationStructure | U.MethodDescription | U.WorkPlan | U.Work | G.5 selector | lens | source-restoration request
+  MethodRelationStructure | U.MethodDescription | U.WorkPlan | U.Work | G.5 selector | lens | A.15.4 appearance-based reliance repair request
 ```
 
 #### B.1.5:4.1 - Recover Parts Before Composition
@@ -149,7 +149,7 @@ An apparent step can be:
 - an order relation, fallback relation, or selector relation inside `MethodRelationStructure@BoundedContext`;
 - a mathematical or representation lens over a relation structure;
 - mechanism or formal-substrate material;
-- quote-only source wording.
+- quoted wording that does not yet carry a method claim.
 
 Only the first case can be a method part. Do not mint `U.StepSpec`, `U.StepMethod`, `U.MethodStep`, or `U.MethodAlgebra` for the others.
 
@@ -177,7 +177,7 @@ Use A.14, C.13, and B.3.5 when the claim is about structural parts of a holon. U
 
 When the current method-composition claim needs explicit order aggregation, context hash, partial-order soundness, or `Gamma_ctx` notation, use `B.1.4` for that ordered-relation apparatus. `B.1.4` can express the order discipline; B.1.5 still decides whether the recovered ordered methods are enough to admit one composite `U.Method`.
 
-When the current claim is temporal phasing of the same carrier or method-description edition history, use the phase or temporal owner rather than B.1.5. A phase boundary becomes a B.2-family question only when the boundary also introduces whole reidentification, closure, supervision, or context rebase. Order, phase, structural parthood, and MHT are different claims even when one source diagram uses one line for all of them.
+When the current claim is temporal phasing of the same carrier or method-description edition history, use the pattern that governs the phase or temporal claim rather than B.1.5. A phase boundary becomes a B.2-family question only when the boundary also introduces whole reidentification, closure, supervision, or context rebase. Order, phase, structural parthood, and MHT are different claims even when one source diagram uses one line for all of them.
 
 #### B.1.5:4.4 - Expose The Composite Method Interface
 
@@ -220,13 +220,13 @@ B.1.5 admits and grounds a composite `U.Method`. It may require a `U.MethodDescr
 A performed enactment is `U.Work` under `A.15.1`. The work record cites:
 
 - the enacted `U.Method`;
-- the method-description source when current;
+- the method-description reference when current;
 - the performer through `U.RoleAssignment`;
 - the time window, parameter bindings, affected referent, resource ledger, outcome, and evidence relations.
 
 Resource aggregation, elapsed time, telemetry, retries, and work outcomes belong to `U.Work`, `Gamma_work`, and evidence patterns. They do not become parts of the method.
 
-The composition link is not one-to-one. A work occurrence may enact the whole method without exposing every submethod as a separate work part. A temporal work slice often enacts the same whole method during a selected interval. An episode may span several method factors, repeat one factor, or be split by evidence policy without changing the method identity. A work part enacts a submethod only when that submethod has already been recovered as `U.Method`; otherwise the current object is a work part, method-description node, evidence segment, mechanism material, system-component behavior, or source-restoration request.
+The composition link is not one-to-one. A work occurrence may enact the whole method without exposing every submethod as a separate work part. A temporal work slice often enacts the same whole method during a selected interval. An episode may span several method factors, repeat one factor, or be split by evidence policy without changing the method identity. A work part enacts a submethod only when that submethod has already been recovered as `U.Method`; otherwise the current object is a work part, method-description node, evidence segment, mechanism material, system-component behavior, or `A.15.4` appearance-based reliance repair request.
 
 **Reader check.** Before saying that a work part enacts a submethod, name both sides:
 
@@ -240,7 +240,7 @@ If either side is missing, lower only that side. Do not repair a missing submeth
 B.1.5 has two common use positions, but they are positions in use, not two U-kinds:
 
 - **Planning or description-side use.** Recover the submethods, order apparatus, typed joins or adapters, method interface exposure, invariants, and whole-level commitments. The output is a composite `U.Method` claim and, when a representation is needed, a `U.MethodDescription` or MIC that describes that method.
-- **Performed-work use.** A `U.Work` occurrence may cite the composite `U.Method` and the method-description source it used. The work record checks role assignment, capability-fit or admission conditions when current, preconditions, postconditions, order conformance, MIC-honouring interactions, resource ledger handoff, and evidence relations. These checks annotate or support the performed work; they do not become parts of the method.
+- **Performed-work use.** A `U.Work` occurrence may cite the composite `U.Method` and the method-description reference it used. The work record checks role assignment, capability-fit or admission conditions when current, preconditions, postconditions, order conformance, MIC-honouring interactions, resource ledger handoff, and evidence relations. These checks annotate or support the performed work; they do not become parts of the method.
 - **Assurance use.** Identify cutset submethods, fragile typed joins, adapter points, mapping congruence or CL-sensitive edges, and the envelope or scope in which the composite method is expected to hold. B.3 and related assurance patterns evaluate those hooks; B.1.5 only makes them visible.
 
 Useful invariants remain: a single recovered submethod composed alone does not create a surprising new method; order is deterministic only under the declared order apparatus; composite quality or throughput is constrained by critical path and weakest-link considerations unless a B.2-family whole reidentification claim is separately admitted; strengthening a submethod, adapter, or typed join should not make the composite method worse unless a stated side condition changes.
@@ -329,7 +329,7 @@ The rationale is the old strict distinction in updated ontology. Order is semant
 | Source line | Selected source examples already carried by neighbouring hosts | What FPF takes | What FPF does not take |
 | --- | --- | --- | --- |
 | Current workflow, case, decision, process-mining, and object-centric event-log practice separates process models from event logs and resource records. | `A.15` carries BPMN, CMMN, DMN, DDD, service-design, and ITIL source use; `A.15.1` carries dated work-occurrence identity. | B.1.5 keeps method, method description, work plan, dated work, event trace, and resource aggregation separate while still allowing evidence return from work occurrence to method admission. | A workflow notation, event log, or trace is not the composite method. |
-| Typed functional, effect, protocol, and workflow-composition practice treats composition as constrained by interfaces, preconditions, postconditions, handlers, and admissible order. | `A.3.1` and `A.3.2` carry method versus method-description separation, constructor/process-theory source use, scoped-effect analogy, and source-return discipline. | B.1.5 requires typed joins, adapters, exposed or encapsulated interactions, preconditions, outputs, and failure conditions before admitting a composite method. | A type signature, process theory, or source description alone does not ground dated work occurrence. |
+| Typed functional, effect, protocol, and workflow-composition practice treats composition as constrained by interfaces, preconditions, postconditions, handlers, and admissible order. | `A.3.1` and `A.3.2` carry method versus method-description separation, constructor-theory or process-theory source-material use, scoped-effect analogy, and return discipline for method-description references. | B.1.5 requires typed joins, adapters, exposed or encapsulated interactions, preconditions, outputs, and failure conditions before admitting a composite method. | A type signature, process-theory description, or source-material description alone does not ground dated work occurrence. |
 | Systems and software architecture practice uses interface exposure and encapsulation to make composed behavior reliable and substitutable. | `A.15.2` carries plan versus occurrence discipline; `A.15` carries role-assignment and method-enactment alignment. | B.1.5 makes method-interface exposure part of method identity when outside work, planning, substitution, or assurance relies on it. | Publication layout or diagram position does not decide whether an interaction is exposed, forwarded, or encapsulated. |
 | FPF holon and whole-reidentification patterns require parts, whole-forming relations, whole-level commitments, and higher-level participation. | `A.1`, `B.2`, `A.14`, `C.13`, and `B.3.5` provide neighbouring holon, whole-reidentification, and structural-parthood tests. | Composite method admission is a method-holon grounding question with method-side whole-forming relations, not a structural-component parthood shortcut. | Method-composition order is not automatically A.14 component parthood. |
 
@@ -346,6 +346,6 @@ The rationale is the old strict distinction in updated ontology. Order is semant
 - Coordinates with `B.2` when whole reidentification, MHT, or emergence-family explanation is current.
 - Coordinates with `G.5` when method-family registry, selector, fallback, or candidate-set relation is current.
 - Coordinates with `C.29`, `A.6.0`, `A.6.1`, and `E.20` when mathematical lens, formal substrate, or mechanism claim is current.
-- Coordinates with `E.10` for method, step, process, workflow, owner, requirement, and source wording precision recovery.
+- Coordinates with `E.10` for method, step, process, workflow, ownership/stewardship, requirement, and source wording precision recovery.
 
 ### B.1.5:End

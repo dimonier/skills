@@ -36,14 +36,14 @@ dependencies:
 
 **Use this when.** Use this pattern when a plan, method description, schedule, log, telemetry stream, dashboard, approval-looking cue, publication face, result statement, or evidence-provenance relation is being treated as if it were performed work. `U.Work` is the occurrence; surrounding records may identify, constrain, evidence, schedule, publish, or judge it, but they do not become the occurrence by being published.
 
-**First output.** One work-occurrence record naming `performedBy -> U.RoleAssignment`, `enactsMethod -> U.Method`, `methodDescriptionRef` when the source episteme is current, `executedWithin`, time window, concrete parameter bindings, affected referent, resource ledger, pre-state and post-state references or a declared delta predicate, outcome, and the governing `U.BoundedContext`.
+**First output.** One work-occurrence record naming `performedBy -> U.RoleAssignment`, `enactsMethod -> U.Method`, `methodDescriptionRef` when a source-material episteme is the current method description, `executedWithin`, time window, concrete parameter bindings, affected referent, resource ledger, pre-state and post-state references or a declared delta predicate, outcome, and the governing `U.BoundedContext`.
 
 **First-use checks.**
 1. Name the candidate occurrence and the work-facing claim that depends on it.
-2. Recover the `U.RoleAssignment`, enacted `U.Method`, method-description source, time window, accountable `U.System` or system in subsystem position, affected referent, parameters, resources, outcome, and evidence relation when current.
-3. Decide whether the encountered record, trace, or source candidate or display is performed `U.Work`, only a plan (`A.15.2`), only a method (`A.3.1`), only a method description (`A.3.2`), only evidence for work (`A.10`), only a publication-use relation (`E.17`), only a declarative representation (`C.2.P.DR` or the direct representation pattern), or a work-relevant source-restoration case (`A.15.4`).
-4. For composite, repeated, interrupted, or overlapping occurrences, declare the work-part relation, naming threshold, and aggregation policy before using totals or identity claims. Do not name a work part when a temporal relation, evidence slice, telemetry segment, or source-gap note is the actual object needed.
-5. If the required occurrence references cannot be recovered, lower the claim to a source-gap note, work-evidence note, plan note, publication-use note, declarative-representation note, or source-restoration request; do not backdate work.
+2. Recover the `U.RoleAssignment`, enacted `U.Method`, `methodDescriptionRef` when current, time window, accountable `U.System` or system in subsystem position, affected referent, parameters, resources, outcome, and evidence relation when current.
+3. Decide whether the encountered record, trace, item, or display is performed `U.Work`, only a plan (`A.15.2`), only a method (`A.3.1`), only a method description (`A.3.2`), only evidence for work (`A.10`), only a publication-use relation (`E.17`), only a declarative representation (`C.2.P.DR` or the direct representation pattern), or an `A.15.4` appearance-based reliance repair case.
+4. For composite, repeated, interrupted, or overlapping occurrences, declare the work-part relation, naming threshold, and aggregation policy before using totals or identity claims. Do not name a work part when a temporal relation, evidence slice, telemetry segment, or missing-source-relation note is the actual object needed.
+5. If the required occurrence references cannot be recovered, lower the claim to a missing-source-relation note, work-evidence note, plan note, publication-use note, declarative-representation note, or `A.15.4` repair request; do not backdate work.
 
 **Ordinary use.** For a simple occurrence, one compact work card with performer, method, time window, affected referent, resources, and outcome is enough.
 
@@ -53,9 +53,9 @@ dependencies:
 
 **What goes wrong if missed.** Teams count plans, method descriptions, approval-looking cues, dashboards, telemetry, or evidence records as if work already happened, then attach cost, responsibility, quality, or result claims to the wrong EntityOfConcern.
 
-**What this buys.** One dated occurrence record that keeps performer, role assignment, enacted method, method-description source, time window, affected referent, resources, outcome, evidence relation, and repair boundary inspectable.
+**What this buys.** One dated occurrence record that keeps performer, role assignment, enacted method, `methodDescriptionRef`, time window, affected referent, resources, outcome, evidence relation, and repair boundary inspectable.
 
-**Not this pattern when.** Not this pattern when the current claim is only a method (`A.3.1`), only a method description (`A.3.2`), only a plan or schedule (`A.15.2`), only a `SlotFillingsPlanItem` (`A.15.3`), only work-entry readiness or full-kit preparation before work entry (`A.15.5`), only a visible source cue that needs source restoration before reliance (`A.15.4`), only evidence or assurance (`A.10` or `B.3`), only publication-use behavior (`E.17`), or only a declarative representation overread as a work-control or method claim (`C.2.P.DR` or the direct representation pattern).
+**Not this pattern when.** Not this pattern when the current claim is only a method (`A.3.1`), only a method description (`A.3.2`), only a plan or schedule (`A.15.2`), only a `SlotFillingsPlanItem` (`A.15.3`), only work-entry readiness or full-kit preparation before work entry (`A.15.5`), only a visible cue that needs `A.15.4` appearance-based reliance repair before reliance, only evidence or assurance (`A.10` or `B.3`), only publication-use behavior (`E.17`), or only a declarative representation overread as a work-control or method claim (`C.2.P.DR` or the direct representation pattern).
 
 ### A.15.1:1 - Problem Frame
 
@@ -85,7 +85,7 @@ That concept is **`U.Work`**: the **dated performed occurrence** of enacting a `
 
 #### A.15.1:4.1 - Definition
 
-**`U.Work`** is a **4D occurrence holon**: a **dated performed enactment** of a `U.Method` by a performer designated through a `U.RoleAssignment`, **executed within a concrete `U.System`**, including a system in subsystem position when the larger-holon part relation is current, inside a `U.BoundedContext`, that binds concrete parameters, consumes and produces resources, and leaves an auditable trace. When a method-description source is current, `methodDescriptionRef` names the `U.MethodDescription` used to identify, constrain, or justify the enacted method.
+**`U.Work`** is a **4D occurrence holon**: a **dated performed enactment** of a `U.Method` by a performer designated through a `U.RoleAssignment`, **executed within a concrete `U.System`**, including a system in subsystem position when the larger-holon part relation is current, inside a `U.BoundedContext`, that binds concrete parameters, consumes and produces resources, and leaves an auditable trace. When a method-description reference is current, `methodDescriptionRef` names the `U.MethodDescription` used to identify, constrain, or justify the enacted method.
 When the current claim needs a formal state-change witness, represent the occurrence through a **morphism** `Δ` on a declared **state-plane** (`StatePlaneRef`), mapping pre-state plus inputs to post-state plus outputs for one or more **affected referents**. The work itself remains the dated occurrence; the morphism is the selected mathematical-lens expression for its delta claim.
 
 > **Memory aid:** *Work = “how it went this time”* (dated, resourced, accountable).
@@ -95,14 +95,14 @@ When the current claim needs a formal state-change witness, represent the occurr
 When you describe a Work instance in a review, answer these prompts:
 
 1. **Window** — start and end timestamps and, where relevant, location or asset.
-2. **Method-description source** — `methodDescriptionRef -> U.MethodDescription` when the description source is current; edition pinned when reliance depends on edition.
+2. **Method-description reference** — `methodDescriptionRef -> U.MethodDescription` when the description episteme is current; edition pinned when reliance depends on edition.
 3. **Performer** — `performedBy → U.RoleAssignment` (whose holder slot, role value, and bounded-context slot admit the performer).
 4. **Parameters** — concrete values bound for this occurrence (from the **MethodDescription** parameter declarations).
 5. **Inputs and outputs** — materials, information, or product states used or produced by the Work; service delivery is judged through the Outcome row.
 6. **Resources** — energy, materials, machine time, money (the **only** place we book them).
 7. **Outcome** — success and failure classes, quality measures, acceptance verdicts (**map-then-compare** per **ComparatorSet** under **CG-Spec**; pin editions).
 8. **Links** — predecessor, successor, overlap, containment, temporal-part, episode-part, operational-part, concurrent-part, or another declared work relation to other `U.Work` occurrences when composite work is current.
-9. **Context** — the bounded context under which this occurrence is judged, normally inherited from the method-description source and `U.RoleAssignment`; see A.15 for cross-checks.
+9. **Context** — the bounded context under which this occurrence is judged, normally inherited from the referenced `U.MethodDescription` and `U.RoleAssignment`; see A.15 for cross-checks.
 10. **Effect (Δ)** — `affected → {referent(s)}` + **pre-state reference** and **post-state reference** (or a declared **Δ-predicate** evaluated on evidence) on the declared state-plane (**StatePlaneRef**).
 11. **System** — `executedWithin -> U.System`; if ordinary speech says subsystem, name the `U.System` in subsystem position plus the part relation to the larger holon under A.1, A.14, or B.1.2 (required for admitting the performed-work claim).
 12. **Evidence and telemetry references (when current)** — if the occurrence feeds G.11 refresh or QD and OEE archives, cite the telemetry, evidence, archive, and policy references declared by the governing comparison, archive, evidence, or refresh pattern; do not elevate telemetry into dominance without the governing comparison or archive policy.
@@ -126,29 +126,29 @@ Preparation work is `U.Work` only when preparation has actually occurred and has
 
 | Publication-use pressure | Work-local rule |
 |---|---|
-| PlainView, TechCard, InteropCard, or AssuranceLane presents work material | Project only occurrence references: time window, performer, enacted method, method-description source when current, parameter-binding occurrence, resource-ledger reference, state-change references, outcome, and acceptance-verdict reference when current. |
+| PlainView, TechCard, InteropCard, or AssuranceLane presents work material | Project only occurrence references: time window, performer, enacted method, `methodDescriptionRef` when current, parameter-binding occurrence, resource-ledger reference, state-change references, outcome, and acceptance-verdict reference when current. |
 | numeric, comparable, aggregation, or benchmark content appears | Pin the comparator, aggregation policy, CG-Spec, reference plane, and transport edition needed by the claimed comparison; do not hide scalarization in the publication face. |
-| publication cites method-description, work-plan, or cross-context material | Keep the `U.Work` occurrence as the dated performed occurrence; cite method-description sources, work-plan references, cross-context material, Bridge relation, UTS relation, reference-plane, or edition relation only through the direct governing pattern named for that citation. |
+| publication cites method-description, work-plan, or cross-context material | Keep the `U.Work` occurrence as the dated performed occurrence; cite `U.MethodDescription` references, work-plan references, cross-context material, Bridge relation, UTS relation, reference-plane, or edition relation only through the direct governing pattern named for that citation. |
 | reconstructed records look like a performed occurrence | Do not synthesize surrogate `U.Work`; a publication may cite only work occurrences that meet the occurrence references in this pattern. |
 
 #### A.15.1:4.5 - Crossing visibility for work publications
 
-When a work publication crosses method-description source, work-plan reference, performed-work occurrence state, context, reference plane, unit, or edition, publish the crossing relation used by the publication. Penalties and reliability changes belong to the relevant comparison, bridge, publication, or evidence relation; they do not change the identity of the `U.Work` occurrence.
+When a work publication crosses method-description reference, work-plan reference, performed-work occurrence state, context, reference plane, unit, or edition, publish the crossing relation used by the publication. Penalties and reliability changes belong to the relevant comparison, bridge, publication, or evidence relation; they do not change the identity of the `U.Work` occurrence.
 
 Launch values bind only at the occurrence. Planned proposals remain proposals; do not back-fill plan publications with performed-work bindings. Pre-state and post-state references bind to the occurrence: pre at start, post at completion or at declared checkpoints.
 
 ### A.15.1:5 - Work mereology (how occurrences form holarchies)
 
-We adopt a **4D extensional** stance for occurrences: a Work is identified primarily by its **spatiotemporal extent** and its occurrence references (method-description source when current, performer, parameterization). This avoids double-counting and keeps aggregation sound. FPF adapts insights from BORO and constructive ontologies to Work while staying practical.
+We adopt a **4D extensional** stance for occurrences: a Work is identified primarily by its **spatiotemporal extent** and its occurrence references (`methodDescriptionRef` when current, performer, parameterization). This avoids double-counting and keeps aggregation sound. FPF adapts insights from BORO and constructive ontologies to Work while staying practical.
 
 #### A.15.1:5.1 - Parts and wholes of Work (occurrence facts)
 
 * **Temporal-part (`TemporalPartOf_work`).** A proper **time-slice relation** over one selected `U.Work` occurrence or work phase. The selected part is grounded by parent work identity plus interval and, when needed, a named aspect such as resource use, telemetry, SLA coverage, or interval-local evidence. A temporal part is useful for monitoring, utilization, lead time, and interval-local evidence. It has no independent method-switch identity by that fact.
 * **Episode-part (`EpisodeOf_work` or `WorkEpisode`).** A **policy-governed, event-bounded, maximally continuous enactment fragment** of one parent work occurrence. It starts at a work-entry, resumption, mode-switch, or switch-to-method event and ends at interruption, switch-away, completion, or a policy-declared pause. It is not an arbitrary time slice. It remains under the parent work identity only when the bounded-context episode policy says the interrupted or resumed activity is still the same `U.Work`.
-* **Operational-part (`OperationalPartOf_work`).** A **work-part occurrence** that may enact a factor of a recovered `U.Method`, for example, an incision occurrence within an appendectomy occurrence, possibly **overlapping** with others in time. If a method-description source is current, it identifies, describes, constrains, or evidences that method factor; the source itself is not enacted. If no `U.Method` factor is recovered, govern the material as a work part, evidence segment, telemetry segment, mechanism material, system-component behavior, or source-gap note under the direct pattern.
+* **Operational-part (`OperationalPartOf_work`).** A **work-part occurrence** that may enact a factor of a recovered `U.Method`, for example, an incision occurrence within an appendectomy occurrence, possibly **overlapping** with others in time. If a method-description reference is current, it identifies, describes, constrains, or evidences that method factor; the referenced `U.MethodDescription` is not enacted. If no `U.Method` factor is recovered, govern the material as a work part, evidence segment, telemetry segment, mechanism material, system-component behavior, or missing-source-relation note under the direct pattern.
 * **Parallel-part (`ConcurrentPartOf_work`).** Two work-part occurrences that **overlap** in their windows, coordinated by the same higher-level occurrence.
 
-**Naming threshold.** Do not mint a durable public U-kind, durable named work object, or separate work occurrence for every interval, telemetry segment, pause, or episode-looking source phrase. Use a derivative part relation unless the downstream use needs a named work part with its own resources, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return role. Otherwise lower to a temporal relation, evidence slice, telemetry segment, method-description constituent, source-gap note, or the neighboring object that is actually current.
+**Naming threshold.** Do not mint a durable public U-kind, durable named work object, or separate work occurrence for every interval, telemetry segment, pause, or episode-looking wording. Use a derivative part relation unless the downstream use needs a named work part with its own resources, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-relation return use. Otherwise lower to a temporal relation, evidence slice, telemetry segment, method-description constituent, missing-source-relation note, or the neighboring object that is actually current.
 
 **Didactic rule:** **Method composition is not proof of Work decomposition, and Work decomposition is not proof of method composition.** A temporal work part may enact the same whole method during a slice. An episode may continue one method or mode, span several operational parts, repeat the same method fragment, or be split by evidence policy without changing method identity. An operational part may correspond to a method factor only when that factor is recovered as `U.Method`.
 
@@ -211,7 +211,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 #### A.15.1:6.1 - Surgical case (overlap and episodes)
 
 * **Top work occurrence:** `Appendectomy_Case_2025-08-10T0905_1142`.
-* **Method-description source:** `Appendectomy_v5`.
+* **`methodDescriptionRef`:** `Appendectomy_v5`.
 * **Performer:** `U.RoleAssignment` with holder slot `OR_Team_A`, role value `SurgicalTeamRole`, bounded-context slot `Hospital_2025`, and current-window slot covering the surgery interval.
 * **Operational parts:** `Incision` (09:15–09:22), `Exploration` (overlaps with monitoring), `Closure` (11:10–11:35).
 * **Episode:** brief power dip 10:02-10:07 -> **resumptionOf** same occurrence (per hospital policy).
@@ -221,7 +221,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 #### A.15.1:6.2 - ETL pipeline (parallelism and retries)
 
 * **Top work occurrence:** `ETL_Nightly_2025-08-11T01:00-01:47`.
-* **Method-description source:** `ETL_v12.bpmn`.
+* **`methodDescriptionRef`:** `ETL_v12.bpmn`.
 * **Performer:** `U.RoleAssignment` with holder slot `ETL_Runtime`, role value `TransformerRole`, bounded-context slot `DataOps_2025`, and current-window slot covering the ETL occurrence.
 * **Parallel parts:** `Extract_A` ‖ `Extract_B`; `Transform` starts when either completes (overlap).
 * **Retry:** `WarehouseWrite` failed at 01:36; retried with batch size ↓ — **new Work** linked via `retryOf`.
@@ -231,7 +231,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 #### A.15.1:6.3 - Thermodynamic cycle (work through a state-plane trace)
 
 * **Run:** `Carnot_Cycle_Run_2025-08-09T1300_1306`.
-* **Method-description source:** `Carnot_Cycle_Spec` with Dynamics model.
+* **`methodDescriptionRef`:** `Carnot_Cycle_Spec` with Dynamics model.
 * **Performer:** `U.RoleAssignment` with holder slot `LabRig_7`, role value `TransformerRole`, bounded-context slot `ThermoLab`, and current-window slot covering the lab occurrence.
 * **Work identity:** the occurrence is identified by the occurrence interval plus occurrence references; the thermodynamic state-plane trace is a dynamics or geometry relation used to describe the change, not a work-control relation or ordered instruction sequence.
 * **Γ\_time:** straightforward interval; **Γ\_work:** integrates energy exchange; no “steps” required.
@@ -239,7 +239,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 #### A.15.1:6.4 - Claim handling (episodes versus monitoring slices)
 
 * **Top work occurrence:** `ClaimHandling_Case_8142_2026-06-03`.
-* **Method-description source:** `Claims_Method_v7`.
+* **`methodDescriptionRef`:** `Claims_Method_v7`.
 * **Performer:** `U.RoleAssignment` with holder slot `ClaimsTeam_A`, role value `ClaimsHandlerRole`, bounded-context slot `InsuranceOps_2026`, and current-window slot covering the work occurrence.
 * **Episode policy:** a customer callback interruption under one hour keeps the same parent work identity and creates two `EpisodeOf_work` fragments: `InitialReview_09:00-09:42` and `ResumedResolution_10:11-10:38`.
 * **Temporal monitoring slice:** `MonitoringSlice_09:15-09:20` is `TemporalPartOf_work` for queue-latency evidence. It is not a new work occurrence and not an episode unless downstream reliance needs a named part with its own evidence, KPI, acceptance, repair, or aggregation role.
@@ -248,7 +248,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 #### A.15.1:6.5 - Internal-combustion engine (cycle parts without human-only boundary language)
 
 * **Top work occurrence:** `EngineRun_Cell7_2026-06-03T1300_1330`.
-* **Method-description source:** `FourStrokeOperationSpec_v4`.
+* **`methodDescriptionRef`:** `FourStrokeOperationSpec_v4`.
 * **Performer:** `U.RoleAssignment` with holder slot `Engine_Cell7`, role value `EngineOperationRole`, bounded-context slot `TestBench_2026`, and current-window slot covering the run.
 * **Episodes:** start, stop, mode-change, fuel/ignition policy, or diagnosis policy may bound `EpisodeOf_work` fragments. The definition uses boundary events and policy, not a human-attention metaphor.
 * **Temporal parts:** crank-angle intervals or one-second telemetry windows are `TemporalPartOf_work` unless the context declares a named work part for resource, evidence, KPI, acceptance, repair, or aggregation use.
@@ -257,7 +257,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 #### A.15.1:6.6 - Detector radio receiver (component behavior, method factor, work part)
 
 * **Top work occurrence:** `ReceiverReception_Rx42_2026-06-03T2115_2120`.
-* **Method-description source:** `EnvelopeDetectionMethod_v2`.
+* **`methodDescriptionRef`:** `EnvelopeDetectionMethod_v2`.
 * **Performer:** `U.RoleAssignment` with holder slot `Receiver_Rx42`, role value `DetectorReceiverRole`, bounded-context slot `RadioLab_2026`, and current-window slot covering the reception occurrence.
 * **Episodes:** a continuous reception interval between retune, on/off, interruption, or declared diagnostic mode events is `EpisodeOf_work` only under the receiver's episode policy.
 * **Temporal parts:** a one-second reception slice is `TemporalPartOf_work` for signal-quality evidence or telemetry aggregation. It is not a new occurrence merely because it appears in a trace.
@@ -287,7 +287,7 @@ For any work occurrence with parts, the **effect of the whole** is the rules-dec
 **CC-A15.1-2 (Required links).**
 A conforming `U.Work` claim names:
 (a) `enactsMethod -> U.Method` (the method enacted),
-(b) `methodDescriptionRef -> U.MethodDescription` when the source episteme or editioned method description is current,
+(b) `methodDescriptionRef -> U.MethodDescription` when a source-material episteme is the current method description or an editioned method description is current,
 (c) `performedBy -> U.RoleAssignment` (the assigned performer in context), and
 (d) `executedWithin -> U.System`; if ordinary speech says subsystem, name the `U.System` in subsystem position plus the part relation to the larger holon under A.1, A.14, or B.1.2.
 
@@ -297,7 +297,7 @@ A conforming `U.Work` claim carries a closed interval `[t_start, t_end]`, or an 
 **CC-A15.1-4 (Context reference and judgement).**
 A `U.Work` claim is judged inside a declared `U.BoundedContext` (the judgement context).
 
-- By default, the judgement context is the context of the referenced method-description source.
+- By default, the judgement context is the context of the referenced `U.MethodDescription`.
 - If `performedBy` references a `U.RoleAssignment` in a different context, cross-context acceptance needs an explicit bridge relation or policy. Otherwise the work claim is not admitted in that context.
 
 **CC-A15.1-4b (State-plane reference).**
@@ -336,14 +336,14 @@ Overlaps and precedences among work occurrences use interval relations (`overlap
 **CC-A15.1-15 (Cross-context evidence).**
 If a work occurrence is accepted in multiple contexts, either re-judge it in each context or provide bridge relations that map acceptance criteria, units, and role-assignment relations. Name identity alone does not carry cross-context acceptance.
 
-**CC-A15.1-16 (Method-description source changes during work).**
-If the method-description version changes mid-occurrence, split the work into episodes bound to respective method-description source editions, or record an explicit method-description override event in the judgement context. Silent substitution lowers the work claim.
+**CC-A15.1-16 (Method-description reference changes during work).**
+If the method-description version changes mid-occurrence, split the work into episodes bound to respective `U.MethodDescription` editions, or record an explicit method-description override event in the judgement context. Silent substitution lowers the work claim.
 
 **CC-A15.1-17 (Distributed performers).**
 If multiple `U.RoleAssignment` values jointly perform the same top-level work occurrence, either designate a lead `U.RoleAssignment` with concurrent parts, or model the top-level occurrence as a parent work with child work occurrences per `U.RoleAssignment`.
 
 **CC-A15.1-18 (Logs are evidence, not work by themselves).**
-Logs and telemetry evidence a work occurrence only after they are bound to method-description source when current, performer, time window, affected referent, and judgement context.
+Logs and telemetry evidence a work occurrence only after they are bound to `methodDescriptionRef` when current, performer, time window, affected referent, and judgement context.
 
 **CC-A15.1-19 (Affected referent).**
 Each `U.Work` claim names at least one affected referent, such as asset, product, batch, dataset, or document, through `affected -> {...}`.
@@ -379,7 +379,7 @@ Numeric or comparable acceptance or KPI claims on a `U.Work` publication view pi
 If a work occurrence feeds G.11 or QD and OEE portfolios, the evidence relation cites the telemetry, archive, and policy references declared by the governing comparison, archive, evidence, or refresh pattern. Illumination remains report-only telemetry unless a governing comparison, archive, or selection pattern promotes that use.
 
 **CC-A15.1-30 (Part naming parsimony).**
-Do not create a durable named work part for every interval, telemetry segment, pause, event-log row, engine stroke label, detector component, or source phrase. Name a work part only when downstream use needs its own resources, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return role. Otherwise lower to a temporal relation, evidence slice, telemetry segment, method-description constituent, source-gap note, or another direct neighboring object.
+Do not create a durable named work part for every interval, telemetry segment, pause, event-log row, engine stroke label, detector component, or encountered wording. Name a work part only when downstream use needs its own resources, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-relation return use. Otherwise lower to a temporal relation, evidence slice, telemetry segment, method-description constituent, missing-source-relation note, or another direct neighboring object.
 
 **CC-A15.1-31 (Method and work granularity are coupled but not isomorphic).**
 A work part may enact a recovered submethod, but the correspondence is not automatic. A temporal work part usually enacts the same whole method during a slice. An episode records continuity under one method or mode and may span several operational parts, repeat the same method fragment, or be split by evidence policy without changing method identity. An operational work part corresponds to a method factor only when that factor is recovered as `U.Method` under `A.3.1` and `B.1.5`; otherwise govern the material as a work part, method-description node, evidence segment, mechanism material, or system-component behavior under the direct pattern.
@@ -420,7 +420,7 @@ A work part may enact a recovered submethod, but the correspondence is not autom
 
 When a Work is recorded, perform these **three quick checks**:
 
-1. **Method-description context check.** Does `methodDescriptionRef` refer to a MethodDescription **defined in** the judgement context, or bridged to it, when that source is current?
+1. **Method-description context check.** Does `methodDescriptionRef` refer to a MethodDescription **defined in** the judgement context, or bridged to it, when that reference is current?
 
   * If **no**, the Work is **out‑of‑context**; either change context or add a Bridge.
 
@@ -428,7 +428,7 @@ When a Work is recorded, perform these **three quick checks**:
 
   * If **no**, the Work is **unassigned** for that context; remedy via a covering `U.RoleAssignment` or a policy exception.
 
-1. **Standard-Outcome Check.** Do the Work inputs, outputs, and metrics satisfy the **acceptance criteria** from the method-description source or declared standard **as interpreted in that context**?
+1. **Standard-Outcome Check.** Do the Work inputs, outputs, and metrics satisfy the **acceptance criteria** from the referenced `U.MethodDescription` or declared standard **as interpreted in that context**?
 
   * If **no**, the Work **fails** or is “conditionally accepted” per context policy.
 
@@ -436,7 +436,7 @@ When a Work is recorded, perform these **three quick checks**:
 
 ### A.15.1:11 - Common Anti-Patterns and How to Avoid Them
 
-* **"The log is the performed occurrence."** Dumping telemetry without occurrence references (method-description source when current, performer, time window, affected referent, context) -> **Not Work**. Create a work-occurrence record and link the log as evidence.
+* **"The log is the performed occurrence."** Dumping telemetry without occurrence references (`methodDescriptionRef` when current, performer, time window, affected referent, context) -> **Not Work**. Create a work-occurrence record and link the log as evidence.
 * **Record-only transforms.** ETL or replication of records with no declared affected referent (product or dataset as product) -> **Not Work** in this context; either declare the dataset as the product referent or treat the material under `U.WorkPlan` or the relevant operations pattern.
 * **Silent cross‑context acceptance.** “Ops accepted it, so audit accepts it.” → Add a **Bridge** or re‑judge in audit context.
 * **Method-description edition drift in mid-occurrence.** Swapping SOP v5->v6 without recording -> split into episodes or record method-description override.
@@ -444,8 +444,8 @@ When a Work is recorded, perform these **three quick checks**:
 * **Part ambiguity.** Mixing retries, episodes, and operational parts with no declared relation → Choose and declare the part relation.
 * **Slice-as-episode.** A monitoring interval, telemetry window, crank-angle segment, or one-second reception trace is called an episode only because it has timestamps -> Use `TemporalPartOf_work`, an evidence relation, or a telemetry relation unless a declared episode policy supplies event-bounded continuity.
 * **Episode-as-new-work by habit.** A pause, retune, or interruption is always recorded as a new occurrence -> Apply the bounded-context episode policy. Keep the same parent work with `EpisodeOf_work` when the policy preserves identity; create a separate `U.Work` only when the policy declares a new occurrence.
-* **Method-factor-as-work-part by label.** A step, stroke, receiver component, graph node, or method-description section is treated as a work part or submethod by name -> Recover the current object: `U.Method` factor, `U.MethodDescription` constituent, `TemporalPartOf_work`, `OperationalPartOf_work`, evidence segment, mechanism material, system-component behavior, or source-gap note.
-* **Granularity inflation.** Every interval or trace row receives a durable work-part name -> Name the work part only when a current resource, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return use hangs on it.
+* **Method-factor-as-work-part by label.** A step, stroke, receiver component, graph node, or method-description section is treated as a work part or submethod by name -> Recover the current object: `U.Method` factor, `U.MethodDescription` constituent, `TemporalPartOf_work`, `OperationalPartOf_work`, evidence segment, mechanism material, system-component behavior, or missing-source-relation note.
+* **Granularity inflation.** Every interval or trace row receives a durable work-part name -> Name the work part only when a current resource, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-relation return use hangs on it.
 * **Union-hull confusion.** Changing KPI coverage silently between reports -> declare `Γ_time` policy per KPI.
 * **Double‑count in overlaps.** Summing child and parent resource ledgers → Declare and apply an overlap policy.
 
@@ -455,7 +455,7 @@ When a Work is recorded, perform these **three quick checks**:
 2. **Name the context.** Pick the judgement context explicitly; add Bridges if multiple contexts accept.
 3. **Record the episode policy.** Decide when an interruption keeps identity or forces a new occurrence.
 4. **Separate slice, episode, and operational part.** Use interval/aspect for `TemporalPartOf_work`, event-bounded continuity for `EpisodeOf_work`, and recovered occurrence-side part plus any separately recovered method factor for `OperationalPartOf_work`.
-5. **Name only useful work parts.** If no current resource, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-return use hangs on the candidate part, keep it as a relation, evidence slice, or telemetry slice.
+5. **Name only useful work parts.** If no current resource, evidence, KPI, acceptance, repair, aggregation, cross-context reliance, or source-relation return use hangs on the candidate part, keep it as a relation, evidence slice, or telemetry slice.
 6. **Choose Γ\_time per KPI.** Put "union" or "hull" in the KPI definition so disputes expose the coverage policy instead of hiding it.
 7. **Set an overlap policy.** Write one sentence on how shared costs are allocated; apply consistently.
 8. **Pull plans out.** Move calendars to `U.WorkPlan`; let Work record performed values.
@@ -472,11 +472,11 @@ When a Work is recorded, perform these **three quick checks**:
 
 ### A.15.1:13.0 - Rationale
 
-`U.Work` is kept as a dated occurrence because method, method description, work plan, and result are different FPF objects. The same source phrase can point to several of them, but performed-work claims need occurrence evidence, time bounds, role assignment, and affected EntityOfConcern rather than a convenient method or plan label. This keeps work mereology, resource aggregation, and P2W carry-through grounded in what happened.
+`U.Work` is kept as a dated occurrence because method, method description, work plan, and result are different FPF objects. The same wording in a source `U.Episteme`, source `U.EpistemePublication`, method description, or work plan can point to several of them, but performed-work claims need occurrence evidence, time bounds, role assignment, and affected EntityOfConcern rather than a convenient method or plan label. This keeps work mereology, resource aggregation, and P2W carry-through grounded in what happened.
 
 ### A.15.1:13.1 - SoTA-Echoing
 
-**SoTA alignment rule.** A source tradition counts here only when it preserves the local `U.Work` distinction: dated occurrence, role-assigned performer, enacted method, method-description source when current, time window, affected referent, resources, outcome, and evidence-provenance relation. Historical occurrence modeling is used as lineage only when a current standard or current practice still needs the same distinction.
+**SoTA alignment rule.** A source tradition counts here only when it preserves the local `U.Work` distinction: dated occurrence, role-assigned performer, enacted method, `methodDescriptionRef` when current, time window, affected referent, resources, outcome, and evidence-provenance relation. Historical occurrence modeling is used as lineage only when a current standard or current practice still needs the same distinction.
 
 | Source tradition | Current source reference and source maturity | Local invariant adopted | Shortcut rejected |
 | --- | --- | --- | --- |
@@ -489,7 +489,7 @@ When a Work is recorded, perform these **three quick checks**:
 ### A.15.1:14 - Relations
 
 * **Builds on:** A.1 Holonic Foundation; A.1.1 `U.BoundedContext`; **U.System**; A.2 `U.Role`; A.2.1 `U.RoleAssignment`; A.2.2 `U.Capability`; A.3.1 `U.Method`; A.3.2 `U.MethodDescription`.
-* **Coordinates with:** A.15 Role-Method-Work Alignment (the "four-slot grammar"); B.1 Gamma (aggregation) for resource and time operators; `E.10` and `E.10.ARCH` for source cues such as process, workflow, activity, schedule, algorithm, solver, and procedure; `A.10`, `B.3`, `E.17`, and `A.15.4` when evidence, assurance, publication-use, or source-restoration claims are being made; `A.15.5` when readiness or full-kit preparation is current before performed work; `C.32.P2S` when performed work realizes or inspects selected structures in an architecturing flow.
+* **Coordinates with:** A.15 Role-Method-Work Alignment (the "four-slot grammar"); B.1 Gamma (aggregation) for resource and time operators; `E.10` and `E.10.ARCH` for wording cues such as process, workflow, activity, schedule, algorithm, solver, and procedure; `A.10`, `B.3`, `E.17`, and `A.15.4` when evidence, assurance, publication-use, or appearance-based reliance repair claims are being made; `A.15.5` when readiness or full-kit preparation is current before performed work; `C.32.P2S` when performed work realizes or inspects selected structures in an architecturing flow.
 * **Informs:** reporting and KPI patterns; assurance and evidence patterns (Work as the reference occurrence for audits); scheduling patterns (`U.WorkPlan` -> `U.Work` deltas).
 
 ### A.15.1:15 - Didactic quick cards
@@ -503,15 +503,15 @@ When a Work is recorded, perform these **three quick checks**:
 
 ### A.15.1:15a - P2W Performed-Work Use Relation
 
-When `E.18.1` reaches performed work, `U.Work` states the dated occurrence: performer, method-description source, parameters, resources, time window, pre-state, post-state, outputs, outcome, and audit trace.
+When `E.18.1` reaches performed work, `U.Work` states the dated occurrence: performer, `methodDescriptionRef` when current, parameters, resources, time window, pre-state, post-state, outputs, outcome, and audit trace.
 
 A `U.Work` occurrence may cite a `U.WorkPlan`, `SlotFillingsPlanItem`, or prior `WorkEntryReadiness@Context` as planned baseline or pre-entry context. The performed-work record states launch values, performed values, substitutions, variance, telemetry, and result-related records; comparator, transport, `PrincipleFrame`, evidence, assurance, gate, and readiness claims are separate current relations when the carry-through record names them.
 
 ### A.15.1:16 - Lowering, Repair, and Refresh Conditions
 
-Lower a candidate `U.Work` claim when performer, enacted method, method-description source when current, time window, `executedWithin`, affected referent, parameter bindings, resources, outcome, or state-change witness cannot be named at the granularity required by the next performed-work use. Lower a candidate work-part claim when the downstream use does not need a named work part or when the candidate is only an interval, event-log row, telemetry segment, method-description constituent, component behavior, mechanism material, or source cue. The acceptable lowered record is a temporal relation, plan note, readiness-gap note, evidence note, telemetry slice, method-description reference, source-gap note, source-restoration request, or direct neighboring object, not a backdated work occurrence or a gratuitous work part.
+Lower a candidate `U.Work` claim when performer, enacted method, `methodDescriptionRef` when current, time window, `executedWithin`, affected referent, parameter bindings, resources, outcome, or state-change witness cannot be named at the granularity required by the next performed-work use. Lower a candidate work-part claim when the downstream use does not need a named work part or when the candidate is only an interval, event-log row, telemetry segment, method-description constituent, component behavior, mechanism material, or wording cue. The acceptable lowered record is a temporal relation, plan note, readiness-gap note, evidence note, telemetry slice, method-description reference, missing-source-relation note, `A.15.4` repair request, or direct neighboring object, not a backdated work occurrence or a gratuitous work part.
 
-Repair the work record when a subsequent source changes the work interval, performer, role assignment, enacted method, method-description edition, parameter binding, resource ledger, outcome, affected referent, state-plane reference, pre-state reference, post-state reference, overlap policy, or aggregation policy. Repair only the changed relation: do not rewrite the method when only evidence changed, do not rewrite evidence when only work time changed, and do not convert a plan or source-restoration request into work.
+Repair the work record when a subsequent source changes the work interval, performer, role assignment, enacted method, method-description edition, parameter binding, resource ledger, outcome, affected referent, state-plane reference, pre-state reference, post-state reference, overlap policy, or aggregation policy. Repair only the changed relation: do not rewrite the method when only evidence changed, do not rewrite evidence when only work time changed, and do not convert a plan or `A.15.4` repair request into work.
 
 Refresh before cross-context acceptance, aggregation, comparison, result measurement, release reliance, gate use, evidence use, assurance use, QD or OEE archive use, or P2W carry-through use. If the claim being made after refresh is no longer performed work, use the governing pattern for that relation and keep only the returned `U.Work` reference here.
 

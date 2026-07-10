@@ -15,8 +15,8 @@ title: Big FPF Storylines
 
 Several commitments make FPF more than a collection of patterns.
 
-1. Holons give one root for systems, bodies of knowledge, organizations, publications, methods, and other entities that can be treated as wholes and parts.
-2. The project thing under concern and its description are kept distinct so descriptions, views, diagrams, publications, and carriers do not replace what they describe.
+1. Holons give one root for systems, bodies of knowledge, organizations-as-systems, publication systems, work occurrences, disciplines, and other admitted entities that can be treated as wholes and parts; roles and methods stay adjacent governed values rather than holon kinds by label.
+2. The project entity under concern and its description are kept distinct so descriptions, views, diagrams, publications, and carriers do not replace what they describe.
 3. Context keeps meaning local, while bridges and term sheets let meanings travel without collapse.
 4. Role, method, plan, performed work, evidence, decision, and gate are different kinds of project objects.
 5. Architecture is structure of holons, and architecture descriptions are descriptions of that structure.

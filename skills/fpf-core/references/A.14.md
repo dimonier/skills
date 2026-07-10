@@ -40,7 +40,7 @@ dependencies:
 
 ### A.14:1 - Problem frame - why an advanced mereology?
 
-FPF’s holonic modelling relies on **part–whole** relations to build *structural* and *conceptual* holarchies for admitted holons such as systems, epistemes, work occurrences, bounded contexts, and disciplines. But `U.Holon` is **not** a synonym for every bounded object. `U.Role` and `U.Method` are governed FPF values with their own relation discipline; they are not admitted holon kinds merely because source speech treats them as "things." Role relation structures, method relation structures, method descriptions, work plans, and work occurrences enter A.14 only through their direct governing patterns and admitted carriers. Early drafts distinguished structural vs. conceptual parthood (e.g., **ComponentOf**, **ConstituentOf**) but practical modelling kept hitting two recurrent gaps:
+FPF’s holonic modelling relies on **part–whole** relations to build *structural* and *conceptual* holarchies for admitted holons such as systems, epistemes, work occurrences, bounded contexts, disciplines, and methods. But `U.Holon` is **not** a synonym for every bounded object. `U.Role` is a governed root U-kind, not an admitted holon kind. `U.Method` is a non-agentive holon kind, but submethod assembly is owned by method-composition patterns, not by A.14 structural component mereology. Role relation structures, method relation structures, method descriptions, work plans, and work occurrences enter A.14 only through their direct governing patterns and admitted carriers. Early drafts distinguished structural vs. conceptual parthood (e.g., **ComponentOf**, **ConstituentOf**) but practical modelling kept hitting two recurrent gaps:
 
 1. **Quantities vs. parts.** Engineers routinely need “some of the fuel”, “the first 10 pages”, “a 30% subset of data”. This is not a component; it is a **portion** of a stuff‑like whole, governed by measures and conservation.
 
@@ -51,7 +51,7 @@ This section introduces two **normative** sub‑relations of `partOf` that close
 * **PortionOf** — metrical, measure‑preserving parthood of stuffs and other measurables.
 * **PhaseOf** — temporal parthood of the *same* carrier across an interval.
 
-It also restates guard‑rails that keep **role values** and **method values** outside A.14 mereology, while allowing **describing epistemes** such as `U.MethodDescription` and `U.WorkPlan` to use ordinary episteme parthood and versioning like any other `U.Episteme`. It also clarifies how **MemberOf** fits: membership and collection-as-whole grounding start with A.14, C.13, and B.3.5 as appropriate; acting collective systems require `U.System` admission plus role, method, work, and evidence owners; whole reidentification uses B.2 only when existing-whole explanations fail.
+It also restates guard‑rails that keep **role values** outside holon mereology and keep **method values** outside A.14 structural component mereology, while allowing method holarchy through method owners such as `A.3.1` and `B.1.5`. Describing epistemes such as `U.MethodDescription` and `U.WorkPlan` use ordinary episteme parthood and versioning like any other `U.Episteme`. It also clarifies how **MemberOf** fits: membership and collection-as-whole grounding start with A.14, C.13, and B.3.5 as appropriate; acting collective systems require `U.System` admission plus role, method, work, and evidence owners; whole reidentification uses B.2 only when existing-whole explanations fail.
 
 **Publication note (Working-Model first).** Read A.14 together with **E.14 Human-Centric Working-Model** and **B.3.5 CT2R-LOG**: publish relations in the **Working-Model** relation layer; when assurance is sought, **ground downward**. For structural claims that require extensional identity, use the **Constructive** shoulder via **Compose-CAL Γ_m (sum | set | slice)**; order/time stay outside mereology (Γ_time / Γ_method).
 
@@ -82,7 +82,7 @@ If we only have “generic partOf” (plus Component/Constituent), four classes 
 
 1. **PortionOf** — for *measured* parts of a whole (stuffs and other extensives).
 2. **PhaseOf** — for *temporal* parts of the same carrier.
-3. **No role or method values in mereology by label.** `U.Role` and `U.Method` are not A.14 parts merely because a sentence talks about a role, method, or position. A `U.MethodDescription` is an **Episteme** and may be versioned or structured; `U.Work` occurrences may have work-occurrence parts under A.15.1; neither case makes the described `U.Method` a part.
+3. **No role values in holon mereology; no method values in structural component mereology.** `U.Role` is not an admitted holon kind. `U.Method` is a method holon, but its submethod assembly is governed by method-composition owners, not by A.14 `ComponentOf` or structural `partOf`. A `U.MethodDescription` is an **Episteme** and may be versioned or structured; `U.Work` occurrences may have work-occurrence parts under A.15.1; neither case replaces method holarchy.
 4. **MemberOf stays, but collection-as-whole and acting-collective claims use direct owners.** `MemberOf` remains available to state collections and collectives. A **collection‑as‑whole** may be constructed via `Γ_m.set` under C.13 and grounded with B.3.5 when assurance is current. An acting collective system uses `U.System` admission plus role, method, work, and evidence owners. Whole reidentification uses B.2 only when existing-whole explanations fail.
 
 The classical pair **ComponentOf** (structural, discrete) and **ConstituentOf** (conceptual, logical/epistemic) remain as in the kernel; A.14 only clarifies **how to tell them apart from Portion/Phase** (§ 6).
@@ -175,10 +175,10 @@ It also corrects representation bias. A BoM row, figure, graph edge, table row, 
 
 | ID  | Requirement  | Purpose  |
 | --- | --- | --- |
-| **CC‑A14‑0**  | No `U.Role` or `U.Method` **MAY** occur as a node in any `partOf` chain by role or method identity alone. If another pattern admits a different carrier, such as a method description, work occurrence, role assignment record, or episteme, name that carrier and governing pattern. | Keeps role and method values outside A.14 mereology while preserving admitted carriers. |
+| **CC‑A14‑0**  | `U.Role` **MUST NOT** occur as a node in any role `partOf` chain. `U.Method` **MUST NOT** occur in A.14 structural `ComponentOf` or structural `partOf` chains by method identity alone; submethod assembly is governed by `A.3.1` and `B.1.5`. If another pattern admits a different carrier, such as a method description, work occurrence, role assignment record, role relation structure, method relation structure, or episteme, name that carrier and governing pattern. | Keeps role values out of holon mereology and keeps method holarchy out of structural component mereology while preserving admitted carriers. |
 | **CC‑A14‑0a** | `U.MethodDescription` / `U.WorkPlan` and other describing epistemes **MAY** participate in `partOf` only as `U.Episteme` nodes (e.g., `ConstituentOf`, text `PortionOf`, version `PhaseOf`); they **MUST NOT** be asserted as `ut:StructPartOf` of any `U.System`. | Allows document structure/versioning without smuggling Methods into structure. |
 | **CC‑A14‑0b** | `MemberOf` **MUST NOT** imply, entail, or be auto‑rewritten into any `partOf` sub‑relation. | Separates collections/collectives from parthood.  |
-| **CC‑A14‑0c** | `SerialStepOf` / `ParallelFactorOf` **MUST NOT** appear in any `partOf` chain or table in A.14; model order via **A.15** (**Γ_ctx/Γ_method**). | Prevents the “order‑as‑structure” category error.  |
+| **CC‑A14‑0c** | `SerialStepOf` / `ParallelFactorOf` **MUST NOT** appear in any `partOf` chain or table in A.14; model order and concurrency potential via **A.15** and direct method-composition owners such as `B.1.5`. If a node linked by those relations is also a submethod, state that `U.Method` claim separately before using method holarchy. | Prevents the “order‑as‑structure” and “edge-as-part” category errors.  |
 
 #### A.14:8.2 - PortionOf guards
 
@@ -222,7 +222,7 @@ It also corrects representation bias. A BoM row, figure, graph edge, table row, 
 
 | ID  | Requirement  | Purpose  |
 | --- | --- | --- |
-| **CC-A14-10**  | For **structural** edges in the Working-Model relation layer, the relation record **SHALL** set `validationMode=axiomatic` and attach **`tv:groundedBy -> Γ_m.sum|set|slice`**.  | Aligns A.14 with CT2R-LOG (**B.3.5**) and Compose-CAL (**C.13**); ensures extensional identity. |
+| **CC-A14-10**  | For **structural** edges in the Working-Model relation layer, the relation record **SHALL** set `validationMode=axiomatic` and attach **`tv:groundedBy -> Γ_m.sum\|set\|slice`**.  | Aligns A.14 with CT2R-LOG (**B.3.5**) and Compose-CAL (**C.13**); ensures extensional identity. |
 | **CC‑A14‑11**  | **PhaseOf** edges **SHALL NOT** use Γ_m for grounding. The relation record **SHALL** provide identity criteria and non‑overlap per **CC‑PHA‑1..3** and reference **Γ_time** when ordering matters. | Keeps temporal parthood distinct from construction; preserves the plane firewall.  |
 
 ### A.14:9.1 - Relation-use decision procedure

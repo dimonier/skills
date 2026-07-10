@@ -14,8 +14,8 @@ Do NOT read `assets/FPF-Spec.md` in full. Identify the situation and load the re
 
 | You are doing... | Load |
 |---|---|
-| Developing or reviewing architecture | `C.32.P2S.md`, `C.30.md`, `A.22.md`, `C.32.md`, `C.32.PAD.md`, `C.32.ADR.md`, `C.33.md`, `C.34.md`, `C.35.md`, `C.30.ASV.md`, `C.30.AD.md`, `C.31.md`, `C.32.CONWAY.md`, `B.2.md`, `B.2.P.md` |
-| Writing rules, methods, work-process documents | `A.6.md`, `A.6.B.md`, `A.6.C.md`, `A.15.md`, `A.15.1.md`, `A.15.2.md`, `A.15.3.md`, `A.15.4.md`, `E.18.md`, `E.18.1.md`, `E.8.md`, `E.19.md` |
+| Developing or reviewing architecture | `C.32.P2S.md`, `C.30.md`, `A.22.md`, `A.22.CGUS.md`, `C.32.md`, `C.32.PAD.md`, `C.32.ADR.md`, `C.33.md`, `C.34.md`, `C.35.md`, `C.30.ASV.md`, `C.30.AD.md`, `C.31.md`, `C.32.CONWAY.md`, `B.2.md`, `B.2.P.md` |
+| Writing rules, methods, work-process documents | `A.6.md`, `A.6.B.md`, `A.6.C.md`, `A.15.md`, `A.15.1.md`, `A.15.2.md`, `A.15.3.md`, `A.15.4.md`, `E.18.md`, `E.18.1.md`, `E.18.2.md`, `E.18.3.md`, `E.8.md`, `E.19.md` |
 | Comparing alternatives, making a local choice | `A.19.md`, `A.19.ECS.md`, `C.11.md`, `C.18.md`, `C.19.md`, `G.0.md`, `G.5.md` |
 | Turning a vague situation into a problem statement | `C.22.2.md`, `C.2.2a.md`, `A.16.md`, `A.16.1.md`, `A.16.2.md`, `B.4.1.md`, `B.5.2.0.md` |
 | Defining "better" and running improvement | `A.19.ECS.md`, `E.22.md`, `E.23.md`, `C.16.md`, `C.25.md`, `E.21.md`, `E.9.DA.md`, `E.2.DA.md` |
@@ -47,4 +47,4 @@ load those too from `references/`. Each reference lists its own dependencies.
 
 ## References Status
 
-**Ready** — 277 pattern reference files + INDEX + 32 context sections.
+**Ready** — 279 pattern reference files + INDEX + 32 context sections.
