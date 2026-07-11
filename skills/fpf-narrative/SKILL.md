@@ -7,16 +7,22 @@ description: |
   reviews, status reports, trust assessments, system compositions. Replaces
   verbose prose (F0) with typed-slot notation (~65% token savings, lossless).
   Do NOT use for: casual chat, teaching, non-technical audiences, creative tasks.
-generatedFrom: FPFNarrativeProsePrinciplesFramework@2026-07-10
+generatedFrom: FPFNarrativeProsePrinciplesFramework@2026-07-11
 ---
 
 # FPF Narrative Prose — Runtime
 
 ## CONCEPTS
 
+Ontology: output IS `U.Episteme` with filled `U.EpistemeSlotRelation`. Rendering IS `Describe_EoC_DescEp`: EntityOfConcern → DescriptionEpisteme.
+
 U.System acts. U.Episteme does NOT. U.Work = run-time (Tᴿ), immutable. U.Method / U.MethodDescription = design-time (Tᴰ). Tᴰ and Tᴿ never mix in one slot.
 
 U.Role = mask. U.RoleAssignment = `System#Role:Context`. Roles NEVER in parts lists. Holarchies = substantive holons only.
+
+U.Transformation = bounded change of a holon under conditions. Base narrative unit (actions, events). U.Capability = system ability/envelope to enact a Method under conditions.
+
+U.ClaimGraph = claim body of an Episteme (nodes=claims, edges=relations). U.ReferenceScheme = how claims bind to entities as statements about EntityOfConcern.
 
 Γ aggregation: weakest-link. `F_eff = min(F_i)`. `R_eff = max(0, min(R_i) − Φ(CL_min))`. All 5 Quintet invariants checked when `[aggregation]` present.
 
@@ -28,7 +34,7 @@ ADI: ≥3 hypotheses in Abduction. ≥1 prediction per hypothesis. ≥2 tested i
 
 Strict distinctions: Role≠Function, MethodDesc≠Method≠Work, System≠Episteme, Episteme≠Carrier, Collective≠Set. Scan every output before emitting.
 
-External transformer: holder(Agent) ≠ Target. No self-magic. Self-action → Reflexive Split: System = {Regulator, Regulated} with internal Boundary.
+External transformer: holder(Agent) ≠ Target. No self-magic. Self-action → Reflexive Split: System = {Regulator, Regulated} with HolonDelimitation and HolonBoundaryCrossing.
 
 ## FORMAT SELECTION
 
@@ -52,6 +58,8 @@ Fallback:
 | Casual dialogue/chat | F0. |
 | Creative/brainstorming | F0. |
 | Consumer rejects FPF | F0 or F3 hybrid. |
+
+Rendering mode: `retelling-fidelity` (recoverable to source-like text) vs `structural-analysis` (expose structure). Reconstruction-oriented task → `retelling-fidelity`: no generalization/conclusions in sourceClaims, do not erase source instances via pattern-compression.
 
 ## OUTPUT TEMPLATE
 
@@ -91,10 +99,17 @@ section:
  Conclusion: selected hypothesis; R = high/medium/low; falsified: [H…]
 
 [evidence]:              # only when source has evidence
- verifiedBy: [proof-ids | pending]
- validatedBy: [test-ids | pending]
- valid_until: ISO-date | null
- ED: number
+  verifiedBy: [proof-ids | pending]
+  validatedBy: [test-ids | pending]
+  valid_until: ISO-date | null
+  ED: number
+
+[style]:                  # optional; form descriptor; guides reconstruction, never becomes prose
+  genre: <required — e.g. Russian folk tale / diagnostic report / ADR>
+  register: <required — e.g. oral-colloquial, archaic / technical-neutral>
+  voice: <optional; e.g. 3rd-person narrator, formulaic>
+  devices: <optional; e.g. repetition-with-increment, rhyming refrain, epithets>
+  signature: <optional; verbatim recurring surface, if load-bearing — e.g. song, catchphrase>
 ```
 ````
 
@@ -104,6 +119,7 @@ section:
 - `[confidence]` only when source expresses uncertainty.
 - `[src]` only when source has explicit reference.
 - `[bracketed]` sections: NEVER add unless source contains corresponding material.
+- sourceClaims = ONLY propositions present in or directly recoverable from the source. Interpretation, strategy analysis, method-step labels, cross-episode generalization, and conclusions the source does not state → `[bracketed]`. Litmus: "asserted by source, or inferred by renderer?" Inferred → bracket it.
 - `[aggregation]`: all-or-nothing. If present → all 5 invariants + fields present.
 - `[reasoning]`: ≥3 hypotheses, ≥2 tested. Never 1 hypothesis. Never delete falsified.
 - `[evidence]`: SCR: `scr://domain/id`. ED formula. valid_until null = perpetual.
@@ -117,6 +133,14 @@ section:
 | Composition | parts | [aggregation] |
 | Trust claim | claim | [assurance] |
 | Explanation/body | source-derived | none |
+| Narrative source | source-derived sections | [style] |
+
+`[style]` rules:
+- Optional. Fill when reconstruction must reproduce a recognizable source form (narrative, tale, legal, marketing).
+- `genre` + `register` required if `[style]` present; `voice`, `devices`, `signature` optional.
+- `[style]` is fpfMetadata: its content does NOT emit as prose claims.
+- **Exception:** reconstruction reads `[style]` as form instruction (genre/register/voice/devices, signature verbatim). All other `[bracketed]` omitted.
+- `signature`: optional within optional `[style]`. Fill only when a load-bearing recurring signature exists (refrain, catchphrase); otherwise omit.
 
 ## FORMATTING RULES
 
@@ -176,10 +200,26 @@ Take ONLY source claims. Omit all `[bracketed]` content.
 | `U.*` prefixes | Plain words, no `U.` |
 | `Tᴰ` / `Tᴿ` | Omit or use ordinary equivalents |
 | `Γ_*` | Never appear |
-| `ComponentOf`, `ConstituentOf` | "part of", "belongs to", or restructure |
+| `ComponentOf`, `ConstituentOf`, `PortionOf`, `PhaseOf` | "part of", "belongs to", or restructure |
+| `PhaseOf` | "during", "at time", or restructure sentence |
+| `PortionOf` | "part of", "amount of" |
 | `[aggregation]`, `[assurance]`, `[reasoning]`, `[evidence]` content | Omit entirely |
 
-Result: clean prose — no brackets, no reference tokens, no FPF vocabulary. Indistinguishable from fresh original text.
+Section names of the Episteme are **scaffolding, not prose headings.** Do NOT emit them as titles/labels in the reconstruction.
+
+Reconstruction MUST be connected narrative in the **genre and voice of the source** (a tale reads as a tale, a diagnostic as a diagnostic), not a labelled dump of sections.
+
+Pattern-compressed repetition (`pattern: X → Y → Z`, `each encounter extends … by one`) MUST be **re-expanded into concrete instances** in the reconstruction, matching the source's own unfolding.
+
+| FPF in source | Reconstruction must |
+|---|---|
+| `Setup:` / `Encounters:` section labels | Dissolve into narrative flow; no heading |
+| `pattern: Predator threatens → sings → rolls away` | Re-expand each encounter as its own passage |
+| `each encounter extends escaped-from list by one` | Actually list the growing sequence per encounter |
+
+Result: connected prose in the source's genre — section labels dissolved, repetition re-expanded, no brackets, no reference tokens, no FPF vocabulary.
+
+If `[style]` is present, the reconstruction MUST adopt its genre, register, voice, and devices, and reproduce any `signature` verbatim. `[style]` is read as a form instruction; its lines never appear as labelled claims. All other `[bracketed]` sections remain omitted.
 
 ## REFLEXIVE SPLIT
 
@@ -189,8 +229,8 @@ Rule: holder(Agent) ≠ Target. No self-magic. Self-action → split System into
 ReflexiveSplit(System: <ID>):
  Regulator: <Subsystem₁>#TransformerRole:<InternalCtx>
  Regulated: <Subsystem₂>
- Boundary: <U.Boundary description>
- Interaction: <U.Interaction description>
+ HolonDelimitation: <relation between Regulator and Regulated inside containing holon>
+ HolonBoundaryCrossing: <relation crossing the delimitation (signal, control, flow)>
  Method: <U.Method>
  MethodDescription: <U.MethodDescription> [src: scr://…]
  Work: <U.Work> @ <time>, resources: <Γ_work>
@@ -312,6 +352,13 @@ Answer all. If any answer is NO, repair.
 | 13 | `[evidence]` present → ≥1 verifiedBy/validatedBy/pending, valid_until explicit, ED calculated? | YES |
 | 14 | All claim values in English? (exceptions: proper names, wordplay, domain terms, quoted material) | YES |
 | 15 | Reconstruction: no `[bracketed]` content, no FPF markers/notation in prose? | YES |
+| 16 | EntityOfConcernSlot filled — what is being described? (topic, system, event) | YES |
+| 17 | ClaimGraphSlot filled — at least one section with ≥1 indented claim? | YES (same as #2) |
+| 18 | ViewpointSlot implied — consumer type from decision table? | YES |
+| 19 | `[bracketed]` sections present only when source justifies them? | YES |
+| 20 | Every non-bracketed claim is source-asserted, not renderer-inferred? (interpretation → `[bracketed]`) | YES |
+| 21 | If source has a recognizable form to preserve → `[style]` present (with genre + register)? | YES |
+| 22 | Reconstruction conforms to `[style]` (genre/register/voice/devices, signature verbatim if present)? | YES |
 
 ## REFERENCE
 
@@ -319,18 +366,27 @@ Answer all. If any answer is NO, repair.
 
 | Type | Meaning | Acts? |
 |---|---|---|
-| `U.Entity` | Anything distinguishable | NO |
-| `U.Holon` | Whole AND part; has U.Boundary | NO |
-| `U.System` | Physical/operational holon | YES |
-| `U.Episteme` | Knowledge (spec, proof, model) | NO |
-| `U.Boundary` | Holon boundary (open/closed/permeable) | NO |
-| `U.Interaction` | Flow across boundary | NO |
-| `U.Role` | Capability/obligation mask | NO |
+| `U.Entity` | Anything individuable and referable | NO |
+| `U.Holon` | Whole-with-parts; part of larger wholes | NO |
+| `U.System` | Acting physical/operational holon; bears roles, executes Work | YES |
+| `U.Episteme` | Knowledge holon (spec, proof, model, narrative output) | NO |
+| `U.Role` | Context-bound work-facing role value (mask) | NO |
 | `U.RoleAssignment` | Holder#Role:Context binding | NO |
-| `U.BoundedContext` | Context where terms have meaning | NO |
-| `U.MethodDescription` | Recipe (Tᴰ) | NO |
-| `U.Method` | Capability to execute (Tᴰ) | NO |
+| `U.Capability` | System ability/envelope to enact a Method under conditions | NO |
+| `U.Method` | Abstract order-sensitive way-of-doing (Tᴰ) | NO |
+| `U.MethodDescription` | Description episteme of a Method (Tᴰ, recipe/SOP) | NO |
 | `U.Work` | Dated execution (Tᴿ, IMMUTABLE) | NO |
+| `U.Transformation` | Bounded change of a holon under conditions (Tᴿ) | NO |
+| `U.BoundedContext` | Context where terms have meaning | NO |
+| `U.ClaimGraph` | Claim body of an Episteme (nodes=claims, edges=relations) | NO |
+| `U.ReferenceScheme` | How claims are read as statements about EntityOfConcern | NO |
+
+### Boundary Relations (relations, NOT U.-types)
+
+| Relation | Use for |
+|---|---|
+| `HolonDelimitationRelation` | Delimitation between holon and its environment |
+| `HolonBoundaryCrossingRelation` | Relation crossing the delimitation (signal, control, flow) |
 
 ### Γ Flavors
 
