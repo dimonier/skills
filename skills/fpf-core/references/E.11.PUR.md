@@ -1,26 +1,22 @@
 ---
 id: E.11.PUR
-title: "Pattern-Use Recommendation and Pattern-Use Sequence"
+title: "Pattern-Use Applicability, Recommendation, and Coordination"
 status: Stable
 keywords: []
 dependencies:
   builds_on:
     - E.11
+    - E.11.PUA
     - E.10.MOVE
-    - E.8
   coordinates_with:
     - E.18.1
     - A.15
-    - A.15.5
     - A.21
-    - A.16
     - C.24
     - C.30
-    - C.30.AD
-    - E.17
 ---
 
-# E.11.PUR: Pattern-Use Recommendation and Pattern-Use Sequence
+# E.11.PUR: Pattern-Use Applicability, Recommendation, and Coordination
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -28,225 +24,274 @@ dependencies:
 
 ---
 
-## E.11.PUR - Pattern-Use Recommendation and Pattern-Use Sequence
+## E.11.PUR - Pattern-Use Applicability, Recommendation, and Coordination
 
-> **Type:** Pattern-language governance pattern (E)
+> **Type:** Pattern-language use pattern (E)
 > **Status:** Stable
-> **Normativity:** Normative for FPF pattern-use recommendation and pattern-use sequence records.
+> **Normativity:** Normative for reliance-bearing applicability findings, pattern-use recommendations, and coordination among candidate FPF pattern uses.
 
-**At a glance.** `E.11.PUR` governs the relation in which one FPF pattern use, or a short sequence of pattern uses, is recommended for a current project concern. It keeps ordinary "first useful move" speech teachable while preventing a new root `U.Move` kind.
+### E.11.PUR:1 - Problem frame
 
-**Use this when.** Use this pattern when a practitioner, manager, or assisting agent needs to decide which FPF pattern use is worth taking next for a recognizable project concern after applicability has been checked.
+#### E.11.PUR:1.1 - Use this when
 
-**Primary EntityOfConcern.** One `PatternUseRecommendation@Context`: the relation between a current project concern, a bounded context, one or more candidate FPF pattern uses, an applicability finding, the recommended pattern use, and the expected practical result.
+Use `E.11.PUR` after one or more `CandidatePatternUse@Context` values are available and a person or assisting agent needs to decide whether each use fits, which use to recommend, or how several uses should be coordinated for the current concern.
 
-**First output.** One compact `PatternUseRecommendation@Context` or `PatternUseSequence@Context` record that names the current concern, the recommended pattern use, the reason for recommending it, the expected output shape, blocked stronger uses, and any neighboring governing pattern that becomes current after this use.
+**Primary EntityOfConcern.** One current PUR-governed value over already inspected candidate pattern uses: a `PatternUseApplicabilityFinding@Context`, a `PatternUseRecommendation@Context`, or a `PatternUseCoordination@Context`. A `PatternUseOrderingRelation@Context` is current only inside the coordination it qualifies.
 
-**Not this pattern when.** If an accepted problem-side record or cue is being carried through P2W, use `E.18.1`. If work is being planned or performed, use the A.15 family. If a gate decision is current, use `A.21`. If a tool-call plan is current, use `C.24`. If the sentence is only about publication, phrase wording, or description use, use `E.8`, `E.17`, or the direct publication or description pattern.
+**What this buys.** Applicability no longer silently becomes recommendation, and presentation order no longer silently becomes workflow order. A project can preserve exact reasons for a consequential recommendation without burdening ordinary bounded use with five separate forms.
 
-### E.11.PUR:1 - Problem Frame
-
-FPF is meant to help a working team find a useful next pattern use in an actual problem situation. The natural way to say this in teaching and project conversation is often "what is the next useful move?" or "what professional move does FPF give here?"
-
-That speech is useful, but it becomes unsafe when the word "move" starts to name a new ontology. A recommended pattern use is not the work itself, not a gate passage, not a work plan, not an architecture decision, and not an authorization to act. It is a pattern-use relation that helps the user choose the next FPF pattern application and its expected output.
+**Not this pattern when.** Use `E.11` while public cards are still being compared. Use `E.11.PUA` to apply one selected pattern and obtain its first result. Use A.15 for work planning or performed work, A.21 for a gate decision, and the direct decision or authorization pattern when those claims are current.
 
 ### E.11.PUR:2 - Problem
 
-Without an explicit pattern-use recommendation relation, four failures recur:
+Several different claims are often compressed into "use this pattern next." A pattern can fit the problem frame but fail its Solution conditions. It can be applicable yet not be the recommended use because another pattern produces a more useful first result. Several candidate uses can belong together without forming a sequence, and a sequence can be shown without creating a WorkPlan.
 
-1. A pattern that only recommends a next FPF use is overread as if it performed work, passed a gate, or authorized work.
-2. Applicability and recommendation collapse: "this pattern can be used" becomes "this pattern is the selected useful use now."
-3. Several pattern uses are described as a workflow or lifecycle, even when they are only a recommended pattern-use sequence.
-4. Teaching language such as "first useful move" becomes a false kind and starts competing with `U.Work`, `U.WorkPlan`, P2W, A.16 language-state moves, C.24 call planning, and C.30 architecture candidate records.
+When these distinctions are missing, familiar PatternIDs become proxies for value. Teams recommend the pattern they know, copy one result description into several order relations, and treat a diagram or teaching order as execution order.
 
 ### E.11.PUR:3 - Forces
 
-| Force | Pressure |
+| Force | Pressure on the solution |
 | --- | --- |
-| Teachability | Engineer-facing speech needs simple words such as first useful move, working move, and professional move. |
-| Ontological precision | FPF must not create a root `U.Move` when the direct governed value is pattern use, plan, work, gate, source relation, publication, architecture, or transformation. |
-| Applicability vs recommendation | A pattern can be applicable without being the recommended use for the current concern. |
-| Composition | Several pattern uses can form a useful FPF phrase without becoming a work plan or process. |
-| Practical payoff | The result must still tell the practitioner what can be produced or inspected next. |
+| Compact ordinary judgement | A local reversible use should permit one concise rationale. |
+| Addressable reliance | Transfer, audit, automation, delayed feedback, or costly reversal can rely on separate fit findings. |
+| Applicability versus recommendation | A fit finding does not select a candidate for current use. |
+| Plural coordination | Several candidates may be alternatives, complements, or partially ordered. |
+| Exact precedence | Result-based precedence reuses the prerequisite candidate's exact expectation. |
+| No work overread | Pattern-use coordination does not plan, authorize, or perform project work. |
+| Proxy resistance | Pattern familiarity, score, and publication order are not evidence of expected practical gain. |
 
 ### E.11.PUR:4 - Solution
 
-Use three registers deliberately.
+Evaluate candidate uses against five distinct fit aspects. Keep those aspects in one compact rationale for ordinary bounded use. Materialize separate findings only when a named receiving reliance needs them. Aggregate applicability before issuing a recommendation. Coordinate several candidates with an explicit local ordering mode and pairwise precedence relations only where a real basis exists.
 
-In engineer-facing speech, phrases such as "first useful move", "working move", "professional move", "SoTA move", "strong move", "admissible move", and "next move" may stay when they help a team ask what to do next.
-
-In didactic pattern-language speech, the same idea can be explained as building a useful FPF phrase from pattern words: one pattern may frame the problem, another preserve variants, another recommend an architecture question, another carry the decision toward work, and another update SoTA or wording.
-
-In the precise FPF layer, do not create a `Move` kind from either metaphor. Recover `PatternUseRecommendation@Context` for the recommended use of one pattern, `PatternUseSequence@Context` for several pattern uses, and the direct governing pattern for work, plan, gate, decision, publication, architecture, source-relation, or transformation claims.
-
-#### E.11.PUR:4.1 - PatternUseRecommendation@Context
-
-`PatternUseRecommendation@Context` is a dependent durable pattern-use relation value. It says which FPF pattern use is recommended now for one current concern.
-
-E.24.UK settlement: this pattern does not introduce a root `U.PatternUseRecommendation`, a root `U.Move`, or an independent pattern-use ontic. The governed value is a context relation over existing values: project concern, bounded context, candidate pattern uses, governing pattern, applicability finding, recommended pattern use, expected practical result, and neighboring governing-pattern refs. `PatternUseSequence@Context` is the sequence form of the same relation discipline, not a workflow, lifecycle, route, WorkPlan, or performed work.
+#### E.11.PUR:4.1 - Fit and applicability
 
 ```text
-PatternUseRecommendation@Context:
-  ProjectConcernRef
-  BoundedContextRef
-  PatternUserOrAgentRef?
-  GoverningPatternRef
-  CurrentEntityOfConcernRef?
-  CurrentClaimOrRelationKindRef?
-  RecognitionCueRef?
-  CandidatePatternUseSet?
-  ApplicablePatternUseSet?
-  ApplicabilityFinding
-  RecommendedPatternUse
-  ReasonForRecommendation
-  ExpectedPracticalGain?
-  OutputRefOrOutputShape
-  AdmissibleUse
-  BlockedStrongerUse
-  StopCondition
-  NextGoverningPatternRef?
-  ReturnOrReopenCondition?
+PatternUseFitCriterionValue =
+  problemFrame | forces | solutionConditions | ordinaryBoundary | resultAndReceivingUse
+
+PatternUseFitResultValue = fit | misfit | insufficientBasis
+PatternUseApplicabilityResultValue = applicable | inapplicable | insufficientBasis
+
+PatternUseFitFinding@Context <: U.Episteme:
+  entityOfConcernRef: U.EntityRef, referencing one CandidatePatternUse@Context
+  claimGraph: U.ClaimGraph by value
+  referenceSchemeRef: U.ReferenceSchemeRef
+  editionId
+  fitCriterion: PatternUseFitCriterionValue
+  fitResult: PatternUseFitResultValue
+  fitRationaleRef: U.EpistemeRef, referencing one CandidatePatternUseRationale@Context
+
+PatternUseApplicabilityFinding@Context <: U.Episteme:
+  entityOfConcernRef: U.EntityRef, referencing one CandidatePatternUse@Context
+  claimGraph: U.ClaimGraph by value
+  referenceSchemeRef: U.ReferenceSchemeRef
+  editionId
+  fitFindingRefs[5]: U.EpistemeRef, each referencing one PatternUseFitFinding@Context
+  applicabilityResult: PatternUseApplicabilityResultValue
+  missingBasisBoundaryRef?: U.EpistemeRef, referencing one PatternUseBoundaryCondition@Context
 ```
 
-`RecommendedPatternUse` is stronger than an applicability finding. It means: this pattern use is selected as useful for the current concern, given the available candidate pattern uses and the expected practical result. If a project actor then plans or performs work, that resulting object is governed by `U.WorkPlan`, A.21, or `U.Work`, not by this pattern-use relation.
+The five criteria refer to one candidate. In ordinary conversation, inspect all five and state the aggregate result in the recommendation without materializing five findings. `PatternUseApplicabilityFinding@Context` is the reliance-bearing support episteme: when it exists, its five findings cover each criterion exactly once. `applicable` follows only when all five are `fit`; any `misfit` yields `inapplicable`; one or more `insufficientBasis` values yield `insufficientBasis` and a missing-basis boundary.
 
-#### E.11.PUR:4.2 - PatternUseSequence@Context
-
-Use `PatternUseSequence@Context` when several recommended or applied pattern uses must be kept together:
+#### E.11.PUR:4.2 - Recommendation
 
 ```text
-PatternUseSequence@Context:
-  ProjectConcernRef
-  BoundedContextRef
-  SequencePurpose
-  PatternUseRefs
-  OrderingReason?
-  OutputChain
-  DirectGoverningPatternForEachUse
-  BlockedWorkflowOverread
-  StopCondition
-  ReturnOrReopenCondition?
+PatternUseRecommendationSupportProfileValue = ordinaryCompact | relianceBearing
+
+PatternUseRecommendation@Context <: U.Episteme:
+  boundedContextRef: U.BoundedContextRef
+  entityOfConcernRef: U.EntityRef, referencing the selected CandidatePatternUse@Context
+  entityOfConcernKindRef: U.KindRef
+  claimGraph: U.ClaimGraph by value
+  referenceSchemeRef: U.ReferenceSchemeRef
+  editionId
+  recommendationSupportProfile: PatternUseRecommendationSupportProfileValue
+  applicabilityResult: PatternUseApplicabilityResultValue
+  compactApplicabilityAndSelectionRationaleRef: U.EpistemeRef, referencing one CandidatePatternUseRationale@Context
+  applicabilityFindingRef?: U.EpistemeRef, referencing one PatternUseApplicabilityFinding@Context
+  expectedResultExpectationRef: U.EpistemeRef, referencing one PatternUseResultExpectation@Context
+  strongerNeighborPatternRef?: U.EntityRef, referencing one U.MethodDescription
+  recommendationBoundaryRef: U.EpistemeRef, referencing one PatternUseBoundaryCondition@Context
 ```
 
-The sequence is not a work plan, route, workflow, lifecycle, or performed work. It is only a relation among pattern uses unless a neighboring pattern makes work planning, call planning, transformation-flow structure, gate decision, or performed work current.
+Recommendation selects one applicable candidate for the current concern because its expected result and receiving use are preferable under the stated rationale. In `ordinaryCompact`, the applicability result and compact rationale are carried directly and `applicabilityFindingRef` is absent. In `relianceBearing`, the same recommendation also cites one current applicability finding whose five fit findings can be replayed independently. The profile changes support cardinality, not the recommendation kind or authority. A recommendation does not authorize work, establish a gate, prove evidence sufficiency, or create the expected result.
 
-#### E.11.PUR:4.3 - Boundary Table
+When a stronger neighboring pattern better addresses the current question, name it and use the recommendation boundary to return. Familiarity with the current candidate is not a recommendation basis.
 
-| Current claim | Use |
-| --- | --- |
-| Which FPF pattern use is recommended now? | `PatternUseRecommendation@Context`. |
-| Which several FPF pattern uses belong together for this concern? | `PatternUseSequence@Context`. |
-| Accepted problem-side record or cue is carried toward a next FPF value. | `E.18.1`. |
-| Work is intended, scheduled, or prepared. | `A.15.2`, `A.15.3`, or `A.15.5`. |
-| Work actually occurred. | `A.15.1`. |
-| A gate admits, degrades, blocks, or abstains. | `A.21`. |
-| An AI agent is planning tool calls. | `C.24`. |
-| Architecture candidate record is current. | `C.30` or the direct architecture child pattern. |
-| Language-state transition is current. | `A.16`. |
-| Publication expression makes the pattern use visible. | `E.8`, `E.11`, `E.17`, or the direct publication pattern. |
-
-### E.11.PUR:5 - Archetypal Grounding - Worked Slices
-
-#### E.11.PUR:5.1 - Architecture Entry
-
-Situation: a team says, "We need the next useful FPF move for our reactor-cooling architecture problem."
-
-Use `PatternUseRecommendation@Context`:
+#### E.11.PUR:4.3 - Coordination without forced order
 
 ```text
-ProjectConcernRef: reactor-cooling architecture uncertainty
-BoundedContextRef: concept review before module selection
-CandidatePatternUseSet: C.30, C.30.ASV, C.29, A.21
-ApplicablePatternUseSet: C.30 and C.30.ASV are applicable
-RecommendedPatternUse: C.30 first, then C.30.ASV if selected structure is still unclear
-ReasonForRecommendation: the question is about architecture and selected structures before a gate or work plan is current
-OutputRefOrOutputShape: ArchitectureQuestionCard@Project
-BlockedStrongerUse: no gate passage, no work authorization, no performed work
-NextGoverningPatternRef: C.30
+PatternUseOrderingModeValue = unordered | partialOrder | totalOrder
+
+PatternUseCoordinationRationale@Context <: U.Episteme:
+  entityOfConcernRef: U.EntityRef, referencing the coordination-question episteme
+  claimGraph: U.ClaimGraph by value
+  referenceSchemeRef: U.ReferenceSchemeRef
+  editionId
+  subjectCandidatePatternUseRefs[2..*]: U.EpistemeRef, each referencing one CandidatePatternUse@Context
+  coordinationRationaleDescriptionRef: U.EpistemeRef
+  rationaleBasisEpistemeRefs[]: U.EpistemeRef
+  coordinationBoundaryRef: U.EpistemeRef, referencing one PatternUseBoundaryCondition@Context
+
+PatternUseCoordination@Context <: U.Episteme:
+  boundedContextRef: U.BoundedContextRef
+  entityOfConcernRef: U.EntityRef, referencing the coordination-question episteme
+  entityOfConcernKindRef: U.KindRef
+  claimGraph: U.ClaimGraph by value
+  referenceSchemeRef: U.ReferenceSchemeRef
+  editionId
+  memberCandidatePatternUseRefs[2..*]: U.EpistemeRef, each referencing one CandidatePatternUse@Context
+  orderingMode: PatternUseOrderingModeValue
+  orderingRelationRefs[]?: U.EntityRef, each referencing one PatternUseOrderingRelation@Context
+  coordinationRationaleRef: U.EpistemeRef, referencing one PatternUseCoordinationRationale@Context
+  stopBoundaryRef: U.EpistemeRef, referencing one PatternUseBoundaryCondition@Context
 ```
 
-The ordinary sentence may still say "first useful move", but the FPF record names recommended pattern use.
+`unordered` has no ordering relations. `partialOrder` and `totalOrder` use explicit pairwise relations. A total order is the bounded `PatternUseSequence@Context` specialization under its named receiving use; it is not a universal route or project WorkPlan.
 
-#### E.11.PUR:5.2 - Agent Repair
+#### E.11.PUR:4.4 - Pairwise precedence
 
-Situation: an assisting agent notices vague "process" wording in a technical standard and asks what to do next.
+```text
+PatternUsePrecedenceBasisValue =
+  prerequisiteResult | methodPrecondition | sharedConstraintResolution
 
-Use `PatternUseRecommendation@Context` when the current question is which FPF pattern to apply. Recommend `E.10` first. If `E.10` recovers transformation-situation wording, use `A.3.4.P`. If it recovers work-entry readiness wording, use `E.10.MOVE` and possibly `A.15.5`. If the agent plans tool calls, use `C.24` for the call plan.
+PatternUseOrderingRelation@Context <: U.Relation:
+  coordinationRef: U.EpistemeRef, referencing one PatternUseCoordination@Context
+  prerequisiteCandidatePatternUseRef: U.EpistemeRef, referencing one CandidatePatternUse@Context
+  dependentCandidatePatternUseRef: U.EpistemeRef, referencing one CandidatePatternUse@Context
+  precedenceBasis: PatternUsePrecedenceBasisValue
+  precedenceBasisResultExpectationRef?: U.EpistemeRef, referencing one PatternUseResultExpectation@Context
+  precedenceConditionRef: U.EpistemeRef, referencing one PatternUseBoundaryCondition@Context
+  orderingRationaleRef: U.EpistemeRef, referencing one PatternUseCoordinationRationale@Context
+  RelationRefKind: U.EntityRef
+  Direction: prerequisiteCandidatePatternUseRef -> dependentCandidatePatternUseRef
+  Dependence: bounded-context local to coordinationRef and both candidate editions
+  Identity: <coordinationRef, prerequisiteCandidatePatternUseRef, dependentCandidatePatternUseRef, precedenceBasis, precedenceConditionRef>
+```
 
-#### E.11.PUR:5.3 - P2W Boundary
+The prerequisite and dependent candidates are different members of the same coordination relation. When `precedenceBasis=prerequisiteResult`, `precedenceBasisResultExpectationRef` is present and equals the prerequisite candidate's exact result expectation. The ordering relation never copies result kind or relation-signature slots. For `methodPrecondition` and `sharedConstraintResolution`, the result-expectation position is absent.
 
-Situation: a problem card has an accepted problem-side record or cue and the team asks for the next useful FPF use.
+The dependent candidate use is admitted under a precedence relation only after its precedence basis is established. Page order, seminar order, identifier order, or visual adjacency does not create that relation.
 
-Use `E.18.1` for the carry-through relation. `E.18.1` may cite `PatternUseRecommendation@Context` when the next recovered value is a recommended FPF pattern use. P2W remains the relation from accepted problem-side record or cue to the next governed value; `E.11.PUR` does not replace it.
+#### E.11.PUR:4.5 - Practical procedure
 
-#### E.11.PUR:5.4 - Proxy Failure
+1. Recover each candidate's current concern, direct pattern, Solution, expectation, and ordinary boundary.
+2. Choose `ordinaryCompact` unless a named receiving use needs the fit aspects to remain independently addressable; use `relianceBearing` only for that reliance.
+3. Inspect all five fit aspects. In ordinary use, keep them in one compact rationale. Under named reliance, materialize five separate findings and one applicability finding.
+4. State the aggregate applicability result directly in the recommendation; when a reliance-bearing applicability finding exists, the two result values agree.
+5. Recommend an applicable candidate only when its result and receiving use answer the current concern better than the live alternatives.
+6. Coordinate several candidates as unordered, partially ordered, or totally ordered. Add a pairwise relation only when one declared precedence basis is current.
+7. Stop at the recommendation or coordination result. Continue to PUA, P2W, planning, gate, decision, or work only when that next claim becomes current.
 
-Situation: a team keeps recommending `C.30` because it is the familiar architecture pattern, even when the current concern is a work-entry readiness question before a test run.
+#### E.11.PUR:4.6 - Replay and currentness
 
-Do not treat the familiar pattern id as the value. Fill `PatternUseRecommendation@Context` against the current concern and expected practical result. If the needed result is a readiness disposition, recommend `A.15.5`; if the needed result is an architecture question, recommend `C.30`. The visible proxy, "we used the architecture pattern again", gets worse when it hides missing kit, commitment, or launch-gate relations.
+Replay an ordinary compact recommendation from its candidate, applicability result, compact rationale over all five aspects, current live alternatives, expected result and receiving use, and recommendation boundary. Replay a reliance-bearing recommendation from those same positions plus the current applicability finding and its five fit findings. Replay coordination from its members, question, ordering mode, pairwise relations, precedence bases, and stop boundary.
+
+Recheck the smallest affected finding or relation when a candidate `Solution`, result expectation, fit basis, live alternative, receiving use, coordination member, precedence basis, or boundary changes. A changed candidate fit reopens its applicability and any recommendation that relied on it. A changed prerequisite expectation reopens only the affected ordering relations and their dependent uses unless the coordination question or membership also changed. `G.11` governs edition, telemetry, currentness-window, and decay orchestration; PUR supplies the judgement-specific values and change conditions.
+
+### E.11.PUR:5 - Archetypal Grounding
+
+#### E.11.PUR:5.1 - Applicable but not recommended
+
+A team considering a high-cost pump test has candidate uses of `C.28` causal triage and `A.21` gate discipline. Both may be applicable. The immediate uncertainty is whether a causal model output may support intervention, so `C.28` offers the more useful first result.
+
+Recommend `C.28` without claiming that the test is authorized. The later gate use remains a separate candidate whose applicability can be reconsidered after the causal-use result exists.
+
+Because this local recommendation is reversible and no later use relies on five separate findings, the team records `recommendationSupportProfile=ordinaryCompact`, the applicability result, and one compact rationale over all five aspects. If a later gate review needs to replay each aspect independently, that review may create current fit findings and a current applicability finding from the then-current basis. It does not claim that those addressable findings existed when the earlier compact recommendation was made; the original compact rationale remains its historical basis.
+
+#### E.11.PUR:5.2 - Unordered complementary uses
+
+A clinical team needs both a terminology repair and an evidence-basis review before revising a protocol. Neither result is a prerequisite for the other in the current context.
+
+Use one coordination relation with `orderingMode=unordered`. The team may perform the uses in either order or in parallel. Their coexistence does not create a lifecycle or WorkPlan.
+
+#### E.11.PUR:5.3 - Result-based precedence
+
+A design team's architecture-candidate comparison begins only after its evaluation coordinates are defined. One candidate use of `A.19.ECS` expects an `EvaluationCharacteristicSpaceSpec`; the dependent comparison use consumes that exact result.
+
+Use `precedenceBasis=prerequisiteResult` and point to the ECS candidate's existing expectation. Do not copy `EvaluationCharacteristicSpaceSpec` and its signature into new ordering fields. After the result is grounded, the dependent use can begin under its own Solution.
+
+#### E.11.PUR:5.4 - Method precondition is not a result dependency
+
+A machining pattern assumes an admitted material-kind classification. The classification is a method precondition already current in the bounded context, not the result of another candidate pattern use.
+
+If coordination is still useful, use `methodPrecondition` and leave the result-expectation position absent. Do not invent a prerequisite result merely to make the relation look uniform.
+
+#### E.11.PUR:5.5 - Repair a stale copied prerequisite locally
+
+An older architecture coordination copied `EvaluationCharacteristicSpaceSpec` and its signature into an ordering record. The ECS candidate's current expectation later changed, leaving the copy stale while both candidates, their applicability findings, the coordination question, and `partialOrder` mode remained sound.
+
+Repair only the ordering relation: remove the copied result description, set `precedenceBasis=prerequisiteResult`, and reference the ECS candidate's current expectation. The dependent use returns until that expected result is grounded. Candidate inspection, applicability, coordination membership, and direct Solutions do not restart.
+
+#### E.11.PUR:5.6 - A higher recommendation score can reduce useful fit
+
+An assistant ranks candidate pattern uses by historical recommendation acceptance. The familiar `A.21` gate candidate receives a higher score and is recommended first more often for causal-use uncertainty. Recommendation acceptance rises, but wrong-turn returns also rise because the needed `C.28` causal-use result is still absent.
+
+The score improved while first-result fit and receiving-use value worsened. Keep the historical score as telemetry, apply `E.13` to the substitution, and base recommendation on current applicability, expected result, receiving use, and live alternatives. A higher score is not another fit finding.
 
 ### E.11.PUR:6 - Bias-Annotation
 
-- **Move-kind bias.** Ordinary speech such as "first useful move" can become a false root kind. Keep the plain phrase only when the durable FPF value remains `PatternUseRecommendation@Context`, `PatternUseSequence@Context`, or a direct neighboring governed value.
-- **Favorite-pattern proxy bias.** A familiar pattern id can substitute for the current project concern. Check the expected practical result and the blocked stronger use before recommending a pattern.
-- **Workflow overread bias.** Several pattern uses can be useful together without becoming a lifecycle, route, WorkPlan, or performed work.
+- **Applicability-as-recommendation bias.** A fitting pattern is automatically selected. Compare the expected practical result and live alternatives before recommending it.
+- **Favorite-pattern proxy bias.** Familiar PatternID substitutes for current value. State the concern, expected result, and receiving use in the rationale.
+- **Five-form bias.** Every ordinary use creates five findings. Keep them in one compact rationale unless their separate identity is relied on.
+- **Sequence bias.** Presentation order becomes precedence. Repair by naming the pairwise basis.
+- **Result-copy bias.** Prerequisite result kind is duplicated in ordering fields. Reuse the prerequisite candidate's exact expectation.
 
 ### E.11.PUR:7 - Conformance Checklist
 
-| ID | A conforming use... | Check |
+| ID | Check | Passing condition |
 | --- | --- | --- |
-| `CC-E11PUR-1` | names the project concern before recommending a pattern use. | The concern is not replaced by a pattern id alone. |
-| `CC-E11PUR-2` | separates applicability from recommendation. | `ApplicabilityFinding` and `RecommendedPatternUse` are both recoverable when both claims are made. |
-| `CC-E11PUR-3` | blocks stronger uses. | Work, plan, gate, decision, source-relation, publication, architecture, and transformation overreads are named only when their governing pattern is current. |
-| `CC-E11PUR-4` | preserves the remaining reader use. | The result says what the practitioner can inspect, write, decide, or apply next. |
-| `CC-E11PUR-5` | uses `PatternUseSequence@Context` only for pattern-use relations. | The sequence is not a work plan, workflow, lifecycle, or performed work. |
-| `CC-E11PUR-6` | keeps didactic move language plain. | "First useful move" can remain in teaching prose, but durable FPF text names the recovered relation. |
-
-#### E.11.PUR:7.1 - Lowering and Reopen Conditions
-
-Lower, reject, or reopen the recommendation when the project concern changes, a candidate pattern becomes inapplicable, the expected output shape no longer answers the concern, a stronger neighboring claim becomes current, a proxy pattern id is being optimized instead of practical gain, or the first applied result shows that the recommended pattern use did not produce the promised inspection, decision input, or work-preparation value.
+| `PUR-1` | Candidate basis | Every evaluated candidate has an inspected Solution and exact result expectation. |
+| `PUR-2` | Five aspects | Reliance-bearing applicability has exactly one finding for each fit criterion. |
+| `PUR-3` | Aggregate | Every recommendation states an applicability result after all five aspects are considered. When a reliance-bearing applicability finding exists, its result agrees with the recommendation and carries a missing-basis boundary when needed. |
+| `PUR-4` | Recommendation | Recommended candidate is applicable and its result answers the current concern under a compact explicit rationale. `ordinaryCompact` has no applicability-finding ref; `relianceBearing` has one current finding with five addressable fit findings. |
+| `PUR-5` | Coordination | All members concern the same bounded coordination question and have distinct candidate identities. |
+| `PUR-6` | Ordering mode | Unordered has no pairwise relations; partial and total order contain only justified pairwise relations. |
+| `PUR-7` | Exact precedence | `prerequisiteResult` reuses the prerequisite candidate's expectation; other basis values leave that position absent. |
+| `PUR-8` | Boundary | Recommendation or coordination does not assert plan, work, gate, decision, authorization, or subject result. |
 
 ### E.11.PUR:8 - Common Anti-Patterns and How to Avoid Them
 
-| Anti-pattern | Why it fails | Better use |
+| Misuse | Why it fails | Repair |
 | --- | --- | --- |
-| Move as kind | A useful phrase becomes a false `U.Move`. | Recover recommended pattern use, work, plan, gate, source relation, publication, architecture, or transformation. |
-| Applicability as recommendation | Every applicable pattern appears equally selected. | State why this pattern use is recommended for the current concern. |
-| Pattern phrase as work plan | A pattern-use sequence is treated as intended or performed project work. | Use `A.15.2` for work planning and `A.15.1` for performed work. |
-| Pattern recommendation as authorization | A pattern recommendation is read as gate passage, evidence sufficiency, source-relation sufficiency, assurance, or work authorization. | Use `A.21` for gate passage, `A.10` for evidence or source relation, `B.3` for assurance, `A.15.4` for appearance-based reliance repair, and the direct governing pattern for authorization or work planning when those claims are current. |
+| Recommend before aggregating fit | A partial match is overread as selection. | Resolve all five aspects or return `insufficientBasis`. |
+| Rank every candidate | A scalar order hides complements and incomparable results. | Use unordered or partial coordination when that matches the current relation. |
+| Use sequence as WorkPlan | Pattern-use relations acquire dates, resources, and work authority they do not own. | Create an A.15.2 WorkPlan only when intended work is current. |
+| Copy the prerequisite result | Duplicated kind and signature can drift from the candidate expectation. | Reference the exact expectation. |
+| Treat recommendation as authorization | Guidance bypasses evidence, gate, commitment, or work governance. | Continue to the direct governing pattern for the stronger claim. |
 
 ### E.11.PUR:9 - Consequences
 
-Benefits:
+**Benefits.** A team can explain why a pattern fits, why it is recommended, and how several uses relate without creating a false workflow. Reliance-bearing decisions remain replayable. Result-based precedence stays synchronized with the candidate expectation.
 
-- FPF can keep friendly "what is the next useful move?" language without minting a root `Move`.
-- The first-entry and seminar-facing pattern-language metaphor becomes useful but bounded.
-- P2W, work planning, performed work, gates, architecture, source-relation, and publication claims keep their governing patterns.
-
-Costs:
-
-- Users must name the current concern and expected output shape rather than only naming a favorite pattern.
-- A pattern-use sequence needs one line per governed use when several patterns are composed.
+**Costs.** Consequential recommendations need explicit rationales and sometimes five addressable findings. Partial orders need pairwise relations. Ranking candidates that solve different questions produces an inadmissible comparison rather than a useful shortcut.
 
 ### E.11.PUR:10 - Rationale
 
-The practical question "what should I do next with FPF?" is real. It deserves a stable relation because it recurs in first-entry use, seminar teaching, AI assistance, and multi-pattern composition. The relation is not a new kind of project object. It is a pattern-use recommendation relation that points to the pattern likely to produce the next useful result.
+Applicability, recommendation, and coordination answer different questions. Applicability asks whether a candidate's conditions hold. Recommendation asks which applicable use best serves the current concern. Coordination asks how several candidate uses belong together. Keeping the questions separate prevents a familiar label or score from becoming an unexamined decision.
 
-This keeps FPF action-guiding: users can still ask for a first useful move, while FPF can answer with a precise pattern use and then use the pattern that governs work, gates, architecture, source relation, publication, or transformation.
+Pairwise precedence is intentionally narrow. A graph of pattern uses can be unordered, partially ordered, or totally ordered. Only a current dependency justifies an edge, and only a prerequisite result justifies a result-expectation reference. This preserves graph structure without turning every explanation into a chain.
 
 ### E.11.PUR:11 - SoTA-Echoing
 
-| Source family | Use in this pattern | Local adoption |
+| Source or practice line | Problem-solving move taken here | Adoption and boundary |
 | --- | --- | --- |
-| Pattern-language practice for problem-situation recognition and pattern composition | Supports the "patterns as words, phrases as composed uses" teaching line. | Adopt the metaphor only as didactic guidance; precise FPF text still names pattern-use relations and direct governing patterns. |
-| Current recommender-system and human-centered XAI practice | Separates candidate generation, applicability or ranking, recommendation, explanation, user control, and bias or proxy checks. | Adapt the separation without importing an IT recommender ontology: `CandidatePatternUseSet`, `ApplicablePatternUseSet`, `RecommendedPatternUse`, `ReasonForRecommendation`, expected practical gain, and proxy-failure checks make pattern recommendation reviewable by a practitioner. |
-| Human-centered guidance for task-suitable labels and first-use recognition | Supports keeping engineer-facing phrases such as "first useful move" when they help recognition. | Adapt by requiring the durable FPF relation name to remain recoverable after the friendly label. |
-| Current FPF `E.11`, `E.8`, and `E.10` governance | Governs entry publication, pattern-local recognition, and wording restoration. | Reuse existing first-entry and authoring law; this child pattern supplies only the pattern-use recommendation relation. |
+| Que et al., *LLM-as-a-Judge for Reliable and Explainable Offline Evaluation in Top-K Recommendation*, KDD 2026, arXiv:2606.22961 | Observed feedback and Top-K scores can be biased proxies; pair a judgement with explicit rationale rather than treating the score as self-explanatory. | Adapt the proxy warning and rationale pressure to current candidate fit and expected-result reasoning. Reject the recommender, Top-K, user-profile, and LLM-judge ontology as a model of FPF recommendation authority. |
+| Nunes and Jannach, *A Systematic Review and Taxonomy of Explanations in Decision Support and Recommender Systems*, User Modeling and User-Adapted Interaction 27 (2017) | Lineage for separating recommendation explanation functions and making reasons addressable to a receiving decision. | Retain as lineage, not current-best evidence. Candidate and coordination rationales do not prove applicability or authorize action. |
+| Jin, Bai, and Oulasvirta, *Modeling Trial-and-Error Navigation With a Sequential Decision Model of Information Scent*, arXiv:2603.11759 (2026) | Preserve bounded search, wrong-turn recovery, and reconsideration under limited attention. | Adapt to candidate reconsideration and return boundaries. The preprint does not decide recommendation authority or record cardinality. |
+| Current FPF NQD and OEE lines together with A.19 comparison practice | Preserve plural candidates, non-dominated alternatives, explicit comparison spaces, and dynamic reconsideration. | Adopt the plurality discipline. PUR coordinates pattern uses but does not replace subject-domain candidate evaluation. |
+
+The practical implication is to recommend a use for its expected result, not for its familiarity or score, and to add order only where a real dependency exists.
+
+Que et al. is the current decision-bearing recommender source in this narrow use; Nunes and Jannach supplies lineage. The 2026 navigation preprint supplies bounded reconsideration, while current FPF NQD, OEE, and A.19 supply the transdisciplinary candidate and comparison basis. These sources change `4.1-4.5` and `5.6`; none decides FPF kinds or recommendation authority.
+
+Reopen the score-proxy adaptation when stronger evaluation evidence shows that the relied-on score tracks current expected-result and receiving-use fit without the identified exposure or rationale loss. Reopen the wrong-turn adaptation when peer review, replication, or use evidence changes the value of reconsideration. `G.11` orchestrates source and telemetry currentness; PUR changes the affected fit, rationale, recommendation, or return relation.
 
 ### E.11.PUR:12 - Relations
 
-- **Builds on:** `E.11`, `E.8`, `E.10`, `E.10.ARCH`, `E.18.1`, and `E.24`.
-- **Coordinates with:** `A.15`, `A.15.1`, `A.15.2`, `A.15.3`, `A.15.5`, `A.16`, `A.21`, `C.24`, `C.30`, `C.30.AD`, and `E.17`.
-- **Selected by:** `E.10.MOVE` when move wording recovers recommended pattern use rather than work, plan, gate, transformation, publication, architecture, or source use.
+- **Builds on:** `E.11.PUA` for candidate uses, expectations, rationales, and boundaries; `A.6.5` for slot discipline; and `E.18` for coupled-flow relations when results cross flows.
+- **Coordinates with:** `E.11` for public discovery, `A.19` and `A.19.ECS` for subject comparison, `E.18.1` for P2W, `G.11` for currentness orchestration, and the direct pattern governing any plan, work, gate, evidence, decision, or authorization claim.
+- **Leads to:** `E.11.PUA` for applying the recommended pattern, or to the exact neighboring pattern when the recommendation makes a stronger subject claim current.
 
 ### E.11.PUR:End

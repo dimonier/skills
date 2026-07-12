@@ -1,24 +1,21 @@
 ---
 id: E.11
-title: "First-Practical Entry and Pattern-Use Discoverability Discipline"
+title: "Practical-Use Guidance and Pattern Discovery"
 status: Stable
 keywords: []
 dependencies:
   builds_on:
     - E.8
-    - E.19
-    - E.21
+    - E.17.AUD
+    - F.17
     - F.18
   coordinates_with:
-    - I.2
-    - E.10
-    - E.10.ARCH
-    - E.10.MOVE
-    - E.11.PUR
-    - F.19
+    - A.22.CGUS
+    - E.18
+    - G.11
 ---
 
-# E.11: First-Practical Entry and Pattern-Use Discoverability Discipline
+# E.11: Practical-Use Guidance and Pattern Discovery
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,447 +23,368 @@ dependencies:
 
 ---
 
-## E.11 - First-Practical Entry and Pattern-Use Discoverability Discipline
+## E.11 - Practical-Use Guidance and Pattern Discovery
 
 > **Type:** Pattern-language governance pattern (E)
 > **Status:** Stable
-> **Normativity:** Normative for FPF entry, projection, and discoverability publication units.
+> **Normativity:** Normative for public FPF practical-use guidance, bounded card comparison, and reliance-conditioned comparison records.
 
-**At a glance.** `E.11` governs how FPF helps a working practitioner find the first useful pattern family without turning entry material into a shadow table of contents, universal method sequence, conformance authority, or second pattern body. The public first-entry publication unit is the FPF `readme` section: it starts from ordinary project needs and first useful results. The `Preface` explains the cross-cutting ideas behind those entries in plain engineering language before it relies on FPF terms. Local pattern `Problem frame` sections carry the high-precision recognition role. Separate duplicate first-entry indexes are not maintained when they repeat the `readme` scenario set.
+### E.11:1 - Problem frame
 
-**Use this when.** Use this pattern when a first-entry publication unit, table-of-content cue, `readme` section, Preface text, retrieval card, lexical query row, or pattern-local recognition text could change which FPF pattern family a user should inspect and apply first.
+#### E.11:1.1 - Use this when
 
-**First output.** A discoverability arrangement that names the public first-entry scenario, the first admissible governing pattern or small candidate pattern set, the local wrong-pattern boundary, and the publication unit that carries each piece.
+Use `E.11` when a practitioner, manager, or assisting agent has a recognizable working situation but does not yet know which FPF pattern to inspect first.
 
-**Primary EntityOfConcern.** One entry or discoverability publication unit in FPF: `readme` first-entry scenario text, Preface principle explanation, ToC query row, expanded entry-disambiguation case, retrieval cue, or pattern-local Problem-frame recognition text.
+Public guidance answers three questions quickly: "Is this my situation? What useful result could I obtain first? Which direct pattern should I open?" A public example remains a template; it is not a project instance, applicability finding, recommendation, plan, decision, or work occurrence.
 
-**What this buys.** A practitioner can start from a real project question instead of from FPF's internal topology, while FPF keeps pattern authority in the governing pattern body and avoids a duplicate navigation canon.
+**Primary EntityOfConcern.** One context-free public practical-use guidance episteme and its expansion, published through an E.17-conforming public card unit.
 
-### E.11:1 - Problem Frame
+**Conditional support object.** A `PracticalUseCardShortlist@Context` is current only when a named receiving use relies on addressable comparison history. It records that bounded comparison; it is not a second public guidance form or the primary `EntityOfConcern`.
 
-FPF has many patterns. New users do not usually arrive saying "I need A.15" or "I need C.30.AD." They arrive with project questions:
+**What this buys.** A cold reader can move from an ordinary project question to one or a few inspectable direct patterns. A wrong first choice remains recoverable, while ordinary comparison stays conversational.
 
-- "I need to design or review architecture."
-- "I need to write a regulation, method, boundary, contract, API, or work-process document."
-- "I need to compare options without jumping to one favorite."
-- "I need to turn a vague situation into a problem."
-- "I need to say what better means before improving."
-- "I need to know what evidence or assurance is missing."
-- "I need to keep a temporal, freshness, rate, or action-window claim honest."
-- "I need to use causal claims, model outputs, interventions, or responsibility claims safely."
-- "I need to publish, compare, or rely on descriptions, views, dashboards, or explanations of the same entity."
-- "I need better names for project entities."
-- "I need to repair a technical text."
-- "I need to know whether mathematics would help."
-- "I need the field of current options or state of the art."
-
-Those project questions need public first-entry scenarios. They should not be forced through a compact internal index before the user has recognized what FPF can do.
-
-At the same time, first-entry text is dangerous when it becomes too powerful. A `readme` blurb, table row, search cue, or example can start acting as if it defines the pattern, prescribes a universal method sequence, or grants authority that belongs only in the governing pattern.
+**Not this pattern when.** Use `E.11.PUA` after one direct pattern has been selected and its application to obtain the first result is current. Use `E.11.PUR` when local applicability, recommendation, coordination, or ordering among candidate pattern uses is current. Use the direct subject pattern for the actual result, plan, work, evidence, decision, or publication claim.
 
 ### E.11:2 - Problem
 
-Entry material fails in three recurring ways.
+Pattern libraries are difficult to enter from a working situation. A reader may see a long table of contents, search by a familiar word, or choose the first appealing pattern title. That choice can be premature because nearby cards may lead to different first results and different stop conditions.
 
-First, it becomes too internal. It starts with FPF diagnoses such as "roles and methods are mixed" even though a working practitioner only knows that they need an architecture review, a regulation, a decision, or a better name.
-
-Second, it becomes a duplicate corpus. A separate first-entry index repeats `readme` scenarios, then each pattern repeats the same related-pattern fanout list, and soon FPF carries several slightly different entry arrangements.
-
-Third, it becomes too authoritative. A projection row, heading, card, or `readme` paragraph starts answering as if it were the pattern body. That is projection drift: a finding aid becomes a shadow source.
+Attempts to help can create a second problem. Public guidance becomes a numbered method, a shadow pattern body, or a form that asks the reader to fabricate project-local values before the direct pattern has been inspected. The discovery aid then competes with the patterns it should expose.
 
 ### E.11:3 - Forces
 
-| Force | Tension |
+| Force | Pressure on the solution |
 | --- | --- |
-| Project recognizability | The public entry must start from ordinary project questions, not from internal pattern topology. |
-| Technical precision | The entry must still make the first admissible governing pattern recoverable. |
-| Low burden | A newcomer should not need to fill forms or parse a compact index before seeing value. |
-| Plain credibility | A newcomer should see the project value and the idea behind it before seeing forms, pattern ids, or FPF internal vocabulary. |
-| No duplicate canon | `readme`, Preface, ToC, local pattern Problem frames, and expanded cases must not carry competing first-entry arrangements. |
-| No semio-bias | Wording and description repair must be visible, but FPF must not present itself mainly as a language-policing framework. |
-| Corpus evolution | New patterns may change first-entry scenarios, but entry material must update without copying whole pattern bodies into projections. |
+| Recognition | Public wording starts from situations engineers recognize, not internal pattern topology. |
+| Exactness | Every candidate points to a direct `Solution` and an exact first-result kind. |
+| No fictitious context | Public guidance has no reader-project identity and cannot contain `@Context` instances. |
+| Bounded search | Several cards can remain plausible, so comparison needs stop and return conditions rather than one perfect first guess. |
+| Light ordinary use | Card comparison should normally remain in conversation. |
+| Durable reliance | A named transfer, replay, audit, or automation use can rely on addressable comparison history. |
+| Didactic continuity | Every card needs a readable walkthrough, not only a list of PatternIDs. |
+| One source of guidance | README carries the public card set; Preface, ToC, retrieval, and pattern bodies answer different questions. |
 
-### E.11:3.1 - Practice Grounding
+### E.11:4 - Solution
 
-| Practice family | Rule impact in E.11 |
+Publish fifteen semantic practical-use cards. Each card starts from a recognizable situation and question, states a readable first result, points to direct candidate-use templates, and links to an expansion with boundaries and one walkthrough.
+
+The keys identify situations; they do not order them. A user may compare any finite set that remains plausible.
+
+#### E.11:4.1 - Public card and expansion
+
+```text
+PracticalUseGuidance@FPFReadme <: U.Episteme:
+  practicalUseKey: PracticalUseKeyValue
+  publicSituationDescriptionRef: U.Episteme
+  publicPracticalQuestionRef: PublicPracticalUseQuestion@FPFReadme
+  publicObstacleDescriptionRef?: PublicPatternUseObstacleDescription@FPFReadme
+  publicFirstResultSummaryRef: U.Episteme
+  cardExpansionRef: PracticalUseCardExpansion@FPFReadme
+
+PracticalUseCardExpansion@FPFReadme <: U.Episteme:
+  guidanceRef: PracticalUseGuidance@FPFReadme
+  candidateUseTemplateRefs[1..*]: PublicCandidatePatternUseTemplate@FPFReadme
+  publicStopBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicReturnBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicWrongTurnRecoveryBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicStrongerNeighborBoundaryRefs[]: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicCoarseningRows[]: PublicResultCoarseningRow@FPFReadme
+  demonstrativeSliceRef?: DemonstrativeUnfoldingSlice@Context
+  ordinaryWalkthroughRef?: PublicOrdinaryWalkthrough@FPFReadme
+
+PracticalUseCardPublicationUnit@FPFReadme:
+  conformsTo: E.17.AUD
+  publishes: PracticalUseGuidance@FPFReadme
+  linksTo: PracticalUseCardExpansion@FPFReadme
+```
+
+Exactly one walkthrough ref is present. Use `demonstrativeSliceRef` when the example passes A.22.CGUS admission in its own declared illustrative bounded context. It does not fill a reader-project position. Otherwise use an ordinary walkthrough with an explicit reason why the example is not a CGUS slice.
+
+#### E.11:4.1.1 - Cold-reader recognition and grounded public value
+
+Test every public card and expansion against a first-time engineer, engineer-manager, or assisting agent who has not studied FPF. The heading and first sentence name a recognizable working situation before PatternIDs, FPF kind names, or internal quality, projection, and conformance vocabulary. They then name a first useful result that the reader can imagine producing or requesting in the project. The expansion and direct pattern restore the exact result kind, relation, boundary, and stronger-use conditions; plain recognition is not licence to leave those values vague.
+
+A public benefit claim is grounded only when the card makes recoverable a concrete project need, a first useful result, one specific direct-pattern distinction that changes the next project action, and the direct pattern whose `Solution` governs obtaining that result. Otherwise the claim is marketing copy, even if it sounds plausible. These values may remain readable prose; this rule does not require the reader to fill a card or project record before opening the direct pattern.
+
+Keep the public set representative of FPF's practical range. Wording and description repair remain visible, but they do not dominate architecture, problem shaping, work, comparison, evidence, timing, causal use, mathematical modeling, quality, improvement, and framework authoring.
+
+#### E.11:4.2 - Public helper epistemes
+
+```text
+PublicPracticalUseQuestion@FPFReadme <: U.Episteme:
+  situationRef: U.Episteme
+  questionDescriptionRef: U.Episteme
+  likelyDirectResultDescriptionRef?: U.Episteme
+
+PublicPatternUseObstacleDescription@FPFReadme <: U.Episteme:
+  situationRef: U.Episteme
+  obstacleDescriptionRef: U.Episteme
+  obstacleEffectOnUseRef: U.Episteme
+
+PublicPatternUseResultTemplate@FPFReadme <: U.Episteme:
+  directResultKindRef: U.Kind
+  directResultRelationSignatureRef?: RelationSignature
+  resultDescriptionRef: U.Episteme
+  minimumUsableResultDescriptionRef: U.Episteme
+  receivingPatternRef: U.MethodDescription
+
+PublicPatternUseBoundaryConditionTemplate@FPFReadme <: U.Episteme:
+  boundaryConditionKind: recognizableCondition | stop | return | wrongTurnRecovery | strongerNeighbor
+  conditionDescriptionRef: U.Episteme
+  governingPatternRef: U.MethodDescription
+  conditionalReceivingPatternRef?: U.MethodDescription
+  conditionalReceivingPatternPositionDescriptionRef?: U.Episteme
+
+PublicResultCoarseningRow@FPFReadme:
+  readableResultPhraseRef: U.Episteme
+  exactResultKindRef: U.Kind
+  exactResultRelationSignatureRef?: RelationSignature
+  governingPatternRef: U.MethodDescription
+```
+
+A result relation signature is present exactly when its result kind admits a relation. `return`, `wrongTurnRecovery`, and `strongerNeighbor` boundaries name a receiving pattern and position description. `recognizableCondition` and `stop` leave those positions absent.
+
+The optional obstacle names a recognizable obstacle only when one matters. Practical use may begin from an object to inspect, a result to evaluate, or an existing method to improve without first inventing a problem.
+
+#### E.11:4.3 - Candidate-use templates and basis completeness
+
+```text
+PublicCandidatePatternUseTemplate@FPFReadme <: U.Episteme:
+  templateKey: PublicCandidateUseTemplateKeyValue
+  recognizableConditionRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  directPatternRef: U.MethodDescription
+  directSolutionSectionRef: PatternSolutionSectionRef
+  expectedResultTemplateRef: PublicPatternUseResultTemplate@FPFReadme
+  candidateBasisCompletenessConditionRefs[1..*]: CandidatePatternUseBasisCompletenessCondition@FPFReadme
+
+CandidatePatternUseBasisCompletenessCondition@FPFReadme <: U.Episteme:
+  candidateBasisPosition: boundedContext | entityOfConcern | entityOfConcernKind | practicalQuestion | optionalProblemCard | candidateSpecificBasis
+  admittedBasisValueKindRef: U.Kind
+  completenessConditionDescriptionRef: U.Episteme
+```
+
+`PatternSolutionSectionRef` is an edition-pinned reference to the cited pattern's `Solution`. A broad result family or pattern title is insufficient.
+
+The completeness condition inherits C.2.1 constitution. Its EntityOfConcern is the reusable candidate-basis position declared by the template; its ClaimGraph states the admitted filler kind and positive completeness condition; its ReferenceScheme explains how current project fillers satisfy that position. It contains no project value and orders nobody to fill a form.
+
+#### E.11:4.4 - Ordinary walkthrough
+
+```text
+PublicOrdinaryWalkthrough@FPFReadme <: U.Episteme:
+  guidanceRef: PracticalUseGuidance@FPFReadme
+  situationDescriptionRef: U.Episteme
+  firstResultTemplateRef: PublicPatternUseResultTemplate@FPFReadme
+  walkthroughRowRefs[2..*]: PublicOrdinaryWalkthroughRow@FPFReadme
+  fullPatternTransitionBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  cgusNonAdmissionRationaleRef: U.Episteme
+
+PublicOrdinaryWalkthroughRow@FPFReadme <: U.Episteme:
+  actionOrProposedUseDescriptionRef: U.Episteme
+  expectedResultTemplateRef: PublicPatternUseResultTemplate@FPFReadme
+  directPatternRef: U.MethodDescription
+  directSolutionSectionRef: PatternSolutionSectionRef
+  continuationConditionRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+```
+
+An ordinary walkthrough is still an explanation, not a project method, work order, or recommendation. It may contain a local pattern mantra: a short repeatable formulation that keeps that pattern's Solution in attention. It may be presented as a CGUS-demonstrative mantra only when A.22.CGUS admits the represented conditional continuations as a `DemonstrativeUnfoldingSlice@Context`.
+
+#### E.11:4.4.1 - Practical-use carry-through check
+
+Check every published card over its public values. This check evaluates whether the card can lead a reader to the direct pattern and an exact result; it does not create a project instance or an applicability verdict.
+
+```text
+PracticalUseCarryThroughCheck:
+  practicalUseKey: PracticalUseKeyValue
+  practicalUseGuidanceRef: PracticalUseGuidance@FPFReadme
+  publicSituationDescriptionRef: U.Episteme
+  publicPracticalQuestionRef: PublicPracticalUseQuestion@FPFReadme
+  publicObstacleDescriptionRef?: PublicPatternUseObstacleDescription@FPFReadme
+  candidateUseTemplateRefs[]: PublicCandidatePatternUseTemplate@FPFReadme
+  publicStopBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicReturnBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicWrongTurnRecoveryBoundaryRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicStrongerNeighborBoundaryRefs[]: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+  publicCoarseningRows[]: PublicResultCoarseningRow@FPFReadme
+  demonstrativeSliceRef?: DemonstrativeUnfoldingSlice@Context
+  ordinaryWalkthroughRef?: PublicOrdinaryWalkthrough@FPFReadme
+  walkthroughSelectionRationaleRef: U.Episteme
+  principalBlockedOverreadRef: PublicPatternUseBoundaryConditionTemplate@FPFReadme
+```
+
+Exactly one walkthrough reference is present. A demonstrative slice passes A.22.CGUS admission and identifies the included positions, C.33 structure-loss notes, alternatives or returns, direct patterns, and transition to the full pattern. An ordinary walkthrough carries its CGUS non-admission rationale. A local mantra inside it remains a compact reminder of the direct pattern's Solution; it does not acquire the Tech kind `DemonstrativeUnfoldingSlice@Context` merely because it is memorable or repeated.
+
+Each candidate-use template passes only when it names one direct pattern, that pattern's Solution, the exact result kind, the relation signature when the kind admits a relation, every candidate-basis completeness condition, and the pattern that can receive the result. Reject a public project instance, a broad family in place of the result, or a PatternID list without selection conditions. The principal blocked overread states the most consequential false project claim that a reader could otherwise infer from the card.
+
+#### E.11:4.5 - Fifteen stable practical-use keys
+
+
+| Key | Public situation heading |
 | --- | --- |
-| Information foraging and information scent | A first-entry cue must expose a recognizable working project question before it names internal FPF topology. Scenario heads therefore use architecture, comparison, timing, evidence, naming, mathematics, publication-use, or improvement questions, not only pattern ids. |
-| Technical-documentation front doors and front-matter practice | Public orientation belongs in the FPF `readme` section. The Preface explains principles, while the governing pattern body carries normative detail. |
-| Search and retrieval cue practice for technical corpora | ToC rows, lexical query rows, and retrieval cards are finding aids. They may help a user locate the governing pattern, but they do not define the claim or replace the pattern body. |
-| FPF projection-as-finding-aid discipline | A projection publication unit must name what it can and cannot decide. If the substantive claim changes, the governing pattern or a pattern for that claim must be used. |
+| `ARCHITECTURE` | Shape an architecture from a problem and competing characteristics |
+| `WORKING-DOCUMENTS` | Create a working document that another participant can use |
+| `OPTION-COMPARISON` | Compare options without hiding trade-offs |
+| `PROBLEM-SHAPING` | Turn a vague concern into an accepted problem-side record |
+| `IMPROVEMENT` | Improve a named object under an explicit evaluation |
+| `COSTLY-ACTION` | Prepare a costly or hard-to-reverse action |
+| `TIME` | Make a time-dependent claim usable |
+| `CAUSAL-USE` | Decide what a causal claim may support |
+| `DESCRIPTION-USE` | Use a description or view without confusing it with its subject |
+| `NAMING` | Name a governed value so people can recover its meaning |
+| `WORDING` | Repair wording that hides the object, relation, or claim kind |
+| `MATHEMATICAL-MODELING` | Choose and bound a mathematical lens |
+| `SOTA-PORTFOLIO` | Build a current state-of-the-art synthesis pack |
+| `DPF-AUTHORING` | Build a domain or local FPF-grounded framework |
+| `SYSTEM-IN-CONTEXT` | Delimit a system and its environment before architecture synthesis |
 
-### E.11:4 - Solution - Assign Each Entry Publication Unit One Job
+README owns the current public cards and their expansions. Preface explains why FPF's distinctions work together. ToC locates pattern families. Full patterns carry methods, conditions, costs, consequences, and exact result semantics. None is a second card store.
 
-Use this distribution.
+#### E.11:4.6 - Bounded comparison
 
-| Publication unit | Job | Not its job |
+When more than one card remains plausible, compare four things: recognizable-situation fit, difference among first results, direct pattern, and stop or return condition. Keep the comparison in conversation for ordinary bounded use. Open the most promising direct pattern before constructing a project candidate.
+
+The comparison rationale has one public guidance subject and exists before a project candidate is constructed:
+
+```text
+PracticalUseCardComparisonRationale@Context <: U.Episteme:
+  subjectGuidanceRef: PracticalUseGuidance@FPFReadme
+  recognitionReasonDescriptionRef: U.Episteme
+  firstResultDifferenceDescriptionRef: U.Episteme
+  comparisonRationaleDescriptionRef: U.Episteme
+```
+
+Stop inspection when one card has enough recognition and first-result advantage to justify direct pattern inspection, when no remaining card can change the starting choice, or when the inspection budget opens an explicit return. No fixed maximum of three is inferred.
+
+Materialize comparison history only when a named receiving use relies on it:
+
+```text
+PracticalUseCardShortlist@Context <: U.Episteme:
+  namedRelianceConditionRef: U.Episteme
+  receivingUseDescriptionRef: U.Episteme
+  receivingUseGoverningPatternRef: U.MethodDescription
+  boundedContextRef: U.BoundedContext
+  entityOfConcernRef: U.Entity
+  entityOfConcernKindRef: U.Kind
+  practicalUseQuestionRef: PracticalUseQuestion@Context
+  comparisonRefs[1..*]: PracticalUseCardComparison@Context
+  selectedStartingGuidanceRef?: PracticalUseGuidance@FPFReadme
+  inspectionStopBoundaryRef: PatternUseBoundaryCondition@Context
+  returnBoundaryRef: PatternUseBoundaryCondition@Context
+
+PracticalUseCardComparison@Context <: U.Episteme:
+  shortlistRef: PracticalUseCardShortlist@Context
+  guidanceRef: PracticalUseGuidance@FPFReadme
+  recognizableSituationFitRationaleRef: PracticalUseCardComparisonRationale@Context
+  firstResultTemplateRefs[1..*]: PublicPatternUseResultTemplate@FPFReadme
+  firstResultDifferenceRationaleRef: PracticalUseCardComparisonRationale@Context
+  inspectionDisposition: keep | defer | discard | startHere
+```
+
+Several plausible cards alone do not make this record current. The named reliance may be transfer, replay, audit, automation, or another use that needs addressable comparison history. Retain only the rows that use needs.
+
+#### E.11:4.7 - Replay and currentness
+
+Replay one public guidance claim from the current card and expansion, the edition-pinned direct `Solution`, the exact result kind and conditional relation signature, the readable coarsening row, the applicable boundary, and the selected walkthrough. The claim remains current only while the direct `Solution` still admits that result and the public situation and question still recognize the same use.
+
+Recheck the smallest affected card slice when the direct `Solution`, result kind, relation signature, recognition condition, first-result difference, or boundary changes, or when use evidence shows a recurrent wrong turn. `G.11` governs edition, telemetry, currentness-window, and decay orchestration; E.11 supplies the card-specific values and change conditions that orchestration inspects.
+
+### E.11:5 - Archetypal Grounding
+
+#### E.11:5.1 - Architecture or description?
+
+A team says, "Our diagram no longer explains the system." `ARCHITECTURE` and `DESCRIPTION-USE` both look plausible. The first card offers an architecture question and selected-structure result; the second offers a description-use or representation-transition result.
+
+The team compares the first-result difference, opens `C.30` and `E.17.0`, and discovers that the selected structure is unsettled. It starts with `ARCHITECTURE`. No shortlist record is needed because the comparison is local and reversible.
+
+#### E.11:5.2 - Transfer needs comparison history
+
+The receiving safety review relies on an addressable rationale for why two teams considered `TIME`, `COSTLY-ACTION`, `CAUSAL-USE`, and `SYSTEM-IN-CONTEXT` before a hazardous test, because it will replay the selection after new measurements arrive. The fourth card remains plausible while the test-object boundary, participation, or functioning relation is unsettled.
+
+That named reliance admits a `PracticalUseCardShortlist@Context` with four comparison rows, the stop boundary, and the return condition. The shortlist does not authorize the test or replace evidence, assurance, gate, choice, or WorkPlan relations.
+
+#### E.11:5.3 - A card leads to a physical result without promising it
+
+`WORKING-DOCUMENTS` can lead to a usable machining work instruction. The card's direct result is a method description or WorkPlan, not the machined component. The public expansion names the exact first result and points to A.15 for later work.
+
+The reader can therefore imagine useful progress without inferring that publication or planning performed the machining.
+
+#### E.11:5.4 - Repair the smallest card slice after a direct result changes
+
+Suppose a new `A.6.3.RT` edition makes `RepresentationSchemeTransitionRelation@Context` the exact first result for one `DESCRIPTION-USE` condition. Repair that candidate-use template, its exact result kind and conditional relation signature, its readable coarsening row, and any boundary whose condition changed. Recheck the linked walkthrough against the repaired result.
+
+The public card heading and question remain unchanged when readers still recognize the same situation. Preface and ToC remain unchanged when framework rationale and retrieval location did not move. The `A.6.3.RT` pattern body remains the authority for the relation; E.11 repairs only the public guidance that points to it.
+
+#### E.11:5.5 - A better first-click rate can make discovery worse
+
+Suppose retrieval ranks the most familiar title first and the first-click rate rises. Follow-up comparison shows that more readers now open `DESCRIPTION-USE` when the selected structure is still unsettled, so first-result mismatch and wrong-turn returns also rise.
+
+The visible navigation measure improved while the intended value worsened: readers reached a less suitable direct pattern more often. Keep first-click rate as telemetry, apply `E.13` to the substitution, and judge the guidance by recoverable situation fit, first-result fit, and wrong-turn cost rather than by the click measure alone.
+
+### E.11:6 - Bias-Annotation
+
+- **Title-match bias.** A familiar word selects a pattern before its Problem and first result are inspected. Compare situations and result differences, then open the direct pattern.
+- **Public-instance bias.** A README example is filled with project values. Keep public templates context-free; project candidates belong to `E.11.PUA`.
+- **Numbered-route bias.** Card order is read as method order. Use semantic keys and condition-specific continuations.
+- **Record-first bias.** Comparison emits a shortlist by default. Materialize one only for a named receiving reliance.
+- **Card-as-authority bias.** A public card is treated as applicability verdict, recommendation, decision, or authorization. Return to `E.11.PUR` or the direct subject pattern.
+
+### E.11:7 - Conformance Checklist
+
+| ID | Check | Passing condition |
 | --- | --- | --- |
-| FPF `readme` section | Public first-entry scenarios for working projects; plain explanation of what FPF is and where it helps first. | Pattern authority, conformance rules, full ToC, internal governance evidence, or duplicate pattern body. |
-| `Preface` | Plain-engineering narrative explaining why the first-entry scenarios are credible: transdisciplinarity, local closure, holons, EntityOfConcern and description, multi-view publication, architecture as structure, epiplexity, first-principles-to-work, mathematical modeling and FormalSubstrate distinctions, ontology-first repair, evidence and assurance boundaries, characteristic spaces, NQD/OEE, state of the art, didactic primacy, and FPF as a whole project with companion explanations and tools. | Repeating the scenario table, defining a second entry index, serving as conformance authority, or requiring prior FPF vocabulary before the idea is understandable. |
-| Table of Content | Search-oriented pattern overview: id, title, admission state, keywords, query phrases, dependencies. | Public first-entry explanation or durable pattern semantics. |
-| Pattern `Problem frame` | High-precision local recognition text for that pattern's own EntityOfConcern and first useful action. | A related-pattern fanout list, package-placement rationale, or first-entry index. |
-| `I.2` or other expanded cases | Longer entry-disambiguation cases only when compact first-entry scenarios and pattern Problem frames are insufficient. | Tutorial obligation for every pattern or replacement for pattern bodies. |
-| Retrieval cards or other projection material | Thin finding aids that point to the governing pattern body and say what they cannot decide. | Authority, evidence, gate, decision, or final pattern interpretation. |
-
-A separate first-entry index is not maintained when it repeats the `readme` scenario set. If one first-entry row has value not carried by the FPF `readme` section, ToC, a pattern Problem frame, or an expanded case, place that value in the appropriate publication unit instead of maintaining a duplicate index body.
-
-When the live question is no longer public discoverability but "which FPF pattern use is recommended now for this concrete concern?", use `E.11.PUR`. `E.11` governs where entry and discovery material lives; `E.11.PUR` governs the project-local relation between the concern, candidate pattern uses, the recommended pattern use, and the expected first result or result set. A `PatternUseSequence@Context` is not a universal sequence for all users; it is a bounded recommendation for one current concern.
-
-For FPF-grounded domain principle frameworks and local practice frameworks, the readme, preface, table of contents, card set, all-in-one publication carrier, skill pack, MCP-backed access service, retrieval entry, or assistant integration can be a first-entry and discoverability carrier. It should expose family membership, framework edition, dependency boundary, bounded use, and relation-entry cues already decided by `E.4`, `E.4.PFAD`, and `E.4.PFR`. `E.11` does not decide framework architecture, and a callable access service does not become the pattern body or authority source because a user or agent reaches the framework through it.
-
-### E.11:4.1 - readme First-Entry Scenario Rule
-
-The public first-entry scenario set starts from working project questions and stabilizing results.
-
-A conforming first-entry scenario has this shape:
-
-```text
-FirstEntryScenario:
-  projectQuestion:
-  practicalUse:
-  typicalFirstResults:
-  firstPatternFamily:
-  blockedOverreadOrBoundary:
-```
-
-The public scenario text may be prose rather than a visible form. It should still make those fields recoverable. `typicalFirstResults` may name one ordinary result for a simple entry case, but the schema does not require one input record to become one output record; a scenario may start from several accepted records, source packs, or current structures and expose several admissible first results or next uses.
-
-Good scenario heads name recognizable project work:
-
-- develop or review architecture;
-- write rules, methods, and work-process documents;
-- compare alternatives and make a local choice;
-- turn a vague situation into a usable problem statement;
-- define what "better" means and run improvement;
-- prepare a costly or hard-to-reverse action;
-- account for timing, freshness, rhythm, and action windows;
-- use causal explanations, interventions, responsibility, and model outputs for action;
-- compare descriptions, dashboards, explanations, and views of the same described object;
-- give project objects, relations, and claims better names;
-- clarify wording that drives work;
-- decide whether a mathematical model or formal declaration would help;
-- build a state-of-the-art or option portfolio;
-- build a domain or local FPF-grounded framework.
-
-Action-driving wording may be one scenario. It must not dominate the public first-entry set. FPF should not look like a commission for checking admissible technical speech when it is also a framework for architecture, problem shaping, work-method publication, comparison, evidence, mathematics, quality, and improvement.
-
-#### E.11:4.1a - Entry-Unfolding Seed Descriptions
-
-When a first-entry scenario needs to show how the first move continues without becoming a required workflow, write a compact `EntryUnfoldingSeedDescription@Readme` or make its fields recoverable in prose.
-
-```text
-EntryUnfoldingSeedDescription@Readme:
-  entryProblemPhrase:
-  firstGoverningPatternSet[]:
-  firstRecordToWrite:
-  likelyFamilyCueRefs[]?:
-  directGoverningPatternSet[]:
-  governingPatternMap?:
-  firstCandidateLoci[]:
-  blockedOverread:
-  governingPatternReturn:
-  nextReadableOutputs:
-```
-
-The seed is a public description episteme, not the project's unfolding structure. It says: "from this recognizable project question, the likely first governed record or small candidate record set is here, with these candidate loci, returns to governing patterns, and next readable outputs." It must not prescribe a universal FPF procedure or create a second navigation authority beside the pattern bodies.
-
-`likelyFamilyCueRefs[]?` may cite promoted core cue examples such as `UF.P2S`, `UF.IMP`, or `UF.REFRESH`, or a DPF or project-local cue when that package defines one. These cues are optional recognition aids. They are not membership in a maintained list, not conformance, not a promise that FPF core lists every local unfolding structure, and not the governing route for the entry. The authoritative route for an entry is `directGoverningPatternSet[]` plus `governingPatternMap?`.
-
-The compact seed's problem-side and starting fields are entry-level cues, not admitted CGUS slots by themselves. A fuller `ConstraintGovernedUnfoldingStructure@Context` may later cite admitted records through `acceptedStartingRecordRefs[]` and already-current structures through `acceptedStartingStructureRefs[]`. In E.11 they remain public-entry cues; acceptance and stronger use still belong to the direct governing pattern for the record or structure.
-
-The compact seed should be enough for most public readme entries. If it is not enough, open a fuller `FirstEntryUnfoldingExpansion@FPFReadme` under this E.11 custody rather than stuffing the README with record fields.
-
-```text
-FirstEntryUnfoldingExpansion@FPFReadme:
-  entryId:
-  publicScenarioHead:
-  declaredProblemSideRecordCues:
-  intendedPractitionerRoleRefs:
-  startingRecordOrStructureCues:
-  - startingKindOrCue:
-  startingReadiness:
-  contextGrounding:
-  likelyFamilyCueRefs[]?:
-  directGoverningPatternSet[]:
-  unfoldingLoci:
-  - locusName:
-  governingPatternRef:
-  expectedRecordOrResult:
-  governingPatternBoundary:
-  typicalFirstResults:
-  nextPossibleResults:
-  governingPatternMap:
-  claimOrRelationKind -> governingPatternRef
-  blockedOverreads:
-  returnOrReopenCondition:
-  patternFamilyRefs:
-  DRRRefs:
-  entryUnfoldingExplicitness:
-  remainingUnfoldingCarryThroughWork:
-```
-
-`FirstEntryUnfoldingExpansion@FPFReadme` is for entry disambiguation and didactic support. It may point to `DemonstrativeUnfoldingSlice@Context` records when a first-use example is needed, but it does not become a pattern body, a table of contents, or a mandatory public card.
-
-`likelyFamilyCueRefs[]?` in an expansion record uses the same optional recognition cues as the compact seed. If no promoted core or local cue helps the reader, leave the field empty and rely on `directGoverningPatternSet[]` and `governingPatternMap`. Do not add a core `UF.*` cue merely because a public README entry exists.
-
-#### E.11:4.1b - Current First-Practical Entry Seed Set
-
-`CurrentFirstPracticalEntrySeedSet@Readme` is the E.11 custody record for the current public first-practical entries in `host-readme`. It is not a second public front door and not a technical `UF.*` list. It preserves the entry set as a reviewable disambiguation table: if the README wording changes, this table is the place to check whether the first useful result, governing pattern map, blocked overread, and return condition still match.
-
-| Entry | First useful result or record | Main seed shape | Direct governing-pattern map | Blocked overread | Return or reopen condition |
-| --- | --- | --- | --- | --- | --- |
-| 1 Architecture | `ProblemToStructureArchitecturingFlowCard@Project` or first architecture question note | architecture-relevant pressure to candidate, selected, expected, or actual structures | `C.32.P2S`, `C.30`, `C.32`, `C.32.PAD`, `C.30.TFS-REL`, `C.33`, `C.34`, `C.35`, work and refresh patterns when current | diagram, view, ADR, score, or P2S card as architecture plus decision plus realization | Return when decision, description, work, eval, currentness, or actual-structure feedback becomes the current claim. |
-| 2 Rules, methods, work-process documents | working-document outline, method-description record, work-plan seed, readiness note, or call-plan record | governed object and document pressure to method, method description, interface, work, role, gate, permission, publication, or tool-use planning pattern | `A.6`, `A.15`, `A.15.1`, `A.15.2`, `A.15.3`, `A.15.4`, `E.18.1`, `C.24`, `E.8`, `E.19` | one document as method, plan, permission, evidence, gate, publication, and work at once | Return when a stronger work, gate, evidence, role, publication, or tool-use claim is made. |
-| 3 Compare alternatives | comparison frame, archive/front/pool, selected set, or local-choice record | candidate or option field to comparison and selection relation | `A.19`, `A.19.ECS`, `C.11`, `C.18`, `C.19`, `G.5` | selected set as scalar winner or ungoverned preference | Return when decision, publication, refresh, or local-choice authority is claimed. |
-| 4 Vague situation to problem | `ProblemCard@Context`, problem portfolio, cue set with candidate downstream governing-pattern alternatives, or abductive prompt | cue, anomaly, opportunity, or pressure to problem-side admitted record and downstream entry | `C.22.2`, `B.4.1`, `B.5.2`, `A.16.*`, downstream pattern named by the live claim | cue, prompt, or route-shaped publication form treated as an admitted problem record, downstream governing-pattern recommendation, method, work, architecture claim, evidence claim, or decision authority | Return when method, work, architecture, evidence, decision, or hypothesis/evidence status is claimed. |
-| 5 Better and improvement | evaluation frame, first evaluation result, or quality-improvement loop record | object version to evaluation, repair candidates, re-evaluation, and stop or continue decision | `E.22`, `E.23`, `C.16`, `C.25`, `E.21`, `E.9.DA`, `E.2.DA`, `A.22.CGUS` when unfolding structure is current | retry loop or all-5 target as improvement | Return when a source-currentness relation, release, gate, work, evidence, or decision claim leaves improvement governance. |
-| 6 Commitment-ready action | commitment-readiness note, smaller-experiment option, action-mode note, or work-or-architecture follow-up note | costly or hard-to-reverse action to action mode and direct governing-pattern exit | `A.10`, `B.3`, `A.20`, `A.21`, `C.11`, `C.28`, current work or architecture pattern | checklist or gate-looking path as work authorization | Return when the project can act on a named basis, narrow the claim, test cheaply, or must enter evidence, assurance, gate, decision, work, or architecture governance. |
-| 7 Timing and freshness | timing note, temporal claim, currentness window, freshness limit, action-window note, or refresh record | object whose timing matters to affected decision, work, publication, comparison, or refresh pattern | `C.27`, `G.11`, `A.10`, `A.20`, `A.21`, `C.11`, pattern governing the timed object | stale timing cue as current authority | Return when freshness, decay, telemetry, or timing changes the admissible use. |
-| 8 Causality and model outputs | causal-use, counterfactual-use, responsibility, model-output-use note, or smaller-study frame | causal explanation, intervention, responsibility, or generated output to next action and responsibility boundary | `C.28`, `A.10`, `B.3`, `A.20`, `A.21`, `C.11`, domain governing pattern | model output, causal story, or responsibility label as evidence or action authority | Return when study, work, decision, evidence, or stop condition becomes current. |
-| 9 Descriptions, dashboards, explanations, and views | description-use, view-use, narrative-rendering, correspondence, or representation-transition note | described EntityOfConcern to description, view, narrative, correspondence, publication, role concern, or transition relation | `E.17`, `E.17.0`, `E.17.EFP`, `A.6.2`, `A.6.3.NAR`, `A.6.3.RT`, `A.6.3.CSC`, `A.6.4`, `C.30.AD`, `C.30.TFS-REL`, `C.33`, `C.34`, `C.35` | description, dashboard, narrative, or view as the described object, evidence, decision, or work | Return when stronger evidence, architecture, decision, work, assurance, or publication-use claim is made. |
-| 10 Naming | name card or bounded naming decision | object, kind, relation, or use needing a better name to contexts, candidates, and publication boundary | `F.17`, `F.18`, `F.19`, `E.10`, `E.10.ARCH`, subject governing pattern | name change as kind change or work authorization | Return when bridge, UTS, publication, or subject-domain claim becomes current. |
-| 11 Action-driving wording | repaired paragraph, claim register row, term-sheet row, or use-boundary note | wording that may change action to recovered kind, relation, use, and changed text | `E.10`, `E.10.ARCH`, `F.18`, `F.19`, `A.6.P`, `C.2.P`, `B.3.5`, `C.13`, `C.3`, subject precision pattern | lexical replacement as ontology repair | Return when action, work, evidence, architecture, proof, or publication claim is stronger than wording repair. |
-| 12 Mathematical model or formal declaration | lens candidate, formal-substrate declaration, preserved/lost structure note, payoff note, or validation-limit note | project difficulty to candidate mathematical lens or formal substrate | `C.29`, `A.6.0`, `A.6.1`, `E.18.1`, `B.3.5`, `C.13`, `C.3`, `C.16`, `C.27`, architecture/domain pattern | mathematical prestige as evidence, architecture adequacy, or work authority | Return when validation, measurement, formal claim, downstream use, or P2W carry-through is current. |
-| 13 SoTA or option portfolio | current-front question, reference harvest, archive/front/pool, comparison, or publication record | scope and current-front question to options and refresh | `G.0`, `G.1`, `G.2`, `G.5`, `G.11`, `C.18`, `C.19`, `A.19`, `A.19.ECS` | reference list as current authority or selected set | Return when a source-currentness relation, reference-edition state, comparison, publication, or refresh condition changes. |
-| 14 Domain or local framework | PFAD, PFR, DPF seed, `G.2` source pack, quality-improvement path or loop record, publication or access carrier, or call plan | local context and domain references to framework authoring spine | `E.4`, `E.4.FPF`, `E.4.PFAD`, `E.4.DPF`, `E.4.DPF.DA`, `E.4.PFR`, `G.2`, `C.24`, `E.8`, `E.11`, `E.17`, `F.18`, `G.11` | all-in-one framework file or source pack as admitted framework | Return when framework architecture, relation record, source-currentness relation, publication, access carrier, or tool-use planning is current. |
-
-Use `EntryUnfoldingExplicitness` as an internal discoverability signal when reviewing a first-entry row:
-
-| Value | Meaning |
-| ---: | --- |
-| 0 | no recoverable unfolding structure; only a topic or slogan |
-| 1 | problem phrase plus pattern list |
-| 2 | first result or result set named but governing-pattern map missing |
-| 3 | unfolding family and governing-pattern map recoverable |
-| 4 | starting records or structures, next uses, unfolding loci, governing-pattern map, and return are recoverable |
-| 5 | worked slices, relation records, DRR carry-through, and refresh condition have been tested |
-
-The scale is not public bureaucracy. It helps decide whether the README line is enough, whether an E.11 expansion is needed, or whether the relevant pattern body must carry more of the solution structure.
-
-#### E.11:4.1.1 - First-Time Engineer Readability Rule
-
-Public first-entry text is tested against a first-time engineer, engineer-manager, or assisting agent who has not studied FPF.
-
-The title and first sentence must name a recognizable working problem before FPF taxonomy, pattern ids, internal kind names, quality or projection vocabulary, or conformance vocabulary appears. The first practical result must be something the reader could imagine producing or asking for in the project: an architecture question note, regulation outline, comparison note, problem card, quality-and-improvement note, commitment-readiness note, timing note, causal-use note, description-use note, naming card, repaired paragraph, modeling note, or option portfolio.
-
-FPF precision remains required. It is introduced after the plain recognition hook and stays recoverable through the pattern ids and later wording. If the same sentence cannot be translated into ordinary engineering Russian or ordinary engineering English without FPF slang, it is probably not public first-entry text yet.
-
-#### E.11:4.1.2 - Public Value Claim And Grounding Rule
-
-A first-entry scenario may state substantial project value, but that value claim must be grounded. The scenario is not bare marketing copy. It should let an unfamiliar practitioner or assisting agent recognize a project situation, imagine a first useful result, and see the substantive FPF mechanism behind that value claim.
-
-A conforming public first-entry scenario therefore:
-
-- starts from a concrete project need in ordinary engineering language;
-- names the first useful written result or decision aid before it names internal FPF apparatus;
-- names the first pattern family as the means, not as the headline;
-- shows at least one substantive distinction, object, comparison, or decision that FPF will make usable;
-- avoids cards, forms, pattern ids, quality vocabulary, projection vocabulary, and conformance vocabulary until the working use is already recognizable;
-- keeps wording repair and description repair visible but below half of the public scenario set, so FPF does not present itself mainly as speech policing.
-
-When a public first-entry scenario must mention boundary or checking terms such as `evidence`, `assurance`, `gate`, `validity`, `admissible`, `blockedOverread`, `permission`, or `compliance`, place them after the working use and the first useful result. They should act as addresses to governing patterns, not as the public reason to open FPF.
-
-The public first-entry set should read like "here are typical ways FPF can help a working project first", not like "here is the internal topology of FPF" and not like "here are slogans about better thinking."
-
-### E.11:4.2 - Preface Principle Rule
-
-The Preface explains why the `readme` scenarios are possible. It names cross-cutting ideas once, in narrative order, without copying the `readme` scenario table.
-
-The Preface is read by people and agents who may still be deciding whether FPF is worth the cost of opening the heavier pattern bodies. It therefore has a didactic job: show that the public first-entry value claims are not empty marketing and not a loose collection of tips. The Preface should make the reader see the underlying engineering ideas that allow FPF to help with architecture, problem shaping, evidence, comparison, naming, mathematical modeling, quality, and improvement.
-
-The Preface should cover at least:
-
-- transdisciplinary use without collapse of local meanings;
-- local closure inside an open world;
-- holons, systems, epistemes, and the fact that architecture applies wherever holons have structure;
-- EntityOfConcern and description, including description episteme, publication form, carrier, and multi-view publication separation;
-- thinking-through-writing through patterns, cards, records, views, and publication forms;
-- architecture as structure and epiplexity as an architecture characteristic;
-- first-principles-to-work through E.18 transformation-flow structure and E.18.1 P2W;
-- mathematical lenses, formal-substrate declarations, mechanism import, and first-principles carry-through as distinct claims;
-- ontology-first wording repair through `E.10`, `E.10.ARCH`, `F.18`, and `F.19`;
-- evidence, assurance, gate, decision, and work separation;
-- characteristic spaces, quality, NQD/OEE, and improvement loops;
-- novelty, diversity, and state of the art;
-- didactic primacy and plain explanation paired with technical fields.
-
-The Preface may narrate across many pattern families, and it may discuss FPF as a whole project, including companion explanations, worked cases, tools, and project-local adaptations when those help explain the Core Specification. This is not leakage from one pattern into another. A Preface is allowed to explain the project-level idea that several patterns implement together.
-
-The Preface may point to pattern families, but it should not become a second first-entry index.
-
-#### E.11:4.2.1 - Preface Plain-Engineering Narrative Rule
-
-Preface prose is written in plain engineering language first and FPF vocabulary second.
-
-A conforming Preface:
-
-- states the working idea before the FPF term;
-- gives a plain gloss before a strict FPF term carries the main explanatory point;
-- uses pattern ids as addresses for stricter treatment, not as the main explanatory language;
-- keeps vivid explanation and didactic force when precision repair removes overread;
-- shows how the first-entry scenarios are grounded in real concepts, not only how they are distributed across patterns;
-- can be understood before the reader has studied the pattern bodies, even though the pattern bodies remain the source of exact governance.
-
-FPF-specific terms such as `EntityOfConcern`, `episteme`, `publication form`, `carrier`, `viewpoint`, `DRR`, `math lens`, `FormalSubstrate`, `NQD`, `OEE`, `Plain`, or `Tech` may appear in the Preface only when the ordinary engineering distinction is already visible or immediately glossed. A Preface paragraph that cannot be understood without prior FPF vocabulary is not yet in Preface style, even if every term is technically admissible.
-
-### E.11:4.3 - Pattern Problem-Frame Rule
-
-A pattern's own `Problem frame` is the local high-precision first-recognition section.
-
-It should let a working practitioner recover:
-
-- the pattern's primary EntityOfConcern;
-- the working problem;
-- what goes wrong if the pattern is missed or misread;
-- the first admissible action;
-- the practical result that action buys;
-- the ordinary not-this-pattern boundary.
-
-Add candidate-pattern comparison only when a real entry-discoverability problem exists. Otherwise, keep cross-pattern comparison out of the pattern body and use ordinary `Relations`, ToC query phrases, or expanded cases.
-
-### E.11:4.4 - First-Entry Terminology
-
-Preserve the first-entry terminology.
-
-| Term | Use |
-| --- | --- |
-| `first entry` | General FPF term for the first useful entry from a working project or FPF artifact into the pattern corpus. |
-| `first practical entry` | Public-facing and practitioner-facing form: the first useful entry selected by a real project question. |
-| `first-entry scenario` | FPF `readme` section prose that starts from a recognizable project question and names first useful FPF pattern families. |
-| `first-entry cue` | A phrase, project question, table row, heading, retrieval card, or local recognition text that helps recover the first pattern family. |
-| `first-entry pattern-comparison set` | A small case-relative set of plausible candidate patterns and tempting wrong patterns for the current project question; it is used only when the first governing pattern choice is genuinely ambiguous and is not a standing replacement index. |
-| `expanded entry-disambiguation case` | A longer case used only when `readme`, ToC, and local Problem-frame recognition are not enough. |
-| `PatternUseRecommendation@Context` | The `E.11.PUR` relation that says which FPF pattern use is recommended now for one current concern. |
-| `PatternUseSequence@Context` | The `E.11.PUR` relation for a bounded sequence of recommended pattern uses for one concern; it is not a universal process order. |
-
-Avoid `route`, `workflow`, `lifecycle`, `entry neighborhood`, `semantic area`, `ontological neighborhood`, `map`, `owner`, `load`, `posture`, `support`, and other broad heads as entry terms unless the relevant governing pattern has recovered their specific FPF kind and admissible use.
-
-### E.11:4.5 - Public readme Section Single-Source Rule
-
-The FPF `readme` section carries the public first-entry scenario set.
-
-If the same public first-entry content is exported into another publication form, export it from the FPF `readme` section instead of maintaining a second public first-entry version.
-
-### E.11:4.6 - Projection and Authority Boundary
-
-Entry and projection publication units help a user find the governing pattern. They do not govern the claim by themselves.
-
-When a projection is used, it must be clear whether it is:
-
-- public orientation;
-- table-of-content query material;
-- pattern-local recognition text;
-- expanded entry-disambiguation case;
-- retrieval card;
-- quality or projection evidence for an FPF artifact;
-- ordinary citation or relation.
-
-If a projection needs to answer a substantive claim, use the governing pattern body or the pattern that governs that claim. Do not strengthen the projection.
-
-### E.11:5 - Worked Slices
-
-#### E.11:5.1 - Public Entry From A Project Question
-
-A project team says: "We need to review the architecture of our AI-agent platform before choosing a vendor."
-
-The public `readme` first-entry scenario points to architecture, comparison, and evidence:
-
-- architecture: what holon is being architected, which structures matter, and which architecture characteristic is under concern;
-- comparison: which vendor, build, fine-tune, or hybrid alternatives remain in the candidate set;
-- evidence: what tests or assurance arguments are needed before commitment.
-
-The first governing pattern family is not a wording-repair pattern. It is `C.30` for architecture, with `A.19`, `C.11`, `A.10`, or `B.3` applied when the project question narrows to comparison, local choice, evidence, or assurance. `E.10` is used only if the text hides the kind of architecture, evidence, decision, or publication claim being made.
-
-#### E.11:5.2 - Duplicate First-Entry Row Discharge
-
-A compact first-entry index row says:
-
-```text
-Architecture and diagrams:
-  start with C.30, C.30.AD, evidence, and dashboard patterns;
-  remember that diagrams are not proof;
-  compare alternatives before choosing.
-```
-
-Do not keep this as a second entry canon. Discharge its useful content by kind:
-
-| Useful item in the row | Publication unit or governing pattern |
-| --- | --- |
-| "Architecture" as a public working-project question | `readme` first-entry scenario for architecture design or review. |
-| "Diagrams" as publication or rendering use | `readme` scenario for descriptions, explanations, dashboards, or views of the same entity; `E.17.*`, `A.15.4`, or `C.30.AD` when the claim is being governed. |
-| "Diagrams are not proof" | Local Problem-frame recognition in the pattern that governs the architecture description or evidence claim; not a public duplicate-index warning. |
-| "Evidence" | `A.10`, `B.3`, `A.20`, `A.21`, or the commitment-ready action scenario when the project question is evidence, assurance, gate readiness, or commitment. |
-| "Dashboard" as same-entity or rendering concern | Publication-use or dashboard pattern material, not architecture itself. |
-| "Compare alternatives" | Comparison and selected-set scenario plus `A.19`, `C.11`, `C.18`, or `C.19`. |
-| Search phrases such as "architecture diagram proof" | ToC query material or retrieval cue, if it helps find the governing pattern. |
-| A hard ambiguity between architecture, description, evidence, and comparison | `I.2` expanded entry-disambiguation case only if `readme`, ToC, and local Problem frames are insufficient. |
-
-After discharge, the remaining row is deleted because it only duplicates the `readme` scenario set and creates a second canon. The deletion preserves value because every claim being made has a publication unit or governing pattern that matches its kind.
-
-#### E.11:5.3 - Compact First-Use Slices For High-Risk Entries
-
-Use these slices when a public seed is recognizable but still risks presenting FPF as a checking framework. They are examples for didactic grounding, not required sequences. Each one names the first project artifact, a readable next output, and the boundary where the first-entry seed stops.
-
-**Working rules and methods.** A team needs a procedure that operators and an AI assistant will both use. The first result is a working-document outline that names the governed object, intended users, method being described, relevant role positions, expected work result, and work-entry condition. The next readable outputs may be a method-description record, a work-plan seed, a role-use note, or a call-plan record. The seed stops before the document itself is treated as performed work, permission, evidence, gate passage, or publication authority.
-
-**Commitment-ready action.** A team wants to launch a vendor migration, clinical protocol change, architecture refactor, or public promise. The first result is a commitment-readiness note that names the action, the claim it relies on, the minimum basis for acting, a smaller experiment if one can reduce cost, and the current decision boundary. The next readable outputs may be an act-now basis, a cheap test, a narrowed claim, a decision note, or a work-or-architecture follow-up note. The seed stops before evidence, assurance, gate passage, or work authorization is inferred from the short entry.
-
-**Timing and freshness.** A comparison, decision, or publication may be stale because the relevant date, cadence, latency, telemetry window, or action window changed. The first result is a timing note that names what the timing is about, the affected project decision or work use, and the freshness or action-window limit. The next readable outputs may be a refresh record, a delayed-use boundary, or a changed comparison scope. The seed stops before a dated cue becomes current authority by itself.
-
-**Causality and model outputs.** A model output, simulation, dashboard signal, or causal explanation is tempting the team toward an intervention. The first result is a causal-use or model-output-use note that names the output, the proposed action, the responsibility boundary, and the minimum basis needed for that use. The next readable outputs may be a smaller study, a decision candidate, a work candidate, or a stop condition. The seed stops before the output becomes evidence or action authority merely because it is fluent or quantitative.
-
-**Descriptions, dashboards, explanations, and views.** Several views of the same product, organization, dataset, or architecture disagree. The first result is a description-use note that names the described EntityOfConcern, the description or view, the publication or rendering form, the role concern, and what each view preserves, coarsens, omits, or loses. The next readable outputs may be a correspondence check, a same-described-object relation, a view repair, or a representation-transition note. The seed stops before the view becomes the described object, proof, decision, work order, or architecture by itself.
-
-**Action-driving wording.** A clause in a standard, contract, dashboard, or model card will change what people or agents do. The first result is a repaired paragraph, claim register row, term-sheet row, or use-boundary note that names the affected object, relation, use, and claim. The next readable outputs may be a direct work question, evidence question, publication-use question, or architecture question under the relevant governing pattern. The seed stops before lexical replacement is treated as ontology repair or action authorization.
-
-**Mathematical model or formal declaration.** Prose no longer holds the needed dependency, invariant, probability, comparison, or optimization problem. The first result is a modeling note that names what is being modeled, the candidate mathematical lens or formal substrate, what structure is preserved, what is lost, the practical payoff, and the validation limit. The next readable outputs may be a `C.29` mathematical-lens use, a formal-substrate declaration, a domain-validation question, or P2W carry-through. The seed stops before mathematical prestige becomes evidence, architecture adequacy, or work authority.
-
-**SoTA or option portfolio.** The team needs the current field of possible approaches rather than one recommendation. The first result is a SoTA pack, option portfolio, candidate set, archive, or selector-ready publication with declared scope, comparison characteristics, diversity or novelty guard, and refresh condition. The next readable outputs may be a comparison frame, selected set, publication note, or `G.11` refresh question. The seed stops before a reference list becomes current authority or a selected set by itself.
-
-### E.11:6 - Conformance Checklist
-
-| ID | Check |
-| --- | --- |
-| `CC-E11-1` | Public first-entry text starts from recognizable working project questions before pattern ids or FPF diagnoses. |
-| `CC-E11-2` | The FPF `readme` section carries the public first-entry scenario set; the Preface does not repeat that set as an index. |
-| `CC-E11-3` | A separate first-entry index is not maintained when it duplicates `readme` scenarios; any unique value is placed in `readme`, ToC, the pattern Problem frame, an expanded case, or the governing pattern for the substantive claim. |
-| `CC-E11-4` | First-entry terminology remains available: first entry, first practical entry, first-entry scenario, first-entry cue, first-entry pattern-comparison set, and expanded entry-disambiguation case. |
-| `CC-E11-5` | Wording and description repair do not dominate public first-entry scenarios; FPF remains visible as project architecture, work, problem, comparison, evidence, temporal, causal, publication-use, mathematics, quality, and improvement help. |
-| `CC-E11-6` | A projection publication unit never answers as the governing pattern body; it points to the governing pattern or says what claim or action is blocked beyond the finding role. |
-| `CC-E11-7` | Pattern-local recognition stays in the Problem frame and does not become a related-pattern fanout list or package-placement explanation. |
-| `CC-E11-8` | ToC and lexical-query phrases remain finding aids, not names, alternate names, semantic equivalences, or authority relations. |
-| `CC-E11-9` | A duplicate first-entry row can be discharged by kind without losing useful content: scenario, query cue, local recognition, expanded case, quality evidence, or substantive claim. |
-| `CC-E11-10` | Practice grounding affects rules: information scent shapes scenario heads, `readme`/front-matter practice shapes publication placement, retrieval practice keeps cues thin, and projection discipline blocks shadow authority. |
-| `CC-E11-11` | Each public first-entry scenario states a concrete project need, a first useful result or decision aid, and the first pattern family after the project value is recognizable. |
-| `CC-E11-12` | Public first-entry value claims are grounded by at least one substantive FPF distinction, object, comparison, or decision that explains why the proposed help is credible. |
-| `CC-E11-13` | Preface prose can be read before the pattern bodies: ordinary engineering meaning appears before FPF terms, and strict FPF terms that carry the main explanatory point are glossed at first use. |
-| `CC-E11-14` | The Preface explains FPF-level ideas and cross-pattern composition without becoming a second ToC, second first-entry index, conformance authority, or pattern-id catalogue. |
-
-### E.11:7 - Common Anti-Patterns
-
-| Anti-pattern | Symptom | Repair |
+| `E11-1` | Situation first | Card wording begins with a recognizable working situation before PatternIDs or internal topology. |
+| `E11-2` | Exact first result | Every candidate template names a direct Solution, result kind, conditional signature, and receiving pattern. |
+| `E11-3` | No fictitious context | Public card, expansion, templates, and walkthrough contain no reader-project `@Context` values. |
+| `E11-4` | Complete public explanation | The carry-through check names exactly one admitted demonstrative slice or justified ordinary walkthrough, its selection rationale, and the principal blocked overread. |
+| `E11-5` | Template completeness | Every candidate template names one direct Solution, exact result kind, kind-conditioned relation signature, complete basis positions, and receiving pattern. |
+| `E11-6` | Bounded comparison | Comparison exposes first-result differences and a stop or return condition. |
+| `E11-7` | Conditional shortlist | Every materialized shortlist names the receiving reliance that uses its history. |
+| `E11-8` | Publication responsibility | README, Preface, ToC, retrieval, and full patterns do not maintain duplicate card bodies. |
+| `E11-9` | Cold-reader recognition | A reader unfamiliar with FPF encounters the working situation and imaginable first result before internal vocabulary, while the expansion preserves the exact kind and boundary. |
+| `E11-10` | Grounded public value | Every benefit claim exposes the concrete need, first useful result, specific direct-pattern distinction that changes the next project action, and direct pattern; the public set does not present FPF mainly as wording or description policing. |
+
+### E.11:8 - Common Anti-Patterns and How to Avoid Them
+
+| Misuse | Why it fails | Repair |
 | --- | --- | --- |
-| Internal diagnosis as public entry | `readme` starts with "roles, methods, and work are mixed" before the user sees a project problem they recognize. | Rewrite the entry from the project question: architecture review, regulation writing, option comparison, problem shaping, naming, quality improvement, evidence, mathematics, or SoTA portfolio. |
-| Ungrounded public value claim | The first-entry text claims broad benefit but does not show the first useful result or result set, working object, distinction, comparison, or pattern family that makes the benefit credible. | Keep the value claim only when it is grounded by a recognizable project need, a first useful result or result set, and one substantive FPF idea or governing pattern family. |
-| FPF-slang front door | The `readme` or Preface starts with pattern ids, FPF kinds, internal quality vocabulary, or terms such as `EntityOfConcern`, `episteme`, `DRR`, `carrier`, `math lens`, `NQD`, or `OEE` before plain meaning is visible. | Put the ordinary engineering distinction first, then add the FPF name as a precise address or gloss. |
-| Preface as pattern-id catalogue | The Preface lists pattern families and terms but does not explain why the first-entry value claims are possible or how the ideas compose. | Rewrite as cross-cutting narrative: project problem, idea, why it matters, then pattern family for stricter treatment. |
-| Pattern-body prerequisite | The Preface is only understandable after the reader has already studied the patterns. | Add plain glosses and project examples so the Preface can be read before the pattern bodies while still pointing to them. |
-| Duplicate first-entry canon | `readme`, Preface, ToC, a separate index, and pattern bodies all carry different entry arrangements. | Keep public scenarios in `readme`, ideas in Preface, query material in ToC, local recognition in Problem frames, and expanded cases only where needed. |
-| Semio-first public identity | FPF appears mainly as technical-language policing. | Keep wording repair as one entry scenario and make architecture, work, problem, comparison, evidence, mathematics, quality, and improvement visible. |
-| Projection as authority | A `readme` sentence, ToC row, retrieval card, or entry cue is used as if it governs the claim. | Use the governing pattern body or the pattern governing the substantive claim. |
-| Entry as universal sequence | First-entry text prescribes a universal sequence. | State that entries are alternatives selected by the working question, not steps. |
-| Pattern-local reference fanout | A pattern's first substantive section lists neighboring patterns instead of its own EntityOfConcern and first action. | Place discoverability in `readme`, ToC, or expanded cases; keep the pattern body focused on its own problem and solution. |
+| Pattern list as guidance | IDs do not show recognition conditions or result differences. | Publish situation, first result, direct Solution, and boundaries. |
+| Internal vocabulary as the front door | The card starts with PatternIDs, FPF kinds, or quality and conformance terms before the reader can recognize the work. | Put the ordinary working situation and first useful result first, then restore precision in the expansion and direct pattern. |
+| Ungrounded public value | The card promises broad help but shows no concrete first result or direct-pattern distinction that changes the next project action. | Name the project need, first useful result, the specific direct-pattern distinction that changes the next project action, and the direct pattern whose `Solution` governs obtaining that result. |
+| Card as a form | Readers fabricate project facts before inspecting the pattern. | Keep the card context-free and defer local records to PUA under reliance. |
+| Fixed three-card shortlist | Interface convenience becomes ontology. | Use any finite inspected set bounded by the current question and stop condition. |
+| Walkthrough as workflow | Presentation order becomes a fixed work sequence. | State continuation conditions and use CGUS only when its structure is actually admitted. |
+| README as pattern body | Public copy accumulates methods and conformance doctrine. | Link to the expansion and direct pattern; keep method authority there. |
 
-### E.11:8 - Relations
+### E.11:9 - Consequences
 
-- The FPF `readme` section carries public first practical entries.
-- `Preface` carries cross-cutting ideas and principles behind the public first practical entries.
-- `E.8` governs pattern form and pattern-local Problem-frame discipline.
-- `E.11.PUR` governs `PatternUseRecommendation@Context` and `PatternUseSequence@Context` after discoverability has become a concrete pattern-use recommendation for one current concern.
-- `E.19` checks entry, projection, and pattern-use discoverability during review and refresh.
-- `E.21` evaluates whether corpus entry and projection material preserve quality without becoming pattern content.
-- `F.17`, `F.18`, `F.19`, `E.10`, and `E.10.ARCH` govern lexical, naming, and wording precision when entry cues hide FPF kinds or relations.
-- `I.2` carries expanded entry-disambiguation cases only when compact public first-entry scenarios and local Problem frames are insufficient.
-- ToC rows provide query and dependency cues; they do not replace public first-entry scenarios or governing pattern bodies.
+**Benefits.** FPF gains human-readable public practical-use guidance without losing exact result kinds or direct pattern authority. Readers can explore and recover from wrong turns. Ordinary use stays light, while transfer and replay can preserve comparisons.
+
+**Costs.** Public guidance remains trustworthy only while the fifteen cards and their expansions stay synchronized with the direct patterns. Every readable result phrase needs an exact kind restoration. Reliance-bearing comparisons add explicit records and return conditions.
+
+### E.11:10 - Rationale
+
+Discovery is a bounded decision under limited attention, not a one-time lookup. A semantic card makes the practical question and first-result difference visible before the reader commits to a pattern. A recoverable return is more useful than pretending the first cue is always right.
+
+Public guidance remains trustworthy only when it is weaker than the direct pattern. It helps a reader decide what to inspect; it does not decide applicability, authorize work, or create the promised result. This division also keeps public explanation teachable: simple phrases can remain visible because expansions restore exact kinds and relations.
+
+### E.11:11 - SoTA-Echoing
+
+| Source or practice line | Problem-solving move taken here | Adoption and boundary |
+| --- | --- | --- |
+| Information-foraging and information-scent practice | Put recognizable situation and expected information gain before internal navigation structure. | Adopt through situation-first cards and first-result differences. Do not infer ontology or a fixed shortlist size. |
+| Jin, Bai, and Oulasvirta, *Modeling Trial-and-Error Navigation With a Sequential Decision Model of Information Scent*, arXiv:2603.11759 (2026) | Treat inspection, premature selection, wrong turns, and backtracking as a bounded sequence under memory and time constraints. | Adapt through explicit stop, wrong-turn, and return boundaries. Materialize history only for named reliance; the preprint does not establish a universal discovery record. |
+| Zhu, Reinecke, and Mitra, *Language Scent: Exploring Cross-Language Information Navigation*, arXiv:2604.03604 (2026) | Keep contextual cues near the governed value while preserving the exact target behind a reader-facing expression. | Adapt to public cue and expansion design. The small study does not establish universal label equivalence or decide FPF ontology. |
+| Current FPF E.8, E.17, F.17, F.18, and E.11.PUA | Separate public recognition, publication, naming, and project pattern use. | Adopt as the governing patterns for their stated relations. E.11 defines only the public guidance and reliance-conditioned comparison layer. |
+
+The practitioner implication is concrete: inspect a small plausible set, compare the results each would produce, and keep a durable history only when someone will use it later.
+
+Information-foraging is the lineage anchor, not by itself the current competitive claim. Familiar-title lookup and popularity ranking are the common comparator: they are cheap cues, but E.11 rejects either as the sole selection basis because neither exposes first-result differences or a recoverable return.
+
+The two 2026 studies are current preprint anchors rather than settled consensus. Reopen the bounded-navigation adaptation when peer review, replication, or use evidence changes the observed role of inspection, memory, backtracking, or wrong-turn cost. Reopen the language-scent adaptation when broader studies show that in-situ cues obscure the governed target more often than they help readers recover it. `G.11` orchestrates those currentness and telemetry checks; E.11 changes the affected card cues, comparison, or boundaries.
+
+### E.11:12 - Relations
+
+- **Builds on:** `E.8` for pattern recognition text, `E.17.AUD` for publication-unit discipline, `F.17` and `F.18` for published terms and naming, and `C.2.1` for public helper epistemes.
+- **Leads to:** `E.11.PUA` for applying one selected pattern and `E.11.PUR` for local applicability, recommendation, and coordination.
+- **Coordinates with:** `A.22.CGUS` for demonstrative slices, `E.18` for flow-local results, `G.11` for currentness orchestration, and each direct pattern cited by a public template.
 
 ### E.11:End

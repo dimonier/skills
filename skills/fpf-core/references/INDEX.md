@@ -141,7 +141,7 @@
 | C.19.1 | Bitter‑Lesson Preference (BLP) | — |
 | C.20 | Composition of `U.Discipline` (Discipline‑CAL) | discipline, U.AppliedDiscipline, U.Transdiscipline, episteme corpus, standards |
 | C.21 | Discipline‑CHR - Field Health & Structure | discipline, field health, reproducibility, standardisation, alignment |
-| C.22 | Problem Typing & TaskSignature Assignment (Problem-CHR) | Problem‑CHR, TaskSignature, TaskKind, ScopeSlice(G), unknown handling |
+| C.22 | Problem Typing & TaskSignature Assignment (Problem-CHR) | — |
 | C.22.1 | Task-family adaptation signature | — |
 | C.22.2 | ProblemCard@Context | problem card, problem-side record, P2W-ready, Thin problem card, `setContextRef` |
 | C.23 | Method‑SoS‑LOG — MethodFamily Evidence & Maturity | MethodFamily, evidence, maturity, SoS-LOG, admit |
@@ -215,8 +215,9 @@
 | E.10.P | Conceptual Prefixes (policy & registry) | prefixes, U., Γ_, ut:, tv: |
 | E.10.D1 | Lexical Discipline for “Context” (D.CTX) | context, U.BoundedContext, anchor, domain, frame. |
 | E.10.D2 | EntityOfConcern, Description Episteme, and Specification-Use Discipline | EntityOfConcern, Description episteme, specification use, DescriptionContext, testable |
-| E.11 | First-Practical Entry and Pattern-Use Discoverability Discipline | — |
-| E.11.PUR | Pattern-Use Recommendation and Pattern-Use Sequence | — |
+| E.11 | Practical-Use Guidance and Pattern Discovery | — |
+| E.11.PUA | Pattern Use in a Working Situation and First Useful Result | — |
+| E.11.PUR | Pattern-Use Applicability, Recommendation, and Coordination | — |
 | E.12 | Didactic Primacy & Cognitive Ergonomics | didactic, cognitive load, ergonomics, usability, Rationale Mandate |
 | E.13 | Pragmatic Utility and Value Alignment | pragmatic utility, proxy-to-value alignment, Goodhart, Campbell, surrogation |
 | E.14 | Human-Centric Working-Model | working model, human-centric, publication surface, grounding, assurance layers. |
@@ -232,7 +233,7 @@
 | E.17.AUD.LHR | PublicationUnit Stability Discipline and Local Head Restoration | — |
 | E.17.AUD.OOTD | PublicationUnit Stability Discipline and PublicationUnit Primary EntityOfConcern Discipline | — |
 | E.18 | Transformation Flow Structure | transformation flow structure, selected transformations, flow valuation, crossings, guards |
-| E.18.1 | Principles-to-Work Carry-Through | P2W, principles-to-work, carry-through record, accepted ProblemCard@Context, formal substrate |
+| E.18.1 | P2W Problem-to-Work Carry-Through | — |
 | E.18.2 | Transformation Flow Mathematical Description | mathematical description, transformation-flow math, graph expression, path expression, algebraic description |
 | E.18.3 | Constraint-Governed Transformation-Flow Unfolding Structure | — |
 | E.19 | Pattern Quality Gates: Review and Refresh Profiles | — |
@@ -262,7 +263,7 @@
 | F.14 | Anti‑Explosion Control (Roles & Statuses) | vocabulary growth, guard-rails, separation-of-duties, bundles, reuse. |
 | F.15 | Static and Regression Conformance Harness for Unification | static checks, regression tests, acceptance tests, validation, SenseCell testing. |
 | F.16 | Worked‑Example Template (Cross‑Domain) | didactic template, example, pedagogy, cross-domain illustration. |
-| F.17 | Unified Term Sheet | Unified Term Sheet, UTS, summary table, glossary, publication |
+| F.17 | Unified Term Sheet | — |
 | F.18 | Local-First Unification Naming Protocol | — |
 | F.19 | Ontology-First Plain Technical Rewriting | — |
 | G.Core | G.Core - Part G Core Invariants | — |

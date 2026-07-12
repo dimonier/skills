@@ -12,8 +12,11 @@ description: First Principles Framework core patterns. Use when doing engineerin
 
 Do NOT read `assets/FPF-Spec.md` in full. Identify the situation and load the relevant reference:
 
+The table below is a fast index mirroring FPF's 15 canonical practical-use cards (`E.11`). When the situation is ambiguous, start from the entry-point row: load the cards, compare the plausible ones by their first-result difference, then open the direct pattern.
+
 | You are doing... | Load |
 |---|---|
+| Unsure where to start / picking a pattern for a situation | `_ctx.Practical-Use-Cards.md`, `E.11.md`, `E.11.PUR.md`, `E.11.PUA.md` |
 | Developing or reviewing architecture | `C.32.P2S.md`, `C.30.md`, `A.22.md`, `A.22.CGUS.md`, `C.32.md`, `C.32.PAD.md`, `C.32.ADR.md`, `C.33.md`, `C.34.md`, `C.35.md`, `C.30.ASV.md`, `C.30.AD.md`, `C.31.md`, `C.32.CONWAY.md`, `B.2.md`, `B.2.P.md` |
 | Writing rules, methods, work-process documents | `A.6.md`, `A.6.B.md`, `A.6.C.md`, `A.15.md`, `A.15.1.md`, `A.15.2.md`, `A.15.3.md`, `A.15.4.md`, `E.18.md`, `E.18.1.md`, `E.18.2.md`, `E.18.3.md`, `E.8.md`, `E.19.md` |
 | Comparing alternatives, making a local choice | `A.19.md`, `A.19.ECS.md`, `C.11.md`, `C.18.md`, `C.19.md`, `G.0.md`, `G.5.md` |
@@ -47,4 +50,4 @@ load those too from `references/`. Each reference lists its own dependencies.
 
 ## References Status
 
-**Ready** — 279 pattern reference files + INDEX + 32 context sections.
+**Ready** — 280 pattern reference files + INDEX + 33 context sections.
