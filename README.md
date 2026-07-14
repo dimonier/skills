@@ -179,14 +179,15 @@ Skills for tracking project state, decisions, risks, and dependencies in a struc
 
 ### 🗂️ Project Vault
 
-Maintains project state in a markdown vault (tasks, dependencies, risks, key decisions, open questions, agendas, reports) from meeting transcripts, structured notes, or owner chat updates.
+Maintains project state in a structured markdown vault: atomic decision cards (DEC-NNNN), open question cards (Q-NNNN), risk cards (RISK-NNNN), contradiction cards (CON-NNNN), event chronicles, and source digests. Includes scaffold for bootstrapping a new vault, templates for digests/decisions/agendas, and inbox processing.
 
 **Use when:**
-- Initializing a project vault in a new repository
-- Updating project state from meeting transcripts or user briefings
-- Managing stakeholders and responsibilities
-- Generating status reports, open question lists, or meeting agendas
-- Surfacing contradictions and risks across project canon
+- Initializing a project vault from scaffold
+- Processing meeting transcripts into digests with atomic decision/question/risk/contradiction cards
+- Updating project state from dialogue briefings (owner chat updates)
+- Generating next-meeting agendas from open questions, blockers, and contradictions
+- Reconciling new information against the open question registry
+- Surfacing contradictions and archiving closed entities
 
 **Location:** `skills/project-vault/`
 

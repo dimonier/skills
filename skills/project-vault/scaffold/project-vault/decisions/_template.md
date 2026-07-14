@@ -1,11 +1,11 @@
----
+﻿---
 id: DEC-0000-short-slug
 title: "One-line title"
 updated: "YYYY-MM-DD"
 status: proposed
 decision_owner: ""
 sources:
-  - ../meetings/YYYY-MM-DD_topic/processed.md
+  - ../sources/digests/YYYY-MM-DD_topic.md
 source_kind: meeting_processed
 evidence_captured_at: "YYYY-MM-DD"
 source_event_date: "YYYY-MM-DD"
