@@ -35,6 +35,8 @@ The skills transform the AI into a specialized assistant that follows proven met
   - [Business Analysis \& Requirements Engineering](#-business-analysis--requirements-engineering)
 - [Text Analysis \& Writing](#text-analysis--writing)
   - [Reverse-Engineering Texts](#-reverse-engineering-texts)
+- [Document Processing](#document-processing)
+  - [PDF to Markdown (pdf2md)](#-pdf-to-markdown-pdf2md)
 - [Development Tools](#development-tools)
   - [Spec Decomposer](#-spec-decomposer)
   - [Agent Skill Builder](#-agent-skill-builder)
@@ -143,6 +145,26 @@ Reverse-engineer texts into a reusable structural blueprint (reverse outlining, 
 - Converting "text → structure/blueprint" to reuse patterns in writing, specs, prompts, or marketing
 
 **Location:** `skills/reverse-engineering-texts/`
+
+## Document Processing
+
+Skills for converting and extracting content from document formats.
+
+### 📄 PDF to Markdown (pdf2md)
+
+Extracts PDF content into clean Markdown: text via pdfplumber + image/diagram descriptions via a local vision-language model (LM Studio, Ollama, or any OpenAI-compatible endpoint). Supports recursive batch processing, resume/retry, and custom VL prompts.
+
+**Use when:**
+- Converting presentation decks (slides, diagrams) to text
+- Extracting conference talks, workshops, or technical reports from PDF
+- Transcribing PDFs where plain text extraction is garbled
+- Batch-processing directories of PDFs with automatic skip of already-processed files
+
+**Do NOT use for:** pure-text PDFs (use pdfplumber directly), filling PDF forms (use the `pdf` skill), scanned documents without selectable text.
+
+**Dependencies:** `pip install pdfplumber pypdfium2 pillow requests` + local VL model (default: `qwen/qwen3-vl-8b` via LM Studio).
+
+**Location:** `skills/pdf2md/`
 
 ## Development Tools
 
