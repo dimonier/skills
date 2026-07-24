@@ -14,8 +14,8 @@
 | A.2.6 | Unified Scope Mechanism (USM): Context Slices & Scopes | scope, applicability, ClaimScope (G), WorkScope, set-valued. |
 | A.2.7 | RoleRelationStructure@BoundedContext - Context-Local Role Relations and Representation-Lens Boundary | role algebra, specialization (`≤`), incompatibility (`⊥`), bundles (`⊗`), separation of duties (SoD) |
 | A.2.8 | `U.Commitment` (Deontic Commitment Object) | commitment, deontics, obligation, recommendation-as-duty, prohibition |
-| A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, permission exercise, actual non-violation finding, permission or prohibition conflict. |
-| A.2.9 | `U.SpeechAct` (Communicative Work Object) | speech act, communicative work, approval/authorization/publication/revocation, provenance, act≠utterance≠carrier |
+| A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, matching dated-work exercise, checked non-violation, permission or prohibition conflict |
+| A.2.9 | `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records) | admitted speech-act Work kind, actual communicative occurrence, performing `U.System`, authority-grounding assignment, optional `SpeechActRecord` |
 | A.3 | Transformer Constitution (Quartet) | — |
 | A.3.1 | `U.Method`: Context-Defined Way of Doing | — |
 | A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method-description membership, claim-bearing episteme, exact `U.Method` EntityOfConcern, substantive way-of-doing claim, same method versus equivalent descriptions |
@@ -24,10 +24,10 @@
 | A.3.4.P | Transformation Ontic Precision Restoration | — |
 | A.4 | Temporal Duality & Open-Ended Evolution Principle | design-time, run-time, evolution, versioning, open-ended state change |
 | A.5 | Open-Ended Kernel & Extension Layering | FPF architecture, specialization vs dependancy hierarhies, modularity, extensibility. |
-| A.6 | Signature Stack & Boundary Discipline | boundary, signature stack, boundary claim-classification fields, A.6.B L/A/D/E claims, authority-wording split |
+| A.6 | Signature Stack & Boundary Discipline | signature and mechanism declarations, actual occurrence, publication face, atomic L/A/D/E claims, six-way authority-word branch |
 | A.6.RSIG | Recognition Signatures for Descriptions | — |
-| A.6.B | Boundary Norm Square (Laws / Admissibility / Deontics / Work-Effects) | boundary norm square, atomic claims, L/A/D/E claim classification, laws vs entry predicates vs deontic results vs evidence, accountable commitments |
-| A.6.C | Contract Unpacking for Boundaries | contract bundle unpacking, SLA/guarantee claim classification, promise content ≠ work, promise-act/utterance separation, accountable commitment vs exact permission result |
+| A.6.B | Boundary Norm Square (Laws / Admissibility / Deontics / Work-Effects) | atomic L/A/D/E claims, laws, entry predicates, accountable norms and grants, actual exercise |
+| A.6.C | Contract Unpacking for Boundaries | four-question contract lens, promise content, speech-act Work, description and publication, commitment or grant |
 | A.6.REL | Relation Obtaining and Individuated Relation Occurrences | — |
 | A.6.0 | U.Signature - Reusable Law-Governed Declaration Episteme | — |
 | A.6.1 | U.Mechanism - Reusable Law-Governed Operation Declaration | — |
@@ -53,9 +53,9 @@
 | A.6.S | U.SignatureEngineeringPair - Signature engineering via a ConstructorSignature and a TargetSignature | signature engineering, TargetSignature, ConstructorSignature, two-signature arrangement, EFEM |
 | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) | wholeness, integrity, part-of, boundary, environment |
 | A.7 | Strict Distinction (Clarity Lattice) | category error, EntityOfConcern ≠ Description episteme, Role ≠ Work, ontology. |
-| A.7.1 | Consequence-Guided Ontological Problem Solving | wrong engineering consequence, ontology repair, direct-owner return, bounded unresolved result. |
-| A.7.2 | FPF Ontology-Premise Reconciliation | same receiving claim and scope, incompatible FPF consequences, premise reconciliation, source-use conflict, optional convergence. |
-| A.7.CP | Constructive-Premise Compact and Reasoning-Basis Use | constructive-premise compact, claim content, reasoning-basis use, ClaimUsedAsReasoningBasisRelation@Context. |
+| A.7.1 | Consequence-Guided Ontological Problem Solving | wrong engineering consequence, smallest defeated claim, exact subject and direct owner, one selected analysis apparatus, actual system performing under an assignment |
+| A.7.2 | FPF Ontology-Premise Reconciliation | dated FPF applications, result claims or decisions, same receiving claim or consequence, exact used clauses and premises, actual source-use relations |
+| A.7.CP | Constructive-Premise Compact and Reasoning-Basis Use | constructive-premise claim, dated reasoning Work, exact receiving claim or result, adopted premise or conditional assumption, ClaimUsedAsReasoningBasisRelation@Context |
 | A.8 | Universal Core Principle | universality, transdisciplinary, domain-agnostic, kernel-level U-kind admission. |
 | A.9 | Cross-Scale Consistency (C-3) | composition, aggregation, holarchy, invariants, roll-up. |
 | A.10 | Evidence Graph Referring (C-4) | evidence, traceability, provenance, evidence carrier, claim support |
@@ -64,10 +64,10 @@
 | A.13 | The Agential Role & Agency Spectrum | agency as role, agency spectrum, contextual role assignment, autonomy grading, substrate-neutral autonomy. |
 | A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | mereology, part-of, ComponentOf, PortionOf, PhaseOf |
 | A.15 | Role-Method-Work Alignment (Contextual Enactment) | role-method-work distinction, `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan` |
-| A.15.1 | `U.Work`: Dated Performed Work Occurrence | `U.Work` admitted kind, world-side dated occurrence, `performedBy`, `enactsMethod`, occurrence assertion and record separation |
+| A.15.1 | `U.Work`: Dated Performed Work Occurrence | admitted `U.Work` kind, world-side dated occurrence, actual performer `U.System`, covering `U.RoleAssignment`, `performedUnderAssignment` |
 | A.15.2 | `U.WorkPlan`: The Schedule of Intent | intended-work episteme, present EntityOfConcern, possible future performance, `PlanItem` content, horizon |
 | A.15.3 | `SlotFillingsPlanItem` — Declaration-Local Planned Designation | WorkPlan claim content, intended-performance designator, exact declaration member, direct owner, participant/argument/result meaning |
-| A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, reliance appearance, work or reliance use, required claim before use, required instituted effect before use |
+| A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, exact attempted use, independent required-position rows, governing pattern and direct object, project-side reference |
 | A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, prospective permission inputs |
 | A.15.PROD | Production Work, Entity-Identity Inception, and Production Completion Recovery | — |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
@@ -130,7 +130,7 @@
 | C.2.6 | `U.LanguageStateAnchoringMode` | anchoring mode, embodiment, trace, model state, document |
 | C.2.7 | `U.LanguageStateRepresentationFactorBundle` | representation factors, locality, sparsity, symbolicity, factor bundle |
 | C.2.P.DR | Declarative Representation Precision Restoration | — |
-| C.3 | Kinds, Intent and Extent, and Typed Reasoning | kind, type, intension, extension, subkind |
+| C.3 | Kinds, Intent and Extent, and Typed Reasoning | bounded-context local kind, intent-bearing KindSignature, effective ReferenceScheme, three-valued candidate judgment, optional slice-indexed extension |
 | C.3.1 | U.Kind and U.SubkindOf Core | local kind, U.SubkindOf direct relation, relation-obtaining predicate, relation occurrence, assertion episteme |
 | C.3.2 | Kind Intent, Membership Judgment, and Extension | local kind, KindSignature declaration episteme, candidate classification, true/false/unknown, KindExtension representation. |
 | C.3.3 | `KindBridge` & `CL^k` — Cross-context Mapping of Kinds | KindBridge direct relation, bridge assertion episteme, target judgment, CL^k, loss |
@@ -152,7 +152,7 @@
 | C.21 | Discipline‑CHR - Field Health & Structure | discipline, field health, reproducibility, standardisation, alignment |
 | C.22 | Problem Typing & TaskSignature Assignment (Problem-CHR) | — |
 | C.22.1 | Task-family adaptation signature | — |
-| C.22.PFR | Problematic-For Relation | actual problematic-for relation, actual condition, problem-for entity, applicability predicate, relation occurrence. |
+| C.22.PFR | Problematic-For Relation | actual adverse condition, exact problem-for entity and use, independent criterion-applicability relation, condition-to-predicate input rule, actual adverse episode |
 | C.22.2 | ProblemCard@Context | problem card episteme, problem-side record, P2W-ready, Thin problem card, `setContextRef` |
 | C.23 | Method‑SoS‑LOG — MethodFamily Evidence & Maturity | MethodFamily, evidence, maturity, SoS-LOG, admit |
 | C.24 | Agentic Tool-Use and Call Planning (C.Agent-Tools-CAL) | — |
@@ -261,7 +261,7 @@
 | F.3 | Intra‑Context Sense Clustering | sense clustering, disambiguation, Local-Sense, SenseCell, counter-examples. |
 | F.4 | Role Description (RCS + RoleStateGraph + Checklists) | role template, status template, invariants, RoleStateGraph (RSG), Role Characterisation Space (RCS). |
 | F.5 | Naming Discipline for U-kind Names and RoleDescription Labels | naming conventions, lexical rules, morphology, twin registers, U-kind naming |
-| F.6 | Role Assignment & Enactment Cycle (Six-Step) | role assignment, enactment, conceptual moves, asserting status. |
+| F.6 | RoleAssignment and Performed-Work Attribution Check | actual performing `U.System`, exact `U.RoleAssignment`, `performedUnderAssignment`, assignment coverage, world-side attribution |
 | F.7 | Concept‑Set Table Construction | concept-set, table, row, columns, differences |
 | F.8 | Mint-or-Reuse Decision | decision lattice, type explosion, reuse, minting new U-kinds, parsimony. |
 | F.9 | Alignment and Bridge across Contexts | bridge, cross-context alignment, CL, direction, loss notes |
