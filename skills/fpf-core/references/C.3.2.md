@@ -1,23 +1,32 @@
 ---
 id: C.3.2
-title: "`KindSignature` (+F) & `Extension`/`MemberOf`"
+title: "Kind Intent, Membership Judgment, and Extension"
 status: Stable
 keywords:
-  - KindSignature
-  - intension
-  - extension
-  - MemberOf
-  - Formality F
-  - determinism.
+  - local kind
+  - KindSignature declaration episteme
+  - candidate classification
+  - true/false/unknown
+  - KindExtension representation.
 dependencies:
   builds_on:
+    - C.3
     - C.3.1
+    - A.6.0
+    - C.2.1
+    - A.2.6
+  coordinates_with:
+    - C.29
+    - A.14
+    - E.24.UK
   prerequisite_for:
     - C.3.3
     - C.3.4
+    - C.3.5
+    - C.3.A
 ---
 
-# C.3.2: `KindSignature` (+F) & `Extension`/`MemberOf`
+# C.3.2: Kind Intent, Membership Judgment, and Extension
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -25,203 +34,228 @@ dependencies:
 
 ---
 
-## C.3.2 - KindSignature (+F) & Extension/MemberOf
+## C.3.2 - Kind Intent, Membership Judgment, and Extension
 
-> **One‑line summary.** Specifies the **intent and extent** of kinds: (**i**) a **`KindSignature(k)`** (the intensional definition of kind `k`) that **declares its own Formality F**; (**ii**) an **`Extension(k, slice) ⊆ U.EntitySet(slice)`** and the **membership predicate** `MemberOf(e, k, slice)` that are **deterministic per `U.ContextSlice`**; (**iii**) **monotonicity** of extension under `SubkindOf`; (**iv**) a **definedness policy** that fails **closed** outside its domain. **Kinds still carry no Scope** (that rule lives in C.3.1); Scope stays on **claims/capabilities** (USM). This pattern gives managers and reviewers the **observable basis** to check “what counts as a member here and now” without entangling applicability (G) or assurance (R).
+> **Type:** Local kind declaration and classification pattern
+> **Status:** Stable
+> **Normativity:** Normative unless a section is explicitly informative
 
-**Status.** Normative in **Part C**. Identifier **C.3.2**.
-**Audience.** Engineering managers, architects, assurance leads, editors.
+### C.3.2:0 - Use This When
 
-**Depends on.**
+Use this pattern when repeated typed reasoning needs one explicit local-kind criterion, when one exact entity or non-entity value must be judged against that criterion in one context slice, or when a named use needs a representation of all candidates currently judged `true`.
 
-* **C.3.1** (*U.Kind & SubkindOf Core*): kinds are context‑local; `⊑` is a partial order; kinds carry **no Scope**.
-* **A.2.6 USM** (*Context slices & Scopes*): Claim scope (G) and Work scope live on claims/capabilities; algebra `∈` (membership), `∩` (intersection), `SpanUnion` (union across independent lines), `translate` (scope mapping).
-* **C.2.3 U.Formality (F)**: ordinal F0…F9; no arithmetic; weakest‑link composition applies to content that depends on the signature.
-* **C.2.2 F–G–R**: assurance calculus; CL penalties feed **R**, not **F/G**.
-* **Part B (Scope Bridges & CL).** CL (scope congruence) and scope translation live in Part B/USM; **kind‑congruence `CL^k`** and kind mapping live in **C.3.3** (KindBridge).
+**What goes wrong if missed.** A kind is confused with the document that declares it, a measurement or schema label creates membership, missing information becomes `false`, a mathematical set becomes ontology, or a guard decision rewrites the classification.
 
-**Non‑goals.**
+**What this buys.** A practitioner can state an ordinary result, pin the declaration edition and slice when reliance requires it, distinguish `true`, `false`, and `unknown`, and materialize an extension only for a receiving query or review. A manager can separately plan higher declaration formality, stronger assurance for a relied-on classification assertion, or a different claim scope without treating those changes as one ladder.
 
-* No Scope semantics here (USM); no bridge semantics here (C.3.3).
-* No repository/notation mandates; this is concept‑level, not tooling.
+**Primary EntityOfConcern.** One local-kind classification use: an exact candidate, local kind, `KindSignature` edition, context slice, and judgment value.
 
-### C.3.2:1 - Purpose & Audience
+**First useful move.** Write the readable result first: `Pump #14 counts as a cooling pump in this plant slice because it satisfies the declared cooling-pump criterion.` Cite the measurement only when the receiving use relies on that support. Create a reusable `KindSignature` only for repeated use, and materialize `KindExtension` only for a named set-consuming use.
 
-This pattern makes **entityOfConcern testable** in a Context:
+**Not this pattern when.** Use the direct subject pattern to establish the candidate and the qualities, relations, or construction that make the criterion hold; A.14 for membership in a collection or collective; C.3.3 for cross-context use; C.29 when a mathematical representation changes a claim-bearing use; and `E.24.UK` for durable public U-kind admission.
 
-* Authors get a place to write **what defines a kind** (`KindSignature`) and at **what rigor (F)**.
-* Reviewers can ask **deterministic** questions: *“Given this `TargetSlice`, which entities are in `k`?”*
-* Managers can plan **ΔF** (raise signature rigor) and **ΔR** (evidence over members) **without** changing **G** (applicability).
+### C.3.2:1 - Problem Frame
 
-**No tooling assumption.** The pattern is **conceptual** and notation‑neutral (no OWL/SHACL/type‑system requirement); it specifies reviewer‑checkable obligations that managers can read in plain language.
+A local kind can support useful typed reasoning without becoming a public FPF U-kind. Its intent may need a reusable declaration; one candidate may need a current judgment; and a query may need a set representation of true candidates. Those are different objects. The candidate's governed world-side or value-side features settle the criterion when they are available for evaluation. Evidence can support a claim about those features, but a record, carrier, observation, or proof does not manufacture them. The pattern is concept-level and notation-neutral: it requires no particular ontology language, schema technology, rule engine, or programming type system.
 
-### C.3.2:2 - Context
+### C.3.2:2 - Problem
 
-Different Contexts encode “type” intent differently (predicates, schemas, ontologies, Standards). Regardless of notation, a team must be able to answer, reproducibly: **who belongs to the kind at this slice?** If this is not stable, claims quantified over the kind are unverifiable, bridges are opaque, and composition becomes unsafe.
+The shorthand `MemberOf(e,k,slice)` is unsafe for this problem because readers can take it as an A.14 collection relation, an ontic classification-relation occurrence, a three-valued evaluation, a database lookup, or a guard. Likewise, `U.EntitySet(slice)` makes a set representation look like an admitted entity kind. Deterministic-looking notation then carries the wrong ontology. C.3.2 restores an explicit declaration, a judgment, and an optional representation while leaving candidate identity and direct features with their actual governors.
 
-### C.3.2:3 - Problem
+### C.3.2:3 - Forces
 
-1. **Ambiguous membership.** Membership depends on tacit “latest” states or unwritten defaults.
-2. **Signature opacity.** A kind’s definition is scattered; no single place to declare rigor (**F**) or assumptions.
-3. **Order violations.** Subkind hierarchies do not guarantee subset behavior in practice.
-4. **Scope leakage.** Teams smuggle applicability (G) into kind definitions, recreating G‑ladders by another name.
-
-### C.3.2:4 - Forces
-
-| Force  | Tension to resolve  |
+| Force | Tension |
 | --- | --- |
-| **Local freedom vs comparability** | Contexts need their own notations, but membership must be checkable in a common style.  |
-| **Expressivity vs determinism**  | Rich intent is welcome, but membership must be deterministic given `slice`.  |
-| **Intent vs applicability**  | Define “what counts” (intent/extent) without encoding “where valid” (G).  |
-| **Rigor vs cost**  | Raising signature F has cost; the framework must support low‑F drafts and high‑F safety cores alike. |
+| Readable use vs reusable declaration | One case should stay ordinary, while repeated classification needs a stable criterion and assumptions. |
+| Direct feature vs evidence | Candidate features make the criterion hold; evidence only supports an assertion about them. |
+| False vs unknown | Known criterion failure differs from unavailable evidence, missing dependency, or out-of-domain input. |
+| Intent vs extension | A declaration can stay fixed while candidate state or the selected slice changes the true-candidate set. |
+| Set use vs ontology | A query may need a set without creating a collection holon, direct relation occurrence, or `U.EntitySet`. |
+| Local kind vs public kind | A project kind can be useful without durable FPF U-kind admission. |
+| Scope vs evaluation input | Claims may be scoped; the kind is not. The context slice is an input to classification. |
 
-### C.3.2:5 - Solution — Objects & Standards (overview)
+### C.3.2:4 - Four Objects, Not One
 
-* **`KindSignature(k)`** — the **intensional** definition of kind `k` in the Context; it **declares `U.Formality`** per C.2.3.
-* **`U.EntitySet(slice)`** — the set (or well‑defined universe) of **entities addressable in a given `U.ContextSlice`**.
-* **`Extension(k, slice) ⊆ U.EntitySet(slice)`** — **which entities** belong to `k` **at** `slice`.
-* **`MemberOf(e, k, slice)`** — membership predicate: `e ∈ Extension(k, slice)`.
-
-**Design split.**
-
-* **Intent** lives in **`KindSignature`** (with F).
-* **Extent** is **computed per `slice`** via `MemberOf`.
-* **Applicability** (where a **claim** holds) remains a **Scope** on the claim (USM) and **MUST NOT** be encoded into `KindSignature`.
-
-### C.3.2:6 - Norms & Invariants (normative)
-
-> IDs **C3.2‑K‑03…K‑08** correspond to the rules announced in C.3; additional local rules use **C3.2‑S‑\***.
-
-#### C.3.2:6.1 - Signature & Formality
-
-**C3.2‑K‑03 (Signature F).** Every `KindSignature(k)` **SHALL declare `U.Formality`** per C.2.3 (F0…F9).
-— *Note:* Raising signature F **does not** automatically raise claim‑level F; claims follow weakest‑link along their **own** support paths.
-
-**C3.2‑K‑04 (Signature change = content change).** Any change to `KindSignature(k)` that **alters membership** (i.e., would change `Extension(k, slice)` for some `slice`) **SHALL** be recorded as a **content change** (Contexts may version kinds).
-
-#### C.3.2:6.2 - Extension & Membership
-
-**C3.2‑K‑05 (Deterministic membership).** For fixed `(k, slice)`, `MemberOf(e, k, slice)` **MUST** be deterministically evaluable **from observable content in `slice`**.
-— Implication: **“latest” is forbidden**; `Γ_time` must be explicit on `slice` (A.2.6).
-— If a classifier makes external assumptions, they **MUST** be named in `KindSignature`.
-
-**C3.2‑K‑06 (Monotone in `⊑`).** If `k₁ ⊑ k₂`, then for **every** `slice`:
-`Extension(k₁, slice) ⊆ Extension(k₂, slice)`.
-
-**C3.2‑K‑07 (Definedness & fail‑closed).** Each Context **MAY** restrict the **domain of definedness** for `MemberOf(–, k, –)` (e.g., only when a Standard or dataset is present at a given version). Outside that domain, `MemberOf` **MUST** be treated as **not defined** for guard purposes, and guards **MUST fail closed** (deny). Implementations MAY internally return `False`, but there **MUST** be no path where undefined membership yields implicit success.
-
-**C3.2‑K‑08 (Separation from G).** Guards **SHALL** keep **Scope coverage** (USM) and **membership** **as separate predicates**:
-“`U.ClaimScope(Claim) covers TargetSlice` **AND** `MemberOf(?, k, TargetSlice)` is defined/used”.
-
-#### C.3.2:6.3 - Entity set & time
-
-**C3.2‑S‑01 (`U.EntitySet`).** A Context **SHALL** document what counts as `U.EntitySet(slice)` (e.g., “rows in dataset D at version v,” “live objects in service S at build b,” “ontology individuals at vocabulary v”). This documentation **MUST** be stable and addressable via the `slice` tuple.
-**C3.2‑S‑02 (Time).** `slice` **SHALL** specify **`Γ_time`** (point/window/policy). Membership **MUST NOT** rely on implicit recency.
-
-`U.EntitySet(slice)` **MUST NOT** expand implicitly via external defaults or time; its extent is fixed by the `slice` tuple (see **C3.2‑S‑02**).
-
-### C.3.2:7 - Interactions & Placement (informative)
-
-* **With C.3.1.** Kinds carry identity and `⊑`; **no Scope** on kinds. This pattern adds the **intent/extent** layer under those constraints.
-* **With A.2.6 (USM).** A typed claim’s guard normally evaluates, in the order specified by **Annex C.3.A §5 (E‑01)**: (1) typed compatibility, (2) **Scope coverage** at `TargetSlice`, (3) **`MemberOf(?, k, TargetSlice)`** definedness and any instantiation, followed by penalties to **R** and freshness checks. Use **Guard_TypedClaim** / **Guard_TypedJoin** rather than ad‑hoc shapes.
-* **With C.2.3 (F).** Signature F influences claims **only if** the claim **depends on** the signature content; weakest‑link min applies along the claim’s support path.
-* **With C.3.3 (KindBridge).** When `MemberOf` is computed via a **kind mapping across Contexts**, kind‑congruence `CL^k` contributes a **monotone penalty to **R** only (Ψ(`CL^k`)); **F/G MUST NOT** be adjusted.
-* **With Role‑CAL (C.3.4).** A **RoleMask** may **narrow** membership (context‑local adaptation). Frequent masks that encode stable narrowing **SHOULD** be promoted to subkinds (`⊑`).
-
-### C.3.2:8 - Authoring & Review Guidance (informative)
-
-#### C.3.2:8.1 - Authoring `KindSignature`
-
-* **Be explicit and observable.** Prefer predicate‑like clauses over prose (“has VIN format …”; “axles ≥ 2”).
-* **Bind to versions.** Name Standards/schemas by version; avoid “current.”
-* **Declare F honestly.** F3 for controlled narrative is fine in early phases; aim F4+ for durable kinds; consider F7+ for safety‑critical cores.
-* **Name assumptions.** If membership requires external conditions (e.g., calibrated rig), put them in the signature.
-
-#### C.3.2:8.2 - Authoring membership
-
-* **Define `U.EntitySet(slice)`.** Write it down once per Context, make it addressable via the `slice` tuple, and reuse.
-* **Determinism first.** No hidden IO, no implicit time; membership must be recomputable from the slice.
-* **Document definedness.** If `MemberOf` is undefined without a Standard, say so; guards will fail closed.
-* **Respect `⊑`.** If you declare `k₁ ⊑ k₂`, verify subset behavior (C3.2‑K‑06).
-
-#### C.3.2:8.3 - Review checklist (10 minutes)
-
-1. Is **signature F** declared? Is the signature sufficient to evaluate membership?
-2. Is **`U.EntitySet(slice)`** documented and addressable?
-3. Is **membership deterministic** with explicit `Γ_time` (no “latest”)?
-4. If `⊑` links exist, does **subset behavior** hold at sample slices?
-5. Are **Scope** and **membership** kept **separate** in guards?
-6. Any **Cross‑context** classification? If yes, is **KindBridge** referenced (C.3.3)?
-
-### C.3.2:9 - Worked Examples (informative)
-
-#### C.3.2:9.1 - Vehicle (signature F4) and membership
-
-**KindSignature(Vehicle)** *(F4)*:
-
-* `hasVIN(x)` is true and parseable;
-* `axles(x) ≥ 2`;
-* `hasBrakeSystem(x)`;
-* Standards: `registryAPI v1.4`; `Γ_time` policy: rolling 365 d for registry fields.
-
-**`U.EntitySet(slice)`**: “records in `registryAPI v1.4` for plant `A` at build `b`, as of `Γ_time`.”
-**`Extension(Vehicle, slice)`**: all records satisfying the predicates **in that `slice`**.
-**Monotonicity:** `PassengerCar ⊑ Vehicle` ⇒ `Extension(PassengerCar, s) ⊆ Extension(Vehicle, s)`.
-
-#### C.3.2:9.2 - AuthenticatedRequest (definedness & fail‑closed)
-
-**KindSignature(AuthenticatedRequest)** *(F4)*:
-
-* `Request` with `authHeader` present and `authSignature` valid according to `AuthStandard v2.3`;
-* `Γ_time`: point in time for key validity check.
-
-**Definedness:** `MemberOf(–, AuthenticatedRequest, slice)` is **undefined** if `AuthStandard v2.3` is **absent** in `slice` ⇒ guards **fail closed** (C3.2‑K‑07).
-
-#### C.3.2:9.3 - Clinical cohort (low‑F signature; deterministic membership)
-
-**KindSignature(AdultPatient)** *(F3→F4 as it hardens)*:
-
-* `ageYears(x, Γ_time) ≥ N` (jurisdictional N varies; recorded in the Context’s signature note).
-* `EntitySet(slice)`: EHR `ehr‑east v7.5` @ `Γ_time`;
-* Membership deterministic if DOB present; undefined otherwise (fail closed).
-
-### C.3.2:10 - Anti‑patterns & Remedies (informative)
-
-| Anti‑pattern  | Why it’s wrong  | Remedy  |
+| Object | Meaning | Identity and owner |
 | --- | --- | --- |
-| Using “latest” implicitly in membership  | Non‑deterministic; unreproducible  | Require explicit `Γ_time`; treat freshness separately in **R**  |
-| Encoding Scope (“only in EU plant”) in the signature | Confuses applicability with entityOfConcern | Move such conditions to **Claim scope (G)**; keep signature general |
-| Declaring `k₁ ⊑ k₂` but not ensuring subset behavior | Breaks typed reasoning  | Tighten `KindSignature` or drop the `⊑` link  |
-| Treating RoleMask as a different kind  | Catalog sprawl; hidden semantics  | Keep mask as adaptation; promote to subkind if widely reused  |
-| Membership relying on external, unnamed assumptions  | Hidden dependencies; review fatigue  | Name assumptions in the signature; point to Standards/versions  |
+| local `U.Kind` and order | The context-local kind and any `U.SubkindOf` links used by typed reasoning. | C.3 and C.3.1; not this declaration or a public-kind admission. |
+| `KindSignature` | A `U.Signature` declaration episteme whose exact `EntityOfConcern` is the local kind. | A.6.0 and C.2.1 govern the signature episteme and its editions. It is not the kind or another root U-kind. |
+| classification judgment | One evaluation of the declared criterion for an exact candidate, kind, signature edition, and context slice, returning `true`, `false`, or `unknown`. | C.3.2; it is not a direct relation occurrence or claim-status value by default. |
+| `KindExtension(k, slice)` | An optional set-valued representation of the declared candidate values whose judgment is `true` for the pinned signature edition and slice. | Local calculation unless the representation changes a claim-bearing use, when C.29 governs it. |
 
-### C.3.2:11 - Rationale (informative)
+Scope is not a fifth object attached to the kind. A `KindSignature` episteme may have its own `U.ClaimScope`; a separate classification assertion has the scope of that assertion; and `U.ContextSlice` remains an explicit evaluation input.
 
-#### C.3.2:11.1 - Why give **F** to `KindSignature`?
+### C.3.2:5 - KindSignature Declaration
 
-Because rigor in the **definition of a kind** materially affects how safely teams can quantify over it. A signature at **F4** (predicate‑like) makes membership checkable in principle; **F7+** (machine‑checked) can support proof‑carrying development. Keeping this **separate from claim‑level F** prevents “signature formalization” from inflating unrelated claims.
+Author a reusable `KindSignature` only when a named receiving use needs the criterion and assumptions to persist across more than one classification.
 
-#### C.3.2:11.2 - Why **Extension** is not **Scope**
+Its claim content declares:
 
-* **Extension** answers: *“Which entities count as `k` **in this slice**?”*
-* **Scope (G)** answers: *“In which slices does **this claim** hold?”*
-  Blending the two recreates the old failure mode where “more abstract wording” was treated as “wider applicability.” USM already gives the set‑algebra for G; Kind‑CAL supplies the **typed universe** the claim quantifies over.
+- the exact local kind that is its `EntityOfConcern`;
+- the candidate `ValueKind`: the direct kind or value interpretation admitted as candidate input;
+- the membership criterion in terms of direct governed candidate qualities, relations, constructive grounding, or other features;
+- the exact `U.ContextSlice` conditions under which the criterion can be evaluated;
+- the effective `U.ReferenceScheme`;
+- named assumptions, dependencies, standards, versions, units, and temporal policy;
+- its `U.Formality`;
+- an optional `ExtentRule` stating how repeated candidate evaluations feed an extension when a varying extension is current.
 
-#### C.3.2:11.3 - Why **determinism** and **fail‑closed**?
+In A.6.0 terms, `SubjectKind` is the broad candidate kind and `RangedValueKind` is the finite judgment value kind `{true, false, unknown}`. `ExtentRule` is declaration content, not a new ontic relation. Formality characterizes the declaration episteme—not the local kind, candidate, candidate value, judgment truth, or extension. A claim that relies on the signature content evaluates that dependency on its own F–G–R support path; raising signature formality does not upgrade an unrelated claim.
 
-Guards must be **reproducible** and **auditable**: same `slice` ⇒ same membership result. If inputs are missing (undefinedness), the safest default is **deny** (fail closed), prompting either a richer slice or a scope/claim change.
+A changed membership criterion, evaluation-domain declaration, `EntityOfConcern` referent, or effective reference scheme identifies another `U.Signature` episteme edition. C.3.1 separately decides whether the same local kind continues across that declaration change.
 
-### C.3.2:12 - Conformance checklist (normative)
+### C.3.2:6 - One Candidate Judgment
 
-| ID  | Requirement  |
+For exposition, this pattern uses:
+
+`J(candidate, kind, signatureEdition, slice) ∈ {true, false, unknown}`
+
+This is local notation for an evaluation result, not a newly admitted U-kind, an A.14 `MemberOf` occurrence, a direct classification relation, or an evidence relation. Evaluation is reproducible: fixed four inputs and unchanged governed candidate facts yield the same result. The slice names concrete versions and an explicit temporal selector; unqualified `latest` or `current` is not an evaluation input.
+
+1. **Recover the candidate first.** An entity candidate is already individuated under its direct pattern. A non-entity value keeps the identity, unit, scale, and interpretation supplied by the pattern governing that value.
+2. **Pin all four inputs.** Name the candidate, local kind, exact `KindSignature` edition, and exact `U.ContextSlice`.
+3. **Evaluate direct governed features.** A satisfied criterion gives `true`; a known failed criterion gives `false`.
+4. **Keep non-settlement visible.** Missing evidence, an unavailable declared dependency, or a candidate outside the declared evaluation domain gives `unknown`, not `false`.
+5. **Separate support from satisfaction.** An observation, measurement result, source episteme, schema row, or evidence relation may support a classification assertion. It does not substitute for the candidate or make the criterion true merely by existing.
+6. **Separate guard disposition.** A receiving guard checks scope coverage and the classification result as separate predicates and may decline use when the result is `unknown`. That fail-closed use decision does not convert the judgment to `false` and does not change the candidate's world-side features.
+
+When a separate claim-bearing classification assertion is current, it is a C.2.1 episteme. Its exact `EntityOfConcern` is the governed entity about which the classification matters, and its claim content designates the candidate entity or value, local kind, signature edition, context slice, judgment, and relied-on evidence. A value classification may remain inside another claim's content instead of fabricating a value-shaped `EntityOfConcern`. The assertion creates neither candidate nor kind.
+
+A domain that genuinely needs a durable classification-relation occurrence as an object of later relations must supply a separate direct pattern with exact participants, obtaining predicate, occurrence identity, and relation to this judgment. C.3.2 does not mint that occurrence by default.
+
+### C.3.2:7 - Extension as Representation
+
+Materialize `KindExtension(k, slice)` only when a named query, quantification, comparison, review, or publication needs the current true-candidate set.
+
+- Pin the `KindSignature` edition used by the representation even though the compact name shows only `k` and `slice`.
+- State the declared candidate domain without inventing `U.EntitySet`.
+- Include exactly the candidate values whose pinned judgment is `true`; do not insert `unknown` candidates as false or silently omit their unresolved status when the receiving use needs it.
+- Treat braces, rows, indexes, or database results as representations. They do not create a collection holon, an A.14 membership occurrence, a direct classification relation, or the candidate features.
+- Use C.29 when the mathematical lens or represented set changes a claim-bearing use. Otherwise the extension may remain a local calculation.
+
+A changed candidate state or later context slice can change `KindExtension(k, slice)` without changing the signature or local kind. A changed extension row cannot repair an inconsistent declaration or subkind link.
+
+### C.3.2:8 - Subkind Monotonicity and Change
+
+For exact reference-scheme edition `RS`, monotonicity is a law over judgments whenever `SubkindOfObtains(k1, k2; RS)` holds. Use an identified `R_sub : U.SubkindOf` occurrence only when a receiving use needs occurrence identity; an assertion that the predicate holds is a separate C.2.1 episteme:
+
+> When both judgments are defined for the same candidate and context slice under the paired signature editions used by the comparison, `J(candidate, k1, edition1, slice) = true` implies `J(candidate, k2, edition2, slice) = true`.
+
+A counterexample diagnoses an inconsistent subkind link, incompatible signature editions, or an undeclared context bridge. Repair that governing defect; do not silently edit the extension table. Cross-context classification goes through C.3.3. When a kind bridge is used, C.3.3 governs its `CL^k` and reliance/assurance consequence; the bridge does not by itself change signature formality, claim scope, or either local classification judgment.
+
+Keep these changes distinct:
+
+| Change | Direct consequence | What does not follow automatically |
+| --- | --- | --- |
+| criterion, evaluation domain, signature `EntityOfConcern`, or effective reference scheme changes | another `KindSignature` episteme edition | a new local kind; C.3.1 decides continuity |
+| candidate state changes | reevaluate that candidate in the relevant slice | a new signature or kind |
+| context slice changes | another judgment input and potentially another extension | scope on the kind |
+| formality or evidence changes | declaration rigor or assertion support changes | a different judgment truth in an otherwise fixed and already settled world |
+| publication form changes | another form or carrier for the same episteme may exist | another signature, kind, or classification |
+
+### C.3.2:9 - Required Worked Cases
+
+#### C.3.2:9.1 - Physical pump
+
+Plant scheme `PS-7` uses local kind `CoolingPumpKind`. Signature edition `CPS-2` declares pump candidates and a criterion in terms of directly governed flow, heat-transfer, and operating-state features for plant slice `S-14`.
+
+Pump #14 is independently identified as the physical candidate. A calibrated measurement-result episteme supports the assertion that its flow and temperature-difference features meet the criterion; the measurement result is not Pump #14 and does not constitute its cooling performance. With those feature facts settled, `J(Pump #14, CoolingPumpKind, CPS-2, S-14) = true`. An extension used by a maintenance query may represent Pump #14, but the query row does not create its classification.
+
+#### C.3.2:9.2 - Episteme and publication form
+
+The exact maintenance-instruction episteme `MI-22` is evaluated against local kind `DiagnosticInstructionKind` using its claim-bearing content and governed subject. Its PDF and HTML manifestations are publication forms or representations. Converting the PDF to HTML does not change the candidate episteme, satisfy the criterion, or create another kind. If the content is unchanged, the same candidate judgment can remain current under the same edition and slice.
+
+#### C.3.2:9.3 - Non-entity temperature value
+
+The value `87 °C`, interpreted under a declared measurement scale, unit, reference scheme, and time, is evaluated against local kind `HighTemperatureValueKind` whose criterion is a declared interval. The candidate remains that governed non-entity value; no value-shaped entity is fabricated. The classification may stay inside the measurement or diagnostic claim content. The unit and interval must be pinned before a `true` or `false` result is possible.
+
+#### C.3.2:9.4 - Schema label
+
+A database row carries schema label `Customer`, but the receiving claim asks whether account holder #441 is a contractual customer. The label is a cue or supporting source, not the contractual relation that makes the world-side criterion hold. The practitioner must recover the actual candidate and the direct contractual facts. If the candidate were instead the row itself and the local kind concerned row shapes, that different candidate and criterion would have to be stated explicitly.
+
+#### C.3.2:9.5 - Unavailable measurement
+
+At later slice `S-15`, the cooling-pump signature still requires a governed flow measurement, but the measurement dependency is unavailable. The current evaluation returns `unknown`. A safety guard declines reliance on Pump #14 as a cooling pump for that use. The guard does not return `false`, prove that the pump lacks cooling performance, or remove it from a historical extension for `S-14`.
+
+### C.3.2:10 - Additional Transfer Cases
+
+| Case | Repaired use |
 | --- | --- |
-| **C3.2‑K‑03** | Every `KindSignature(k)` **declares `U.Formality`** (F0…F9).  |
-| **C3.2‑K‑04** | Signature changes that alter membership are **content changes** (Contexts may version kinds).  |
-| **C3.2‑K‑05** | `MemberOf(e, k, slice)` is **deterministic** for fixed `(k, slice)` (no “latest”).  |
-| **C3.2‑K‑06** | **Monotonicity:** if `k₁ ⊑ k₂` then `Extension(k₁, s) ⊆ Extension(k₂, s)` for all `s`.  |
-| **C3.2‑K‑07** | **Definedness:** outside domain, membership **fails closed**; guards deny use.  |
-| **C3.2‑K‑08** | **Separation:** guards keep **Scope coverage** (USM) and **membership** as distinct predicates. |
-| **C3.2‑S‑01** | The Context **documents `U.EntitySet(slice)`** (stable, addressable via `slice`).  |
-| **C3.2‑S‑02** | `slice` **specifies `Γ_time`**; membership **must not** rely on implicit recency.  |
+| Vehicle and PassengerCar | Keep explicit VIN, axle, brake, standard-version, and time conditions in signature editions; test subkind monotonicity over candidate judgments. A registry query result is an extension representation, not `U.EntitySet`. |
+| AuthenticatedRequest | Name `AuthStandard v2.3` and key-validity time as dependencies. If the standard is unavailable, the judgment is `unknown` and the receiving guard fails closed without treating the request as known unauthenticated. |
+| AdultPatient | Pin jurisdictional threshold, measurement time, and candidate identity. Missing date-of-birth support yields `unknown`; it does not turn the person into a non-adult or make an EHR row the candidate. |
+
+### C.3.2:11 - Work Boundary
+
+Classification does not weaken the work ontology:
+
+- `U.Work` is the admitted U-kind;
+- `W : U.Work` is one independently grounded, world-side, dated 4D work occurrence under the direct work pattern;
+- a plan, expected-work item, log, card, database row, field bundle, assertion, or description about W is a separate episteme;
+- performer assignment, enacted method, temporal extent, containing system, affected referent, material binding, resource use, transformation, production, result, delivery, and acceptance remain separately governed.
+
+A local kind may classify an already identified W. A formal kind symbol, work label, plan, or record never occupies W's individual position, and record existence does not make planned work actual.
+
+### C.3.2:12 - Authoring Rhythm
+
+1. Start with one readable classification sentence and its practical use.
+2. Recover the exact candidate and direct features before discussing evidence.
+3. Reuse an existing signature edition when it truly governs the criterion, scheme, dependencies, and evaluation domain.
+4. Author a new signature edition only when repeated use needs the changed declaration.
+5. Return `true`, `false`, or `unknown` without folding in the guard decision.
+6. Create an extension representation only for a named set-consuming use.
+7. If a separate assertion is required, give the C.2.1 episteme its exact EntityOfConcern, content, scope, evidence use, and edition.
+
+### C.3.2:13 - Conformance Checklist
+
+| Check | Requirement |
+| --- | --- |
+| `CC-C32-1` | Local kind, `KindSignature` episteme, exact four-input judgment, and optional extension representation are separately recoverable. |
+| `CC-C32-2` | The signature's exact EntityOfConcern is the local kind, and its content names candidate domain, criterion, slice conditions, reference scheme, assumptions, dependencies, formality, and any current extent rule. |
+| `CC-C32-3` | Formality characterizes the declaration episteme only. |
+| `CC-C32-4` | Direct governed candidate features make the criterion hold or fail; evidence supports an assertion and does not create membership. |
+| `CC-C32-5` | Missing evidence, unavailable dependency, or out-of-domain input yields `unknown`, distinct from known `false`. |
+| `CC-C32-6` | No A.14 `MemberOf`, `U.EntitySet`, collection holon, or direct classification occurrence is inferred from the judgment or extension. |
+| `CC-C32-7` | Any separate classification assertion is a C.2.1 episteme and creates neither candidate nor kind; a value classification need not fabricate a value-shaped EntityOfConcern. |
+| `CC-C32-8` | Subkind monotonicity is tested over defined judgments for the same candidate and slice; counterexamples repair links, editions, or bridges rather than extension rows. |
+| `CC-C32-9` | Signature-edition change, C.3.1 kind continuity, candidate-state change, slice change, and extension change remain distinct. |
+| `CC-C32-10` | The kind carries no scope; the context slice is an evaluation input, and declaration/assertion scopes stay on their own epistemes. |
+| `CC-C32-11` | The five required cases and the `U.Work`/W/episteme distinction all close under the same four-object architecture. |
+| `CC-C32-12` | Ordinary use stays readable, and reusable declarations or extensions have named receiving uses. |
+
+### C.3.2:14 - Common Anti-Patterns and Remedies
+
+| Anti-pattern | Remedy |
+| --- | --- |
+| Treating a kind and its `KindSignature` as one object | Identify the local kind and the declaration episteme separately. |
+| Using a measurement, observation, schema label, or source row as membership | Recover the direct candidate features; use the item only as governed support. |
+| Returning `false` for missing or unusable information | Return `unknown`; let the receiving guard decide whether to decline use. |
+| Reusing A.14 `MemberOf` or minting a direct relation by notation | Keep the C.3.2 result as a classification judgment unless a domain-specific direct pattern is justified. |
+| Restoring `U.EntitySet` or treating braces as ontology | Describe the candidate domain and extension as a representation; use C.29 when claim-bearing. |
+| Attaching scope or formality to the kind | Keep scope and formality on the declaration or assertion episteme that owns them. |
+| Editing an extension to hide a subkind counterexample | Repair the link, incompatible editions, or missing bridge. |
+| Classifying a record as actual Work | Recover an independently grounded `W : U.Work`; keep its record as a separate episteme. |
+
+### C.3.2:15 - Consequences
+
+**Benefits.** Classification becomes inspectable without ontology growth, evidence-created truth, or two-valued coercion. Repeated criteria can be reused, and set-consuming uses can receive a bounded representation.
+
+**Costs.** Reliance-bearing uses must pin a signature edition and context slice and preserve `unknown` through the receiving decision.
+
+**Risks avoided.** Kind/declaration collapse, record ontology, implicit time, false-for-unknown, mathematical-set overread, silent subkind repair, and kind/individual substitution are blocked.
+
+### C.3.2:16 - Rationale
+
+The kind, the declaration used to evaluate it, one candidate judgment, and a set representation change for different reasons. Treating them as one object makes evidence, time, scope, and notation rewrite ontology. Their separation preserves ordinary reasoning while supporting exact review when a repeated or safety-relevant use needs it.
+
+### C.3.2:17 - SoTA-Echoing
+
+Model theory and type systems distinguish intensional declarations, satisfaction judgments, and extensions; measurement and evidence disciplines distinguish the subject feature from its observation or support. C.3.2 combines those separations with FPF's episteme identity, context-slice, representation, and direct-object boundaries.
+
+### C.3.2:18 - Relations
+
+- **Builds on:** `C.3`, `C.3.1`, A.6.0 declaration identity, C.2.1 episteme identity, A.2.6 context slices and claim scope, and direct patterns for candidate identity and features.
+- **Coordinates with:** `C.3.3` cross-context bridges, `C.3.4` local adaptations, `C.29` mathematical representations, C.2.3 formality, F-G-R evidence and assurance, A.14 collection membership, and `E.24.UK` durable U-kind admission.
+- **Does not replace:** the direct subject pattern, evidence-use relation, collection membership, claim-scope governor, guard decision, public-kind admission, or a separately justified durable classification-relation pattern.
 
 ### C.3.2:End

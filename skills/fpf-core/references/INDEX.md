@@ -13,22 +13,24 @@
 | A.2.5 | RoleStateRelation@BoundedContext - Role State Space and Enactable-State Admission | state machine, RSG, role state, enactability, role-state evolution. |
 | A.2.6 | Unified Scope Mechanism (USM): Context Slices & Scopes | scope, applicability, ClaimScope (G), WorkScope, set-valued. |
 | A.2.7 | RoleRelationStructure@BoundedContext - Context-Local Role Relations and Representation-Lens Boundary | role algebra, specialization (`≤`), incompatibility (`⊥`), bundles (`⊗`), separation of duties (SoD) |
-| A.2.8 | `U.Commitment` (Deontic Commitment Object) | commitment, deontics, obligation, permission, prohibition |
+| A.2.8 | `U.Commitment` (Deontic Commitment Object) | commitment, deontics, obligation, recommendation-as-duty, prohibition |
+| A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, permission exercise, actual non-violation finding, permission or prohibition conflict. |
 | A.2.9 | `U.SpeechAct` (Communicative Work Object) | speech act, communicative work, approval/authorization/publication/revocation, provenance, act≠utterance≠carrier |
-| A.3 | Transformer Constitution (Quartet) | action, causality, change, System-in-Role, MethodDescription |
-| A.3.1 | `U.Method`: Context-Defined Way of Doing | method, way of doing, submethod, method composition, non-agentive holon |
-| A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method description, recipe, SOP, code, model |
+| A.3 | Transformer Constitution (Quartet) | — |
+| A.3.1 | `U.Method`: Context-Defined Way of Doing | — |
+| A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method-description membership, claim-bearing episteme, exact `U.Method` EntityOfConcern, substantive way-of-doing claim, same method versus equivalent descriptions |
 | A.3.3 | U.Dynamics: State-Space and Transition-Law Episteme | dynamics, state space, transition law, observation relation, prediction |
-| A.3.4 | `U.Transformation`: Bounded Change Under Conditions | transformation, bounded change, transformed entity, transformer, input/output conditions |
+| A.3.4 | `U.Transformation`: Bounded Change Under Conditions | actual bounded change, changed referent, occurrence boundary, actual subject facts, continuity and reidentification |
 | A.3.4.P | Transformation Ontic Precision Restoration | — |
 | A.4 | Temporal Duality & Open-Ended Evolution Principle | design-time, run-time, evolution, versioning, open-ended state change |
 | A.5 | Open-Ended Kernel & Extension Layering | FPF architecture, specialization vs dependancy hierarhies, modularity, extensibility. |
 | A.6 | Signature Stack & Boundary Discipline | boundary, signature stack, boundary claim-classification fields, A.6.B L/A/D/E claims, authority-wording split |
 | A.6.RSIG | Recognition Signatures for Descriptions | — |
-| A.6.B | Boundary Norm Square (Laws / Admissibility / Deontics / Work-Effects) | boundary norm square, atomic claims, L/A/D/E claim classification, laws vs gates vs commitments vs evidence, admissible use |
-| A.6.C | Contract Unpacking for Boundaries | contract bundle unpacking, SLA/guarantee claim classification, promise content (promise content) ≠ work, promise-act/utterance/commitment separation, Boundary Norm Square (L/A/D/E) |
-| A.6.0 | U.Signature - Universal, law-governed declaration for a SubjectKind over a RangedValueKind | signature, vocabulary, laws, applicability, bounded context. |
-| A.6.1 | U.Mechanism - Law-governed application to a SubjectKind over a RangedValueKind | — |
+| A.6.B | Boundary Norm Square (Laws / Admissibility / Deontics / Work-Effects) | boundary norm square, atomic claims, L/A/D/E claim classification, laws vs entry predicates vs deontic results vs evidence, accountable commitments |
+| A.6.C | Contract Unpacking for Boundaries | contract bundle unpacking, SLA/guarantee claim classification, promise content ≠ work, promise-act/utterance separation, accountable commitment vs exact permission result |
+| A.6.REL | Relation Obtaining and Individuated Relation Occurrences | — |
+| A.6.0 | U.Signature - Reusable Law-Governed Declaration Episteme | — |
+| A.6.1 | U.Mechanism - Reusable Law-Governed Operation Declaration | — |
 | A.6.2 | `U.EffectFreeEpistemicMorphing` — Effect‑free morphisms of epistemes | — |
 | A.6.3 | `U.EpistemicViewing` — EntityOfConcern-preserving morphism | — |
 | A.6.3.CSC | Controlled Semantic Coarsening | — |
@@ -37,11 +39,13 @@
 | A.6.3.NAR | Structure-to-Narrative Rendering | — |
 | A.6.4 | `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism | — |
 | A.6.P | Relational Precision Restoration (RPR) — Kind‑Explicit Qualified Relation Discipline | relation precision restoration, under-specified relational language, support/support-headed wording, selected support reading, RelationKind |
+| A.6.P.WMR | Exact Relation Recovery for Method and Work Claims | — |
+| A.6.RCD | Needed Relation Claim Derivation and Relation-Kind Admission | — |
 | A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, interface wording, role wording, slot wording, field |
 | A.6.A | Action-Invitation Precision Restoration (ACT-INV) | affordance, action invitation, action-first language, post-threshold classification, A.15 docking |
 | A.6.F | Function and Functional Precision Restoration (RPR-FUNCTION) | function wording, functional architecture, FunctionalStructure, function-use repair, capability/effect |
 | A.6.M | Module Relation Repair | module relation, component, interface, port, platform |
-| A.6.5 | U.RelationSlotDiscipline - SlotKind, ValueKind, RefKind, and slot-operation discipline | slot, argument position, value, reference, signature |
+| A.6.5 | Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline | — |
 | A.6.6 | Base Declaration Discipline - Kind-explicit, scoped, witnessed base declaration discipline (with base-change lexicon) | base declaration, basedness, baseRelation, SWBD, witnesses |
 | A.6.7 | `MechSuiteDescription` — Description of a set of distinct mechanisms | mechanism suite, distinct mechanisms, suite obligations, spec pins, CN-Spec |
 | A.6.8 | Service Polysemy Unpacking (RPR-SERV) | service polysemy, service situation, interface semantics, promise content, provider principal |
@@ -49,6 +53,9 @@
 | A.6.S | U.SignatureEngineeringPair - Signature engineering via a ConstructorSignature and a TargetSignature | signature engineering, TargetSignature, ConstructorSignature, two-signature arrangement, EFEM |
 | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) | wholeness, integrity, part-of, boundary, environment |
 | A.7 | Strict Distinction (Clarity Lattice) | category error, EntityOfConcern ≠ Description episteme, Role ≠ Work, ontology. |
+| A.7.1 | Consequence-Guided Ontological Problem Solving | wrong engineering consequence, ontology repair, direct-owner return, bounded unresolved result. |
+| A.7.2 | FPF Ontology-Premise Reconciliation | same receiving claim and scope, incompatible FPF consequences, premise reconciliation, source-use conflict, optional convergence. |
+| A.7.CP | Constructive-Premise Compact and Reasoning-Basis Use | constructive-premise compact, claim content, reasoning-basis use, ClaimUsedAsReasoningBasisRelation@Context. |
 | A.8 | Universal Core Principle | universality, transdisciplinary, domain-agnostic, kernel-level U-kind admission. |
 | A.9 | Cross-Scale Consistency (C-3) | composition, aggregation, holarchy, invariants, roll-up. |
 | A.10 | Evidence Graph Referring (C-4) | evidence, traceability, provenance, evidence carrier, claim support |
@@ -57,11 +64,12 @@
 | A.13 | The Agential Role & Agency Spectrum | agency as role, agency spectrum, contextual role assignment, autonomy grading, substrate-neutral autonomy. |
 | A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | mereology, part-of, ComponentOf, PortionOf, PhaseOf |
 | A.15 | Role-Method-Work Alignment (Contextual Enactment) | role-method-work distinction, `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan` |
-| A.15.1 | `U.Work`: Dated Performed Work Occurrence | work occurrence, performed enactment, actuals, trace, `TemporalPartOf_work` |
-| A.15.2 | `U.WorkPlan`: The Schedule of Intent | plan, schedule, intent, forecast. |
-| A.15.3 | `SlotFillingsPlanItem` — Planned Slot-Fillings Baseline (WorkPlanning PlanItem) | planned baseline, slot-bearing description, planned filler, edition pins, `Γ_time` selector |
+| A.15.1 | `U.Work`: Dated Performed Work Occurrence | `U.Work` admitted kind, world-side dated occurrence, `performedBy`, `enactsMethod`, occurrence assertion and record separation |
+| A.15.2 | `U.WorkPlan`: The Schedule of Intent | intended-work episteme, present EntityOfConcern, possible future performance, `PlanItem` content, horizon |
+| A.15.3 | `SlotFillingsPlanItem` — Declaration-Local Planned Designation | WorkPlan claim content, intended-performance designator, exact declaration member, direct owner, participant/argument/result meaning |
 | A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, reliance appearance, work or reliance use, required claim before use, required instituted effect before use |
-| A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, resource-readiness refs |
+| A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, prospective permission inputs |
+| A.15.PROD | Production Work, Entity-Identity Inception, and Production Completion Recovery | — |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
 | A.16.0 | `U.LanguageStateMoveTrajectory` - Optional trajectory-account normal form over the language-state `U.CharacteristicSpace` | trajectory account, lineage, fork, merge, supersedes |
 | A.16.1 | `U.PreArticulationCuePack` | cue pack, pre-articulation, early publication, cue nucleus, primary witness |
@@ -111,7 +119,7 @@
 | B.5.2.1 | Creative Abduction with NQD | creative abduction, NQD binding, Γ_nqd.generate, Creativity-CHR, Q-front |
 | B.5.3 | Domain-Concept Bridge | domain vocabulary, concept bridge, local sense, bounded context, bridge scope |
 | C.2 | KD‑CAL | knowledge, epistemic, evidence, trust, assurance |
-| C.2.1 | U.Episteme - Epistemes and their slot relation | — |
+| C.2.1 | `U.Episteme`: Constitution, Empirical Grounding, and Edition Relations | — |
 | C.2.P | Epistemic Precision Restoration | — |
 | C.2.2 | Reliability R in the F–G–R triad | Reliability (R), warrant, evidence-bound, F–G–R, ClaimScope (G) |
 | C.2.2a | C.2.2a - `U.LanguageStateSpace` - Language-state chart over `U.CharacteristicSpace` | — |
@@ -123,12 +131,12 @@
 | C.2.7 | `U.LanguageStateRepresentationFactorBundle` | representation factors, locality, sparsity, symbolicity, factor bundle |
 | C.2.P.DR | Declarative Representation Precision Restoration | — |
 | C.3 | Kinds, Intent and Extent, and Typed Reasoning | kind, type, intension, extension, subkind |
-| C.3.1 | U.Kind and U.SubkindOf Core | kind, subkind, partial order, type hierarchy. |
-| C.3.2 | `KindSignature` (+F) & `Extension`/`MemberOf` | KindSignature, intension, extension, MemberOf, Formality F |
-| C.3.3 | `KindBridge` & `CL^k` — Cross‑context Mapping of Kinds | KindBridge, type-congruence, CL^k, cross-context mapping, R penalty. |
-| C.3.4 | `RoleMask` — Contextual Adaptation of Kinds (without cloning) | RoleMask, context-local adaptation, constraints, subkind promotion. |
-| C.3.5 | `KindAT` — Intentional Abstraction Facet for Kinds (K0…K3) | KindAT, abstraction tier, K0-K3, informative facet, planning. |
-| C.3.A | Typed Guard Macros for Kinds + USM (Annex) | Typed guard, ESG, Method-Work, USM, Kind-CAL |
+| C.3.1 | U.Kind and U.SubkindOf Core | local kind, U.SubkindOf direct relation, relation-obtaining predicate, relation occurrence, assertion episteme |
+| C.3.2 | Kind Intent, Membership Judgment, and Extension | local kind, KindSignature declaration episteme, candidate classification, true/false/unknown, KindExtension representation. |
+| C.3.3 | `KindBridge` & `CL^k` — Cross-context Mapping of Kinds | KindBridge direct relation, bridge assertion episteme, target judgment, CL^k, loss |
+| C.3.4 | `RoleMask` — Contextual Adaptation of Kinds (without cloning) | RoleMask declaration episteme, masked judgment, candidate-feature constraint, vocabulary binding, stable-refinement review. |
+| C.3.5 | `KindAT` — Intentional Abstraction Facet for Kinds (K0…K3) | KindAT, K0-K3, editorial facet, declaration planning, assurance planning. |
+| C.3.A | Typed Guard Macros for Kinds + USM (Annex) | declaration compatibility, exact candidate judgment, true/false/unknown, guard refusal, regulatory |
 | C.11 | Decision Theory (Decsn-CAL) | decision theory, DecisionSubject, OptionSet, comparison basis, ChoiceRule |
 | C.13 | Constructional Mereology (Compose‑CAL) | mereology, part-whole, composition, sum, set |
 | C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurement, measurement template, `U.DHCMethod(Ref)`, `U.Measure`, `U.Unit` |
@@ -139,11 +147,13 @@
 | C.18.1 | Scaling‑Law Lens Binding (SLL) | scaling law, scale variables (S), compute‑elasticity, data‑elasticity, resolution‑elasticity |
 | C.19 | Explore–Exploit Governor (E/E‑LOG) | explore-exploit, live candidate pool, pool-policy result, widen, keep frontier |
 | C.19.1 | Bitter‑Lesson Preference (BLP) | — |
+| C.19.2 | Use-Bounded Apparatus Application | use-bounded apparatus application, one selected apparatus, configuration or adaptation work, setup cost, declared result and guarantee |
 | C.20 | Composition of `U.Discipline` (Discipline‑CAL) | discipline, U.AppliedDiscipline, U.Transdiscipline, episteme corpus, standards |
 | C.21 | Discipline‑CHR - Field Health & Structure | discipline, field health, reproducibility, standardisation, alignment |
 | C.22 | Problem Typing & TaskSignature Assignment (Problem-CHR) | — |
 | C.22.1 | Task-family adaptation signature | — |
-| C.22.2 | ProblemCard@Context | problem card, problem-side record, P2W-ready, Thin problem card, `setContextRef` |
+| C.22.PFR | Problematic-For Relation | actual problematic-for relation, actual condition, problem-for entity, applicability predicate, relation occurrence. |
+| C.22.2 | ProblemCard@Context | problem card episteme, problem-side record, P2W-ready, Thin problem card, `setContextRef` |
 | C.23 | Method‑SoS‑LOG — MethodFamily Evidence & Maturity | MethodFamily, evidence, maturity, SoS-LOG, admit |
 | C.24 | Agentic Tool-Use and Call Planning (C.Agent-Tools-CAL) | — |
 | C.25 | Q-Bundle: Authoring "-ilities" as Structured Quality Bundles | quality bundle, -ility, quality family, characteristic plus scope, mechanism/status slots |
@@ -232,7 +242,7 @@
 | E.17.AUD | PublicationUnit Stability Discipline | — |
 | E.17.AUD.LHR | PublicationUnit Stability Discipline and Local Head Restoration | — |
 | E.17.AUD.OOTD | PublicationUnit Stability Discipline and PublicationUnit Primary EntityOfConcern Discipline | — |
-| E.18 | Transformation Flow Structure | transformation flow structure, selected transformations, flow valuation, crossings, guards |
+| E.18 | Transformation Flow Structure | selected transformation-flow structure, independently grounded actual transformations, adjacent governed loci, U.Transfer, flow valuation |
 | E.18.1 | P2W Problem-to-Work Carry-Through | — |
 | E.18.2 | Transformation Flow Mathematical Description | mathematical description, transformation-flow math, graph expression, path expression, algebraic description |
 | E.18.3 | Constraint-Governed Transformation-Flow Unfolding Structure | — |
@@ -244,7 +254,7 @@
 | E.24 | U.Ontic and Ontic Introduction Discipline | — |
 | E.24.CD | Ontic Candidate Detection | — |
 | E.24.PUB | Ontic Description and Publication Discipline | — |
-| E.24.UK | U-kind Governance and Ontic Settlement Coupling | — |
+| E.24.UK | U-kind Admission and Ontic Settlement | — |
 | F.0.1 | Contextual Lexicon Principles | local meaning, context, semantic boundary, bridge, congruence |
 | F.1 | Domain‑Family Landscape Survey | — |
 | F.2 | Term Harvesting & Normalisation | term harvesting, lexical unit, normalization, provenance, source-text terms. |

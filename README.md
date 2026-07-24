@@ -38,7 +38,7 @@ The skills transform the AI into a specialized assistant that follows proven met
 - [Document Processing](#document-processing)
   - [PDF to Markdown (pdf2md)](#-pdf-to-markdown-pdf2md)
 - [Development Tools](#development-tools)
-  - [Spec Decomposer](#-spec-decomposer)
+  - [FPF Sync](#-fpf-sync)
   - [Agent Skill Builder](#-agent-skill-builder)
 - [Project Management](#project-management)
   - [Project Vault](#-project-vault)
@@ -170,18 +170,18 @@ Extracts PDF content into clean Markdown: text via pdfplumber + image/diagram de
 
 Tools for creating and managing AI agent skills and FPF/DPF/LPF documentation.
 
-### 📚 Spec Decomposer
+### 🔄 FPF Sync
 
-Splits monolithic framework specifications (FPF/DPF/LPF) into atomic skill reference files. Includes Python scripts for automated decomposition of FPF (`:End`-delimited patterns) and DPF (sections 1–10 structure) monoliths.
-
-**Depends on:** `fpf-core`, `dpf-fpf-literacy`, `dpf-lfw-architecture`
+Keeps the `fpf-core` skill in sync with the canonical FPF monolith (`FPF-Spec.md`). Self-contained tool that pulls the latest spec, decompiles it into atomic reference files, and updates the skill metadata.
 
 **Use when:**
-- Decomposing a framework monolith into skill references
-- Updating references/ after monolith specification changes
-- Setting up a new DPF/LPF skill from a monolith spec
+- The FPF specification has been updated (new commits upstream)
+- The `fpf-core` skill references are stale or show wrong counts
+- Running scheduled maintenance on layered framework workspace skills
 
-**Location:** `skills/spec-decomposer/`
+**Dependencies:** Python 3.10+, `git` in PATH.
+
+**Location:** `skills/fpf-sync/`
 
 ### 🔧 Agent Skill Builder
 
