@@ -39,7 +39,7 @@ dependencies:
 
 **Plain name.** Check who performed this work under which role assignment.
 
-Use this pattern when one dated `U.Work` occurrence is being attributed to a performer and the attribution must refer to the exact `U.RoleAssignment` under which the performer acted.
+Use this pattern when deciding whether one exact dated Work individual `W : U.Work` was performed under one exact obtaining assignment occurrence `RA : U.RoleAssignment`. When it was, the direct world-side relation `performedUnderAssignment(W, RA)` obtains. A separate attribution assertion or record may designate `W` and `RA` and state that the relation obtains.
 
 Typical moments include:
 
@@ -53,7 +53,7 @@ Typical moments include:
 
 **Primary working reader.** An engineer, operator, method author, manager, or FPF author deciding whether a performed-work attribution is grounded strongly enough for the next use.
 
-**First useful move.** Name the work occurrence and the referenced assignment occurrence. Recover the assignment's holder system, role value, role-taxonomy episteme, effective reference scheme, and assignment window before judging the attribution.
+**First useful move.** Name the Work occurrence and the assignment occurrence that may participate in the attribution relation. Recover the assignment's holder system, role value, role-taxonomy episteme, effective reference scheme, and assignment window before deciding whether `performedUnderAssignment(W, RA)` obtains.
 
 **What goes wrong if missed.** Assignment is treated as proof that work happened; a work log names a person but not the assignment episode; a context-like word hides the role taxonomy and interpretation scheme; or an episteme is made the performer because it described, constrained, or evidenced the work.
 
@@ -63,7 +63,7 @@ Typical moments include:
 
 ### F.6:1 - Problem Frame
 
-`U.RoleAssignment` says that one admitted `U.System` holds one `U.Role`, interpreted through one role-taxonomy episteme and effective reference scheme, during one assignment episode. `U.Work` says that a dated occurrence happened. Neither statement alone says that this work was performed under this assignment.
+`U.RoleAssignment` admits assignment-relation occurrences; `U.Work` admits Work individuals. One exact `RA : U.RoleAssignment` is a world-side assignment-relation occurrence that relates an admitted holder System to one role value, one role-taxonomy episteme, and one effective reference scheme and obtains throughout one assignment episode. One exact `W : U.Work` is a dated world-side Work occurrence. The existence of `RA` and `W` does not by itself establish the additional world-side attribution between them: `performedUnderAssignment(W, RA)` must separately obtain. A distinct assertion or record may designate `RA` and `W`, state that `RA` obtains, state that `W` occurred, or state that the attribution relation obtains.
 
 F.6 governs the missing direct relation. The assignment is one participant and the work occurrence is the other. A roster row may assert the assignment; a work log may assert the work and attribution; evidence may support either assertion. Those epistemes help a system know or use the relation, but they do not become relation participants and do not make the world-side relation obtain merely by being recorded.
 
@@ -136,7 +136,7 @@ An evidence gap leaves a relied-on attribution assertion unresolved. It does not
 
 #### F.6:4.3 - Recover the Exact Assignment
 
-Before relying on the attribution, recover the four direct participants of the referenced generic assignment:
+Before relying on the attribution, recover the four direct participants of the exact assignment occurrence `RA` that fills `RoleAssignmentSlot`:
 
 ```text
 RoleAssignmentRelationSignature:
@@ -196,7 +196,7 @@ Expose the relation declaration and occurrence key only when a receiving use mus
 ### F.6:5 - Invariants
 
 1. Every performed-work attribution relates one exact `U.Work` occurrence to one exact `U.RoleAssignment` occurrence.
-2. The referenced assignment keeps exactly four fixed participants and one maximal continuous obtaining extent; no mandatory `U.BoundedContext`, generic context slot, or optional model-use participant is added.
+2. The assignment occurrence `RA` in `RoleAssignmentSlot` keeps exactly four fixed participants and one maximal continuous obtaining extent; no mandatory `U.BoundedContext`, generic context slot, or optional model-use participant is added.
 3. The actual maximal continuous extent of the assignment occurrence covers the attributed portion of the work interval; a declared or recorded window alone does not establish coverage.
 4. Assignment does not prove performance, and performance attribution does not prove capability, state, method validity, result quality, or acceptance.
 5. `RoleEnactment` wording is repaired to dated work plus direct `performedUnderAssignment`; no duplicate enactment object is retained.
@@ -209,8 +209,8 @@ Expose the relation declaration and occurrence key only when a receiving use mus
 ### F.6:6 - Reasoning Primitives
 
 ```text
-RoleAssignment RA obtains
-  and U.Work W obtains
+RA : U.RoleAssignment is one exact obtaining assignment-relation occurrence
+  and W : U.Work is one exact dated Work occurrence
   and RA.HolderSystemSlot actually performs W under RA.RoleValueSlot
   and the assignment predicate for RA obtains throughout the attributed work interval
   -> performedUnderAssignment(W, RA) obtains.
@@ -310,7 +310,7 @@ If Alice performs `ApprovalWork-481`, recover a separate `U.RoleAssignment` unde
 
 ### F.6:12 - Rationale
 
-The direct relation is needed because `U.RoleAssignment` and `U.Work` answer different questions. The assignment says who holds which role under which interpretation and during which episode. The work occurrence says what happened. `performedUnderAssignment` says that this work was performed under that assignment.
+The direct relation is needed because `U.RoleAssignment` and `U.Work` admit different kinds of world-side occurrence. One obtaining assignment occurrence `RA` relates its holder System to a role value under one interpretation and throughout one episode; one Work individual `W : U.Work` is the dated Work occurrence. `performedUnderAssignment(W, RA)` either obtains or does not obtain as the additional world-side attribution between them. A distinct assertion or record may designate `RA` and `W`, state that `RA` obtains, state that `W` occurred, or state that the attribution relation obtains.
 
 Making a log, status, decision, or evidence item a relation participant would confuse world-side attribution with knowledge of attribution. Creating `RoleEnactmentFact` would duplicate the same pair under a second identity. The two-participant relation preserves realism and keeps correction local: changing an evidence use does not rewrite work or assignment; discovering a different performer changes the attribution assertion and, when demonstrated, the selected relation occurrence.
 

@@ -1,24 +1,47 @@
 ---
 id: E.24.CD
-title: Ontic Candidate Detection
+title: "Ontic Candidate Detection and First-Use Disposition"
 status: Stable
 keywords: []
 dependencies:
   builds_on:
     - E.24
+    - E.24.UK
+    - C.2.1
+    - C.3
+    - C.3.1
+    - C.3.2
+    - E.24.PUB
+    - C.29
+    - C.2.P.DR
+    - A.6.5
+    - A.6.RSIR
+    - A.6.F
+    - A.6.P
     - E.10
     - E.10.ARCH
-    - F.19
-    - A.19.ECS
-    - C.2.1
-  coordinates_with:
-    - E.21
-    - E.9.DA
-    - E.2.DA
     - F.18
+  coordinates_with:
+    - A.6.RCD
+    - E.17.0
+    - A.1
+    - B.1
+    - B.2
+    - A.14
+    - C.13
+    - A.3.4
+    - A.15.1
+    - C.28
+    - A.6.0
+    - C.22.PFR
+    - C.22.2
+    - E.18.1
+    - E.23
+    - A.19
+    - A.19.ECS
 ---
 
-# E.24.CD: Ontic Candidate Detection
+# E.24.CD: Ontic Candidate Detection and First-Use Disposition
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,7 +49,7 @@ dependencies:
 
 ---
 
-## E.24.CD - Ontic Candidate Detection
+## E.24.CD - Ontic Candidate Detection and First-Use Disposition
 
 > **Type:** Part E FPF authoring discipline pattern
 > **Status:** Stable
@@ -34,198 +57,157 @@ dependencies:
 
 ### E.24.CD:0 - Use This When
 
-Use this pattern when a recurring FPF construct is an ontic candidate, but the current source material is still a tangle of names, fields, cards, records, tables, schemas, diagrams, views, examples, or nearby pattern fragments.
+Use this pattern when a recurring word, card, table, schema, diagram, record, draft pattern row, or field bundle looks like a new FPF subject and the author must decide what to do next.
 
 Typical moments:
 
-- one word such as "process", "source", "quality", "architecture", "problem", "view", "role", "function", "mechanism", or "method" keeps pointing to several FPF values at once;
-- several patterns repeat a similar slot list, field list, boundary formula, or generic semio warning;
-- a project data structure looks concept-shaped, but it may only be a publication form or local record;
-- a draft ToC row or older source label names a family that no current pattern yet governs;
-- a proposed new `U.*` kind feels useful, but it might duplicate existing governing patterns.
+- one word such as "process", "source", "quality", "architecture", "problem", "view", "role", "function", "mechanism", or "method" points to several FPF objects or claims at once;
+- several patterns repeat a similar declaration, participant list, or relation rule;
+- a project data structure looks concept-shaped, although it may be only a claim-bearing episteme, publication form, representation, or local record;
+- a draft ToC row names a family that no current pattern yet governs;
+- a proposed `U.*` kind feels useful, but it may duplicate a current kind or direct relation.
 
-**First useful move.** Recover the recognizable project concern first, then list the typed FPF values and relation positions that the source material compresses. Only then classify the case as durable ontic candidate, local use frame, direct governing-pattern use, publication-form-only case, or source wording to keep quote-only or reduced-use.
+**Primary EntityOfConcern.** When the author records this choice in a C.2.1 episteme, its EntityOfConcern is the subject already identified under a direct pattern. If that subject cannot yet be identified, use the source episteme or expression entity whose inquiry remains open. The visible form and the note recording the disposition are not substitutes.
 
-**What goes wrong if missed.** FPF grows a hidden ontology. A table becomes a kind, a card becomes a subject, a draft label becomes authority, and a convenient word creates a second ontology over values that already have governing patterns.
+**First useful move.** Write one plain sentence: “For this work or decision, we need to know or do `<action>` about `<subject>`.” Then ignore the wrapper long enough to recover the subject, the needed claim, and the current pattern that governs it. Apply the first truthful disposition in section 4.
 
-**What this buys.** The author gets a compact candidate cluster and a sufficiency rationale before opening `E.24`. This keeps E.24 small and keeps candidate discovery from becoming a registry, score form, or warning catalogue.
+**What goes wrong if missed.** FPF grows shadow ontology. A table becomes a kind; a field label is mistaken for a relation-participant meaning; a filled field is treated as an actual relation participant merely because it occupies a column; a card becomes the subject; or a convenient word creates a second ontology over values and relations that already have governing patterns.
+
+**What this buys.** The author identifies one usable governing pattern without filling a candidate record or maintaining a registry. A genuine durable ontic must still pass E.24's full identity and relation test; simpler cases stop with their direct governing pattern, local classification, description or publication handling, wording repair, or a precise unresolved question.
 
 **Not this pattern when.**
 
-- If the durable ontic is already selected and its identity and slot relation must be governed, use `E.24`.
-- If the current question is whether a `U.*` spelling in a heading, title, filename, ToC row, table, or source passage should be retained, demoted, or repaired, recover the concern and use `E.24.UK`.
-- If the current problem is only confusion between an ontic, its description, and publication forms, use `E.24.PUB`.
-- If an existing subject pattern already governs the claim, use that pattern directly.
-- If the issue is one wording-use repair, use `E.10`, `E.10.ARCH`, or the relevant precision-restoration pattern.
-- If the contested question is how to compare pattern-set architecture alternatives, construct the evaluation `CharacteristicSpace` through `A.19.ECS`.
+- If one existing governing pattern already states the needed claim, use it directly.
+- If a local kind, criterion, candidate judgment, or extension is already the question, use `C.3`, `C.3.1`, and `C.3.2`.
+- If the current question is a description episteme, use `C.2.1` for its identity and the subject-specific description pattern when one applies. For view membership, publication form or occurrence, representation, or carrier, use `E.17.0`, `E.24.PUB`, or `C.29`.
+- If the subject and governing claim are clear and only the wording hides them, use `E.10`, `E.10.ARCH`, or the applicable precision-restoration pattern.
+- If a durable ontic has already been selected, use `E.24`; if a durable public `U.*` kind is separately at issue, use `E.24.UK`.
+- If the work is comparing architecture alternatives, construct the evaluation through `A.19.ECS`.
 
 ### E.24.CD:1 - Problem Frame
 
-`E.24` introduces or rejects a durable `U.Ontic`. Before that decision, FPF often needs a smaller move: detect whether an apparent subject is actually a candidate ontic or merely a record, local frame, source label, draft locus, or direct use of existing patterns.
+An apparent ontology candidate usually arrives inside something visible: a label, form, record, diagram, source passage, or repeated field list. That visible thing may point to a real durable subject, but it may instead carry claims about several already governed objects, publish or represent them, classify them for one context, or merely use an imprecise word.
 
-Ontic candidates are easy to overread because they appear through publications. A form, card, schema, table, field list, diagram, source row, review packet, or data model can carry a real subject matter, but it is not automatically the subject matter. Detection must therefore start from the `EntityOfConcern` and the typed values involved, not from the publication form that made the subject visible.
-
-E.24.CD governs that detection move. It prepares an E.24 decision; it does not make the durable ontic decision by itself.
+E.24.CD governs this first-use choice before E.24 opens. It neither admits a durable ontic nor creates a candidate object of its own.
 
 ### E.24.CD:2 - Problem
 
-Without ontic-candidate detection:
+Without an explicit first-use disposition:
 
-1. **Publication forms become false objects.** A card, table, or schema receives ontology authority because it is the visible publication form.
-2. **Local use frames harden silently.** A useful table for one bounded use starts being cited as if it were a reusable FPF kind.
-3. **Direct governing patterns are bypassed.** Existing `U.Method`, `U.Work`, `U.Mechanism`, `U.Episteme`, `U.Structure`, `U.CharacteristicSpace`, source, gate, evidence, or publication patterns are duplicated under a new head.
-4. **Candidate selection becomes vocabulary repair.** The author replaces a broad word with a new broad word while the slot relation remains hidden.
-5. **Candidate selection becomes scoring ritual.** The author builds a score table before the candidate's identity, slots, and neighboring governing patterns are clear.
+1. **Publication forms become false subjects.** A card, table, or schema receives ontology authority because it is visible.
+2. **Local classification hardens into public ontology.** A criterion useful in one context is treated as a durable FPF kind.
+3. **Direct governing patterns are bypassed.** Existing methods, work, relations, epistemes, structures, sources, and results are duplicated under a new head.
+4. **Wording repair becomes ontology creation.** A broad word is replaced with a new broad word while the actual subject and predicate remain hidden.
+5. **Candidate work becomes a registry ritual.** Authors fill fields or scores for possible ontics instead of deciding the current case.
 
 ### E.24.CD:3 - Forces
 
 | Force | Tension |
 | --- | --- |
-| Recognition vs premature kind creation | A recurring concern must be noticed early, but early recognition must not mint a `U.*` kind by momentum. |
-| Publication visibility vs subject ontology | The visible publication form may reveal the concern, but the ontic candidate is the governed object, not that form. |
-| Direct reuse vs hidden duplication | Existing governing patterns should carry their values; a new ontic is justified only when their relation must itself be governed. |
-| First-use affordability vs full architecture analysis | The author needs a quick first move; contested alternatives can use `A.19.ECS` in a separate evaluation frame without making every candidate pass a scoring ritual. |
-| Semantic cohesion vs registry growth | Several examples can reveal one semantic area; a list of examples is not a registry of ontics. |
+| Early recognition vs premature ontology | A recurring concern should be noticed, but recurrence alone must not mint a durable subject or `U.*` kind. |
+| Visible form vs governed subject | A form can reveal the problem while remaining an episteme, publication form, representation, carrier, or local record. |
+| Direct reuse vs shared coordination | Existing patterns should carry their own claims; E.24 opens only when dependent patterns need one stable subject identity and minimal relation set. |
+| First-use affordability vs adequate discrimination | The author needs a quick choice, but the choice must still separate direct use, local classification, publication, wording, and durable admission. |
+| Traceability vs registry growth | A disputed choice may need one explanatory sentence; it does not need a standing candidate catalogue. |
 
 ### E.24.CD:4 - Solution
 
-Use an `OnticCandidateCluster` as a local detection aid. It is not a `U.*` kind, not a permanent registry entry, and not the ontic. It is a compact description of why the author is considering an E.24 decision.
+Start from the work that is blocked, not from the shape of the source material.
 
-```text
-OnticCandidateCluster:
-  RecognizableConcern:
-  VisibleSourceForms:
-  CompressedTypedValues:
-  CandidateSemanticArea:
-  CandidateOntologicalNeighborhood:
-  PossibleSlotRelation:
-  ExistingGoverningPatterns:
-  HiddenFormClassification:
-  UKindPressure:
-  FirstUseGain:
-  NonUseDisposition:
-  NextPattern:
-```
+Ask these four questions in order:
 
-Read the rows this way:
+1. **What must the next person do or decide?** Name the comparison, classification, publication, repair, decision, or other practical use.
+2. **What is that use about?** Name the subject, claim, or source expression without treating its card, row, filename, diagram, or field bundle as the answer.
+3. **Which current pattern already governs the needed claim?** Name the predicate or judgment that would let the work proceed.
+4. **If that pattern does not close the case, what is actually missing?** State one applicable pattern or one precise unresolved stop below.
 
-- `RecognizableConcern` names what users or authors are trying to think or act with, before choosing a new kind.
-- `VisibleSourceForms` names the forms that revealed the concern: cards, records, tables, schemas, diagrams, views, source rows, examples, or project data structures.
-- `CompressedTypedValues` lists the separate FPF values being compressed, such as method, method description, mechanism, work plan, work occurrence, evidence, gate, source, publication, characteristic, structure, role assignment, bounded context, or transformation value.
-- `CandidateSemanticArea` names the meaning area where the concern is recognizable.
-- `CandidateOntologicalNeighborhood` names the current FPF patterns that already govern nearby values.
-- `PossibleSlotRelation` sketches the candidate relation only enough to decide whether E.24 should open.
-- `ExistingGoverningPatterns` lists direct patterns that may already close the case.
-- `HiddenFormClassification` selects one of the dispositions below.
-- `UKindPressure` names any `U.*`, type, kind, subkind, title, filename, heading, ToC row, or structural name whose public shape could over-admit durable FPF kindhood.
-- `FirstUseGain` says what becomes easier, safer, or more action-facing if the candidate becomes an ontic.
-- `NonUseDisposition` blocks the main overread if no durable ontic is selected.
-- `NextPattern` names the next governing pattern: usually `E.24`, `E.24.UK`, `E.24.PUB`, `A.19.ECS`, a direct subject pattern, or `E.10.ARCH`.
+#### E.24.CD:4.1 - Apply the first truthful disposition
 
-#### E.24.CD:4.1 - Detection Signals
+Plain `situation`, `incident`, `current configuration`, `operating <system>`, and `emergency` are recognition cues, not kind names. Recover only the subjects, claims, and relations that the receiving work actually needs.
 
-Open E.24.CD when several signals cohere around one recognizable concern and a possible slot relation that current patterns do not already make easy to use. The judgement is expert sufficiency, not a score gate: a repeated word alone is a wording-use trigger, and a useful form alone is a publication form or local use frame. Two or more signals can serve as a quick suspicion threshold only when they support the same concern, preserve the typed values involved, and make the possible slot relation worth inspecting.
-
-Useful signals include:
-
-1. **Stable concern across forms.** Several source forms point to the same recognizable concern even when the publication form changes.
-2. **Typed-value spread.** The concern repeatedly involves several governed values whose relation matters for use.
-3. **Copied slot doctrine.** Several patterns repeat the same field list, slot list, boundary warning, or local relation shape.
-4. **Claim-impact from relation changes.** Changing one filler changes what can be claimed, compared, relied on, repaired, or stopped.
-5. **Weak identity in current text.** The concern is used as if it has identity, but the identity criterion is missing or inconsistent.
-6. **Direct-pattern strain.** Existing governing patterns carry the values, but users still need a stable relation among them.
-7. **Publication-form temptation.** A card, record, table, schema, diagram, view, source row, or data structure is treated as the object because it is visible.
-8. **U-kind pressure.** A `U.*` spelling, earlier type/kind wording, heading, title, filename, or ToC row appears to claim kindhood before the governed object is recovered.
-9. **Dependent-pattern burden.** Nearby patterns need a shared settlement and would otherwise copy the same local ontology.
-
-If the signals do not cohere around one concern, do not open E.24.CD only to collect them. Use the direct governing pattern, `E.10.ARCH`, `E.24.PUB`, or a local-use disposition.
-
-#### E.24.CD:4.2 - Hidden Form Classifications
-
-Classify the detected construct before opening E.24:
-
-| Classification | Meaning | Next use |
+| Current need | Next use | Stop that follows |
 | --- | --- | --- |
-| Durable ontic candidate | The concern appears to need stable identity, a type-level slot relation, semantic area, ontological neighborhood, and dependent-pattern reliance. | Open `E.24`. |
-| U-kind admission pressure | The remaining question is whether a visible `U.*` spelling or earlier type/kind wording should survive in a structural location or public name. | Recover the concern and typed values, then use `E.24.UK`; candidate detection does not admit the U-kind. |
-| Local use frame | The relation is useful in one bounded use family, but all filled values are already governed elsewhere and no dependent pattern needs a reusable ontic. | Keep local; cite governing patterns for fillers. |
-| Direct governing-pattern use | One existing pattern already carries the claim. | Use that pattern directly. |
-| Publication-form-only case | The visible object is a card, record, table, schema, diagram, view, packet, or source form that publishes or organizes another EoC. | Use `E.24.PUB` or the relevant publication pattern. |
-| Source wording only | The source label compresses several values but should not enter current FPF vocabulary. | Keep quote-only or reduced-use; use `E.10.ARCH` if repair is needed. |
-| Evaluation-construction case | The current problem is comparing pattern-set architecture alternatives. | Build the evaluation `CharacteristicSpace` through `A.19.ECS`. |
+| One current subject pattern already states the needed claim or action. | Apply that direct governing pattern. If the missing piece is a relation-bearing claim that no current direct predicate closes, apply `A.6.RCD` before proposing a relation kind. | Do not create an ontic, kind, candidate note, or disposition record. A local compound claim or predicate-definition episteme is neither a relation kind nor an occurrence; only a separately justified kind candidate proceeds through `E.24` and `E.24.UK`. |
+| One exact ClaimGraph forms one claim-bearing whole about one truthful exact EntityOfConcern under one effective ReferenceScheme. | Use `C.2.1` to identify that episteme. Other independently governed objects may be designated inside its claims without becoming extra EntityOfConcern fields or ontic slots. | If one truthful EntityOfConcern or one identity-bearing ClaimGraph cannot be recovered, keep the epistemes separate. State a collection, publication, representation, or other use relation only when its own predicate obtains; common use or co-publication does not identify one episteme. |
+| Wording such as `situation`, `incident`, `current configuration`, `operating <system>`, or `emergency` groups several cues. | Recover the exact systems or holons, characteristic or state claims, actual part relations, and only the temporal or causal relations needed by the current use. Add actual `U.Transformation` or `U.Work` only when independently grounded under `A.3.4` or `A.15.1`. Use a possible-state episteme when possibility is the subject, and a separate C.2.1 description episteme only when claim-bearing orientation is current. | Their conjunction is neither `U.Situation` nor `U.IncidentSituation`. An episteme's EntityOfConcern and any grounding holon in a separately current `EpistemeEmpiricalGroundingRelation` neither identify the world-side subject nor become mandatory fields. Stop decomposition once the action-facing distinction needed by the receiving use is recovered. |
+| A proposed subject exists only as an arbitrary fusion, co-presence, connected set, or chosen boundary. | Reject the bundle without forcing it through a construction record. If a constructed object survives as the current subject, apply `B.1`, `A.14`, and `C.13`, and apply `B.2` only when whole reidentification is current; recover its exact construction inputs, whole-forming relations, and identity rule. | Fusion, co-presence, connectedness, and a selected boundary alone form no durable whole. The no-mint result does not block a genuinely irreducible subject later shown to have its own identity and obtaining laws. |
+| Repeated typed reasoning needs a local criterion, candidate judgment, or true-candidate set for one context slice. | Use `C.3`, `C.3.1`, and `C.3.2`. | The local kind, `KindSignature`, judgment, and optional extension stay distinct; no public `U.*` kind or classification-relation occurrence follows. |
+| A card, record, table, diagram, file, or schema carries claims, is used as a description, conforms to a viewpoint, expresses an edition, represents something, or bears a form. | Use `C.2.1` to identify an episteme only when its constitution test passes. If it describes a method, structure, relation occurrence, or another subject, apply that subject's description pattern. Use `E.17.0` for actual view membership, `E.24.PUB` for publication, and `C.29` for representation and correspondence. Several patterns can apply because they govern different objects or relations. | Visible shape does not identify the described subject or make any neighboring relation obtain. |
+| A path, table, dashboard, schema, or other declarative form seems to authorize, dispatch, prove, prescribe, or perform something by its shape. | Use `C.2.P.DR` to name the visible expression, recover the direct object or relation, state its representation or correspondence use—or `none`—and block the unsupported action claim. | A declarative form does not itself authorize or dispatch work, perform an action, or grant authority. |
+| Words such as `relation`, `slot`, `field`, `interface`, `role`, `function`, or `endpoint` still leave the object or claim unclear. | Use `A.6.RSIR`, `A.6.F`, or `A.6.P` according to the ambiguity, then stop at the identified direct governing pattern. | An engineering word does not create a subject kind, relation kind, participant, or declaration. |
+| The subject and governing claim are already clear, but a word or phrase compresses them. | Repair the bounded wording through `E.10`, `E.10.ARCH`, or the applicable precision-restoration pattern. | A clearer name does not create a new subject, relation, or kind. |
+| An already governed value needs a stable reusable name rather than a repaired sentence. | Use `F.18` after recovering the value, its kind and direct governing pattern, its effective reference scheme, and the local sense to be named. For relation-facing wording, settle any missing direct relation through `A.6.RCD` first. | A label or `NameCard` neither admits the value or a public kind nor makes a relation obtain. |
+| Several named dependent patterns genuinely need one reusable subject identity and the same minimal set of direct relation rules. | Open `E.24` and apply its existing-governor, identity, relation, dependent-use, and non-duplication checks. | E.24.CD establishes only that `E.24` is the applicable next pattern. `E.24` decides whether a durable ontic is admitted. |
+| The subject, needed claim, or governing pattern cannot yet be recovered. | Keep the inquiry attached to the source expression or blocked work and name what is missing. | Do not hide non-settlement inside a candidate record, score, provisional `U.*` name, or “future ontology” list. |
 
-#### E.24.CD:4.3 - Sufficiency Rationale
+When a durable public `U.*` kind is also proposed, `E.24.UK` returns its separate admission result. If the ontic and kind are both new, use the atomic co-decision already defined by E.24 and E.24.UK; neither result proves the other.
 
-If the classification is durable ontic candidate, write a short sufficiency rationale before opening E.24:
+#### E.24.CD:4.2 - Recover objects hidden by a visible form
 
-```text
-OnticCandidateSufficiencyRationale:
-  CandidateEoC:
-  StableIdentityHint:
-  PossibleSlotRelation:
-  ExistingValuesPreserved:
-  SemanticArea:
-  OntologicalNeighborhood:
-  DependentPatternNeed:
-  DuplicateOntologyRiskIfSkipped:
-  FirstUseGain:
-  MainNonUseBoundary:
-```
+For a project card, row, schema, or diagram, inspect only what the current work consumes:
 
-The rationale is sufficient only when it shows both gain and restraint. Gain: the candidate would reduce duplicated ontology, make claims easier to inspect, and give dependent patterns a reusable relation. Restraint: existing typed values keep their governing patterns, publication forms stay downstream, and a local frame remains local when no durable ontic is needed.
+1. Which filled statements are claims, and what is each claim about?
+2. Which entities or non-entity values are independently identified under their direct patterns?
+3. Which direct predicates are asserted, what are their actual participants, and which independently established facts satisfy their obtaining conditions?
+4. Is the visible arrangement a publication form, a C.29 representation, a carrier, or merely a local layout?
+5. Does the work need local classification of a candidate, or only a claim about an already governed feature?
+6. What stronger reading must be blocked—for example, record existence creates performed work, a row creates membership, or a field name admits a kind?
 
-#### E.24.CD:4.4 - Project Data-Structure Recovery
+A field label is not a `SlotSpec`. `A.6.5` governs the declaration: a reusable `SlotSpec` appears only inside a `RelationSignature` for an already recovered direct relation and only when a named later use needs that declaration. A row value is not an actual relation participant merely because it occupies a column.
 
-Project data structures often hide ontic candidates. Treat them as signals, not conclusions.
+#### E.24.CD:4.3 - Apply E.24 only when several patterns need the same subject rules
 
-When a project data structure or publication form has fields such as `status`, `owner`, `type`, `target`, `source`, `evidence`, `decision`, `problem`, `view`, `flow`, `quality`, or `architecture`, do not accept the field heads as ontology. Recover:
+Applying E.24 is warranted only when all of these are recoverable:
 
-1. the project concern that the form is helping the team handle;
-2. the FPF typed values that may fill those fields;
-3. the relation among those values;
-4. the publication or record form that carries the visible form;
-5. the governing patterns that already own each value;
-6. the one overread blocked by this recovery.
+- one primary governed subject kind;
+- its direct identity, constitution, or recognition rule;
+- two or more named dependent patterns whose work depends on the same subject identity or relation rule;
+- the smallest set of independently governed direct relations those uses must keep coherent;
+- how a changed participant or direct-relation fact would change what those uses may claim, compare, rely on, repair, or stop;
+- confirmation that every already governed value keeps its own kind, identity, direct relations, and governing pattern;
+- the practical difference that this reusable coordination makes;
+- why direct-pattern use, a bounded episteme, local typed projection, publication handling, and wording repair do not close the case; and
+- the nearest case that must remain outside the proposed ontic.
 
-Example: an "ArchitectureDecisionRecord" may carry an architecture move, selected structure, decision, evidence, source freshness, gate condition, responsible role assignment, and publication date. That record is not a root `U.ArchitectureDecisionRecord` ontic by appearance. It may be a publication form over values governed by `C.30`, decision, gate, evidence, source, role-assignment, and `E.24.PUB` patterns. Only if the relation itself needs stable identity and dependent-pattern reliance does E.24 open.
+These facts tell the author to open E.24; they do not admit an ontic. Repeated words, several source forms, copied fields, or a useful schema can prompt inspection, but none substitutes for those facts.
 
-#### E.24.CD:4.5 - Stop Conditions
+#### E.24.CD:4.4 - State one result and stop
 
-Stop E.24.CD when one of these dispositions is reached:
+Most cases need only one sentence:
 
-- **Open E.24:** durable ontic candidate is selected for a full ontic-introduction decision.
-- **Open E.24.UK:** the concern is recovered and the remaining decision is root or dependent U-kind admission, C.3 typed-reasoning governance, non-U disposition, or structural-name repair.
-- **Use existing pattern:** a direct governing pattern carries the claim.
-- **Keep local:** a bounded local use frame is enough and is explicitly non-`U.*`.
-- **Use publication discipline:** the problem is confusion among the ontic, its description, and publication form.
-- **Use evaluation construction:** the problem is comparing architecture alternatives.
-- **Keep quote-only or reduced-use:** the source wording should not become current FPF vocabulary.
+> For `<work or decision>`, apply `<governing pattern>` to `<exact subject or claim>` because `<decisive fact>`; `<blocked stronger reading>` does not follow.
 
-Do not keep E.24.CD open as a standing registry of possibilities. Once the disposition is clear, move to the selected governing pattern.
+When no pattern can yet apply truthfully, say:
+
+> For `<work or decision>`, leave `<exact subject or claim question>` unresolved because `<missing subject, predicate, or governing pattern>`; `<blocked stronger reading>` does not follow.
+
+Use a longer explanation only when another author must understand a disputed disposition. Do not create an `OnticCandidateCluster`, candidate registry, scorecard, or mandatory disposition form. Once the applicable pattern or unresolved stop is stated, continue there; reopen E.24.CD only if the recovered subject or practical use changes.
 
 ### E.24.CD:5 - Archetypal Grounding
 
-#### E.24.CD:5.1 - Episteme Candidate That Becomes a Durable Ontic
+#### E.24.CD:5.1 - A candidate that genuinely opens E.24
 
-Before `C.2.1`, "description", "view", "claim set", and "publication" could be confused. E.24.CD would detect stable concern across forms, typed-value spread, slot doctrine, publication-form temptation, and dependent-pattern need. The sufficiency rationale points to a durable ontic: `U.Episteme`, with EntityOfConcernSlot, claim graph, viewpoint, reference scheme, grounding, and publication-form boundaries.
+Before `C.2.1`, “description”, “view”, “claim set”, and “publication” repeatedly pointed to a claim-bearing object used across many patterns. The practical need was stable claim identity across description, evaluation, reference, and publication work. Existing patterns could not supply that shared identity and relation set independently.
 
-The next governed use is E.24-style introduction, then the governing pattern `C.2.1`. The cards and publications are not the episteme; they describe or publish it.
+That case opens E.24. E.24 then decides the durable ontic; C.2.1 governs the resulting `U.Episteme`; E.17.0, E.24.PUB, F.18, and C.29 keep viewpoint conformance, publication, naming, and representation separate. Cards and files do not become the episteme.
 
-#### E.24.CD:5.2 - Problem Card as Stress Case
+#### E.24.CD:5.2 - Local cooling-pump classification
 
-`ProblemCard@Context` is a useful working form, but the card form alone does not create `U.Problem`. It can carry a project problem statement, affected entity, concern, evidence, constraints, candidate solution direction, owner role assignment, source references, and gate conditions.
+A maintenance team repeatedly asks whether Pump #14 counts as a cooling pump in plant slice S-14. Pump #14 and its flow, heat-transfer, and operating-state features already have direct governors. The needed outputs are a reusable local criterion and a candidate judgment, not a durable ontology unit.
 
-E.24.CD asks what is under concern:
+Apply C.3.2. A `KindSignature` may declare the criterion for repeated use; the judgment can be `true`, `false`, or `unknown`; a current extension is materialized only for a named set-consuming use. A measurement supports a claim about Pump #14's features but does not create its membership.
 
-- If the current claim is about the card's publication form and use, use the card or publication governing pattern.
-- If the claim is about problematization and problem statement adequacy, use the problematization pattern.
-- If several patterns need a reusable problem ontology with stable identity and slot relation, open E.24.
+#### E.24.CD:5.3 - Problem card
 
-The stress case prevents a common overread: a record form named "ProblemCard" does not by itself show that FPF needs a root `U.Problem`.
+A `ProblemCard@Context` under `C.22.2` is a problem-side episteme. It may carry a signal, hypothesis, forecast, scenario, anticipated-condition claim, affected-entity reference, evidence cue, constraint, proposed direction, assignment cue, source reference, or gate cue without creating an actual Problem.
 
-#### E.24.CD:5.3 - Project Schema With Ontology-Looking Fields
+An actual Problem is one obtaining `ProblematicForRelation` under `C.22.PFR`. A card may assert that exact predicate, but it may designate a current Problem occurrence only after C.22.PFR independently establishes the actual-condition relation, criterion-applicability relation, adverse truth, and occurrence identity. Signals, hypotheses, forecasts, scenarios, anticipated conditions, and reviewable formulations remain under `C.22.2` or their exact forecast, scenario, temporal, or causal governor.
 
-A project may contain a table:
+For a repair decision, keep the affected entity, evidence-use relation, role assignment or other responsibility relation, source-use relation, and gate or decision claim under their direct governing patterns. Apply `E.18.1`, `E.23`, and the exact work, search, evaluation, or continuation pattern when repeated problematization or later action is current. Neither the card nor its acceptance or publication creates or ends an actual Problem. Open `E.24` only if a different reusable subject-identity or relation gap remains after these direct claims are recovered; do not rediscover the actual Problem as a new ontic.
+
+#### E.24.CD:5.4 - Record-shaped false candidate
+
+A project schema contains:
 
 ```text
 ChangeItem:
@@ -239,95 +221,156 @@ ChangeItem:
   source:
 ```
 
-The table may be a planning aid, work record, publication form, or schema for project tooling. Its fields reveal possible FPF values, but they do not decide their kinds. E.24.CD recovers the project concern and typed values first. If the relation among method, mechanism, work, evidence, result, source, and transformed entity is governed by existing transformation, method, work, mechanism, evidence, source, and publication patterns, keep the table as a publication or local use frame. If dependent patterns need a reusable relation that existing patterns do not provide, open E.24.
+Treat the schema as source material, not as an ontology. A proposal episteme, method, mechanism declaration, work plan, intended-work claim, performed-work occurrence, holder system, state claim, evidence item, result, affected referent, and source remain different objects. Recover only those that the meeting actually uses:
 
-#### E.24.CD:5.4 - Characteristic Space as Candidate
+| Field cue | Object and relation to recover |
+| --- | --- |
+| `owner` | Identify an admitted holder `U.System`, then state the exact `U.RoleAssignment`, responsibility, commitment, or authority relation only if its predicate obtains. The field neither assigns the holder nor grants authority. |
+| `status` | Name the exact bearer and the governed state or status value, claim, gate disposition, decision result, or other current relation. Field presence implies no readiness, validity, gate passage, work authorization, or release. |
+| `method` and `mechanism` | Keep an admitted `U.Method` and any qualifying `U.MethodDescription` distinct from the A.6.1 `U.Mechanism` declaration episteme and its declared operation family. If the field concerns one use, identify the exact operation application and only its declaration-local argument or result bindings that obtain. If it concerns realization, identify the realizing entity and the obtaining mechanism-realization relation. Apply `A.6.1` when the row does not yet distinguish these readings. Shared wording identifies none of them. |
+| plan, intended work, and actual work | Keep a `U.WorkPlan` or intended-work claim under `A.15.2`. Add a `U.Work` under `A.15.1` only for an independently grounded performed occurrence, whether ongoing with an open end or completed. A proposal, row, trace, or completion label does not make work occur. |
+| `evidence` | First identify what the field points to; do not rename it to fit a pattern. Keep its direct kind: an episteme or evidence record, a carrier, the work that produced or interpreted evidence, a currentness relation, or a provenance relation. If it is an episteme and the meeting asks only about its bounded evidence-use or status-use for the claim, use `A.2.4` first. Use `A.10` when the evidence path must be retraceable; include only the record, carrier, work, currentness relation, and provenance relation needed for this claim. Use `B.3` only when a separate assurance claim is current. The field proves neither the claim nor the row's status. |
+| `result` | Identify the result entity, value, or result episteme independently, then state the exact production, measurement, evaluation, decision, delivery, acceptance, or other result relation actually claimed. A result label creates no generic result object or relation. |
+| `target` | Identify the affected referent and state an exact work-to-referent, change, effect, or other subject relation only when current. The field does not make the referent a work participant or changed entity. |
+| `source` | Identify the source episteme or expression and the exact source-use relation. Source presence is not evidence, authority, or currentness by itself. |
 
-Evaluation work often starts as a score table. The visible table may hide a `U.CharacteristicSpace`: characterized object kind, characteristics, scale bindings, value meanings, coordinate groups, missingness semantics, normalization boundaries, comparability boundaries, and evidence hooks. If the score table is only a local report, use the relevant evaluation pattern. If several patterns rely on that space as a reusable object, the candidate can be selected as `U.CharacteristicSpace` and governed by `A.19`.
+Not every row has every listed object, not every filled field is claim-bearing, and co-presence in one row does not constitute a larger subject. The filled row is one C.2.1 episteme only when one exact ClaimGraph forms a claim-bearing whole about one truthful exact EntityOfConcern under one effective ReferenceScheme. Otherwise keep the epistemes separate and state only the exact collection, publication, representation, or meeting-use relation that actually obtains.
 
-The table is not the characteristic space. It can publish one filled evaluation over the space.
+The column arrangement is a publication form only when selected to express an identified episteme for the meeting. The form is not a `U.ChangeItem`, and its columns are not ontic slots. If the project later needs a local kind of records for a query, `C.3.2` may classify those records as records. If several FPF patterns later demonstrate a different shared durable subject with its own identity and minimal relation set, that evidence can reopen `E.24`; the schema's shape cannot.
+
+#### E.24.CD:5.5 - Current configuration around a holon
+
+A maintenance review asks about “the current configuration around Pump #14.” Identify Pump #14 under its system governor, then recover only the characteristic or state claims, actual part relations, temporal phase, and other direct relations that the maintenance decision uses. If the work compares a possible configuration, identify the possible-state episteme and its direct state or configuration claims rather than asserting current actuality.
+
+A separate C.2.1 description episteme may provide claim-bearing orientation. Its exact EntityOfConcern and any grounding holon in a separately current `EpistemeEmpiricalGroundingRelation` neither identify Pump #14 nor turn the surrounding claims into one world-side object. The holon and those current relations answer the question; their conjunction is not `U.Situation`.
+
+#### E.24.CD:5.6 - Operating pump with connected parts
+
+Pump #14 is operating while a sensor, valve, and controller are connected. `Operating` first cues a governed state claim; it does not establish `U.Work` or `U.Transformation`. Connectedness does not establish parthood. Identify the pump and connected entities, state the exact connection relations, and use `A.14` only for part relations whose predicates actually obtain.
+
+Add a dated maintenance or control-work occurrence under `A.15.1` only when its performer, assignment, method enactment, temporal extent, and other required facts are independently grounded. Add an actual bounded change under `A.3.4` only when its changed referent, boundary, conditions, and change facts obtain. No bundle of system, state, connection, work, and change becomes a situation entity.
+
+#### E.24.CD:5.7 - Multi-party emergency
+
+An emergency report mentions a leaking vessel, an overheated subsystem, a suppression system, and response teams. Recover each participating system, each independently grounded actual change, and each dated response-work occurrence separately. State temporal relations through their temporal governors and a causal relation through `C.28` only when that causal-use claim is current and supported.
+
+Use a C.2.1 emergency-description episteme only when the receiving work needs claim-bearing orientation across those objects. The emergency word, the record, and the co-presence of several systems and works identify neither `U.IncidentSituation` nor another bundled whole. Stop decomposition once the response decision has the exact subjects and relations it needs.
+
+#### E.24.CD:5.8 - Mathematical inconsistency under a declared formal substrate
+
+Two specification epistemes state constraints that cannot both hold under one declared `FormalSubstrate` and applicability. Identify the exact claims or epistemes, name that formal substrate, and state the exact inconsistency or consequence relation under its direct formal governor. Use `C.29` only when the formalism is also being used as a mathematical lens for another declared use.
+
+The formal relation may guide a later decision or repair-work occurrence, but it establishes no project-world event, work, transformation, causal relation, adverse episode, actual Problem, or situation entity. Formal consequence is not causation. Inconsistent descriptions do not make their world-side subjects inconsistent without a separately governed bridge claim. If the exact relation or substrate cannot be named, leave the formal claim unresolved rather than letting the word `inconsistency` stand for it.
+
+#### E.24.CD:5.9 - Architecture diagram
+
+An architecture diagram may carry claims about selected structures of one holon. If the diagram is selected as one claim-bearing whole, C.2.1 identifies that episteme. The same episteme has `U.View` membership only when E.17.0 conformance obtains; its publication form and carrier use E.24.PUB; selected graphical elements use C.29 only with explicit correspondence to independently recovered objects.
+
+The diagram does not become the architecture, structure, or ontic by being visible. If the current work is simply to correct one architectural claim, apply the architecture and structure patterns directly.
+
+#### E.24.CD:5.10 - Broad source word
+
+A source says that a method “supports” production. If the author can recover a specific required-effect, method-use, work-enactment, capability, evidence-use, or other direct claim, apply its governing pattern. If the source word still compresses several claims, use E.10 and E.10.ARCH to retain it only with its bounded meaning or in quote-only or reduced use.
+
+Do not open E.24 merely because `support` recurs, and do not invent `SupportRelation` as the candidate.
+
+#### E.24.CD:5.11 - Score table and characteristic space
+
+A score table can serve as the publication form of an evaluation-result episteme over a `U.CharacteristicSpace`, or it may be only a local report. Use A.19 when the characteristic space itself must be identified and A.19.ECS when the work is constructing the evaluation characteristics for a contested comparison. Use C.29 when readers calculate, compare, infer, navigate, or inspect through the table's mathematical structure and those available operations matter.
+
+The table does not admit `U.CharacteristicSpace` by appearance and does not require another candidate ontology beside the current A.19 governing pattern.
 
 ### E.24.CD:6 - Bias-Annotation
 
 Lenses tested: **Onto**, **Arch**, **Epist**, **Prag**, **Did**.
 
-This pattern intentionally biases toward early recovery of the real object under concern. It resists:
+This pattern intentionally biases toward early recovery of the real subject and the blocked work. It resists:
 
 - **publication-form bias:** treating a card, schema, table, or record as the subject matter;
-- **wording bias:** treating a repeated word as a kind decision;
-- **registry bias:** collecting every possible ontic candidate instead of disposing the current case;
-- **scoring bias:** building an evaluation form before identity and slot relation are clear;
-- **semio-bias:** discussing descriptions and publications while the ontic candidate and filled values disappear.
+- **wording bias:** treating a repeated word as a kind or relation decision;
+- **registry bias:** collecting possible ontics instead of disposing the current case;
+- **scoring bias:** rating a candidate before its subject, identity rule, direct relations, and practical use are known;
+- **semio-bias:** discussing forms and labels while the governed subject and claim disappear.
 
-The mitigation is concrete: recover the recognizable concern, typed values, current governing patterns, and possible slot relation before naming a candidate or opening E.24.
+The mitigation is concrete: name the work, subject, needed claim, pattern that states it, applicable disposition, and blocked stronger reading. Open E.24 only when several named patterns need the same subject identity or relation rules.
 
 ### E.24.CD:7 - Conformance Checklist
 
 | Check | Requirement |
 | --- | --- |
-| `CC-E24CD-1` | The candidate detection names the recognizable concern before naming a new kind, card, record, schema, or publication form. |
-| `CC-E24CD-2` | Visible source forms are listed as source forms, not treated as the candidate ontic. |
-| `CC-E24CD-3` | Compressed typed values are separated and each is pointed to its current governing pattern when such a pattern exists. |
-| `CC-E24CD-4` | Detection records a sufficiency judgement: several signals cohere around one recognizable concern and possible slot relation; repeated wording or one useful form alone is not enough. |
-| `CC-E24CD-5` | The hidden-form classification is explicit: durable ontic candidate, U-kind admission pressure, local use frame, direct governing-pattern use, publication-form-only case, source wording only, or evaluation-construction case. |
-| `CC-E24CD-6` | Durable ontic candidates carry a sufficiency rationale with identity hint, possible slot relation, semantic area, ontological neighborhood, dependent-pattern need, duplicate-ontology risk, first-use gain, and non-use boundary. |
-| `CC-E24CD-6a` | `U.*`, type, kind, subkind, title, filename, heading, and ToC pressure is handled through `E.24.UK` after concern recovery; detection alone does not admit a durable U-kind. |
-| `CC-E24CD-7` | Local use frames are explicitly non-`U.*` and do not become registries, evidence records, gate records, methods, mechanisms, work plans, or work occurrences. |
-| `CC-E24CD-8` | When publication-form confusion is current, apply `E.24.PUB` rather than solving the confusion by declaring the form to be the ontic. |
-| `CC-E24CD-9` | When contested comparison of architecture alternatives is current, apply `A.19.ECS` rather than building the comparison into E.24.CD. |
-| `CC-E24CD-10` | The stop condition names one next governing pattern or reduced-use disposition. |
+| `CC-E24CD-1` | The first-use disposition starts with a recognizable work or decision and the subject or claim that blocks it. |
+| `CC-E24CD-2` | A visible card, row, schema, diagram, filename, or field bundle is not treated as the subject merely by form. |
+| `CC-E24CD-3` | Independently governed objects and direct predicates are recovered before a new ontic or kind is proposed. |
+| `CC-E24CD-4` | A current direct governing pattern is applied when it already closes the needed claim. A relation-bearing claim that no current predicate closes goes through A.6.RCD; a local compound claim or predicate-definition episteme is not thereby a relation kind or occurrence. |
+| `CC-E24CD-5` | One C.2.1 episteme requires one exact ClaimGraph, one truthful exact EntityOfConcern, and one effective ReferenceScheme. Otherwise epistemes remain separate, and co-use or co-publication supplies no shared identity. |
+| `CC-E24CD-6` | Local classification uses C.3.2's kind, signature, judgment, and optional extension distinction and does not imply a public `U.*` kind or direct classification relation. |
+| `CC-E24CD-7` | Episteme, view membership, publication form, representation, carrier, and publication occurrence remain separate and use their governing patterns only when current. |
+| `CC-E24CD-8` | Applying E.24 requires one primary subject kind, identity rule, dependent uses, minimal direct-relation set, practical gain, rejected simpler applications, and nearest non-use. |
+| `CC-E24CD-9` | Any public U-kind question is handled by E.24.UK as a separate admission result; E.24.CD admits neither ontic nor kind. |
+| `CC-E24CD-10` | No candidate cluster, registry, scorecard, or mandatory disposition form is created. |
+| `CC-E24CD-11` | The result names the exact pattern applied to the exact subject or claim, or a precise unresolved stop, and blocks the strongest tempting overread. |
+| `CC-E24CD-12` | A record-shaped false candidate keeps holder, status bearer and value, method, mechanism, plan, work, evidence item and use, result and relation, target and subject relation, and source and source-use relation distinct; absent fields and row shape establish none of them. |
+| `CC-E24CD-13` | Ambiguous relation, slot, interface, role, function, and endpoint wording uses the matching precision-restoration pattern instead of becoming ontology. |
+| `CC-E24CD-14` | Declarative-form agency is blocked through C.2.P.DR, and reusable naming starts in F.18 only after the governed value and any needed relation settlement are available. |
+| `CC-E24CD-15` | Wording such as `situation`, `incident`, `current configuration`, `operating <system>`, or `emergency` recovers only the exact systems, claims, work, change, and temporal or causal relations needed by the current use; their conjunction creates neither `U.Situation` nor `U.IncidentSituation`. |
+| `CC-E24CD-16` | Arbitrary fusion, co-presence, connectedness, or a chosen boundary creates no whole. Only a surviving constructed-object candidate is tested for exact inputs, whole-forming relations, and identity under B.1, A.14, C.13, and B.2 when reidentification is current. |
+| `CC-E24CD-17` | Mathematical inconsistency names exact claims or epistemes, the declared formal substrate, and the direct inconsistency or consequence relation; it establishes no world event, causation, Work, Transformation, Problem, or situation. |
+| `CC-E24CD-18` | A ProblemCard, signal, forecast, scenario, formulation, actual Problem, and later problematization or work remain under C.22.2, C.22.PFR, and their exact continuation governors rather than one card-derived ontic. |
 
 ### E.24.CD:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Symptom | Repair |
 | --- | --- | --- |
-| Card-to-kind jump | A useful card is promoted into a `U.*` kind because it has repeated fields. | Recover the EoC and typed values; use `E.24.PUB` for publication form. |
-| Structural U-kind jump | A heading, title, filename, or ToC row keeps `U.*` because it is convenient for search. | Recover the governed object and use `E.24.UK`; repair the structural name when the primary EoC is not that U-kind. |
-| Table ontology by appearance | A table or schema field list is treated as a slot relation. | Ask whether the fields are publication columns, local record fields, or type-level slots with claim-impact. |
-| One-word candidate | A broad word is renamed and treated as settled. | Use `E.10.ARCH` and E.24.CD together: recover typed values and slot relation before naming. |
-| Registry trap | The author keeps a growing list of possible ontics without disposition. | Stop at one of the E.24.CD classifications and move to the next governing pattern. |
-| Scoring before identity | A score form compares alternatives before the candidate EoC and slot relation are clear. | First write the sufficiency rationale; use `A.19.ECS` only when evaluation construction is actually current. |
-| Negative-catalogue repair | The text lists neighboring EoCs only as things the candidate is not instead of naming positive values and boundaries. | Name the positive EoC, typed values, and governing patterns; keep the blocked overread to one row. |
+| Card-to-kind jump | A useful card is promoted into a `U.*` kind because it has repeated fields. | Recover its claims, subject, form, and carrier; use C.2.1 or E.24.PUB as triggered. |
+| Structural U-kind jump | A heading, title, filename, or ToC row keeps `U.*` because the spelling is convenient. | Recover the subject and use E.24.UK for the admission question; naming follows the result. |
+| Column-to-participant jump | A field label is treated as a relation-participant meaning, or a filled field as an actual participant; either is called a `SlotSpec` because of column position. | Recover the direct predicate, its relation-participant meanings, and its actual participants first. Keep the field as a representation element or participant designation; under `A.6.5`, declare a `SlotSpec` only inside a needed `RelationSignature` for that already recovered relation. |
+| One-word candidate | A broad word is renamed and treated as settled. | Recover the subject and predicate; use E.10 and E.10.ARCH when only wording remains. |
+| Local-kind inflation | A useful project criterion is promoted to durable public ontology. | Use C.3.2 and keep the local kind, declaration, judgment, and extension distinct. |
+| Registry trap | The author keeps a list of possible ontics without deciding the blocked case. | State the work, apply one truthful governing pattern or name one precise unresolved stop, and stop. |
+| Scoring before identity | A score form is filled before the subject and direct relation gap are known. | Recover the subject, identity rule, dependent uses, and missing coordination; use A.19.ECS only for an actual comparison. |
+| Repetition-as-admission | Several forms or patterns share a label, so an ontic is inferred. | Require the E.24 entry facts: one subject identity and minimal relation set reused by named dependent patterns. |
+| Negative-catalogue repair | The text lists only what the candidate is not. | State the positive subject, claim, governor, next action, and one blocked stronger reading. |
 
 ### E.24.CD:9 - Consequences
 
 Positive consequences:
 
-- E.24 stays compact because candidate discovery has its own pattern.
-- New ontics are selected from recognizable subject matter, not from publication-form appearance.
-- Existing governing patterns are reused before a new `U.*` kind is considered.
-- Data structures, cards, records, and schemas become useful detection signals without becoming ontology by appearance.
+- authors reach a governing pattern from a recognizable work situation;
+- durable ontics are proposed from an identity and reuse gap rather than from form or vocabulary;
+- local classification, claim coordination, publication, representation, and wording remain cheaper dispositions;
+- cards, records, tables, and schemas remain useful source material and detection cues without becoming ontology by appearance;
+- no candidate registry or score ritual is added to routine authoring.
 
 Costs:
 
-- The author must do a short detection pass before opening E.24 for a new durable ontic.
-- Some attractive names are lowered to source wording, local frames, or publication forms.
-- A contested architecture comparison may require a separate `A.19.ECS` evaluation construction instead of a quick authorial preference.
+- the author must recover the subject and needed claim before choosing a governing pattern or unresolved stop;
+- some attractive names are lowered to local kinds, source wording, epistemes, publication forms, or representations;
+- a genuine durable candidate still requires the full E.24 decision and, when current, a separate E.24.UK admission result.
 
 ### E.24.CD:10 - Rationale
 
-FPF needs E.24.CD because ontic candidates are rarely visible as pure ontology. They show up as forms that people use: project tables, cards, schemas, diagrams, source packets, draft pattern rows, examples, and repeated words. Those forms are important because they reveal project concerns, but they are unreliable as ontology decisions.
+Ontic candidates rarely arrive as pure ontology. They appear through the forms people use: project tables, cards, schemas, diagrams, source packets, draft rows, examples, and repeated words. Those forms reveal working concerns, but they do not decide what exists, what relation obtains, or what FPF kind is needed.
 
-The pattern therefore uses a small detection cluster rather than a score sheet. A cluster is enough to recover the concern, values, possible relation, and next disposition. A score sheet would make candidate discovery look like a maturity test and invite Goodhart-style optimization of the candidate record instead of ontology settlement.
+The pattern therefore asks for one first-use disposition instead of a candidate record. Keep direct claims in their direct patterns; use C.2.1 only when one exact ClaimGraph, one truthful EntityOfConcern, and one effective ReferenceScheme constitute an episteme; and use C.3.2 for local classification. Keep publication in E.24.PUB and representation in C.29. Use C.2.P.DR to block action inferred from declarative form; resolve ambiguous wording through A.6.RSIR, A.6.F, A.6.P, or E.10; and name only an already governed value through F.18. Open E.24 only when named dependent patterns need one stable subject identity and minimal relation set that those simpler applications cannot preserve.
 
-This also preserves the distinction among EoC, description, and publication. A card can describe an episteme, a table can publish a filled characteristic-space evaluation, and a schema can carry source-side data. None of those forms is automatically the ontic. Conversely, the fact that a concern appears through several forms may be a strong signal that an ontic is needed.
+This order keeps the first move affordable and falsifiable. Another author can see which fact selected the applicable pattern or unresolved stop and which stronger reading was blocked. A list of candidate fields or scores would make the form look authoritative and invite optimization of the record instead of settlement of the subject.
 
 ### E.24.CD:11 - SoTA-Echoing
 
 | Source family | Current lesson for E.24.CD | FPF decision |
 | --- | --- | --- |
-| Shimizu and Hitzler 2024, and Eells, Dave, Hitzler, and Shimizu 2024. | Current modular-ontology and micropattern support: useful ontology units are understandable, extensible, aligned, reusable, and small enough to be assembled. | Detect coherent ontology modules, repeated relation shape, slot-relation density, and dependent-pattern copying; do not treat word frequency, common nouns, or every record field as an ontic decision. |
-| Norouzi, Hertling, Waitelonis, and Sack 2025. | Current process-ontology ODP extraction support: process-like and workflow-like forms can hide implicit design patterns that need explicit publication for domain experts. | Inspect process-like, record-like, card-like, and field-list forms for hidden slot relations; do not reopen the transformation-flow settlement and do not import imperative motion metaphors. |
-| Nayyeri et al. 2025, and Oyewale and Soru 2026. | Current data-model-to-ontology and enterprise-KG support: schemas, documentation, relations, domain ontologies, extraction, hierarchy structuring, provenance, and validation can expose ontology candidates while also producing overreads. | Treat project databases, tables, schemas, and enterprise data models as ontology-signal sources requiring bounded scope, semantic alignment, slot-relation discipline, expert validation, and a blocked-overread row. |
+| Shimizu and Hitzler 2024, and Eells, Dave, Hitzler, and Shimizu 2024. | Current modular-ontology and micropattern work favors ontology units that are understandable, extensible, aligned, reusable, and small enough to assemble. | Inspect repeated subject identity and direct-relation rules across named dependent uses; do not treat word frequency, common nouns, or record fields as admission evidence. |
+| Norouzi, Hertling, Waitelonis, and Sack 2025. | Current process-ontology ODP extraction work shows that process-like and workflow-like forms can expose implicit design patterns that domain experts need to examine. | Recover the objects and predicates hidden by process, record, card, and field-list forms and check them against their governing patterns; do not reopen transformation-flow decisions or import imperative motion metaphors. |
+| Nayyeri et al. 2025, and Oyewale and Soru 2026. | Current data-model-to-ontology and enterprise-KG work shows that schemas, documentation, relations, provenance, and validation can reveal ontology candidates while also encouraging schema-shaped overreads. | Treat project databases, tables, schemas, and enterprise data models as source material and detection cues for selecting the applicable governing pattern, not as ontology decisions; require bounded scope, agreement with each current governing pattern, and expert validation. |
 | CYC microtheory line. | Lineage-only caution: context-bounded knowledge modules are a useful analogy for contradiction locality and scope-bounded ontology fragments. | Do not cite CYC as current decisive support for FPF ontic design and do not import CYC architecture as FPF law. |
 | OWL, SKOS, RDF, and triple-store practice. | Infrastructure and expression lineage: these lines carry ontology descriptions, vocabulary links, queries, and serialization forms. | Use them as expression and publication caution only; they do not substitute for `U.Ontic`, do not show that labels are ontology, and do not answer FPF ontic modularization by themselves. |
 
-Smallest source-currentness reopen trigger: reopen this SoTA slice when a newer ontology-engineering or data-model-to-ontology source changes the selected detection criteria for coherent modules, hidden slot relations, bounded scope, validation, or source-form overread; do not reopen it merely because a new vocabulary, serialization, or KG tooling paper appears.
+Smallest source-currentness reopen trigger: reopen this SoTA slice when a newer ontology-engineering or data-model-to-ontology source changes the selected criteria for reusable subject identity, minimal relation sets, bounded scope, validation, or source-form overread; do not reopen it merely because a new vocabulary, serialization, or KG tool appears.
 
 ### E.24.CD:12 - Relations
 
-- **Builds on:** `E.24`, `E.24.UK`, `A.6.5`, `C.2.1`, `E.10`, `E.10.ARCH`, `F.18`, `F.19`, and `A.19.ECS`.
-- **Coordinates with:** `E.24.PUB` for ontic-description and publication-form boundary, `A.19` for `U.CharacteristicSpace`, `A.19.ECS` for evaluation-characteristic construction, and the governing subject patterns for values recovered in the candidate cluster.
-- **Used by:** DRRs and authoring passes that need to decide whether a recurring construct should become a durable ontic, remain a local use frame, use existing governing patterns, or stay as quote-only or reduced-use source wording.
+- **Builds on:** `E.24` for durable ontic settlement; `E.24.UK` for separate public U-kind admission; `C.2.1` for exact episteme constitution; `C.3`, `C.3.1`, and `C.3.2` for local typed projection; `E.24.PUB` for publication; `C.29` and `C.2.P.DR` for representation and declarative-form overread; `A.6.5` for `SlotSpec` declaration and participant-designation discipline; `A.6.RSIR`, `A.6.F`, `A.6.P`, `E.10`, and `E.10.ARCH` for bounded ambiguity repair; and `F.18` for naming after the governed value is settled.
+- **Coordinates with:** `A.6.RCD` when the missing piece is a relation-bearing claim that no current direct predicate closes. A local compound claim or predicate-definition episteme is neither a relation kind nor an occurrence; only a separately justified kind candidate proceeds through `E.24` and `E.24.UK`. It also coordinates with `E.17.0` for actual view membership; `A.1`, `B.1`, `B.2`, `A.14`, and `C.13` for a surviving constructed-whole question; `A.3.4`, `A.15.1`, the temporal patterns, and `C.28` for actual change, work, temporal, and causal claims; `A.6.0` and `C.29` for formal-substrate and mathematical-lens use; `C.22.PFR`, `C.22.2`, `E.18.1`, and `E.23` for actual Problem, problem-side formulation, and later problematization; `A.19` for `U.CharacteristicSpace`; and `A.19.ECS` for evaluation-characteristic construction.
+- **Used by:** DRRs and authoring work that must decide whether a recurring construct uses an existing governing pattern, remains one or several bounded epistemes, becomes a local typed projection, applies description or publication handling, receives wording repair, opens E.24, or remains unresolved.
 
 ### E.24.CD:End

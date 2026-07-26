@@ -6,12 +6,12 @@
 | A.1 | Holon Ontic Foundation (U.Holon and Admitted Holon Kinds) | — |
 | A.1.1 | U.BoundedContext Semantic Frame | — |
 | A.2 | Role Taxonomy | role, assignment, holder, context, function vs identity |
-| A.2.1 | `U.RoleAssignment`: Contextual Role Assignment | Standard, holder, role, context, RoleEnactmentFact |
+| A.2.1 | `U.RoleAssignment` - System Role Assignment | assignment occurrence, holder System, role value, role-taxonomy episteme, effective ReferenceScheme |
 | A.2.2 | `U.Capability`: System Ability Envelope and Measures | holder-dependent capability instance, ability envelope, measure set, qualification window, currentness |
 | A.2.3 | `U.PromiseContent` (Promise Content) | promise content, promise content, accessSpec, acceptanceSpec, SLO |
 | A.2.4 | Episteme Evidence-Use and Status-Use Relations | evidence-use, status-use, source-use, episteme, claim |
 | A.2.5 | RoleStateRelation@BoundedContext - Role State Space and Enactable-State Admission | state machine, RSG, role state, enactability, role-state evolution. |
-| A.2.6 | Unified Scope Mechanism (USM): Context Slices & Scopes | scope, applicability, ClaimScope (G), WorkScope, set-valued. |
+| A.2.6 | Unified Scope Mechanism (USM): Context Slices & Scopes | — |
 | A.2.7 | RoleRelationStructure@BoundedContext - Context-Local Role Relations and Representation-Lens Boundary | role algebra, specialization (`≤`), incompatibility (`⊥`), bundles (`⊗`), separation of duties (SoD) |
 | A.2.8 | `U.Commitment` (Deontic Commitment Object) | commitment, deontics, obligation, recommendation-as-duty, prohibition |
 | A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, matching dated-work exercise, checked non-violation, permission or prohibition conflict |
@@ -38,12 +38,12 @@
 | A.6.3.RT | Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition | — |
 | A.6.3.NAR | Structure-to-Narrative Rendering | — |
 | A.6.4 | `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism | — |
-| A.6.P | Relational Precision Restoration (RPR) — Kind‑Explicit Qualified Relation Discipline | relation precision restoration, under-specified relational language, support/support-headed wording, selected support reading, RelationKind |
+| A.6.P | Relational Precision Restoration — Recovering Direct Relations from Under-Specified Claims | under-specified relation-bearing claim, direct relation, actual participants, participant meanings, obtaining condition |
 | A.6.P.WMR | Exact Relation Recovery for Method and Work Claims | — |
 | A.6.RCD | Needed Relation Claim Derivation and Relation-Kind Admission | — |
-| A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, interface wording, role wording, slot wording, field |
+| A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, direct relation participant, participant meaning, actual participant, RelationSignature |
 | A.6.A | Action-Invitation Precision Restoration (ACT-INV) | affordance, action invitation, action-first language, post-threshold classification, A.15 docking |
-| A.6.F | Function and Functional Precision Restoration (RPR-FUNCTION) | function wording, functional architecture, FunctionalStructure, function-use repair, capability/effect |
+| A.6.F | Function and Functional Precision Restoration (RPR-FUNCTION) | function wording, functional architecture, FunctionalStructure, required behavior or effect, actual transformation |
 | A.6.M | Module Relation Repair | module relation, component, interface, port, platform |
 | A.6.5 | Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline | — |
 | A.6.6 | Base Declaration Discipline - Kind-explicit, scoped, witnessed base declaration discipline (with base-change lexicon) | base declaration, basedness, baseRelation, SWBD, witnesses |
@@ -91,7 +91,7 @@
 | A.19.SelectorMechanism | A.19.SelectorMechanism - Unified Selection Kernel, SelectorMechanism | — |
 | A.20 | Flow Constraint Validity — Eulerian | flow, ConstraintValidity, Eulerian, TransformationFlowStructure, GateFit |
 | A.21 | GateProfilization: `OperationalGate(profile)` (GateFit core) | OperationalGate, GateFit, GateProfile, GateChecks, join-semilattice |
-| A.22 | Structure and Structural Views (STRUCT-CAL) | structure, structural view, selected structure, preserved and lost structure, source return |
+| A.22 | Structure and Structural Views (STRUCT-CAL) | — |
 | A.22.CGUS | Constraint-Governed Unfolding Structure | — |
 | B.1 | Holon Aggregation and Part-Whole Construction | — |
 | B.1.1 | Dependency Structure and Relation Grounding | — |
@@ -252,7 +252,7 @@
 | E.22 | Improvement-Oriented Quality Evaluation Question Framing | — |
 | E.23 | Quality Improvement Loop Method | — |
 | E.24 | U.Ontic and Ontic Introduction Discipline | — |
-| E.24.CD | Ontic Candidate Detection | — |
+| E.24.CD | Ontic Candidate Detection and First-Use Disposition | — |
 | E.24.PUB | Ontic Description and Publication Discipline | — |
 | E.24.UK | U-kind Admission and Ontic Settlement | — |
 | F.0.1 | Contextual Lexicon Principles | local meaning, context, semantic boundary, bridge, congruence |
