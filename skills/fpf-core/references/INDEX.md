@@ -4,7 +4,7 @@
 |---|---|---|
 | A.0 | Onboarding Glossary (NQD & E/E‑LOG) | novelty, quality-diversity (NQD), explore/exploit (E/E-LOG), declared set result, typed portfolio publication |
 | A.1 | Holon Ontic Foundation (U.Holon and Admitted Holon Kinds) | — |
-| A.1.1 | U.BoundedContext Semantic Frame | — |
+| A.1.1 | Bounded Model-Use Structure and DDD Bounded-Context Recovery | — |
 | A.2 | Role Taxonomy | role, assignment, holder, context, function vs identity |
 | A.2.1 | `U.RoleAssignment` - System Role Assignment | assignment occurrence, holder System, role value, role-taxonomy episteme, effective ReferenceScheme |
 | A.2.2 | `U.Capability`: System Ability Envelope and Measures | holder-dependent capability instance, ability envelope, measure set, qualification window, currentness |
@@ -17,7 +17,7 @@
 | A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, matching dated-work exercise, checked non-violation, permission or prohibition conflict |
 | A.2.9 | `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records) | admitted speech-act Work kind, actual communicative occurrence, performing `U.System`, authority-grounding assignment, optional `SpeechActRecord` |
 | A.3 | Transformer Constitution (Quartet) | — |
-| A.3.1 | `U.Method`: Context-Defined Way of Doing | — |
+| A.3.1 | `U.Method`: Reusable Way of Doing with Explicit Applicability | — |
 | A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method-description membership, claim-bearing episteme, exact `U.Method` EntityOfConcern, substantive way-of-doing claim, same method versus equivalent descriptions |
 | A.3.3 | U.Dynamics: State-Space and Transition-Law Episteme | dynamics, state space, transition law, observation relation, prediction |
 | A.3.4 | `U.Transformation`: Bounded Change Under Conditions | actual bounded change, changed referent, occurrence boundary, actual subject facts, continuity and reidentification |
@@ -49,7 +49,7 @@
 | A.6.6 | Base Declaration Discipline - Kind-explicit, scoped, witnessed base declaration discipline (with base-change lexicon) | base declaration, basedness, baseRelation, SWBD, witnesses |
 | A.6.7 | `MechSuiteDescription` — Description of a set of distinct mechanisms | mechanism suite, distinct mechanisms, suite obligations, spec pins, CN-Spec |
 | A.6.8 | Service Polysemy Unpacking (RPR-SERV) | service polysemy, service situation, interface semantics, promise content, provider principal |
-| A.6.9 | Cross-Context Sameness Disambiguation - Repairing cross-context "same / equivalent / align" via explicit Bridges (RPR-XCTX) | cross-context sameness, bridge, alignment, mapping, direction |
+| A.6.9 | Cross-Context Sameness Disambiguation - Repairing cross-context "same / equivalent / align" via explicit Bridges (RPR-XCTX) | ambiguous sameness, direct-owner dispatch, exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections |
 | A.6.S | U.SignatureEngineeringPair - Signature engineering via a ConstructorSignature and a TargetSignature | signature engineering, TargetSignature, ConstructorSignature, two-signature arrangement, EFEM |
 | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) | wholeness, integrity, part-of, boundary, environment |
 | A.7 | Strict Distinction (Clarity Lattice) | category error, EntityOfConcern ≠ Description episteme, Role ≠ Work, ontology. |
@@ -69,6 +69,7 @@
 | A.15.3 | `SlotFillingsPlanItem` — Declaration-Local Planned Designation | WorkPlan claim content, intended-performance designator, exact declaration member, direct owner, participant/argument/result meaning |
 | A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, exact attempted use, independent required-position rows, governing pattern and direct object, project-side reference |
 | A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, prospective permission inputs |
+| A.15.6 | Project, Process, and Case Recovery through Work, Method, and Transformation | project/process/case wording, actual composite project `U.Work`, reusable `U.Method`, A.22-selected `U.Structure`, `TransformationFlowStructure` |
 | A.15.PROD | Production Work, Entity-Identity Inception, and Production Completion Recovery | — |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
 | A.16.0 | `U.LanguageStateMoveTrajectory` - Optional trajectory-account normal form over the language-state `U.CharacteristicSpace` | trajectory account, lineage, fork, merge, supersedes |
@@ -98,7 +99,7 @@
 | B.1.2 | System Aggregation and Holon Delimitation | — |
 | B.1.3 | Γ_epist — Knowledge-Specific Aggregation | knowledge aggregation, epistemic, provenance, trust, KD-CAL. |
 | B.1.4 | Contextual and Temporal Aggregation | — |
-| B.1.5 | Gamma_method - Order-Sensitive Method Composition and Work Enactment | method composition, submethod, order-sensitive method, method relation structure, MIC |
+| B.1.5 | Gamma_method - Order-Sensitive Method Composition and Work Enactment | method composition, `methodPartOf`, submethod, order-sensitive method, method relation structure |
 | B.1.6 | Work-Resource Aggregation | — |
 | B.2 | Meta-Holon Transition - Whole Reidentification | — |
 | B.2.P | Emergence and MHT Precision Restoration | — |
@@ -182,7 +183,7 @@
 | C.32.HCS | Architecture-Bearing Family Characteristic Starter Packs | architecture-bearing family characteristic starter pack, architecture characteristic heads, source catalogue narrowing, first criteria questions, characteristic transfer. |
 | C.32.ACS | Architecture Characteristic Criteria Set for Improvement Cycles | architecture characteristic criteria set, criteria row, Q-Bundle, improvement cycle, proxy risk |
 | C.32.ACE | Architecture Characteristic Eval Programs | architecture-characteristic eval program, eval result, measurement boundary, parity frame, missing-data policy |
-| C.32.CONWAY | Transformer and Transformed Architecture Correspondence | Conway correspondence, inverse Conway maneuver, transformer holon, transformed holon, changing relation |
+| C.32.CONWAY | Architecture-Influence and Transformed-Architecture Correspondence | — |
 | C.32.MLAO | Multilevel Architecture Residual Optimization | multilevel architecture residual optimization, residual-reducing candidate frame, declared level, declared scope, Pareto front |
 | C.32.FAIL | Architecture Failure Recognition and Repair | architecture failure cue, architecture repair cue, stressed architecture object, selected-structure relation, candidate repair |
 | C.32.PAD | Project Architecture Decision After Candidate Synthesis | project architecture decision, ArchitectureDecisionRelation@Project, selected architecture option, affected selected structure, architecture-characteristic trade-off |
@@ -242,10 +243,11 @@
 | E.17.AUD | PublicationUnit Stability Discipline | — |
 | E.17.AUD.LHR | PublicationUnit Stability Discipline and Local Head Restoration | — |
 | E.17.AUD.OOTD | PublicationUnit Stability Discipline and PublicationUnit Primary EntityOfConcern Discipline | — |
-| E.18 | Transformation Flow Structure | selected transformation-flow structure, independently grounded actual transformations, adjacent governed loci, U.Transfer, flow valuation |
+| E.18 | Transformation Flow Structure | — |
 | E.18.1 | P2W Problem-to-Work Carry-Through | — |
-| E.18.2 | Transformation Flow Mathematical Description | mathematical description, transformation-flow math, graph expression, path expression, algebraic description |
+| E.18.2 | Transformation Flow Mathematical Description | — |
 | E.18.3 | Constraint-Governed Transformation-Flow Unfolding Structure | — |
+| E.18.NET | Network of Transformation-Flow Structures | — |
 | E.19 | Pattern Quality Gates: Review and Refresh Profiles | — |
 | E.20 | Mechanism Introduction Protocol (MIP) | mechanism introduction, authoring protocol, governing-definition assignment, MIP-run manifest, canonical card-first |
 | E.21 | FPF Pattern-Quality Evaluation CharacteristicSpace | — |
@@ -264,7 +266,7 @@
 | F.6 | RoleAssignment and Performed-Work Attribution Check | actual performing `U.System`, exact `U.RoleAssignment`, `performedUnderAssignment`, assignment coverage, world-side attribution |
 | F.7 | Concept‑Set Table Construction | concept-set, table, row, columns, differences |
 | F.8 | Mint-or-Reuse Decision | decision lattice, type explosion, reuse, minting new U-kinds, parsimony. |
-| F.9 | Alignment and Bridge across Contexts | bridge, cross-context alignment, CL, direction, loss notes |
+| F.9 | Alignment and Bridge across Contexts | exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections, relation-semantic profile, obtaining Bridge |
 | F.9.1 | Bridge Stance Overlay | bridge stance, stance overlay, interpretive gloss, projection note, rename note |
 | F.10 | Status Families Mapping (Evidence • Standard • Requirement) | status, evidence, standard, requirement, polarity |
 | F.11 | Method Quartet Harmonisation | Method, MethodDescription, Work, Actuation, Role–Method–Work alignment. |

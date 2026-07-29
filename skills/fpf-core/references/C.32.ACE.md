@@ -38,7 +38,7 @@ dependencies:
 ## C.32.ACE - Architecture Characteristic Eval Programs
 
 > **Type:** Architecture eval-support subpattern under C.32
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### C.32.ACE:1 - Problem frame

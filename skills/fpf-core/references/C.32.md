@@ -51,7 +51,7 @@ dependencies:
 ## C.32 - Architecture Candidate Synthesis
 
 > **Type:** Architectural pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### C.32:1 - Problem frame

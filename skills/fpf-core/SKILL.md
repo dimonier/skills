@@ -6,7 +6,7 @@ description: First Principles Framework core patterns. Use when doing engineerin
 # FPF Core Pattern Library
 
 **Depends on:** nothing (root of dependency chain)
-**Source of truth:** `assets/FPF-Spec.md` — canonical specification (101K+ lines)
+**Source of truth:** `assets/FPF-Spec.md` — canonical specification (102K+ lines)
 
 ## How to Use
 
@@ -50,4 +50,4 @@ load those too from `references/`. Each reference lists its own dependencies.
 
 ## References Status
 
-**Ready** — 291 pattern reference files + INDEX + 34 context sections.
+**Ready** — 293 pattern reference files + INDEX + 35 context sections.

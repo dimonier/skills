@@ -31,7 +31,7 @@ dependencies:
 ## B.4.1 - Observe -> Notice -> Stabilize -> Route
 
 > **Type:** Architectural (A)
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 **Plain-name.** Observe-to-route seam.

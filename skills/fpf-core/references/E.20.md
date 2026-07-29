@@ -44,7 +44,7 @@ dependencies:
 ## E.20 - Mechanism Introduction Protocol
 
 > **Type:** Architectural pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative
 
 ### E.20:1 - Problem frame

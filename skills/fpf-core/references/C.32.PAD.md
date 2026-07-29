@@ -56,7 +56,7 @@ dependencies:
 ## C.32.PAD - Project Architecture Decision After Candidate Synthesis
 
 > **Type:** Architecture decision pattern under C.32
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### C.32.PAD:1 - Problem frame

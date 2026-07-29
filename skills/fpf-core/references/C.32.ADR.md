@@ -44,7 +44,7 @@ dependencies:
 ## C.32.ADR - Architecture Decision Record Projection
 
 > **Type:** Architecture publication pattern under C.32
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### C.32.ADR:1 - Problem frame
