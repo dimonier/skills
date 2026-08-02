@@ -17,6 +17,7 @@ dependencies:
     - C.26
     - A.6
     - A.6.B
+    - A.6.P
     - A.10
     - B.3
     - C.16
@@ -25,7 +26,6 @@ dependencies:
   coordinates_with:
     - C.26.2
     - C.26.3
-    - A.6.8
 ---
 
 # C.26.1: Probe-Coupled Boundary Interaction

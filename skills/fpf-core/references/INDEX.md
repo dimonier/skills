@@ -5,6 +5,8 @@
 | A.0 | Onboarding Glossary (NQD & E/E‑LOG) | novelty, quality-diversity (NQD), explore/exploit (E/E-LOG), declared set result, typed portfolio publication |
 | A.1 | Holon Ontic Foundation (U.Holon and Admitted Holon Kinds) | — |
 | A.1.1 | Bounded Model-Use Structure and DDD Bounded-Context Recovery | — |
+| A.1.SCR | Finding the Acting or Changed System | — |
+| A.1.STM | Using the System-Thinking Long Mantra | — |
 | A.2 | Role Taxonomy | role, assignment, holder, context, function vs identity |
 | A.2.1 | `U.RoleAssignment` - System Role Assignment | assignment occurrence, holder System, role value, role-taxonomy episteme, effective ReferenceScheme |
 | A.2.2 | `U.Capability`: System Ability Envelope and Measures | holder-dependent capability instance, ability envelope, measure set, qualification window, currentness |
@@ -38,7 +40,7 @@
 | A.6.3.RT | Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition | — |
 | A.6.3.NAR | Structure-to-Narrative Rendering | — |
 | A.6.4 | `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism | — |
-| A.6.P | Relational Precision Restoration — Recovering Direct Relations from Under-Specified Claims | under-specified relation-bearing claim, direct relation, actual participants, participant meanings, obtaining condition |
+| A.6.P | Relational Precision Restoration — Recovering Direct Relations from Under-Specified Claims | — |
 | A.6.P.WMR | Exact Relation Recovery for Method and Work Claims | — |
 | A.6.RCD | Needed Relation Claim Derivation and Relation-Kind Admission | — |
 | A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, direct relation participant, participant meaning, actual participant, RelationSignature |
@@ -48,7 +50,6 @@
 | A.6.5 | Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline | — |
 | A.6.6 | Base Declaration Discipline - Kind-explicit, scoped, witnessed base declaration discipline (with base-change lexicon) | base declaration, basedness, baseRelation, SWBD, witnesses |
 | A.6.7 | `MechSuiteDescription` — Description of a set of distinct mechanisms | mechanism suite, distinct mechanisms, suite obligations, spec pins, CN-Spec |
-| A.6.8 | Service Polysemy Unpacking (RPR-SERV) | service polysemy, service situation, interface semantics, promise content, provider principal |
 | A.6.9 | Cross-Context Sameness Disambiguation - Repairing cross-context "same / equivalent / align" via explicit Bridges (RPR-XCTX) | ambiguous sameness, direct-owner dispatch, exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections |
 | A.6.S | U.SignatureEngineeringPair - Signature engineering via a ConstructorSignature and a TargetSignature | signature engineering, TargetSignature, ConstructorSignature, two-signature arrangement, EFEM |
 | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) | wholeness, integrity, part-of, boundary, environment |
@@ -58,7 +59,7 @@
 | A.7.CP | Constructive-Premise Compact and Reasoning-Basis Use | constructive-premise claim, dated reasoning Work, exact receiving claim or result, adopted premise or conditional assumption, ClaimUsedAsReasoningBasisRelation@Context |
 | A.8 | Universal Core Principle | universality, transdisciplinary, domain-agnostic, kernel-level U-kind admission. |
 | A.9 | Cross-Scale Consistency (C-3) | composition, aggregation, holarchy, invariants, roll-up. |
-| A.10 | Evidence Graph Referring (C-4) | evidence, traceability, provenance, evidence carrier, claim support |
+| A.10 | Evidence Graph Referring (C-4) | relied-on claim, bounded use, claim/result episteme, source publication, carrier |
 | A.11 | Ontological Parsimony | parsimony, composition, non-redundancy, kernel growth, U-kind admission. |
 | A.12 | Acting-Side Externalization and Reflexive Split | — |
 | A.13 | The Agential Role & Agency Spectrum | agency as role, agency spectrum, contextual role assignment, autonomy grading, substrate-neutral autonomy. |
@@ -69,7 +70,7 @@
 | A.15.3 | `SlotFillingsPlanItem` — Declaration-Local Planned Designation | WorkPlan claim content, intended-performance designator, exact declaration member, direct owner, participant/argument/result meaning |
 | A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, exact attempted use, independent required-position rows, governing pattern and direct object, project-side reference |
 | A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, prospective permission inputs |
-| A.15.6 | Project, Process, and Case Recovery through Work, Method, and Transformation | project/process/case wording, actual composite project `U.Work`, reusable `U.Method`, A.22-selected `U.Structure`, `TransformationFlowStructure` |
+| A.15.6 | Project, Process, and Case Recovery through Work, Method, and Transformation | — |
 | A.15.PROD | Production Work, Entity-Identity Inception, and Production Completion Recovery | — |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
 | A.16.0 | `U.LanguageStateMoveTrajectory` - Optional trajectory-account normal form over the language-state `U.CharacteristicSpace` | trajectory account, lineage, fork, merge, supersedes |
@@ -100,10 +101,10 @@
 | B.1.3 | Γ_epist — Knowledge-Specific Aggregation | knowledge aggregation, epistemic, provenance, trust, KD-CAL. |
 | B.1.4 | Contextual and Temporal Aggregation | — |
 | B.1.5 | Gamma_method - Order-Sensitive Method Composition and Work Enactment | method composition, `methodPartOf`, submethod, order-sensitive method, method relation structure |
-| B.1.6 | Work-Resource Aggregation | — |
-| B.2 | Meta-Holon Transition - Whole Reidentification | — |
+| B.1.6 | Work-Resource Aggregation | work-resource aggregation, resource Characteristic, C.16 measurement work/result episteme, typed input, Scale/Unit |
+| B.2 | Meta-Holon Transition — Whole Reidentification | — |
 | B.2.P | Emergence and MHT Precision Restoration | — |
-| B.2.2 | Meta-System Transition - System Specialization of MHT | — |
+| B.2.2 | Meta-System Transition — System Specialization of MHT | — |
 | B.2.3 | Meta-Holon Transition With Episteme Result | — |
 | B.2.4 | Capability and Functioning Whole Reidentification | — |
 | B.2.5 | Supervisor-Subholon Feedback Relation | — |
@@ -140,21 +141,21 @@
 | C.3.A | Typed Guard Macros for Kinds + USM (Annex) | declaration compatibility, exact candidate judgment, true/false/unknown, guard refusal, regulatory |
 | C.11 | Decision Theory (Decsn-CAL) | decision theory, DecisionSubject, OptionSet, comparison basis, ChoiceRule |
 | C.13 | Constructional Mereology (Compose‑CAL) | mereology, part-whole, composition, sum, set |
-| C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurement, measurement template, `U.DHCMethod(Ref)`, `U.Measure`, `U.Unit` |
+| C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurand, measurement subject, Characteristic, Scale, Level/Coordinate |
 | C.16.P | Characteristic and Scale Precision Restoration | — |
 | C.16.Q | Quality-Term Precision Restoration | — |
 | C.17 | Creativity‑CHR — Characterising Generative Novelty & Value | Creativity-CHR, Novelty@context, Use-Value and ValueGain, Surprise, ConstraintFit |
-| C.18 | NQD‑CAL — Open‑Ended Search Calculus | NQD-CAL, Γ_nqd.generate, Γ_nqd.updateArchive, Γ_nqd.illuminate, Γ_nqd.selectFront |
+| C.18 | Open-Ended Search Archive and Front Stewardship | open-ended search, generation, exploration archive, non-dominated front, descriptors |
 | C.18.1 | Scaling‑Law Lens Binding (SLL) | scaling law, scale variables (S), compute‑elasticity, data‑elasticity, resolution‑elasticity |
-| C.19 | Explore–Exploit Governor (E/E‑LOG) | explore-exploit, live candidate pool, pool-policy result, widen, keep frontier |
+| C.19 | Explore-Exploit Live-Pool Governor | explore-exploit, already-live candidate pool, pool-policy result, governing lens, widen |
 | C.19.1 | Bitter‑Lesson Preference (BLP) | — |
 | C.19.2 | Use-Bounded Apparatus Application | use-bounded apparatus application, one selected apparatus, configuration or adaptation work, setup cost, declared result and guarantee |
-| C.20 | Composition of `U.Discipline` (Discipline‑CAL) | discipline, U.AppliedDiscipline, U.Transdiscipline, episteme corpus, standards |
+| C.20 | Composition of `U.Discipline` (Discipline-CAL) | discipline construction, practice-and-knowledge whole, DisciplinePartOfRelation, exact constituents, whole-forming claims |
 | C.21 | Discipline‑CHR - Field Health & Structure | discipline, field health, reproducibility, standardisation, alignment |
-| C.22 | Problem Typing & TaskSignature Assignment (Problem-CHR) | — |
+| C.22 | Task Typing and TaskSignature Assignment (Problem-CHR) | — |
 | C.22.1 | Task-family adaptation signature | — |
 | C.22.PFR | Problematic-For Relation | actual adverse condition, exact problem-for entity and use, independent criterion-applicability relation, condition-to-predicate input rule, actual adverse episode |
-| C.22.2 | ProblemCard@Context | problem card episteme, problem-side record, P2W-ready, Thin problem card, `setContextRef` |
+| C.22.2 | ProblemCard | — |
 | C.23 | Method‑SoS‑LOG — MethodFamily Evidence & Maturity | MethodFamily, evidence, maturity, SoS-LOG, admit |
 | C.24 | Agentic Tool-Use and Call Planning (C.Agent-Tools-CAL) | — |
 | C.25 | Q-Bundle: Authoring "-ilities" as Structured Quality Bundles | quality bundle, -ility, quality family, characteristic plus scope, mechanism/status slots |
@@ -179,7 +180,7 @@
 | C.31.RSA | Reusable Structure Accounting | reusable-structure accounting, reusable share, bespoke residue, accounting basis, report-only share |
 | C.31.ASAP | Architecture Scale-Amenability Preference | architecture scale preference, scale amenability, ScaleClaimTriage, scale variable, scale window |
 | C.32 | Architecture Candidate Synthesis | architecture candidate synthesis, CandidateArchitecturePalette@Project, selected structures, architecture characteristics, synthesis structure map |
-| C.32.P2S | Problem-to-Structure Architecturing Unfolding | problem-to-structure architecturing unfolding, ProblemToStructureArchitecturingFlowCard@Project, ArchitectureUnfoldingStructureUse@Project, structural uncertainty, candidate structures |
+| C.32.P2S | Problem-to-Structure Architecturing Unfolding | — |
 | C.32.HCS | Architecture-Bearing Family Characteristic Starter Packs | architecture-bearing family characteristic starter pack, architecture characteristic heads, source catalogue narrowing, first criteria questions, characteristic transfer. |
 | C.32.ACS | Architecture Characteristic Criteria Set for Improvement Cycles | architecture characteristic criteria set, criteria row, Q-Bundle, improvement cycle, proxy risk |
 | C.32.ACE | Architecture Characteristic Eval Programs | architecture-characteristic eval program, eval result, measurement boundary, parity frame, missing-data policy |
@@ -283,9 +284,9 @@
 | G.1 | CG-Frame-Ready Generator | generator chassis, generator, selector, and set-result scaffold, six-card kit (M1-M6) |
 | G.2 | SoTA Harvester & Synthesis | SoTA harvest, synthesis, SoTA Synthesis Pack@CG-Frame, SoTAPaletteDescription, Tradition |
 | G.3 | CHR Authoring: Characteristics - Scales - Levels - Coordinates | CHR authoring, characteristics, scales, levels, coordinates |
-| G.4 | CAL Authoring: Calculi - Acceptance - Evidence | CAL authoring, operators, acceptance clauses, evidence profiles, tri-state admissibility |
+| G.4 | CAL Authoring: Calculi - Acceptance - Evidence | CAL Pack@CG-Frame, Context charter, typed operator card, acceptance clause, legal flow |
 | G.5 | Multi‑Method Dispatcher & MethodFamily Registry | method-family registry, generator-family registry, dispatcher, SelectorOutcomeKind, selected-set publication |
-| G.6 | Evidence Graph & Provenance Ledger | EvidenceGraph, provenance, PathId, PathSliceId, lane tags (TA/VA/LA) |
+| G.6 | Evidence Graph & Provenance Ledger | `EvidenceGraph`, `PathId`, `PathSliceId`, `PathCitationRecord`, provenance ledger |
 | G.7 | Cross-Tradition Bridge Calibration Kit (BridgeMatrix → BridgeCards + BCT/Sentinels) | bridge calibration, BridgeCard, BridgeCalibrationTable (BCT), RegressionSet, SentinelSet |
 | G.8 | SoS-LOG Bundles & Maturity Ladders | SoS-LOG, rule ids, admissibility ledger, tri-state `{pass |
 | G.9 | Parity / Benchmark Harness | parity harness, benchmark plan, adaptation parity, freshness windows, comparator pins |
