@@ -134,7 +134,7 @@
 | C.2.P.DR | Declarative Representation Precision Restoration | — |
 | C.3 | Kinds, Intent and Extent, and Typed Reasoning | bounded-context local kind, intent-bearing KindSignature, effective ReferenceScheme, three-valued candidate judgment, optional slice-indexed extension |
 | C.3.1 | U.Kind and U.SubkindOf Core | local kind, U.SubkindOf direct relation, relation-obtaining predicate, relation occurrence, assertion episteme |
-| C.3.2 | Kind Intent, Membership Judgment, and Extension | local kind, KindSignature declaration episteme, candidate classification, true/false/unknown, KindExtension representation. |
+| C.3.2 | Kind Intent, Membership Judgment, and Extension | — |
 | C.3.3 | `KindBridge` & `CL^k` — Cross-context Mapping of Kinds | KindBridge direct relation, bridge assertion episteme, target judgment, CL^k, loss |
 | C.3.4 | `RoleMask` — Contextual Adaptation of Kinds (without cloning) | RoleMask declaration episteme, masked judgment, candidate-feature constraint, vocabulary binding, stable-refinement review. |
 | C.3.5 | `KindAT` — Intentional Abstraction Facet for Kinds (K0…K3) | KindAT, K0-K3, editorial facet, declaration planning, assurance planning. |
@@ -154,7 +154,7 @@
 | C.21 | Discipline‑CHR - Field Health & Structure | discipline, field health, reproducibility, standardisation, alignment |
 | C.22 | Task Typing and TaskSignature Assignment (Problem-CHR) | — |
 | C.22.1 | Task-family adaptation signature | — |
-| C.22.PFR | Problematic-For Relation | actual adverse condition, exact problem-for entity and use, independent criterion-applicability relation, condition-to-predicate input rule, actual adverse episode |
+| C.22.PFR | Problematic-For Relation | — |
 | C.22.2 | ProblemCard | — |
 | C.23 | Method‑SoS‑LOG — MethodFamily Evidence & Maturity | MethodFamily, evidence, maturity, SoS-LOG, admit |
 | C.24 | Agentic Tool-Use and Call Planning (C.Agent-Tools-CAL) | — |
@@ -172,7 +172,7 @@
 | C.30.AD.BA | Built-Asset Architecture Description and Reference Designation | — |
 | C.30.P | Architecture and Structure Precision Restoration | — |
 | C.30.STRAT | Stratification Wording Precision Restoration | — |
-| C.30.ASV | Architecture Structural View Adequacy (ASV) | architecture structural view, ArchitectureStructureKindRef, VF.ARCH.STRUCTURE, viewpoint bundle, structure kind |
+| C.30.ASV | Architecture Structural View Adequacy (ASV) | — |
 | C.30.LCA | Control Structure View Adequacy (LCA) | control-structure view, layered control architecture, supervisor loop, controller and plant, rate band |
 | C.30.ILC | Cross-Scope Architecture Residual Triage | cross-scope residual, interlevel conflict, frustration, declared scope, structure kind |
 | C.30.TFS-REL | C.30.TFS-REL - Architecture Transformation-Flow Structure Relation | — |
@@ -227,7 +227,7 @@
 | E.10.P | Conceptual Prefixes (policy & registry) | prefixes, U., Γ_, ut:, tv: |
 | E.10.D1 | Lexical Discipline for “Context” (D.CTX) | context, U.BoundedContext, anchor, domain, frame. |
 | E.10.D2 | EntityOfConcern, Description Episteme, and Specification-Use Discipline | EntityOfConcern, Description episteme, specification use, DescriptionContext, testable |
-| E.11 | Practical-Use Guidance and Pattern Discovery | — |
+| E.11 | First-Practical Entry and Pattern-Use Discoverability Discipline | — |
 | E.11.PUA | Pattern Use in a Working Situation and First Useful Result | — |
 | E.11.PUR | Pattern-Use Applicability, Recommendation, and Coordination | — |
 | E.12 | Didactic Primacy & Cognitive Ergonomics | didactic, cognitive load, ergonomics, usability, Rationale Mandate |
@@ -235,15 +235,15 @@
 | E.14 | Human-Centric Working-Model | working model, human-centric, publication surface, grounding, assurance layers. |
 | E.15 | Lexical Authoring & Evolution Protocol (LEX-AUTH) | lexical authoring, evolution protocol, LAT, delta-classes. |
 | E.16 | RoC‑Autonomy Budget & Enforcement | autonomy budget, guarded enactment, autonomy ledger, override speech act, scout/probe/commit checkpoint. |
-| E.17.0 | U.MultiViewDescribing - Viewpoints, Views & Correspondences | — |
-| E.17.1 | `U.ViewpointBundleLibrary` — Reusable Viewpoint Bundles | viewpoint bundle, reusable viewpoint family, import discipline, alias discipline, governance |
-| E.17.2 | TEVB - Typical Engineering Viewpoints Bundle | — |
+| E.17.0 | Viewpoint and View Recognition for Multi-View Describing | — |
+| E.17.1 | Viewpoint Bundle Library — Reusable Viewpoint Reference Bundles | — |
+| E.17.2 | TEVB — Project-local Typical Engineering Viewpoint Bundle Template for Holons | — |
 | E.17 | Multi‑View Publication Kit | — |
-| E.17.EFP | ExplanationFaithfulnessProfile — explanation-use discipline over existing MVPK faces | — |
+| E.17.EFP | ExplanationFaithfulnessProfile — bounded explanation-use discipline | — |
 | E.17.ID.CR | ComparativeReviewUnit - bounded comparison over comparative review units | — |
 | E.17.AUD | PublicationUnit Stability Discipline | — |
 | E.17.AUD.LHR | PublicationUnit Stability Discipline and Local Head Restoration | — |
-| E.17.AUD.OOTD | PublicationUnit Stability Discipline and PublicationUnit Primary EntityOfConcern Discipline | — |
+| E.17.AUD.OOTD | PublicationUnit Primary-Subject Discipline | — |
 | E.18 | Transformation Flow Structure | — |
 | E.18.1 | P2W Problem-to-Work Carry-Through | — |
 | E.18.2 | Transformation Flow Mathematical Description | — |

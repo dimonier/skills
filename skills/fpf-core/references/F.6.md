@@ -57,7 +57,7 @@ Typical moments include:
 
 **What goes wrong if missed.** Assignment is treated as proof that work happened; a work log names a person but not the assignment episode; a context-like word hides the role taxonomy and interpretation scheme; or an episteme is made the performer because it described, constrained, or evidenced the work.
 
-**What this buys.** Work attribution becomes a direct, inspectable relation while role state, capability, method fit, evidence, source use, result, publication, and cross-scheme correspondence remain with their own governing patterns.
+**What this buys.** Work attribution becomes a direct, inspectable relation: the admitted holder system remains the actor, the dated Work separately enacts one exact `U.Method`, and role value, assignment, capability, method, method description, evidence, source use, result, publication, and cross-scheme correspondence remain with their own governing patterns.
 
 **Not this pattern when.** Use `A.2` for the role value, `A.2.1` for the assignment occurrence, `A.2.5` for a current role-state predicate, `A.2.2` for capability, and `A.15.1` for the work occurrence. Use `A.10`, `A.15.4`, `E.17`, or another direct pattern when the current claim is evidence use, source reliance, publication, status, gate, or decision. Use `A.6.5` when "role" means a relation position rather than a work-facing `U.Role`.
 
@@ -112,6 +112,8 @@ For an obtaining attribution, the readable actual-performer cue is `S = actualPe
 `performedBy(W, RA)` is a deprecated compatibility spelling of `performedUnderAssignment(W, RA)`. Existing claims or records may be read through that alias only after resolving `S = RA.HolderSystemSlot`. New practitioner-facing claims, examples, and conformance statements MUST use `S performed W under RA` or `performedUnderAssignment(W, RA)`, never wording that makes `RA` the performer.
 
 No evidence, log, status, method description, result, publication, context record, or role-state assertion is a generic participant in this relation.
+
+`performedUnderAssignment` also has no method participant. Because `W` is an admitted Work occurrence, an assertion or description about it must separately make recoverable the actual `enactsMethod(W, M)` relation governed by `A.15.1`, for one exact `M : U.Method`. The holder system acts and performs `W`; neither `RA`, its role value, a capability or algorithm-possession phrase, `M`, nor a method-description episteme `D` thereby acts or performs the work. Citing `D` may identify, constrain, or justify `M` for a receiving use, but it neither enacts `D` nor establishes that `D : U.MethodDescription`; apply `A.3.2` to that membership question independently.
 
 #### F.6:4.2 - Obtaining and Occurrence Identity
 
@@ -170,7 +172,7 @@ The sequence is application guidance, not a new check record, work plan, or work
 | Does the assignment obtain? | `A.2.1` | Assignment identity and occurrence precede work attribution. |
 | Does the assignment satisfy a current state predicate? | `A.2.5` | Role state has its own predicate, window, assertion, and evidence use. |
 | Can the holder perform the work? | `A.2.2` capability and capability-fit relation | Ability is not actual performance. |
-| Which method was enacted? | `A.3.1`, `A.3.2`, and `A.15.1` | Method, method description, and work occurrence have different identities. |
+| Which exact method did the Work enact? | `A.15.1` for actual `enactsMethod(W, M)`; `A.3.1` for exact `M : U.Method`; `A.3.2` only when membership of a separate description episteme `D` is current | The holder system performs `W`, and `W` enacts `M`; assignment, role value, capability, method, and description do not become performers, and a cited description is not admitted by label or algorithm-possession wording. |
 | What supports the attribution assertion? | `A.10` or the direct evidence relation | Support concerns knowledge or use of obtaining. |
 | Which encountered material is being relied upon? | `A.15.4` | Reliance on a visible item is not the attribution relation. |
 | What changed, first existed, was measured or evaluated, was delivered, or was accepted in connection with the work? | `A.15.1` for the work, then the exact change, A.6.1 operation-result, A.15.PROD inception, measurement, evaluation, delivery, or acceptance governor | None of these entities, values, or relations is a participant in performer attribution. |
@@ -205,6 +207,7 @@ Expose the relation declaration and occurrence key only when a receiving use mus
 8. An episteme does not fill `HolderSystemSlot` merely because it describes, constrains, or supports the work claim.
 9. Cross-scheme role correspondence uses a direct bridge relation and does not change either assignment identity.
 10. Reduced prose remains admissible until a receiving use needs explicit relation-occurrence identity.
+11. For admitted Work `W`, actual `enactsMethod(W, M)` remains a separately obtaining relation to one exact `U.Method`; only the admitted holder system acts, while assignment, role value, capability, method, and method description do not perform the work.
 
 ### F.6:6 - Reasoning Primitives
 
@@ -245,7 +248,7 @@ performedUnderAssignment:
   RoleAssignmentSlot: RoleAssignment-17
 ```
 
-The assertion interval describes the known extent of `RoleAssignment-17`; the direct assignment predicate must actually obtain throughout `InspectionWork-17` before `performedUnderAssignment` obtains. The relation attributes the inspection occurrence to Robot-7 under that assignment. Sensor capability, calibration state, inspection-method adequacy, report quality, and acceptance remain separate claims.
+The assertion interval describes the known extent of `RoleAssignment-17`; the direct assignment predicate must actually obtain throughout `InspectionWork-17` before `performedUnderAssignment` obtains. The relation attributes the inspection occurrence to Robot-7 under that assignment. Separately, `enactsMethod(InspectionWork-17, TurbineInspection@Maintenance-2026)` names the exact enacted method, while `TurbineInspectionProcedure-v3` may be cited as a distinct description episteme only if the receiving use needs it. Robot-7 is the actor; `InspectorRole`, a sensor capability or statement that Robot-7 possesses an inspection algorithm, the method, and the procedure do not perform the inspection. Algorithm-possession wording alone establishes neither the work attribution nor `TurbineInspectionProcedure-v3 : U.MethodDescription`. Calibration state, inspection-method adequacy, report quality, and acceptance remain separate claims.
 
 #### F.6:7.2 - Reviewer and Review Report
 
@@ -288,6 +291,7 @@ If Alice performs `ApprovalWork-481`, recover a separate `U.RoleAssignment` unde
 8. Any selected model-use structure is designated by the receiving attribution assertion or use, not by an optional slot in generic `U.RoleAssignment`.
 9. Missing evidence leaves the relied-on assertion unresolved rather than proving non-attribution.
 10. Compact source notation is unfolded before a receiving use depends on hidden assignment positions.
+11. The work assertion makes a separately obtaining actual `enactsMethod(W, M)` relation to one exact `U.Method` recoverable; it does not make the role value, assignment, capability, method, or method description the actor, and it does not infer `U.MethodDescription` membership from a label or algorithm-possession phrase.
 
 ### F.6:10 - Common Anti-Patterns and Repairs
 

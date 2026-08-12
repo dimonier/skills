@@ -49,7 +49,7 @@ The practitioner gets one bounded comparison move: name the narrower bearer, the
 
 #### C.19.1:0.3 - Not This Pattern When
 
-Do not use `C.19.1` to prove that an architecture candidate is adequate, to publish a selected set, to run the improvement loop, to plan or perform work, or to claim a gate decision. Use the direct owner for that question: `C.30`/`C.32` for architecture adequacy and synthesis, `G.5` for selected-set publication, `E.23` for object-version improvement, the A.15 family for work, and `A.21` for gate decisions.
+Do not use `C.19.1` to prove that an architecture candidate is adequate, declare a selected-set result, make that result available to an audience, run the improvement loop, plan or perform work, or claim a gate decision. Apply the pattern that defines and tests the current question: `C.30` or `C.32` for architecture adequacy and synthesis, `G.5` for selected-set result declaration, `E.17` for a source-backed publication face and return to source, `E.24.PUB` for the publication occurrence and audience availability, `E.23` for object-version improvement, the A.15 family for work, and `A.21` for gate decisions.
 
 #### C.19.1:0.4 - First Output
 
@@ -66,7 +66,7 @@ Any DRR that selects a **narrower hand‑engineered** method, module, platform, 
 (a) **Parity harness**: equal **FreshnessWindows**, a common **ComparatorSet**, replicate counts, seed records, and **set-returning** evaluation; **Dominance = ParetoOnly** unless a CAL policy says otherwise (policy‑id cited).
 (b) **Budget sweeps**: vary **compute**, **data**, and **FoA** within a fixed safety envelope; **pin** any unsweepable knob and record the invariant.
 (c) **Slopes and uncertainty**: report ∂quality over ∂compute, ∂quality over ∂data, and, where applicable, ∂coverage over ∂FoA, with **confidence intervals, error bars, edition pins, and policy pins** in telemetry. Use **bootstrapped confidence intervals** or repeated‑seed estimates; disclose heteroscedasticity handling.
-(d) **Resources**: publish **Resrc‑CAL** accounts for time, energy, FLOPs, and assurance deltas under B.3.
+(d) **Resources**: publish resource accounts for time, energy, and FLOPs through **A.15.1**, **B.1.6**, **C.16**, and **A.10** as applicable, and publish assurance deltas under **B.3**.
 (e) **Objective vector**: list quality, risk, cost, and only policy-promoted illumination or coverage telemetry metrics.
 (f) **DoE recipe**: for ≥2 active knobs, apply a **fractional factorial** or **Latin‑hypercube** with ≥ 3 levels per knob to avoid aliasing; justify any lower design.
 (g) **Knee & regret tests**: if claiming a heuristic wins, show either (i) a **knee** inside the audited window for the general method (per SLL‑5 policy thresholds) or (ii) **budget‑constrained regret** over the sweep where the heuristic dominates within CI.
@@ -82,7 +82,7 @@ Among admissible options with comparable assurance within **delta** and budget w
 > All overrides record a **BLP‑waiver** with rationale, responsible role, and expiry or review in the DRR.
 
 **BLP‑2.2 — Task-family specialization compatibility.**
-A bounded specialization remains **BLP-compatible** when it is produced by a **general, scale-amenable substrate**, when it acts as a complementary bias that does not block scale, or when it survives the ordinary **BLP** comparison discipline on the same declared task family and work target. The specialization may be a method, module, platform variant, system form, organization form, agent behavior, or evidence-bearing episteme/work arrangement. If the user is not claiming scale advantage or overriding a general bearer, a bounded specialization may be used with explicit task family, work target, budget guard rails, and evidence source or evidence locus. Full **Scale-Audit** is triggered by scale-advantage, override, selector-facing publication, publication-facing superiority, or durable reusable-bearer claim, not by the mere existence of specialization. `BLP` therefore governs whether the narrower current bearer was generated, compared, audited, waived, and overridden admissibly; it does **not** require the final local behavior at every moment to look maximally generic.
+A bounded specialization remains **BLP-compatible** when it is produced by a **general, scale-amenable substrate**, acts as a complementary bias that does not block scale, or survives the ordinary **BLP** comparison discipline on the same declared task family and work target. The specialization may be any narrower bearer relevant to that task family—for example, a method, module, platform variant, system form, organization form, agent behavior, evidence-bearing episteme, or work arrangement. If the user is not claiming scale advantage or overriding a general bearer, a bounded specialization may be used with explicit task family, work target, budget guard rails, and evidence source or evidence locus. A full **Scale-Audit** is required when any of these claims is current: scale advantage, override, selector-facing result declaration, publication-facing superiority, or durable reusable-bearer status. Mere specialization does not trigger it. Apply `BLP` to test whether the narrower current bearer was generated, compared, audited, waived, and overridden admissibly; do **not** require the final local behavior at every moment to look maximally generic.
 
 Low-human-overlap or newly discovered approaches remain admissible when the task family, budget guard rails, and evidence source or evidence locus are explicit by value and the same `Scale‑Audit`, alpha and delta, waiver, and override discipline is preserved.
 **BLP‑3 — Minimal‑prescription default.**
@@ -103,11 +103,11 @@ Scale‑Audit artefacts **SHALL** be exported to **G.11** with edition pins, CI 
 ### C.19.1:3 - Conformance Checklist (CC‑BLP)
 
 1. **Alpha and delta tolerances** declared in DRR or via policy profile, with CI level stated.
-2. DRR includes a **Scale‑Audit** (BLP‑1a through BLP‑1g) with slopes, confidence intervals, edition pins, policy pins, and Resrc‑CAL.
+2. DRR includes a **Scale‑Audit** (BLP‑1a through BLP‑1g) with slopes, confidence intervals, edition pins, policy pins, planned-budget basis under **A.15.2**, and dated resource-account basis under **A.15.1**, **B.1.6**, **C.16**, and **A.10**.
 3. Selection cites **BLP‑2** and precedence checks.
 4. Any heuristic that meets the BLP‑4 trigger is recorded as a `BLP.HeuristicDebtEntry` with scope, responsible role, expiry or review window, and de‑hardening plan; ordinary local bounded tactics do not create a debt entry.
 5. Authoring defaults to **rules‑as‑prohibitions**; deviations are DRR‑justified and safety-bounded.
-6. **Resrc‑CAL** accounts and assurance deltas reported.
+6. Planned budget values under **A.15.2**, dated resource accounts under **A.15.1**, **B.1.6**, **C.16**, and **A.10**, and assurance deltas under **B.3** are reported.
 7. **Replicate counts, seed records, and confidence intervals** recorded for slope estimates; heteroscedasticity handling disclosed.
 8. Audit artefacts exported to **G.11** with **BLP.Policy@Context** id.
 
@@ -146,7 +146,7 @@ Source-use relation and source-currentness: this section is informative groundin
 
 ### C.19.1:7 - Relations
 
-**Depends on:** **G.5** and **G.9** (selector and parity), **G.11** (refresh telemetry), **C.5** (Resrc‑CAL), **C.18** (NQD‑CAL), **C.19** (E and E‑LOG), **F.7** and **F.9** (bridges, CL, Φ, and Ψ). **Constrained by:** **E.5** Guard‑Rails and **E.3** precedence.
+**Depends on:** **G.5** and **G.9** (selector and parity), **G.11** (refresh telemetry), **A.15.1**, **A.15.2**, **B.1.6**, **C.16**, and **A.10** for dated work, resource aggregation, measurement, cost, and provenance, **C.18** (NQD‑CAL), **C.19** (E and E‑LOG), **F.7** and **F.9** (bridges, CL, Φ, and Ψ). Planned **C.5** (Resrc-CAL) may later consolidate resource-use and work-cost guidance but supplies no current governing semantics. **Constrained by:** **E.5** Guard‑Rails and **E.3** precedence.
 
 #### C.19.1:7.1 - C.32 architecture-synthesis use relation
 

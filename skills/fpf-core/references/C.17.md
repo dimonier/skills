@@ -25,6 +25,8 @@ dependencies:
     - B.5.2.1
     - C.18
     - C.19
+    - A.13
+    - A.10
     - C.9
     - B.3
     - B.4
@@ -44,7 +46,7 @@ dependencies:
 
 **Status.** Mechanism specification (**CHR**) — normative where stated.
 **Depends on.** A‑kernel (A.1–A.15), **A.17/A.18/A.19** characteristic-space discipline, **MM‑CHR** measurement infrastructure (C.16), **KD‑CAL** and **Sys‑CAL** for carriers and holons, **Decsn‑CAL** (utility), and declared must-constraint owners such as E.5, D.1-D.5, or service-acceptance patterns.
-**Coordinates with.** **B.5.2.1 NQD** (abductive generator) for search instrumentation, **C.9 Agency Characteristic Profile** for agential capacity, B-cluster trust/assurance (B.3), Canonical Evolution Loop (B.4), Role Assignment & Enactment Cycle (Six-Step) (F.6) and Naming Discipline for U-kinds, role names, and local term sheets (F.5).
+**Coordinates with.** **B.5.2.1 NQD** (abductive generator) for search instrumentation, A.13 for agential participation and the A.17/A.18/A.19/C.16/A.10 stack for measured characteristics and evidence, planned **C.9 Agency Characteristic Profile** only as future consolidation, B-cluster trust/assurance (B.3), Canonical Evolution Loop (B.4), Role Assignment & Enactment Cycle (Six-Step) (F.6), and Naming Discipline for U-kinds, role names, and local term sheets (F.5).
 **Guard‑rails.** Obeys E‑cluster authoring rules (Notational Independence; DevOps Lexical Firewall; Unidirectional Dependency).
 
 **What this pattern provides (exports):**
@@ -72,12 +74,12 @@ This pattern exports **Characteristics** and measurement templates **only**. It 
   * **`U.SimilarityKernel`** — a declared similarity metric class for the Context (text/image/design/code/etc.), with invariance notes.
   * **`U.GenerativePrior`** — a predictive model over the Context’s artifacts/behaviours used to compute `Surprise`.
   * **`U.CreativeEvaluation`** — a specialisation of `U.Evaluation` that yields a `U.CreativityProfile` and the Evidence Graph Ref.
-  * **`EffortCost`** *(advisory)* — resource outlay to achieve the outcome; from WorkLedger (Resrc‑CAL). *(For normalization and planning; not itself “creativity.”)*
+  * **`EffortCost`** *(advisory)* — resource outlay to achieve the outcome; from a work/resource ledger whose dated Work, aggregation, measurement, and provenance follow **A.15.1**, **B.1.6**, **C.16**, and **A.10**; planned values remain **A.15.2** WorkPlan content. *(For normalization and planning; not itself “creativity.”)*
 
 * **Operators (first tranche):** `composeProfiles` (set → declared retained-set profile), `dominates` (partial order in space), `frontier` (Pareto set), `normaliseByEffort`. *(Formal laws introduced in Quarter 2.)*
 * **Relations (informative; not exported):** dominance relation (partial order in the space), frontier predicate (Pareto set), retained-set composition view. *C.17 exports no operators and does not mint public set-result family heads; these are mathematical relations only.*
 *
-> **Scope note.** This pattern **does not** define who is “a creative person.” It characterises **creative outcomes and episodes** as **observed in Work** and **expressed as Epistemes**. Agency (capacity to originate) is measured through **C.9 Agency Characteristic Profile**; here we measure **what came out** and **how it scores** against stated goals and references.  A **Context publishes** the measurement space and admissible policies; later choice is attributed to a declared `DecisionSubject` at explicit `DecisionSubjectGranularity`, using a named lens within that space. CHR exports **no Γ‑operators** and **no team workflow rules**.
+> **Scope note.** This pattern **does not** define who is “a creative person.” It characterises **creative outcomes and episodes** as **observed in Work** and **expressed as Epistemes**. Agency (capacity to originate) is identified under A.13 and measured through A.17/A.18/A.19/C.16/A.10; planned **C.9 Agency Characteristic Profile** may later consolidate that profile but supplies no current governing force. Here we measure **what came out** and **how it scores** against stated goals and references. A **Context publishes** the measurement space and admissible policies; later choice is attributed to a declared `DecisionSubject` at explicit `DecisionSubjectGranularity`, using a named lens within that space. CHR exports **no Γ‑operators** and **no team workflow rules**.
 
 ### C.17:1 - Motivation & Intent (manager’s read‑first)
 
@@ -322,7 +324,7 @@ For **lexical CandidateSets** used by Name Cards (F.18), **Diversity_P SHALL be 
 
 * **A.2 Role & A.15 Run‑alignment.** Creative **Work** is performed by **systems in roles**; outcomes are **epistemes**. Creativity is **measured by `U.Evaluation`**, not “done by a document.”
 * **B.3 Trust/Assurance.** Coordinates carry **confidence bands**; Bridges lower **R** by **CL**. A.2.4 evidence-use relations bind datasets and benchmarks used in measurements.
-* **C.9 Agency Characteristic Profile.** Agency measures **capacity to originate**; a high‑agency system may still output low‑creativity outcomes (and vice versa with strong scaffolding).
+* **Agency characterization.** A.13 identifies agential participation and the domain profile; A.17/A.18/A.19/C.16/A.10 govern measured characteristics and evidence. Planned C.9 may later consolidate the profile but supplies no current governing force. A high-agency system may still output low-creativity outcomes (and vice versa with strong scaffolding).
 * **A.2.6 USM (Scope).** All measurements sit on **ContextSlices**; `G‑ladder` is explicitly **not** used (C.17 follows A.2.6’s set‑valued scopes).
 * **D‑cluster ethics.** **ConstraintFit** is where **must** constraints, ethics, and safety bind the evaluation; waivers are explicit **SpeechActs**.
 

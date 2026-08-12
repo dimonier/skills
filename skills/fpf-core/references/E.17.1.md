@@ -1,28 +1,27 @@
 ---
 id: E.17.1
-title: "`U.ViewpointBundleLibrary` — Reusable Viewpoint Bundles"
+title: Viewpoint Bundle Library — Reusable Viewpoint Reference Bundles
 status: Stable
-keywords:
-  - viewpoint bundle
-  - reusable viewpoint family
-  - import discipline
-  - alias discipline
-  - governance
-  - engineering/management/research bundles.
+keywords: []
 dependencies:
   builds_on:
+    - C.2.1
     - E.17.0
+    - C.13
+    - A.22
     - A.6.2
     - A.6.4
     - A.7
     - E.7
     - E.10
+    - E.24.PUB
+    - C.29
   used_by:
     - E.17.2
     - E.18
 ---
 
-# E.17.1: `U.ViewpointBundleLibrary` — Reusable Viewpoint Bundles
+# E.17.1: Viewpoint Bundle Library — Reusable Viewpoint Reference Bundles
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -30,27 +29,45 @@ dependencies:
 
 ---
 
-## E.17.1 - `U.ViewpointBundleLibrary` - Reusable Viewpoint Bundles
+## E.17.1 - Viewpoint Bundle Library - Reusable Viewpoint Reference Bundles
 
 > **Type:** Architectural (A)
 > **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
+**Tech-name.** `ViewpointBundleLibrary` (pattern and catalogue form, not a U-kind).
+
 **Plain-name.** Viewpoint bundle library.
 
+**Use this when.** The same coherent family of already admitted viewpoint editions recurs across projects, schools, or publication uses, and users need one editioned catalogue from which exact viewpoint references can be imported without restating or reidentifying the viewpoints.
+
+**First action.** Resolve one already admitted catalogue edition L and its family designator, retrieve the local declaration, and resolve only the `U.ViewpointRef` members needed now. If L or the declaration is new, missing, or disputed, use §4.2 to recover `<G_L, K_L, R_L>` and verify L's C.2.1 constitution for that edition; reuse that result while the edition, effective scheme, and relied-on premises stay unchanged.
+
+**First useful result.** One exact catalogue edition L, one ordinary family designator retrieving a local declaration claim block, and one finite non-empty member set of `U.ViewpointRef` values that each resolve to an exact E.17.0 viewpoint episteme edition. L retains its C.2.1 identity; the compact locator `<editionDesignator(L), familyDesignator>` aids retrieval under `R_L` but is neither L's identity nor a separate bundle kind or entity.
+
+**Ordinary stop.** Stop when exact L, the declaration, and the needed reference subset are recoverable. Do not reconstruct L's constitution, instantiate every member, select an A.22 structure, prove conformance, or publish the catalogue merely to import an admitted family.
+
+**Admission boundary.** E.24.UK admits `U.Viewpoint` and `U.View`; it does not admit `U.ViewpointBundleLibrary` or `U.ViewpointBundle`. E.17.1 therefore defines an ordinary catalogue-episteme form and local bundle declarations in its claim content. The historical filename remains a discovery locator only and grants no kind membership.
+
+**Do not use this when.** One describing use merely selects one viewpoint or a small one-off set that has no recurring family-level purpose. Keep the exact references local; a bundle adds no conformance, membership, structure, publication, or correspondence merely by collecting them.
+
+**What changes in practice.** Authors reuse exact references and preserve their bundle provenance; reviewers can detect silent member substitution, alias collision, and package-driven membership claims.
+
+
+
 **Builds on.**
-`A.6.2-A.6.4` (episteme morphism classes), `A.6.5 U.RelationSlotDiscipline`, `A.7`, `E.7`, `E.10`, `E.10.D1`, `E.10.D2`, `E.17.0 U.MultiViewDescribing`.
+`A.6.2-A.6.4` (episteme morphism classes), `A.6.5 U.RelationSlotDiscipline`, `A.7`, `E.7`, `E.10`, `E.10.D1`, `E.10.D2`, and `E.17.0 MultiViewDescribing`.
 
 **Used by.**
 `E.17.2` (TEVB engineering viewpoint bundles), `E.18:5.12`, and domain-specific viewpoint families for architecture, governance, safety, research, or assurance.
 
 ### E.17.1:1 - Problem frame
 
-**Selected-family discipline.** Viewpoint bundles declare `EntityOfConcernClassSpec` constraints for the selected entities their viewpoints can describe. Bundle labels, aliases, annexes, files, and publication faces never select the entity by themselves.
+**Selected-family discipline.** A local declaration states the exact target-kind compatibility condition it uses: either a by-value criterion or a reference that resolves to the exact ClaimGraph defining or constraining the admitted target kind. Bundle labels, aliases, annexes, files, and publication faces never supply that criterion or select an actual entity by themselves.
 
-`U.MultiViewDescribing` lets a description family state that one entity of concern is rendered through several viewpoints with declared correspondences. In practice many such viewpoint families recur across projects and schools: engineering teams reuse functional / procedural / structural / interface viewpoints; governance teams reuse risk / control / compliance / operations viewpoints; research teams reuse theory / experiment / inference / limitation viewpoints.
+`MultiViewDescribing` lets engineers recognize several epistemes about one exact entity as views under exact viewpoint editions and recover cross-view relations only when those relations actually obtain. In practice many such viewpoint families recur across projects and schools: engineering teams reuse functional / procedural / structural / interface viewpoints; governance teams reuse risk / control / compliance / operations viewpoints; research teams reuse theory / experiment / inference / limitation viewpoints.
 
-FPF therefore needs one explicit governing pattern for reusable viewpoint families so that authors can import them, name them stably, review them once, and keep viewpoint-family identity separate from document labels, publication faces, and publication forms.
+E.17.1 therefore supplies one explicit packaging pattern for reusable viewpoint families so that authors can import them, name them stably, review them once, and keep viewpoint-family identity separate from document labels, publication faces, and publication forms.
 
 ### E.17.1:2 - Problem
 
@@ -60,10 +77,10 @@ Without a viewpoint-bundle library pattern:
   Similar families reappear under slightly different labels, but no stable catalogue `U.Episteme` records whether the underlying viewpoints are actually the same.
 2. **Viewpoint identity drifts.**
   A family called `functional`, `capability`, or `operational` may differ only lexically, or may differ semantically, but there is no disciplined place to tell which is which.
-3. **`U.MultiViewDescribing` cannot reuse a family cleanly.**
+3. **`MultiViewDescribing` cannot reuse a family cleanly.**
   Every instance must restate its finite viewpoint family locally instead of importing an existing bundle.
-4. **ISO 42010-style viewpoint libraries remain external.**
-  FPF lacks a native place where reusable viewpoint libraries can be expressed as first-class, reviewable objects.
+4. **Reusable viewpoint-library practice remains external.**
+  FPF lacks a native place where reusable viewpoint families can be expressed as reviewable catalogue content without importing a standard's ontology.
 5. **Reader-facing labels leak into semantics.**
   Authors reuse the same name for viewpoints, views, publication faces, or folders, and the boundary between EntityOfConcern and Description episteme becomes unclear.
 
@@ -73,127 +90,168 @@ Without a viewpoint-bundle library pattern:
 |---|---|
 | **Reuse vs local fit** | Authors want reusable viewpoint families, but a local project may still need a subset or a context-specific extension. |
 | **Stable identity vs evolution** | Bundles must stay stable enough for long-term reuse while still admitting editioned change. |
-| **EntityOfConcern clarity vs label convenience** | Viewpoint bundles are catalogue descriptions for viewpoint families, yet teams often prefer one reader-facing label across `U.Viewpoint`, `U.View`, publication-face, and folder entities. |
-| **Engineering vs publication discipline** | Engineering viewpoints and publication viewpoints both matter, but they must not collapse into one id namespace. |
+| **EntityOfConcern clarity vs label convenience** | A bundle library is a catalogue episteme whose members reference exact viewpoint epistemes, yet teams often prefer one reader-facing label across viewpoint, view, publication form, and carrier. |
+| **Engineering vs publication discipline** | Engineering viewpoints and publication viewpoints both matter, but their reader-facing designators must not collapse into one lexical namespace. |
 | **Rich libraries vs cognitive economy** | A library should be rich enough for real reuse without becoming so large that authors cannot choose from it coherently. |
 
-### E.17.1:4 - Solution - `U.ViewpointBundleLibrary`
+### E.17.1:4 - Solution - one catalogue episteme with local bundle declarations
 
-`E.17.1` introduces `U.ViewpointBundleLibrary` as the reusable catalogue `U.Episteme` for reusable viewpoint families. The library is an episteme-record species: it packages named bundles of `U.Viewpoint` values and related metadata, but it does not define new kernel episteme kinds, new publication forms, or new publication carriers. A published library is a `U.EpistemePublication`, `PublicationUnit`, publication form, face, or carrier only through the usual E.17 publication relation positions.
+`E.17.1` defines a reusable form for one ordinary C.2.1 catalogue episteme L whose local bundle declarations package exact `U.ViewpointRef` values resolving to exact E.17.0 viewpoint episteme editions. L, a declaration claim block within L, its ordinary family designator, each reference, each viewpoint designator, and P remain distinct. Neither the catalogue nor a declaration redefines viewpoint identity or membership, grants `U.View` membership, or creates publication forms and carriers.
 
 #### E.17.1:4.1 - Core role
 
 A conforming viewpoint-bundle library makes three things explicit:
 
-- **which family is being named,** via `ViewFamilyId`;
-- **which `U.Viewpoint` values belong to that family;**
-- **under what entity of concern class and edition discipline** the family is valid.
+- **which family is being named,** via an ordinary family designator interpreted under exact `R_L`;
+- **which `U.ViewpointRef` members resolve to the exact viewpoint episteme editions packaged by that family;**
+- **which exact target-kind compatibility condition and catalogue-edition discipline constrain the family.**
 
-This lets `U.MultiViewDescribing` import a finite viewpoint family from a stable catalogue `U.Episteme` instead of restating it ad hoc in every local description family.
+This lets `MultiViewDescribing` import a finite viewpoint family from a stable catalogue `U.Episteme` instead of restating it ad hoc in every local description family.
 
-#### E.17.1:4.2 - `U.ViewpointBundleLibrary` (catalogue episteme)
+#### E.17.1:4.2 - Reuse an admitted catalogue; open full constitution only when needed
 
-A `U.ViewpointBundleLibrary` is a catalogue `U.Episteme` of viewpoint bundles with at least:
+**Existing-catalogue route.** Resolve the already admitted catalogue edition L, retrieve the local declaration by its family designator under L's effective `R_L`, and resolve only the member references needed now. Do not reconstruct L's complete C.2.1 constitution merely to import an admitted edition.
 
-- `libraryId : LibraryId`
-- `editionId : EditionId`
-- `bundles : FinSet(U.ViewpointBundle)`
-- optional governance metadata such as responsibility role assignment, change-control note, or scope tags
+Open the complete constitution below for the affected catalogue edition when authoring or admitting a new L, when L or edition identity or reference resolution is disputed, or when a named later use needs the catalogue's ClaimGraph, subject, or scheme as inspectable premises. Reuse an existing check while that edition, its effective scheme, and the relied-on premises stay unchanged:
+
+- `G_L` is the exact `U.ClaimGraph` that states the catalogue scope, the local family declarations, the referenced viewpoint editions, their target-kind compatibility conditions, and the edition-change rule;
+- `K_L` is the exact catalogue subject: the independently identified finite C.13 collection of already admitted viewpoint episteme editions whose recurring reuse groupings L describes. Its collection identity, exact members, obtaining membership relations, and identity rule are established before L; neither the catalogue nor a declaration creates them; and
+- `R_L : U.ReferenceScheme` is the exact effective scheme under which the catalogue's ordinary library, edition, and family designators resolve; each `U.ViewpointRef` resolves to exact P; target-kind criteria and compatibility claims are interpreted; and reference, omission, provenance, and edition-change rules are read.
+
+`EpistemeConstitutionRelation(G_L, K_L, R_L)` must obtain. The participant-determined triple `<G_L, K_L, R_L>` identifies exact catalogue episteme L. If a proposed catalogue has only a file, label, list, or card but no truthful exact `K_L` or effective `R_L`, stop: L has not yet been constituted.
+
+`G_L` makes at least these claims recoverable:
+
+- one ordinary library designator and one ordinary edition designator interpreted under `R_L`;
+- a finite set of local family-declaration claim blocks, each retrievable inside `G_L` by one ordinary family designator interpreted under `R_L`;
+- the exact `U.ViewpointRef` members and target-kind compatibility claim for each declaration; and
+- only maintenance claims currently needed, such as an exact responsible role assignment, change-control note, or scope tag.
+
+Library, edition, and family designators are lexical values under `R_L`, not local ValueKinds, public U-kinds, episteme identity discriminators, or entities by spelling. A local family declaration is claim content in `G_L`, not automatically a separate entity or episteme. Its compact locator `<editionDesignator(L), familyDesignator>` is a retrieval aid under `R_L`; it does not replace L's C.2.1 identity. If a receiving use truly needs one declaration as a separately identified episteme, constitute that new episteme independently under C.2.1 rather than inferring it from a row.
 
 Normative constraints:
 
-1. Within one library edition, each `ViewFamilyId` **SHALL** be unique.
-2. Libraries **SHALL NOT** define new kernel episteme kinds or publication-face/form kinds.
-3. Libraries **MAY** be specialized as core FPF libraries or organization-local extensions that preserve the same bundle discipline.
+1. Within one exact `G_L`, every family designator **SHALL** retrieve exactly one local declaration claim block under `R_L`.
+2. A catalogue **SHALL NOT** define new kernel episteme kinds, id kinds, reference kinds, or publication-face/form kinds merely to type its fields.
+3. A catalogue **MAY** be a core FPF catalogue or an organization-local extension when the same constitution, resolution, and family-declaration discipline remains recoverable.
 
-#### E.17.1:4.3 - `U.ViewpointBundle` and `ViewFamilyId`
+#### E.17.1:4.3 - Local bundle declaration and its ordinary family designator
 
-A `U.ViewpointBundle` is a finite, non-empty family of compatible `U.Viewpoint` values packaged for reuse.
+A bundle declaration is a bounded claim block inside exact `G_L`. It states one finite, non-empty recurring family of exact `U.ViewpointRef` values drawn from exact catalogue subject `K_L`. Every reference resolves under `R_L` to one exact viewpoint episteme edition P that has already gained `U.Viewpoint` membership under E.17.0. The declaration neither admits P nor changes P's C.2.1 identity.
 
-Minimal structure:
+Its minimum claim content is:
 
-- `viewFamilyId : ViewFamilyId`
-- `EntityOfConcernClassSpec <: U.Entity`
-- `viewpoints : FinSet(U.Viewpoint)`
-- optional `ArchetypalCards : FinSet(U.ArchetypalGroundingRef)`
-- optional `AlignmentNotes` for ISO 42010 or domain-standard correspondences
-- optional typed annex references for lexical, bridge, A.16 move-publication, example, or SoTA companion material
+- one ordinary `familyDesignator`, unique within exact `G_L` under `R_L`;
+- one exact target-kind compatibility condition: either the by-value criterion actually used for this family or a reference that resolves to the exact ClaimGraph defining or constraining the admitted target kind; if member viewpoints use different fixed target-kind criteria, the declaration states the exact compatibility rule rather than inventing a common superclass token;
+- `viewpointRefs`, one finite non-empty set of exact `U.ViewpointRef` values;
+- optional references that resolve under their applicable schemes to exact archetypal-grounding examples or sections, with their intended recognition use stated;
+- optional alignment claims naming the exact source and relation when a real correspondence is asserted; and
+- optional references that resolve under their applicable schemes to exact annex assets, each with its local role such as lexical note, Bridge material, A.16 move-publication note, example, or SoTA companion.
 
-`ViewFamilyId` names the bundle. It does **not** name a `U.View`, a publication face, or a file-system carrier.
+The family designator retrieves the declaration claim block inside exact L. A member `U.ViewpointRef` resolves exact P, and any reader-facing viewpoint token is only P's designator. The family designator, declaration claim block, reference, viewpoint designator, P, and L are distinct; no token, list position, prefix, alias, or member spelling substitutes for an exact episteme or reference.
 
-#### E.17.1:4.4 - Import discipline into `U.MultiViewDescribing`
+The compatibility condition neither selects an actual EntityOfConcern for a describing use nor supplies or changes any member P's fixed target-kind criterion. Those claims remain in exact P and E.17.0 conformance. A bundle is not a bundle of views, files, forms, carriers, or publication occurrences. If a receiving use needs an A.22 structure among the member viewpoints, it separately recovers exact obtaining relations and selects that structure; declaration adjacency or order is not structure.
 
-When a `U.MultiViewDescribing[EntityOfConcernClass]` family declares a `ViewFamilyId`:
+Changing the member-reference set, family meaning, compatibility condition, or the interpretation supplied by `R_L` changes `G_L` or the effective scheme and therefore identifies another catalogue episteme. Repackaging, annex layout, publication form, carrier, or audience does not reidentify unchanged L or any unchanged member viewpoint episteme.
 
-- its finite viewpoint family `Sigma` **SHALL** be a subset of the referenced bundle's `viewpoints`;
-- every Description episteme or specification-use case in the family **SHALL** use `viewpointRef` values drawn from that imported family;
-- every associated `U.View` **SHALL** preserve viewpoint attribution rather than silently retyping or relabeling the imported viewpoints.
+#### E.17.1:4.4 - Import discipline into `MultiViewDescribing`
 
-If more than one bundle is used, the family shall make the partition explicit rather than relying on unnamed mixture.
+When a describing use names a family designator, it resolves exact catalogue edition L and its effective `R_L`, retrieves the declaration claim block designated inside `G_L`, and then names the exact imported reference subset `Sigma`. If exact L or the declaration is not already recoverable, use §4.2 to establish `<G_L, K_L, R_L>` before import:
+
+- `Sigma` is a subset of that declaration's `viewpointRefs` in exact L;
+- every member is an exact `U.ViewpointRef` resolving to one admitted viewpoint episteme edition P;
+- every candidate episteme E used under a member is independently identified under C.2.1 and is a `U.View` only when `EpistemeViewpointConformanceRelation(E,P)` obtains; and
+- every actual one-viewpoint selection for one describing use carries one singular `viewpointRef`; importing the family neither selects P for that use nor establishes conformance.
+
+A local subset names exact catalogue edition L, the source family designator, and the member references actually used, while keeping omitted members visible as unused or intentionally excluded. A multi-library use preserves each exact `<editionDesignator(L), familyDesignator>` source and member provenance rather than flattening everything into one unnamed family. If one use selects several viewpoints, it constructs their C.13 collection with exact membership; it does not overload one reference or infer a new family from adjacency.
+
+Construction, identity viewing, transformation, declaration membership, selection, naming, rendering, or publication grants neither `U.Viewpoint` nor `U.View` membership. A local overlay may add didactic or publication material without changing exact L. Changing a member viewpoint's meaning, the reference target, membership set, or family meaning requires a new local catalogue edition or family declaration rather than silent mutation under the inherited family designator.
 
 #### E.17.1:4.5 - Guard and naming discipline
 
 - A viewpoint bundle is a family of **viewpoints**, not a bundle of views or documents.
-- `ViewFamilyId` is a lexical family id, not a publication-face/form kind.
-- Engineering viewpoint ids and publication viewpoint ids may coexist, but they **SHALL** remain disambiguated.
-- Bundle semantics come from the owned `U.Viewpoint` definitions, not from the spelling pattern of the family id.
+- The family designator is an ordinary lexical value under `R_L`, not a local id kind, publication-face/form kind, reference, or entity.
+- Engineering viewpoint designators and publication viewpoint designators may coexist, but their namespaces **SHALL** remain disambiguated.
+- Bundle semantics come from the exact viewpoint episteme editions resolved by its member references, not from the spelling pattern of the family designator.
+
+#### E.17.1:4.6 - Publication and representation stay outside the bundle
+
+A published library is the same selected C.2.1 episteme edition participating in exact E.24.PUB relations:
+
+- `PublicationFormExpressionRelation` relates that selected edition, one exact publication form, and one exact bounded-use declaration;
+- `PublicationFormBearingRelation` relates one exact `U.PresentationCarrier` and that form; and
+- `EpistemePublicationRelation` relates the selected edition, audience declaration, bounded-use declaration, form, and carrier for one maximal continuous availability interval.
+
+Changing a participant or restoring availability after a gap yields another publication occurrence under E.24.PUB; it does not reidentify unchanged L or any member viewpoint. Rendering, printing, or uploading is separate system-performed `U.Work`. C.29 applies when a diagram or catalogue rendering represents independently recovered declarations or viewpoint epistemes. Publication, representation, form, carrier, or rendering grants no viewpoint or view membership and makes no represented world-side relation obtain.
 
 ### E.17.1:5 - Archetypal Grounding
 
+
 **Tell.** A viewpoint bundle library lets FPF say "use this already-defined viewpoint family" without confusing that family with the concrete views or publication faces that later realize it.
 
-**Show (System).** A TEVB engineering bundle can define a reusable family such as `VP.Functional`, `VP.Procedural`, `VP.AllocationResponsibility`, and `VP.ModuleInterface` for holon descriptions. Later `U.MultiViewDescribing` families import that bundle rather than redefining the same engineering viewpoints each time.
+**Show (System; hypothetical template instance).** E.17.2 can guide one project to bind local references `r_functional`, `r_procedural`, `r_allocation`, and `r_module` to exact project P editions inside one constituted catalogue L. Until those bindings and their resolution under exact `R_L` exist, these names are variables and no reusable TEVB family value is present.
 
-**Show (Episteme).** A governance-oriented bundle can package `VP.Risk`, `VP.Control`, `VP.Compliance`, and `VP.Operations` as one reusable family for service or program descriptions. Publication faces/forms may later expose that family, but the bundle itself remains a value inside a viewpoint-family catalogue `U.Episteme`, not the report publication face.
+**Show (Episteme; hypothetical family shape).** A project could bind local references for risk, control, compliance, and operations viewpoints in one exact catalogue declaration. The labels alone are not references or exact P editions; this example becomes reusable only after that project supplies complete `<G_L, K_L, R_L>`, exact bindings, and one ordinary family designator.
 
 ### E.17.1:6 - Bias-Annotation
 
-The pattern biases FPF toward bundle-first reuse and against ad hoc local re-invention of recurring viewpoint families. That bias is intentional. The small cost of maintaining libraries and editions is lower than the long-term cost of unstable viewpoint identity.
+After a recurring family-level use is established, the pattern biases FPF toward catalogue reuse and against silently re-inventing that same family under local labels. For a one-off selection, keep the exact references local: the catalogue cost is justified only when reuse, comparison, or maintenance changes a named practitioner action.
 
 ### E.17.1:7 - Conformance Checklist
 
-- `CC-VBL-0` Within one library edition, each `ViewFamilyId` **SHALL** identify exactly one `U.ViewpointBundle`.
-- `CC-VBL-1` Every viewpoint in a bundle **SHALL** have `EntityOfConcernClassSpec` compatible with the bundle's declared `EntityOfConcernClassSpec`.
-- `CC-VBL-2` A `U.MultiViewDescribing` family that declares a `ViewFamilyId` **SHALL** import only viewpoints from the referenced bundle.
-- `CC-VBL-3` `ViewFamilyId` **MUST NOT** be used as a `publication-face kind`, publication-face kind, or carrier kind.
-- `CC-VBL-4` Bundles intended for non-expert reuse **SHOULD** provide archetypal grounding coverage for their viewpoints.
-- `CC-VBL-5` Changes to bundle membership or meaning **SHALL** be editioned rather than silently mutating an existing family id.
-- `CC-VBL-6` If a family combines several bundles, the contributing `ViewFamilyId` values **SHALL** remain explicit.
+- `CC-VBL-0` Exact `<G_L, K_L, R_L>` constitutes L; ordinary import resolves an admitted L and its declaration without reconstructing that triple, while authoring, admission, or disputed identity opens the complete §4.2 check. Within `G_L`, each ordinary family designator retrieves exactly one local declaration claim block and remains distinct from L, member references, P designators, views, forms, and carriers.
+- `CC-VBL-1` Every member is an exact `U.ViewpointRef` resolving to one independently admitted viewpoint episteme edition whose fixed target-kind criterion is compatible with the bundle constraint.
+- `CC-VBL-2` Bundle membership, position, spelling, alias, packaging, or publication admits no P as `U.Viewpoint`; E.17.0 alone defines the membership test.
+- `CC-VBL-3` A describing use imports an exact subset from exact `<editionDesignator(L), familyDesignator>`, preserves omissions and provenance, and selects any one actual P through one singular reference.
+- `CC-VBL-4` Every candidate E is independently identified and gains `U.View` membership only through obtaining E/P conformance—not through construction, selection, bundling, naming, form, carrier, rendering, or publication.
+- `CC-VBL-5` A family designator is not used as an id kind, publication-face/form kind, carrier kind, viewpoint reference, or substitute for an exact member.
+- `CC-VBL-6` Changes to member references, targets, family meaning, or compatibility constraints create another catalogue edition or family declaration; publication or annex-only change does not reidentify unchanged P.
+- `CC-VBL-7` Multi-bundle imports preserve exact catalogue provenance and collisions only. Same-scheme comparison names its exact predicate and participants and applies the pattern that defines that predicate. Cross-context comparison resolves exact F.17 cells, obtaining F.9 Bridge, separate `<u,d,r,t>` claim, and required A.10 or B.3 reliance; otherwise it stops at lexical or structural contrast.
+- `CC-VBL-8` E.24.PUB expression, bearing, publication, recurrence, rendering work, and C.29 representation remain distinct, grant no viewpoint or view membership, and make no represented world-side relation obtain.
+- `CC-VBL-9` A bundle intended for non-expert reuse should provide references that resolve under their applicable schemes to exact archetypal-grounding examples or sections for its member viewpoints; grounding aids recognition but grants no membership.
 
 ### E.17.1:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | What it looks like | How FPF prevents it |
 |---|---|---|
-| **Publication-face hijack** | A `ViewFamilyId` is reused as a publication-face name or document type. | `CC-VBL-3` keeps family ids lexical and bundle-local. |
-| **Bundle equals view collection** | A folder or report pack is called a viewpoint bundle even though no `U.Viewpoint` family is declared. | `E.17.1` defines the bundle as a declared family of viewpoints, not a file grouping. |
-| **Silent local drift** | A local project keeps the old family id but swaps in different viewpoints. | `CC-VBL-5` requires editioning for semantic or membership change. |
-| **Namespace collapse** | Engineering viewpoint ids and publication viewpoint ids are mixed as if they were one namespace. | The solution keeps id spaces distinct and requires explicit attribution. |
+| **Publication-face hijack** | A family designator is reused as a publication-face name or document type. | `CC-VBL-5` keeps the ordinary designator distinct from a publication face, form, carrier, viewpoint reference, or exact member. |
+| **Bundle equals view collection** | A folder or report pack is called a viewpoint bundle even though no exact `U.ViewpointRef` values resolve to admitted `U.Viewpoint` epistemes. | `E.17.1` defines the bundle as a declared family of exact viewpoint references, not a file grouping. |
+| **Silent local drift** | A local project keeps the old family designator but swaps in different viewpoints. | `CC-VBL-6` requires another catalogue edition or family declaration when member references, targets, family meaning, or compatibility constraints change. |
+| **Namespace collapse** | Engineering and publication viewpoint designators are mixed as if they were one lexical namespace. | The solution keeps the designator namespaces distinct and requires explicit attribution. |
 
 ### E.17.1:9 - Consequences
 
 | Benefit | Trade-off / Mitigation |
 |---|---|
-| **Reusable viewpoint families.** Stable bundle ids let many projects reuse the same family without restating it. | Libraries need governance and edition discipline. |
-| **Cleaner `U.MultiViewDescribing`.** A family can import a reviewed bundle instead of spelling out every viewpoint locally. | Local exceptions must be made explicit rather than hidden in prose. |
-| **Better architectural alignment.** ISO 42010-style viewpoint-library practice gains a native FPF catalogue episteme. | Initial bundle authoring requires care in naming and grounding. |
-| **Lexical hygiene.** Bundle ids, viewpoint ids, views, publication faces, and publication forms stop collapsing into one label. | Authors must learn the separation once and then keep it. |
+| **Reusable viewpoint families.** Stable family designators within exact catalogue editions let many projects reuse the same declaration without restating it. | Catalogues need maintenance and edition discipline. |
+| **Cleaner `MultiViewDescribing`.** A use can import a reviewed bundle instead of spelling out every viewpoint locally. | Local exceptions must be made explicit rather than hidden in prose. |
+| **Reusable catalogue without imported ontology.** A repeated-reference problem inside current FPF gains one local catalogue episteme while ISO 42010 remains vocabulary lineage rather than evidentiary authority or imported ontology. | Initial catalogue authoring requires care in exact C.2.1 constitution, reference resolution, and grounding. |
+| **Lexical hygiene.** Family designators, viewpoint designators, views, publication faces, and publication forms stop collapsing into one label. | Authors must learn the separation once and then keep it. |
 
 ### E.17.1:10 - Rationale
 
-`U.MultiViewDescribing` already assumes that viewpoint plurality exists. `E.17.1` supplies the governing pattern for that plurality, including cases where viewpoints are used to re-express positions in `U.LanguageStateSpace` or trajectories in `U.LanguageStateMoveTrajectory`. Without it, every domain can only improvise locally, and long-term correspondence between viewpoint families remains fragile.
+`MultiViewDescribing` already assumes that viewpoint plurality exists. `E.17.1` supplies packaging and provenance discipline for that plurality, including cases where viewpoints are used to re-express positions in `U.LanguageStateSpace` or trajectories in `U.LanguageStateMoveTrajectory`. Without it, every domain can only improvise locally and member provenance becomes fragile. Semantic correspondence is a separate result: same-scheme comparison states its exact predicate and participants, while cross-context comparison uses F.9 and a bounded-use reliance path.
 
-### E.17.1:11 - SoTA-Echoing
+### E.17.1:11 - Source status, local rationale, and reopen condition
 
-The pattern aligns with post-2015 multi-view practice: ISO 42010 viewpoint libraries, model-based systems engineering viewpoint catalogues, assurance-oriented viewpoint families, and reusable concern bundles in architecture and governance work. FPF adopts the reusable-library idea, but keeps the ontology stricter by separating bundle ids, viewpoint ids, views, publication faces, and publication forms.
+ISO 42010 is retained only as historical vocabulary lineage for the words *view* and *viewpoint*. It is not current architecting SoTA, does not supply FPF identity or conformance laws, and does not justify this catalogue architecture. No current external problem-solving source or reusable source comparison is claimed by this E.17.1 edition.
+
+The present architecture is therefore an explicit local FPF rationale. The concrete problem is repeated use of the same exact E.17.0 viewpoint episteme editions: users need to resolve exact references, preserve source catalogue and omission provenance, and avoid reidentifying P or turning a family label into membership. One C.2.1 catalogue ClaimGraph with local declaration claim blocks is the least additional object that answers those actions while reusing C.2.1 identity, E.17.0 membership, C.13 collection, F.9 comparison, and E.24.PUB publication boundaries.
+
+SysML v2 is deliberately absent from the positive source basis and is not treated as lineage for this question. Official status, search prominence, systems-oriented naming, and prospective scope are not evidence that it solves the exact reusable-catalogue and practitioner-use problem here. This exclusion imports no contrary SysML ontology claim; it only prevents popularity or status from standing in for demonstrated contribution.
+
+Reopen the local architecture if an exact current source or exercised project catalogue demonstrates a simpler way to preserve reference resolution, exact P identity, subsets, omissions, provenance, and cross-context comparison without losing any of those practitioner actions; or if project replay shows that one catalogue ClaimGraph with local declarations adds apparatus without changing a practitioner action. Until then, describe this as provisional local design, not source-established SoTA.
 
 ### E.17.1:12 - Relations
-- **Builds on:** `C.2.1` slot discipline through `ViewpointSlot` / `ViewSlot`, `A.6.2-A.6.4`, `A.7`, `E.7`, and `E.10`.
-- **Constrains:** `E.17.0 U.MultiViewDescribing` whenever it imports viewpoint families from reusable bundles.
-- **Coordinates with:** `C.2.2a`, `A.16.0`, `E.17`, `E.17.2`, `E.18:5.12`, `F.9`, `F.9.1`, and any domain-specific viewpoint family that needs stable reuse.
-- **Protects:** lexical and ontological separation between viewpoint families, concrete views, publication faces, and publication forms.
-#### E.17.1:12.1 - Typed annex manifests for thin bundles
 
-`VF.*` and other reusable viewpoint bundles may reference typed `AnnexManifestRef` assets with roles such as `lexical`, `bridge`, `movePublication`, `examples`, optional `sota`, and optional `pilotTrace`. This keeps the bundle itself thin while allowing A.16 move-publication notes, lexical baggage, and bridge annexes to remain explicit and typed rather than folded into the bundle core.
+- **Builds on:** `C.2.1` for library and member-episteme identity; `E.17.0` for exact P membership, reference resolution, singular use selection, and sole E/P view-membership rule; `C.13` for explicit imported collections; `A.22` for any separately selected organization; `A.6.2-A.6.4` for optional episteme-construction histories; `A.7`, `E.7`, and `E.10` for carrier, authoring, and naming discipline; `E.24.PUB` for publication; and `C.29` for representation.
+- **Constrains:** E.17.0 consumers whenever they import a reusable family; an import narrows eligible references but neither selects one P for a use nor proves conformance.
+- **Coordinates with:** `C.2.2a`, `A.16.0`, `E.17`, `E.17.2`, `E.18:5.12`, `F.9`, `F.9.1`, and domain-specific families requiring stable reuse.
+- **Protects:** exact separation among catalogue triple `<G_L, K_L, R_L>`, catalogue episteme L, local declaration claim block, ordinary family designator, `U.ViewpointRef`, P designator, P, candidate/View E, any A.22 structure, form, carrier, publication occurrence, and C.29 representation.
+
+#### E.17.1:12.1 - Resolvable annex references for thin bundles
+
+An ordinary project family designator may be accompanied by references that resolve under the applicable source or reference scheme to exact annex assets. Each reference states its local role—such as `lexical`, `bridge`, `movePublication`, `examples`, optional `sota`, or optional `pilotTrace`. Neither the field spelling nor the role value creates a new reference kind, manifest entity, or typed annex asset. This keeps the declaration claim block thin while allowing A.16 move-publication notes, lexical material, Bridge material, and examples to remain explicit rather than folded into the core family claim.
 
 ### E.17.1:13 - Bundle Anatomy and Member Discipline
 
@@ -201,13 +259,13 @@ A viewpoint-bundle library becomes thin and reusable only when the bundle itself
 
 #### E.17.1:13.1 - What a viewpoint member should make explicit
 
-Each member `U.Viewpoint` inside a reusable bundle should make explicit at least:
+Each `U.ViewpointRef` member inside a reusable bundle resolves to one exact viewpoint episteme edition whose claim content makes explicit at least:
 
 - the **concern family** it brings into focus,
-- the **stakeholder families** for whom that concern matters,
-- the **entity of concern class** for which it is admissible,
-- the **allowed description and specification-useification kinds** that usually realize it,
-- and any **bundle-specific conformance or correspondence notes** that later view families should preserve.
+- exact **stakeholder or audience referents** only when they change the concerns,
+- the exact **target-kind criterion** it carries and the compatibility condition under which this family can reuse it,
+- the **independently admitted episteme kinds** whose exact membership rules allow candidates under that viewpoint,
+- any **bundle-specific conformance notes** later users must retain, plus an exact reference that resolves to the comparison claim or F.9 Bridge when either has independently been established; a note or reference creates no correspondence.
 
 `E.17.1` does not redefine the internals of `U.Viewpoint`. It states what must remain visible if a viewpoint is to be reused as part of a bundle rather than as an undocumented local label.
 
@@ -231,7 +289,7 @@ If the member viewpoints do not share that family-level purpose, the result is n
 - worked examples,
 - or SoTA references
 
-may live in typed annex manifests. This preserves a stable bundle core while still letting reuse packages carry enough didactic material and review help.
+may be linked through references that resolve under their applicable schemes to exact annex assets, with each reference's local role stated. This preserves a stable declaration claim block while still letting reuse packages carry enough didactic material and review help.
 
 ### E.17.1:14 - Import, Subset, and Multi-Bundle Coordination
 
@@ -239,9 +297,9 @@ The value of viewpoint bundles appears most clearly when they are imported, subs
 
 #### E.17.1:14.1 - Subset selection
 
-A `U.MultiViewDescribing` family may legitimately import only a subset of a bundle's viewpoints. When it does so, it should declare:
+A `MultiViewDescribing` use may legitimately import only a subset of a bundle's viewpoint references. When it does so, it should declare:
 
-- which `ViewFamilyId` is the source,
+- which ordinary family designator is the source,
 - which viewpoint members are actually in local use,
 - and whether the omitted members are simply unused or are intentionally excluded because the local scope does not require them.
 
@@ -253,12 +311,12 @@ A local project often wants a small adaptation: one extra concern note, one narr
 
 A practical rule is:
 
-- if the local project is merely selecting a subset or adding local didactic publications, keep the original bundle id and declare the overlay clearly;
-- if the local project changes viewpoint membership or meaning, publish a new local bundle or a new edition.
+- if the local project selects a subset or adds only didactic/publication material, keep exact catalogue edition L and its declaration unchanged and declare the local subset or annex; do not treat the overlay as declaration content;
+- if the local project changes viewpoint membership or meaning, publish a new local catalogue edition or a new family declaration.
 
 This is how bundle reuse remains trustworthy across organizations.
 
-#### E.17.1:14.3 - Multi-bundle coordination
+#### E.17.1:14.3 - Multi-bundle coordination: provenance first, comparison separately
 
 Many real description families need more than one bundle, for example:
 
@@ -266,51 +324,47 @@ Many real description families need more than one bundle, for example:
 - one safety or assurance family,
 - and one governance or publication-oriented family.
 
-In such cases, `E.17.1` expects the family to preserve the provenance of each member viewpoint rather than flattening everything into one unnamed `Sigma`. Cross-family correspondence should then cite both the participating viewpoint ids and their `ViewFamilyId` origins.
+Preserve the exact provenance of every imported `U.ViewpointRef` and resolved P as `<editionDesignator(L), familyDesignator, member reference>`. That tuple answers where a member came from. It establishes no semantic sameness, difference, correspondence, translation, substitution, or admissible comparison by itself.
+
+If the compared meanings are interpreted under one exact effective reference scheme, identify the exact P editions or claim subgraphs being compared, state the exact comparison predicate, polarity, scope, and participants, and apply the pattern that defines that predicate. If no direct semantic predicate is current, report only the observable lexical or structural contrast—members, omissions, order, target criteria, or claim-shape differences—and do not call it correspondence.
+
+If the comparison crosses effective schemes or semantic contexts, first resolve the two exact F.17 `SchemeSenseCell` endpoints. Use F.9 only when its direct Bridge predicate is actually satisfied. Then state the proposed comparison or reuse separately as one bounded C.2.1 use claim about that exact Bridge with `<u,d,r,t>` and polarity, and recover the exact A.10 reliance disposition or the B.3 assurance branch when its threshold is met. Without the exact cells, obtaining Bridge, bounded-use claim, and required reliance path, stop at lexical or structural contrast. Catalogue provenance remains useful in every branch, but never substitutes for any of them.
 
 #### E.17.1:14.4 - Engineering vs publication families
 
-Some contexts need both engineering viewpoints and publication viewpoints. `E.17.1` permits both, but it does not allow one family id to erase the distinction. A family that imports both kinds must keep the namespaces and bundle origins explicit so that authors do not confuse *how the holon is being understood* with *how a publication face/form chooses to expose that understanding*.
+Some contexts need both engineering viewpoints and publication viewpoints. `E.17.1` permits both, but it does not allow one family designator to erase the distinction. A family that imports both kinds must keep the namespaces and catalogue origins explicit so that authors do not confuse *how the holon is being understood* with *how a publication face/form chooses to expose that understanding*.
 
-### E.17.1:15 - Worked Bundle Families
+### E.17.1:15 - Worked family shapes, not shipped catalogue values
 
-#### E.17.1:15.1 - TEVB engineering family
+#### E.17.1:15.1 - Hypothetical TEVB project binding
 
-A TEVB engineering bundle for holons may include viewpoints such as:
+E.17.2 supplies an authoring template, not a repository-shipped family. One project may constitute exact catalogue L and bind four local variables:
 
-- `VP.Functional`,
-- `VP.Procedural`,
-- `VP.AllocationResponsibility`,
-- `VP.ModuleInterface`.
+- `r_functional -> P_functional`,
+- `r_procedural -> P_procedural`,
+- `r_allocation -> P_allocation`,
+- `r_module -> P_module`.
 
-The important point is not the vocabulary alone. The bundle states that these viewpoints are intended to recur together for one engineering family of concerns. A later description family then imports that engineering bundle rather than re-inventing a local list of "roughly similar" viewpoints.
+Only after those are exact `U.ViewpointRef` values resolving exact admitted P editions under L's effective scheme can the project's ordinary family designator retrieve a reusable local declaration. Another project with similarly spelled variables or labels has not imported this family unless it resolves the same exact L and references.
 
-#### E.17.1:15.2 - Governance and risk family
+#### E.17.1:15.2 - Hypothetical governance and risk shape
 
-A governance bundle may group viewpoints such as:
+A project may author a governance-oriented declaration with local reference variables such as:
 
-- `VP.Risk`,
-- `VP.Control`,
-- `VP.Compliance`,
-- `VP.Operations`.
+- `r_risk -> P_risk`,
+- `r_control -> P_control`,
+- `r_compliance -> P_compliance`,
+- `r_operations -> P_operations`.
 
-This bundle is valuable precisely because the four viewpoints recur together but are not interchangeable. Keeping them as one family id makes the reuse visible while still preserving the distinct member meanings.
+This is an example of a possible declaration shape, not an exact current family. Each left-hand variable must be bound to an exact local `U.ViewpointRef`; each right-hand variable must be bound to one exact P independently admitted under E.17.0; and exact L, `R_L`, and the family designator must exist before reusable import is claimed. The four positions recur together but remain non-interchangeable.
 
-#### E.17.1:15.3 - Research-method family
+#### E.17.1:15.3 - Hypothetical research-method shape
 
-A research-method bundle may include viewpoints such as:
-
-- `VP.Theory`,
-- `VP.Experiment`,
-- `VP.Inference`,
-- `VP.Limitations`,
-- and, where appropriate, `VP.Reproducibility`.
-
-A local inquiry note might import only three of these viewpoints, but the import remains legible because the omitted ones still belong to a reviewed family rather than disappearing into ad hoc prose.
+A project may likewise consider local variables `r_theory`, `r_experiment`, `r_inference`, `r_limitations`, and, where appropriate, `r_reproducibility`. This list teaches a candidate family shape only. A local inquiry note can import a subset only after the project has constituted exact L, bound each retained variable to an exact reference and P, and made omitted members visible in one actual declaration claim block.
 
 #### E.17.1:15.4 - Cross-family description relation positions
 
-A serious project may use TEVB engineering viewpoints for the design family, a governance bundle for program oversight, and a publication-oriented family for public publication faces and publication forms. `E.17.1` keeps these relation positions reviewable by preserving which bundle each viewpoint came from and by preventing the final publication face or publication form from masquerading as the viewpoint library itself.
+A serious project may use one materialized local TEVB instance for its design family, another exact local governance family for program oversight, and another exact local publication-oriented family for publication faces and forms. `E.17.1` keeps these relation positions reviewable by preserving which exact catalogue and declaration each viewpoint came from and by preventing a final publication face or form from masquerading as the catalogue itself.
 
 ### E.17.1:16 - Authoring and Review Guidance
 
@@ -321,7 +375,7 @@ Bundle authors should ask:
 - what recurring family is being named,
 - which viewpoints truly belong together in that family,
 - what local didactic publications or examples belong in annexes instead of the bundle core,
-- and whether the bundle is stable enough to deserve a reusable `ViewFamilyId`.
+- and whether the bundle is stable enough to deserve a reusable family designator.
 
 A good bundle is not maximal. It is coherent, reviewable, and reusable.
 
@@ -332,48 +386,48 @@ Reviewers should inspect both levels:
 - **member level** - are the included viewpoints individually explicit enough to be reused?
 - **bundle level** - do they actually form one coherent family rather than one convenient list?
 
-They should also check whether a local project has silently forked the bundle while still using the inherited family id.
+They should also check whether a local project has silently forked the bundle while still using the inherited family designator.
 
 #### E.17.1:16.3 - For integrators and librarians
 
-Integrators should keep libraries small, curated, and editioned. It is usually better to publish:
+Integrators should keep libraries small, curated, and editioned. Publish only the smallest declaration set the current reuse needs:
 
-- one stable core bundle,
-- one explicit local extension,
-- and one clear subset declaration
+- one stable core declaration when a recurring family is established,
+- one explicit local extension only when local membership or meaning changes,
+- and one clear subset declaration only when the current use imports a subset.
 
-than to let one giant family absorb every recurring viewpoint a domain has ever used. Library sprawl destroys the cognitive advantage that reusable bundles are supposed to provide.
+Do not create all three by default. Library sprawl destroys the cognitive advantage that reusable bundles are supposed to provide.
 
 ### E.17.1:17 - Edition and Migration Notes
 
 #### E.17.1:17.1 - Rename vs semantic change
 
-A lexical rename that leaves viewpoint meaning and membership unchanged may be treated as a naming-layer migration. A change in membership, concern, admissibility, or member semantics is not just a rename; it requires a new edition or a new local bundle.
+A lexical rename that leaves viewpoint meaning and membership unchanged may be treated as a naming-layer migration. A change in membership, concern, admissibility, or member semantics is not just a rename; it requires another catalogue edition or family declaration.
 
 #### E.17.1:17.2 - Migration from local `Sigma` lists
 
-Legacy `U.MultiViewDescribing` families often publish only one local list of viewpoints. Migration should proceed by:
+Legacy `MultiViewDescribing` uses often publish only one local list of viewpoints. Migration should proceed by:
 
 1. identifying recurring families across several such local lists,
 2. publishing those families as explicit bundles,
-3. then rewriting the local families to import the new `ViewFamilyId` and declare any subset selection explicitly.
+3. then rewriting the local families to import the new ordinary family designator and declare any subset selection explicitly.
 
 This sequence preserves provenance and avoids pretending that the reusable family had always existed.
 
 #### E.17.1:17.3 - Migration from publication-face/form-bound naming
 
-If a legacy practice uses one label interchangeably for a viewpoint family, a report section, and a publication face, migration should separate those positions explicitly. `ViewFamilyId` remains at the bundle layer; `U.Viewpoint` ids remain at the viewpoint layer; publication-face names remain publication-layer vocabulary.
+If a legacy practice uses one label interchangeably for a viewpoint family, a viewpoint, a report section, and a publication face, migration separates those positions explicitly. The ordinary family designator remains at the declaration layer; exact `U.ViewpointRef` values resolve P while any reader-facing viewpoint token is only P's designator; publication-face names remain publication-layer vocabulary.
 
 #### E.17.1:17.4 - Boundary to annex growth
 
-Annex manifests are useful, but a bundle should not become a thin shell hiding all of its meaning elsewhere. The core bundle still needs enough explicit member and family structure to stand on its own. Annexes deepen reuse; they do not replace the bundle's primary declaration.
+Annex references are useful, but a declaration should not become a thin shell hiding all of its meaning elsewhere. The core declaration claim block still needs enough explicit member and family structure to stand on its own. Annexes deepen reuse; they do not replace the declaration's primary claims.
 ### E.17.1:18 - Import Collision and Alias Discipline
 
-#### E.17.1:18.1 - Family id is not a synonym bag
-A `ViewFamilyId` does not mean that all member viewpoints are interchangeable labels for one concern. It means that a reviewed family of viewpoints is intended to recur together. Authors should therefore resist the common drift where one convenient bundle name begins to substitute for all of its members.
+#### E.17.1:18.1 - A family designator is not a synonym bag
+An ordinary family designator does not mean that all member viewpoints are interchangeable labels for one concern. It means that one declaration claim block says a reviewed family of viewpoints is intended to recur together. Authors should therefore resist the drift where one convenient designator begins to substitute for all of its members.
 
 #### E.17.1:18.2 - Import collision rule
-When two imported bundles contribute viewpoints with overlapping lexical names, the publication should preserve the originating viewpoint ids and bundle provenance rather than silently merging the members. Bundle reuse is admissible only if collisions remain inspectable.
+When two imported bundles contribute viewpoints with overlapping lexical names, preserve the originating viewpoint designators and exact catalogue provenance rather than silently merging the members. Inspectable collisions make provenance adequate; they do not show that the local senses correspond or that either member may substitute for the other.
 
 #### E.17.1:18.3 - Alias boundary
 Local teaching aliases may be added for readability, but the alias must dock to explicit member viewpoints and must not erase bundle provenance. If the alias starts doing bundle-selection work by itself, it is making an unsupported bundle-selection claim and should be replaced by explicit member references.
@@ -384,20 +438,23 @@ Local teaching aliases may be added for readability, but the alias must dock to 
 A description family may project only a subset of a reusable bundle. This is admissible if the omitted members remain visible as omitted rather than disappearing into an ad hoc local list. Projection keeps bundle provenance intact while acknowledging that local publication rarely uses every member.
 
 #### E.17.1:19.2 - Comparative bundle use
-Bundles may be compared across contexts only if the comparison preserves member ids, member meanings, and subset/projection decisions. Comparing two bundle labels alone is not enough, because similarly named families may contain materially different viewpoint sets.
+
+First decide whether the comparison stays inside one exact effective reference scheme. In that branch, name the exact members or claim subgraphs, comparison predicate, polarity, scope, and participants, then apply the pattern that defines the predicate; provenance merely identifies their catalogue origins. If only names, member sets, omissions, or structures can be compared, state that bounded lexical or structural contrast and stop.
+
+When local senses cross schemes or contexts, resolve the exact F.17 cells and apply F.9. A semantic correspondence may be claimed only when the exact Bridge obtains; a proposed comparison, translation, or reuse additionally requires its own `<u,d,r,t>` bounded-use claim and current A.10 reliance disposition or triggered B.3 assurance branch. Similar family labels, matching designators, matching member counts, or provenance tuples establish none of those results. F.9.1 may annotate an already recovered Bridge for readability but cannot supply the Bridge or widen its use boundary.
 
 #### E.17.1:19.3 - Boundary to publication-face design
 A publication face may render one composite presentation of several viewpoints, but the face is not the bundle. `E.17.1` therefore requires the underlying member structure to remain recoverable even when a public-facing document flattens it for readability.
 
-### E.17.1:20 - Review Matrix and Library Governance
+### E.17.1:20 - Review Matrix and Catalogue Maintenance
 
 A reviewer can test a viewpoint bundle library with five questions:
 
 1. **Do the member viewpoints still have explicit standalone meaning?**
-2. **Does the bundle name describe one coherent recurring family rather than one convenience list?**
+2. **Does the local declaration and its family designator describe one coherent recurring family rather than one convenience list?**
 3. **If a subset is imported, is the omitted remainder still visible as omission rather than silent deletion?**
-4. **If several bundles interact, is provenance preserved across collisions and local aliases?**
+4. **If several bundles interact, is exact provenance preserved without being called correspondence, and does any actual comparison follow the correct same-scheme or F.9 cross-context branch?**
 5. **Has a publication face started impersonating the library itself?**
 
-Library governance should therefore prefer small, editioned, provenance-preserving bundles over lexical mega-families that are easy to name but hard to reuse truthfully.
+Prefer small, provenance-preserving declarations inside exact editioned catalogues over lexical mega-families that are easy to name but hard to reuse truthfully.
 ### E.17.1:End

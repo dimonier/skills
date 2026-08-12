@@ -2,12 +2,7 @@
 id: C.3.2
 title: "Kind Intent, Membership Judgment, and Extension"
 status: Stable
-keywords:
-  - local kind
-  - KindSignature declaration episteme
-  - candidate classification
-  - true/false/unknown
-  - KindExtension representation.
+keywords: []
 dependencies:
   builds_on:
     - C.3
@@ -147,7 +142,8 @@ Keep these changes distinct:
 
 | Change | Direct consequence | What does not follow automatically |
 | --- | --- | --- |
-| criterion, evaluation domain, signature `EntityOfConcern`, or effective reference scheme changes | another `KindSignature` episteme edition | a new local kind; C.3.1 decides continuity |
+| typed use crosses from one bounded context to another | assess the exact source and target local kinds through C.3.3 and evaluate under the target `KindSignature` edition | kind continuity or an adequate bridge merely because schemes or slices match |
+| criterion, evaluation domain, signature `EntityOfConcern`, or effective reference scheme changes within one bounded context | another `KindSignature` episteme edition | a new local kind; C.3.1 decides continuity |
 | candidate state changes | reevaluate that candidate in the relevant slice | a new signature or kind |
 | context slice changes | another judgment input and potentially another extension | scope on the kind |
 | formality or evidence changes | declaration rigor or assertion support changes | a different judgment truth in an otherwise fixed and already settled world |
@@ -157,13 +153,15 @@ Keep these changes distinct:
 
 #### C.3.2:9.1 - Physical pump
 
-Plant scheme `PS-7` uses local kind `CoolingPumpKind`. Signature edition `CPS-2` declares pump candidates and a criterion in terms of directly governed flow, heat-transfer, and operating-state features for plant slice `S-14`.
+Within bounded context `Plant-7`, `CoolingPumpKind` is the local kind identified by Plant-7's declared cooling-function distinction. Signature edition `CPS-2` names effective scheme `PS-7`, declares pump candidates, and states a criterion in terms of directly governed flow, heat-transfer, and operating-state features for plant slice `S-14`.
 
 Pump #14 is independently identified as the physical candidate. A calibrated measurement-result episteme supports the assertion that its flow and temperature-difference features meet the criterion; the measurement result is not Pump #14 and does not constitute its cooling performance. With those feature facts settled, `J(Pump #14, CoolingPumpKind, CPS-2, S-14) = true`. An extension used by a maintenance query may represent Pump #14, but the query row does not create its classification.
 
 #### C.3.2:9.2 - Episteme and publication form
 
-The exact maintenance-instruction episteme `MI-22` is evaluated against local kind `DiagnosticInstructionKind` using its claim-bearing content and governed subject. Its PDF and HTML manifestations are publication forms or representations. Converting the PDF to HTML does not change the candidate episteme, satisfy the criterion, or create another kind. If the content is unchanged, the same candidate judgment can remain current under the same edition and slice.
+The exact maintenance-instruction episteme `MI-22` is evaluated against local kind `DiagnosticInstructionKind` using its claim-bearing content and governed subject. For one bounded maintenance-reading use, the selected page arrangement and notation `MI-22-PDF-Layout` is the publication form that expresses the chosen `MI-22` edition, while exact digital file `MI-22-PDF-File-7` is the `U.PresentationCarrier` that bears that form. Separately, selected arrangement and notation `MI-22-HTML-Layout` is another publication form that expresses the same chosen edition for that bounded use, while exact digital file `MI-22-HTML-File-8` is the `U.PresentationCarrier` that bears the HTML form. This case asserts no C.29 representation because it selects no elements with an explicit correspondence to independently recovered objects and changes no admitted modeling or reasoning operation.
+
+Changing the arrangement, notation, presentation carrier, or file encoding does not by itself change candidate episteme `MI-22`, satisfy the `DiagnosticInstructionKind` criterion, create another kind, or rewrite the classification judgment. If the claim-bearing content, exact signature edition, context slice, and governed candidate facts remain unchanged, the same judgment remains current.
 
 #### C.3.2:9.3 - Non-entity temperature value
 
@@ -218,7 +216,7 @@ A local kind may classify an already identified W. A formal kind symbol, work la
 | `CC-C32-6` | No A.14 `MemberOf`, `U.EntitySet`, collection holon, or direct classification occurrence is inferred from the judgment or extension. |
 | `CC-C32-7` | Any separate classification assertion is a C.2.1 episteme and creates neither candidate nor kind; a value classification need not fabricate a value-shaped EntityOfConcern. |
 | `CC-C32-8` | Subkind monotonicity is tested over defined judgments for the same candidate and slice; counterexamples repair links, editions, or bridges rather than extension rows. |
-| `CC-C32-9` | Signature-edition change, C.3.1 kind continuity, candidate-state change, slice change, and extension change remain distinct. |
+| `CC-C32-9` | Bounded-context crossing, signature-edition change within one context, C.3.1 kind continuity, candidate-state change, slice change, and extension change remain distinct. |
 | `CC-C32-10` | The kind carries no scope; the context slice is an evaluation input, and declaration/assertion scopes stay on their own epistemes. |
 | `CC-C32-11` | The five required cases and the `U.Work`/W/episteme distinction all close under the same four-object architecture. |
 | `CC-C32-12` | Ordinary use stays readable, and reusable declarations or extensions have named receiving uses. |

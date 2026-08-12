@@ -94,7 +94,7 @@ These rules keep Γ aligned with the **holonic kernel**: Γ is only defined on h
 
 **Universal rule (tell).** *Compose knowledge by Γ\_epist with weakest‑link R, monotone F, and explicit CL on every bridge; keep `ClaimGraph`, EntityOfConcern, grounding holon, viewpoint, view, reference scheme, notation, publication form, and carrier in their FPF relation named by values.*
 
-**System (show, Sys‑CAL lens).** Consider a **battery‑pack thermal subsystem** integrating a physics model of heat flow and an operating envelope for fast‑charge. As a **system**, it composes pumps, sensors, and controllers by physical Γ with conservation constraints (Sys‑CAL). The assurance story depends on epistemes about the model and envelope; the system **acts**, epistemes constrain. (Archetypes and boundary discipline per core.)
+**System (show, current physical-system lens).** Consider a **battery-pack thermal subsystem** integrating a physics model of heat flow and an operating envelope for fast-charge. As a **system**, it composes pumps, sensors, and controllers through the system, composition, boundary, state, and dynamics guidance in `A.1`, `A.14`, `A.22`, and `A.3.4`, with conservation constraints made explicit; `B.1.6` and `C.16` govern resource and measurement claims as applicable. Planned `C.1` (Sys-CAL) may later consolidate that guidance, but it supplies no current governing semantics. The assurance story depends on epistemes about the model and envelope; the system **acts**, epistemes constrain. (Archetypes and boundary discipline per core.)
 
 **Episteme (show, KD‑CAL lens).** Consider a **CMIP‑class climate projection episteme** (post‑2015 generation): its `ClaimGraph` covers PDEs and parameterisations; its EntityOfConcern and grounding holon identify what projection claim is about and how it is grounded; its `ClaimScope` names historical forcings, resolution, and assumptions; its representation may include domain equations and a tabular schema linked by a **NotationBridge** with an explicit CL. Compose sub‑epistemes for radiation, clouds, and ocean mixing: `R = min` across the critical path; an independent hindcast line can raise `R` only up to its own level; `F` is bounded by the least‑formal sub‑claim unless the composition adds formal invariants.
 
@@ -124,7 +124,7 @@ KD‑CAL turns the coarse legacy semiotic picture into **holonic composition** o
 ### C.2:10 - Relations
 
 * **Depends on:** `U.Episteme — Epistemes and their slot relation` (C.2.1): identity invariants, slot definitions, carrier separation, and evidence bindings.
-* **Peers:** **Sys‑CAL** (C.1), which composes **systems**; KD‑CAL composes **epistemes** and feeds assurance lenses in Part B.
+* **Peers:** planned **Sys-CAL** (`C.1`) may later consolidate physical-system guidance; current system composition, boundary, state, conservation, resource, and measurement claims use `A.1`, `A.14`, `A.22`, `A.3.4`, `B.1.6`, and `C.16` as applicable. KD-CAL composes **epistemes** and feeds assurance lenses in Part B.
 * **Constrained by authoring:** Architectural patterns must include Tell–Show–Show with **Archetypal Grounding** (this section).
 
 ### C.2:11 - Worked mini‑examples (post‑2015 flavours)

@@ -34,240 +34,274 @@ dependencies:
 
 ### E.24.PUB:0 - Use This When
 
-Use this pattern when a text, table, card, record, schema, diagram, view, source row, or pattern section may be confused with the ontic it describes.
+Use this pattern when an ontic or another entity is encountered through a card, table, diagram, file, pattern host, dashboard, or similar published expression and the current work depends on knowing what was described, what was made available, and what merely carries the expression.
 
-Typical moments:
+**Primary working reader.** A practitioner or FPF author deciding whether a visible thing is a claim-bearing episteme, a `U.View`, a publication form, a C.29 representation, a `U.PresentationCarrier`, or evidence of one publication occurrence.
 
-- a pattern file is treated as if it were the ontic rather than a publication of an ontic-description episteme;
-- a card, record, table, schema, diagram, or view is cited as if its form created the governed object;
-- an ontic description starts to grow generic warnings about neighboring EoCs instead of staying centered on the ontic;
-- a subject pattern about architecture, structure, characteristic space, transformation, episteme, or bounded context begins with publication-use guards while the subject matter becomes background;
-- a source packet or review packet is used as if it carried ontology authority by appearance.
+**First useful move.** Name the exact next `U.Work` for which the publication is expected to make claims available. Then say, in one sentence, which exact episteme edition is available, to which declared audience, for which bounded use, in which publication form, and on which presentation carrier. If that Work is choice work, keep its resulting C.11 `ChoiceResult` separate: publication establishes neither the Work nor the result, and the result is neither the Work nor a publication participant. Only when the Work actually uses a published claim, name the exact claim-bearing episteme and its direct route. For a premise, reference, other participant, or work-to-referent use, name the exact declared predicate, participant order, and actual values. For a declared operation argument, name the identified A.6.1 application and its exact declaration-local binding. If neither route exists, stop at publication availability or return the applicable A.15.1 `missing-governor` result. Open the heavier publication-relation declarations only when that next Work depends on exact availability, the declared use boundary, or publication-occurrence identity.
 
-**First useful move.** Name four objects separately: the ontic under concern, the ontic-description episteme, the publication of that description, and the publication form used by that publication.
+**What goes wrong if missed.** A visible layout is treated as the described subject, a file is treated as the claims it carries, a diagram is treated as a view merely because it is graphical, or a currently available episteme is turned into a durable `U.EpistemePublication` kind. The receiving work then cannot tell which object changed when claims, layout, carrier, audience, or use changes.
 
-**What goes wrong if missed.** The pattern becomes about how to talk about a thing rather than about the thing. A diagram becomes an architecture claim or selected structure, a score table becomes characteristic space, a problem card becomes problem ontology, and a pattern host becomes the ontic it publishes.
-
-**What this buys.** The author can put publication-form and description-use issues in the right place without pushing the primary subject pattern into semio-bias.
+**What this buys.** The user can change a claim, view, form, carrier, audience, or declared bounded use without silently changing all the others. A publication can be inspected and repaired while the subject pattern remains centered on its subject.
 
 **Not this pattern when.**
 
-- If the current question is whether a construct deserves a durable ontic, use `E.24.CD` and then `E.24`.
-- If the current question is whether a `U.*` spelling in a title, filename, heading, ToC row, table, or visible publication structure should be retained, governed by C.3 typed reasoning, or renamed, use `E.24.UK`.
-- If the current question is generic multi-view publication or viewpoint packaging, use `E.17` and its dependent patterns.
-- If the current question is phrase-level precision restoration, use `E.10`, `E.10.ARCH`, `F.19`, or the relevant precision-restoration pattern.
-- If the current question is an architecture description as its own subject matter, use `C.30.AD`; E.24.PUB supplies only the boundary among the ontic, its ontic-description episteme, the publication, and the publication form.
+- Use `C.2.1` when the question is the identity or content of the episteme itself.
+- Use `E.17.0` when the question is whether an exact episteme conforms to an exact viewpoint episteme and therefore has `U.View` membership. Use `A.6.3` separately when source-to-receiving viewing construction is current.
+- Use `C.29` when representation elements and the operations admitted by a representation are current.
+- Use `E.24.CD`, then `E.24`, when a durable ontic is still being considered.
+- Use `E.24.UK` when a public `U.*` kind or dependent-kind disposition is unsettled.
+- Use the subject pattern directly when publication does not affect the named receiving `U.Work`.
 
 ### E.24.PUB:1 - Problem Frame
 
-Ontics need descriptions. In FPF, the usual description is an episteme: a structured claim set about the ontic, its identity, slot relation, admissible fillers, dependent patterns, and use boundary. That episteme can be published through a pattern host, a card, a table, a schema, a diagram, a source packet, or another publication form.
+Ontics and other entities are usually encountered through epistemes and physical or digital carriers. One completed inspection card can carry claims and therefore be a `U.Episteme`; its reusable arrangement can be used as a publication form; selected graphical elements can participate in a C.29 representation; a file, screen, sheet, or volume can be a `U.PresentationCarrier`; and one publication occurrence can make the selected card-episteme edition available to a declared audience for a bounded use.
 
-Those objects have different kinds:
+Those are connected uses, not one presentation-side kind. E.24.PUB governs the publication relation and the two supporting relations needed to inspect that use. It keeps the described subject, description episteme, `U.View`, representation, publication form, carrier, and publication occurrence distinct without requiring every ordinary sentence to repeat the full stack.
 
-- the `U.Ontic` is the subject under concern;
-- the ontic-description episteme is the claim structure describing that subject;
-- the publication is the made-available expression of that episteme;
-- the publication form is the format, layout, or medium shape used by that publication.
+Plain `published episteme` names an episteme while it participates as the selected edition in a current publication occurrence. It is a contingent qualification, not a durable U-kind and not a second identity beside `U.Episteme`.
 
-E.24.PUB governs this distinction for ontic descriptions. It does not replace `C.2.1` for epistemes, `E.17` for multi-view publication, `E.8` for pattern form, or `E.10` for phrase-level precision restoration.
+Here a publication occurrence is an occurrence of `EpistemePublicationRelation`: an availability relation that can endure. It is not the instantaneous rendering, printing, uploading, or access-control work that may establish or restore that availability.
 
 ### E.24.PUB:2 - Problem
 
-Without this discipline:
+The practical problem is change localization. When a reader sees only “the diagram was updated” or “the model was published”, five materially different changes are hidden:
 
-1. **Publication form displaces the subject.** Users start reasoning about a card or diagram when the real EoC is an ontic such as `U.Episteme`, `U.Structure`, `U.CharacteristicSpace`, or `U.BoundedContext`.
-2. **Subject patterns become semio-heavy.** A pattern about a subject begins with long warnings about what descriptions are not, while identity, slots, invariants, and first-use moves come late.
-3. **Descriptions become authority by appearance.** A source row, standard, table, or pattern section is treated as governing because it looks formal.
-4. **Publication variants become duplicate ontology.** Several views or forms of one ontic description are treated as several different ontics.
-5. **Generic semio guards repeat everywhere.** Each subject pattern copies the same catalogue of blocked neighboring EoCs instead of using the governing semio patterns.
+1. the selected episteme edition may have changed because its claim content, EntityOfConcern, or effective reference scheme changed;
+2. another episteme edition may have been constructed, or the exact episteme may conform to a different viewpoint edition;
+3. the publication form or C.29 representation may have changed while the claims stayed the same;
+4. the presentation carrier or its availability may have changed;
+5. the declared audience or bounded use may have changed while the same edition, form, and carrier remained.
+
+Without the distinction, a receiving work occurrence cannot identify the smallest object or relation to inspect, revise, republish, or stop relying on.
 
 ### E.24.PUB:3 - Forces
 
 | Force | Tension |
 | --- | --- |
-| Ontic focus vs publication practicality | Users need forms they can read and use, but the form must not become the subject. |
-| Description adequacy vs semio overgrowth | Ontic descriptions need boundary statements; copied generic semio doctrine can bury the subject. |
-| Multiple publications vs one subject | One ontic may have several publications, views, or forms; those variants must not create several ontics. |
-| Formal appearance vs governing authority | A schema, standard, or source row may look authoritative, but authority comes from the governing pattern or accepted source relation, not appearance. |
-| Local clarity vs generic duplication | A short local boundary helps; a repeated negative catalogue belongs in neighboring semio patterns. |
+| Readable first use vs exact relation identity | Most users need one sentence; contested availability needs exact participants, obtaining, and occurrence identity. |
+| One encountered thing vs several governed uses | A card or diagram can participate in several relations, but visible shape decides none of their kinds. |
+| Stable episteme vs changing publication | The same episteme edition may be republished through another form or carrier, while a changed claim discriminator identifies another episteme. |
+| Audience reach vs actual use | Making an edition available does not prove that any system read it, relied on it, or performed work from it. |
+| Subject-first explanation vs semio-bias | Publication distinctions protect reasoning about the subject; they should not displace the subject from its governing pattern. |
 
 ### E.24.PUB:4 - Solution
 
-Use a local relation-position field set before writing or revising publication-facing text. The field set names four different objects and the bounded use; it is not a new `U.*` kind, reusable record family, or coordination pattern.
+Start with this readable publication statement:
+
+> Publication occurrence `<P>` makes episteme edition `<E>` available to the audience identified by `<A>` for the use bounded by `<U>`, through publication form `<F>` borne by presentation carrier `<C>`.
+
+The sentence names the five participant meanings without asking the user to fill a record. If it supplies the publication distinction needed by the named receiving `U.Work`, stop. If availability, identity, or a change is disputed, recover the three direct relations below.
+
+#### E.24.PUB:4.1 - Identify the publication occurrence
+
+`EpistemePublicationRelation` is the direct relation kind whose occurrence makes one selected episteme edition available to a declared audience for a declared bounded use.
+
+Its actual participants are:
+
+| Participant meaning | Admitted value | What the value supplies |
+| --- | --- | --- |
+| selected episteme edition | one exact `U.Episteme` identified under `C.2.1` | the claims made available |
+| audience declaration | one `U.Episteme` whose claims identify the intended receiving entities or a C.3-governed local kind and its membership criterion | who is included; a reader label alone is insufficient when the boundary matters |
+| bounded-use declaration | one `U.Episteme` whose claims state the operations or decisions supported, the conditions of that use, and the excluded stronger use | what availability is for; actual reliance remains another relation |
+| publication form | one exact `U.Entity` used as the selected arrangement, notation, or rendering convention that expresses the edition for the bounded use | how the edition is expressed; visible shape alone does not establish this use |
+| presentation carrier | one exact `U.PresentationCarrier` | what physically or digitally bears the selected form |
+
+The use of common `U.Entity` for the publication-form participant does not admit a universal publication-form U-kind. `Publication form` is a relation-defined participant meaning here: the exact entity keeps the more specific kind and identity supplied by its direct pattern, and it fills `PublicationFormSlot` only while `PublicationFormExpressionRelation` obtains for the selected edition and bounded use. This is one predicate over a real common kind, not a prose union of cards, tables, diagrams, and files. E.8 governs FPF pattern form; E.17 governs multi-view publication forms and faces; a domain publication pattern may govern another form.
+
+The reusable declaration is:
 
 ```text
-Ontic-description publication relation positions:
-  OnticEoC:
-  OnticDescriptionEpisteme:
-  DescriptionClaims:
-  Publication:
-  PublicationForm:
-  StructuralNamePressure:
-  GovernedUse:
-  BlockedOverread:
-  NeighboringPatternIfCurrent:
+EpistemePublicationRelationSignature:
+  RelationKind: EpistemePublicationRelation
+  SlotSpecs:
+  SelectedEpistemeEditionSlot: ValueKind=U.Episteme, refMode=U.EpistemeRef, Required
+  AudienceDeclarationSlot: ValueKind=U.Episteme, refMode=U.EpistemeRef, Required
+  BoundedUseDeclarationSlot: ValueKind=U.Episteme, refMode=U.EpistemeRef, Required
+  PublicationFormSlot: ValueKind=U.Entity, refMode=U.EntityRef, Required
+  PresentationCarrierSlot: ValueKind=U.PresentationCarrier, refMode=U.EntityRef, Required
 ```
 
-Read the field set this way:
+These SlotKinds name participant meanings only inside this `RelationSignature`. They do not create five new U-kinds, and a card field with a similar label does not become one of these SlotSpecs.
 
-- `OnticEoC` is the ontic itself: for example `U.Ontic`, `U.Episteme`, `U.Structure`, `U.CharacteristicSpace`, `U.BoundedContext`, or another accepted ontic.
-- `OnticDescriptionEpisteme` is the claim structure that describes the ontic and its slot relation.
-- `DescriptionClaims` are the specific claims about identity, slots, admissible values, dependent patterns, invariants, examples, and use boundary.
-- `Publication` is the made-available expression of that episteme.
-- `PublicationForm` is the selected form: pattern host, card, record, table, schema, diagram, view, source packet, or another publication form.
-- `StructuralNamePressure` names any `U.*`, type or kind wording, title, filename, heading, ToC row, table column, or record field whose visible publication position could over-admit kindhood.
-- `GovernedUse` says what a user may do with the publication in the current pattern.
-- `BlockedOverread` blocks the main confusion without listing every generic semio boundary.
-- `NeighboringPatternIfCurrent` names the governing neighboring pattern when the current claim belongs elsewhere.
+The audience-declaration episteme identifies the audience criterion; it is not the audience and does not prove access by any particular system. A concrete system's access, reading, reliance, or later work is another direct relation or work occurrence. This lets one publication be available to every entity satisfying a stable criterion without inventing `U.Audience` or treating a changing set of readers as changing participants of the same publication occurrence.
 
-#### E.24.PUB:4.1 - Minimal Boundary Formula
+`EpistemePublicationRelation` obtains while all of the following are true:
 
-When a subject pattern needs a publication boundary, use the shortest formula that preserves the EoC:
+1. `PublicationFormExpressionRelation` relates the selected edition, publication form, and bounded-use declaration;
+2. `PublicationFormBearingRelation` relates the exact carrier and publication form;
+3. entities admitted by the audience declaration can obtain the expressed edition from that carrier under the conditions stated by the bounded-use declaration;
+4. the selected edition, declarations, form, and carrier remain the identified participants of this occurrence.
+
+One occurrence is reidentified by those five fixed participants and their maximal continuous interval of availability. Changing any participant yields another publication occurrence. Demonstrated loss of availability followed by restoration yields a later occurrence. Missing or stale evidence leaves current obtaining unresolved; it does not prove a gap.
+
+Publication work remains separate. Rendering, printing, uploading, indexing, or granting access can be dated `U.Work` that establishes, restores, changes, or fails to establish the publication relation. The work and its result do not become publication-relation participants.
+
+#### E.24.PUB:4.2 - Recover expression and bearing only when needed
+
+`PublicationFormExpressionRelation` relates one selected episteme edition, one exact publication form, and one bounded-use declaration. It obtains when the form expresses enough of that edition, under its effective reference scheme, for the declared use. One occurrence is reidentified by those three fixed participants and their maximal continuous interval of predicate truth. Omission, coarsening, changed notation, or changed admitted operations can end this relation even while the carrier remains unchanged. `A.6.3`, `C.29`, or `E.17` governs the more specific preservation, loss, view, or representation claim when that claim is current.
+
+`PublicationFormBearingRelation` relates one exact `U.PresentationCarrier` and one exact publication form. It obtains while that carrier bears or renders that form as the same recoverable form. One occurrence is reidentified by the two fixed participants and their maximal continuous interval of bearing. Changing a filename or storage address does not by itself settle carrier identity; apply the carrier's direct identity and currentness pattern.
+
+Their reusable declarations are:
 
 ```text
-This [publication form] publishes an ontic-description episteme about [OnticEoC].
-It is not [OnticEoC].
-Use it for [governed use].
-Use [neighboring pattern] when the current claim is about [neighboring EoC].
+PublicationFormExpressionRelationSignature:
+  RelationKind: PublicationFormExpressionRelation
+  SlotSpecs:
+  ExpressedEpistemeEditionSlot: ValueKind=U.Episteme, refMode=U.EpistemeRef, Required
+  PublicationFormSlot: ValueKind=U.Entity, refMode=U.EntityRef, Required
+  BoundedUseDeclarationSlot: ValueKind=U.Episteme, refMode=U.EpistemeRef, Required
+
+PublicationFormBearingRelationSignature:
+  RelationKind: PublicationFormBearingRelation
+  SlotSpecs:
+  PresentationCarrierSlot: ValueKind=U.PresentationCarrier, refMode=U.EntityRef, Required
+  BornePublicationFormSlot: ValueKind=U.Entity, refMode=U.EntityRef, Required
 ```
 
-Do not expand that local formula into a general catalogue of all things a description is not. If a neighboring EoC or claim is current, name the governing neighboring pattern and apply it for that EoC or claim.
+These supporting relations prevent two shortcuts. A form does not make itself available, and a carrier does not express claims merely by storing bytes, ink, or another physical state. The publication occurrence depends on both relations but remains a distinct availability occurrence.
 
-#### E.24.PUB:4.2 - Description Claims Stay About the Ontic
+#### E.24.PUB:4.3 - Use progressive explicitness
 
-An ontic-description episteme may claim:
+Use the smallest statement that supports the current work:
 
-- what identifies the ontic;
-- which slot relation gives the ontic its structure;
-- which values may fill the slots and which governing pattern owns each value;
-- which invariants and non-use boundaries preserve the ontic;
-- which dependent patterns may rely on the ontic;
-- which examples show first use without turning the example form into the ontic.
+1. **Ordinary use:** name the selected episteme edition, audience, bounded use, form, and carrier in one sentence.
+2. **Changed-object use:** say which one of those objects changed and which relation must be re-evaluated.
+3. **Contested availability:** state the `EpistemePublicationRelation` participants, obtaining evidence, and occurrence identity.
+4. **Contested expression:** open `PublicationFormExpressionRelation` and the exact view, representation, preservation, or loss pattern.
+5. **Contested carrier availability:** open `PublicationFormBearingRelation` plus the direct carrier-currentness or access pattern.
 
-It should not carry generic warnings about all possible uses of descriptions. Those warnings belong to `C.2.1`, `E.17`, `E.10`, `F.19`, source patterns, evidence patterns, gate patterns, decision patterns, or another subject pattern when that subject is current.
+Do not materialize all five levels as a standing publication card. Stop as soon as the named receiving `U.Work` can distinguish the operative object and relation.
 
-#### E.24.PUB:4.3 - Publication Forms Stay Downstream
+#### E.24.PUB:4.4 - Classify the encountered form by current use
 
-A publication form may improve usability, inspection, currentness, source return, or multi-view handling. It does not decide ontology by itself.
+Ask one question at a time:
 
-Use this test:
+| Current question | Governed object or relation |
+| --- | --- |
+| Does the filled card, diagram, or record carry identifiable claims about an EntityOfConcern under an effective reference scheme? | a `U.Episteme` under `C.2.1` |
+| Does `EpistemeViewpointConformanceRelation(E,P)` obtain for that episteme E and at least one exact viewpoint episteme P? | the same E has dependent-kind membership as `U.View` under `E.17.0`; any A.6.3 construction remains a separate optional relation |
+| Is an arrangement, notation, or rendering convention selected to express the edition for this bounded use? | the publication-form participant of `PublicationFormExpressionRelation` |
+| Do selected elements correspond to independently recovered objects and change the admitted modeling or reasoning operations? | a C.29 representation and its correspondence |
+| Does a physical or digital entity bear the form? | a `U.PresentationCarrier` in `PublicationFormBearingRelation` |
+| Is the selected edition available to the declared audience for the declared use through that form and carrier? | one `EpistemePublicationRelation` occurrence |
 
-1. If changing the table layout, card fields, diagram notation, or section order changes only how the ontic is published, the ontic is unchanged.
-2. If changing a description claim changes what the ontic is asserted to be, inspect the ontic-description episteme through `C.2.1`.
-3. If changing a slot relation or identity criterion changes the ontic itself, apply the governing ontic pattern or `E.24`.
-4. If changing viewpoint or publication packaging changes which reader concern is served, use `E.17` or the relevant view or publication pattern.
-5. If the publication form's title, filename, heading, ToC row, table column, or visible structural name carries `U.*` force while the primary EoC is not that U-kind, recover the governed object and use `E.24.UK` for structural-name U-kind settlement.
+The answers can be jointly positive because they concern different objects or relations. They do not follow from the words `card`, `record`, `table`, `schema`, `diagram`, `view`, `file`, or `publication` alone.
 
-#### E.24.PUB:4.4 - Subject Pattern Placement
+#### E.24.PUB:4.5 - Keep direct verbs with their relations
 
-In a subject pattern, keep the positive subject spine first:
+- an episteme carries claims and designations;
+- a `U.View` is the same episteme individual for which E.17.0 conformance to at least one exact viewpoint episteme obtains;
+- a publication form expresses a selected episteme edition for a bounded use;
+- a C.29 representation stands in a declared correspondence to independently recovered objects;
+- a presentation carrier bears a publication form;
+- a publication occurrence makes one selected episteme edition available;
+- a system performs publication work and may later access or rely on the published episteme through separately governed relations.
 
-1. name the EoC and practical situation;
-2. state identity, slot relation, invariants, first-use move, and governed use;
-3. add one compact publication boundary only where needed;
-4. when a description-use or publication-use claim is current, recover that claim and apply the neighboring pattern that governs it.
+A designator designates and a governed reference resolves to a referent. Neither operation publishes, bears, represents, or makes the subject-side predicate obtain.
 
-This prevents semio-bias. A pattern about architecture should teach architecture first. A pattern about structure should teach structure first. A pattern about characteristic space should teach characteristic space first. Publication and description boundaries protect those patterns; they do not become their main subject unless the pattern EoC is itself a description or publication.
+#### E.24.PUB:4.6 - Keep subject patterns subject-first
 
-If the EoC is a description, repeat the same test one level up. A pattern about an architecture description should center that description as the EoC; claims about descriptions of that description, publication of that description, and use of that publication stay in a bounded publication section or neighboring patterns.
+In a pattern about an ontic, structure, architecture, characteristic space, method, or another subject, explain the subject's identity, relations, practical problem, and solution before publication details. Add E.24.PUB only when the named work depends on distinguishing the description, selected edition, form, carrier, audience, or bounded use.
+
+When the EntityOfConcern is itself a description episteme, the same rule applies one level up. The description stays the subject; publication of that description is a neighboring relation.
 
 ### E.24.PUB:5 - Archetypal Grounding
 
-#### E.24.PUB:5.1 - E.24 Pattern Host and U.Ontic
+#### E.24.PUB:5.1 - Maintenance inspection card
 
-`E.24` is a publication of an ontic-description episteme about `U.Ontic`. The host text is not `U.Ontic`. Its tables, examples, headings, and source rows help publish the description; they do not create the ontic by appearance.
+A completed pump-inspection card states measured clearances and identified defects about Pump #37 under the maintenance reference scheme. The completed card is a claim-bearing `U.Episteme`. Its reusable arrangement is the inspection-card publication form. The PDF file is a `U.PresentationCarrier`. One publication occurrence makes edition 4 of the card episteme available to the maintenance-planning team for planning the next repair.
 
-If the issue is whether `U.Ontic` has stable identity and a slot relation, use `E.24`. If the issue is whether the E.24 host is formatted, sectioned, or published well, use `E.8`, `E.17`, or this pattern as appropriate.
+Changing the PDF filename changes neither the card episteme nor necessarily the carrier identity. Correcting a measured clearance changes the episteme edition. Replacing the card layout changes the form. Making the same edition available to a supplier for quotation creates another publication occurrence because the audience or bounded use changed.
 
-#### E.24.PUB:5.2 - Characteristic Space and Score Table
+#### E.24.PUB:5.2 - Architecture diagram
 
-A score table may publish a filled evaluation over a `U.CharacteristicSpace`. The table is not the characteristic space. The characteristic space is the ontic with characterized object, characteristics, scales, value meanings, coordinate groups, missingness semantics, normalization boundaries, and comparability boundaries.
+An architecture diagram can carry claims about selected structures of one holon and therefore be an architecture-description episteme. When that exact episteme conforms to one exact architectural viewpoint episteme under E.17.0, the same individual is a `U.View`; direct authoring and A.6.3 construction are independent construction routes. Its graphical notation can be the publication form, selected nodes and edges can participate in a C.29 representation, and a screen or sheet can be the presentation carrier.
 
-If the score table is unclear, fix the publication. If the scale meanings are unclear, fix the characteristic-space description through `A.19` or the relevant evaluation pattern. If the question is how to construct the space, use `A.19.ECS`.
+The diagram does not become the architecture by being published. `C.30` governs the `ArchitectureOf@Context` claim and `A.22` governs selected `U.Structure` values. E.24.PUB lets the architect locate a publication defect without replacing the architectural question with a discussion of diagrams.
 
-#### E.24.PUB:5.3 - Architecture Description and ArchitectureOf@Context
+#### E.24.PUB:5.3 - Clinical procedure edition
 
-An architecture description is an episteme about one `ArchitectureOf@Context` claim or about selected `U.Structure` refs for a described `U.Holon` in a `U.BoundedContext`. A diagram, view, document, or pattern section may publish that episteme. The publication form is not the `ArchitectureOf@Context` claim, not the selected `U.Structure`, and not the described holon's structure by itself.
+A hospital procedure description is an episteme about a method. A wall poster expresses a selected edition for quick pre-procedure orientation; the laminated sheet is the carrier. A separate controlled publication makes the same edition available to clinicians for authoritative procedure enactment. The two publication occurrences differ in bounded use even if the words are identical. Neither publication proves that a clinician read the procedure or performed work according to it; those are access, reliance, role-assignment, method, and work claims under their direct patterns.
 
-`C.30` stays centered on the `ArchitectureOf@Context` claim and the selected structures that matter for the current architectural question. `A.22` stays centered on `U.Structure`. `C.30.AD` centers architecture description as its own EoC. E.24.PUB supplies the boundary discipline: know which object is being described before deciding whether the publication, view, or source row is current.
+#### E.24.PUB:5.4 - FPF pattern host
 
-#### E.24.PUB:5.4 - Problem Card
+An E.24 pattern host can be a publication form expressing an ontic-description episteme about `U.Ontic`. The repository file is a presentation carrier. A selected edition becomes a published episteme only while an exact publication occurrence makes it available to the declared FPF audience and use. The host layout does not create `U.Ontic`, and changing the carrier does not by itself change the ontic-description episteme.
 
-A problem card can publish a problematization episteme or a project work record. The card is not automatically `U.Problem`, and the presence of fields does not decide the ontology. If the current question is problem formulation, use the problematization pattern. If it is the card form, use the publication-form pattern. If a reusable problem ontic is proposed, apply `E.24.CD` for candidate detection and `E.24` for the ontic-introduction decision.
+#### E.24.PUB:5.5 - Training availability and later choice work
 
-### E.24.PUB:6 - Bias-Annotation
+One instruction edition is available to a training group for studying a method. That `EpistemePublicationRelation` occurrence establishes availability to the declared audience for that bounded use; it establishes neither that anyone read the instruction nor that adjustment, inspection, acceptance, or release work occurred. The same availability alone does not support an acceptance commission's choice about releasing one named lot.
+
+If the commission later performs exact choice `U.Work` under A.15.1 and applies C.11, name that Work and the resulting C.11 `ChoiceResult` separately. When an instruction claim actually participates in that Work, name the exact claim-bearing episteme and its direct route. For a premise, reference, other participant, or work-to-referent use, name the exact declared predicate, participant order, and actual values. For a declared operation argument, name the identified A.6.1 application and its exact declaration-local binding. If neither route exists, stop at publication availability or return the applicable A.15.1 `missing-governor` result instead of asserting actual use. The `ChoiceResult` is neither the choice Work, the bounded-use declaration, nor a participant of the publication occurrence.
+
+### E.24.PUB:6 - Bias Annotation
 
 Lenses tested: **Onto**, **Epist**, **Semio**, **Arch**, **Prag**, **Did**.
 
-This pattern intentionally resists semio-bias inside subject patterns. It does not deny that descriptions and publications matter. It says they must stay in the right slot:
-
-- the ontic remains the subject when the pattern is about the ontic;
-- the description episteme becomes the subject only when the pattern is about that description;
-- the publication becomes the subject only when publication, currentness, source return, multi-view handling, or reader-facing use is current;
-- the publication form never receives ontology authority by appearance.
+- **Onto:** direct relation occurrences and their actual participants remain primary; visible forms do not decide kinds.
+- **Epist:** the selected edition, audience declaration, and bounded-use declaration retain C.2.1 identities.
+- **Semio:** designation, expression, representation, bearing, and publication availability use different predicates.
+- **Arch:** subject patterns keep their subject; E.24.PUB owns only the neighboring publication architecture.
+- **Prag:** progressive explicitness stops at the first statement sufficient for the named receiving `U.Work`.
+- **Did:** one readable sentence and heterogeneous cases precede the RelationSignature detail.
 
 ### E.24.PUB:7 - Conformance Checklist
 
-| Check | Requirement |
+| Check | Observable conformance condition |
 | --- | --- |
-| `CC-E24PUB-1` | The text names the ontic EoC separately from the ontic-description episteme, publication, and publication form. |
-| `CC-E24PUB-2` | The publication form is not treated as evidence that a durable ontic exists. |
-| `CC-E24PUB-3` | Description claims stay centered on identity, slot relation, admissible fillers, invariants, dependent patterns, and use boundary for the ontic. |
-| `CC-E24PUB-4` | Generic semio guards are not copied into subject patterns; neighboring patterns are named when those claims are current. |
-| `CC-E24PUB-5` | Multiple views, diagrams, tables, cards, schemas, or sections do not create duplicate ontics unless an E.24 decision selects a distinct ontic. |
-| `CC-E24PUB-6` | Subject patterns keep the positive EoC spine before publication-boundary text. |
-| `CC-E24PUB-7` | Patterns whose EoC is a description still keep publication of that description and descriptions of that description distinct. |
-| `CC-E24PUB-8` | The local non-overread sentence blocks the current confusion without becoming a long negative catalogue. |
-| `CC-E24PUB-9` | Visible `U.*`, title, filename, heading, ToC, table-column, and record-field pressure is governed by `E.24.UK` when the pressure is about U-kind admission rather than publication boundary. |
+| `CC-E24PUB-1` | The named receiving `U.Work` and the publication use it depends on are explicit. A claimed actual use names either the exact declared predicate, participant order, and actual values for a premise, reference, other participant, or work-to-referent use, or the identified A.6.1 application and exact declaration-local binding for a declared operation argument; otherwise the text stops at publication availability or returns the applicable A.15.1 `missing-governor` result. Choice work keeps its C.11 `ChoiceResult` separate from the Work and publication participants. |
+| `CC-E24PUB-2` | The selected episteme edition, audience declaration, bounded-use declaration, publication form, and presentation carrier are distinguishable. |
+| `CC-E24PUB-3` | `EpistemePublicationRelation` has the five exact participant meanings, the availability predicate, and the maximal-continuous-occurrence identity rule stated in section 4.1. |
+| `CC-E24PUB-4` | `PublicationFormExpressionRelation` and `PublicationFormBearingRelation` are recoverable when expression or carrier availability is load-bearing. |
+| `CC-E24PUB-5` | Plain `published episteme` is used only for contingent participation; `U.EpistemePublication` is not used as a durable kind. |
+| `CC-E24PUB-6` | A `U.View` remains a same-individual dependent specialization of `U.Episteme` under an obtaining E.17.0 conformance relation; graphical appearance and A.6.3 construction alone supply no membership. |
+| `CC-E24PUB-7` | C.29 representation elements and correspondence remain distinct from the publication form and direct subject-side objects. |
+| `CC-E24PUB-8` | Publication work, actual access, reliance, evidence, decision, and performed work remain under their direct patterns. |
+| `CC-E24PUB-9` | A changed edition, form, carrier, audience, or bounded use leads to the smallest affected object or relation rather than a whole-stack rewrite. |
+| `CC-E24PUB-10` | Ordinary use stops at the readable sentence when no receiving work needs fuller relation detail. |
 
-### E.24.PUB:8 - Common Anti-Patterns and How to Avoid Them
+### E.24.PUB:8 - Common Misuses and Repairs
 
-| Anti-pattern | Symptom | Repair |
+| Misuse | What actually failed | Repair move |
 | --- | --- | --- |
-| Pattern host as ontic | The file or section is cited as if it were the object it describes. | Name the ontic EoC and the ontic-description episteme separately. |
-| Diagram as architecture claim | A diagram is treated as the `ArchitectureOf@Context` claim or as the selected `U.Structure` itself. | Treat the diagram as a publication form of an architecture-description episteme; use `C.30` for the `ArchitectureOf@Context` claim or `A.22` for selected `U.Structure`. |
-| Score table as characteristic space | A table of scores is treated as the characteristic-space ontology. | Separate the table, filled evaluation, and `U.CharacteristicSpace`. |
-| Structural name as U-kind | A title, filename, heading, ToC row, table column, or record field keeps `U.*` even though the publication form is not the primary EoC. | Use E.24.PUB to separate form from subject, then `E.24.UK` to decide whether the structural name survives. |
-| Generic guard pile-up | A subject pattern opens with a long list of what a description is not. | Keep one non-overread sentence; when evidence, gate, work, publication-use, or source-use is current, apply the direct pattern governing that claim. |
-| View variant as duplicate ontology | Several views of one subject are treated as several subjects. | Use `E.17` for view or publication packaging and keep the ontic identity stable. |
+| File equals episteme | Carrier continuity is used as claim-content identity. | Recover the C.2.1 episteme identity and the carrier's direct identity separately. |
+| Diagram equals view | Graphical form or construction history is used as the `U.View` membership criterion. | Recover exact candidate episteme E, exact viewpoint episteme P, and E.17.0 conformance; keep any A.6.3 construction, selected use, form, and representation separate. |
+| Publication equals expression | The form or rendered expression is treated as the publication occurrence. | Name the five `EpistemePublicationRelation` participants and test availability. |
+| Available equals used | Publication is treated as proof of reading, reliance, decision, or work. | Open the exact access, reliance, decision, method, or work relation only when that stronger claim is current. |
+| Republished equals revised | A new carrier or form is treated as another episteme edition. | Apply C.2.1 identity; another edition exists only when a discriminator changes. |
+| Published-episteme kind | Temporary availability becomes a durable U-kind. | Keep `U.Episteme`; use Plain `published episteme` plus the exact publication occurrence. |
+| Warning pile-up | A subject pattern lists every publication-side object before explaining its subject. | Keep the subject first and add only the distinction on which the named work depends. |
 
 ### E.24.PUB:9 - Consequences
 
-Positive consequences:
+The main gain is local repair. A stale carrier can be replaced without pretending that the claims changed. A revised claim can create another episteme edition without pretending that the audience or form changed. A narrower audience or use can create another publication occurrence while preserving the edition.
 
-- Subject patterns can stay centered on their EoC while still guarding against publication-form overread.
-- Ontic descriptions become clearer because their claims are about identity, slot relation, values, invariants, and use boundaries.
-- Publication variants can multiply without multiplying ontology.
-- `E.24` stays compact because publication discipline sits beside it, not inside it.
-
-Costs:
-
-- Authors must name the ontic, ontic-description episteme, publication, publication form, and bounded use explicitly when publication and ontology are easy to confuse.
-- Some familiar phrases such as "the diagram shows the architecture" need a more careful interpretation: the diagram publishes an architecture description, and the description concerns an `ArchitectureOf@Context` claim or selected `U.Structure` refs for the described holon in context.
-- Generic semio warnings must be moved out of subject spines.
+The cost is that load-bearing publication claims need five identified participants and two supporting relations. Progressive explicitness contains that cost: ordinary users state one sentence; only disputed availability, expression, or bearing opens the complete relation detail.
 
 ### E.24.PUB:10 - Rationale
 
-FPF needs E.24.PUB because ontics are normally encountered through descriptions and publications. Without a separate publication discipline, the same subject pattern is pulled in two directions: it must teach the subject, but it also tries to guard every possible misuse of descriptions. The result is semio-bias.
+Publication does not change an episteme into a nested publication object. It is a real availability relation supported by an expression relation and a bearing relation. That architecture explains why one encountered card, diagram, or file can matter in several ways without admitting one umbrella presentation kind.
 
-The remedy is not to ignore descriptions. The remedy is to type the relation positions. Once the ontic, description episteme, publication, and publication form are separated, subject patterns can carry a short local boundary and then continue the subject treatment. Publication-heavy questions use publication patterns. Wording-use questions use wording-use patterns. Multi-view questions use multi-view patterns.
+The split also preserves agency. A system can perform work that renders, uploads, prints, indexes, withdraws, or replaces a carrier. The resulting publication relation may then obtain for a long interval with no continuing publication work. Conversely, publication work can fail while no publication occurrence begins. Treating enduring availability separately from the work that establishes it makes both claims inspectable.
 
 ### E.24.PUB:11 - SoTA-Echoing
 
-| Source family | Current lesson for E.24.PUB | FPF decision |
-| --- | --- | --- |
-| Shimizu and Hitzler 2024, Eells, Dave, Hitzler, and Shimizu 2024, plus modular ODP practice. | Current modular-ontology source alignment: reusable ontology structure and its documentation or publication form are different objects. | Separate ontic, ontic-description episteme, publication, and publication form; do not let reusable form or documentation style become the ontology decision. |
-| Norouzi, Hertling, Waitelonis, and Sack 2025. | Current process-ODP source alignment: implicit ontology may be carried by process-like publications and needs explicit representation for domain experts. | Distinguish the implicit ontology from the card, table, workflow notation, diagram, or process document that happened to carry it. |
-| Nayyeri et al. 2025, and Oyewale and Soru 2026. | Current data-model-to-ontology and enterprise-KG source alignment: schemas, extraction, entailment or hierarchy structuring, provenance, validation, and RDF serialization can reveal ontology candidates but can also hide publication-form overread. | Keep schema, data structure, ontology description, serialization, publication form, and ontic distinct; require bounded scope and validation before a publication form influences ontic selection. |
-| OWL, SKOS, RDF, and triple-store practice. | Infrastructure and expression lineage: labels, concept schemes, axioms, published documents, serializations, and queries play different roles. | Use them as expression and publication caution only; they do not substitute for `U.Ontic` and do not show that labels, tables, or pattern sections decide ontology by appearance. |
-| FPF episteme and publication machinery. | `C.2.1` and `E.17` already govern epistemes and publication kits. | E.24.PUB specializes that machinery only for ontic descriptions and avoids duplicating generic semio doctrine. |
+| Source family | Decision-changing lesson | Adoption in this pattern | Practical implication |
+| --- | --- | --- | --- |
+| Modular ontology design patterns, including [Shimizu and Hitzler 2024](https://arxiv.org/abs/2411.09601) and [Eells, Dave, Hitzler, and Shimizu 2024](https://arxiv.org/abs/2402.18715) | Reusable ontology structure and the documentation or form through which it is encountered are different governed objects. | Separate the subject ontic, its description episteme, and the publication relations instead of making a reusable form the ontology. | In the inspection-card case, a layout repair does not force a pump-ontology repair. |
+| [Norouzi, Hertling, Waitelonis, and Sack 2025](https://arxiv.org/abs/2509.23776) | Process-like forms can carry implicit ontology that domain experts need to recover explicitly. | Classify the claims and relations carried by a card or workflow-shaped expression before assigning publication use. | A workflow diagram can reveal an ontic candidate without becoming that ontic by notation. |
+| [Nayyeri et al. 2025](https://arxiv.org/abs/2506.01232), and [Oyewale and Soru 2026](https://arxiv.org/abs/2602.01276) | Schemas and knowledge-graph pipelines help recover structure but also encourage schema or serialization overread. | Keep filled claim objects, reusable forms, C.29 representations, carriers, and publication occurrences distinct. | A table migration can change representation or carrier while preserving the published episteme edition. |
+| OWL, SKOS, RDF, and triple-store practice | Labels, axioms, serializations, documents, and queries have different functions even when one tool exposes them together. | Use this lineage as an expression and implementation stress test, not as authority to identify ontology with serialization. | Tool export does not settle the kind of the exported subject or the truth of its claims. |
+| FPF `C.2.1`, `A.6.REL`, `A.6.3`, `C.29`, `E.17`, and `E.24.UK` | Current FPF already separates episteme identity, direct relation identity, view membership, representation, publication use, and U-kind admission. | `E.24.PUB` coordinates those owners through one publication relation and two supporting relations; it does not duplicate their identity rules. | The architecture diagram case can be repaired at the exact changed relation without reopening architecture ontology. |
 
-Smallest source-currentness reopen trigger: reopen this SoTA slice when newer ontology-publication, data-model-to-ontology, or enterprise-KG work changes the selected distinction among ontology module, ontology-description episteme, serialization, publication form, and source-form overread. Do not reopen it merely because a new serialization format, graph store, or documentation style becomes popular.
+Smallest currentness trigger: reopen this source use when a newer ontology-publication or knowledge-representation line changes the distinction among claim-bearing episteme, view, publication form, representation, carrier, and availability relation. A new file format or storage tool alone does not trigger reopening.
 
 ### E.24.PUB:12 - Relations
 
-- **Builds on:** `E.24`, `E.24.UK`, `C.2.1`, `E.17`, `E.17.0`, `E.8`, `E.10`, `E.10.ARCH`, and `F.19`.
-- **Coordinates with:** `E.24.CD` for candidate detection, `E.24.UK` for U-kind admission and structural-name U-kind settlement, `A.19` and `A.19.ECS` for characteristic-space descriptions and evaluation construction, `A.22` for structure, `C.30` for architecture, and `C.30.AD` for architecture descriptions.
-- **Used by:** subject patterns that need a thin boundary between the subject ontic, its description, and the publication form without turning the pattern into generic semio instruction.
+- **Builds on:** `A.6.REL` for direct obtaining and occurrence identity, `C.2.1` for the selected edition and declaration epistemes, and `E.24` for ontic-description boundaries.
+- **Coordinates with:** `E.17.0` for `U.View` membership and `E.17` for multi-view publication; `A.6.3` for optional viewing construction; `C.29` for representation and admitted operations; `E.8` for FPF pattern publication form; and the direct carrier-currentness or access pattern when carrier availability is current.
+- **Coordinates with:** `E.24.CD` for candidate detection and `E.24.UK` for public U-kind and dependent-kind settlement. `U.EpistemePublication` is rejected there; this pattern uses Plain `published episteme` for contingent participation.
+- **Used by:** subject patterns only when a named receiving `U.Work` depends on distinguishing the subject, description episteme, selected edition, view, representation, publication form, carrier, audience, bounded use, or publication occurrence.
 
 ### E.24.PUB:End

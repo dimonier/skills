@@ -32,231 +32,224 @@ dependencies:
 ---
 
 ## F.17 - Unified Term Sheet
-> **Type:** Lexical publication pattern (F)
+> **Type:** Lexical row pattern (F)
 > **Status:** Stable
 
-Use this when a term decision is to become reader-facing, durable, public, Core-facing, or cross-context. Use it when a role name, status name, relation name, slot name, FPF kind name, local concept name, or bridgeable term set has outgrown one local repair and publication as one reviewed term row is current.
+**Use this when.** Use F.17 only when one already-governed value already has a selected durable naming settlement and public, Core-facing, durable, or cross-local reuse now needs one reader-facing term row.
 
-First useful move: identify the governed term decision, not the wording alone. Name the governed value and its kind, the effective `U.ReferenceScheme` carried by value, the exact local-sense coordinate, and the current direct pattern that owns the underlying value. When the row will compare local senses, compare their semantic-context projections: the `<ReferenceScheme, LocalSenseClaim>` pairs recovered from the exact cells. If those pairs differ, test an F.9 Bridge and, for a proposed row use, state the separate C.2.1 claim and its A.10 or B.3 reliance. A cross-scheme case is only the subset in which the `ReferenceScheme` values differ. Then publish only the term-row facts already governed there. A locality label or selected model-use structure enters only when it changes the naming use; neither is a mandatory sense coordinate.
+**First useful move.** Point to the exact governed value, its kind, the pattern that defines or constrains it, one proposed row use, and the selected Tech and Plain designations. Then apply F.14 at the row gate. If no durable row is needed, reuse the designation, alias, local expression, or name already supplied for that value and stop.
 
-Primary EntityOfConcern: one durable reader-facing term decision published by one `UnifiedTermRow` in one bounded unification thread. The role, status value, relation, slot kind, local concept, demonstrated row, or other underlying governed value remains the EntityOfConcern of its direct pattern; F.17 publishes its term decision and does not reconstitute that value.
+**Primary working object.** One C.2.1 `UnifiedTermRow` episteme whose exact EntityOfConcern is the independently governed value. Its claim graph cites the separate F.18 naming-settlement episteme and selected designation expressions. The value, its kind, the pattern that defines or constrains it, the designations, effective `U.ReferenceScheme`, `SchemeSenseCell`, NameCard, basis relation, F.9 Bridge, row episteme, edition relation, publication occurrence, publication form, and carrier remain different objects.
 
-What goes wrong if missed: a public term sheet becomes a global glossary, a row turns into an ontology claim, a block name becomes a subtype, or a familiar label smuggles role, status, evidence, publication, or source authority into reuse.
+**What goes wrong if missed.** A table entry becomes an ontology claim; a stable identifier looks like identity evidence; one source title or file stands in for a local sense; a NameCard automatically creates a cell and row; or a row is mistaken for the publication occurrence that makes it available.
 
-What this pattern buys: a compact reader-facing row that preserves the governed object, direct pattern, local senses, bridge, selected names, admissible use, blocked use, and currentness condition without redoing the whole unification argument.
+**What this buys.** A compact, durable navigation row through which readers can recover the naming decision and the rules that define or constrain the governed value without letting the row create, merge, prove, or publish that value.
 
-Do not use this pattern for one sentence repair, one private glossary note, one local synonym choice, or one attempt to make an object real by putting it into a table. A Plain local mantra that keeps one bounded result in attention and a Plain long mantra that keeps a dependency across direct patterns both need no UTS row; phrase length decides neither scope. Use `E.10`, `A.6.P`, `C.2.P`, `F.18`, or the direct domain pattern first when the kind, relation, slot position, admissible use, or name-card decision is still unsettled.
+**Not this pattern when.** Keep private wording, local synonyms or aliases, and names already supplied where the value is defined or constrained in their local use. Use F.14 before every naming object, F.8 for one unresolved mint-or-reuse choice, F.18 for the durable naming settlement, F.9 only for an actual relation between exact cells, and E.24.PUB only when a selected row edition must be made available. For any stronger ontology, obtaining, equivalence, authority, role, status, evidence, Work, or subject-use claim, use the pattern that defines or constrains it.
 
 ### F.17:1 - Intent and applicability
 
-`UnifiedTermSheet` is a reader-facing term publication for one bounded unification thread. It gives a careful reader one compact table of reviewed term rows: the chosen Tech and Plain names, the governed value and its kind, the local senses, the Bridge relation when the exact local-sense projections differ and a correspondence use is current, and the small rationale that makes the naming decision reviewable.
+`UnifiedTermSheet` is a reader-facing collection of independently identified term-row epistemes for one useful naming thread. Each row makes one selected naming decision easy to find: it names the governed value, its kind, where that value is defined or constrained, selected designations, exact local senses, any actual Bridge needed by the declared use, admitted and blocked citation uses, and reopen condition.
 
-The pattern is useful when a team has already done enough local sense work that a name can be reused without redoing the whole unification argument each time. It is especially useful for:
+Use it especially for:
 
-- public role names and role names reused under more than one interpretation scheme;
-- status-family names and status-window labels;
-- durable relation, slot, interface, or signature names;
-- FPF kind names and local concept names that appear under more than one effective reference scheme or reader-facing use;
-- term rows cited by examples, training material, project standards, or tool interfaces;
-- Part G, architecture, transformation, and evaluation vocabulary whose row ids remain stable across editions.
+- public role and status names whose underlying values are already governed;
+- durable relation, slot, interface, signature, or FPF kind names;
+- Core-facing names used by examples, training material, project standards, dashboards, checks, tool interfaces, Part G search packs, architecture, transformation, or evaluation work;
+- one exact naming use between independently recovered local senses;
+- row identifiers that must remain usable across row-episteme editions.
 
-`F.17` does not create `U.Role`, `U.Status`, `U.Evidence`, `U.Method`, `U.Work`, `U.Episteme`, `U.Relation`, `U.SlotKind`, or any other underlying object. It publishes a term row for an already governed object, relation, slot, or local concept. The direct pattern remains responsible for the object and its admissible use.
+F.17 introduces no role, status, evidence, method, Work, relation occurrence, slot kind, local concept, NameCard, Bridge, publication occurrence, form, or carrier. It constitutes the row episteme only. Its visible table form can be useful, but table position, filled cells, suffix, source prestige, or row count has no ontological force.
 
 ### F.17:2 - Problem frame
 
-Unification work often succeeds locally and then fails in reuse. A term looks stable in one section, but another reader cannot see which governed value, effective reference scheme, local-sense claim, Bridge, NameCard decision, or direct governing pattern was used. Teams then invent new labels, import one local interpretation as if it were universal, or treat a teaching block as if it were an ontology.
+Naming work often succeeds locally and then fails in reuse. A term looks stable, but the receiving reader cannot recover which value was named, which pattern defines or constrains it, which naming decision selected the expressions, which effective scheme and local-sense claim are current, or whether a cited Bridge actually obtains.
 
-The damage is practical:
+Five shortcuts follow:
 
-- local meanings become global slogans;
-- one row silently mixes a role, a role description, a status value, a capability claim, and a work assignment;
-- public names drift because no row id, edition, or name-card reference stays stable;
-- sameness across different semantic-context projections is asserted by spelling instead of by two separate premises: an actual F.9 Bridge that obtains under its relation-semantic profile, and an affirmative C.2.1 claim that says the Bridge is suitable for the row's exact direction, correspondence rule, and loss tolerance, with current A.10 or B.3 reliance;
-- examples in other patterns cite a term but not the term decision that makes the example portable.
+- shared spelling is treated as shared value;
+- a row combines unlike role, status, relation, Work, evidence, or publication concerns;
+- a card, cell, row, id, and publication are minted as one automatic chain;
+- a source title, document, or table layout substitutes for the exact sense and basis relation;
+- the row itself is said to make the term public, current, authoritative, or obtaining.
 
-`F.17` fixes this by making the term row itself reviewable. Each row says what kind of thing is being named, where the local senses came from, what bridge is claimed, which name was selected, and which direct pattern owns the underlying object.
+F.17 repairs those shortcuts by making every row a separately identified claim-bearing episteme whose references lead back to the exact naming settlement and governed value.
 
 ### F.17:2.1 - Problem
 
-A public term row can make a local word look reusable while hiding the governed object, effective scheme, exact local-sense claim, obtaining Bridge, separate claim about the row's use, reliance basis, direct pattern, currentness condition, or blocked overread. The problem is to publish a compact term decision that travels across examples, training material, interfaces, and projects without turning the sheet itself into an ontology, evidence source, permission, or proof that the named use occurred.
+The practical problem is to make one durable naming decision recoverable without turning its row, representation, or availability into the named object. One row therefore carries one decision or splits; any stronger claim leaves the row and uses its own defining or constraining rule.
 
 ### F.17:3 - Forces
 
 | Force | F.17 settlement |
 | --- | --- |
-| Reader memory vs full provenance | Keep one compact row for use, with enough references to reopen the sense, bridge, and name decision. |
-| Local meaning vs reuse across different semantic-context projections | Local senses are exact coordinates under by-value reference schemes; every correspondence or substitution claim is explicit and governed by F.9. A changed scheme is only one way the projections can differ; a changed `LocalSenseClaim` under the same scheme also opens the F.9 question. |
-| Naming neutrality vs recognizability | `F.18` and `F.5` choose names that readers can use without smuggling one context's commitments into the row. |
-| Didactic grouping vs ontology | Blocks help memory; blocks do not create subtypes, roles, statuses, or families. |
-| Row stability vs edition change | Row ids survive reblocking and wording updates; edition-sensitive fields show what changed. |
-| Compact table vs semio-bias | The table publishes term decisions without replacing the direct pattern that governs the object. |
+| Reader memory vs full provenance | Keep one compact row while retaining exact reopening references. |
+| Local expression vs durable reuse | Prefer the light local disposition; open F.17 only at the public/Core/durable/cross-local threshold. |
+| Local sense vs globalized wording | Identify every cell under one exact by-value scheme and sense claim; spelling establishes neither sameness nor Bridge. |
+| Naming settlement vs governed value | The NameCard describes the naming decision; it neither defines nor constrains the value or its kind. |
+| Didactic grouping vs ontology | Optional blocks help navigation and create no subtype, part, role, or priority. |
+| Row stability vs revision and availability | Row id, row episteme, edition relation, publication occurrence, form, and carrier remain distinct. |
 
 ### F.17:4 - Solution
 
-A Unified Term Sheet is a table of term rows for one bounded unification thread.
+Constitute a row through the smallest path that reaches the named reuse:
 
-Publish one term decision through this sequence:
+1. **Recover the value.** Identify one exact already-governed value or relation, its kind, the pattern that defines or constrains it, its identity or obtaining semantics, and one proposed use. Split a mixed candidate before naming.
+2. **Run the anti-explosion gate.** Apply F.14 before minting a card, cell, row, or family. Try no durable name, an existing designation, an alias, a local expression, a name already used for the value, and an admitted existing-row name. Stop at the first sufficient disposition.
+3. **Settle only the durable name that is needed.** If one expression remains unresolved, use F.8. If a durable naming settlement is justified, F.18 constitutes one C.2.1 NameCard and selects Tech and Plain designations. The card creates neither the value nor its kind and does not require a cell or row.
+4. **Address a local sense only when useful.** Create one `SchemeSenseCell` only when the exact local expression and sense claim need a stable address under an effective by-value `U.ReferenceScheme`. Cite a selected bounded-model-use Structure only when its organization changes this exact naming use. The cell does not require a NameCard or row.
+5. **Open the public-row gate independently.** Apply F.14 again when public, Core-facing, durable, or cross-local reuse needs a row. The current F.18 public-row interface supplies the exact NameCard, selected designations, governed value and kind, the locator for its defining or constraining pattern, effective scheme, and exact cell. None of those inputs alone requires the row.
+6. **Add a Bridge only for an actual cross-local relation.** Compare the exact `<ReferenceScheme, LocalSenseClaim>` projections. When the proposed row use relates different projections, cite an obtaining F.9 Bridge between the exact cells and separately cite the affirmative C.2.1 use claim plus its current A.10 or B.3 reliance. Same spelling, scheme difference, or cell presence proves no Bridge.
+7. **Constitute one row episteme.** Its C.2.1 EntityOfConcern is the exact independently governed value; its claim graph cites the separate naming-settlement episteme, selected designations, admitted and blocked citation uses, rationale, and reopen condition. Split unlike governed values or independently different uses into separate rows.
+8. **Keep succession and availability downstream.** Use `EpistemeEditionRelation` only when a later row episteme historically continues an earlier one under C.2.1. When availability is current, use the exact E.24.PUB expression, bearing, and publication relations. A row, row id, form, carrier, upload, or rendering establishes neither succession nor publication by itself.
 
-1. Confirm that the direct pattern already governs the underlying value and its admissible use. If the kind, relation, slot position, or use is unsettled, return there before term publication.
-2. Decide whether the name now needs durable reader-facing reuse: public publication, reuse across different semantic-context projections, stable citation, training use, interface use, or editioned maintenance. Otherwise keep the wording local and stop.
-3. Recover each exact local sense under one effective `U.ReferenceScheme` carried by value. Cite a `SenseCellAddressRef` that resolves to the F.17 scheme-based coordinate `<reference scheme by value, local expression, local-sense claim>`; do not require or infer a `U.BoundedContext`.
-4. Use F.18 and F.5 to select the Tech and Plain names for the governed value, and cite the resulting NameCard. If no NameCard decision is current, the term is not ready for F.17 publication.
-5. When the row proposes correspondence between local senses whose `<ReferenceScheme, LocalSenseClaim>` projections differ, cite two premises in order. The projections may differ because the `LocalSenseClaim` differs even when the `ReferenceScheme` is the same; different schemes are only a common subset and do not establish a Bridge. First cite an actual F.9 Bridge for the named endpoint cells and editions and show that its relation-semantic profile applies, its Boolean predicate is true, and its required dependencies are present. Second cite an exact current C.2.1 claim with that Bridge as EntityOfConcern and affirmative polarity for the row's named use, direction, use-specific correspondence rule, and permitted-loss tolerance. Recover current reliance through the exact A.10 evidence-provenance relation plus local `RelianceDisposition=pass`, or the positive B.3 assurance branch when B.3 is triggered. A negative claim or non-passing reliance rejects or weakens the row use without negating or reidentifying an otherwise obtaining Bridge. When the projections are the same, route a different expression to F.18 designation and add no Bridge. When no semantic-correspondence use is current, add no Bridge or Bridge-use claim regardless of how many schemes are present.
-6. Publish one `UnifiedTermRow` with one governed term decision, direct pattern, selected names, scheme-based sense coordinates, row rationale, admissible and blocked use, edition, and currentness condition. Split unlike governed values into separate rows.
-7. Apply the static and regression checks, then stop at term publication. Any later object, evidence, authority, work, or subject-use claim returns to its direct pattern.
-
-Each row has one primary term decision:
-
-```text
-UnifiedTermRow:
-  UTSRowId
-  UnificationThreadId
-  Block
-  GovernedValueRef: U.EntityRef
-  GovernedValueKindRef: U.KindRef
-  DirectGoverningPatternRef: U.EntityRef, referencing one U.MethodDescription
-  UnifiedTechName
-  UnifiedPlainName
-  NameCardRef: U.EntityRef, referencing one F.18 NameCard
-  SenseCellRefs[]: SenseCellAddressRef, each resolving one F.17 SchemeSenseCell(ReferenceScheme, LocalExpression, LocalSenseClaim) coordinate
-  BridgeRefs[]: U.EntityRef, referencing actual F.9 Bridges only; any AdmissibleUse between different semantic-context projections separately cites its exact C.2.1 claim and A.10 or B.3 reliance basis in the row rationale or notes
-  RowRationale
-  AdmissibleUse
-  BlockedUse
-  RowEdition
-  CurrentnessCondition
-  Notes?
-```
-
-The row may cite several local senses and several Bridges, but it does not fuse their underlying objects. If a source phrase points toward multiple typed FPF values, split the row or cite the direct pattern that keeps the values distinct.
+Apply the static and regression checks to the affected row, then stop. The result grants no ontology, obtaining, equivalence, authority, role, status, evidence, Work, publication truth, or receiving action.
 
 ### F.17:5 - Minimal vocabulary
 
-#### F.17:5.1 - Scheme-based local-sense coordinate and basis relation
+#### F.17:5.1 - Scheme-based local-sense coordinate, basis relation, and row episteme
 
-A local sense is not grounded merely because its expression has an accepted name. F.17 therefore separates the scheme-based local-sense coordinate, the naming settlement, and any episteme used as the basis for the sense claim.
+A selected expression, an exact local sense, the episteme supporting that sense, the naming decision, and the reader-facing row answer different questions. Keep them independently recoverable.
 
 ```text
 SchemeSenseCell:
   ValueKind: F.17-local composite coordinate; not a root U-kind
-  ReferenceScheme: U.ReferenceScheme carried by value
+  ReferenceScheme: effective U.ReferenceScheme carried by value
   LocalSenseId: address designator only
-  LocalExpression
-  LocalSenseClaim
+  LocalExpression: selected expression in this local use
+  LocalSenseClaim: exact local meaning under the scheme
   Identity: <ReferenceScheme by value, LocalExpression, LocalSenseClaim>
 
-LocalSenseBasisRelation@Context <: U.Relation
+LocalSenseBasisRelation <: U.Relation
 SlotSpecs:
   LocalSenseCellSlot:
   ValueKind: F.17 SchemeSenseCell coordinate
-  RefKind: SenseCellAddressRef, resolving SenseCell(ReferenceSchemeId, LocalSenseId) to the exact scheme, expression, and local-sense claim
+  RefKind: SenseCellAddressRef resolving the exact scheme, expression, and sense claim
   Field: localSenseCellRef
   BasisEpistemeSlot:
   ValueKind: U.Episteme
-  RefKind: U.EpistemeRef
+  RefKind: U.EpistemeRef resolving one exact basis-episteme edition
   Field: basisEpistemeRef
-  Constraint: the reference resolves to the exact basis-episteme kind; that kind is derived, not copied as another participant
-  BasisPublicationUnitSlot?:
-  ValueKind: PublicationUnit under E.17.AUD
-  RefKind: PublicationUnitRef
-  Field: basisPublicationUnitRef
-RelationRefKind: U.EntityRef constrained to LocalSenseBasisRelation@Context
 Direction: basisEpistemeRef -> localSenseCellRef
-Obtaining: the exact current basis-episteme edition, at the cited PublicationUnit when present, supports the coordinate's exact LocalSenseClaim under the coordinate's by-value ReferenceScheme for the stated admitted use
-NonObtaining: shared spelling, a NameCard, a file or carrier, publication availability, or an uncited source title does not make this relation obtain
-Identity: <localSenseCellRef, basisEpistemeRef, basisPublicationUnitRef if present>; the scheme, expression, and sense claim are already identity-bearing inside localSenseCellRef, and the episteme edition is already identity-bearing inside basisEpistemeRef
-OccurrenceIdentity: participant-determined; changed coordinate, basis-episteme edition, or cited publication unit identifies another occurrence
+Obtaining: the exact basis episteme supports the cell's exact LocalSenseClaim under its by-value ReferenceScheme for the stated admitted use
+NonObtaining: shared spelling, accepted name, card, source title, file, carrier, publication availability, or completed fields
+Identity: <localSenseCellRef, basisEpistemeRef>
+OccurrenceIdentity: participant-determined; another exact cell or basis-episteme edition identifies another occurrence
 
-LocalSenseBasisRelationDescription@Context <: U.Episteme:
-  entityOfConcernRef: U.EntityRef, referencing one LocalSenseBasisRelation@Context
-  entityOfConcernKindRef: U.KindRef, referencing LocalSenseBasisRelation@Context
+LocalSenseBasisRelationDescription <: U.Episteme:
+  entityOfConcernRef: U.EntityRef resolving one exact LocalSenseBasisRelation occurrence
+  entityOfConcernKindRef: U.KindRef resolving LocalSenseBasisRelation
   viewpointRef?: U.ViewpointRef
-  subjectRef?: U.SubjectRef, only when independently governed and without adding a context participant
-  claimGraph: U.ClaimGraph by value, carrying the supported-sense claim, admitted-use claim, and non-admitted-use claim
+  subjectRef?: U.SubjectRef, only when independently governed
+  basisPublicationUnitRef?: U.EntityRef resolving one exact source unit as description/provenance content, never as relation participant or identity discriminator
+  claimGraph: U.ClaimGraph carrying supported-sense, admitted-use, blocked-use, and any exact source-unit qualifier claims
   referenceScheme: U.ReferenceScheme by value; exactly the scheme in localSenseCellRef
-  editionId
+  editionId: designator only
+
+UnifiedTermRow <: U.Episteme:
+  UTSRowId: stable designator only
+  UnificationThreadId: sheet-local navigation designator
+  Block?: optional didactic navigation label
+  GovernedValueRef: U.EntityRef; the same exact referent fills the C.2.1 EntityOfConcern position
+  ClaimContent: complete U.ClaimGraph constituted by the identity-bearing row claims designated below
+  ReferenceScheme: effective U.ReferenceScheme carried by value
+  GovernedValueKindRef: U.KindRef
+  SubjectPatternLocator: U.EntityRef resolving the pattern that defines or constrains the governed value
+  UnifiedTechName: selected Tech designation expression
+  UnifiedPlainName: selected Plain designation expression
+  NameCardRef: U.EpistemeRef resolving the separate exact F.18 naming-settlement episteme
+  SenseCellRefs[]: exact SenseCellAddressRefs
+  BridgeRefs[]?: actual F.9 Bridge occurrences only
+  RowRationale
+  AdmissibleUse
+  BlockedUse
+  RowEditionId: designator only
+  EpistemeEditionRelationRef?: exact C.2.1 occurrence only when historical continuation obtains
+  CurrentnessCondition
+  Notes?
 ```
 
-`SenseCellAddressRef` is the F.17 reference form for `SchemeSenseCell`. Its readable `SenseCell(...)` spelling is an address, not a claim that a SenseCell is a U-kind or that a context holon exists. A legacy F.3 address of the form `SenseCell(ContextId, LocalSenseId)` may be consumed only when an explicit adapter resolves `ContextId` to one exact effective reference scheme and the same local expression and sense claim. If that resolution is absent or lossy, stop the row; do not reconstruct `U.BoundedContext`.
+`SenseCellAddressRef` designates one `SchemeSenseCell`; it does not create that cell or a universal context object. A legacy address is usable only through an explicit lossless adapter to the exact effective scheme, expression, and local-sense claim. Otherwise stop the row.
 
-The retained `@Context` suffix on `LocalSenseBasisRelation@Context` is lineage-compatible vocabulary for bounded local use, not a participant declaration. New occurrences have no `U.BoundedContext` slot. A legacy record may retain `boundedContextRef` only as non-participant address metadata when it resolves to the same exact scheme-based coordinate; otherwise that record is not current for an F.17 row.
+The basis relation has exactly two participants. `basisEpistemeRef` resolves the exact current basis-episteme edition; its exact kind is derived from that referent and is not copied as another participant. A relation reference resolves the exact `LocalSenseBasisRelation` occurrence rather than its description or designator. `basisPublicationUnitRef`, when present, is a provenance qualifier that narrows the supporting episteme; it neither participates in nor identifies the relation. A source publication occurrence, its form, and its carrier remain separate E.24.PUB objects.
 
-`basisPublicationUnitRef` narrows a relied-on pattern or publication episteme to the exact bounded unit when that precision matters. It does not turn a file, slide carrier, rendering, or publication occurrence into the supporting episteme.
+The relation says only that this basis episteme supports this cell's exact sense claim for the admitted use. Its description states the supported and blocked uses and any exact source-unit qualifier. A changed NameCard reopens the selected expression. A changed scheme, expression, sense claim, or basis-episteme edition identifies another cell or basis-relation participant pair. A changed source-unit or supported-use claim creates another relation-description episteme without silently changing the basis relation.
 
-The basis relation says only that the named episteme supports the named local-sense claim for the stated use. Its description says which claim is supported and which uses are admitted or blocked. A changed NameCard reopens the selected expression. A changed scheme, local expression, local-sense claim, basis-episteme edition, or cited publication unit identifies or selects another basis occurrence. A changed supported-use boundary creates another relation-description edition without silently changing the basis relation.
+Any description of a `SchemeSenseCell` is a separate C.2.1 episteme whose EntityOfConcern is that exact cell. The cell's identifier, description, source publication, NameCard, and basis relation neither replace nor identify the cell.
 
-`UnifiedTermSheet` is the whole reader-facing term table for one bounded unification thread.
+`UnifiedTermRow` is another C.2.1 episteme, not a root U-kind, value container, or publication occurrence. Its EntityOfConcern is the exact governed value. Its displayed identity-bearing row claims jointly constitute the complete ClaimContent; a scalar graph-ref line need not be repeated in the readable fixture when that graph is recoverable from them. The claim graph cites the separate NameCard and the governed value's kind, locates the rules that define or constrain that value, and projects the selected designation expressions. The row, card, designations, governed value, external row reference, and `UTSRowId` designator remain distinct; `UnificationThreadId`, `Block`, and `RowEditionId` are navigation or edition designators rather than additional identity discriminators.
 
-`UnifiedTermRow` is one local F.17 publication-row form in that sheet. It publishes one reviewed term decision and is not a root U-kind or the underlying governed value.
+If a later row episteme revises, refines, or supersedes an earlier one, an independently obtaining C.2.1 `EpistemeEditionRelation(earlierRowEpisteme, laterRowEpisteme)` carries historical continuation. Stable row spelling, id, table position, shared carrier, or later publication establishes no such relation. A `CurrentnessCondition` is row claim content; it is not the edition relation and does not make itself true.
 
-`UnificationThreadId` identifies the bounded naming thread that groups this row with related term decisions. It is a sheet-local identifier, not an ontological locality bearer; `RowEdition` identifies the row edition.
+When a selected row edition must be made available, E.24.PUB supplies three separate relations: `PublicationFormExpressionRelation(selectedRowEdition, publicationForm, boundedUseDeclaration)`, `PublicationFormBearingRelation(carrier, publicationForm)`, and `EpistemePublicationRelation(selectedRowEdition, audience, boundedUse, publicationForm, carrier)`. The row does not publish itself; the form is not the row; the carrier bears the form rather than the episteme; rendering or uploading is dated Work when current and is not the publication occurrence.
 
-`GovernedValueRef` references the exact value being named. `GovernedValueKindRef` separately references its kind. When the term names a kind token, such as `DemonstrativeUnfoldingSlice@Context`, the governed value is that token and its kind is `U.Kind`; the direct subject pattern states which kinds of instances the token admits. When the term names a role value, relation value, status value, slot kind, or local concept, the two positions reference that value and its exact governed kind. No union field or generic kind container substitutes for this pair.
+`GovernedValueRef` and `GovernedValueKindRef` are separate. A kind token has kind `U.Kind`. An obtaining relation occurrence, role value, status value, slot kind, or local concept retains its own kind; the row points to the pattern that defines or constrains that value. A row or card cannot admit a U-kind or make a direct relation obtain.
 
-`DirectGoverningPatternRef` names the pattern that owns the underlying value or claim. `F.17` owns the term-row publication, not that value.
+`NameCardRef` resolves the F.18 C.2.1 naming-decision episteme consumed by the current public-row gate. `UnifiedTechName` and `UnifiedPlainName` are designation expressions selected by that decision, not values or references. Aliases and rejected candidates stay in the NameCard or local lexicon rather than becoming rival selected names in the row.
 
-`SchemeSenseCell` is the exact F.17 local-sense coordinate. It binds one local expression and sense claim to one effective `U.ReferenceScheme` carried by value. A `NameCardRef` may accompany it when F.18 selected the expression. A separate `LocalSenseBasisRelationRef` relates the coordinate to a supporting episteme; the relation description carries the supported-sense and use-boundary claims, and the NameCard fills neither position.
+`BridgeRefs` cites only actual F.9 occurrences between exact cells. Direction, use-specific rule, loss tolerance, polarity, evidence, reliance, permission, and receiving action remain in their own claims and relations. Local senses do not globalize; same spelling or a different scheme provides neither governed-value identity nor Bridge obtaining.
 
-`BridgeRef` cites an actual F.9 Bridge only when it obtains for the exact scheme-based endpoints under a relation-semantic profile that applies, has a true Boolean predicate, and has every required dependency present. The reference carries no row-use direction, rule, tolerance, polarity, reliance, or permission. An `AdmissibleUse` between different `<ReferenceScheme, LocalSenseClaim>` projections separately cites the exact affirmative C.2.1 claim about that Bridge and names its current A.10 or B.3 reliance basis. A scheme difference alone supplies neither premise.
+The quoted tokens `DemonstrativeUnfoldingSlice@Context` and `DemonstratedPatternUseRow@Context` in F.17:12.4c retain the spelling fixed in A.22.CGUS. Their suffix is lineage in those governed tokens, not an F.17 identity constructor or permission to mint another `...@Context` value. New F.17 relation and row identities use the exact objects above.
 
-`UnifiedTechName` and `UnifiedPlainName` are the selected names governed by F.5 and F.18. Extra aliases belong in the NameCard or local lexicon material, not as rival unified names in the row.
-
-`BlockPlan` is the didactic grouping of rows. A block is a memory and teaching device, not an ontological parent.
+`UnifiedTermSheet` is the reader-facing collection or layout through which rows are found. A selected table layout, optional block plan, or carrier is not the row episteme and does not prove that every needed decision is present.
 
 ### F.17:6 - When to create or update a UTS row
 
-Create or update a UTS row when at least one condition is present:
+Create or revise one row only when all entry objects are exact and at least one receiving need is current:
 
-- the name will be public, Core-facing, or reused under more than one effective reference scheme;
-- a row id is needed for later examples, checks, dashboards, training material, or tool interface labels;
-- a role name, status-family name, slot name, relation name, or local concept name is being reused outside the immediate local repair;
-- an obtaining F.9 Bridge and a separately warranted affirmative C.2.1 claim are being used for one exact term-row use between different semantic-context projections;
-- a name-card decision from `F.18` needs a compact reader-facing term row;
-- a direct pattern changes the governed object in a way that changes the name, local sense, bridge, or admissible use.
+- public or Core-facing citation of the selected naming decision;
+- durable reuse outside the immediate local repair;
+- cross-local reuse whose exact cells, any actual Bridge, separate use claim, and reliance are recoverable;
+- stable citation from examples, checks, dashboards, training material, a project standard, or a tool interface;
+- a change to the rules that define or constrain this value, or an F.18 change, that alters this exact row's value, name, sense, admitted use, or blocked use.
 
-Do not create a row only because a word was noticed. First recover the kind, relation, slot position, and admissible use under the direct governing pattern.
+Before the row, apply F.14 again. A noticed word, accepted designation, stable local sense, NameCard, Bridge description, source publication, or desire for a tidy table does not by itself meet the gate. A durable local NameCard can remain local; a cell can remain a cell; an existing row can be reused only within its admitted use.
 
 ### F.17:7 - Row schema
 
-Use these columns unless the sheet has a justified specialization.
+Use these positions when they are current. Presence means that the exact referenced object or claim is independently recoverable; it is not a form-completion target.
 
-| Column | Presence condition | Meaning |
+| Position | Presence condition | Meaning |
 | --- | --- | --- |
-| `UTSRowId` | yes | Stable row id. It survives relocation of the row between blocks. |
-| `Unification thread` | yes | Sheet-local identifier of the bounded naming thread; it is not an ontological locality bearer. |
-| `Block` | yes | Didactic block name. It has no subtype force. |
-| `Governed value` | yes | Exact value being named, including a kind token when the name is for that token. |
-| `Governed value kind` | yes | Exact kind of the governed value; use `U.Kind` when the governed value is itself a kind token. |
-| `Direct pattern` | yes | Pattern that governs the underlying object or claim. |
-| `Unified Tech name` | yes | Technical name selected under F.5 and F.18. |
-| `Unified Plain name` | yes | Plain-language twin selected under F.5 and F.18. |
-| `NameCardRef` | yes | Link to the F.18 NameCard that selected or documented the published names. |
-| `SenseCellRefs` | yes | References to exact F.17 scheme-based local-sense coordinates. |
-| `BridgeRefs` | when the row makes a correspondence claim between different semantic-context projections | Refs to actual F.9 Bridge occurrences only, with their kind-defined symmetry or orientation and exact endpoint editions. Use direction, rule, tolerance, polarity, and reliance do not live in this field. |
-| `Row rationale` | yes | One sentence explaining why this row is one term decision. For reuse between different semantic-context projections, name the exact C.2.1 claim and its A.10 or B.3 reliance basis here or in `Notes`. |
-| `Admissible use` | yes | What this row may be cited for. A use between different semantic-context projections states the action, direction, correspondence rule, tolerated loss, and affirmative claim ref; it does not imply authorization or occurrence. |
-| `Not this use` | yes | The most tempting blocked use or misuse that this row does not permit. |
-| `Row edition` | yes | Edition of the row. |
-| `Currentness condition` | yes | Which direct-pattern, scheme, sense, name, Bridge, or source change opens row review. |
-| `Notes` | optional | Short teaching or homonym warning only. |
+| `UTSRowId` | yes | Stable row designator; an external row reference must resolve the exact C.2.1 episteme rather than trust this string. |
+| `Unification thread` | yes | Sheet-local navigation designator with no locality or ontology force. |
+| `Block` | optional | Didactic navigation label only. |
+| `Governed value` / C.2.1 `EntityOfConcern` | yes | Exact independently governed value named by the decision. |
+| `NameCardRef` | yes at the current F.18 public-row gate | Separate C.2.1 naming-settlement episteme whose selected designations this row projects. |
+| `Governed value kind` | yes | Exact kind of that value; `U.Kind` when the value is a kind token. |
+| `Defining or constraining pattern` | yes | Pattern whose rules define or constrain the value, its kind, its identity, or any obtaining semantics used by the row. |
+| `Reference scheme` | yes | Effective by-value naming `U.ReferenceScheme` used in this row's C.2.1 constitution. |
+| `Unified Tech name` | yes | Selected Tech designation expression. |
+| `Unified Plain name` | yes | Selected Plain designation expression. |
+| `SenseCellRefs` | one or more | Exact scheme-based local-sense coordinates needed by this row. |
+| `BridgeRefs` | only for an actual cross-local relation used by the row | Exact obtaining F.9 occurrences; the separate use claim and reliance stay in rationale or notes. |
+| `Row rationale` | yes | Why these projections form one row decision. |
+| `Admissible use` | yes | Exact citation use supported by the row; it grants no authorization or occurrence. |
+| `Not this use` | yes | Nearest tempting overread that remains blocked. |
+| `Row edition id` | yes | Designator for this exact row episteme edition. |
+| `EpistemeEditionRelationRef` | only when C.2.1 historical continuation obtains | Separate relation from an exact earlier row episteme to this later one. |
+| `Currentness condition` | yes | Claim stating what reopens review; not a self-proving currentness relation. |
+| `Notes` | optional | Short lineage, teaching, homonym, use-claim, or reliance note. |
 
-For `SenseCellRefs`, cite the exact by-value reference scheme, local expression, and local-sense claim. If the local expression relies on a naming settlement, cite its `NameCardRef`. If the local-sense claim relies on a publication or another episteme, cite a `LocalSenseBasisRelation@Context` with an exact `U.EpistemeRef` and, when needed, the exact publication-unit ref. The retained suffix is a lineage-compatible name, not a context participant. Do not let a source title, file name, carrier, context label, selected structure, or NameCard substitute for the coordinate or its basis relation.
+For `SenseCellRefs`, recover the exact by-value scheme, expression, and local-sense claim. Cite `LocalSenseBasisRelation` only when an actual basis relation obtains. A NameCard selects designations; it does not fill the cell or basis positions. A source title, file, carrier, locality label, selected structure, row id, or description substitutes for none of them.
 
-### F.17:8 - Block plan
+Publication availability is not a row column. When current, maintain the exact E.24.PUB relation occurrences, form, carrier, audience, and bounded use beside the selected row edition. Publication change does not silently change the row episteme or its C.2.1 edition relation.
 
-A UTS is complete only with a declared block plan. Blocks stay few enough for a careful reader to remember and specific enough to make row search easy.
+### F.17:8 - Optional block plan
 
-Example block plan for a role, method, work, and status thread:
+A block plan is an optional navigation aid for a sheet with enough rows that grouping helps a reader. Use few memorable blocks and omit the plan when direct row search is clearer. Neither a declared plan, the number of blocks, nor filled row count proves coverage, completeness, usefulness, or semantic adequacy.
 
-- Context and governed values.
-- Roles and role descriptions.
-- Role assignments and performed work.
-- Methods, method descriptions, and work plans.
-- Status families and status windows.
-- Relation, slot, interface, and bridge terms.
-- Evidence, assurance, source, and publication terms when those are the governed values.
+Example navigation plan for a role, method, Work, and status thread:
 
-This example does not define an ontology. It is a didactic grouping. The sheet may use different blocks when the unification thread is about architecture, transformation flows, evaluation characteristics, Part G search packs, or another area.
+- governed values and naming decisions;
+- roles and role descriptions;
+- role assignments and performed Work;
+- methods, method descriptions, and work plans;
+- status families and status windows;
+- relation, slot, interface, and Bridge terms;
+- evidence, assurance, source, and publication terms when those are the governed values.
+
+This list defines no ontology. A sheet may use another small navigation plan for architecture, transformation flows, evaluation characteristics, Part G search packs, or another receiving use.
 
 ### F.17:9 - Layouts
 
@@ -265,7 +258,7 @@ F.17 admits two common layouts.
 Layout A, scheme-first: keep the left rail fixed and add one exact reference-scheme column per selected interpretation basis. Use this when the reader's comparison concerns local senses under named schemes.
 
 ```text
-UTSRowId | Unification thread | Block | Governed value | Governed value kind | Direct pattern
+UTSRowId | Unification thread | Block | Governed value | Governed value kind | Defining or constraining pattern
 Unified Tech name | Unified Plain name | NameCardRef
 Reference scheme A | Reference scheme B | Reference scheme C
 BridgeRefs | Row rationale | Admissible use | Not this use
@@ -278,22 +271,25 @@ Never mix a scheme column and a discipline or project-family column as if they h
 
 ### F.17:10 - Static conformance rules for a UTS
 
-Use these checks before citing a UTS row outside its local sheet.
+Use these checks before citing a row outside its immediate sheet.
 
 | Rule | Check |
 | --- | --- |
-| UTS-SCR-01 | Every row has row id, unification-thread id, block, governed value, governed value kind, direct pattern, Tech name, Plain name, scheme-based sense-cell refs, row rationale, admissible use, blocked use, row edition, and currentness condition. |
-| UTS-SCR-02 | A row names one governed term decision. If the wording hides multiple typed values, split the row or cite the direct pattern that keeps them distinct. |
-| UTS-SCR-03 | Every local sense resolves to one exact by-value reference scheme, local expression, and local-sense claim; no context holon is required or inferred. |
-| UTS-SCR-04 | A row that proposes use between different semantic-context projections cites an obtaining F.9 Bridge for the exact endpoint cells and editions, then separately cites an affirmative C.2.1 claim for the row's exact use, direction, correspondence rule, and loss tolerance; current reliance follows the exact A.10 or B.3 branch. Apply four probes: same scheme plus same `LocalSenseClaim` plus a different expression routes to designation and no Bridge; same scheme plus a different `LocalSenseClaim` opens the F.9 question and, for a named row use, the separate claim-and-reliance branch; a different scheme opens only the Bridge question and never establishes one; no current correspondence use creates no Bridge or use claim regardless of scheme count. A negative bounded-use claim rejects the exact named row use; a non-passing reliance result stops or narrows the current use according to its exact A.10 or B.3 disposition; neither changes whether the Bridge obtains or how it is identified. |
-| UTS-SCR-05 | The Tech and Plain names satisfy F.5 and F.18; spelling or a familiar context label supplies neither local-sense identity nor a Bridge. |
-| UTS-SCR-06 | A role row names `U.Role` or a governed role value; it does not treat RoleDescription, RoleAssignment, capability, method, or work as the same value. |
-| UTS-SCR-07 | A status row names the status-family or status-window value governed by F.10 or A.19.SPR; it does not create a role. |
-| UTS-SCR-08 | Evidence, assurance, source, publication, and description-use rows cite their direct patterns and do not become generic evidence roles. |
-| UTS-SCR-09 | Blocks remain didactic. No subtype, part-of, role, status, or priority claim follows from block placement. |
-| UTS-SCR-10 | The sheet states the scheme and reader breadth actually tested. A narrow row does not claim universal or corpus-wide reuse. |
+| UTS-SCR-01 | The row resolves to one C.2.1 row episteme whose EntityOfConcern is one exact governed value; it points separately to that value's kind, the pattern that defines or constrains it, and the exact F.18 naming-settlement episteme. |
+| UTS-SCR-02 | One row carries one naming decision and one governed value/use branch; mixed values or independently different uses are split. |
+| UTS-SCR-03 | Every local sense resolves to one exact by-value ReferenceScheme, local expression, and local-sense claim; id, description, source publication, card, or basis relation replaces none of them. |
+| UTS-SCR-04 | F.14 was applied before the current card, cell, and row; the light dispositions—no durable name, existing designation, alias, local expression, a name already used for the value, and admitted row reuse—were tested first. |
+| UTS-SCR-05 | The Tech and Plain designation expressions agree with the exact current F.18 NameCard without becoming the governed value; aliases and rejected candidates remain separate. |
+| UTS-SCR-06 | Any cited `LocalSenseBasisRelation` has only its exact cell and basis episteme as participants; source-unit and publication facts remain qualifiers or neighboring objects. |
+| UTS-SCR-07 | Apply all four Bridge probes: same scheme plus same `LocalSenseClaim` plus another expression is a designation question and adds no Bridge; same scheme plus a different claim opens F.9 and, only for a named row use, the separate use-claim/reliance branch; a different scheme opens only the Bridge question and establishes none; no current correspondence use creates no Bridge or use claim regardless of scheme count. |
+| UTS-SCR-08 | Any cited F.9 Bridge has exact endpoint cells and editions, an applicable relation-semantic profile, a true kind-defined predicate, and every required dependency. The separate affirmative C.2.1 use claim states direction, correspondence rule, and loss tolerance, with current A.10 or B.3 reliance. A negative use claim rejects that exact row use; non-passing reliance stops or narrows it; neither negates or reidentifies an otherwise obtaining Bridge. |
+| UTS-SCR-09 | A role row does not identify RoleDescription, RoleAssignment, capability, method, or Work with the governed role value; a status row does not turn a status family, value, or window into a role. |
+| UTS-SCR-10 | Evidence, assurance, source, publication, description, relation, slot, interface, authority, and equivalence claims use the patterns that define, constrain, or test them rather than becoming row truth. |
+| UTS-SCR-11 | Row id, block, table position, source title, file, carrier, suffix, and filled-cell count create neither value identity nor row adequacy. |
+| UTS-SCR-12 | The row states the exact scheme, receiving use, and reader breadth actually checked; a narrow row claims neither universal nor corpus-wide reuse. |
+| UTS-SCR-13 | C.2.1 row succession and E.24.PUB availability are independently recovered; row, edition relation, publication occurrence, form, carrier, rendering Work, and upload Work stay distinct. |
 
-Passing the row schema is not the value criterion. A row succeeds only when its intended readers can recover the correct governed value and direct pattern for the declared use and avoid the blocked use. Row count, filled-cell count, label uniformity, block neatness, and stable identifiers are maintenance aids, not evidence that the term decision is useful or semantically adequate.
+Passing the schema is not the value criterion. A row succeeds only when intended readers can recover the correct naming decision, governed value, and applicable defining or constraining rule for the declared use while avoiding the blocked use. Row count, filled-cell count, label uniformity, block neatness, and stable identifiers are maintenance aids only.
 
 ### F.17:11 - Regression and stability rules
 
@@ -302,23 +298,23 @@ Recheck only the rows affected by the changed object, name, scheme, sense, Bridg
 | Rule | Trigger | Response when triggered |
 | --- | --- | --- |
 | UTS-RSCR-01 | Reference-scheme value, local expression, or local-sense claim changes | Preserve the old coordinate when it is still cited and create or cite the new exact coordinate; do not silently reuse the old address. |
-| UTS-RSCR-02 | Direct governing pattern changes the underlying value kind or admissible use | Recheck governed value, governed value kind, direct pattern, admissible use, and blocked use. |
+| UTS-RSCR-02 | The defining or constraining rule changes the underlying value kind or admissible use | Recheck the governed value, its kind, the applicable pattern, admitted use, and blocked use. |
 | UTS-RSCR-03 | F.18 changes the selected name or NameCard decision | Recheck Tech name, Plain name, NameCardRef, aliases, coordinate expression, and rationale. |
 | UTS-RSCR-04 | F.9 changes a Bridge endpoint or relation-semantic profile, or C.2.1/A.10/B.3 changes the bounded-use claim or reliance basis | Recheck the changed object only: BridgeRefs for endpoint or profile change; row use, rationale, and notes for changed direction, rule, tolerance, polarity, evidence, reliance, or assurance. |
 | UTS-RSCR-05 | Row relocation between blocks | Keep the row id stable and state that relocation between blocks has no ontological force. |
-| UTS-RSCR-06 | A role, status, evidence, source, publication, or description row is reused under another semantic-context projection or by another reader group | Recheck the direct governing pattern, exact sense coordinate, and any required Bridge before reuse. |
+| UTS-RSCR-06 | A role, status, evidence, source, publication, or description row is reused under another semantic-context projection or by another reader group | Recheck the pattern that defines or constrains the governed value, the exact sense coordinate, and any required Bridge before reuse. |
 
 ### F.17:12 - Archetypal Grounding - worked cases
 
 #### F.17:12.1 - Role name becomes public across two project contexts
 
-A project has `ReviewerRole@DesignReview` and `ReviewerRole@ExternalAudit`. The local expressions both say "reviewer", but one concerns a system-in-role performing design review work and the other concerns an assurance actor producing an audit report.
+One project has an exact design-review role value and an independently governed external-audit role value. Both local expressions say `reviewer`, but one concerns a system-in-role performing design-review Work and the other concerns an assurance actor producing an audit report.
 
-The UTS row does not declare one universal reviewer. It either creates two rows or, when one naming use between different semantic-context projections is genuinely needed, cites an obtaining F.9 Bridge plus an affirmative C.2.1 claim that names the use direction, label rule, and tolerated loss. Each row cites the direct role pattern, the RoleDescription when current, and the `F.18` NameCardRef. A.10 or B.3 governs reliance on the use claim; no row or card creates a role assignment or review Work.
+The UTS row does not declare one universal reviewer. It either creates two rows or, when one naming use between different semantic-context projections is genuinely needed, cites an obtaining F.9 Bridge plus an affirmative C.2.1 claim that names the use direction, label rule, and tolerated loss. Each row cites the pattern that defines or constrains its role value, the RoleDescription when current, and the `F.18` NameCardRef. A.10 or B.3 governs reliance on the use claim; no row or card creates a role assignment or review Work.
 
 #### F.17:12.2 - Status label looks like a role name
 
-A team proposes `BlockedReviewer` as a public label. F.17 does not accept it as a row until the direct patterns are separated. `Reviewer` is a role value; `blocked` is a status-family value or status-window value. The sheet may publish `Reviewer` as a role row and `Blocked` as a status row, with a note that a local UI may render them together. The table does not create a role called "blocked reviewer".
+A team proposes `BlockedReviewer` as a public label. F.17 does not accept it as a row until the rules for the two governed values are separated. `Reviewer` is a role value; `blocked` is a status-family value or status-window value. The sheet may publish `Reviewer` as a role row and `Blocked` as a status row, with a note that a local UI may render them together. The table does not create a role called "blocked reviewer".
 
 #### F.17:12.3 - Relation and slot names become reusable
 
@@ -330,23 +326,24 @@ A sheet has a row labelled `Evidence role`. F.17 repairs the row by recovering t
 
 #### F.17:12.4a - Manufacturing batch across material and planning contexts
 
-A furnace team uses `batch` for one physically handled set of shafts that shares a heat-treatment run and traceability basis. A planning dashboard uses `batch` for a grouping of intended PlanItems. Spelling does not make these one governed value. Recover the physical batch under the direct material or production DPF pattern, including its identity and part-whole treatment when the proposed comparison relies on either; recover the planning grouping under A.15.2 and its direct planning relation. Publish separate rows unless an obtaining F.9 Bridge states the exact semantic relation and a separate affirmative C.2.1 claim names the proposed comparison direction, correspondence rule, and tolerated loss with current A.10 or B.3 reliance. A `batch` row cannot turn a PlanItem grouping into a physical holon or make the physical batch a WorkPlan.
+A furnace team uses `batch` for one physically handled set of shafts that shares a heat-treatment run and traceability basis. A planning dashboard uses `batch` for a grouping of intended PlanItems. Spelling does not make these one governed value. Recover the physical batch under the material or production DPF pattern that supplies its identity and part-whole rules when the proposed comparison relies on either; recover the planning grouping and its relation to intended PlanItems under A.15.2. Publish separate rows unless an obtaining F.9 Bridge states the exact semantic relation and a separate affirmative C.2.1 claim names the proposed comparison direction, correspondence rule, and tolerated loss with current A.10 or B.3 reliance. A `batch` row cannot turn a PlanItem grouping into a physical holon or make the physical batch a WorkPlan.
 
 #### F.17:12.4b - Clinical discharge wording
 
-A clinical publication proposes one row for `discharge` and `discharge-ready`. First separate the governed values. A patient-state classification uses A.19.SPR plus the clinical DPF pattern for its bearer, state frame, evidence, qualification window, and use. An accountable discharge decision remains a decision relation under its direct pattern. A completed discharge is dated Work under A.15.1. Publish distinct rows and connect them only through relations actually governed in the clinical context. One familiar label does not make state, decision, and Work interchangeable.
+A clinical publication proposes one row for `discharge` and `discharge-ready`. First separate the governed values. A patient-state classification uses A.19.SPR plus the clinical DPF pattern for its bearer, state frame, evidence, qualification window, and use. An accountable discharge decision remains a decision relation under the pattern that defines or tests that decision. A completed discharge is dated Work under A.15.1. Publish distinct rows and connect them only through relations actually governed in the clinical context. One familiar label does not make state, decision, and Work interchangeable.
 
 #### F.17:12.4c - Demonstrative walkthrough, mantra, and mantra move
 
-These rows publish naming decisions already governed and named in A.22.CGUS. They cover only the admitted CGUS-demonstrative senses of `mantra` and `mantra move`; they define neither the Plain local mantra that recalls one bounded result nor the Plain long mantra that keeps a distant result dependency visible across direct patterns. Ordinary long and local mantras receive no F.17 row. F.17 publishes the bounded terms; it does not govern the demonstrated structures, rows, or Plain attention aids.
+These rows publish naming decisions already governed and named in A.22.CGUS. They cover only the admitted CGUS-demonstrative senses of `mantra` and `mantra move`; they define neither the Plain local mantra that recalls one bounded result nor the Plain long mantra that keeps a distant result dependency visible across several patterns. Ordinary long and local mantras receive no F.17 row. F.17 publishes the bounded terms; it does not govern the demonstrated structures, rows, or Plain attention aids.
 
 ```text
 UTSRowId: UTS.DemonstrativeUnfoldingSlice.FPFPublic
+ReferenceScheme: FPFCoreReferenceScheme
 UnificationThreadId: DemonstrativeExplanationTerminology.2026-07-11
 Block: Pattern use and teaching
 GovernedValueRef: DemonstrativeUnfoldingSlice@Context
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.22.CGUS
+SubjectPatternLocator: A.22.CGUS
 UnifiedTechName: DemonstrativeUnfoldingSlice@Context
 UnifiedPlainName: demonstrative walkthrough
 NameCardRef: NameCard.DemonstrativeUnfoldingSlice.FPFPublic
@@ -356,15 +353,16 @@ RowRationale: this row names one readable demonstration of admissible continuati
 AdmissibleUse: public naming of the governed demonstrative episteme under affirmative claim Claim.DemonstrativeUnfoldingSlice.SeminarToPublic.Naming.2026-07-11
 BlockedUse: actual traversal, method order, work order, performed work, or teaching-medium identity
 Notes: reliance basis is EvidenceUse.DemonstrativeUnfoldingSlice.SeminarToPublic.Naming.2026-07-11 with RelianceDisposition=pass for this naming use only
-RowEdition: 2026-07-11
+RowEditionId: 2026-07-11
 CurrentnessCondition: review when the governed value, FPFCoreReferenceScheme, NameCard, local-sense basis relation, Bridge endpoint or profile, bounded-use claim, A.10 reliance basis, or reader evidence changes
 
 UTSRowId: UTS.DemonstrativeUnfoldingSlice.SeminarTeaching
+ReferenceScheme: FPFSeminarTeachingReferenceScheme-2026-07-11
 UnificationThreadId: DemonstrativeExplanationTerminology.2026-07-11
 Block: Pattern use and teaching
 GovernedValueRef: DemonstrativeUnfoldingSlice@Context
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.22.CGUS
+SubjectPatternLocator: A.22.CGUS
 UnifiedTechName: DemonstrativeUnfoldingSlice@Context
 UnifiedPlainName: mantra
 NameCardRef: NameCard.DemonstrativeUnfoldingSlice.SeminarTeaching
@@ -374,15 +372,16 @@ RowRationale: the bounded teaching alias adds repeated speech and attentional us
 AdmissibleUse: repeated English-language FPF seminar speech that points to the public term under affirmative claim Claim.DemonstrativeUnfoldingSlice.SeminarToPublic.Naming.2026-07-11
 BlockedUse: ritual authority, slogan, method, plan, work, fixed order, or reverse substitution from every public walkthrough
 Notes: reliance basis is EvidenceUse.DemonstrativeUnfoldingSlice.SeminarToPublic.Naming.2026-07-11 with RelianceDisposition=pass for this naming use only
-RowEdition: 2026-07-11
+RowEditionId: 2026-07-11
 CurrentnessCondition: review when FPFSeminarTeachingReferenceScheme-2026-07-11, the governed value, NameCard, local-sense basis relation, Bridge endpoint or profile, bounded-use claim, A.10 reliance basis, dictionary evidence, or reader evidence changes
 
 UTSRowId: UTS.DemonstratedPatternUseRow.SeminarTeaching
+ReferenceScheme: FPFSeminarTeachingReferenceScheme-2026-07-11
 UnificationThreadId: DemonstrativeExplanationTerminology.2026-07-11
 Block: Pattern use and teaching
 GovernedValueRef: DemonstratedPatternUseRow@Context
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.22.CGUS
+SubjectPatternLocator: A.22.CGUS
 UnifiedTechName: DemonstratedPatternUseRow@Context
 UnifiedPlainName: mantra move
 NameCardRef: NameCard.DemonstratedPatternUseRow.SeminarTeaching
@@ -391,7 +390,7 @@ BridgeRefs: none; expression and governed-row use are interpreted under the same
 RowRationale: this row names one shown conditional pattern use with its Solution, expected result, and current condition inside a mantra
 AdmissibleUse: bounded seminar reference to one demonstrated result-bearing continuation
 BlockedUse: root Move, physical movement, operation, fixed serial step, PlanItem, performed Work, or continuation detached from its slice
-RowEdition: 2026-07-11
+RowEditionId: 2026-07-11
 CurrentnessCondition: review when the demonstrated-row schema, NameCard, local-sense basis relation, seminar-teaching scheme, or reader interpretation changes
 ```
 
@@ -428,11 +427,11 @@ SenseCell.DemonstratedPatternUseRow.SeminarTeaching.2026-07-11:
 LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.FPFPublic.2026-07-11:
   localSenseCellRef: SenseCell(FPFCoreReferenceScheme, DemonstrativeUnfoldingSlice-public)
   basisEpistemeRef: A.22.CGUS
-  basisPublicationUnitRef: A.22.CGUS:4.3.3-Ordinary-bounded-use
 
 LocalSenseBasisRelationDescription.DemonstrativeUnfoldingSlice.FPFPublic.2026-07-11:
   entityOfConcernRef: LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.FPFPublic.2026-07-11
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: A.22.CGUS:4.3.3-Ordinary-bounded-use
   viewpointRef: FPFPublicReaderViewpoint
   claimGraph:
   supportedSenseClaim: one readable demonstration of admissible continuations through a wider constraint-governed unfolding structure
@@ -444,11 +443,11 @@ LocalSenseBasisRelationDescription.DemonstrativeUnfoldingSlice.FPFPublic.2026-07
 LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.SeminarTeaching.2026-07-11:
   localSenseCellRef: SenseCell(FPFSeminarTeachingReferenceScheme-2026-07-11, DemonstrativeUnfoldingSlice-mantra)
   basisEpistemeRef: SeminarExpression.FPFPracticalUse.2026-07-11
-  basisPublicationUnitRef: SeminarExpression.FPFPracticalUse.2026-07-11.Slides8-10
 
 LocalSenseBasisRelationDescription.DemonstrativeUnfoldingSlice.SeminarTeaching.2026-07-11:
   entityOfConcernRef: LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.SeminarTeaching.2026-07-11
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: SeminarExpression.FPFPracticalUse.2026-07-11.Slides8-10
   viewpointRef: FPF Seminar Participant Viewpoint
   claimGraph:
   supportedSenseClaim: a short repeatable explanatory walkthrough used to hold the whole solution structure in attention
@@ -460,11 +459,11 @@ LocalSenseBasisRelationDescription.DemonstrativeUnfoldingSlice.SeminarTeaching.2
 LocalSenseBasisRelation.DemonstratedPatternUseRow.SeminarTeaching.2026-07-11:
   localSenseCellRef: SenseCell(FPFSeminarTeachingReferenceScheme-2026-07-11, DemonstratedPatternUseRow-mantra-move)
   basisEpistemeRef: SeminarExpression.FPFPracticalUse.2026-07-11
-  basisPublicationUnitRef: SeminarExpression.FPFPracticalUse.2026-07-11.Slides61-62
 
 LocalSenseBasisRelationDescription.DemonstratedPatternUseRow.SeminarTeaching.2026-07-11:
   entityOfConcernRef: LocalSenseBasisRelation.DemonstratedPatternUseRow.SeminarTeaching.2026-07-11
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: SeminarExpression.FPFPracticalUse.2026-07-11.Slides61-62
   viewpointRef: FPF Seminar Participant Viewpoint
   claimGraph:
   supportedSenseClaim: one shown pattern-use continuation with its Solution, expected result, and current condition inside a mantra
@@ -508,8 +507,8 @@ A.10 evidence reliance for this claim:
   TargetClaimRef: Claim.DemonstrativeUnfoldingSlice.SeminarToPublic.Naming.2026-07-11
   BoundedEvidenceUse: use the seminar word "mantra" to point to the public demonstrative-walkthrough term and the same governed A.22.CGUS value
   EvidencePaths:
-  PublicSenseBasisRecord: LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.FPFPublic.2026-07-11 --basisEpistemeRef--> A.22.CGUS --basisPublicationUnitRef--> A.22.CGUS:4.3.3-Ordinary-bounded-use --carriedBy--> _current-pattern-hosts/A.22.CGUS-Constraint-Governed-Unfolding-Structure.md
-  SeminarSenseBasisRecord: LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.SeminarTeaching.2026-07-11 --basisEpistemeRef--> SeminarExpression.FPFPracticalUse.2026-07-11 --basisPublicationUnitRef--> SeminarExpression.FPFPracticalUse.2026-07-11.Slides8-10 --carriedBy--> FPF_first_seminar_reworked_slidement.pptx@sha256:325B50C5D062479434ECCABFF0B8B3E316825CAA5E1646A61D25183B90B9CA89 (Git blob e990847d37ddca59d15a9cc434fad15381a2122d) and fpf_first_seminar_slides.content.md@sha256:B38C6F5FBC85CAF9986D2141095C90DAFFAB6F3FEA607ACE7FA6CE60EB18228D (Git blob 34fd989b646aa4dc9f2879cab40d2e6dde989b1b)
+  PublicSenseBasisRecord: LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.FPFPublic.2026-07-11 --basisEpistemeRef--> A.22.CGUS; LocalSenseBasisRelationDescription.DemonstrativeUnfoldingSlice.FPFPublic.2026-07-11 --basisPublicationUnitRef--> A.22.CGUS:4.3.3-Ordinary-bounded-use; A.22.CGUS --carriedBy--> _current-pattern-hosts/A.22.CGUS-Constraint-Governed-Unfolding-Structure.md
+  SeminarSenseBasisRecord: LocalSenseBasisRelation.DemonstrativeUnfoldingSlice.SeminarTeaching.2026-07-11 --basisEpistemeRef--> SeminarExpression.FPFPracticalUse.2026-07-11; LocalSenseBasisRelationDescription.DemonstrativeUnfoldingSlice.SeminarTeaching.2026-07-11 --basisPublicationUnitRef--> SeminarExpression.FPFPracticalUse.2026-07-11.Slides8-10; SeminarExpression.FPFPracticalUse.2026-07-11 --carriedBy--> FPF_first_seminar_reworked_slidement.pptx@sha256:325B50C5D062479434ECCABFF0B8B3E316825CAA5E1646A61D25183B90B9CA89 (Git blob e990847d37ddca59d15a9cc434fad15381a2122d) and fpf_first_seminar_slides.content.md@sha256:B38C6F5FBC85CAF9986D2141095C90DAFFAB6F3FEA607ACE7FA6CE60EB18228D (Git blob 34fd989b646aa4dc9f2879cab40d2e6dde989b1b)
   NameSettlementRecord: NameCard.DemonstrativeUnfoldingSlice.SeminarTeaching --carriedBy--> _current-pattern-hosts/A.22.CGUS-Constraint-Governed-Unfolding-Structure.md
   DictionaryEvidenceRecord-MW: Merriam-Webster "mantra" entry, accessed 2026-07-11 --derivedFrom--> https://www.merriam-webster.com/dictionary/mantra
   DictionaryEvidenceRecord-OALD: Oxford Advanced Learner's Dictionary "mantra" entry, accessed 2026-07-11 --derivedFrom--> https://www.oxfordlearnersdictionaries.com/definition/english/mantra
@@ -549,11 +548,12 @@ This row publishes the already selected A.1.1/F.18 naming decision for the depen
 
 ```text
 UTSRowId: UTS.BoundedModelUseStructure.FPFCore.2026-07-25
+ReferenceScheme: FPFCoreReferenceScheme
 UnificationThreadId: R1.2-BoundedModelUse-Naming
 Block: Architecture and model use
 GovernedValueRef: BoundedModelUseStructure
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.1.1
+SubjectPatternLocator: A.1.1
 UnifiedTechName: BoundedModelUseStructure
 UnifiedPlainName: bounded context
 NameCardRef: NC-BOUNDED-MODEL-USE-STRUCTURE
@@ -561,8 +561,8 @@ SenseCellRefs: SenseCell.BoundedModelUseStructure.FPFCore.2026-07-25
 BridgeRefs: none; this row makes no semantic-correspondence or substitution claim
 RowRationale: the governed value is the A.1.1 kind token; its admitted members are exactly the U.Structure individuals that satisfy the A.1.1/A.22 membership condition, and the selected names designate that organization of one model edition's governed applicability, actual use, and fixed-content expression coherence over exact admitted model-use holons, exact applied constraint claims, and the named frame; a claim scope or membership outcome is not an applied constraint by itself
 AdmissibleUse: Core-facing designation of the A.1.1 dependent structure specialization and retrieval of the DDD plain term
-BlockedUse: no U.BoundedContext holon, no identity for a subsystem, team, claim scope, model episteme, description, or view, no relation occurrence, and no positive crossing-structure membership
-RowEdition: 2026-07-25
+BlockedUse: no generic context holon, no identity for a subsystem, team, claim scope, model episteme, description, or view, no relation occurrence, and no positive crossing-structure membership
+RowEditionId: 2026-07-25
 CurrentnessCondition: reopen when the A.1.1/A.22 membership or continuity rule, one of the three direct relation kinds, FPFCoreReferenceScheme, the NameCard, an exact applied constraint proposition or its use in selection, or the named bounded-model-use frame changes
 
 SenseCell.BoundedModelUseStructure.FPFCore.2026-07-25:
@@ -580,7 +580,7 @@ LocalSenseBasisRelation.BoundedModelUseStructure.FPFCore.2026-07-25:
 
 LocalSenseBasisRelationDescription.BoundedModelUseStructure.FPFCore.2026-07-25:
   entityOfConcernRef: LocalSenseBasisRelation.BoundedModelUseStructure.FPFCore.2026-07-25
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
   viewpointRef: FPFCoreReaderViewpoint
   claimGraph:
   supportedSenseClaim: BoundedModelUseStructure names the exact A.1.1/A.22 dependent structure specialization, with bounded context retained only as its Plain retrieval name
@@ -598,11 +598,12 @@ These rows publish the three already governed A.1.1 relation-kind names used by 
 
 ```text
 UTSRowId: UTS.ModelApplicabilityRelation.FPFCore.2026-07-25
+ReferenceScheme: FPFCoreReferenceScheme
 UnificationThreadId: R1.2-BoundedModelUse-Naming
 Block: Architecture and model use
 GovernedValueRef: ModelApplicabilityRelation
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.1.1
+SubjectPatternLocator: A.1.1
 UnifiedTechName: ModelApplicabilityRelation
 UnifiedPlainName: this model applies to this holon within this claim scope
 NameCardRef: NC-MODEL-APPLICABILITY-RELATION
@@ -611,7 +612,7 @@ BridgeRefs: none; this row makes no semantic-correspondence or substitution clai
 RowRationale: the governed value is the A.1.1 relation-kind token; its admitted instances are exactly the obtaining U.Relation occurrences that satisfy the A.1.1 applicability predicate and identity rule, and the selected names expose that relation while keeping A.2.6 scope membership, the derived interval, assertions, and the selected structure separate
 AdmissibleUse: Core-facing designation of the A.1.1 relation kind, including A.2.6 claim-scope coordination and the E.24.UK bounded-model-use membership test
 BlockedUse: no applicability occurrence from a name, model mention, shared label, scope row, assertion, interval, publication, or structure membership
-RowEdition: 2026-07-25
+RowEditionId: 2026-07-25
 CurrentnessCondition: reopen when A.1.1 changes the participant kinds, predicate, scope alignment, model-scheme interpretation, temporal identity, NameCard, or named Core use
 
 SenseCell.ModelApplicabilityRelation.FPFCore.2026-07-25:
@@ -626,11 +627,11 @@ SenseCell.ModelApplicabilityRelation.FPFCore.2026-07-25:
 LocalSenseBasisRelation.ModelApplicabilityRelation.FPFCore.2026-07-25:
   localSenseCellRef: SenseCell(FPFCoreReferenceScheme, ModelApplicabilityRelation-core)
   basisEpistemeRef: A.1.1
-  basisPublicationUnitRef: A.1.1:4.2 ModelApplicabilityRelation
 
 LocalSenseBasisRelationDescription.ModelApplicabilityRelation.FPFCore.2026-07-25:
   entityOfConcernRef: LocalSenseBasisRelation.ModelApplicabilityRelation.FPFCore.2026-07-25
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: A.1.1:4.2 ModelApplicabilityRelation
   viewpointRef: FPFCoreReaderViewpoint
   claimGraph:
   supportedSenseClaim: ModelApplicabilityRelation names the exact A.1.1 relation kind rather than a scope-membership predicate, claim, record, or interval
@@ -642,11 +643,12 @@ LocalSenseBasisRelationDescription.ModelApplicabilityRelation.FPFCore.2026-07-25
 
 ```text
 UTSRowId: UTS.ModelUseRelation.FPFCore.2026-07-25
+ReferenceScheme: FPFCoreReferenceScheme
 UnificationThreadId: R1.2-BoundedModelUse-Naming
 Block: Architecture and model use
 GovernedValueRef: ModelUseRelation
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.1.1
+SubjectPatternLocator: A.1.1
 UnifiedTechName: ModelUseRelation
 UnifiedPlainName: this assignment's holder uses this model during this work concerning this holon
 NameCardRef: NC-MODEL-USE-RELATION
@@ -655,7 +657,7 @@ BridgeRefs: none; this row makes no semantic-correspondence or substitution clai
 RowRationale: the governed value is the A.1.1 relation-kind token; its admitted instances are exactly the obtaining U.Relation occurrences that satisfy the A.1.1 actual-use predicate and identity rule, and the selected names expose that relation while keeping applicability, role assignment, performed Work, method application, claims, and records separate
 AdmissibleUse: Core-facing designation of the A.1.1 relation kind and its use in the E.24.UK bounded-model-use membership test
 BlockedUse: no use occurrence from availability, access, mention, assignment alone, Work alone, method application, assertion, publication, or structure membership
-RowEdition: 2026-07-25
+RowEditionId: 2026-07-25
 CurrentnessCondition: reopen when A.1.1 changes the participant kinds, F.6 prerequisite, actual-use predicate, actor derivation, maximal-continuous-use identity, NameCard, or named Core use
 
 SenseCell.ModelUseRelation.FPFCore.2026-07-25:
@@ -670,11 +672,11 @@ SenseCell.ModelUseRelation.FPFCore.2026-07-25:
 LocalSenseBasisRelation.ModelUseRelation.FPFCore.2026-07-25:
   localSenseCellRef: SenseCell(FPFCoreReferenceScheme, ModelUseRelation-core)
   basisEpistemeRef: A.1.1
-  basisPublicationUnitRef: A.1.1:4.2 ModelUseRelation
 
 LocalSenseBasisRelationDescription.ModelUseRelation.FPFCore.2026-07-25:
   entityOfConcernRef: LocalSenseBasisRelation.ModelUseRelation.FPFCore.2026-07-25
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: A.1.1:4.2 ModelUseRelation
   viewpointRef: FPFCoreReaderViewpoint
   claimGraph:
   supportedSenseClaim: ModelUseRelation names the exact A.1.1 actual-use relation kind rather than applicability, availability, Work, assignment, method application, claim, or record
@@ -686,11 +688,12 @@ LocalSenseBasisRelationDescription.ModelUseRelation.FPFCore.2026-07-25:
 
 ```text
 UTSRowId: UTS.ModelExpressionCoherenceRelation.FPFCore.2026-07-25
+ReferenceScheme: FPFCoreReferenceScheme
 UnificationThreadId: R1.2-BoundedModelUse-Naming
 Block: Architecture and model use
 GovernedValueRef: ModelExpressionCoherenceRelation
 GovernedValueKindRef: U.Kind
-DirectGoverningPatternRef: A.1.1
+SubjectPatternLocator: A.1.1
 UnifiedTechName: ModelExpressionCoherenceRelation
 UnifiedPlainName: this model content and this expression content satisfy this declared coherence criterion under this comparison scheme
 NameCardRef: NC-MODEL-EXPRESSION-COHERENCE-RELATION
@@ -699,7 +702,7 @@ BridgeRefs: none; this designation makes no semantic-correspondence claim, and a
 RowRationale: the governed value is the A.1.1 relation-kind token; its admitted instances are exactly the obtaining U.Relation occurrences that satisfy the A.1.1 coherence predicate and participant-determined identity rule, and the selected names expose fixed-content semantic coherence while keeping the local predicate value, maintenance, transformation, evaluation, result, evidence, and assertion separate
 AdmissibleUse: Core-facing designation of the A.1.1 relation kind and its use in the E.24.UK bounded-model-use membership test
 BlockedUse: no coherence occurrence from a label, predicate label, equal spelling, maintenance or evaluation Work, changed carrier, result episteme, evidence, assertion, publication, or structure membership
-RowEdition: 2026-07-25
+RowEditionId: 2026-07-25
 CurrentnessCondition: reopen when A.1.1 changes the participant kinds, five-part predicate-value rule, interpretation branch, permitted loss, participant-determined identity, NameCard, or named Core use
 
 SenseCell.ModelExpressionCoherenceRelation.FPFCore.2026-07-25:
@@ -714,11 +717,11 @@ SenseCell.ModelExpressionCoherenceRelation.FPFCore.2026-07-25:
 LocalSenseBasisRelation.ModelExpressionCoherenceRelation.FPFCore.2026-07-25:
   localSenseCellRef: SenseCell(FPFCoreReferenceScheme, ModelExpressionCoherenceRelation-core)
   basisEpistemeRef: A.1.1
-  basisPublicationUnitRef: A.1.1:4.2 ModelExpressionCoherenceRelation
 
 LocalSenseBasisRelationDescription.ModelExpressionCoherenceRelation.FPFCore.2026-07-25:
   entityOfConcernRef: LocalSenseBasisRelation.ModelExpressionCoherenceRelation.FPFCore.2026-07-25
-  entityOfConcernKindRef: LocalSenseBasisRelation@Context
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: A.1.1:4.2 ModelExpressionCoherenceRelation
   viewpointRef: FPFCoreReaderViewpoint
   claimGraph:
   supportedSenseClaim: ModelExpressionCoherenceRelation names the exact A.1.1 relation kind rather than its predicate value, maintenance, transformation, evaluation, result, evidence, or assertion
@@ -728,84 +731,303 @@ LocalSenseBasisRelationDescription.ModelExpressionCoherenceRelation.FPFCore.2026
   editionId: 2026-07-25
 ```
 
-No public F.17 row is returned for `ModelExpressionCoherencePredicate`: that label remains local to A.1.1 and names the five-part criterion ValueKind rather than any of the three relation kinds.
+Do not create a public F.17 row for `ModelExpressionCoherencePredicate`: that label remains local to A.1.1 and names the five-part criterion ValueKind rather than any of the three relation kinds.
+
+#### F.17:12.4f - Viewpoint, view, and conformance-relation public rows
+
+These three rows satisfy different receiver needs and therefore cannot be merged. E.24.UK has already admitted `U.Viewpoint` and `U.View` as same-individual dependent kinds under `U.Episteme`; E.17.0 defines both positive membership predicates and the direct `EpistemeViewpointConformanceRelation`. F.14 has been applied again: the existing Tech designations are retained, no synonym family is opened, and the public rows are justified by stable Core citation and exact typed-reference use. The rows admit no kind, make no relation obtain, and assert no E.24.PUB publication occurrence, form, carrier, or authority.
+
+The two existing dependent-kind designations use these progressive-minimum F.18 naming-settlement epistemes. They remain distinct from the E.24.UK admission results, the governed kinds, their members, every reference or designator, and the F.17 rows that cite them.
+
+```text
+NameCard:
+  NameCardId: NameCard.U.Viewpoint.FPFPublic.2026-08-02
+  GovernedValueRef: U.Viewpoint
+  GovernedValueKindRef: U.Kind
+  SubjectPatternLocator: E.17.0
+  ReferenceScheme: FPFCoreReferenceScheme
+  ClaimContent: NameCard.U.Viewpoint.FPFPublic.2026-08-02.ClaimGraph — complete naming-settlement graph constituted by the claims designated below
+  LocalSenseCellRef: SenseCell.U.Viewpoint.FPFCore.2026-08-02
+  LocalSenseBasisRelationRef: LocalSenseBasisRelation.U.Viewpoint.FPFCore.2026-08-02
+  TechLabel: U.Viewpoint
+  PlainLabel: viewpoint
+  CandidateSet: U.Viewpoint; ViewpointEpisteme; ViewpointConvention; ViewpointRecord; ViewpointStructure
+  CandidateCoverage: dependent-kind, episteme, convention, record, and structure readings tested
+  RejectedCandidates: ViewpointEpisteme hides the stable public kind name; ViewpointConvention can denote fixed claim content rather than P; ViewpointRecord adds a wrapper; ViewpointStructure names S rather than P; none is an alias
+  SelectionRationale: retain the admitted Core Tech name and ordinary Plain retrieval word while the exact local-sense claim keeps P, S, references, and designators distinct
+  DeclaredUse: Core-facing designation of the E.17.0 same-individual dependent kind and typed reference resolution to exact P
+  NonAdmissibleUse: no P, S, kind membership, selection, Work, conformance, view membership, or publication follows from the card or labels
+  BridgeRefs: none; this settlement makes no cross-local correspondence claim
+  PublicRowStatus: current
+  UnifiedTermRowRef: UTS.U.Viewpoint.FPFCore.2026-08-02
+  LineageEntries: ViewpointId remains only a designator of exact P; viewpointRef remains U.ViewpointRef and resolution grants no membership
+  RefreshCondition: reopen when E.17.0 changes P's same-individual membership predicate, E.24.UK admission, exact reference typing, FPFCoreReferenceScheme, reader meaning, or public use
+```
+
+```text
+NameCard:
+  NameCardId: NameCard.U.View.FPFPublic.2026-08-02
+  GovernedValueRef: U.View
+  GovernedValueKindRef: U.Kind
+  SubjectPatternLocator: E.17.0
+  ReferenceScheme: FPFCoreReferenceScheme
+  ClaimContent: NameCard.U.View.FPFPublic.2026-08-02.ClaimGraph — complete naming-settlement graph constituted by the claims designated below
+  LocalSenseCellRef: SenseCell.U.View.FPFCore.2026-08-02
+  LocalSenseBasisRelationRef: LocalSenseBasisRelation.U.View.FPFCore.2026-08-02
+  TechLabel: U.View
+  PlainLabel: episteme conforming to an exact viewpoint
+  CandidateSet: U.View; ViewEpisteme; ConformingEpisteme; ViewArtifact; PublishedView
+  CandidateCoverage: dependent-kind, episteme, conformance, artifact, and publication readings tested
+  RejectedCandidates: ViewEpisteme can look like a second individual; ConformingEpisteme drops the exact viewpoint relation; ViewArtifact collapses episteme with form or carrier; PublishedView makes availability look constitutive; none is an alias
+  SelectionRationale: retain the admitted Core Tech name while the Plain label exposes that the same E gains membership only through exact E/P conformance
+  DeclaredUse: Core-facing designation of the E.17.0 same-individual dependent kind and typed reference to an already conforming episteme
+  NonAdmissibleUse: no membership from direct authoring, construction, query execution, transformation, selection, rendering, bundle, form, carrier, or publication
+  BridgeRefs: none; this settlement makes no cross-local correspondence claim
+  PublicRowStatus: current
+  UnifiedTermRowRef: UTS.U.View.FPFCore.2026-08-02
+  LineageEntries: viewRef resolves exact E only after membership is independently current; view, diagram, face, form, and carrier readings remain separated
+  RefreshCondition: reopen when E.17.0 changes E/P conformance, same-individual membership, E.24.UK admission, FPFCoreReferenceScheme, reader meaning, or public use
+```
+
+##### F.17:12.4f.1 - `U.Viewpoint`
+
+```text
+UTSRowId: UTS.U.Viewpoint.FPFCore.2026-08-02
+ReferenceScheme: FPFCoreReferenceScheme
+UnificationThreadId: R1.2-MultiView-Naming
+Block: Multi-view describing
+GovernedValueRef: U.Viewpoint
+GovernedValueKindRef: U.Kind
+SubjectPatternLocator: E.17.0
+UnifiedTechName: U.Viewpoint
+UnifiedPlainName: viewpoint
+NameCardRef: NameCard.U.Viewpoint.FPFPublic.2026-08-02
+SenseCellRefs: SenseCell.U.Viewpoint.FPFCore.2026-08-02
+BridgeRefs: none; this row makes no semantic-correspondence or substitution claim
+RowRationale: the governed value is the E.17.0/E.24.UK same-individual dependent-kind token, not P, S, a reference, or a designator; an admitted member is the same exact C.2.1 episteme P whose EntityOfConcern is independently selected viewpoint-convention Structure S_viewpoint and whose fixed ClaimGraph under its effective ReferenceScheme satisfies E.17.0's complete positive membership predicate; admission result E24UK-AR-UVIEWPOINT-RG-01 remains a separate decision projection
+AdmissibleUse: Core-facing designation of the dependent kind and exact typing of a reference whose resolution yields an already admitted viewpoint episteme P
+BlockedUse: no viewpoint membership, episteme identity, Structure selection, method, Work, conformance, View membership, authority, or publication from the row, name, ViewpointId, viewpointRef, NameCard, bundle position, selected S, form, or carrier
+RowEditionId: 2026-08-02
+CurrentnessCondition: reopen when E.17.0 changes P's C.2.1 discriminators, exact S EntityOfConcern, fixed target/concern/admitted-kind/conformance claims, effective ReferenceScheme, same-individual predicate, E.24.UK admission, NameCard, or typed-reference use
+Notes: retain the exact field viewpointRef : U.ViewpointRef; under the effective scheme its resolution yields P, while ViewpointId only designates P and neither operation grants membership
+
+SenseCell.U.Viewpoint.FPFCore.2026-08-02:
+  ReferenceScheme: FPFCoreReferenceScheme
+  LocalSenseId: U.Viewpoint-core
+  LocalExpression: U.Viewpoint
+  LocalSenseClaim: the same-individual dependent kind of exact C.2.1 epistemes P whose exact EntityOfConcern is independently selected viewpoint-convention Structure S_viewpoint and whose fixed claims identify S, state the exact target-kind criterion, stakeholder or audience referents when current, concerns, admitted episteme kinds, coverage, semantic-form, completeness, consistency, omission and conformance rules without circular View premises, and the describing-use frame and fixed applicability qualifiers
+  senseFamily: MultiViewRecognition
+  NameCardRef: NameCard.U.Viewpoint.FPFPublic.2026-08-02
+  LocalSenseBasisRelationRefs: LocalSenseBasisRelation.U.Viewpoint.FPFCore.2026-08-02
+
+LocalSenseBasisRelation.U.Viewpoint.FPFCore.2026-08-02:
+  localSenseCellRef: SenseCell(FPFCoreReferenceScheme, U.Viewpoint-core)
+  basisEpistemeRef: E.17.0
+
+LocalSenseBasisRelationDescription.U.Viewpoint.FPFCore.2026-08-02:
+  entityOfConcernRef: LocalSenseBasisRelation.U.Viewpoint.FPFCore.2026-08-02
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: E.17.0:4.2,4.6.1-4.6.4
+  viewpointRef: FPFCoreReaderViewpoint
+  claimGraph:
+  supportedSenseClaim: U.Viewpoint names the same P identified under C.2.1 only when P's exact S EntityOfConcern and fixed convention claims satisfy E.17.0
+  admittedUseClaim: Core-facing designation, exact U.ViewpointRef typing, and retrieval of the direct membership rule
+  nonAdmittedUseClaim: the basis relation, cell, NameCard, row, identifier, reference, Structure, bundle, or publication grants no membership
+  referenceScheme: FPFCoreReferenceScheme
+  editionId: 2026-08-02
+```
+
+##### F.17:12.4f.2 - `U.View`
+
+```text
+UTSRowId: UTS.U.View.FPFCore.2026-08-02
+ReferenceScheme: FPFCoreReferenceScheme
+UnificationThreadId: R1.2-MultiView-Naming
+Block: Multi-view describing
+GovernedValueRef: U.View
+GovernedValueKindRef: U.Kind
+SubjectPatternLocator: E.17.0
+UnifiedTechName: U.View
+UnifiedPlainName: episteme conforming to an exact viewpoint
+NameCardRef: NameCard.U.View.FPFPublic.2026-08-02
+SenseCellRefs: SenseCell.U.View.FPFCore.2026-08-02
+BridgeRefs: none; this row makes no semantic-correspondence or substitution claim
+RowRationale: the governed value is the E.17.0/E.24.UK same-individual dependent-kind token, not candidate episteme E, viewpoint P, conformance occurrence, reference, form, or carrier; an admitted member is the same exact C.2.1 episteme E only when EpistemeViewpointConformanceRelation(E,P) obtains for at least one exact admitted P; one unchanged E may conform to several viewpoint editions through distinct pair-determined occurrences while remaining one episteme; admission result E24UK-AR-UVIEW-RG-01 remains a separate decision projection
+AdmissibleUse: Core-facing designation of the dependent kind and exact typing of U.ViewRef values that resolve already conforming epistemes
+BlockedUse: no View membership, episteme identity, conformance occurrence, adequacy, authority, or publication from the row, name, viewRef, NameCard, direct authoring, A.6.3 construction, query execution, transformation, evaluation, selection, bundling, rendering, audience, form, carrier, or publication
+RowEditionId: 2026-08-02
+CurrentnessCondition: reopen when E.17.0 changes candidate-episteme identity, the exact conformance predicate or pair-determined occurrence rule, same-individual membership, E.24.UK admission, NameCard, FPFCoreReferenceScheme, or typed-reference use
+Notes: construction history and publication availability remain separately governed; neither creates membership, and no second View individual wraps E
+
+SenseCell.U.View.FPFCore.2026-08-02:
+  ReferenceScheme: FPFCoreReferenceScheme
+  LocalSenseId: U.View-core
+  LocalExpression: U.View
+  LocalSenseClaim: the same-individual dependent kind of exact C.2.1 epistemes E for which at least one direct EpistemeViewpointConformanceRelation(E,P) occurrence obtains to an exact admitted viewpoint episteme P; E remains the same individual and construction, selection, use, representation, and publication remain non-constitutive
+  senseFamily: MultiViewRecognition
+  NameCardRef: NameCard.U.View.FPFPublic.2026-08-02
+  LocalSenseBasisRelationRefs: LocalSenseBasisRelation.U.View.FPFCore.2026-08-02
+
+LocalSenseBasisRelation.U.View.FPFCore.2026-08-02:
+  localSenseCellRef: SenseCell(FPFCoreReferenceScheme, U.View-core)
+  basisEpistemeRef: E.17.0
+
+LocalSenseBasisRelationDescription.U.View.FPFCore.2026-08-02:
+  entityOfConcernRef: LocalSenseBasisRelation.U.View.FPFCore.2026-08-02
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: E.17.0:4.4-4.5
+  viewpointRef: FPFCoreReaderViewpoint
+  claimGraph:
+  supportedSenseClaim: U.View names the same E only when exact E/P conformance obtains; it never names a generated or published wrapper
+  admittedUseClaim: Core-facing designation, exact U.ViewRef typing, and retrieval of the direct membership rule
+  nonAdmittedUseClaim: the basis relation, cell, NameCard, row, reference, construction, evaluation, form, carrier, or publication grants no membership
+  referenceScheme: FPFCoreReferenceScheme
+  editionId: 2026-08-02
+```
+
+##### F.17:12.4f.3 - `EpistemeViewpointConformanceRelation`
+
+```text
+UTSRowId: UTS.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02
+ReferenceScheme: FPFCoreReferenceScheme
+UnificationThreadId: R1.2-MultiView-Naming
+Block: Multi-view describing
+GovernedValueRef: EpistemeViewpointConformanceRelation
+GovernedValueKindRef: U.Kind
+SubjectPatternLocator: E.17.0
+UnifiedTechName: EpistemeViewpointConformanceRelation
+UnifiedPlainName: the episteme conforms to this exact viewpoint
+NameCardRef: NameCard.EpistemeViewpointConformanceRelation.FPFPublic
+SenseCellRefs: SenseCell.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02
+BridgeRefs: none; this row makes no semantic-correspondence or substitution claim
+RowRationale: the governed value is E.17.0's direct relation-kind token, not its RelationSignature, either participant, a reference, occurrence, assertion, evaluation result, NameCard, or row; each positive occurrence has exactly candidate episteme E and admitted viewpoint episteme P as participants and is pair-determined by <E,P>; it obtains only when E's C.2.1 EntityOfConcern satisfies P's exact target-kind criterion, E has an independently admitted episteme kind allowed by P without circular U.View use, and E's fixed content under its effective scheme satisfies P's fixed concern-coverage, semantic-form, completeness, consistency, omission, and loss rules
+AdmissibleUse: Core-facing designation of the direct relation kind, exact RelationSignature lookup, and readable E/P conformance claims under E.17.0
+BlockedUse: no conformance occurrence, U.View membership, adequacy, truth, authority, or publication from the row, name, NameCard, signature, SlotSpecs, viewpointRef, ViewpointId, participant fillers, assertion, evidence, evaluation Work, result, construction, query, rendering, form, carrier, or publication
+RowEditionId: 2026-08-02
+CurrentnessCondition: reopen when E.17.0 changes either participant kind, the target/admitted-kind/content predicate, pair-determined positive occurrence identity, RelationSignature, complete NameCard, FPFCoreReferenceScheme, or named Core use
+Notes: EpistemeViewpointConformanceRelationSignature is a separate C.2.1 RelationSignature episteme with CandidateEpistemeSlot : U.EpistemeRef and ViewpointEpistemeSlot : U.ViewpointRef; retain the exact consumer field viewpointRef : U.ViewpointRef, whose resolution yields P but proves no conformance
+
+SenseCell.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02:
+  ReferenceScheme: FPFCoreReferenceScheme
+  LocalSenseId: EpistemeViewpointConformanceRelation-core
+  LocalExpression: EpistemeViewpointConformanceRelation
+  LocalSenseClaim: the direct two-participant relation kind whose exact positive occurrence is pair-determined by one independently identified candidate episteme E and one independently admitted viewpoint episteme P and whose E.17.0 predicate tests E's exact EntityOfConcern kind, independently admitted episteme kind, fixed claim content, effective scheme, and satisfaction of P's fixed coverage, semantic-form, completeness, consistency, omission, and loss rules
+  senseFamily: MultiViewConformance
+  NameCardRef: NameCard.EpistemeViewpointConformanceRelation.FPFPublic
+  LocalSenseBasisRelationRefs: LocalSenseBasisRelation.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02
+
+LocalSenseBasisRelation.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02:
+  localSenseCellRef: SenseCell(FPFCoreReferenceScheme, EpistemeViewpointConformanceRelation-core)
+  basisEpistemeRef: E.17.0
+
+LocalSenseBasisRelationDescription.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02:
+  entityOfConcernRef: LocalSenseBasisRelation.EpistemeViewpointConformanceRelation.FPFCore.2026-08-02
+  entityOfConcernKindRef: LocalSenseBasisRelation
+  basisPublicationUnitRef: E.17.0:4.4-4.4.1
+  viewpointRef: FPFCoreReaderViewpoint
+  claimGraph:
+  supportedSenseClaim: EpistemeViewpointConformanceRelation names the exact E.17.0 direct kind rather than its signature, participant references, assertion, evaluation, result, or dependent View membership
+  admittedUseClaim: Core-facing designation, exact signature lookup, and readable reference to the direct relation kind
+  nonAdmittedUseClaim: the basis relation, cell, NameCard, row, signature, references, evaluation, construction, or publication makes no occurrence obtain and grants no U.View membership
+  referenceScheme: FPFCoreReferenceScheme
+  editionId: 2026-08-02
+```
+
+The three row epistemes, their `UTSRowId` designators, external references, selected designations, governed values, NameCards, cells, basis relations, admission-result refs, conformance RelationSignature, and every obtaining relation occurrence remain independently recoverable. If availability for an audience later becomes current, exact E.24.PUB expression, bearing, and publication occurrences must be added outside these rows; file inclusion or this displayed block is not publication.
+
+#### F.17:12.4g - Publish a row only when its naming inputs are settled
+
+Do not publish a `UnifiedTermRow` as a placeholder. Publish it only when the governed value, its lexical classification, the reference scheme's selected name and permitted scope, and the intended public use are settled enough to pass F.18 and the ordinary F.17 row gate. If any of these inputs is unresolved, keep it as naming work rather than representing it as a public row.
+
+A NameCard, scheme-sense cell, basis relation, row reference, or publication occurrence is not a substitute for those decisions. Keep predicate definition, actual use, basis analysis, naming settlement, row publication, and availability separate.
 
 ### F.17:12.5 - Bias-Annotation
 
 
 
-F.17 blocks table-bias: a row does not make the named object real, global, reusable, equivalent, or authoritative. It also blocks label-bias: the public name is a designation for a governed value, relation, slot, or local concept, not a substitute for the direct pattern, scheme-based local-sense coordinate, Bridge, admissible-use statement, or currentness condition.
+F.17 blocks table-bias: a row does not make the named object real, global, reusable, equivalent, or authoritative. It also blocks label-bias: the public name is a designation for a governed value, relation, slot, or local concept, not a substitute for the rules that define or constrain it, the scheme-based local-sense coordinate, Bridge, admissible-use statement, or currentness condition.
 
 ### F.17:13.5 - Conformance Checklist
 
 | Check | Passing condition |
 | --- | --- |
-| `CC-F17-1` | The row names the governed value, its exact kind, and the direct governing pattern before naming choices are published. |
-| `CC-F17-2` | Every local sense resolves to one exact by-value reference scheme, one local expression, and one local-sense claim. When the endpoint `<ReferenceScheme, LocalSenseClaim>` projections differ, the row cites an obtaining F.9 Bridge first, then an affirmative C.2.1 claim for the exact row use, direction, rule, and tolerance, plus its current A.10 or B.3 reliance basis. Same projection plus another expression stays a designation question; scheme difference alone proves no Bridge; no current correspondence use creates no Bridge or use claim. A negative bounded-use claim rejects the exact named row use; a non-passing reliance result stops or narrows the current use according to its exact A.10 or B.3 disposition; neither changes whether the Bridge obtains or how it is identified. |
-| `CC-F17-3` | Tech and Plain names are selected under naming patterns after the governed value is stable. |
-| `CC-F17-4` | Admissible use, blocked use, row edition, and currentness condition are present. |
-| `CC-F17-5` | Role, status, evidence, source, publication, description, method, work, relation, slot, interface, and characteristic claims remain under direct patterns. |
-| `CC-F17-6` | A scheme-based SenseCell uses `NameCardRef` only for its naming settlement and separately cites every relied-on local-sense basis through `LocalSenseBasisRelation@Context` with exact value-kind and ref-kind pairs; the suffix adds no context participant. |
+| `CC-F17-1` | One exact governed value, its kind, the pattern that defines or constrains it, and the proposed row use were recovered before the row. |
+| `CC-F17-2` | F.14 was applied at every current card, cell, and row gate, and the lightest sufficient naming disposition was tried first. |
+| `CC-F17-3` | Row episteme, NameCard, designation expressions, governed value, reference, exact SenseCell, basis relation, and any F.9 Bridge remain distinct. |
+| `CC-F17-4` | Every cell resolves to an effective by-value ReferenceScheme, exact expression, and local-sense claim; no generic context field or selected structure substitutes for them. |
+| `CC-F17-5` | Every actual `LocalSenseBasisRelation` has exactly the cell and basis episteme as participants; descriptions, source units, publication occurrences, forms, and carriers stay separate. |
+| `CC-F17-6` | Any F.9 Bridge actually obtains between exact cells; the separate use claim and A.10/B.3 reliance are visible only when that row use is current. |
+| `CC-F17-7` | Admissible use, blocked use, row edition id, currentness condition, and any exact C.2.1 edition relation are recoverable without treating designators as identity. |
+| `CC-F17-8` | If availability is claimed, exact E.24.PUB expression, bearing, and publication occurrences are recoverable independently from the row and from rendering or upload Work. |
+| `CC-F17-9` | Multi-view naming uses three separate rows: `U.Viewpoint` names same-individual P only under E.17.0's fixed-content/selected-S predicate; `U.View` names same-individual E only after exact E/P conformance obtains; and `EpistemeViewpointConformanceRelation` names the two-participant pair-determined direct kind. References, designators, NameCards, RelationSignature, occurrences, construction, and publication grant none of those results. |
 
 ### F.17:13 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Why it fails | Repair |
 | --- | --- | --- |
-| Global glossary row | Removes the exact interpretation basis and local-sense claim. | Add the by-value reference scheme, local expression, and local-sense claim to each scheme-based SenseCell. |
-| One row for role and status | Fuses work-capable role with a state-family value. | Split into role row and status row; cite `F.10` or `A.19.SPR` for status. |
-| Evidence role bucket | Turns evidence use, source use, assurance, and work into one pseudo-kind. | Recover each claim and cite `A.10`, `B.3`, `E.17`, `E.10.D2`, or role-work patterns. |
-| Block as ontology | Treats didactic placement as subtype or part-of claim. | Keep block names as memory aids only. |
-| Borrowed locality label as Tech name | Imports one tradition's commitments into the unified row. | Recover the governed value and scheme-based local sense; use F.18 and an actual Bridge rationale before selecting the unified name. |
-| Row without direct pattern | Lets F.17 govern the object instead of the term-row publication. | Add direct pattern or mark the row not ready for public reuse. |
+| Global glossary row | Removes the exact governed value, scheme, and local-sense claim. | Recover the exact value and one scheme-based cell; keep local wording local when that suffices. |
+| One row for role and status | Fuses a work-facing role with a state-family value. | Split the rows and use the pattern that defines or constrains each value. |
+| Evidence-role bucket | Turns evidence use, source use, assurance, and Work into one pseudo-kind. | Recover each claim under A.10, B.3, E.10.D2, or the pattern that defines or tests the source or Work claim. |
+| Automatic card-cell-row chain | Treats the presence of one naming object as need for the next. | Apply F.14 separately at each gate and stop at the lightest sufficient object. |
+| Merged viewpoint/view/conformance row | A dependent kind, another dependent kind, and their direct relation are treated as one naming result. | Keep separate `U.Viewpoint`, `U.View`, and `EpistemeViewpointConformanceRelation` rows and use E.17.0 for every membership or obtaining claim. |
+| Spelling or suffix identity | Lets a familiar label, stable id, or `...@Context` form create or merge values. | Resolve the value under the pattern that defines or constrains it and treat only tokens fixed there as lineage. |
+| Borrowed locality label as Tech name | Imports one tradition's commitments into the row and hides the effective interpretation basis. | Recover the governed value and scheme-based cell; select the designation under F.18 and cite an actual F.9 Bridge only when its separate predicate and use conditions hold. |
+| Basis by source title | Replaces the exact cell and actual basis relation with a file or citation. | Recover the cell and two-participant basis relation; keep source-unit and publication facts separate. |
+| Row as publication | Treats table presence, rendering, upload, form, or carrier as availability. | Use E.24.PUB for the selected row edition, audience, bounded use, form, and carrier. |
+| Block as ontology or completeness proof | Treats navigation as subtype structure or row count as value evidence. | Keep blocks optional and judge the exact row use through reader recovery and blocked-use avoidance. |
+| Row without its defining or constraining pattern | Lets F.17 govern the named object. | Point to the pattern that defines or constrains the value or stop the public-row path. |
 
 ### F.17:14 - Closure conditions
 
-A UTS row is ready for ordinary reuse only when:
+One row is ready for its declared citation use only when:
 
-- the governed value and its exact kind are explicit;
-- the direct pattern is named;
-- Tech and Plain names are selected under `F.5` and `F.18`;
-- every local sense resolves to one exact by-value reference scheme, local expression, and local-sense claim;
-- each relied-on local-sense basis is separate from its naming settlement and is cited through `LocalSenseBasisRelation@Context`; the retained suffix adds no context participant;
-- every row that claims use between different `<ReferenceScheme, LocalSenseClaim>` projections cites an obtaining F.9 Bridge for the exact endpoint cells, then separately cites an affirmative C.2.1 claim for the row's action, direction, rule, and tolerance with current A.10 or B.3 reliance; same-projection designation and no-current-correspondence-use cases add no Bridge or use claim, while scheme difference alone opens only the Bridge question;
-- the row names admissible use and blocked use;
-- currentness conditions are stated;
-- any role, status, evidence, source, publication, description, method, work, relation, slot, interface, or characteristic claim remains under its direct pattern.
+- the governed value, exact kind, the pattern that defines or constrains it, and the proposed use are explicit;
+- F.14 has rejected every lighter sufficient disposition before the current card, cell, and row;
+- the exact F.18 NameCard and selected Tech/Plain designations are current for this public-row gate;
+- every `SchemeSenseCell` resolves to one by-value ReferenceScheme, local expression, and local-sense claim;
+- every relied-on local-sense basis is an actual two-participant `LocalSenseBasisRelation` and every description/source/publication object remains separate;
+- any cross-local use cites an obtaining F.9 Bridge for the exact endpoints, then a separate affirmative use claim and current A.10 or B.3 reliance;
+- the row has one decision, admitted and blocked citation uses, edition designator, and reopen condition;
+- any historical continuation is an exact C.2.1 `EpistemeEditionRelation` rather than shared id or title;
+- any availability is an exact E.24.PUB publication package rather than row, form, carrier, rendering, or upload alone; and
+- every ontology, obtaining, equivalence, authority, role, status, evidence, Work, and other subject-use claim uses the pattern that defines, constrains, or tests it.
+
+No other row needs to be filled before this one can close. A sheet's row count or optional block plan says nothing about whether another naming decision is substantively needed.
 
 ### F.17:14.1 - Consequences
 
-**Benefits.** A UTS row gives readers a stable place to recover a term decision without treating a table as an ontology. It supports public reuse, examples, training material, interface labels, and comparison across different semantic-context projections while preserving exact local-sense claims and direct-pattern authority.
+**Benefits.** Readers gain a stable route from one designation pair to the naming decision, governed value, defining or constraining rules, local sense, and admitted use without treating the table as ontology or publication proof.
 
-**Costs.** A tempting public label may wait until the governed value, effective scheme, exact local-sense claim, any needed Bridge, separate bounded-use claim and reliance basis, naming settlement, and currentness condition are settled.
+**Costs.** A tempting row waits until the independently governed value, F.14 disposition, naming settlement, exact cell, and any actual Bridge are current. Publication availability adds its own E.24.PUB objects only when needed.
 
-**Failure avoided.** F.17 prevents global glossary drift, row-shaped ontology claims, block-as-subtype mistakes, label-based sameness, and evidence or role authority smuggled through a public term.
+**Failure avoided.** F.17 prevents global glossary drift, card-cell-row cascades, label-based sameness, row-shaped ontology, optional-layout completeness claims, and authority or publication smuggled through a table.
 
 ### F.17:14.2 - Rationale
 
-Terms travel farther than the reasoning that produced them. F.17 keeps that travel safe by carrying the minimum reopening hooks: governed object, direct pattern, local senses, obtaining Bridge when needed, separate bounded-use claim and reliance basis, names, admitted and blocked row use, and currentness. The row stays compact because F.9, C.2.1, A.10, B.3, and the direct subject patterns still own those objects.
+Terms travel farther than the reasoning that produced them. F.17 carries only the reopening hooks needed for that travel. The pattern that defines or constrains the governed value, together with F.18, F.9, C.2.1, A.10/B.3, and E.24.PUB, supplies the separate rules to which those hooks lead.
 
 ### F.17:16 - SoTA-Echoing
 
 | Current source and status | Adopted or adapted move | Effect in F.17 | Limitation and reopen condition |
 | --- | --- | --- | --- |
-| Current FPF naming and unification set, amended 2026-07-25: `F.18`, `F.9`, `F.15`, `F.10`, `E.10`, A.1.1, and the direct subject patterns | Start from a governed value and kind; carry the effective reference scheme by value; select names through a NameCard; for reuse between different `<ReferenceScheme, LocalSenseClaim>` projections cite an obtaining F.9 Bridge, then an affirmative C.2.1 claim for the exact row use and its A.10 or B.3 reliance basis; keep static and regression checks local; separate status and role claims. | Determines the Solution, mandatory NameCardRef, value-kind pair, scheme-based SenseCellRefs, relation-only BridgeRefs, admitted and blocked row use, stable row id, local regressions, and direct-pattern boundary. Adds the current `BoundedModelUseStructure` row without creating `U.BoundedContext` or a positive crossing-structure name. | This is the current governing basis, not external proof that a proposed row works for readers. Reopen the affected row when one of these patterns changes its kind settlement, reference scheme, naming decision, Bridge, bounded-use claim, reliance, status boundary, or regression rule. |
-| Zhu, Reinecke, and Mitra, ["Language Scent: Exploring Cross-Language Information Navigation"](https://arxiv.org/abs/2604.03604), arXiv:2604.03604, 2026 preprint | Treat recognizability of a label as scheme- and situation-sensitive navigation support rather than evidence of equivalence. Preserve in-situ cues while keeping their governed value and sense boundary recoverable. | Changes the local-sense, reader-use, and blocked-substitution checks for Plain names such as `mantra`; supports contextual labels and explicit F.9 Bridges rather than one global label. | The study is small and cross-language. It neither establishes FPF ontology nor proves one label works under every scheme or for every reader. Reopen when stronger reader evidence changes the observed cue value or loss. |
-| W3C, [*SKOS Simple Knowledge Organization System Reference*](https://www.w3.org/TR/skos-reference/), W3C Recommendation 2009, current stable reference accessed 2026-07-11 | Keep concepts, lexical labels, documentation notes, collections, and typed mapping relations distinct; do not infer transitivity or equivalence from a generic related or matching label. | Supplies a stable external reference for separating labels, notes, collections, and mappings. F.17 strengthens it with direct FPF value kinds, relation-only F.9 Bridges, separate action-specific C.2.1 claims, NameCards, admitted and blocked row use, and currentness. | SKOS is a stable web vocabulary model, not current best-known FPF authoring methodology and not a source of FPF kinds. Reopen this adaptation if W3C supersedes the Recommendation or a newer mapping practice changes the selected distinction. |
+| Current FPF naming and unification set: `F.14`, `F.18`, `F.9`, `C.2.1`, `E.24.PUB`, and the patterns that define or constrain governed values | Recover the value first; choose the lightest naming disposition; distinguish card, cell, basis relation, row episteme, edition relation, and publication package; use F.9 only for an actual relation. | Determines the one-decision row, exact object references, optional block plan, admitted/blocked use, and downstream publication boundary. | Internal architecture is not external proof that a label works for readers. Reopen only the affected row when one exact dependency changes. |
+| Zhu, Reinecke, and Mitra, ["Language Scent: Exploring Cross-Language Information Navigation"](https://arxiv.org/abs/2604.03604), arXiv:2604.03604, 2026 preprint | Treat recognizability as scheme- and situation-sensitive navigation support rather than equivalence evidence. Preserve in-situ cues while keeping the governed value and sense boundary recoverable. | Supports contextual Plain labels, reader-use checks, blocked substitution, and exact local-sense cells—for example the bounded `mantra` use—rather than one global label. | The study is small and cross-language; it establishes neither FPF ontology nor fitness for every reader. Reopen when stronger reader evidence changes the observed cue value or loss. |
+| W3C, [*SKOS Simple Knowledge Organization System Reference*](https://www.w3.org/TR/skos-reference/), W3C Recommendation 2009, current stable reference accessed 2026-07-11 | Keep concepts, lexical labels, documentation notes, collections, and typed mapping relations distinct; infer neither transitivity nor equivalence from a generic related label. | Supplies a stable external reference for label, note, collection, and mapping separation. F.17 strengthens it with exact FPF values, NameCards, cells, direct Bridges, admitted/blocked uses, and explicit publication objects. | SKOS is a vocabulary model, not FPF authoring methodology or a source of FPF kinds. Reopen if a superseding standard changes the selected distinction. |
 
-The current best problem-solving line for F.17 is the current FPF value, reference-scheme, naming, Bridge, status, and regression architecture. The 2026 language-scent study changes contextual cue handling subject to its evidence limits. SKOS remains a stable reference model for label and mapping separation; its age and stability do not make it the method that governs FPF term decisions.
+The current best problem-solving line is the direct FPF value, naming, local-sense, relation, episteme-edition, and publication architecture. The language-scent study refines contextual cue handling within its evidence limits; SKOS remains a stable reference for label and mapping separation.
 
-Currentness rule: when `F.5`, `F.8`, `F.9`, `F.10`, `F.15`, `F.18`, `A.1.1`, `A.2`, `A.2.1`, `A.2.7`, `A.6.5`, `A.10`, `B.3`, `E.17`, or `E.10.D2` changes the governed value, effective reference scheme, local-sense claim, Bridge, bounded-use claim, reliance basis, source-use boundary, status-family boundary, role boundary, or naming decision, recheck only the affected UTS rows and examples.
+Currentness rule: when `F.2`, `F.3`, `F.5`, `F.7`, `F.8`, `F.9`, `F.10`, `F.14`, `F.15`, `F.18`, `C.2.1`, `E.17.0`, `E.24.UK`, `E.24.PUB`, `A.1.1`, `A.2`, `A.2.1`, `A.2.7`, `A.6.5`, `A.10`, `B.3`, `E.10.D2`, or the pattern that defines or constrains the governed value changes the value, kind, membership or obtaining rule, designation, scheme, cell, basis relation, Bridge, bounded-use claim, reliance, status/role boundary, edition relation, reference typing, or publication boundary, recheck only the affected rows and worked examples.
 
 ### F.17:15 - Relations
 
-Builds on: `F.2` and `F.3` for local-sense discovery probes; `C.2.1` for the exact episteme and effective by-value reference scheme; and `F.5`, `F.7`, `F.8`, `F.9`, `F.15`, and `F.18` for naming, Bridge, and conformance decisions. F.17 does not inherit F.3's retired `U.BoundedContext` reading.
+Builds on: `F.2` and `F.3` for local-sense discovery probes; `C.2.1` for row and NameCard epistemes plus exact `EpistemeEditionRelation`; `F.14` for the anti-explosion gate; `F.8` and `F.18` for naming disposition and settlement; `F.9` for actual cell-to-cell Bridges; `F.5` for designation form; and `F.7`/`F.15` for neighboring unification and conformance decisions.
 
-Coordinates with: `A.2`, `A.2.1`, `A.2.7`, `A.6.5`, `A.6.P`, `A.10`, `A.15.1`, `A.19.SPR`, `B.3`, `C.2.P`, `E.10`, `E.10.D2`, `E.17`, `F.4`, `F.6`, `F.10`, `F.14`, and `G.11`. Row-local review after a changed value, name, sense, Bridge, or edition remains with the direct pattern, F.18, F.9, F.15, and these F.17 regression rules. Use G.11 only when an actual refresh plan, edition orchestration, telemetry, freshness, or decay claim is current.
+Coordinates with: `A.2`, `A.2.1`, `A.2.7`, `A.6.5`, `A.6.P`, `A.10`, `A.15.1`, `A.19.SPR`, `B.3`, `C.2.P`, `E.10`, `E.10.D2`, `E.17.0`, `E.24.UK`, `E.24.PUB`, `F.4`, `F.6`, and `F.10`, plus every row's `SubjectPatternLocator`. Row-local review after a changed value, membership or obtaining rule, designation, cell, Bridge, reference typing, edition, or availability rechecks the exact defining predicate and any neighboring subject assertion. Use G.11 only when an actual refresh plan, edition orchestration, telemetry, freshness, or decay claim is current. F.17 does not inherit a generic context-holon identity reading from earlier terminology practice.
 
-Constrains: any public, Core-facing, durable, or cross-context term sheet row that cites FPF vocabulary, local concepts, relation names, slot names, role names, status names, or bridgeable sense clusters.
+Constrains: every public, Core-facing, durable, or cross-local term row that cites FPF values, local senses, relation names, slot names, role names, status names, or Bridge occurrences.
 
 ### F.17:17 - Didactic distillation
 
-A Unified Term Sheet is not the ontology and not the object. It lets people reuse a naming decision without guessing. Each row says what is named, which pattern governs it, which local senses were used, whether an exact Bridge obtains between different semantic-context projections, which separate claim supports that row use, which names were selected, and what the row may and may not be cited for. The row, card, and reliance record neither authorize the use nor prove that it happened.
+A row is a signpost, not the place it points to. Recover the value first, use the lightest sufficient name, and create a row only when a reader-facing durable route is needed. Keep card, cell, basis, Bridge, row, edition, publication, form, and carrier separate. The row may help a reader find the governed value; it cannot make that value, relation, use, authority, Work, or publication true.
 
 ### F.17:End

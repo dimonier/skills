@@ -31,246 +31,295 @@ dependencies:
 
 ### F.10:1 - Problem frame
 
-Use this pattern when a project uses status words such as "observed", "measured", "validated", "approved", "deprecated", "satisfied", "violated", "waived", "pending", "current", or "ready" and needs to know what kind of status is being claimed, what it qualifies, and whether it can be compared or reused in another bounded context.
+**Use this when.** Use F.10 when a receiving use depends on a word such as *observed*, *measured*, *validated*, *approved*, *deprecated*, *satisfied*, *violated*, *waived*, *pending*, *current*, or *ready*, and the exact status value, governed target, scope, window, source, rule, or use is still implicit.
 
-Use it especially when evidence, standards, and requirements are being mixed: a dashboard says a service is ready, a standard says a method is approved, a measurement says a requirement is satisfied, a model card says a model is validated, or a requirement register says a clause is waived.
+Use it especially when evidence, standards, and requirements are being mixed: a dashboard says a service is ready, a standard says a method is approved, a measurement is cited as requirement satisfaction, a model card says a model is validated, or a requirement register says a clause is waived.
 
-**Primary EntityOfConcern.** The primary `EntityOfConcern` is the status-use statement and the status-family mapping that make one status value usable in one bounded context. The pattern governs the relation among status cell, target, target kind, scope, window, source or provenance constraint, and intended status use. It does not make an episteme hold a role and does not treat a visible status display as gate passage, permission, assurance, evidence, or performed work by itself.
+**Primary EntityOfConcern.** The live object is one exact status-use relation around an already governed bearer or target, one local status value, one ClaimScope/use scope, one validity window, and one intended receiving use. F.10 does not define or create the target and does not turn a display, source, list membership, approval act, evaluation rule, result, or evidence item into the status-use relation.
 
-**First useful move.** Write the smallest status-use statement: status family, bounded context, status value, target, target kind, scope, window when current, source or provenance constraint, intended use, and stronger use not carried by this relation.
+**First useful move.** Recover the exact target and its direct domain result first. Then name the status-value SchemeSenseCell and family under the effective ReferenceScheme, status scope/window, exact source and provenance/currentness constraints, intended use, and stronger use not carried. If a rule must be applied, name the dated evaluation work, rule application, and result separately.
 
-**What goes wrong if missed.** A single word such as "validated" starts doing the work of evidence, standard approval, requirement satisfaction, gate passage, release readiness, and assurance at once. Cross-context dashboards compare labels without bridge loss. A report or standard is treated as if it had a status role. A design-time approval is read as run-time compliance.
+**What goes wrong if missed.** One compact word does the work of domain result, evidence standing, standard approval, requirement satisfaction, gate passage, release readiness, permission, and assurance at once. A dashboard list or traffic-light cell is treated as actual status use. An F.9 Bridge or family edge is treated as the explanation or evaluation rule. Design approval becomes runtime satisfaction.
 
-**What this buys.** Status words stay local, typed, and comparable. Evidence status says what has evidential standing for a claim. Standard status says what a canon or standard-governed context sanctions. Requirement status says what is happening to an obligation or clause. Cross-context movement becomes an explicit bridge claim instead of a synonym guess.
+**What this buys.** Status words remain local, typed, comparable, and usable without hiding the target or the work that justified the status. Evidence status says only what evidential standing is being asserted for a claim; standard status says only what a named governing source sanctions; requirement status says only what is being asserted about an exact clause after its direct evaluation. Cross-local vocabulary and cross-modality interpretation remain explicit and loss-aware.
 
-**Not this pattern when.** If the current claim is full evidence provenance, use `A.10`. If the current claim is only an episteme being used as evidence or status before full status-family mapping is needed, use `A.2.4`. If the current claim is assurance, use `B.3`. If the current claim is causal use, use `C.28`. If the current claim is a source, publication face, view, explanation, or specification-use question, use `E.17`, `E.17.0`, `E.17.2`, `E.17.EFP`, `E.10.D2`, or the direct publication-use pattern. If the current claim is a system or acting holon holding a work-facing role, use `A.2` and `A.2.1`. If the current claim is performed work, use `A.15.1`.
+**Not this pattern when.** Use the subject's direct pattern for its target and domain result; `A.2.4` for first evidence/status-use classification; `A.10`/`G.6` for source recovery, provenance, and bounded reliance; `G.11` for currentness; `B.3` for assurance; `C.28` for causal use; `A.21` for a gate; the direct permission, commitment, requirement, standard, acceptance, release, or decision pattern for those results; `E.17`/`E.24.PUB` for publication; and `A.15.1`/`A.6.1` for performed evaluation work and actual bindings.
 
 ### F.10:2 - Problem
 
-Status vocabulary is useful because it is compact. It is dangerous because the same compact label often hides several different claims.
+Status vocabulary is useful because it is compact. It is dangerous because the same label often hides different objects and claims:
 
-The common failures are:
-
-1. **Modality collapse.** "Validated" is read as evidence, standard approval, requirement satisfaction, and release permission at once.
-2. **Target collapse.** A status is asserted without saying whether it qualifies a claim, quantity, method description, standard text, requirement clause, work result, role assignment, publication, gate record, or another exact target.
-3. **Window loss.** Positive or negative status is asserted without the time, edition, condition, or relevance window that makes contradiction and freshness checkable.
-4. **Context leakage.** A status word from one context is reused in another as if the label itself carried equivalence.
-5. **Episteme role drift.** A report, standard, dashboard cell, model card, or requirement document is described as having an "evidence role", "status role", or "standard role" instead of being used in an evidence-use, status-use, source-use, standard-use, or requirement-use relation.
-6. **Design-run substitution.** A design-time standard approval is read as run-time evidence, or run-time evidence is read as standard approval, without an interpretation bridge and an evaluation rule.
-7. **Display overread.** A badge, traffic-light cell, dashboard tile, register excerpt, screenshot, certificate view, or generated summary is treated as the status source, gate decision, or assurance result without recoverable source relation.
+1. **Modality collapse.** *Validated* is read as evidence standing, standard approval, requirement satisfaction, and release permission at once.
+2. **Target collapse.** The status does not say whether it concerns a claim, quantity, method description, standard edition, clause, role assignment, work result, publication, gate record, or another exact target.
+3. **Result collapse.** A measurement, proof, conformance verdict, requirement-evaluation result, or assurance result is renamed as a generic status instead of retained under its direct governor.
+4. **Window and scheme loss.** Status is asserted without the effective ReferenceScheme, ClaimScope, conditions, edition, or relevance window that makes contradiction and freshness checkable.
+5. **Source and display collapse.** A badge, list row, dashboard tile, screenshot, certificate view, or generated summary becomes the status source or status use by visibility.
+6. **Design-run substitution.** Standard approval is read as runtime satisfaction, or runtime evidence as approval, without an exact interpretation relation and evaluation rule.
+7. **Bridge overread.** Shared spelling, a common family label, an F.17 row, an F.18 NameCard, or an F.9 Bridge is treated as the direct explanation, status application, or target result.
+8. **Episteme role drift.** A report, standard, model card, dashboard cell, or requirement document is said to hold an evidence/status/standard role rather than participate in an evidence-use, status-use, source-use, standard-use, or requirement-use relation.
 
 ### F.10:3 - Forces
 
 | Force | Tension this pattern resolves |
 | --- | --- |
-| Local fidelity versus reuse | Every status value belongs to one bounded context, but projects need to compare and reuse statuses across contexts. |
-| Compact label versus typed relation | Status labels must stay quick to read, while the target, scope, window, source, and intended use must remain recoverable when reliance depends on them. |
-| Evidence versus standard versus requirement | Evidence status is epistemic; standard and requirement statuses are deontic in different ways. Treating them as synonyms breaks reasoning. |
-| Design-time stance versus run-time standing | Standards usually govern design or method choice; evidence usually comes from observed or measured work; requirements span both. |
-| Display cue versus source relation | Status displays help humans find a source, but the display is not automatically the source, decision, permission, or assurance. |
-| Ordinary speech versus FPF kind discipline | People say "the role of this status" or "the standard's role"; FPF recovers status-use, standard-use, requirement-use, or evidence-use relations instead of making epistemes role holders. |
+| Local fidelity versus reuse | Status meaning is local to an effective ReferenceScheme, yet projects must explain or compare statuses across schemes. |
+| Compact label versus recoverable relation | A quick display is useful, while target, value, scope, window, source, rule, and use must remain recoverable before reliance. |
+| Evidence versus standard versus requirement | Evidence standing is epistemic; standard and requirement statuses are deontic in different ways. |
+| Direct result versus status | A domain result may justify a status assertion, but the result and status remain different objects. |
+| Design stance versus runtime standing | Approval of a description or profile does not show what happened in one run. |
+| Cue versus actual use | Display and list membership aid retrieval but do not establish source, evaluation, currentness, status use, or downstream reliance. |
+| Ordinary speech versus kind discipline | “The role of this status” is repaired as an exact use relation, not as a work-facing role held by an episteme. |
 
 ### F.10:4 - Solution
 
-Treat a status claim as a context-local status-use statement, not as a free-floating adjective and not as a role assignment.
+Recover the governed target and direct result before applying a local status. Treat status value, status-use occurrence, status assertion, source, evaluation, display, and receiving use as distinct.
 
-#### F.10:4.1 - Three Status Families
+#### F.10:4.1 - Three status families
 
-F.10 uses three status families as a small spine for common project work:
+F.10 supplies a small set of three status families—`EvidenceStatus`, `StandardStatus`, and `RequirementStatus`—for common project use. A family classifies local status values; it is not a universal result kind and does not create its targets.
 
-| Status family | Status modality | Typical target kind | What it says |
+| Status family | Modality | Typical exact target | What the family permits one status-use assertion to say |
 | --- | --- | --- | --- |
-| `EvidenceStatus` | epistemic | claim, quantity, observation-backed claim, effect claim, model-result claim | What the available evidence says for or against a target claim in the current context and window. |
-| `StandardStatus` | deontic, curatorial | method description, standard text, profile, governed product configuration, standard-governed project entity | What a canon, standard, profile, or governing register sanctions, discourages, or supersedes in the current context and edition. |
-| `RequirementStatus` | deontic, compliance-facing | requirement clause, duty clause, constraint clause, acceptance criterion, obligation claim | Whether a clause applies, is satisfied, is violated, is waived, is pending, or does not bind under stated conditions. |
+| `EvidenceStatus` | epistemic | exact target-claim episteme or claim-bearing result episteme | The asserted evidential standing of that claim for one scope, polarity, window, and use, after exact A.2.4 evidence-use and direct input results are recovered. It is not the measurement/proof/causal result or evidence relation itself. |
+| `StandardStatus` | deontic and curatorial | exact standard/profile edition, method description, governed configuration, or other admitted standard target | What the exact governing source sanctions, discourages, or supersedes for one scheme, edition, scope, window, and use. It is not an approval speech act, permission, runtime result, or requirement satisfaction. |
+| `RequirementStatus` | deontic and compliance-facing | exact requirement, duty, constraint, acceptance, or obligation clause | What is asserted about applicability, satisfaction, violation, waiver, or pending evaluation for that clause under its direct rule, scope, conditions, and window. It is not the clause, evaluation work, result, gate, or assurance. |
 
-A project may add local sublevels or local labels, but the local label must map to one of these families or to another direct status pattern named by value. Do not create a new role kind merely because a status word is local.
+A project may define local sublevels or labels, but each label resolves under one effective ReferenceScheme to one exact local sense and maps to one of these three families—`EvidenceStatus`, `StandardStatus`, or `RequirementStatus`—or another direct status owner. F.10 does not create a role kind or global synonym by adding a family row.
 
-#### F.10:4.2 - StatusCell and StatusUseStatement
+#### F.10:4.2 - Status value, use occurrence, assertion, and display
 
-A `StatusCell` is a context-local sense cell for a status value. It has a status family, status modality, typical target kind, polarity, and window discipline. A `StatusCell` is a meaning cell, not a work performer and not a gate decision.
-
-A `StatusUseStatement` applies one status cell or local status value to a target in a bounded context:
+A local status value is designated through an exact F.17 `SchemeSenseCell`:
 
 ```text
-StatusUseStatement:
-  BoundedContext:
-  StatusFamily:
-  StatusCellOrLocalValue:
-  StatusModality:
-  StatusTarget:
-  StatusTargetKind:
+<EffectiveReferenceScheme, LocalExpression, LocalSenseClaim>
+```
+
+An F.18 NameCard may govern its selected public designation. An F.17 row may collect one or more cells for a named unification use; one-cell rows are valid. Neither the cell, card, row, spelling, nor family membership applies the value to a target.
+
+One `StatusUseRelation` candidate names:
+
+```text
+StatusUseRelation:
+  StatusBearerRef:
+  StatusTargetRef:
+  DirectTargetAndResultGovernor:
+  DirectResultRef:  # when a domain result is consumed
+  StatusValueCellRef:
+  StatusFamilyRef:
+  EffectiveReferenceScheme:
   StatusScope:
-  StatusPolarity:
   StatusWindow:
-  StatusSourceOrProvenanceConstraint:
-  StatusUse:
-  BridgeRef:
+  IntendedStatusUse:
+  SourceClaimEpistemeRef:
+  SourceRelationOrRegisterRef:
+  EvaluationWorkRef:  # when a rule is applied
+  EvaluationRuleAndApplicationRef: # when a rule is applied
+  EvaluationResultClaimRef:  # when a result is produced
+  ProvenancePathRef:
+  CurrentnessRef:
   NotCarried:
 ```
 
-`StatusTargetKind` decides relation identity. A status that qualifies a method description is not the same status-use statement as a status that qualifies a requirement clause, even when the visible label is the same. `NotCarried` names the stronger use that this status statement does not carry, such as gate passage, release permission, assurance, performed work, causal identification, global truth, or cross-context substitution.
+For an F.10-family status, `StatusUseRelation(B,T,V,G,W,U)` obtains only when: `B` and `T` resolve to admitted governed objects; exact cell `V` has the required F.10 family/local sense under its effective ReferenceScheme; the family-specific source and any direct result/evaluation basis support applying `V` to `T`; `G` and `W` bound that application; and `U` is the named intended use without a stronger inference. Unknown or missing basis yields no positive occurrence and a `Pending`, `Inconclusive`, or explicit unresolved disposition only when that value's own rule is satisfied. Absence of evidence is never target falsity.
 
-#### F.10:4.3 - Relation Slots for Status Use
+One F.10 occurrence is identified by the exact ordered tuple `<B,T,V,G,W,U>`. Repeated evaluations, assertions, displays, rows, records, or citations create no duplicates. A changed bearer, target, value cell, scope, window, or intended use identifies another candidate. A changed source, evidence path, evaluation, or currentness fact can change whether the fixed candidate is warranted or obtains; it is not silently copied into relation identity. A status governed by another direct pattern exits there instead of inheriting this predicate by family resemblance.
 
-Use the A.2.4 status-use slots when a status statement must be precise enough for reliance:
+A distinct C.2.1 status-assertion episteme states affirmative or negative polarity for the exact `StatusUseRelation`. A separate display or publication form may render that assertion. The assertion does not perform evaluation, and the display does not become the assertion, source, or actual receiving use.
 
-| SlotKind | ValueKind | Currentness discipline |
-| --- | --- | --- |
-| `StatusBearerSlot` | episteme, claim, method description, publication, role assignment, work occurrence, clause, gate record, or another bearer admitted by the direct pattern | Names the value whose status is being asserted or read. It does not make the bearer a role holder. |
-| `StatusTargetSlot` | claim, method, episteme, publication, work result, clause, bearer, or another governed target | Required when the status is not simply about the bearer itself. |
-| `StatusScopeSlot` | bounded-context scope, claim scope, admission scope, requirement scope, or use scope | Currentness-required when scope changes the status assertion. |
-| `StatusValueSlot` | status value governed by F.10 or a direct status pattern | Required for any status assertion. |
-| `StatusWindowSlot` | temporal validity window, freshness policy, edition window, status-currentness relation, or source-currentness relation | Currentness-required for time-sensitive or edition-sensitive status. |
-| `StatusUseSlot` | gate use, assurance use, admission use, source-currentness use, work-plan readiness use, requirement evaluation use, standard-use, or another direct use | Required when the status is consumed for that use. |
-| `StatusProvenanceConstraintSlot` | source order, authority source, publication, proof, verification, register, or provenance constraint | Currentness-required when provenance decides status use. |
+#### F.10:4.3 - Recover the target and result first
 
-These SlotKinds are relation positions. They are not `U.Role` names, not work-role qualifier slots, and not a new generic status ontic by themselves.
+Use this order:
 
-#### F.10:4.4 - Family Spines
+1. name the receiving question and exact target;
+2. recover the target's identity and direct governor;
+3. recover any measurement, formal, causal, conformance, diagnostic, comparison, acceptance, requirement-evaluation, gate, assurance, permission, or decision result under its own pattern;
+4. identify the C.2.1 episteme that states that result;
+5. resolve the local status expression to its exact F.17 cell and F.10 family;
+6. recover the source, edition, scheme, scope, conditions, window, provenance, and currentness required by this status use;
+7. when a rule is needed, identify dated evaluation work, enacted method, exact direct/A.6.1 application, and evaluation-result claim;
+8. assert the status-use relation and its C.2.1 status-assertion episteme; then separately recover publication/display and any actual later premise, decision-use, status-use, gate-use, or operation-argument relation.
 
-The following spines are deliberately small. They help contexts map local status words without pretending that every domain has the same status vocabulary.
+Status never defines or constitutes the target. A changed status may change a receiving disposition without changing target identity or the earlier domain result. Conversely, a changed target or direct result requires the status application to be re-evaluated; copying the old value is not continuation proof.
 
-**EvidenceStatus** values:
+#### F.10:4.4 - A.2.4 status-use positions
 
-1. `Observed` - seen or recorded once under declared observation conditions.
-2. `Measured` - quantified under a declared measurement procedure.
-3. `Corroborated` - backed by more than one independent source, procedure, or observation line.
-4. `Replicated` - repeated by others or under varied declared conditions.
-5. `Refuted` - counter-evidence defeats the positive standing inside the same window.
-6. `Inconclusive` - the available evidence is insufficient or mixed for the target claim.
+When an A.2.4 first-use classification is current, retain its positions by value:
 
-**StandardStatus** values:
+| Position | F.10 use |
+| --- | --- |
+| `StatusBearerSlot` | Exact bearer from which the status is asserted or read; not a role holder. |
+| `StatusTargetSlot` | Exact governed target; required when different from the bearer. |
+| `StatusScopeSlot` | Claim, requirement, admission, or use scope; not a generic context object. |
+| `StatusValueSlot` | Exact local status-value cell or value governed here or by another direct status pattern. |
+| `StatusWindowSlot` | Validity, edition, freshness, or source window. |
+| `StatusUseSlot` | Named intended use; actual later use still needs its dated work and direct relation. |
+| `StatusProvenanceConstraintSlot` | Exact source order, authority source, publication, proof, verification, register, or provenance condition. |
 
-1. `Candidate` - proposed and not yet normative in the context.
-2. `Draft` - worked text or profile, not yet the governing edition.
-3. `Approved` - normative in this context and edition.
-4. `Deprecated` - discouraged, allowed only under stated conditions, or being phased out.
-5. `Superseded` - replaced by a newer edition, profile, or governing source.
+These are relation positions, not work-role qualifier slots, a record schema that applies status, or a new generic status ontic.
 
-**RequirementStatus** values:
+#### F.10:4.5 - Family value sets
 
-1. `Applicable` - the clause binds in the stated context and window.
-2. `Inapplicable` - the clause does not bind under stated conditions.
-3. `Satisfied` - met within the stated context and window.
-4. `Violated` - not met within the stated context and window.
-5. `Waived` - binding is suspended or exceptioned by a named source and window.
-6. `Pending` - awaiting evidence, evaluation, decision, or source-currentness repair.
+**EvidenceStatus** local values:
 
-#### F.10:4.5 - Bridge Discipline
+1. `Observed` — seen or recorded once under declared observation conditions.
+2. `Measured` — supported by a declared measurement method, model, calibration basis, value, and uncertainty.
+3. `Corroborated` — supported by more than one independent source, procedure, or observation line.
+4. `Replicated` — repeated by independent work or under varied declared conditions.
+5. `Refuted` — counter-evidence defeats positive evidential standing inside the same scope and window.
+6. `Inconclusive` — available input results and evidence-use relations are insufficient or mixed for the target claim.
 
-Status meanings do not travel by label. A cross-context comparison, explanation, or substitution uses an `F.9` bridge with direction, bridge kind, congruence level, and loss notes.
+These values classify evidential standing; they do not replace the observation, measurement, proof, causal, or other direct result, and `Inconclusive` is not target falsity.
 
-Explanation is the ordinary cross-context use. Substitution is admitted only when the bridge kind, congruence level, window alignment, target kind, and local evaluation rule all admit the substitution. Cross-modality movement, such as evidence status being used to evaluate requirement status, is an interpretation relation; it is not equivalence.
+**StandardStatus** local values:
 
-#### F.10:4.6 - Design-Run Discipline
+1. `Candidate` — proposed and not yet normative for the named scheme/use.
+2. `Draft` — worked text or profile, not yet the governing edition.
+3. `Approved` — sanctioned by the exact governing source for the named scheme, edition, scope, window, and use.
+4. `Deprecated` — discouraged, conditionally allowed, or being phased out.
+5. `Superseded` — replaced by another named edition, profile, or governing source.
+
+`Approved` does not mean that an approval act occurred unless its direct speech-act/decision relation is separately recovered; it grants no permission and proves no runtime satisfaction.
+
+**RequirementStatus** local values:
+
+1. `Applicable` — the exact clause binds under its governed scope, conditions, and window.
+2. `Inapplicable` — the clause does not bind under those conditions.
+3. `Satisfied` — a direct requirement/acceptance evaluation result says the clause is met for the exact target, scope, conditions, and window.
+4. `Violated` — the direct evaluation result says it is not met there.
+5. `Waived` — binding is suspended or excepted by an exact authorized source/relation and window.
+6. `Pending` — the status application awaits a needed source, input result, evaluation, decision, or currentness repair.
+
+`Satisfied`, `Violated`, `Waived`, and `Pending` do not replace the clause, evaluation work/result, waiver act or permission, gate decision, assurance result, or action.
+
+#### F.10:4.6 - Bridge and interpretation discipline
+
+Status meanings do not travel by label. When two local status senses under different ReferenceSchemes must be compared, use the actual F.9 Bridge occurrence between the exact F.17 SchemeSenseCells, with direction, bridge kind, tolerance/loss, and bounded use. Its Card or description is separate and optional; optional F.9 `CL` remains evidence-strength shorthand, not a use threshold. The Bridge makes no status-use occurrence obtain and produces no target result.
+
+When one status-use occurrence is used to explain or evaluate a status question of another family, scheme, or modality, recover an exact `StatusInterpretationRelation`:
+
+```text
+StatusInterpretationRelation:
+  SourceStatusUseOccurrenceRef:
+  TargetStatusQuestionRef:
+  Direction:
+  InterpretationRuleRef:
+  EffectiveReferenceScheme:
+  ClaimScopeAndWindow:
+  BridgeRef:  # only when local senses cross schemes
+  IntendedUse:
+```
+
+It obtains only when the named interpretation rule admits that source occurrence for the exact target question, direction, scope, window, and use. Its occurrence identity is the exact ordered `<SourceStatusUseOccurrenceRef, TargetStatusQuestionRef, Direction, InterpretationRuleRef, ClaimScopeAndWindow, IntendedUse>` tuple; a Bridge ref is a separate qualifying premise when local senses cross schemes. A family edge, shared word, Bridge, table row, or source order is not this relation. Applying the rule is separate dated evaluation work; its result claim is separate again. Even a positive interpretation relation does not by itself produce `RequirementStatus=Satisfied`, `StandardStatus=Approved`, a gate result, permission, assurance, or actual later reliance.
+
+#### F.10:4.7 - Design-run discipline
 
 Keep three questions separate:
 
-* What does the evidence show about a claim or measured quantity in this window?
-* What does the standard or canon sanction for a method description, profile, or governed project entity in this edition?
-* What is the requirement clause doing in this context and window?
+* What do exact observation, measurement, proof, causal, or other input results warrant as evidence standing for this target claim and window?
+* What does an exact governing source sanction for this method description, profile, standard edition, or configuration and use?
+* What does direct requirement-evaluation work conclude about this exact clause, target, scope, conditions, and runtime/design window?
 
-A standard-approved method description can be a source for method selection or a condition for allowed use. It does not by itself show that a run-time clause is satisfied. Run-time evidence can help evaluate a requirement clause. It does not by itself approve the method or standard profile unless a governing context has a rule for that promotion.
+A standard-approved method description may be admissible for selection under that profile. It does not show that the method was enacted or that a runtime clause was satisfied. Runtime evidence may become an admitted input to requirement evaluation through an exact evidence-use and status-interpretation relation. It does not approve the method, standard, gate, or release.
 
-### F.10:5 - Archetypal Grounding
+### F.10:5 - Archetypal grounding
 
-#### F.10:5.1 - Service Acceptance from Run-Time Evidence
+#### F.10:5.1 - Service acceptance from runtime evidence
 
-A service dashboard reports uptime for July. In the monitoring context, the measurement episteme gives `EvidenceStatus = Measured` for the claim "uptime was 99.95 percent in July." In the service-management context, the SLO clause has `RequirementStatus = Satisfied` only if the service pattern's evaluation rule says that the measured uptime meets the clause.
+July uptime is first recovered as an exact C.16 measurement result, stated by a distinct C.2.1 episteme. A.2.4 classifies that episteme for the uptime claim, and F.10 may assert `EvidenceStatus=Measured` for that exact claim, scheme, scope, and July window.
 
-F.10 records two status-use statements and an interpretation bridge. It does not infer requirement satisfaction from the word "measured" alone.
+The SLO clause and service target are independently recovered. Dated evaluation work applies the SLO rule to the measurement result through exact bindings and produces a requirement-evaluation result claim. Only that basis can support a separate `RequirementStatus=Satisfied` occurrence. If monitoring and service-management senses differ, an F.9 Bridge handles the cells and a `StatusInterpretationRelation` handles the admitted explanatory/evaluation use. The measurement, evidence status, bridge, interpretation, evaluation work/result, requirement status, dashboard display, gate, assurance, and release decision remain distinct.
 
-#### F.10:5.2 - Approved Method Description
+#### F.10:5.2 - Approved method description
 
-A safety controller method description is `StandardStatus = Approved` in one standard profile and edition. That approval makes the method description admissible under that profile. It does not prove that a particular controller run met response-time obligations. A run-time log can be assigned `EvidenceStatus = Corroborated` for a response-time claim; a separate requirement-use statement can then evaluate the duty clause.
+One exact safety-controller MethodDescription is `StandardStatus=Approved` only under the named standard/profile edition, source relation, scheme, scope, window, and selection use. That status neither creates the MethodDescription nor proves an approval speech act, permission, method enactment, or response-time satisfaction.
 
-#### F.10:5.3 - Model Card and Fairness Requirement
+A particular controller run is separate `U.Work`. Its response-time measurement result and evidence-use relation can enter direct clause-evaluation work. A separate requirement status may follow from that evaluation; it does not inherit `Approved` by label or family edge.
 
-A model card says a model is "validated" because cross-validation AUC is high. In F.10 this becomes an `EvidenceStatus` statement for a predictive-performance claim inside the validation context. It does not decide the policy requirement "demographic parity delta <= 0.1" unless production-window fairness evidence and the policy evaluation rule are present.
+#### F.10:5.3 - Model card and fairness requirement
 
-#### F.10:5.4 - Status Display Cue
+A model card reports high cross-validation AUC. Recover the exact predictive-performance result and claim episteme first; the card is a publication/display. F.10 may assert an `EvidenceStatus` for that predictive claim under its validation scheme and window. It cannot decide the different policy clause “demographic parity delta ≤ 0.1”. That branch needs production-window fairness measurement, its result episteme/evidence use, the policy clause, dated evaluation work, the exact policy rule application, and its own requirement-status assertion.
 
-A release dashboard cell shows `Ready`. The cell is a cue. A status-use statement is available only when the source, target, value, scope, window, and provenance constraint are recoverable. If the status is consumed for a gate, release, assurance, or admission use, the direct governing pattern for that use must also admit it.
+#### F.10:5.4 - Status display cue
+
+A release dashboard cell shows `Ready`. The cell is only a cue until exact source assertion, target, value cell, scheme, scope, window, provenance/currentness, and intended use are recoverable. Display or list membership does not establish a status-use occurrence or actual reliance. If the status is consumed for a gate, release, assurance, admission, permission, or decision, the direct governing pattern must admit the separate use and result.
 
 ### F.10:6 - Bias-Annotation
 
-F.10 is vulnerable to three recurring biases.
+F.10 blocks five recurring biases:
 
-* **Label authority bias.** A familiar status word is treated as source authority. Repair by recovering status target, source, window, and intended use.
-* **Semio-bias.** A visible display, publication face, badge, or label becomes the center of the pattern. Repair by making the status-use relation the `EntityOfConcern`; display and publication questions go to `E.17`, `A.10`, or `E.10.D2`.
-* **Role drift.** A standard, report, dashboard, or requirement is described as having a role. Repair by using status-use, standard-use, requirement-use, evidence-use, or source-use relations; reserve `U.Role` and `U.RoleAssignment` for work-facing holders.
+* **label-authority bias:** familiar wording is treated as source authority;
+* **target-by-status bias:** assigning a value is treated as defining or creating its target;
+* **display/list bias:** visibility, row membership, or dashboard aggregation is treated as application or actual use;
+* **family/bridge explanation bias:** a family edge, shared spelling, row, Card, or Bridge replaces the exact interpretation relation and rule; and
+* **role drift:** an episteme is made a work-facing role holder because it is used as evidence, standard, requirement, or status source.
 
-### F.10:7 - Conformance Checklist
+The repair is to recover target and direct result first, then the exact local value, relation occurrence, assertion, evaluation basis, display, and receiving use.
 
-| Check | Question |
+### F.10:7 - Conformance checklist
+
+| Check | Pass question |
 | --- | --- |
-| `CC-F10-01` Status family | Is the status value mapped to `EvidenceStatus`, `StandardStatus`, `RequirementStatus`, or another direct status pattern named by value? |
-| `CC-F10-02` Context | Is the bounded context or edition that gives the status value meaning named? |
-| `CC-F10-03` Target kind | Does the statement name the exact target kind: claim, quantity, method description, standard-governed entity, requirement clause, gate record, role assignment, work result, publication, or another direct-pattern target? |
-| `CC-F10-04` Window | Does every positive or negative status name the window, edition, condition, freshness policy, or source-currentness relation that bounds it when current? |
-| `CC-F10-05` Source and provenance | Is the status source, governing register, publication source, proof, measurement, verification, or provenance constraint recoverable when the use depends on it? |
-| `CC-F10-06` Modality | Is epistemic status kept distinct from deontic standard or requirement status? |
-| `CC-F10-07` Bridge | Does any cross-context comparison, explanation, or substitution cite an `F.9` bridge with kind, direction, congruence level, and loss? |
-| `CC-F10-08` Substitution | If one status is substituted for another, do bridge kind, congruence level, window alignment, target kind, and local evaluation rule admit that substitution? |
-| `CC-F10-09` No role ontology drift | Is there no claim that an episteme holds an evidence role, status role, standard role, or requirement role merely because it is used? |
-| `CC-F10-10` Direct-pattern boundary | Are evidence provenance, assurance, causal use, source use, publication use, gate passage, permission, performed work, and work-role assignment governed by their direct patterns when those claims are current? |
+| `CC-F10-01` Target and direct result | Are the exact target, target identity, direct governor, and any consumed domain result/result episteme recovered before status is applied? |
+| `CC-F10-02` Local value | Does the status expression resolve to an exact F.17 SchemeSenseCell under an effective ReferenceScheme and to one family/direct status owner? |
+| `CC-F10-03` Use occurrence | Are bearer, target, value, scheme, scope, window, intended use, and direct obtaining basis explicit? |
+| `CC-F10-04` Source | Are source assertion/register, edition/order rule, provenance path, and G.11 currentness result recovered when they decide use? |
+| `CC-F10-05` Assessment | If a rule is applied, are dated evaluation work, enacted method, exact application/bindings, and evaluation-result claim separate? |
+| `CC-F10-06` Assertion/display | Is the C.2.1 status-assertion episteme distinct from publication occurrence, form, rendering, carrier, row, and dashboard cell? |
+| `CC-F10-07` Modality | Are evidence status, standard approval, requirement status, and every direct result kept distinct? |
+| `CC-F10-08` Bridge | Does cross-scheme vocabulary use cite an actual F.9 occurrence between exact cells, while Card/description remains separate? |
+| `CC-F10-09` Interpretation | Does cross-family or cross-modality explanation name the exact `StatusInterpretationRelation`, direction, rule, scope/window, and use? |
+| `CC-F10-10` Design-run | Are standard approval, runtime evidence, requirement evaluation, and runtime satisfaction separate? |
+| `CC-F10-11` Receiving use | Is any actual premise/gate/assurance/permission/release/decision use grounded in dated work and its direct relation rather than intended use or display? |
+| `CC-F10-12` No creation | Does status neither define/create its target nor turn evidence absence into target falsity? |
+| `CC-F10-13` No role drift | Is no episteme assigned a work-facing evidence/status/standard/requirement role merely because it is used? |
+| `CC-F10-14` Direct-owner boundary | Do evidence provenance, assurance, causal use, publication, gate, permission, commitment, work, requirement evaluation, approval act, and decision remain with direct governors? |
 
 ### F.10:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Failure | Repair |
 | --- | --- | --- |
-| `Validated -> approved -> compliant` | One label carries evidence, standard, and requirement status at once. | Split into evidence, standard, and requirement status-use statements; add bridge and evaluation rule only where admitted. |
-| Approved method means SLO satisfied | Design-time standard status is used as run-time requirement status. | Keep method-description approval separate from run-time evidence and clause evaluation. |
-| Status badge as gate passage | A display cue is treated as source, decision, and permission. | Recover source relation, target, window, and direct gate or release pattern. |
-| Clause-less compliance | "Compliant" is asserted without a requirement clause. | Name the clause or acceptance criterion and the window. |
-| Bridge-free roll-up | Cross-context dashboard aggregates labels as if meanings were native. | Add F.9 bridges with loss notes or downgrade to local explanation. |
-| Evidence escalation without independence | One repeated lab result is called replicated. | Keep it measured or corroborated unless independent replication conditions are named. |
-| Status role for episteme | A report, standard, or requirement is said to hold a role. | Use A.2.4 status-use or evidence-use relation slots and F.10 status-family mapping. |
-| Tool-state explosion | Every local tool state becomes a new status kind. | Map local labels to the nearest context-local status cell; keep tool labels as local names when no durable family is needed. |
+| `Validated -> approved -> compliant` | One label carries evidence, standard, requirement, and release status. | Split the target/result/status occurrences; add exact Bridge, interpretation relation, evaluation work, and rule only where current. |
+| Approved method means SLO satisfied | Design approval becomes runtime result. | Keep MethodDescription approval, method enactment, runtime result, and clause evaluation separate. |
+| Evidence status as domain result | `Measured`, `Corroborated`, or `Refuted` replaces measurement, proof, causal, or diagnostic result. | Recover the direct result and result episteme first; evidence status only classifies evidential standing for the named use. |
+| Status defines target | A `Ready` or `Approved` row is treated as constituting a service, method, clause, person/team state, or product. | Recover target identity under its direct governor before status application. |
+| Status badge or list membership as use | Display, list, or row membership is treated as source, status application, gate passage, or reliance. | Recover assertion/source and the separate actual receiving-use relation. |
+| Clause-less compliance | *Compliant* is asserted without an exact clause, target, rule, scope, conditions, and window. | Recover the clause and direct evaluation result. |
+| Bridge-free roll-up | A dashboard aggregates local labels as global synonyms. | Use exact cells and F.9 occurrences, or downgrade to local explanation. |
+| Bridge/family edge as explanation | A Bridge or `EvidenceStatus -> RequirementStatus` arrow is treated as direct reason. | Name the `StatusInterpretationRelation`, exact rule, evaluation application, and result. |
+| Evidence escalation without independence | One repeated lab result is called replicated. | Keep it measured/corroborated until independent replication conditions and results are recovered. |
+| Status role for episteme | A report, standard, or requirement is said to hold a role. | Use A.2.4/F.10 use relations; reserve role assignment for acting holons. |
+| Tool-state explosion | Every local tool state becomes a durable status kind. | Keep tool labels local; create a durable cell/family mapping only for a receiving use that needs it. |
 
 ### F.10:9 - Consequences
 
-F.10 adds a small amount of relation work before a status claim can be relied on. That cost is intentional: the user names context, target kind, window, source, and use instead of letting one status word decide everything.
+F.10 adds a small amount of relation recovery before status can be relied on. The user names exact target/result, local value, scheme, scope, window, source, rule, and use instead of letting a word decide everything.
 
-The payoff is practical. Teams can compare statuses across disciplines, explain why a status was accepted or rejected, see where bridge loss enters, and stop a status display from becoming permission, assurance, or performed-work evidence by accident.
+The payoff is practical: teams can compare statuses across disciplines, explain why a status was asserted or rejected, locate bridge/interpretation loss, and stop a display from becoming target truth, permission, assurance, gate passage, or work evidence.
 
-The main limitation is that F.10 does not decide the downstream claim. It does not compute assurance, pass a gate, authorize work, prove causal effect, perform source-currentness repair, or evaluate a requirement clause by itself. It supplies the status-family and status-use relation that the direct pattern may consume.
-
-Open the direct governing pattern when the attempted use depends on evidence provenance, assurance level, gate decision, permission, performed work, causal identification, source freshness, publication interpretation, standard authority, requirement evaluation, or contested source order.
+The cost is that F.10 cannot decide neighboring results. It does not perform measurement or evaluation, compute assurance, approve a standard by speech act, satisfy a clause, pass a gate, authorize work, prove causal effect, decide currentness, or establish actual downstream use.
 
 ### F.10:10 - Rationale
 
-Status words sit at the meeting point of evidence, norms, and action. That makes them tempting shortcuts. A shortcut is safe only when the status target and intended use remain visible.
+Status words sit at the meeting point of evidence, norms, and action, so they are tempting shortcuts. The shortcut remains safe only when target, direct result, local sense, scope/window, source, evaluation rule, and intended/actual use stay visible.
 
-F.10 keeps the shortcut by using a small family spine, but it prevents ontology drift by making the status-use statement explicit. A status value is not a role. A status display is not the status source by itself. A standard approval is not run-time satisfaction. Evidence status can explain requirement status only through an interpretation relation and an evaluation rule.
-
-This keeps Part F naming and bridge machinery useful while letting A.10, B.3, C.28, E.17, A.2, A.15, and gate or requirement patterns govern their own stronger claims.
+The small set of three status families—`EvidenceStatus`, `StandardStatus`, and `RequirementStatus`—supports quick recognition without becoming a common result algebra. F.17/F.18 govern local sense and designation; F.9 governs cross-local sense bridges; F.10 governs the status-use and interpretation questions; direct subject, evidence, work, result, assurance, gate, permission, and decision patterns retain their own objects.
 
 ### F.10:11 - SoTA-Echoing
 
-| Practice pressure | F.10 adoption | Practical implication |
+| Practice pressure | F.10 adoption | Rejected overread |
 | --- | --- | --- |
-| Requirements engineering and compliance practice separates clauses, applicability, satisfaction, waiver, and evidence of satisfaction. | RequirementStatus targets clauses or obligation claims, with window and source discipline. | "Compliant" without a clause and window is not a usable requirement status. |
-| Standards and profile governance separates candidate, draft, approved, deprecated, and superseded editions. | StandardStatus is edition- and context-bound. | An approved method description or standard profile does not by itself prove a run-time claim. |
-| Evidence and provenance practice separates observation, measurement, corroboration, replication, refutation, source, and confidence. | EvidenceStatus qualifies target claims and remains consumable by A.10 and B.3. | A badge, citation, metric, or dashboard tile must expose source relation before stronger reliance. |
-| Cross-context terminology practice uses bridges rather than global synonyms. | F.9 bridge kind, direction, congruence level, and loss govern cross-context status comparison. | Cross-context dashboards can explain status differences without silently equating labels. |
-| Digital credential, register, and dashboard practice separates visible status views from issuer, verifier, subject binding, revocation, currentness, and relying context. | Status display is a cue; status-use statement needs source and provenance constraints when relied on. | A green cell or credential view is not gate passage, role assignment, permission, or assurance by itself. |
+| Requirements engineering separates clauses, applicability, satisfaction, waiver, and evidence of satisfaction. | RequirementStatus targets an exact clause and consumes a direct evaluation result under scope, conditions, and window. | *Compliant* without clause/rule/result is not usable status. |
+| Standards/profile governance separates candidate, draft, approved, deprecated, and superseded editions. | StandardStatus names exact source, target, scheme, edition, window, and use. | Approval does not prove enactment, runtime satisfaction, permission, or compliance. |
+| Evidence/provenance practice separates observation, measurement, corroboration, replication, refutation, source, and confidence. | EvidenceStatus classifies standing of an exact target claim after direct results and evidence-use relations are recovered. | Evidence status is not a domain result, target truth, or assurance. |
+| Cross-local terminology uses explicit mappings rather than global synonyms. | F.9 Bridges exact cells; F.10 separately names interpretation relation and rule. | Bridge/Card/family edge is not explanation, evaluation, or substitution. |
+| Credential, register, and dashboard practice separates visible view, issuer/verifier, subject binding, revocation, currentness, and relying use. | A display is a cue; source/status assertion and actual receiving use stay separate. | A green cell or credential view is not status application, gate passage, role assignment, permission, or assurance. |
 
 ### F.10:12 - Relations
 
-**Builds on:** `A.2.4` for evidence-use and status-use relation slots; `F.1` through `F.3` for context, seed, and local-sense discipline; `F.9` for bridges across contexts; `F.18` for local-first naming discipline.
+**Builds on:** `F.17` for exact SchemeSenseCells and local-sense rows; `F.18` for designation NameCards; `F.9` for actual cross-local Bridge occurrences; `A.2.4` for first status-use positions; `C.2.1` for target-result and status-assertion epistemes; `A.15.1`/`A.6.1` for evaluation work and applications; and the exact direct owner of every target/result used.
 
-**Coordinates with:**
+**Coordinates with:** `A.10`/`G.6` for provenance and bounded reliance; `G.11` for currentness; `B.3` for assurance-result claims; `C.28` for causal use; `E.17`/`E.24.PUB` and C.29 for publication/representation; and the direct standard, requirement, acceptance, gate, permission, commitment, release, and decision patterns for their own results and uses.
 
-* `A.10` when a status claim depends on evidence provenance, evidence source, source-currentness, or evidence-producing work.
-* `B.3` when a status is consumed as assurance input.
-* `C.2.1` when the identity of the episteme, claim graph, reference scheme, or grounding holon matters.
-* `C.28` when the status is causal, counterfactual, intervention-facing, or simulation-output-facing.
-* `E.17`, `E.17.0`, `E.17.2`, `E.17.EFP`, and `E.10.D2` when a publication face, view, explanation, source, description, or specification-use question is current.
-* `A.2`, `A.2.1`, and `A.15` when a system or acting holon holds a work-facing role or performs work.
-* Gate, release, standard-use, requirement-use, decision, and source-currentness patterns when status is consumed for those stronger uses.
-
-* **Precision-restoration owners:** When source wording says "status role", "approved role", "standard role", "validated means compliant", "green means ready", or another status-shaped phrase hides target kind, status family, window, bridge, source, or direct-pattern use, use `A.6.RSIR` for relation-slot or role-like slot recovery and `E.10.ARCH` for ontology-first repair architecture.
+**Precision-restoration exit.** When wording such as *status role*, *approved role*, *validated means compliant*, *green means ready*, or a family arrow hides target, result, value, scheme, window, source, interpretation rule, or actual use, recover those exact objects here and return every neighboring claim to its direct owner. Do not repair the phrase by minting a generic status/evidence/result relation.
 
 ### F.10:End

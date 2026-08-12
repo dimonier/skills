@@ -2,13 +2,7 @@
 id: C.22.PFR
 title: "Problematic-For Relation"
 status: Stable
-keywords:
-  - actual adverse condition
-  - "exact problem-for entity and use"
-  - "independent criterion-applicability relation"
-  - "condition-to-predicate input rule"
-  - actual adverse episode
-  - assessment and evidence separation.
+keywords: []
 dependencies:
   builds_on:
     - A.6.REL
