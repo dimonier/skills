@@ -1,21 +1,29 @@
 ---
 id: F.1
-title: Domain‑Family Landscape Survey
+title: "Question-Relative Source Selection"
 status: Stable
-keywords: []
+keywords:
+  - receiving question
+  - intended use
+  - exact source and edition
+  - "answer-changing source role"
+  - finite source cut
+  - "`SourceCutNote`"
+  - reopen condition.
 dependencies:
   builds_on:
-    - E.10.D1
     - F.0.1
+    - C.2.1
     - A.7
-  prerequisite_for:
-    - F.2
-    - F.3
-    - F.4
+  coordinates_with:
+    - F.0.2
+    - F.17
     - F.9
+    - A.10
+    - B.3
 ---
 
-# F.1: Domain‑Family Landscape Survey
+# F.1: Question-Relative Source Selection
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -23,326 +31,309 @@ dependencies:
 
 ---
 
-## F.1 - Domain‑Family Landscape Survey
+## F.1 - Question-Relative Source Selection
 
-**“Fix the context of meaning before you name anything.”**
-**Status.** Architectural pattern.
-**Depends on.** E.10.D1 **Lexical Discipline for “Context” (D.CTX)**; **F.0.1 Contextual Lexicon Principles**; A.7 **Strict Distinction (Clarity Lattice)**; A.11 **Ontological Parsimony**.
-**Coordinates with.** F.2 **Term Harvesting & Normalisation**; F.3 **Intra‑Context Sense Clustering**; F.4 **Role Description**; F.9 **Alignment & Bridge Across Contexts**; **G.0–G.1** *(Scope/entityOfConcern handoff)*.  *(Bridges live only in F.9.)*
+> **Type:** Architectural (A)
+> **Status:** Draft
+> **Normativity:** Normative unless explicitly marked informative
 
-**Aliases (informative).** *Contexts‑first survey*; *Context cut*.
+> **One-sentence summary.** Select the smallest inspectable set of exact sources whose claims, limits, rivals, or counterexamples can change one stated answer or use.
 
-### F.1:1 - Intent & applicability
+**Historical title (informative).** *Domain-Family Landscape Survey*.
+**Aliases (informative).** *Source cut*; *question-relative source selection*.
 
-**Intent.** Establish a **finite set of U.BoundedContext** (“**context of meaning**”), each tied to an authoritative source or canon within a **domain family**, so that all later moves (term harvesting, clustering, role naming, cross‑context bridges) operate on **local meanings** rather than on drifting, globalised words.
+### F.1:1 - Problem frame
 
-**Applicability.** Use **at the start** of any unification effort for **any FPF pattern** (role assignment and performed-work attribution, Sys-CAL, KD-CAL, Kind-CAL, LCA-CAL…) and **whenever** a discipline canon materially changes (new edition, re-framing, seminal result).
+Use `F.1` when the receiving question is clear, more than one source may change its answer, and the source cut is not yet justified. Start from candidate sources and exact editions, ask how each could change the answer or its limits, and retain the smallest set that covers the distinct contributions that matter.
 
-**Non‑goals.** No tooling, workflow, or editorial roles. No global ontology. No cross‑context equations. This pattern describes **how to think**, not how to store.
+The first useful result is one `SourceCutNote : U.Episteme`. Before treating the note as that episteme, identify the receiving question as one exact project entity. That question is the note's `EntityOfConcern`; the intended use remains in the ClaimGraph rather than becoming a second subject. Name the effective `U.ReferenceScheme` explicitly: it must resolve the question, the cited source-edition designators, and the answer-changing role claims. The ClaimGraph also names deliberate exclusions, known limits or source gaps, and reopen conditions. If the question or scheme is still missing, keep an ordinary working note and return that missing value instead of claiming a C.2.1 episteme. A one-screen source note may represent the same episteme when it carries the same claims; its compact form neither admits a source nor contains its local meaning.
 
-### F.1:2 - Problem frame
+**What this buys.** Later term recovery, comparison, synthesis, or direct source use begins from an inspectable reason for each source rather than from one influential canon, a bibliography quota, a domain label, or an opaque search score.
 
-Without explicit context of meaning:
+**Not this pattern when.** If one already identified source closes the question, use its claim directly or use `F.0.1` for one source-local meaning. Use `F.9` for an actual relation between recovered local senses and `F.0.2` for a bounded conceptual comparison or synthesis. Use `G.2` for a broader refreshable SoTA pack. When the receiving work requires an exhaustive, protocol-defined, or appraisal-bearing evidence review, use its domain method; F.1 does not replace that search, appraisal, or reporting discipline.
 
-1. **Word‑drift.** Common words (*process*, *role*, *service*, *model*) silently change sense across disciplines.
-2. **Scope mirages.** One influential standard is mistaken for *the* domain.
-3. **Retro‑lock.** Old editions become the implicit truth simply because they were “there first”.
-4. **Category bleed.** Behavioural roles, epistemic statuses, deontic permissions mix because their contexts were never fixed.
-5. **Name inflation.** Convenience root kind labels or global names appear just to "stabilise" unstable words.
+**Primary result.** One question-relative `SourceCutNote`, not a source container, meaning container, admission token, or assurance result.
+
+### F.1:2 - Problem
+
+Without a question-relative source cut:
+
+1. **Word drift.** Familiar terms silently change meaning across sources and editions.
+2. **Canon lock.** One influential standard is mistaken for the whole answer.
+3. **Recency blur.** An old edition remains load-bearing merely because it was used first.
+4. **Category bleed.** Designed structures, performed occurrences, system roles, statuses, permissions, and measurements are merged before their source claims are inspected.
+5. **Source bloat.** A large reading list hides which sources can actually change the current answer.
+6. **Search substitution.** Rank, similarity, or family membership is mistaken for relevance, truth, or completeness.
 
 ### F.1:3 - Forces
 
-| Force  | Tension to resolve  |
+| Force | Tension |
 | --- | --- |
-| **Universality vs locality** | We want cross‑domain unification, but **meaning is local** to a U.BoundedContext. |
-| **Breadth vs parsimony**  | Wide coverage prevents bias; too many Contexts defeats understanding.  |
-| **Recency vs continuity**  | New editions matter; but working knowledge often trails by years.  |
-| **Didactics vs fidelity**  | Pedagogically simple summaries must remain faithful to the source.  |
+| Relevance vs finiteness | The cut must expose answer-changing rivals and limits while remaining small enough to inspect together. |
+| Local fidelity vs cross-source use | Each source keeps its own claims and meanings while later work may compare them. |
+| Recency vs continuity | New editions matter, but only changed relied premises should reopen the result. |
+| Efficient search vs human judgment | Search aids may prioritize candidates but cannot decide their role in the answer. |
+| Compact memory vs source analysis | A short result should keep the decision recoverable without becoming a second literature review. |
 
-### F.1:4 - Core idea (didactic)
+### F.1:4 - Solution — select by answer-changing role
 
-**Think in Contexts, not in words.**
-A *Context of meaning* is a **U.BoundedContext** (per D.CTX) that encloses a coherent vocabulary and its rules from a **specific, citable canon** (standard, BoK, seminal paper, textbook tradition). You **name and reason** *inside the Context*. When you must step between Contexts, you will **declare a bridge later** (F.9) with explicit losses or mismatches.
+#### F.1:4.1 - Minimal vocabulary
 
-### F.1:5 - Minimal vocabulary (this pattern only)
+- **Exact source and edition.** The identified publication, canon, corpus, practice source, or other claim-bearing basis being considered.
+- **Receiving question and use.** The independently identified question that the source-selection claims concern, plus the decision, pattern contribution, comparison, or action the answer will serve. The question is the `SourceCutNote`'s EntityOfConcern; the use is claim content.
+- **Answer-changing role.** The inspected claim, limit, rival explanation, counterexample, transfer condition, material non-fit, or other stated contribution by which a source can change the answer.
+- **Source cut.** The finite set of sources retained for that question and use.
+- **`SourceCutNote`.** One C.2.1 episteme identified by its source-selection ClaimGraph, the exact receiving question as EntityOfConcern, and the named effective ReferenceScheme under which that question, source editions, and role claims are read.
+- **Domain family.** An informative discovery label, such as workflow, provenance, services, sensing, types, or control. It carries no semantics and cannot admit, merge, or replace a source.
+- **Local search policy.** An optional named way to prioritize candidate inspection using search terms, descriptors, citations, embeddings, distances, active learning, or portfolio readings. Its output is attention guidance, not a source-selection verdict.
 
-* **U.BoundedContext** (short: **Context** in Tech register). The formal *Context of meaning*.
-* **Context** (Tech register alias for **U.BoundedContext**). Use **Context** for pedagogy, **U.BoundedContext** for formal references.
-* **Domain family.** An **informative** shelf‑label grouping related Contexts (e.g., *workflow & provenance*; *services & deontics*; *sensing & measurement*; *types & taxonomies*; *control & actuation*). **No semantics** attach; Domain ≠ Context.
-* **Context Card.** A **one‑screen** conceptual sketch of a Context (see §7.2).
-* **SenseCell** *(appears downstream)*. A **(Context × Local‑Sense)** address; F.3 will mint these after clustering. Mentioned here only to keep the destination in view.
+Source selection, source identity, source-local meaning, source truth, source adequacy, cross-source relation, synthesis, reliance, and assurance are separate questions.
 
-### F.1:6 - Solution — the Contexts‑first survey (conceptual, notation‑free)
+#### F.1:4.2 - Source-selection method
 
-**Step 1 — Declare your unification line(s).**
-State which FPF pattern threads are in play (e.g., *Enactment + KD‑CAL sensing + Sys‑CAL execution*). This keeps the cut purposeful.
+**Step 1 — State the receiving question and use.**
+Say what answer is needed, what later use it serves, and which source difference could change that answer.
 
-**Step 2 — Cut the landscape by domain families.**
-For each line, **select at least three distinct domain families** (heterogeneity guard). Examples:
+**Step 2 — Name candidate sources by exact edition.**
+Use identified sources whose relevant claims can be inspected. A discipline or domain-family label may help discovery but is not a source.
 
-* *Workflow & provenance* (BPMN 2.0; W3C PROV‑O)
-* *Services & deontics* (ITIL 4; ODRL 2.2)
-* *Sensing & measurement* (SOSA/SSN; ISO 80000‑1)
-* *Types & taxonomies* (OWL 2; FCA corpus)
-* *Control & actuation* (state‑space control texts; IEC 61131‑3)
+**Step 3 — Inspect the answer-changing role of each candidate.**
+Ask what claim or limit from that edition can change the answer. If that role depends on a disputed expression, pause selection only long enough to use F.0.1's ordinary branch: name the exact source, edition, and passage, and say in plain language what the expression means there. Then return to source selection. Do not run this branch for every candidate. Look deliberately for intended-use contributions, rival explanations, action-changing counterexamples, transfer limits, and material non-fit. One source may serve several roles.
 
-**Step 3 — For each family, sketch 1–3 Context Cards.**
-Prefer canonical, widely cited canons. If a field is fragmented, choose one **exemplar** and one **counter‑voice** to surface heterogeneity.
+**Step 4 — Take the smallest sufficient cut.**
+Retain sources that cover distinct answer-changing roles. Exclude a candidate when no inspected claim from it changes the stated question or use. Do not optimize for a fixed count, diversity score, canonical status, or exhaustive appearance.
 
-**Step 4 — Make **locality** explicit.**
-Treat words as **context‑local**. *Process (BPMN)* ≠ *process (thermodynamics)* ≠ *process (PROV)*. Do not reconcile. Do not average. **Just fix the Contexts.**
+**Step 5 — Record exclusions, gaps, limits, and reopen conditions.**
+Name deliberate exclusions and why they do not change this answer. State a load-bearing source gap rather than treating an unavailable source as irrelevant. Say which question, use, edition, rival, counterexample, or transfer-boundary change would reopen the cut.
 
-**Step 5 — Bound the set.**
-Small enough to hold in working memory. As a rule of thumb:
+**Step 6 — Return one `SourceCutNote`.**
+Identify it under C.2.1 by three values: the ClaimGraph produced by Steps 1–5, the exact receiving question from Step 1 as EntityOfConcern, and the named effective ReferenceScheme that resolves the question, cited editions, and role claims. Keep the intended use in the ClaimGraph. Use a one-screen representation when it helps the receiver hold the result in view. Detailed source analysis stays with the receiving comparison, synthesis, or evidence method.
+**Step 7 — Recover only the meanings the work needs.**
+After the cut is stable, create an F.17 local-sense cell only for a retained expression that later reuse, a claim, a named receiver, or an actual relation needs. Do not postpone a meaning needed by Step 3 to this stage, and do not manufacture a cell for every retained source.
 
-* per unification line: **≥ 3 families**;
-* per family: **1–3 Contexts**.
-  More only if a missing Context hides a known sense‑split you will certainly need.
+#### F.1:4.3 - The `SourceCutNote`
 
-**Step 6 — Postpone bridges.**
-If two Contexts seem “close”, **resist** collapsing. Note the tension and leave any bridge claim to **F.9 Alignment & Bridge**.
+The note's exact EntityOfConcern is the independently identified receiving question from Step 1. It is not the note, its file or one-screen form, the retained-source list, or a question-and-use bundle. The intended use remains part of what the note claims. Name the effective ReferenceScheme explicitly and make sure it resolves the question, every exact source-edition reference, and every answer-changing role statement. If either the question or scheme is unresolved, return that gap and keep the text as an ordinary working note.
 
-### F.1:7 - What to record (conceptual, not clerical)
+Its ClaimGraph states:
 
-**7.1 The two‑minute memory.**
-Everything you need to *think correctly later* fits on an eight‑line card. No registries, no workflows, no storage choices.
+- the receiving question and intended use;
+- every retained source and exact edition;
+- the answer-changing role of each retained source;
+- deliberate exclusions and their reasons;
+- known limits and load-bearing source gaps;
+- the distinction between designed and performed material when it affects the answer; and
+- the conditions that reopen the cut.
 
-**7.2 The Context Card (one‑screen sketch).**
-*(Each bullet is a thought, not a field.)*
+A one-screen source note is a compact representation of the same episteme when it carries the same claims. If its ClaimGraph differs, it is another C.2.1 episteme rather than a second F.1 result kind. A short form does not establish source truth, adequacy, or local meaning.
 
-* **Name & edition.** *“BPMN 2.0 (2011)”* • *“W3C PROV‑O (2013)”* • *“ITIL 4 (2020)”*.
-* **Domain family.** *workflow* / *provenance* / *services* / *deontics* / *sensing* / *types* / *control* … *(informative only; never used to infer meaning).*
-* **Scope gist** *(didactic; ≠ `USM.ScopeSlice(G)`)*. One line that marks the **inside/outside** (“workflow **graphs & participants**”, “provenance **entities/activities/agents**”).
-* **Time stance** *(if inherent)*. Does the canon speak **design** (specifications, models) or **run** (occurrences, acts)?
-* **Lexical trip‑wires.** Known homonyms or false friends in this Context (*“process ≠ thermodynamic process”*, *“role (RBAC) ≠ behavioural role”*).
-* **Neighbour Contexts** *(informative)*. Close cousins that people often conflate (*BPMN ↔ PROV‑O*, *ITIL ↔ ODRL*).
-* **Recency note.** *Current* / *superseded* / *candidate* (only as a reminder to yourself which text you mean).
-* **Why this Context matters here.** One sentence linking to your unification line (“we will name Executions later; PROV‑O keeps them run‑time”).
-* **Diversity signature (dSig).** A 5-characteristics discrete signature for `U.BoundedContext`: **[Sector, Function, Archetype, Regime, MetricFamily]**. Authors SHOULD pick from local discipline taxonomies. **Publish a `dSigSource` list (five refs/URIs, one per characteristic) on every Card**, falling back to free-text only where no canonical term exists. Two Contexts are flagged as **Near-Duplicate** when ≥3 characteristics match. Publish `dSig` and `dSigSource` on every Card.
+#### F.1:4.4 - Optional search assistance
 
-> *If your Card spills beyond a screen, you are collecting facts, not fixing meaning.*
+Use search aids only under a named local policy and only when they help find a suspected omission, rival, counterexample, or near-duplicate. When the result matters, keep the searched corpus, source editions, model or ranking method, scale or threshold, and intended interpretation recoverable.
 
-F1‑Card (normative artefact): { taxonomyRef, embeddingRef, DistanceDef, δ_family, confidenceBand, calibrationSet, edition, subFamilyDef? }. subFamilyDef (optional): declares the stable partitioning below a domain‑family (e.g., taxonomic sub‑fields or CVT clusters with parent family anchors).  When HET‑FIRST quotas refer to “sub‑family”, they MUST use this declared subFamilyDef.
-Declare **DomainDistance** policy (cosine or transport) and δ_family threshold; version as part of DescriptorMapRef. Publish `confidenceBand` (e.g., CI90%) for the calibrated `δ_family`; treat numbers in examples as illustrative, not normative.
+Inspect the underlying source claims before changing the cut. A descriptor match, citation count, embedding distance, LLM answer, rank, threshold, active-learning choice, or portfolio score never admits, excludes, merges, or replaces a source by itself.
 
-### F.1:8 - Invariants (normative, lightweight)
+#### F.1:4.5 - Invariants
 
-1. **Context ≡ U.BoundedContext.** In this pattern, *Context* always means **U.BoundedContext** (per E.10.D1).
-2. **Locality.** Words are **local to their Context**; no global meaning is implied or imported.
-3. **Heterogeneity.** Each unification line considers **≥ 3 distinct Domain families** (labels are informative only).
-4. **Parsimony.** Prefer few, canonical Contexts per family (1–3) that jointly expose the key sense splits.
-5. **No bridging here.** No equivalence or mapping is asserted between Contexts in F.1. (Bridges live in **F.9**.)
-6. **DesignRunTag honesty.** If a canon fixes a DesignRunTag, note it. Do not reinterpret.
-7. **Didactic primacy.** Each Context Card must be readable by a thoughtful engineer in **under two minutes**.
-8. **Domain‑family neutrality.** Domain families **carry no semantics**; they SHALL NOT be used for inheritance, inference, or bridge implication.
-9. **Scope naming separation.** `Scope gist` on Cards is **didactic only**; formal *Scope/entityOfConcern* (=`USM.ScopeSlice(G)` ⊕ `entityOfConcern(GroundingHolon, ReferencePlane)`) is declared **in G.0–G.1**, not in F.1.
-10. **Diversity signature present.** Each Context Card PUBLISHES a `dSig` in the 5‑characteristics form.
-11. **Collision rule.** If any pair of Cards has `dSig` matching on ≥3 characteristics, mark **Near‑Duplicate** and either merge  into one slot or replace one by a Context from a different domain‑family. Record action in SCR.
+1. Every retained source has an inspected answer-changing role for the stated question and use.
+2. The cut is finite, inspectable, and revisable; no universal count establishes sufficiency.
+3. Exact sources and editions remain recoverable.
+4. Source-local meanings remain local; F.1 does not merge or relate them.
+5. The result contains no F.9 relation, synthesis conclusion, truth verdict, reliance decision, or assurance claim.
+6. Domain families and search readings guide discovery only.
+7. Designed descriptions and performed occurrences stay distinct when that source difference matters.
+8. A changed relied premise reopens the affected cut claims; an unrelated edition-number change does not.
+9. One already identified sufficient source is the cheap exit.
+10. A protocol-defined evidence review continues to follow its domain method.
 
-### F.1:9 - Self‑checks (mental, not procedural)
+#### F.1:4.6 - Self-checks
 
-* **The mirror test.** Can you explain *why each Context is inside* your cut **in one breath**? If not, you are surveying for comfort, not for meaning.
-* **The homonym ping.** For each frequent word (*process*, *role*, *service*, *model*, *execution*), can you immediately list **the Contexts where it differs**? If not, add the missing Context.
-* **The bridge itch.** Feel the temptation to say “these are the same”? Good. **Write the itch down** and refuse to scratch it here. That’s F.9’s job.
-* **The memory rule.** If your entire survey cannot be recalled **without opening a document**, it is too large.
+- **Answer-change test.** What can each retained source change in the answer or action? If nothing, exclude it or state the missing role.
+- **Rival-and-limit test.** Is a known rival explanation, counterexample, or transfer limit still hidden? Add the source that makes it inspectable or return the source gap.
+- **One-source test.** Does one already identified source close the question? If yes, stop without using additional F.1 steps.
+- **Locality test.** Have two sources been treated as saying the same thing merely because they use the same word? If so, use the ordinary F.0.1 branch on the exact passages before deciding their roles, then return to selection.
+- **Search-policy test.** Did a score decide membership before source claims were inspected? Undo that decision.
+- **Memory test.** Can the receiver hold the cut and each source's role in view? Remove non-changing material or split genuinely different questions.
+- **Reopen test.** Can the note say what future change would require selection again?
 
-### F.1:10 - Micro‑examples (illustrative only)
+### F.1:5 - Archetypal Grounding
 
-*One unification line: role assignment and performed-work attribution with sensing and execution.*
+#### F.1:5.1 - Three heterogeneous source cuts
 
-* **BPMN 2.0 (2011)** — *workflow family*.
-  *Scope gist:* flow nodes, sequence flows, participants (design‑time).
-  *Trip‑wires:* “process” here is a **graph**; not a run.
-* **W3C PROV‑O (2013)** — *provenance family*.
-  *Scope gist:* **Activity** that uses/generates entities (run‑time).
-  *Trip‑wires:* “activity/process” here is a **temporal occurrence**.
-* **ITIL 4 (2020)** — *services family*.
-  *Scope gist:* service as value co‑creation; SLO/SLA (deontic talk nearby).
-  *Trip‑wires:* “incident/problem/practice” don’t equal workflow tasks.
-* **ODRL 2.2** — *deontics family*.
-  *Scope gist:* permissions, prohibitions, duties (design).
-  *Trip‑wires:* “duty/obligation” ≠ service guarantee mechanics.
-* **SOSA/SSN (2017)** — *sensing family*.
-  *Scope gist:* Observation as an act yielding a Result for a property.
-  *Trip‑wires:* “observation” ≠ “state”; it’s an **act** with a **procedure**.
-* **IEC 61131‑3** — *control languages family*.
-  *Scope gist:* tasks that **execute** programs (run‑time).
-  *Trip‑wires:* “task/execution” ≠ “workflow process”.
+##### F.1:5.1.1 - Role assignment, performed work, sensing, and execution
 
-> With only these Contexts fixed, later steps become almost mechanical: F.2 harvests terms **inside** each Context; F.3 clusters **within** each Context; F.4 names roles or statuses pointing to **SenseCells**; F.9 draws the bridges you refused to draw here.
+Candidate sources include BPMN 2.0 (designed workflow structures), PROV-O (performed activities and provenance), ITIL 4 (service vocabulary), ODRL 2.2 (permissions, prohibitions, and duties), SOSA/SSN (observations and results), and IEC 61131-3 (control-program execution). Retain only those whose exact claims change the receiving question.
 
-### F.1:11 - Anti‑patterns & remedies
+The cut keeps false friends visible: a BPMN participant is not an RBAC role; a PROV activity is not a BPMN process; an SOSA observation is an act, not a status; an ITIL incident is not automatically a plant fault. F.1 exposes these source roles but does not settle their relations.
 
-| #  | Anti‑pattern  | Symptom in practice  | Why it harms thinking  | Remedy (conceptual move)  |
-| --- | --- | --- | --- | --- |
-| **A1**  | **“One‑Book Domain”**  | Everything is justified from a single canon (“X is the domain”).  | Projectionism; blinds heterogeneity; brittle to new editions.  | Enforce **heterogeneity**: pick **≥ 3 distinct domain families** per unification line (§6 Step 2, §8‑3).  |
-| **A2**  | **Context‑less talking**  | Words like *process*, *role*, *service* used without naming a Context.  | Global words drift; later steps must guess meaning.  | Always **prefix with the Context** in thought and prose: *process (BPMN)*, *activity (PROV)*, *service (ITIL)* (§4, §7.2). |
-| **A3**  | **Edition blur**  | “BPMN” or “ITIL” cited with no year or profile.  | Inadvertent sense shifts; debates about “what the book says.”  | Cards keep **name + edition** on the first line; think with the exact edition (§7.2).  |
-| **A4**  | **Phonebook survey**  | Dozens of Contexts; no one can recall the cut.  | Violates didactic primacy; people default to global talk.  | **Parsimony rule**: 1–3 Contexts per family, just enough to reveal key sense‑splits (§6 Step 5, §8‑4, §9 “memory rule”).  |
-| **A5**  | **Bridge‑by‑stealth**  | Phrases like “these are basically the same” inside the survey.  | Hides losses; imports meaning across Contexts without scrutiny.  | **No bridging here**; write the *itch to bridge* down as an **F.9** bridge question (§6 Step 6, §8‑5).  |
-| **A6**  | **Role/status conflation** | *Role (RBAC)* treated as behavioural mask; *duty (ODRL)* treated as service runtime. | Category bleed across families.  | Cards carry **lexical trip‑wires** (“RBAC role ≠ behavioural role”; “duty ≠ runtime guarantee”) (§7.2).  |
-| **A7**  | **Temporal fudge**  | *Activity* or *execution* discussed without run/design stance.  | Misplaced assertions; design-time descriptions treated as occurrences. | Cards note **time stance** when inherent (design vs run) (§7.2, §8‑6).  |
-| **A8**  | **Domain = Context**  | A “domain” label used as if it were a Context (e.g., “control” == one context).  | Shelf label mistaken for a canon; sense becomes fuzzy.  | **Domain family is informative only**; Contexts are **U.BoundedContext** tied to specific canons (§5, §7.2).  |
-| **A9**  | **Context inheritance**  | Arranging Contexts in is‑a hierarchies (“PROV is‑a BPMN”).  | Suggests meaning flows by inheritance; erases locality.  | **No is‑a among Contexts**; relations between Contexts live in **F.9 bridges** (§8‑5).  |
-| **A10** | **Didactic bloat**  | Context Card spills into pages of notes.  | Teaching load overwhelms the core idea.  | **One-screen Card**; everything else belongs to later patterns (§7.1-§7.2).  |
-| **A11** | **Family‑based inference** | Treating Domain‑family membership as implying similarity/equivalence. | Smuggles semantics via shelf labels; breaks locality. | **Domain family is informative only**; locality and any Cross‑context relation must be explicit (F.9). |
+##### F.1:5.1.2 - Methods, types, and measurement
 
-### F.1:12 - Worked examples
+SPEM 2.0 or ISO 24744 may change the reading of Method and MethodDescription; OWL 2 and formal concept analysis may change kind reasoning; SOSA/SSN and ISO 80000-1 may change measurement and quantity claims. The cut preserves the source-fixed differences rather than making *method*, *concept*, or *measurement* globally uniform.
 
-> Each example shows **the cut** (the Contexts you keep in view) and the **thinking pay‑off** you get *before* any harvesting, clustering, or bridging.
+##### F.1:5.1.3 - Control, actuation, and services
 
-#### F.1:12.1 Role assignment and performed-work attribution with sensing and execution (service acceptance)
+Control-theory sources, IEC 61131-3, ISA-95, ITIL 4, and SOSA/SSN can contribute different claims about controller design, program execution, integration, service commitments, and observations. A current question may need only a subset. *Actuation* is not a service promise, and *incident* is not a plant fault merely because the words occur near operational work.
 
-**Unification line.** Enactment + KD‑CAL (sensing) + Sys‑CAL (execution).
+#### F.1:5.2 - Minimal worked source cut
 
-**Contexts (six Cards).**
+The project brief already identifies this receiving question: **Can one contribution use “process” for both a workflow description and a performed occurrence?** The exact question, not the note or source list, is the `SourceCutNote`'s EntityOfConcern. The project names its effective ReferenceScheme **Workflow and occurrence source cut, August 2026**; that scheme fixes the three editions below and the ordinary-English role statements. The intended use stays in the ClaimGraph.
 
-1. **BPMN 2.0 (2011)** — workflow family; **design**; *graph of flow nodes, participants*.
-2. **PROV‑O (2013)** — provenance family; **run**; *Activity uses/generates Entities; Agents*.
-3. **ITIL 4 (2020)** — services family; **design**; *service, SLO/SLA vocabulary*.
-4. **ODRL 2.2** — deontics family; **design**; *permission / prohibition / duty*.
-5. **SOSA/SSN (2017)** — sensing family; **run**; *Observation as act with Result*.
-6. **IEC 61131‑3** — control languages; **run**; *tasks execute control programs*.
+```text
+Receiving use: decide which subjects the later pattern must keep distinct.
 
-**Thinking pay‑off (examples).**
+Retain:
+- OMG BPMN 2.0.2 (January 2014), §10.1: its workflow-structure claim changes the design-description side.
+- W3C PROV-O Recommendation (30 April 2013), §3.1: its Activity claim supplies the performed-occurrence contrast.
+- W3C SOSA/SSN Recommendation (19 October 2017), §4.3.2.2: Observation supplies an action-changing counterexample—an act that follows a Procedure and yields a Result, not a workflow graph.
 
-* You stop saying “*process uptime*” and think **Execution (IEC)** measured by **Observation (SOSA)** compared against **SLO (ITIL)**—three Contexts, three senses.
-* You mark a trip‑wire: **RBAC role** (not in this cut) is *not* a **behavioural role (BPMN participant)**.
-* You resist equating **PROV Activity** with **BPMN workflow**; later **F.9** may relate them with explicit loss.
+Exclude for now:
+- thermodynamic-process literature: no inspected claim changes this stated use.
 
-#### F.1:12.2 Method quartet with types & measurement (model state graph)
-
-**Unification line.** Method/work stack (A.3/A.15/B.1.5) + Kind-CAL + KD‑CAL.
-
-**Contexts (five Cards).**
-
-1. **SPEM 2.0 / ISO 24744** — methods family; **design**; *Method and MethodDescription language*.
-2. **OWL 2 (profiles)** — types family; **design**; *class, subclass, equivalent class*.
-3. **FCA corpus** — types family; **design**; *concept lattices*.
-4. **SOSA/SSN (2017)** — sensing family; **run**; *Observation / Procedure*.
-5. **ISO 80000‑1 (2022)** — metrology family; **design**; *quantity kinds, units*.
-
-**Thinking pay‑off.**
-
-* You keep **Method** (abstract how‑to) separate from **MethodDescription** (epistemic recipe) and **Execution** (run) because the Contexts already split design vs run.
-* You avoid treating **FCA "concept"** as a root kind; later F.9 can bridge OWL classes to FCA concepts with cautions.
-
-#### F.1:12.3 Control & actuation with services (operational SLOs in plants)
-
-**Unification line.** Sys‑CAL + LCA‑CAL (planned) + services/deontics.
-
-**Contexts (five Cards).**
-
-1. **State‑space control texts** — control family; **design**; *controller/plant, feedback*.
-2. **IEC 61131‑3** — control languages; **run**; *task, program execution*.
-3. **ISA‑95** — integration family; **design**; *levelled layers, interfaces*.
-4. **ITIL 4 (2020)** — services family; **design**; *SLO/SLA*.
-5. **SOSA/SSN (2017)** — sensing family; **run**; *Observation*.
-
-**Thinking pay‑off.**
-
-* “**Actuation**” is recognised as **control output** (Sys‑CAL), not a *service promise*.
-* “**Incident**” (ITIL) is not a plant *fault* (Sys‑CAL); Contexts deter category errors.
-
-### F.1:13 - Reasoning primitives (judgement schemas, notation‑free)
-
-> These are **mental moves**, not queries. They read “given these thoughts, this conclusion is safe to hold (conceptually).”
-
-1. **Context set for a line**
-  `line L declared ⊢ Contexts(L) = {C₁,…,Cₙ}`
-  *Reading:* For a unification line **L**, the Contexts you deliberately keep in view are `{C₁,…,Cₙ}` (from your Cards).
-
-2. **Heterogeneity check**
-  `families(L) = F ⊢ heterogeneous(L) ≡ (|distinct(F)| ≥ 3)`
-  *Reading:* Your cut is heterogeneous if it spans at least three **domain families**.
-
-3. **Parsimony check**
-  `Contexts(L)=R, families(L)=F ⊢ parsimonious(L) ≡ (∀f∈F: 1≤|R∩f|≤3)`
-  *Reading:* Each family contributes a few Contexts, not a phonebook.
-
-4. **Locality assertion**
-  `term w, C∈Contexts(L) ⊢ meaning(w)@C is local`
-  *Reading:* A word’s sense is **context‑local**; no global meaning is implied.
-
-5. **Time‑stance guard**
-  `C has stance s∈{design,run} ⊢ claims@C must respect s`
-  *Reading:* If a Context is design‑time, do not make run‑time claims in it (and vice versa).
-
-6. **Trip‑wire recall**
-  `C lists tripWires T ⊢ for any w∈T, require Context‑prefix when speaking`
-  *Reading:* Words on the trip‑wire list must be spoken with the Context name.
-
-7. **Bridge embargo**
-  `C₁≠C₂ ⊢ no‑equivalence(C₁,C₂) within F.1`
-  *Reading:* F.1 never asserts equivalence across Contexts; postponement is principled, not procrastination.
-
-8. **Context sufficiency probe**
-  `common‑word w used in L ∧ w not covered by any trip‑wire ⊢ consider adding a Context that makes w differ`
-  *Reading:* If a frequent word has no deliberate sense‑split in your cut, you may be missing a Context.
-
-9. **Memory rule**
-  `|Contexts(L)| too large ⊢ reduce until a careful mind can recite them unaided`
-  *Reading:* The survey should live in memory, not in a registry.
-
-### F.1:14 - F1‑Card example (informative)
-```
-F1-Card v2025‑Q3:
-  taxonomyRef: OpenAlex topics/fields (snapshot 2025‑08)
-  embeddingRef: SPECTER2(2023) fine‑tuned@OA‑2025‑08
-  DistanceDef: cosine on centroid embeddings (window 36 mo)
-  δ_family: 0.35 (calibrated on control set; CI90% [0.33,0.37])
-  calibrationSet: 120 labeled pairs (same vs different families)
-  edition: 2025‑Q3
+Known limit: service commitments are outside this cut.
+Reopen if: the use adds physical transformation or service commitments, a relied edition changes the relevant claim, or a known counterexample no longer fits.
+Search policy: none needed for this bounded question.
 ```
 
-### F.1:15 - Relations (with other patterns)
+The resulting `SourceCutNote` is identified by that ClaimGraph, the stated receiving question, and the named reading scheme. Because this cut turns on the difference between a designed workflow and a performed occurrence, the project recovers any disputed *process* reading through ordinary F.0.1 while inspecting source roles, before stabilizing the cut. It adds an F.17 cell afterward only if later reuse, a claim, a named receiver, or an actual relation needs one.
 
-**Builds on:**
-E.10.D1 **Lexical Discipline for “Context” (D.CTX)** — ensures *Context* ≡ *U.BoundedContext* and reserves “Problem Frame” for narrative use.
-A.7 **Strict Distinction** — guards EntityOfConcern/Description-episteme/publication-carrier and DesignRunTag splits while you cut Contexts.
-A.11 **Ontological Parsimony** — motivates the small cut.
+#### F.1:5.3 - Portable first-hour case — function-to-module allocation
 
-**Constrains:**
-**F.2** (Term Harvesting): harvest **inside** Contexts named here; every occurrence carries a Context name.
-**F.3** (Intra‑Context Sense Clustering): cluster **per Context**; no Cross‑context sense claims.
-**F.4** (Role Descriptions): any role template or status template must cite a **SenseCell** that lives in a Context from this cut.
-**F.9** (Alignment & Bridge): only F.9 may relate Contexts; never F.1–F.4.
+“First hour” means a compact entry slice, not a deadline or completeness claim.
 
-**Used by.**
-Extension patterns in Part C (Sys‑CAL, KD‑CAL, Kind-CAL, LCA‑CAL) plus the method/work stack (A.3/A.15/B.1.5) as the *lexical starting grid* for their examples and definitions.
+**Receiving question.** Which current FPF sources must a Systems Engineering author use to prepare a first function-to-module allocation teaching slice without collapsing functions into modules? The project identifies this sentence as one exact question before treating the note as a C.2.1 episteme; that question is its EntityOfConcern.
 
-### F.1:16 - Migration notes (conceptual)
+**Receiving use.** Prepare a slice that helps a practitioner generate and compare candidate bearers, modules, allocations, interfaces, and trade-offs instead of copying functions into a component list or selecting familiar bearers first. This use stays in the note's ClaimGraph.
 
-1. **New edition appears.** Keep the old Card; add a new Card with the new edition. If the sense shifts, treat it as a **new Context**; if it is strictly editorial, mark recency but keep one context.
-2. **New family emerges.** If a missing family explains recurrent confusion in your line, admit it with **one exemplar** Context; remove a less informative Context to keep parsimony.
-3. **Language variants.** Treat language editions as **separate Contexts** unless the canon itself declares a single normative bilingual mapping.
-4. **Trip‑wire growth.** When you notice a recurring confusion, add a crisp trip‑wire to the relevant Card (one line; no essays).
-5. **Bridges discovered later.** Do not back‑port bridges into F.1; leave the Cards untouched and record the mapping in **F.9**.
-6. **Dormant Contexts.** If a Context no longer contributes to any active line, move it to a *parking shelf* (informative note on the Card) rather than deleting it.
+**Effective ReferenceScheme.** `FPFCoreReferenceScheme`, applied to the FPF August 2026 edition and the exact section locators below.
 
-### F.1:17 - Acceptance tests (SCR/RSCR — concept‑level)
+**Retained sources and answer-changing roles.** All five are exact passages in that edition.
 
-#### F.1:17.1 - Static conformance checks (SCR)
+1. **A.6.F §§4.2 and 4.5.** Separates the possible subjects hidden by function-like wording and requires function, bearer, flow, module allocation, and interface claims to remain distinct. This blocks the one-function-one-component shortcut.
+2. **A.6.M §§4 and 4.3.** Treats module use as claim content over exact holons, allows many-to-many or still-unallocated functional claims, and requires an actual interface specification when compatibility or substitution is claimed. This changes what an allocation row must show.
+3. **C.30.TFS-REL §4.2.** Relates functional structure to selected transformation-flow structure without identifying them. This exposes candidate flow topology, crossings, and correspondence limits that can change bearer placement.
+4. **C.31 §4.5.** Makes function-module alignment, interface burden, and flow-boundary alignment separate characteristics rather than one modularity score. This changes the trade-offs the comparison must expose.
+5. **C.32 §§4–5.** Starts candidate synthesis from functional demand and candidate bearers, keeps materially different configurations visible, and records expected gain, known loss, constraints, and source-return conditions. This prevents the source cut from pretending to choose the architecture.
 
-* **SCR‑F1‑S01 (Heterogeneity).** For each unification line, the set of Cards spans **≥ 3 distinct domain families**.
-* **SCR‑F1‑S02 (One‑screen Cards).** Each Card fits on one screen: name+edition; family; scope gist; time stance (if inherent); 1–3 trip‑wires; neighbour Contexts (optional); recency note.
-* **SCR‑F1‑S03 (Locality pledge).** Nowhere in F.1 are Cross‑context equivalences or merges asserted.
-* **SCR‑F1‑S04 (Parsimony).** In every family, **1–3** Contexts are kept; if more, a clear sentence justifies each extra Context’s unique sense contribution.
-* **SCR‑F1‑S05 (Context discipline).** “Context” is used only as a synonym of **U.BoundedContext**; “domain” appears only as an informative family label.
-* **SCR‑F1‑S06 (Temporal honesty).** If a canon fixes DesignRunTag, the Card states it.
-* **SCR‑F1‑S07 (Family neutrality).** No claim, classification, or relation in F.1 relies on Domain‑family membership; families appear only as shelf labels on cards.
-* **SCR‑F1‑S08 (dSig present).** Every Context Card has a 5‑characteristics `dSig`.
-* **SCR‑F1‑S09 (Collision policy).** Any pair with `dSig` match on ≥3 characteristics is either merged or replaced; SCR records the action.
+**Deliberate limits.** The cut claims neither an exhaustive survey of allocation algorithms nor one module taxonomy or cross-sector optimum. It does not decide the final DPF pattern identity. The campaign-specific guide and research-source pilot remains in `FPF-DPF-CLAIM-PLACEMENT-CAMPAIGN/PILOT-SYSTEMS-ENGINEERING-FUNCTION-TO-MODULE-ALLOCATION.md`; it is not a hidden dependency of this portable example.
 
-#### F.1:17.2 - Regression checks (RSCR)
+**First result.** One `SourceCutNote` whose ClaimGraph contains the five roles, use, limits, and reopen conditions; whose EntityOfConcern is the stated question; and whose effective scheme is `FPFCoreReferenceScheme` for FPF August 2026. The later comparison must expose unsupported capabilities, unallocated functions, unresolved interfaces, alternatives, trade-offs, and accepted losses.
 
-* **RSCR‑F1‑E01 (Edition churn).** When a new edition is added, prior Cards remain; no silent replacement.
-* **RSCR‑F1‑E02 (Family balance).** Adding/removing Cards does not drop any line below **three families**.
-* **RSCR‑F1‑E03 (Trip‑wire coverage).** After introducing a new Context, the trip‑wire lists of neighbouring Contexts are reconsidered and updated if needed.
-* **RSCR‑F1‑E04 (No creep).** Periodically apply the **memory rule**: if the cut no longer fits in working memory, shrink it.
+**Reopen when.** A relied FPF passage changes, the question expands to external allocation algorithms or another domain, or the intended DPF use changes the required answer or boundary.
 
-### F.1:18 - Didactic distillation (90‑second teaching script)
+#### F.1:5.4 - Readable reasoning moves
 
-> “Before you name anything, **fix the context of meaning**. A *Context* is a **U.BoundedContext** tied to a specific canon—*BPMN 2.0*, *PROV‑O*, *ITIL 4*, *SOSA/SSN*, *IEC 61131‑3*, *OWL 2*. Words are **local to Contexts**: *process (BPMN)* is a workflow graph, *activity (PROV)* is a run‑time occurrence, *service (ITIL)* is a promise vocabulary. Cut the landscape so each unification line sees **at least three domain families**, with **one‑screen Cards** per Context (scope gist, time stance, trip‑wires). **Do not bridge** Contexts here—just write down the itch to bridge as an **F.9** bridge question. Keep the cut **small enough to remember**. With Contexts fixed, harvesting (F.2), local clustering (F.3), role template or status templates (F.4), and explicit Cross‑context bridges (F.9) become straightforward—and you avoid naming ghosts that come from words floating without walls.”
+- **Retain:** “This exact source stays because this inspected claim changes the answer in this way.”
+- **Exclude:** “No inspected claim from this source changes the stated use; record the exclusion and what would reopen it.”
+- **Return a gap:** “This unavailable or uninspectable source may be load-bearing; the cut remains limited here.”
+- **Keep meanings local:** “Selection puts both sources in view; it does not say their terms are identical or related.”
+- **Use search assistance:** “The ranking tells us what to inspect next; the source claim decides whether it enters the cut.”
+- **Reopen:** “This question, use, relied claim, rival, counterexample, or transfer boundary changed, so select again.”
+
+#### F.1:5.5 - Didactic distillation
+
+> State and independently identify the question; keep the later use in the claims. Keep a source because an inspected claim can change the answer, expose a rival or counterexample, or mark a transfer limit. Return one finite `SourceCutNote` whose ClaimGraph carries those roles, exclusions, limits, and reopen conditions, whose EntityOfConcern is the exact question, and whose named effective scheme resolves the question and exact editions. Search scores may guide inspection; they do not admit or exclude a source. Stop when additional candidates do not change the answer.
+
+### F.1:6 - Bias-Annotation
+
+- **Gov:** Authority, popularity, international status, or sponsorship does not decide membership; the receiving question and inspected claims do.
+- **Arch:** The method keeps source roles explicit and the active cut small without claiming exhaustive coverage.
+- **Onto/Epist:** A source, edition, source claim, local meaning, source-cut episteme, and representation remain different.
+- **Prag:** Direct use of one identified source is the cheap exit. Search assistance earns its cost only when it improves candidate inspection.
+- **Did:** A one-screen representation protects working memory; detailed analysis stays with the receiving work.
+- **Scope:** Practitioners use F.1 to select sources, not to establish truth, adequacy, semantic relations, synthesis, reliance, or assurance.
+
+### F.1:7 - Conformance Checklist
+
+#### F.1:7.1 - Static checks
+
+- **SCR-F1-S01 (Question and use).** The receiving question is independently identified as the note's exact EntityOfConcern; the intended use and the source difference that can change the answer remain in its ClaimGraph.
+- **SCR-F1-S02 (Exact sources).** Every retained source and edition is recoverable.
+- **SCR-F1-S03 (Answer-changing roles).** Every retained source has an inspected role; exclusions and source gaps are explicit.
+- **SCR-F1-S04 (Finite and inspectable).** The cut can be held in view without dropping a known answer-changing source merely to satisfy a count.
+- **SCR-F1-S05 (C.2.1 identity and one result).** The `SourceCutNote`'s ClaimGraph, exact receiving-question EntityOfConcern, and effective ReferenceScheme are all recoverable. The scheme resolves the question, exact source editions, and role claims. A file, source list, one-screen form, or question-and-use bundle supplies none of these values by form and does not become another result kind.
+- **SCR-F1-S06 (Locality).** No cross-source equivalence, merge, or relation is asserted by selection.
+- **SCR-F1-S07 (Temporal honesty).** Designed and performed source claims remain distinct when the difference affects the answer.
+- **SCR-F1-S08 (Family neutrality).** No meaning, relation, or membership decision relies on a domain-family label.
+- **SCR-F1-S09 (Named search policy).** Any material search aid has a recoverable policy, corpus, method or model edition, and interpretation.
+- **SCR-F1-S10 (No algorithmic gate).** A search reading changes the cut only after inspection of source claims.
+- **SCR-F1-S11 (Reopen conditions).** The result says which question, use, edition, rival, counterexample, or transfer-boundary change reopens it.
+- **SCR-F1-S12 (Domain-method boundary).** A required systematic or appraisal-bearing review remains with its domain method.
+
+#### F.1:7.2 - Regression checks
+
+- **RSCR-F1-E01 (Edition change).** Recheck only answer-changing claims that used the changed edition.
+- **RSCR-F1-E02 (Use change).** Recheck which sources, rivals, counterexamples, and limits matter when the question or use changes.
+- **RSCR-F1-E03 (New false friend).** Add a concise warning when recurrent wording confusion changes the receiving answer.
+- **RSCR-F1-E04 (Bounded cut).** Remove non-changing sources or split genuinely different questions when the active cut can no longer be inspected together.
+- **RSCR-F1-E05 (Search drift).** A changed taxonomy, corpus, model, descriptor, scale, distance, threshold, or rank cannot silently change membership.
+
+### F.1:8 - Common Anti-Patterns and How to Avoid Them
+
+| Anti-pattern | Symptom | Repair |
+| --- | --- | --- |
+| One-book domain | One influential source is treated as the whole answer despite a known rival or transfer limit. | State the question and add each source whose inspected claims change it. |
+| Reading-list cut | Many sources are retained without distinct roles. | Keep only answer-changing roles and record deliberate exclusions. |
+| Edition blur | A source is named without the edition that fixes the relied claim. | Identify the edition and reopen only affected claims when it changes. |
+| Domain-family inference | A shelf label is treated as evidence of meaning, relation, or relevance. | Use the label only to find sources; inspect their claims. |
+| Relation by stealth | Selection prose says two sources are “basically the same.” | Keep them distinct and open an F.9 question if an actual relation is needed. |
+| Designed-versus-performed collapse | A design description is treated as a performed occurrence. | State the source role and the time distinction it contributes. |
+| Search score as gate | Rank, distance, threshold, or model answer admits or excludes a source. | Use the reading to prioritize inspection; decide from the source's contribution. |
+| Exhaustive pretense | A small cut is reported as complete literature coverage or saturation. | State its question-relative limits and use the domain review method when needed. |
+| Compact-note inflation | The one-screen representation grows into a second source analysis. | Keep the ClaimGraph concise and place detailed analysis with the receiving work. |
+| Context container revival | Sources or meanings are treated as members of a universal Context object. | Identify the exact sources. When a source-role decision depends on a disputed expression, recover its plain local meaning through F.0.1 before selection; create an F.17 cell only for a later durable need. |
+
+### F.1:9 - Consequences
+
+The source cut becomes small enough to inspect, while a decisive rival, counterexample, or transfer limit cannot be discarded merely to satisfy a count. Later work can recover why each source was present, which edition was used, what the cut deliberately omitted, and what change reopens it.
+
+The cost is explicit judgment. The author must say what each source can change and disclose a load-bearing gap instead of treating absence as evidence against a claim. Unknown rivals can still be missed, so citation chasing, expert leads, search aids, or a domain review method may remain necessary. Their outputs are candidates until source claims are inspected.
+
+The cut is not evidence that its sources are true, sufficient, representative, mutually compatible, or safe to rely on. Those conclusions belong to the receiving synthesis, domain evidence method, F.9 relation, A.10 reliance account, or B.3 assurance claim.
+
+#### F.1:9.1 - Changes that reopen or revise a cut
+
+1. A source edition changes a relied claim, limit, or distinction.
+2. The receiving question or intended use changes.
+3. A new rival explanation, action-changing counterexample, or transfer limit appears.
+4. A formerly retained source no longer changes the answer.
+5. A language edition changes distinctions used by the result; treat editions separately unless the source supplies a mapping that preserves them.
+6. Search-policy drift reveals a candidate but never changes membership without source inspection.
+7. A later F.9 relation is proposed; keep source selection unchanged unless that proposal changes the source roles themselves.
+
+### F.1:10 - Rationale
+
+Source selection for conceptual work is neither statistical sampling nor a race to the largest bibliography. The receiving question determines which source differences matter. A source belongs in the active cut when an inspected claim can change the answer, expose a rival or counterexample, or mark where transfer fails.
+
+This keeps the useful part of purposive and iterative sampling—selection for a stated analytic purpose—without importing another field's population, richness scale, saturation claim, or count convention. It also keeps the useful part of systematic-search and AI-assisted screening—recoverable searches and efficient candidate discovery—without treating search coverage, rank, or reporting conformance as source adequacy.
+
+### F.1:11 - SoTA-Echoing
+
+| Current method line and exact sources | Decision and effect in `F.1` | Limit retained |
+| --- | --- | --- |
+| Page et al., *The PRISMA 2020 statement: an updated guideline for reporting systematic reviews* (2021), and Rethlefsen et al., *PRISMA-S: an extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews* (2021). | **Adapt as a boundary source.** When a systematic review is actually required, keep its eligibility, information sources, searches, updates, and reporting recoverable and continue with that domain method. | Reporting guidance does not select sources for an ordinary F.1 question or establish conceptual relevance. |
+| Ames, Glenton, and Lewin, *Purposive sampling in a qualitative evidence synthesis: a worked example from a synthesis on parental perceptions of vaccination communication* (2019), DOI 10.1186/s12874-019-0665-4. | **Adapt.** Fit a manageable selection to the stated objective while keeping variation and deliberate omissions visible; in F.1, retain sources only for inspected answer-changing roles. | The health-review frame and richness scale are not FPF admission rules. |
+| Dixon-Woods et al., *Conducting a critical interpretive synthesis of the literature on access to healthcare by vulnerable groups* (2006), read with Perlman, Ben-Sheleg, and Ellen, *Making sense of conducting a critical interpretive synthesis: A scoping review* (2026; online 2025). | **Adapt and bound.** Let a compass question and an emerging explanation reopen iterative selection across heterogeneous evidence. | F.1 stops with the source cut; it performs neither synthesis nor a saturation claim. |
+| Malterud, Siersma, and Guassora, *Sample Size in Qualitative Interview Studies: Guided by Information Power* (2016), DOI 10.1177/1049732315617444. | **Adapt only as a bounded analogy.** Reject a universal source quota and make sufficiency relative to the receiving question and use. | Interview samples and source selections are different objects; F.1 imports neither the information-power model nor a saturation rule. |
+| van de Schoot et al., *An open source machine learning framework for efficient and transparent systematic reviews* (2021), DOI 10.1038/s42256-020-00287-7. | **Adapt as optional search assistance.** Use active learning to prioritize candidate inspection under a named local search policy; decide membership only after inspecting source claims. | Ranking efficiency establishes neither relevance, truth, nor completeness. |
+
+The method remains question-relative, claim-inspecting, finite, and explicit about limits. Reopen the comparison when current source-selection practice offers a cheaper way to expose answer-changing omissions without turning a search proxy into a selection verdict.
+
+### F.1:12 - Relations
+
+**Builds on.**
+
+- `C.2.1` identifies the `SourceCutNote` from its ClaimGraph, the exact receiving question as EntityOfConcern, and its effective ReferenceScheme, and distinguishes that episteme from its representation.
+- `F.0.1` supplies a plain local reading during selection when a candidate's answer-changing role depends on a disputed expression.
+- `F.17` supplies a durable local-sense cell after selection only when later reuse, a claim, a named receiver, or an actual relation needs one.
+- `A.11` supplies the parsimony test; finiteness does not replace relevance with a fixed count.
+- `E.15` supplies affected-premise reopening across source editions.
+
+**Related later uses.**
+
+- `F.0.2` can compare or synthesize the exact sources, roles, limits, and reopen conditions returned here.
+- `F.9` defines any actual relation between distinct recovered local senses; F.1 asserts none.
+- `G.2` supplies the broader refreshable SoTA-pack method when that heavier result is required.
+- Use `A.10` for reliance and `B.3` for assurance; source selection establishes neither.
+- An author of a subject pattern or DPF may use the source cut directly when an inspectable source basis is needed but no cross-source synthesis is current.
 
 ### F.1:End

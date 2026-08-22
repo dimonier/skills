@@ -5,13 +5,21 @@ status: Stable
 keywords:
   - Method
   - MethodDescription
-  - Work
-  - Actuation
-  - Role–Method–Work alignment.
+  - dated Work
+  - control or transformation output
+  - enactment
+  - description use
+  - "performed-Work attribution."
 dependencies:
   builds_on:
-    - F.9
+    - A.3
     - A.15
+    - B.1.5
+    - E.10.D1
+  coordinates_with:
+    - F.4
+    - F.6
+    - F.9
 ---
 
 # F.11: Method Quartet Harmonisation
@@ -24,322 +32,226 @@ dependencies:
 
 ## F.11 - Method Quartet Harmonisation
 
-**“Keep the *how* (Method), the *recipe* (MethodDescription), the *happening* (Work/Execution), and the *control push* (Actuation) in their own Contexts—then relate them explicitly.”**
+**“Ask separately about the way, its description, the Work that occurred, and any control output produced during that Work.”**
 
 **Status.** Architectural pattern.
-**Builds on:** E.10.D1 **D.CTX** (Context discipline); A.3/**A.3.1**/**A.3.2** (Transformer Constitution; `U.Method`, `U.MethodDescription`); A.15/**A.15.1** (`U.Work` as record of occurrence); Sys‑CAL (control/actuation semantics); KD‑CAL (observation).
-**Coordinates with.** F.1–F.3 (Contexts, Seeds → SenseCells), F.4 (Role Description), F.5 (Naming), F.6 (Role Assignment & Enactment Cycle (Six-Step)), F.7/F.9 (Bridges), F.10 (Status families & Windows).
-**Aliases (informative).** *Method/Spec/Work or Actuation split*; *DesignRunTag harmonisation*.
+**Builds on:** E.10.D1 **Recovering What “Context” Means in Use**; A.3, A.3.1, and A.3.2 for `U.Method` and `U.MethodDescription`; A.15 and A.15.1 for dated `U.Work`; C.2.1 for the identity of each claim-bearing episteme or report.
+**Coordinates with.** F.0.1 and F.17 for exact source-local meaning and an optional durable cell; F.4 for local system-role-kind descriptions; F.5 for naming; F.6 for system-role assignment and performed-Work attribution; F.9 only for an actual relation between distinct local meanings; F.10 for status and windows; B.1.5 for Method composition and Work enactment.
+**Aliases (informative).** *Method, description, Work, and control-output split*; *design and run distinction*.
 
 ### F.11:1 - Intent & applicability
 
-**Intent.** Provide a **notation‑free, Context‑aware map** that keeps four notions distinct and connectable:
+**Intent.** Give a cold reader four practical questions that prevent common category errors:
 
-* **`U.Method`** — the abstract **way of doing** (design‑time concept).
-* **`U.MethodDescription`** — the **recipe episteme** that describes a Method.
-* **`U.Work`** (informal: *Execution*) — the **run‑time occurrence** of doing (recorded event).
-* **`U.Actuation`** — the **control output** applied to a plant (domain‑specific Work in Sys‑CAL).
+1. What **`U.Method`**, the way of doing, is meant?
+2. What **`U.MethodDescription`**, the episteme whose one exact `EntityOfConcern` is that Method, is being used?
+3. What dated **`U.Work`** actually occurred?
+4. Did that Work produce a control signal, command, setpoint, transformation output, or other domain-specific output that matters to this claim?
 
-The pattern makes the split **usable across FPF patterns** (Role Assignment & Enactment, Sys-CAL, KD-CAL, Kind-CAL, planned LCA-CAL) and **legible across Contexts** (SPEM/BPMN for design; PROV-O/SOSA for run; IEC 61131-3/state-space for control).
+These questions are a reading aid, not a universal four-kind ontology. The fourth answer is whatever value and relation its direct control or transformation pattern defines; F.11 does not mint a universal `U.Actuation` kind.
 
-**Applicability.** Any time a discussion risks **mixing designs with executions**, **recipes with runs**, or **workflow with control signals**; whenever you need to **name** or **reason** about “how we do X”, “the SOP/script/model”, “the actual run”, or “the actuator push”.
+**Use this when.** A sentence risks mixing a way of doing with its specification, a design with an occurrence, an approved description with evidence of results, or a Work occurrence with one of its outputs.
 
-**Non‑goals.** No team workflow, no editors, no tools. No prescriptive file formats. **Only** conceptual distinctions and safe reasoning moves.
+**Do not use this when.** The statement already names one exact value and direct relation unambiguously. F.11 does not prescribe files, tools, workflows, or a generic fact-transfer relation.
 
 ### F.11:2 - Problem frame
 
-When Method, MethodDescription, Work, and Actuation **collapse into one another**, models drift:
-
-1. **DesignRunTag blur.** A BPMN *process* (design graph) is cited as if it had *happened*.
-2. **Recipe/approval fallacy.** An *approved* SOP (MethodDescription) is treated as proof that the service met its SLO.
-3. **Execution ≟ control.** PLC *task execution* logs are conflated with *control outputs* (actuation), hiding stability issues.
-4. **Cross‑context homonymy.** *Activity, task, execution, process, command* change sense across Contexts; inferences quietly break.
+1. **Design-time and run-time blur.** A BPMN process description is cited as though it happened.
+2. **Description mistaken for result.** Approval of an SOP is treated as proof that later Work met a target.
+3. **Work mistaken for output.** A log of setpoints is treated as the whole Work occurrence.
+4. **Word drift.** *Activity*, *task*, *execution*, *process*, and *command* change meaning across sources.
+5. **Agency blur.** A Method or description is said to act, or a vague “System-in-Role” replaces the actual System, local system-role kind, assignment, Work, and performed-Work attribution.
 
 ### F.11:3 - Forces
 
-| Force  | Tension to resolve  |
+| Force | Tension to resolve |
 | --- | --- |
-| **Fidelity vs didactics**  | We must honour domain nuance yet teach a split that fits in working memory.  |
-| **Universality vs locality** | Quartet must be reusable across FPF patterns, while meanings stay **context‑local**.  |
-| **Evidence vs approval**  | Evidence (run‑time) should support decisions, but must **not** be mistaken for deontic approval (design‑time). |
-| **Action vs signal**  | Executing a method is not the same as emitting a control signal; both can co‑occur in one scenario.  |
+| **Fidelity and didactics** | Keep the four questions memorable without inventing four universal kinds. |
+| **Reuse and locality** | The distinctions recur across disciplines, while each source-local expression retains its own meaning. |
+| **Evidence and approval** | A description may be approved, but evidence about Work outcomes remains separate. |
+| **Occurrence and output** | Work and a control output may co-occur without being the same object. |
 
 ### F.11:4 - Core idea (didactic)
 
-**Four boxes, four arrows, zero leakage.**
+Use four questions, then state only the relations that actually obtain:
 
-* **Box 1 — Method (design).** The **idea** of how to achieve an effect (algorithm, clinical pathway, welding technique).
-* **Box 2 — MethodDescription (design, epistemic).** The **written/encoded recipe** that *describes* a Method (SOP, code, BPMN/SPEM model, theorem‑prover script).
-* **Box 3 — Work (run).** The **occurrence** where a System‑in‑Role enacts (some version of) the Method. *`U.Work` is the record of this event.*
-* **Box 4 — Actuation (run, Sys‑CAL).** The **control output** (setpoint/command) issued to influence a plant during Work.
+* **Method — the way.** An algorithm, test method, clinical pathway, or welding technique is a way of doing under A.3 and A.3.1.
+* **MethodDescription — the description episteme.** An SOP, program text, BPMN or SPEM model, or other episteme is a `U.MethodDescription` only when A.3.2 finds one admitted Method as its exact `EntityOfConcern` and at least one substantive claim about that Method as a way of doing.
+* **Work — the occurrence.** A dated performance, run, batch, or service episode is `U.Work` under A.15 and A.15.1. Work is the occurrence itself, not a record of the occurrence; a record or report is a separate episteme or carrier.
+* **Control or transformation output — if present.** A setpoint, command, duty-cycle value, signal, or changed output is identified under its direct pattern and related to the Work only when that relation obtains.
 
-**Arrows (conceptual relations).**
+F.11 allows the plain sentence “this MethodDescription describes the Method” as shorthand for that A.3.2 constitution and membership judgement. It does not add a binary description relation. Several epistemes may each have the same Method as their exact `EntityOfConcern`; one episteme may concern one admitted composite Method; and one document or publication may present several separately identified epistemes. One MethodDescription episteme cannot have several Methods as its `EntityOfConcern`.
 
-* `MethodDescription ↦ Method` (**describes**) — design stance.
-* `Work ↦ MethodDescription` (**followedRecipe?** yes/no/variant) — run stance referencing design.
-* `Work ↦ Method` (**enacts**) — run stance referencing the abstract way.
-* `Actuation ↦ Work` (**part‑of / occurs‑during**) — control output inside execution.
+Work may enact a Method when the exact enactment relation and evidence are stated. A System may perform Work under an obtaining system-role assignment when A.15.1 and F.6 support that attribution. A claim that a System or Work used, followed, deviated from, conformed to, or relied on a particular MethodDescription edition is separate. Cite the pattern that defines or tests that claim; use A.10 or B.3 for evidence reliance, and return A.6.RCD `missing-governor` when no current pattern supplies the needed relation after its participants and sentence are explicit.
 
-Each box/arrow is **context‑local** (SPEM, PROV‑O, IEC…). **Cross‑context relations use Bridges** (F.7/F.9) with CL/Loss.
+### F.11:5 - Minimal vocabulary
 
-### F.11:5 - Minimal vocabulary (this pattern only)
+* **Method** — a `U.Method`, the way of doing.
+* **MethodDescription** — a `U.MethodDescription`, the already identified episteme that A.3.2 recognizes as having one admitted Method as its exact `EntityOfConcern`; *describes* is plain shorthand for that judgement.
+* **Work** — a dated `U.Work` occurrence.
+* **Control or transformation output** — the exact signal, command, value, output, or changed entity defined by the direct domain pattern when the case contains one.
+* **Description use** — the exact claim that a System or Work used, followed, interpreted, or departed from a MethodDescription; do not assume one universal relation.
+* **Enactment** — the exact relation between Work and Method under B.1.5 and A.15, when supported.
+* **Performed-Work attribution** — the A.15.1 and F.6 relation from actual Work to the System and obtaining system-role assignment involved in its performance.
+* **Window** — the time or condition envelope used by an F.10 status or evaluation claim.
 
-* **Context** = `U.BoundedContext` (per D.CTX).
-* **Local‑Sense** → **SenseCell** (F.3): the address *(Context × sense)* for a term like *process*, *task*, *activity*, *command*.
-* **Concept‑Set** (F.7/F.8): row aligning multiple SenseCells as “what we regard as the same” (after Bridges & losses are declared).
-* **Window** (F.10): temporal/conditional envelope (e.g., *July*, *during test run T42*, *under load ≥ 70%*).
-* **StatusCell** (F.10): laddered status **about** methods/specs/works (e.g., *Approved (spec)*; *Observed/Measured (work)*).
+### F.11:6 - Solution — four questions
 
-### F.11:6 - Solution — the quartet lens (notation‑free)
+#### F.11:6.1 - Which way of doing?
 
-> *Not steps for a team—**lenses for a thinker**. Use them to sanity‑check any statement about “how”, “script”, “run”, or “signal”.*
+Name the Method and its relevant boundary. Do not identify it merely by a file name, notation, or local expression. If a stable method kind or composition is claimed, use A.3, B.1.5, and any required kind pattern.
 
-#### F.11:6.1 - The **stance split** (design vs run)
+#### F.11:6.2 - Which description?
 
-* If the claim is about **what should be done** or **how it is described**, you are on the **design stance** (Method or MethodDescription).
-* If the claim is about **what happened** or **what was emitted**, you are on the **run stance** (Work or Actuation).
-* **Guard rule.** Never let a conclusion cross stances without (a) an explicit Bridge kind (*interpretation* vs *substitution*), and (b) an acceptable CL (F.7/F.9, F.10).
+Name the already identified episteme and the one admitted Method that is its exact `EntityOfConcern`. State edition or version when it matters. Several epistemes may each concern the same Method. One episteme may concern one admitted composite Method, while a document or publication may present several separately identified epistemes; one MethodDescription episteme never has several Methods as its `EntityOfConcern`. Saying that it *describes* the Method is only A.3.2's plain shorthand. Approval remains a separate claim and is not evidence that Work occurred or succeeded.
 
-#### F.11:6.2 - The **recipe/idea split**
+#### F.11:6.3 - Which Work actually occurred?
 
-* **Method** is the **idea**; **MethodDescription** is the **recipe** describing that idea.
-* Different recipes may describe the **same** method (profiles, languages, detail profiles); one recipe may encode **several** methods (composite SOP).
-* **Naming guard.** Keep labels distinct: *compressive‑strength test* (Method) vs *ASTM C39‑18* (MethodDescription).
+Name the dated Work, its relevant interval or situation, and the actual System that performed it. If a system-role claim matters, separately name the local system-role kind, the obtaining assignment, and the performed-Work attribution. Do not replace them with a behavioural “mask” or a `System-in-Role` pseudo-object.
 
-#### F.11:6.3 - The **happening** (Work) with **signal** (Actuation)
+#### F.11:6.4 - Which output matters, if any?
 
-* **Work** is the **occurrence** (a PROV *Activity*, an IEC *Task* executing a program, a lab run).
-* **Actuation** is the **control output** (setpoint, PWM command, valve open %) emitted **during** Work.
-* You can have Work **without** Actuation (analysis job), or Actuation **without** a complex Method (manual push). Many scenarios have **both**.
+Name the actual signal, command, setpoint, transformation output, or resulting value. State how it relates to the Work under the direct control or transformation pattern. Some Work has no control output; a manual command can be simple; neither case forces a fourth universal kind.
 
-#### F.11:6.4 - The **Role Assignment & Enactment touch-points**
+#### F.11:6.5 - Which evidence and status claim?
 
-* **Roles** (F.4) bind **who enacts** the Method at run‑time (behavioural masks), **not** what permissions they hold (RBAC is a different Context).
-* **Statuses** (F.10) bind to the right box: *Approved* → MethodDescription; *Measured/Observed* → Work; *Satisfied/Violated* → Requirement clause about the Work’s outcomes within a **Window**.
+Keep approval or validity claims about a MethodDescription distinct from observations of Work and verdicts about Work outcomes in a window. Keep actual use, following, deviation, and conformance claims separate and cite the pattern that defines or tests each one; return A.6.RCD `missing-governor` when such a pattern is absent. Use C.16 for observations and measurements, A.10 and B.3 for evidence use and reliance, and F.10 and F.12 for status or promise evaluation.
 
-### F.11:7 - Harmonisation map (Context‑first)
+### F.11:7 - Source-local harmonisation map
 
-> Examples of **local SenseCells** and **safe Bridges**. *You may keep the exact Contexts from your F.1 cut.*
+The following are prompts for recovering local meanings, not declarations of identity:
 
-**Design (ideas & recipes).**
+* **SPEM and ISO 24744:** inspect whether a selected *task definition*, *activity definition*, or process description denotes a Method, a MethodDescription, or another value in that exact passage.
+* **BPMN 2.0:** a process diagram is ordinarily a design description; do not call it the Work that later occurred.
+* **PROV-O:** an Activity is a time-bounded occurrence under the PROV scheme. Do not identify it with `U.Work` by label; when a report uses that source-local claim for a Work occurrence, state the exact semantic or representation relation established for the case.
+* **IEC 61131-3:** distinguish the runtime task execution, the program or program description, and output commands or setpoints.
+* **SOSA/SSN:** an Observation and its Result provide measurement structure; neither is the Work merely because it reports on the Work.
 
-* *SPEM/ISO 24744 Context*: `SenseCell{Method}` = *Activity Definition / Task Definition*; `SenseCell{MethodDescription}` = *Process Description / WorkProduct* (as recipe).
-* *BPMN 2.0 Context*: `SenseCell{MethodDescription}` = *Process (diagram)* as **design‑time** recipe (do not confuse with run).
-* *OWL/Kind-CAL Context*: labels for Method kinds (type taxonomies) when needed (naming, not behaviour).
+Use F.17 only when these local meanings need stable addresses. Use F.9 only if an actual semantic relation between two exact local meanings must be stated. A relation between a description and Work, or between Work and an output, belongs to its direct pattern rather than to a generic Bridge.
 
-**Run (occurrences & outputs).**
+### F.11:8 - Invariants
 
-* *PROV‑O Context*: `SenseCell{Work}` = *Activity* (time‑bounded occurrence).
-* *SOSA/SSN Context*: Observations **about** Work results (feeds EvidenceStatus).
-* *IEC 61131‑3 Context*: `SenseCell{Work}` = *Task executes Program* (runtime); `SenseCell{Actuation}` = *Output command / setpoint* emitted by the program.
+1. **Method and description distinction.** A MethodDescription is the same episteme recognized by A.3.2, with one admitted Method as its exact `EntityOfConcern`; it is not the Method, and *describes* adds no binary relation.
+2. **Occurrence distinction.** Work is an actual dated occurrence, not its plan, report, record, or output.
+3. **No universal actuation kind.** A control or transformation output is typed and related under its direct pattern.
+4. **Explicit enactment.** Work enacts a Method only when the exact relation and basis are stated.
+5. **Explicit description use.** MethodDescription use, following, conformance, deviation, interpretation, and reliance are separate claims under their defining or testing patterns; absent such a rule, return A.6.RCD `missing-governor`.
+6. **Exact agency.** Performed Work names the actual System and, when relevant, the obtaining system-role assignment; no vague `System-in-Role` substitute.
+7. **Evidence separation.** Approval of a description does not establish Work occurrence or outcome.
+8. **Source-local wording.** Ambiguous expressions are recovered with F.0.1; F.9 is conditional on a real relation between local meanings.
 
-**Typical Bridges (with intent).**
+### F.11:9 - Micro-examples
 
-* `BPMN:Process (design)` **≈** `SPEM:Process Definition` (design↔design; CL depends on modelling profile; Loss: expressiveness gaps).
-* `IEC:Task execution` **⊑** `PROV:Activity` (run↔run; Loss: control‑specific timing semantics, scan cycles).
-* `Actuation (IEC)` **⋂** `Activity (PROV)` (intersection: the *sub‑intervals* where outputs are emitted).
-* `SOSA:Observation` **interprets** `Requirement clause` (F.10) about **Work outcomes** (**cross‑StatusModality: epistemic→deontic; never substitution**; declare **Bridge(kind=Interpretation, CL, Loss)**).
+1. **Data pipeline deployment.** Method: delta-load transformation. MethodDescription: `etl_delta.py@v3` plus its documented rules. Work: the nightly run on 2025-07-14. No control output is material. Approval of the description and measured rows processed are separate claims.
+2. **Valve control.** Method: PID tuning and control method. MethodDescription: tuning sheet and cited IEC program description. Work: PLC task cycles from 18:00 to 18:30. Outputs: the exact setpoints and PWM duty values produced during those cycles. Temperature observations, not the commands alone, support a settling-time verdict.
+3. **Clinical assay.** Method: ELISA. MethodDescription: kit IFU v7. Work: batch B217. Robot commands are outputs during the Work; absorbance observations support the batch evaluation. IFU approval does not settle the batch verdict.
 
-### F.11:8 - Invariants (normative)
+### F.11:10 - Anti-patterns & remedies
 
-1. **DesignRunTag honesty.** Statements about **Method or MethodDescription** (design) **MUST NOT** be used as if they were statements about **Work or Actuation** (run) without an explicit Bridge and Window.
-2. **Box discipline.** Every claim about “how”, “recipe”, “run”, or “control output” **MUST** point to the correct box in the quartet.
-3. **Context locality.** Terms (*process*, *activity*, *task*, *command*) **MUST** be read as **SenseCells** in their Contexts (F.3); Cross‑context equivalence is a matter for F.7/F.9 Bridges.
-4. **Status placement.** *Approved* attaches to MethodDescription; *Observed/Measured* attach to Work; *Satisfied/Violated* attach to clauses about Work outcomes within a **Window** (F.10).
-5. **Actuation as Work‑part.** Actuation **MUST** be modelled as **occurring within** (or as a specialised form of) Work on the run stance; it does **not** replace Work.
-6. **Naming clarity.** Technical/Plain labels for the quartet **SHOULD** be distinct (F.5); avoid homonymous single‑word labels when Contexts collide.
-7. **Bridge guard.** Cross‑context moves **MUST** declare **kind** (≈, ⊑, ⊒, ⋂, ⊥, Interpretation), **CL**, and **Loss** (F.7/F.9).
-
-### F.11:9 - Micro‑examples (didactic)
-
-1. **Data pipeline deploy (software).**
-  *Method*: “Delta‑load transform”. *MethodDescription*: `etl_delta.py@v3`. *Work*: nightly run 2025‑07‑14. *Actuation*: none.
-  *Statuses*: Spec **Approved** (governance Context); Work **Measured** (rows processed) → Evidence for SLO (F.10).
-
-2. **Valve control (industrial).**
-  *Method*: PID tuning heuristic. *MethodDescription*: SOP sheet + IEC program. *Work*: PLC task cycle 18:00–18:30. *Actuation*: PWM duty sequence.
-  *Bridge*: `IEC:Task` ⊑ `PROV:Activity` (CL=2). Observed setpoint tracking **interprets** requirement “settling time ≤ 5 s”.
-
-3. **Clinical assay (lab).**
-  *Method*: ELISA. *MethodDescription*: Kit IFU v7. *Work*: run batch #B217. *Actuation*: pipetting robot commands.
-  *Statuses*: Spec **Approved** ≠ batch **Satisfied** (requires evidence at batch Window).
-
-### F.11:10 - Anti‑patterns & remedies
-
-| #  | Anti‑pattern  | Symptom in prose/models  | Why it harms thinking  | Remedy (conceptual move)  |
+| # | Anti-pattern | Symptom | Why harmful | Remedy |
 | --- | --- | --- | --- | --- |
-| **A1**  | **Design→Run Substitution**  | “The process **achieved** X” while pointing to a design diagram.  | Treats a **MethodDescription** as if it were **Work**; collapses stances.  | Apply the **stance split**: restate as “The **diagram describes** how X **should** be achieved.” To claim it **happened**, reference a **Work** SenseCell in a run‑time Context and, if needed, add a **Window** (F.10). |
-| **A2**  | **Approval = Evidence**  | “Approved SOP ⇒ requirement satisfied.”  | A **StatusCell** about a **MethodDescription** does not entail a run‑time outcome. | Keep **Approved** on Spec; place **Satisfied/Violated** on clauses **about Work** within a **Window**; require Observation/Evidence (KD‑CAL) for the run side.  |
-| **A3**  | **Execution = Actuation**  | PLC log of setpoints recorded as the whole execution history.  | Loses non‑signal aspects (delays, conditions, context); removes reasoning support.  | Model **Actuation** as **within** **Work**. Keep both SenseCells: *Task execution* (Work) and *Command/Setpoint* (Actuation).  |
-| **A4**  | **BPMN‑as‑Run**  | BPMN *Process* treated as “the thing that ran.”  | BPMN’s meaning is context‑local and design‑time.  | Use a **Bridge** (F.7/F.9) from *BPMN\:Process (design)* → *PROV\:Activity (run)* with kind **Interpretation**, CL/Loss declared.  |
-| **A5**  | **Spec Drift Retroactivity**  | Update to a recipe is assumed to modify past executions.  | Violates temporal honesty; breaks auditability.  | Past **Work** remains as‑was. New **MethodDescription** versions describe future **Work** only; record variant relations if a run deviated.  |
-| **A6**  | **Homonym Collapse**  | *Task*, *activity*, *process* used interchangeably across Contexts.  | Imports meaning implicitly; masks losses.  | Prefix with **Context** and use **SenseCells**: e.g., *task (IEC)*, *activity (PROV)*, *process (BPMN)*. Any relation uses **Bridges** with CL/Loss.  |
-| **A7**  | **Signal‑Only Compliance**  | SLO judged solely from actuator traces.  | Ignores measured outcomes; risks false positives.  | Tie **SLO** clauses to **Observations** (KD‑CAL) **about Work outcomes**; treat Actuation as an input, not proof.  |
-| **A8**  | **Recipe-as-Role**  | “The Spec assigns responsibility” (mixes MethodDescription with Role constructs — `U.RoleDescription`/`U.RoleAssignment`).  | Conflates the `U.MethodDescription` episteme with behavioural masks.  | Use **F.4 Role Description**; let **MethodDescription** only **describe** a Method.  |
-| **A9**  | **One‑Context Scope**  | A single Context (e.g., BPMN) used as if it covered control/measurement. | Scope mirage; silent cross‑domain generalisation.  | Re‑cut Contexts (F.1) to include control and sensing. Re‑express statements with the quartet across those Contexts.  |
-| **A10** | **Lossless Bridge Assumption** | Claiming “equivalent” across Contexts without Loss.  | Hides mismatches; unsafe transfer of inferences.  | In **F.7/F.9** declare Bridge **kind**, **CL**, and explicit **Loss** notes.  |
-| **A11** | **Recipe-as-Kind**  | Treating a MethodDescription vocabulary as a method-kind taxonomy.  | Category error; confuses description wording with method kindhood.  | If a stable hierarchy of **kinds** of Methods is needed, use admission under E.24.UK and C.3 with an ontic and bridge record; keep MethodDescription as *description* only.  |
-| **A12** | **Actuation Outside Work**  | Commands modeled without enclosing Work.  | Severs signal from enactment context; breaks traceability.  | Embed **Actuation** **within** **Work** intervals; relate to the enacting Role and Method or MethodDescription references.  |
+| **A1** | Design as occurrence | “The process achieved X” points to a diagram. | MethodDescription becomes Work. | Name the description and the actual Work separately. |
+| **A2** | Approval as evidence | “Approved SOP, therefore target satisfied.” | A status about a description replaces outcome evidence. | Use observations of Work and the relevant evaluation relation. |
+| **A3** | Work as record | `U.Work` is described as the record of an event. | Occurrence, episteme, and carrier collapse. | Keep Work actual; model report or record separately. |
+| **A4** | Work = control output | A setpoint log is treated as the full execution. | Conditions, delays, and other Work facts disappear. | Name Work and its outputs separately. |
+| **A5** | Universal Actuation | Every case receives an `Actuation` box or kind. | Domain-specific outputs are forced into a false umbrella. | Use the direct control or transformation pattern and actual output kind. |
+| **A6** | Generic Bridge transfer | A Bridge is said to transfer facts between Method, description, Work, and output. | Different relation families collapse. | State MethodDescription membership, enactment, performed-Work, description-use, output, observation, or evidence claims under their own patterns. |
+| **A7** | Source-word collapse | *Task*, *activity*, and *process* are interchanged by label. | Source-local claims vanish. | Recover exact meanings; use F.9 only for an actual semantic relation. |
+| **A8** | Recipe as system role | A description is said to assign responsibility. | MethodDescription and system-role assignment collapse. | Use F.4 and F.6 for kind and assignment; A.3.2 only for description. |
+| **A9** | `System-in-Role` shorthand | The acting participant is a mask-like pseudo-object. | System, kind, assignment, and Work attribution disappear. | Name those four claims separately where material. |
+| **A10** | Retroactive description | A new description version is assumed to change past Work. | Historical occurrence claims become unstable. | Keep past Work and its actual description-use evidence unchanged. |
+| **A11** | Signal-only compliance | Commands are treated as proof of outcome. | Intended influence replaces observed result. | Use observations under C.16 and evidence relations under A.10 and B.3. |
+| **A12** | MethodDescription as kind | A description vocabulary is treated as a taxonomy of Methods. | Description and kindhood collapse. | Establish any kind claim through C.3 and A.3 and keep the description separate. |
 
-### F.11:11 - Worked examples (extended)
+### F.11:11 - Worked examples
 
-> Each scenario names Contexts (from your F.1 cut), identifies the quartet boxes, and shows safe Cross‑context moves.
+#### F.11:11.1 - ML service rollout
 
-#### F.11:11.1 - ML service rollout (software + services + sensing)
+* **Method:** canary deployment strategy.
+* **MethodDescription:** the versioned canary plan with traffic slices and rollback rules.
+* **Work:** two dated canary deployment occurrences.
+* **Outputs:** traffic-shifting commands, if material to the claim.
+* **Agency:** name the deploying System, its exact local system-role kind and assignment, and performed-Work attribution only if responsibility is part of the example.
+* **Evidence:** latency and error-rate observations about the Work; the plan’s approval is separate.
 
-* **Contexts:** *SPEM/ISO 24744* (design), *PROV‑O* (run), *SOSA/SSN* (sensing), *ITIL 4* (services).
-* **Quartet:**
+The example does not infer SLO satisfaction from the plan. F.12 evaluates the promise from Work outcomes in the stated window.
 
-  * **Method:** *Canary deployment strategy*.
-  * **MethodDescription:** *Canary plan document with traffic slices and rollback rules* (design Context).
-  * **Work:** *Two canary runs 2025‑08‑02 10:00–12:00* (PROV‑Activities).
-  * **Actuation:** *Traffic‑shifting commands* (if modeled, they are outputs inside Work; optional in pure software).
-* **Statuses (F.10):** *Spec Approved*; *Work Observed* (latency/err‑rate via SOSA Observations); *SLO clause Satisfied* in Window if measured ≤ thresholds.
-* **Bridge(s):** *BPMN (if used) Process (design)* → *PROV Activity (run)* **Interpretation**, CL=2, **Loss:** path vs time granularity.
+#### F.11:11.2 - Industrial furnace control
 
-**Pay‑off:** No one infers SLO satisfaction from a plan. Evidence is about **Work**; the plan stays design‑time.
+* **Method:** PID with feed-forward.
+* **MethodDescription:** controller tuning sheet and program description.
+* **Work:** the actual PLC task cycles in the stated interval.
+* **Outputs:** setpoints and valve-duty values produced during those cycles.
+* **Evidence:** temperature observations and their scale and unit basis.
 
-#### F.11:11.2 - Industrial furnace control (control + sensing + services)
-
-* **Contexts:** *State‑space control texts* (design), *IEC 61131‑3* (run), *PROV‑O* (run), *SOSA/SSN* (sensing), *ITIL 4* (services).
-* **Quartet:**
-
-  * **Method:** *PID with feed‑forward*.
-  * **MethodDescription:** *Controller tuning sheet + program description*.
-  * **Work:** *PLC task cycles 14:00–14:30* (IEC *Task executes Program*), **Bridged** as **PROV Activity**.
-  * **Actuation:** *Setpoint & valve duty cycle outputs* emitted during Work.
-* **Statuses:** *Spec Approved*; *Work Observed* (temperature curve); requirement *settling time ≤ 5 s* **Satisfied** if the observation within Window meets it.
-* **Bridge(s):** `IEC:Task` ⊑ `PROV:Activity` (CL=2, **Loss:** scan‑cycle semantics). `SOSA:Observation` **interprets** requirement clause (CL=3).
-
-**Pay‑off:** Separates **doing** from **pushing**, and both from **measuring**; compliance judged where it belongs.
+If the IEC task expression and a PROV Activity expression are related for reporting, state that exact F.9 relation and loss. It does not create the Work-to-output or evidence relations.
 
 #### F.11:11.3 - Clinical assay
 
-* **Contexts:** *SPEM/ISO 24744* (design), *Lab assay canon* (DesignRunTag split as per discipline), *PROV‑O* (run), *SOSA/SSN* (sensing).
-* **Quartet:**
+The Method is ELISA; the MethodDescription is kit IFU v7; the Work is batch B217; robot commands are optional output detail; absorbance observations support the quality verdict. Any deviation from the IFU is an explicit description-use or conformance claim, not a property inferred from the four-question layout.
 
-  * **Method:** *ELISA*.
-  * **MethodDescription:** *Kit IFU v7 (instructions for use)*.
-  * **Work:** *Batch B217 performed 2025‑06‑21* (PROV Activity).
-  * **Actuation:** *Pipetting robot commands* (optional detail).
-* **Statuses:** *Spec Approved*; *Work Observed* (absorbance readings); *Quality gate Satisfied* within batch Window.
-* **Bridge(s):** IFU (design) **interprets** Activity (run) for acceptance (CL=2, **Loss:** deviations allowed per kit tolerances).
+#### F.11:11.4 - Incident response
 
-**Pay‑off:** A clean line from recipe → run → measurement → decision, without role-assignment and status-assertion conflation.
+The Method is triage-first incident handling; the MethodDescription is the playbook and diagram; the Work is the handling of INC-3421 from 09:10 to 10:02. MTTR is computed from observations of that Work. Command invocations are included only if a direct control or transformation claim needs them.
 
-#### F.11:11.4 Incident response (services + enactment)
+### F.11:12 - Safe reasoning moves
 
-* **Contexts:** *ITIL 4* (services/design), *BPMN 2.0* (design), *PROV‑O* (run).
-* **Quartet:**
-
-  * **Method:** *Triage‑first incident handling*.
-  * **MethodDescription:** *Incident workflow diagram + playbook*.
-  * **Work:** *Handling INC‑3421, 09:10–10:02* (PROV Activity).
-  * **Actuation:** none (unless modeling command invocations as outputs).
-* **Statuses:** *Spec Approved*; *Work Observed* (timestamps, response time); *SLO “MTTR ≤ 60 min”* **Satisfied** within the incident Window.
-* **Bridge(s):** BPMN (design) → PROV (run) **Interpretation**, CL=2, **Loss:** gateways vs real‑time branching.
-
-**Pay‑off:** MTTR claims are tied to **Work**, not to the playbook.
-
-### F.11:12 - Reasoning primitives (judgement schemas)
-
-> Pure **mental moves**; no storage or workflow is implied.
-
-1. **Box classifier**
-  `statement s, Contexts fixed ⊢ box(s) ∈ {Method, MethodDescription, Work, Actuation}`
-  *Reading:* Classify any claim by its **box** (design idea, design recipe, run occurrence, control output).
-
-2. **Stance firewall**
-  `box(s) ∈ {Method,MethodDescription} ⊢ s ∉ {claims about Work outcomes}`
-  *Reading:* A design‑time (stance) statement does **not** assert a run‑time (stance) outcome.
-
-3. **Followed‑recipe judgement**
-  `Work w, MethodDescription m ⊢ follows(w,m) ∈ {exact, variant, none}`
-  *Reading:* A Work may follow a recipe **exactly**, with a **variant**, or **not at all**; later inferences must respect this value.
-
-4. **Enactment link**
-  `Work w, Method h ⊢ enacts(w,h)`
-  *Reading:* The occurrence enacts the abstract Method (even if several specs describe it).
-
-5. **Actuation inclusion**
-  `Actuation a, Work w ⊢ occursWithin(a,w)`
-  *Reading:* Control outputs are **within** (or are parts of) a Work interval.
-
-6. **Observation binding** (KD‑CAL handshake)
-  `Observation o about outcome(x) during Window W of Work w ⊢ evidenceFor(w, clause(x,W))`
-  *Reading:* Measurements about a Work outcome within a Window serve as evidence for clauses **about that Work**.
-
-7. **Clause evaluation** (F.10 handshake)
-  `evidenceFor(w,clause) ⊢ status(clause,w) ∈ {Satisfied, Violated, Inconclusive}`
-  *Reading:* A clause about Work yields a status via the observation set.
-
-8. **Context locality**
-  `term t, Context C ⊢ meaning(t)@C is local`
-  *Reading:* A term’s sense is **local** to its Context; Cross‑context claims require Bridges.
-
-9. **Bridge application** (F.7/F.9)
-  `Bridge B: (X@A) ~kind,CL,Loss~ (Y@B); fact about X ⊢ transferableTo(Y) with penalty(CL,Loss)`
-  *Reading:* Facts may transfer across Contexts only along a declared Bridge, with the stated penalty.
-
-10. **Version non‑retroactivity**
-  `MethodDescription m updated → m' ⊢ ∀ past Work w: follows(w,m')=none (unless w references m')`
-  *Reading:* New recipes don’t rewrite history.
-
-11. **Composite reasoning**
-  `MethodDescription m = m1 ; m2, Work w executes steps w1,w2 ⊢ enacts(w1,m1) ∧ enacts(w2,m2)`
-  *Reading:* Composition on design does not force composition on run, but when it aligns you may relate sub‑runs to sub‑methods.
-
-12. **SLO attachment guard**
-  `SLO clause about service outcome ⊢ attachesTo(Work-window), not MethodDescription`
-  *Reading:* Service obligations concern **what happened** within a Window, not the existence of a plan.
+1. **Classify the subject.** Is the sentence about a Method, MethodDescription, Work, or a particular output?
+2. **Keep design and occurrence apart.** A design claim does not establish a Work outcome.
+3. **Check membership.** Name the one admitted Method that is the episteme's exact `EntityOfConcern`; *describes* is only the plain shorthand allowed by A.3.2.
+4. **State enactment only when supported.** Name the Work, Method, and basis for the enactment claim.
+5. **State description use separately.** Say whether and how the Work or performing System used, followed, deviated from, or conformed to the versioned description, and cite the rule that defines or tests that claim; otherwise return the bounded missing-governor result.
+6. **Locate outputs.** Relate a signal or changed value to the Work through its direct pattern.
+7. **Bind agency exactly.** Use actual System, local system-role kind, obtaining assignment, and performed-Work attribution where material.
+8. **Use outcome evidence.** Observations about the Work support evaluation; commands and approvals alone do not.
+9. **Preserve history.** A new description does not alter past Work or its evidence.
+10. **Recover words locally.** Use F.9 only when a genuine relation between local meanings is part of the question.
 
 ### F.11:13 - Relations
 
 **Builds on:**
-E.10.D1 **D.CTX** (Context ≡ `U.BoundedContext`); A.3/**A.3.1**/**A.3.2**/**A.15** (Method/Spec/Work foundations); Sys‑CAL (Actuation semantics); KD‑CAL (Observation); F.1–F.3 (Contexts → SenseCells); F.10 (Status families & Windows).
+
+- Use **A.3** and **A.3.1** for `U.Method`, **A.3.2** for `U.MethodDescription`, and **A.15** and **A.15.1** for dated `U.Work`.
+- Use **B.1.5** for Method composition and Work enactment, **C.2.1** for the identity of every claim-bearing episteme and report, and **E.10.D1** when vague *context* wording hides the actual source, scheme, scope, use, situation, or evidence basis.
+- Use the direct transformation, observation, or control pattern when an output claim is made; F.11 creates no universal actuation kind.
 
 **Constrains:**
 
-* **F.4 Role Description:** Roles or Statuses **must** point to the right box (e.g., *Approved* → MethodDescription; *Observed* → Work).
-* **F.5 Naming:** Enforce distinct Tech/Plain labels for Method/Spec/Work or Actuation where homonyms threaten.
-* **F.7/F.9 Bridges:** All Cross‑context assertions among quartet terms **must** go through explicit Bridges with **kind/CL/Loss**.
+- **F.4 and F.6:** a local system-role kind, its description, an assignment, and performed-Work attribution remain distinct from Method, MethodDescription, Work, and output.
+- **F.5:** use distinct Plain and Tech designations when one source expression hides different subjects.
+- **F.7 and F.9:** compare exact local claims or F.17 cells and cite F.9 only when a semantic relation actually obtains. A shared heading creates no identity, relation, or use licence.
 
-**Used by.**
-Part C patterns (Sys‑CAL, KD‑CAL, Kind-CAL, LCA‑CAL) and the method/work stack (A.3/A.15/B.1.5) when describing examples, proofs, and cross‑disciplinary mappings.
+**Used by.** Part C examples and the A.3, A.15, and B.1.5 method-and-work stack. Every MethodDescription membership judgement, enactment, performed-Work attribution, description use, observation, output, evidence use, or publication claim still uses the pattern that defines or tests it.
 
-### F.11:14 - Migration notes (conceptual)
+### F.11:14 - Migration notes
 
-1. **Split conflated “process”.** Where a single “process” node stands for both plan and run, refactor into **MethodDescription** (design) and **Work** (run); add a Bridge if the prose relied on identity.
-2. **Reassign statuses.** Move any *Approval*-like statuses from Work to MethodDescription; move *Satisfied/Violated* from Spec to clauses about Work within **Windows**.
-3. **Expose actuation.** If control outputs are buried in “execution logs,” mint **Actuation** SenseCells and relate them **within** Work.
-4. **Version fences.** Past Works keep references to the **version** of MethodDescription they attempted to follow; don’t update those links retroactively.
-5. **Name collisions.** Where *task/activity/process* appear with mixed meanings, prefix with Contexts and relabel per **F.5** (Tech/Plain).
-6. **Backfill Bridges.** If earlier text implied Cross‑context equivalence, add explicit Bridges (F.7/F.9) declaring **kind/CL/Loss**.
+1. **Split conflated process.** Separate MethodDescription from actual Work; add only the exact relations the case supports.
+2. **Repair statuses.** Keep approval and validity claims about descriptions distinct from Work-outcome verdicts and their windows.
+3. **Expose actual outputs.** Replace a universal Actuation box with the precise signal, command, value, or transformation output and direct relation.
+4. **Repair agency.** Replace `System-in-Role` or behavioural-mask language with the actual System, local kind, assignment, and Work attribution where needed.
+5. **Version fences.** Preserve the description version actually used or referenced by past Work.
+6. **Repair hidden transfer.** Replace generic Bridge language with MethodDescription membership or the direct enactment, description-use, Work, output, observation, evidence, or source-local semantic relation. Return A.6.RCD `missing-governor` instead of inventing a relation when no defining or testing rule exists.
 
-### F.11:15 - Acceptance tests (SCR/RSCR — concept level)
+### F.11:15 - Acceptance tests
 
-#### F.11:15.1 - Static conformance checks (SCR)
+#### F.11:15.1 - Static conformance
 
-* **SCR‑F11‑S01 (DesignRunTag honesty).** Every normative claim about outcomes is attached to **Work** (with Window), not to **Method or MethodDescription**.
-* **SCR‑F11‑S02 (Box placement).** Labels and statuses appear on the correct box (e.g., *Approved* on MethodDescription only).
-* **SCR‑F11‑S03 (Actuation inclusion).** All Actuation statements are modeled as **within** a Work interval.
-* **SCR‑F11‑S04 (Context discipline).** Each quartet term is expressed as a **SenseCell** with its Context; no Cross‑context identity is asserted here.
-* **SCR‑F11‑S05 (Bridge guard).** Any Cross‑context reasoning among quartet terms references an explicit **Bridge** with **kind/CL/Loss**.
+* **SCR-F11-S01 (four questions).** Every relevant statement identifies the Method, the MethodDescription with that one Method as exact `EntityOfConcern`, the Work, or the exact output it concerns.
+* **SCR-F11-S02 (Work actuality).** `U.Work` is an occurrence, not a record, plan, or output.
+* **SCR-F11-S03 (no universal actuation).** Outputs are typed and related by their direct patterns.
+* **SCR-F11-S04 (agency).** Any performer claim names the actual System and exact assignment and attribution basis.
+* **SCR-F11-S05 (separate claims).** MethodDescription membership, enactment, description use, output, observation, and evidence claims use their defining or testing patterns and are not replaced by a generic Bridge or invented description relation.
+* **SCR-F11-S06 (evidence).** No approval or command alone is used as proof of Work outcome.
 
-#### F.11:15.2 - Regression checks (RSCR)
+#### F.11:15.2 - Regression
 
-* **RSCR‑F11‑E01 (Spec update).** When a MethodDescription changes, previous Works remain valid and unchanged; their statuses don’t shift unless re‑evaluated with explicit rationale.
-* **RSCR‑F11‑E02 (Bridge drift).** If a Context updates, revisit Bridges that touch quartet terms; adjust **CL/Loss** only via F.7/F.9.
-* **RSCR‑F11‑E03 (Status drift).** Adding new statuses does not move them across boxes (e.g., no new “Work‑Approved”).
-* **RSCR‑F11‑E04 (Signal creep).** Introducing new Actuation details does not erase or replace Work context.
+* **RSCR-F11-E01 (description update).** Earlier Work and its actual description-use claims remain unchanged.
+* **RSCR-F11-E02 (source drift).** Changed source-local wording reopens only the affected F.9 relation or citation.
+* **RSCR-F11-E03 (status drift).** New statuses do not migrate between description and Work outcome without a new direct claim.
+* **RSCR-F11-E04 (output growth).** Added output detail does not erase or replace Work.
 
-### F.11:16 - Didactic distillation (90‑second script)
+### F.11:16 - Didactic distillation
 
-> “When you talk about *how something is done*, decide which of the **four boxes** you mean.
-> **Method** is the **idea** (the way). **MethodDescription** is the **recipe** (the description). **Work** is the **happening** (what actually occurred). **Actuation** is the **control push** (signals emitted during Work).
-> Keep **design** and **run** as distinct **stances**. Plans and approvals live in the **design stance**; measurements and obligations live in the **run stance** within **Windows**.
-> Words like *process*, *task*, *activity*, *command* are **context‑local**—say *process (BPMN)*, *activity (PROV)*, *task (IEC)*. If you must relate them, draw a **Bridge** and declare its **kind**, **CL**, and **Loss**.
-> For compliance, don’t point at the plan—point at **Work**, show **Observations**, and judge clauses in **F.10**.
-> Hold this quartet in your head and you’ll stop mixing plans with facts, signals with outcomes, and names across Contexts. Everything else—naming (F.5), `U.RoleDescription` (F.4), `U.RoleAssignment`, and performed-work attribution (A.2.1/F.6)—falls into place.
+> “Ask four questions. What is the **Method**, the way of doing? Which **MethodDescription** has that one Method as its exact `EntityOfConcern`—plainly, describes it? What dated **Work** actually occurred? Which particular control or transformation output matters, if any? These are not four universal boxes. Work is the occurrence, not its record. MethodDescription membership adds no binary relation; Work may enact the Method only when that relation is supported. Name the actual performing System and assignment when agency matters. Use observations for outcome claims, and use F.9 only for a real relation between source-local meanings.”
 
 ### F.11:End

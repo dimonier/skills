@@ -1,13 +1,8 @@
 ---
 id: C.3.4
-title: "`RoleMask` — Contextual Adaptation of Kinds (without cloning)"
+title: KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning
 status: Stable
-keywords:
-  - RoleMask declaration episteme
-  - masked judgment
-  - "candidate-feature constraint"
-  - vocabulary binding
-  - "stable-refinement review."
+keywords: []
 dependencies:
   builds_on:
     - C.3.1
@@ -15,10 +10,12 @@ dependencies:
     - C.2.1
   coordinates_with:
     - C.3.3
+    - A.2.6
+    - F.9
     - C.3.A
 ---
 
-# C.3.4: `RoleMask` — Contextual Adaptation of Kinds (without cloning)
+# C.3.4: KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,197 +23,213 @@ dependencies:
 
 ---
 
-## C.3.4 - RoleMask — Contextual Adaptation of Kinds (without cloning)
+## C.3.4 - KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning
 
-> **One-line summary.** Defines **`RoleMask`** as a C.2.1 declaration episteme for one named local use of an exact base kind. Its content pins the base `KindSignature` edition, additional candidate-feature constraints, vocabulary bindings, intended guard use, and definedness. Applying it yields an exact `true`/`false`/`unknown` masked judgment; it creates neither a new kind nor a direct membership relation. Cross-context use requires an obtaining KindBridge relation, a target declaration, and a separate MaskAdapter declaration when constraints or bindings change. Formality remains on declaration epistemes; guard refusal remains separate from `unknown`.
+> **One-line summary.** Use a `KindUseAdaptationDeclaration` when a procedure needs a narrower or differently named use of an existing kind without defining another kind. The declaration pins the base `KindSignature` edition, local candidate constraints or vocabulary bindings, intended guard use, and applicability. Check admissibility before returning `true`, `false`, or `unknown`. A locality change first triggers kind-identity comparison: the same kind needs no `KindBridge`; distinct kinds need one only when its exact correspondence predicate obtains.
 
 **Status.** Normative in **Part C**. Identifier **C.3.4**.
-**Audience.** Engineering managers, architects, reviewers, editors.
+**Audience.** Engineering managers, architects, reviewers, and editors.
+
+### C.3.4:0 - Use This When
+
+Use C.3.4 when a procedure needs a named local way of using an existing kind without claiming another kind. Typical cases include accepting `Vehicle` candidates only when they have ABS, using local spelling `X-Auth` for `AuthHeader`, or combining a candidate constraint with vocabulary bindings.
+
+First identify the base kind, exact `KindSignature` edition, receiving use, and meanings of local names or predicates. Write one declaration for candidate constraints or vocabulary bindings and route claim-scope conditions separately. Check candidate and slice admissibility, then evaluate one candidate. Stop with the declaration and first reproducible result. If the distinction becomes a stable kind, identify it separately and establish any obtaining `U.SubkindOf` fact under C.3.1.
+
+Do not use C.3.4 merely to rename a kind, represent a catalog row, narrow claim scope, or avoid deciding whether another kind is needed. A vocabulary-only change adds no candidate predicate. `not-applicable`, `unknown`, and a guard refusal are different results.
 
 **Depends on.**
 
-* **C.3.1 — U.Kind & SubkindOf (Core):** kinds are intensional; `⊑` is a partial order; kinds **carry no Scope**.
-* **C.3.2 — Kind intent, judgment, and extension:** `KindSignature` is a declaration episteme; the exact four-input judgment is three-valued; any extension is a pinned-edition representation of true candidates.
-* **C.3.3 — KindBridge & CL^k:** Cross‑context kind mapping; `CL^k` penalties → **R** only.
-* **A.2.6 — USM (Context slices & Scopes):** Claim/Work scope (**G**) over `U.ContextSlice`; bridges and **CL** for scope.
-* **C.2.2 — F–G–R; C.2.3 — U.Formality (F).**
+- **C.3.1 — U.Kind and U.SubkindOf:** kind identity follows the membership distinction; `U.SubkindOf` facts form a preorder and kinds carry no Scope.
+- **C.3.2 — Kind intent, admissibility, judgment, and extension:** `KindSignature` is a declaration episteme; admissibility precedes the three-valued judgment.
+- **C.3.3 — KindBridge and CL^k:** a directional correspondence only between independently identified distinct kinds, plus R-only bridge consequences.
+- **A.2.6 — Context slices and Scopes:** Claim and Work scope over `U.ContextSlice`.
+- **C.2.2 and C.2.3:** F–G–R and formality characterize the episteme being assessed.
 
-**Non‑goals.**
-— No repository/notation mandates; conceptual only.
-— RoleMask is **not** a governance tier, data policy, or “mini‑type system.”
-— RoleMask does **not** redefine Scope; context conditions belong to **USM**.
+**Non-goals.** This pattern mandates no repository or notation. A kind-use adaptation declaration is not a governance tier, data policy, mini-type system, kind, `KindBridge`, or Scope.
 
-### C.3.4:1 - Purpose (manager’s view)
+### C.3.4:1 - Purpose
 
-Teams often need a **local projection** of a widely used kind:
-
-* **Constraint:** “For our procedure, take `Vehicle` **with ABS** only.”
-* **Vocabulary:** “Here, `AuthHeader` is called `X‑Auth`.”
-
-If each team clones a fresh kind, catalogs fragment and bridges multiply. `RoleMask` is the disciplined alternative: keep the base kind identity, apply declared constraints and bindings, and publish one named, versioned declaration episteme that a guard can designate. The episteme is not a new U-kind, record ontology, or classification occurrence. When the constraint becomes a stable conceptual distinction, identify a separate local kind and establish its `U.SubkindOf` relation independently.
-
-**Benefits:** fewer near‑duplicates, cleaner Cross‑context reuse, deterministic guards, and auditable narrowing instead of hand‑wavy “this is the version we mean.”
+Teams often need a local projection of a widely used kind: `Vehicle` with ABS for one procedure, or local spelling `X-Auth` for `AuthHeader`. Cloning a kind for every use fragments catalogs and creates false bridge pressure. A local-use declaration keeps the base-kind identity, makes constraints and bindings explicit, and gives a guard one versioned episteme to designate. It is not another kind, classification occurrence, or record ontology.
 
 ### C.3.4:2 - Context
 
-Kinds (C.3.1/3.2) name **what** claims quantify over; USM (A.2.6) governs **where** claims hold. In practice, procedures need **local tailoring** of kinds for a role/process (compliance profile, product line, cohort). RoleMask gives that tailoring **without** mutating entityOfConcern (Kind) or applicability (Scope).
+C.3.1 and C.3.2 say what claims classify; A.2.6 says where claims hold. A procedure may still tailor use for a compliance procedure, product line, or cohort without changing the kind.
+
+Three objects remain distinct:
+
+1. `KindUseAdaptationDeclaration` states one named use of a base kind.
+2. `KindUseAdaptationJudgment` is the three-valued result for one admissible candidate under pinned declaration and signature editions.
+3. `KindUseAdaptationCorrespondenceDeclaration` records how one exact source declaration corresponds to one exact target declaration when their constraints or vocabulary bindings differ.
+
+The third object is a C.2.1 declaration episteme. Its effective scheme makes source, target, and rule designations interpretable. It is not an executable adapter, mapping Method, representation correspondence, obtaining F.9 relation, `KindBridge`, or target judgment.
 
 ### C.3.4:3 - Problem
 
-1. **Kind sprawl.** Teams mint near‑duplicate kinds (“Account\_PCI”, “Account\_Ledger”), and alignment decays.
-2. **Hidden constraints.** Informal “we only accept …” statements leak into prose; guards can’t check them deterministically.
-3. **Scope conflation.** Contextual requirements (jurisdiction, API version) get smuggled into “type” talk, blurring Scope vs Kind.
-4. **Cross‑context fragility.** Masks don’t travel unless their constraints are mapped; teams reuse names and hope.
+1. **Kind sprawl.** Teams mint near-duplicates for every procedure.
+2. **Hidden constraints.** Informal acceptance rules leak into prose and cannot be replayed.
+3. **Scope conflation.** Jurisdiction, API version, or another scope condition is smuggled into kind identity.
+4. **Automatic bridge pressure.** A changed source or team is treated as proof of another kind and a bridge.
+5. **Collapsed outcomes.** A non-applicable candidate, unsettled admissible candidate, and guard refusal are reported as one `unknown` or `false` result.
 
 ### C.3.4:4 - Forces
 
-| Force  | Tension to resolve  |
+| Force | Tension to resolve |
 | --- | --- |
-| **Local specialization vs common core** | Need Context‑specific tailoring **without forking** kinds.  |
-| **Expressivity vs determinism**  | Masks must express real constraints **and** be **deterministically checkable** at guard time.  |
-| **Context vs entity constraints**  | Conditions over **ContextSlice** (Scope) vs conditions over **entities** (membership) must be split cleanly. |
-| **Reuse vs proliferation**  | Encourage reuse; when a distinction becomes stable, review and separately identify a local kind and its obtaining `U.SubkindOf` relation rather than treating mask reuse as promotion. |
+| Local specialization vs common core | A use needs tailoring without forking the base kind. |
+| Expressivity vs determinism | Real constraints must remain reproducibly checkable. |
+| Applicability vs uncertainty | Candidate/slice mismatch stops before the judgment; missing facts preserve `unknown`. |
+| Scope vs candidate constraints | Conditions on ClaimScope stay under A.2.6; conditions on the candidate enter classification. |
+| Reuse vs proliferation | Stable conceptual distinctions may warrant a separately identified kind, but declaration reuse alone does not. |
+| Locality vs identity | A changed locality prompts comparison of membership distinctions, not automatic bridging. |
 
-### C.3.4:5 - Solution — RoleMask declaration and masked judgment
+### C.3.4:5 - Solution — Declaration, Correspondence, and Judgment
 
-A `RoleMask` is a named, versioned C.2.1 declaration episteme. Its exact `EntityOfConcern` is the base local kind used by the named procedure or role, while its claim content designates:
+A `KindUseAdaptationDeclaration` is a named, versioned C.2.1 declaration episteme about one local use. The base kind is its `EntityOfConcern`; its effective scheme gives meaning to declaration names and predicates. Its claim content states:
 
 1. the exact base kind and pinned base `KindSignature` edition;
-2. the named receiving use and mask type: constraint, vocabulary, or composite;
-3. additional direct candidate-feature predicates, when any;
+2. the receiving use and adaptation type: constraint, vocabulary, or composite;
+3. additional directly governed candidate conditions, when any;
 4. vocabulary or notation bindings;
-5. the exact `U.ContextSlice` conditions and dependencies under which evaluation is defined;
-6. any context expectations routed separately to USM Scope; and
-7. the intended guard use and the declaration episteme's own `U.Formality`, when current.
+5. exact candidate and slice applicability plus dependencies;
+6. scope expectations routed separately through A.2.6; and
+7. intended guard use and this declaration episteme's formality, when current.
 
-For classification, evaluate:
+First evaluate adaptation admissibility. A candidate rejected by the base signature's ValueKind, an adaptation-specific candidate requirement needed merely to form the question, or the declared slice applicability is `not-applicable`; no adaptation judgment is formed. For an admissible request, use:
 
-`J_mask(candidate, kind, kindSignatureEdition, roleMaskEdition, slice) ∈ {true, false, unknown}`
+`J_kindUse(candidate, kind, kindSignatureEdition, adaptationDeclarationEdition, slice) ∈ {true, false, unknown}`
 
-The masked judgment is the three-valued conjunction of the base C.3.2 judgment and every additional direct candidate-feature predicate: it is `false` when the base judgment or any added predicate is known `false`; it is `true` only when the base and every added predicate are known `true`; otherwise it is `unknown` because a required component cannot settle or the candidate is outside its evaluation domain. A vocabulary-only mask adds no predicate and therefore preserves the base judgment exactly. A guard may decline use on `unknown`; that refusal is not a `false` classification.
+The judgment conjoins the base C.3.2 judgment with every added candidate-condition predicate. A known `false` gives `false`; all known `true` gives `true`; unresolved required facts give `unknown`. A vocabulary-only declaration adds no predicate and preserves the base judgment. A guard may decline use on `not-applicable` or `unknown` without rewriting either.
 
-An optional `RoleMaskExtension(roleMaskEdition, kindSignatureEdition, slice)` may represent the candidates whose exact masked judgment is `true`, with both declaration editions pinned. It is not `U.EntitySet`, an A.14 membership occurrence, a new kind, or a direct classification relation. Context conditions such as jurisdiction, API version, and time remain USM Scope predicates and do not become candidate features.
+An optional pinned-edition representation may list admissible candidates judged `true`. It is not `U.EntitySet`, A.14 membership, another kind, or a direct classification relation. Scope conditions stay under A.2.6 rather than becoming kind identity.
 
-A stable conceptual refinement may justify a separately identified local kind plus an obtaining C.3.1 `U.SubkindOf` relation. The RoleMask declaration itself never creates that kind or relation.
+When a use moves to another practice, source, or team, compare the base-kind membership distinctions first:
 
-### C.3.4:6 - Norms & Invariants (normative)
+- if the same kind continues, use the declaration and signature edition selected for the receiving use and make a fresh receiving judgment; no `KindBridge` exists merely because locality changed;
+- if independently identified kinds are distinct and the use claims a directional correspondence, establish the C.3.3 `KindBridge`; use the receiving signature and adaptation declaration and make a fresh receiving judgment; and
+- if two adaptation declarations differ in constraints or bindings, a separate `KindUseAdaptationCorrespondenceDeclaration` may name source declaration as EntityOfConcern and state target, direction, deterministic rule, definedness, loss, and effective scheme. It creates no bridge or target truth.
 
-> The following state RM-01 through RM-10 over the declaration episteme, masked judgment, Scope split, and cross-context adapter boundary.
+A stable conceptual refinement may justify another kind and an obtaining C.3.1 subkind fact. A declaration, correspondence, judgment, catalog row, or representation creates neither.
 
-#### C.3.4:6.1 - Definition and shape
+### C.3.4:6 - Norms and Invariants
 
-**RM-01 (Definition).** A `RoleMask` SHALL be a named, versioned C.2.1 declaration episteme with exact base kind, pinned `KindSignature` edition, named receiving use, mask type, direct candidate-feature constraints, vocabulary bindings, definedness conditions, intended guard use, and any separately owned Scope expectations. Its formality characterizes this episteme, not the kind or one judgment result.
+#### C.3.4:6.1 - Definition and Shape
 
-**RM-02 (Not a new kind).** A RoleMask MUST NOT introduce a new `U.Kind`. If the domain needs a stable conceptual refinement, identify another local kind and establish an obtaining `U.SubkindOf` relation under C.3.1; a catalog row or mask declaration does neither.
+**KUA-01 (Definition).** A `KindUseAdaptationDeclaration` SHALL be a named, versioned C.2.1 declaration episteme with exact base kind as EntityOfConcern, effective scheme, pinned base signature, receiving use, adaptation type, candidate constraints, vocabulary bindings, applicability, dependencies, intended guard use, and separate scope expectations. Its formality characterizes the episteme.
 
-**RM-03 (Determinism and three values).** The exact masked judgment MUST be reproducible for fixed candidate, kind, kind-signature edition, RoleMask edition, and slice. It returns `true`, `false`, or `unknown`; implicit `latest` is forbidden and guard refusal does not rewrite `unknown`.
+**KUA-02 (Not a new kind).** A declaration MUST NOT introduce a kind or subkind fact. Stable refinement requires an independently recovered kind and C.3.1 obtaining test.
 
-**RM-04 (Mask type).** A declaration SHALL state constraint, vocabulary, or composite. A vocabulary mask preserves the base judgment. Constraint and composite masks use only direct candidate-feature predicates and apply the three-valued conjunction rule: any known `false` conjunct gives `false`, all known `true` conjuncts give `true`, and every other combination gives `unknown`.
+**KUA-03 (Admissibility before judgment).** Fixed candidate, kind, base-signature edition, adaptation-declaration edition, and slice first yield `admissible` or `not-applicable`. Only an admissible request yields `true`, `false`, or `unknown`; implicit `latest` and guard-result coercion are forbidden.
 
-#### C.3.4:6.2 - Separation of channels
+**KUA-04 (Adaptation type).** A vocabulary declaration preserves the base judgment. Constraint and composite declarations use governed candidate conditions: any known `false` gives `false`, all known `true` gives `true`, and unresolved required facts give `unknown`.
 
-**RM-05 (Context versus candidate).** Direct governed features of the exact candidate may contribute to `J_mask`. Predicates about ContextSlice, including jurisdiction, standards, environment, and `Gamma_time`, SHALL be enforced through USM Scope. The declaration may cite both, but the guard routes them to different owners and never hides Scope inside classification.
+#### C.3.4:6.2 - Separation of Channels
 
-**RM-06 (Guard use).** A guard MAY designate a RoleMask declaration only when its exact edition, base `KindSignature` edition, dependencies, and definedness are recoverable and the required candidate features can be evaluated. A mask name is not a kind synonym. The guard consumes the three-valued masked judgment and makes a separate use decision.
+**KUA-05 (Scope versus candidate).** Conditions of the candidate may enter the adaptation judgment. Claim- or Work-scope conditions remain under A.2.6. A declaration may cite both, but a guard routes them separately.
 
-#### C.3.4:6.3 - Stable refinement and catalog representation
+**KUA-06 (Guard use).** A guard MAY designate a declaration only when its exact edition, base signature, dependencies, applicability, and candidate conditions are recoverable. It checks admissibility before the judgment and makes its use decision separately.
 
-**RM-07 (Stable refinement).** When the additional criterion becomes a broadly reused conceptual distinction, review whether another local kind is warranted. If so, identify that kind under C.3/C.3.2 and establish an obtaining `U.SubkindOf` relation under C.3.1. Retire or retain the RoleMask only for its remaining local use; no mask, catalog action, or label performs kind admission.
+#### C.3.4:6.3 - Stable Refinement and Catalog Representation
 
-**RM-08 (Addressability and catalog representation).** Every RoleMask declaration edition used by a guard SHALL have a durable designator or reference that resolves to the exact declaration edition, base `KindSignature` edition, dependencies, definedness, and intended use. A context MAY present those references, constraints, bindings, examples, and bridge/adapter dependencies in a catalog. The catalog row is a representation, not the declaration episteme or a new kind. Consolidation changes the catalog and may motivate a declaration revision; it does not merge kind identities by itself.
+**KUA-07 (Stable refinement).** Broad reuse triggers a review for another kind. If that kind and an obtaining subkind fact are established, retain the adaptation declaration only for any remaining local use or retire it. Declaration reuse, catalog action, or labeling performs no kind admission and establishes no subkind fact.
 
-#### C.3.4:6.4 - Cross-context use
+**KUA-08 (Addressability).** Every guard-addressable adaptation declaration resolves to its exact edition, base signature, dependencies, applicability, and intended use. A correspondence declaration also resolves its source declaration as EntityOfConcern, target declaration, direction, deterministic rule, effective scheme, definedness, and loss. A catalog represents those references; it is neither the declaration episteme nor ontology, and consolidation does not merge kind identities.
 
-**RM-09 (Bridge and adapter boundary).** For cross-context masked classification, first establish the obtaining KindBridge relation between the independently identified source and target kinds. Use the target `KindSignature` edition and a target RoleMask declaration. When constraint predicates or vocabulary bindings change, a separate C.2.1 `MaskAdapter` declaration episteme states the deterministic correspondence and loss; it is neither a relation occurrence nor the target judgment. Evaluate the exact target `J_mask`; do not copy the source result. `CL^k` and any scope-bridge consequence affect R only.
+#### C.3.4:6.4 - Cross-local Use
 
-**RM-10 (Definedness and fail-closed use).** The RoleMask and any MaskAdapter declarations SHALL each state their definedness. Outside RoleMask definedness, or when its own required evaluation dependency is unavailable, the target masked judgment is `unknown`. Outside MaskAdapter definedness, the adapter correspondence is unavailable and a guard declines the cross-context use without rewriting an independently evaluated target `J_mask`. In both cases fail-closed is a use disposition, not an assertion of `false`.
+**KUA-09 (Identity check before bridge).** A locality change first compares exact base-kind definitions. Same-kind reuse needs no `KindBridge` but still uses the receiving declaration and a fresh judgment. Distinct-kind use establishes a `KindBridge` only when its directional correspondence predicate obtains. Differing adaptation constraints or bindings may additionally require an exact correspondence declaration. Source judgments are never copied as receiving truth; justified bridge consequences affect R only.
 
-### C.3.4:7 - Invariants & Non‑goals (normative)
+**KUA-10 (Definedness and fail-closed use).** Outside adaptation applicability, return `not-applicable` and form no judgment. For an admissible request with an unavailable dependency, return `unknown`. Outside correspondence definedness, the guard declines that cross-local use without rewriting an independently evaluated receiving result.
 
-* **No Scope leakage.** RoleMasks **cannot** widen/narrow **Claim scope (G)**; any context conditions are enforced by USM guards.
-* **Identity preservation.** The carrier kind remains `k`; RoleMask does not change entityOfConcern.
-* **Weakest-link unaffected.** RoleMask declarations do not alter weakest-link rules on F/R; guards route candidate-feature predicates to the exact masked judgment and context predicates to USM Scope.
+### C.3.4:7 - Invariants and Non-goals
 
-### C.3.4:8 - Interactions (informative)
+- **No Scope leakage.** An adaptation declaration cannot widen or narrow Claim scope G; context conditions are enforced by A.2.6 guards.
+- **Identity preservation.** The base kind remains `k`; the declaration does not change its `EntityOfConcern`.
+- **Weakest-link unaffected.** Adaptation and correspondence declarations do not alter weakest-link rules on F or R; guards route candidate-feature predicates to the exact judgment and context predicates to Scope.
 
-#### C.3.4:8.1 - With Kinds & Subkinds (C.3.1)
+### C.3.4:8 - Interactions
 
-Use a RoleMask declaration for procedural tailoring. If the criterion becomes conceptual and stable, identify another local kind and establish the exact obtaining `U.SubkindOf` relation; do not treat mask reuse, promotion language, or a catalog link as that relation.
+#### C.3.4:8.1 - With Kinds and Subkinds
 
-#### C.3.4:8.2 - With judgment and declarations (C.3.2)
+Use an adaptation declaration for procedural tailoring. If the criterion becomes conceptual and stable, identify another local kind and establish the exact obtaining `U.SubkindOf` relation. Repeated declaration use, promotion language, and a catalog link do not establish that relation.
 
-* The base `KindSignature` episteme supplies the kind criterion and its own F.
-* The separate RoleMask declaration supplies additional candidate-feature constraints or vocabulary bindings and may have its own F.
-* The exact masked judgment pins both editions and preserves `unknown`; neither formality value belongs to the kind, candidate, or truth value.
-* Any `RoleMaskExtension` is only a pinned-edition representation of true masked judgments.
+#### C.3.4:8.2 - With Judgment and Declarations
 
-#### C.3.4:8.3 - With KindBridge (C.3.3)
+- The base `KindSignature` episteme supplies the kind criterion and its own F.
+- The separate adaptation declaration supplies additional candidate-feature constraints or vocabulary bindings and may have its own F.
+- The exact `KindUseAdaptationJudgment` pins both editions and preserves `unknown`; neither formality value belongs to the kind, candidate, or truth value.
+- An optional extension-like result remains only a pinned-edition representation of true adaptation judgments.
 
-Cross-context use needs an obtaining KindBridge relation, its separate bridge assertion, the target RoleMask declaration, and—when constraints or aliases change—a separate MaskAdapter declaration episteme. R receives the justified penalties while F, G, and the target judgment remain unchanged. If the target constraint is a stable conceptual refinement, consider a target-side local kind and an independently obtaining `U.SubkindOf` relation.
+#### C.3.4:8.3 - With KindBridge
 
-#### C.3.4:8.4 - With guards (Annex C.3.A)
+A locality change first prompts kind-identity comparison. When the same base kind continues, select the receiving signature and adaptation declaration and evaluate a fresh candidate result without a `KindBridge`. When two independently identified kinds are distinct and an exact directional correspondence is relied on, establish the C.3.3 `KindBridge`, its assertion, the receiving declaration, and any needed adaptation-correspondence declaration. Only justified bridge penalties affect R; F, G, admissibility, and classification truth remain unchanged.
 
-`Guard_MaskedUse` designates the exact RoleMask and base KindSignature editions, evaluates `J_mask` for the exact candidate and slice, checks USM Scope separately, and preserves `unknown` when the classification cannot settle. For cross-context use, it composes with `Guard_XContext_Typed` only after the KindBridge relation, bridge assertion, target declarations, and any MaskAdapter declaration are recoverable. The guard applies justified `Phi(CL)` and `Psi(CL^k)` effects to R and then makes its separate use decision; it changes neither F, G, nor classification truth.
+#### C.3.4:8.4 - With Guards
 
-### C.3.4:9 - Anti‑patterns & Remedies (informative)
+`Guard_KindUseAdaptation` designates exact adaptation and base-signature editions, checks admissibility, evaluates an admissible candidate, checks Scope separately, and keeps `not-applicable`, `unknown`, and refusal distinct. For distinct-kind cross-local use, it composes with the C.3.3 guard only after the bridge and receiving declarations are recoverable. For same-kind reuse, it performs the fresh receiving evaluation without inventing a bridge.
 
-| Anti‑pattern  | Why it’s wrong  | Remedy  |
+### C.3.4:9 - Anti-patterns and Repairs
+
+| Anti-pattern | Why it is wrong | Repair |
 | --- | --- | --- |
-| Mask treated as a new type | Duplicates the kind and hides the declaration episteme | Keep the base kind; for a stable conceptual refinement identify another local kind and establish `U.SubkindOf` independently. |
-| Hiding Scope in a masked judgment | Conflates context with candidate features | Move context predicates to USM guards; keep only direct candidate-feature predicates in `J_mask`. |
-| Unregistered mask in guards  | Non‑deterministic; un‑auditable  | Register & version the mask; fail closed otherwise.  |
-| Cross-context use without exact bridge and adapter objects | Silently reuses source truth | Establish the KindBridge relation and bridge assertion, target declarations, and any MaskAdapter episteme; then evaluate the target `J_mask` and apply justified R penalties. |
-| Mask proliferation (ten masks that mean the same) | Catalog entropy; inconsistent behavior | Consolidate declarations; for a stable conceptual distinction, separately identify a local kind and establish its obtaining `U.SubkindOf` relation. |
-| Treating a mask name as a kind synonym | Hides constraints and invites misuse | Designate the exact RoleMask declaration edition and base kind separately in prose and guards. |
+| Adaptation declaration treated as a new type | Duplicates the kind and hides the declaration episteme. | Keep the base kind; for a stable conceptual refinement identify another local kind and establish `U.SubkindOf` independently. |
+| Claim- or Work-scope condition hidden in an adaptation judgment | Conflates the candidate with where a claim or Work applies. | Move the scope condition to A.2.6; keep candidate constraints and declaration applicability explicit. |
+| Unversioned or applicability-free declaration used by a guard | Makes evaluation non-replayable. | Give the declaration a designator, pin its edition and dependencies, state applicability, and distinguish `not-applicable` from `unknown`. |
+| Locality change treated as automatic bridge | Splits the same kind or transfers source truth. | Compare kind definitions first. Same-kind reuse needs no bridge and still gets a fresh receiving result; distinct-kind use needs an obtaining C.3.3 correspondence. |
+| Many declarations with the same local meaning | Produces catalog entropy and inconsistent behavior. | Consolidate redundant declarations; for a stable conceptual distinction, separately identify a local kind and establish its obtaining `U.SubkindOf` relation. |
+| Declaration name treated as a kind synonym | Hides constraints and invites misuse. | Designate the exact declaration edition and base kind separately in prose and guards. |
 
-### C.3.4:10 - Worked Examples (informative)
+### C.3.4:10 - Worked Examples
 
-#### C.3.4:10.1 - `Vehicle@ABSOnly` constraint use
+#### C.3.4:10.1 - `Vehicle@ABSOnly` Constraint Use
 
-The `RoleMask` declaration episteme designates `Vehicle`, pins its `KindSignature` edition, and adds the direct candidate-feature predicate `hasABS(candidate)=true`. For an exact vehicle and TargetSlice, evaluate `J_mask(vehicle, Vehicle, vehicleEdition, absMaskEdition, TargetSlice)`. Surface, speed, rig, and time remain Scope predicates. Missing ABS evidence gives `unknown`; a guard may decline use. If ABS becomes a stable conceptual distinction, identify local kind `VehicleWithABS` and establish an obtaining `U.SubkindOf` relation separately.
+`VehicleABSUse-2026` designates `Vehicle`, pins its signature, and adds the governed candidate condition that the vehicle has ABS. A physical vehicle in the declared slice is admissible; missing ABS support yields `unknown`, while a non-vehicle input is `not-applicable`. Surface, rig, and time conditions used only to bound the claim remain Scope. If ABS becomes a stable classification distinction, recover another kind and test its subkind relation separately.
 
-#### C.3.4:10.2 - `AuthenticatedRequest@Frontend` vocabulary use
+#### C.3.4:10.2 - `AuthenticatedRequest@Frontend` Vocabulary Use
 
-The RoleMask declaration binds `authHeader` to local spelling `X-Auth` and adds no candidate criterion. The masked judgment therefore equals the base `J(request, AuthenticatedRequest, authEdition, slice)`. Another spelling, row, or field does not classify the request. Cross-context kind use still requires the exact KindBridge relation; local aliases alone require no MaskAdapter unless their correspondence is relied on across contexts.
+`FrontendAuthHeaderUse-2026` binds `authHeader` to local spelling `X-Auth` and adds no candidate condition. Its judgment therefore equals the admissible base judgment. Moving the same exact request kind to another team requires a fresh receiving evaluation but no `KindBridge` merely because the team or spelling changed. If two independently identified request kinds differ, establish any bridge separately.
 
-#### C.3.4:10.3 - `AdultPatient@Clinic` composite use
+#### C.3.4:10.3 - `AdultPatient@Clinic` Composite Use
 
-The declaration pins the base adult-patient signature edition and adds the direct candidate-feature criterion `ageAt(patient, slice) >= 21`; `EHR system = X` remains Scope. A date-of-birth record may support the age claim, but record availability is not the patient feature or the mask criterion. In Jurisdiction Y, establish the KindBridge relation to the target kind, use a target RoleMask edition, and use a MaskAdapter declaration only for a changed age threshold or interpretation. Evaluate the exact target `J_mask`. An unavailable date-of-birth dependency yields `unknown`; the guard declines use separately and R receives only the justified bridge penalties.
+`ClinicAdultPatientUse-2026` pins the base adult-patient signature and adds the candidate condition `ageAt(patient, slice) >= 21`; the chosen clinic and claim window remain separately governed scope/applicability values. A person in the declared candidate domain is admissible; unavailable birth support yields `unknown`.
 
-### C.3.4:11 - Authoring & Review Guidance (informative)
+In Jurisdiction Y, first compare the exact patient-kind membership distinctions. If the same kind continues, use the Y declaration and evaluate afresh without a bridge. If the threshold or interpretation makes a distinct target kind and a directional correspondence is relied on, establish the `KindBridge`. A separate adaptation-correspondence declaration may then state how the two exact use declarations differ. Neither object transfers source truth.
 
-#### C.3.4:11.1 - Authoring a RoleMask card
+### C.3.4:11 - Authoring and Review Guidance
 
-**Publication fields (suggested).** A card or catalog row may represent the RoleMask declaration's designator, base kind, pinned kind-signature edition, declaration edition, type, intended use, candidate-feature constraints, separately routed Scope expectations, bindings, definedness, examples, known bridge/adapter declarations, and any stable-distinction review note. The card is not the declaration episteme or a new ontic object.
-**Rules of thumb.**
+An adaptation card may show its declaration designator, base kind, effective scheme, pinned base-signature and declaration editions, adaptation type, intended use, candidate constraints, bindings, separately routed Scope, applicability, examples, known bridge or correspondence declarations, and a stable-distinction review note when current. A correspondence card shows its source declaration as EntityOfConcern and names target, direction, rule, definedness, loss, and effective scheme. A card represents the declaration; it is not the declaration or another kind.
 
-* Keep entity predicates **small and testable**.
-* Put context predicates in Scope, not in the masked classification criterion.
-* If several teams reuse the same stable conceptual constraint, review whether a separately identified local kind and an obtaining `U.SubkindOf` relation are warranted; mask reuse itself establishes neither.
+Rules of thumb:
 
-#### C.3.4:11.2 - Reviewer 7‑point checklist
+- Keep candidate conditions small and governed.
+- Check ValueKind and applicability before the three-valued judgment.
+- Put claim-scope conditions in Scope, not kind identity.
+- Treat locality as a comparison cue. Require a bridge only for distinct kinds with an obtaining correspondence.
+- If several teams reuse one stable conceptual constraint, review whether another kind is warranted; reuse alone establishes none.
 
-1. Mask **registered** and **versioned**?
-2. **Type** declared correctly (constraint/vocabulary/composite)?
-3. Entity vs context **split** respected?
-4. **Determinism** (no “latest”) satisfied?
-5. Does the guard route context to USM, evaluate the exact three-valued masked judgment for the candidate, and keep refusal separate?
-6. Does every cross-context use recover the KindBridge relation and assertion, target declarations, any MaskAdapter episteme, target `J_mask`, and only the justified R penalties?
-7. Is declaration consolidation sufficient, or does a stable conceptual distinction warrant a separately identified local kind and independently obtaining subkind relation?
+Reviewer questions:
 
-### C.3.4:12 - Conformance Checklist (normative)
+1. Are the exact base kind and declaration editions recoverable?
+2. Is the type—constraint, vocabulary, or composite—correct?
+3. Are candidate conditions, applicability, and ClaimScope separated?
+4. Does evaluation distinguish `not-applicable`, `true`, `false`, `unknown`, and guard refusal?
+5. On locality change, was kind identity compared before any bridge was claimed?
+6. For distinct-kind use, do the bridge predicate, receiving declaration, fresh judgment, any adaptation correspondence, and only justified R consequence remain separate?
+7. Does a stable conceptual distinction warrant another kind, or is the declaration sufficient?
+
+### C.3.4:12 - Conformance Checklist
 
 | ID | Requirement |
 | --- | --- |
-| **RM-01** | RoleMask is a C.2.1 declaration episteme with exact base kind, pinned `KindSignature` edition, declaration edition, intended use, constraint/binding content, definedness, and its own formality when current. |
-| **RM-02** | It creates no new kind or `U.SubkindOf` relation; any stable refinement is independently identified and governed by C.3.1. |
-| **RM-03** | `J_mask(candidate, kind, kindSignatureEdition, roleMaskEdition, slice)` is reproducible and returns `true`, `false`, or `unknown`; guard refusal is separate. |
-| **RM-04** | Vocabulary masks preserve the base judgment; constraint/composite masks use only direct candidate-feature predicates and apply false-if-any-false, true-if-all-true, otherwise-unknown conjunction. |
-| **RM-05** | Context conditions remain USM Scope predicates and are not folded into classification. |
-| **RM-06** | A guard designates exact declaration editions, evaluates the exact candidate, and does not treat a mask name as a kind synonym. |
-| **RM-07** | Broad stable reuse triggers review for a separately identified local kind and an obtaining subkind relation; a declaration or catalog row does not perform promotion. |
-| **RM-08** | Every guard-addressable RoleMask resolves durably to its exact declaration and dependency editions; an optional catalog represents those references and may consolidate redundant declarations without becoming ontology. |
-| **RM-09** | Cross-context use establishes the exact KindBridge relation, target declarations, and any separate MaskAdapter episteme before evaluating the target masked judgment. |
-| **RM-10** | RoleMask non-settlement yields target `unknown`; MaskAdapter non-settlement blocks the cross-context use without rewriting an independent target masked judgment; fail-closed is never `false`. |
+| **KUA-01** | The declaration is a C.2.1 episteme with base kind as EntityOfConcern, effective scheme, pinned editions, use, constraints/bindings, applicability, dependencies, and its own formality. |
+| **KUA-02** | It creates no kind or subkind fact. |
+| **KUA-03** | Admissibility precedes the three-valued judgment; guard refusal is separate. |
+| **KUA-04** | Vocabulary preserves the base judgment; constraint/composite uses governed candidate conditions and the three-valued conjunction rule. |
+| **KUA-05** | Claim-scope conditions remain under A.2.6 and are not folded into kind identity. |
+| **KUA-06** | A guard designates exact editions, checks applicability, evaluates the exact candidate, and makes a separate use decision. |
+| **KUA-07** | Stable refinement is independently identified and checked; declaration reuse does not promote it. |
+| **KUA-08** | Guard-addressable adaptation and correspondence declarations resolve to their exact editions and all interpretation, dependency, definedness, direction, and loss values required by section 6.3; a catalog remains representation and does not merge kind identities. |
+| **KUA-09** | Locality change triggers identity comparison. Same-kind reuse has no bridge and still gets a fresh receiving judgment; distinct-kind use requires an obtaining C.3.3 correspondence before bridge reliance. |
+| **KUA-10** | Non-applicability forms no judgment; unavailable admissible dependencies yield `unknown`; correspondence failure blocks use without rewriting the receiving result. |
 
 ### C.3.4:End

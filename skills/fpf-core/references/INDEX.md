@@ -7,15 +7,15 @@
 | A.1.1 | Bounded Model-Use Structure and DDD Bounded-Context Recovery | — |
 | A.1.SCR | Finding the Acting or Changed System | — |
 | A.1.STM | Using the System-Thinking Long Mantra | — |
-| A.2 | Role Taxonomy | role, assignment, holder, context, function vs identity |
-| A.2.1 | `U.RoleAssignment` - System Role Assignment | assignment occurrence, holder System, role value, role-taxonomy episteme, effective ReferenceScheme |
+| A.2 | System-Role Kinds and Assignments | system-role kind, local System classification, `U.SystemRoleAssignment`, holder System, assignment |
+| A.2.1 | `U.SystemRoleAssignment` - Contextual System-Role Assignment | direct assignment species, holder System, system-role kind, assignment predicate, identity |
 | A.2.2 | `U.Capability`: System Ability Envelope and Measures | holder-dependent capability instance, ability envelope, measure set, qualification window, currentness |
-| A.2.3 | `U.PromiseContent` (Promise Content) | promise content, promise content, accessSpec, acceptanceSpec, SLO |
-| A.2.4 | Episteme Evidence-Use and Status-Use Relations | evidence-use, status-use, source-use, episteme, claim |
-| A.2.5 | RoleStateRelation@BoundedContext - Role State Space and Enactable-State Admission | state machine, RSG, role state, enactability, role-state evolution. |
+| A.2.3 | `U.PromiseContent` (Promise Content) | promise content, promised outcome, access specification, acceptance specification, SLO |
+| A.2.4 | Episteme Evidence-Use and Status-Use Relations | evidence-use relation, status-use relation, source-use wording, episteme, claim |
+| A.2.5 | SystemRoleAssignmentStateRelation - Assignment-State Recognition and Work Admission | assignment-state predicate, assignment-state relation, state condition, time window, Work admission |
 | A.2.6 | Unified Scope Mechanism (USM): Context Slices & Scopes | — |
-| A.2.7 | RoleRelationStructure@BoundedContext - Context-Local Role Relations and Representation-Lens Boundary | role algebra, specialization (`≤`), incompatibility (`⊥`), bundles (`⊗`), separation of duties (SoD) |
-| A.2.8 | `U.Commitment` (Deontic Commitment Object) | commitment, deontics, obligation, recommendation-as-duty, prohibition |
+| A.2.7 | SystemRoleKindRelationStructure - Relations among System-Role Kinds | relations among system-role kinds, `U.SubkindOf`, substitution, incompatibility, joint assignment requirement |
+| A.2.8 | `U.Commitment` (Deontic Commitment Relation) | individual duty, actual bearer, obligation, recommendation-as-duty, prohibition |
 | A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, matching dated-work exercise, checked non-violation, permission or prohibition conflict |
 | A.2.9 | `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records) | admitted speech-act Work kind, actual communicative occurrence, performing `U.System`, authority-grounding assignment, optional `SpeechActRecord` |
 | A.3 | Transformer Constitution (Quartet) | — |
@@ -33,27 +33,27 @@
 | A.6.REL | Relation Obtaining and Individuated Relation Occurrences | — |
 | A.6.0 | U.Signature - Reusable Law-Governed Declaration Episteme | — |
 | A.6.1 | U.Mechanism - Reusable Law-Governed Operation Declaration | — |
-| A.6.2 | `U.EffectFreeEpistemicMorphing` — Effect‑free morphisms of epistemes | — |
-| A.6.3 | `U.EpistemicViewing` — EntityOfConcern-preserving morphism | — |
+| A.6.2 | Effect-free episteme morphing | — |
+| A.6.3 | Episteme viewing - EntityOfConcern-preserving episteme construction | — |
 | A.6.3.CSC | Controlled Semantic Coarsening | — |
 | A.6.3.CR | ConservativeRetextualization - entityOfConcernRef-preserving textual re-expression | — |
 | A.6.3.RT | Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition | — |
 | A.6.3.NAR | Structure-to-Narrative Rendering | — |
-| A.6.4 | `U.EpistemicRetargeting` — EntityOfConcern retargeting morphism | — |
+| A.6.4 | EntityOfConcern retargeting | — |
 | A.6.P | Relational Precision Restoration — Recovering Direct Relations from Under-Specified Claims | — |
 | A.6.P.WMR | Exact Relation Recovery for Method and Work Claims | — |
 | A.6.RCD | Needed Relation Claim Derivation and Relation-Kind Admission | — |
-| A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, direct relation participant, participant meaning, actual participant, RelationSignature |
+| A.6.RSIR | Relation, Signature, Interface, Role, and Slot Precision Restoration | relation-signature-interface-role-slot recovery, ambiguous role wording, direct relation participant, participant meaning, RelationSignature |
 | A.6.A | Action-Invitation Precision Restoration (ACT-INV) | affordance, action invitation, action-first language, post-threshold classification, A.15 docking |
 | A.6.F | Function and Functional Precision Restoration (RPR-FUNCTION) | function wording, functional architecture, FunctionalStructure, required behavior or effect, actual transformation |
 | A.6.M | Module Relation Repair | module relation, component, interface, port, platform |
 | A.6.5 | Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline | — |
-| A.6.6 | Base Declaration Discipline - Kind-explicit, scoped, witnessed base declaration discipline (with base-change lexicon) | base declaration, basedness, baseRelation, SWBD, witnesses |
+| A.6.6 | Base Declaration Discipline - Direct relation first; reusable declaration only when needed | — |
 | A.6.7 | `MechSuiteDescription` — Description of a set of distinct mechanisms | mechanism suite, distinct mechanisms, suite obligations, spec pins, CN-Spec |
 | A.6.9 | Cross-Context Sameness Disambiguation - Repairing cross-context "same / equivalent / align" via explicit Bridges (RPR-XCTX) | ambiguous sameness, direct-owner dispatch, exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections |
-| A.6.S | U.SignatureEngineeringPair - Signature engineering via a ConstructorSignature and a TargetSignature | signature engineering, TargetSignature, ConstructorSignature, two-signature arrangement, EFEM |
+| A.6.S | TargetSignature and optional ConstructorSignature - demand-driven signature engineering | — |
 | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) | wholeness, integrity, part-of, boundary, environment |
-| A.7 | Strict Distinction (Clarity Lattice) | category error, EntityOfConcern ≠ Description episteme, Role ≠ Work, ontology. |
+| A.7 | Strict Distinction (Clarity Lattice) | category error, EntityOfConcern ≠ Description episteme, system-role kind and assignment ≠ Work, MethodDescription ≠ Method ≠ Capability ≠ Work. |
 | A.7.1 | Consequence-Guided Ontological Problem Solving | wrong engineering consequence, smallest defeated claim, exact subject and direct owner, one selected analysis apparatus, actual system performing under an assignment |
 | A.7.2 | FPF Ontology-Premise Reconciliation | dated FPF applications, result claims or decisions, same receiving claim or consequence, exact used clauses and premises, actual source-use relations |
 | A.7.CP | Constructive-Premise Compact and Reasoning-Basis Use | constructive-premise claim, dated reasoning Work, exact receiving claim or result, adopted premise or conditional assumption, ClaimUsedAsReasoningBasisRelation@Context |
@@ -62,10 +62,10 @@
 | A.10 | Evidence Graph Referring (C-4) | relied-on claim, bounded use, claim/result episteme, source publication, carrier |
 | A.11 | Ontological Parsimony | parsimony, composition, non-redundancy, kernel growth, U-kind admission. |
 | A.12 | Acting-Side Externalization and Reflexive Split | — |
-| A.13 | The Agential Role & Agency Spectrum | agency as role, agency spectrum, contextual role assignment, autonomy grading, substrate-neutral autonomy. |
+| A.13 | The Agential Role & Agency Spectrum | agential participation, local system-role kind, `U.SystemRoleAssignment`, agency spectrum, autonomy grading |
 | A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | mereology, part-of, ComponentOf, PortionOf, PhaseOf |
-| A.15 | Role-Method-Work Alignment (Contextual Enactment) | role-method-work distinction, `U.Role`, `U.Method`, `U.MethodDescription`, `U.WorkPlan` |
-| A.15.1 | `U.Work`: Dated Performed Work Occurrence | admitted `U.Work` kind, world-side dated occurrence, actual performer `U.System`, covering `U.RoleAssignment`, `performedUnderAssignment` |
+| A.15 | System-Role–Method–Work Alignment | system-role kind, assignment, Method, MethodDescription, WorkPlan |
+| A.15.1 | `U.Work`: Dated Performed Work Occurrence | admitted `U.Work` kind, world-side dated occurrence, actual performer `U.System`, covering `U.SystemRoleAssignment`, `performedUnderAssignment` |
 | A.15.2 | `U.WorkPlan`: The Schedule of Intent | intended-work episteme, present EntityOfConcern, possible future performance, `PlanItem` content, horizon |
 | A.15.3 | `SlotFillingsPlanItem` — Declaration-Local Planned Designation | WorkPlan claim content, intended-performance designator, exact declaration member, direct owner, participant/argument/result meaning |
 | A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, exact attempted use, independent required-position rows, governing pattern and direct object, project-side reference |
@@ -91,8 +91,8 @@
 | A.19.ULSAM | Unified Lawful Scale Aggregation Mechanism (ULSAM) | lawful aggregation, scale-lawful fold, `fold_Γ?`, `ΓFoldRef`, `CG-Spec.Γ_fold` |
 | A.19.CPM | Unified Comparison Mechanism (CPM) | comparison, comparator, `ComparatorSpecRef`, `ComparatorSet`, set-valued comparison outcome |
 | A.19.SelectorMechanism | A.19.SelectorMechanism - Unified Selection Kernel, SelectorMechanism | — |
-| A.20 | Flow Constraint Validity — Eulerian | flow, ConstraintValidity, Eulerian, TransformationFlowStructure, GateFit |
-| A.21 | GateProfilization: `OperationalGate(profile)` (GateFit core) | OperationalGate, GateFit, GateProfile, GateChecks, join-semilattice |
+| A.20 | Constraint Validity for Transformation Steps | — |
+| A.21 | Gate Decisions from Independent Check Results | — |
 | A.22 | Structure and Structural Views (STRUCT-CAL) | — |
 | A.22.CGUS | Constraint-Governed Unfolding Structure | — |
 | B.1 | Holon Aggregation and Part-Whole Construction | — |
@@ -108,7 +108,7 @@
 | B.2.3 | Meta-Holon Transition With Episteme Result | — |
 | B.2.4 | Capability and Functioning Whole Reidentification | — |
 | B.2.5 | Supervisor-Subholon Feedback Relation | — |
-| B.3 | Trust & Assurance Calculus (F–G–R with Congruence) | trust, assurance, reliability, F-G-R, formality |
+| B.3 | Trust and Assurance Calculus | — |
 | B.3.3 | Assurance Subtypes & Levels | assurance levels, L0-L2, TA, VA, LA |
 | B.3.4 | Evidence Decay & Epistemic Debt | evidence aging, decay, freshness, epistemic debt, stale data. |
 | B.3.5 | Working-Model Relations & Grounding (CT2R-LOG) | grounding, constructive trace, working model, assurance layer, CT2R |
@@ -119,7 +119,7 @@
 | B.5.2 | Abductive Loop | abduction, explanatory prompt, candidate hypotheses, plausibility filters, origin trace |
 | B.5.2.0 | `U.AbductivePrompt` | abductive prompt, prompt species, rival-set discipline, threshold crossing, explanation-ready cue. |
 | B.5.2.1 | Creative Abduction with NQD | creative abduction, NQD binding, Γ_nqd.generate, Creativity-CHR, Q-front |
-| B.5.3 | Domain-Concept Bridge | domain vocabulary, concept bridge, local sense, bounded context, bridge scope |
+| B.5.3 | Domain-Concept Bridge | domain vocabulary, source-local meaning, F.17 cell, basis relation, direct relation |
 | C.2 | KD‑CAL | knowledge, epistemic, evidence, trust, assurance |
 | C.2.1 | `U.Episteme`: Constitution, Empirical Grounding, and Edition Relations | — |
 | C.2.P | Epistemic Precision Restoration | — |
@@ -132,11 +132,11 @@
 | C.2.6 | `U.LanguageStateAnchoringMode` | anchoring mode, embodiment, trace, model state, document |
 | C.2.7 | `U.LanguageStateRepresentationFactorBundle` | representation factors, locality, sparsity, symbolicity, factor bundle |
 | C.2.P.DR | Declarative Representation Precision Restoration | — |
-| C.3 | Kinds, Intent and Extent, and Typed Reasoning | bounded-context local kind, intent-bearing KindSignature, effective ReferenceScheme, three-valued candidate judgment, optional slice-indexed extension |
-| C.3.1 | U.Kind and U.SubkindOf Core | local kind, U.SubkindOf direct relation, relation-obtaining predicate, relation occurrence, assertion episteme |
+| C.3 | Kinds, Intent and Extent, and Typed Reasoning | admitted U.Kind individual, membership distinction, KindSignature, admissibility, true/false/unknown judgment |
+| C.3.1 | U.Kind and U.SubkindOf Core | kind identity, membership criterion, continuity, U.SubkindOf direct relation, criterion entailment |
 | C.3.2 | Kind Intent, Membership Judgment, and Extension | — |
-| C.3.3 | `KindBridge` & `CL^k` — Cross-context Mapping of Kinds | KindBridge direct relation, bridge assertion episteme, target judgment, CL^k, loss |
-| C.3.4 | `RoleMask` — Contextual Adaptation of Kinds (without cloning) | RoleMask declaration episteme, masked judgment, candidate-feature constraint, vocabulary binding, stable-refinement review. |
+| C.3.3 | `KindBridge` and `CL^k` — Cross-local Correspondence between Distinct Kinds | — |
+| C.3.4 | KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning | — |
 | C.3.5 | `KindAT` — Intentional Abstraction Facet for Kinds (K0…K3) | KindAT, K0-K3, editorial facet, declaration planning, assurance planning. |
 | C.3.A | Typed Guard Macros for Kinds + USM (Annex) | declaration compatibility, exact candidate judgment, true/false/unknown, guard refusal, regulatory |
 | C.11 | Decision Theory (Decsn-CAL) | decision theory, DecisionSubject, OptionSet, comparison basis, ChoiceRule |
@@ -144,7 +144,7 @@
 | C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurand, measurement subject, Characteristic, Scale, Level/Coordinate |
 | C.16.P | Characteristic and Scale Precision Restoration | — |
 | C.16.Q | Quality-Term Precision Restoration | — |
-| C.17 | Creativity‑CHR — Characterising Generative Novelty & Value | Creativity-CHR, Novelty@context, Use-Value and ValueGain, Surprise, ConstraintFit |
+| C.17 | Characterising Generative Novelty and Value | qualitative-first evaluation, named comparison basis, Novelty, Use-Value, ConstraintFit |
 | C.18 | Open-Ended Search Archive and Front Stewardship | open-ended search, generation, exploration archive, non-dominated front, descriptors |
 | C.18.1 | Scaling‑Law Lens Binding (SLL) | scaling law, scale variables (S), compute‑elasticity, data‑elasticity, resolution‑elasticity |
 | C.19 | Explore-Exploit Live-Pool Governor | explore-exploit, already-live candidate pool, pool-policy result, governing lens, widen |
@@ -163,9 +163,9 @@
 | C.26.1 | Probe-Coupled Boundary Interaction | probe-coupled boundary, passive read, dashboard as instrument, workshop as state-changing interaction, API read |
 | C.26.2 | Enacted Distributed State Evidence | distributed-state evidence, coordinated work, enacted state, minimal state reading, evidence carrier |
 | C.26.3 | Viability-Envelope Boundary Regulation | viability envelope, homeostasis, allostasis, boundary regulation, sensor/probe/actuator split |
-| C.27 | Temporal Claim Adequacy: State Readings, Temporal Trends, and Intervention-Sensitive Temporal Change | temporal claim adequacy, temporal claim, state reading, rate reading, temporal trend |
+| C.27 | Temporal Claim Adequacy: State Readings, Temporal Trends, and Intervention-Sensitive Change | temporal claim adequacy, temporal claim, state reading, rate reading, temporal trend |
 | C.27.TA | Temporal Aspect: Time Windows, Rhythm, Cadence, and Currentness | temporal aspect, time window, freshness, currentness, rhythm |
-| C.28 | CausalUse-CAL: Causal-Use Questions, Causality-Ladder Rungs, Identification and Realizability | causal-use question, causality ladder, association, intervention, counterfactual |
+| C.28 | CausalUse-CAL: Causal-Use Questions, Identification, and Realizability | causal-use question, causality ladder, association, intervention, counterfactual |
 | C.29 | Mathematical Lens Use | mathematical lens, structure-preserving representation, lens mapping mode, preserved structure, lost structure |
 | C.30 | Grounded Architecture and Selected-Structure Adequacy | grounded architecture, ArchitectureOf@Context, selected structure, architecture claim, architecture question card |
 | C.30.AD | Architecture Description Adequacy | architecture description, ArchitectureDescription@Context, architecture description use card, architecture structural view, viewpoint |
@@ -218,14 +218,15 @@
 | E.6 | Didactic Architecture of the Spec | didactic, pedagogy, structure, narrative flow, on-ramp |
 | E.7 | Archetypal Grounding Principle | grounding, examples, archetypes, U.System, U.Episteme |
 | E.8 | FPF Authoring Conventions & Style Guide | — |
-| E.8.ECSPF | Evaluation CharacteristicSpace FPF Pattern Publication Form | — |
+| E.8.ECSPF | FPF Pattern Publication Form for Evaluation Guidance | — |
 | E.9 | Design-Rationale Record (DRR) Method | — |
 | E.9.DA | DRR Decision-Adequacy Evaluation CharacteristicSpace | — |
 | E.10 | Unified Lexical Rules for FPF | — |
 | E.10.MOVE | Move and Readiness Wording Precision Restoration | — |
 | E.10.ARCH | Wording-Use Ontological Precision Restoration Architecture | — |
+| E.10.ROLE | Recovering What “Role” Means in the Current Claim | ambiguous role wording, system-role kind, assignment, relation participant, declaration slot |
 | E.10.P | Conceptual Prefixes (policy & registry) | prefixes, U., Γ_, ut:, tv: |
-| E.10.D1 | Lexical Discipline for “Context” (D.CTX) | context, U.BoundedContext, anchor, domain, frame. |
+| E.10.D1 | Recovering What “Context” Means in Use | context wording, source-local meaning, claim scope, model use, working situation |
 | E.10.D2 | EntityOfConcern, Description Episteme, and Specification-Use Discipline | EntityOfConcern, Description episteme, specification use, DescriptionContext, testable |
 | E.11 | First-Practical Entry and Pattern-Use Discoverability Discipline | — |
 | E.11.PUA | Pattern Use in a Working Situation and First Useful Result | — |
@@ -233,7 +234,7 @@
 | E.12 | Didactic Primacy & Cognitive Ergonomics | didactic, cognitive load, ergonomics, usability, Rationale Mandate |
 | E.13 | Pragmatic Utility and Value Alignment | pragmatic utility, proxy-to-value alignment, Goodhart, Campbell, surrogation |
 | E.14 | Human-Centric Working-Model | working model, human-centric, publication surface, grounding, assurance layers. |
-| E.15 | Lexical Authoring & Evolution Protocol (LEX-AUTH) | lexical authoring, evolution protocol, LAT, delta-classes. |
+| E.15 | Pattern Change, Edition Continuity, and Impact Analysis | — |
 | E.16 | RoC‑Autonomy Budget & Enforcement | autonomy budget, guarded enactment, autonomy ledger, override speech act, scout/probe/commit checkpoint. |
 | E.17.0 | Viewpoint and View Recognition for Multi-View Describing | — |
 | E.17.1 | Viewpoint Bundle Library — Reusable Viewpoint Reference Bundles | — |
@@ -258,24 +259,24 @@
 | E.24.CD | Ontic Candidate Detection and First-Use Disposition | — |
 | E.24.PUB | Ontic Description and Publication Discipline | — |
 | E.24.UK | U-kind Admission and Ontic Settlement | — |
-| F.0.1 | Contextual Lexicon Principles | local meaning, context, semantic boundary, bridge, congruence |
-| F.1 | Domain‑Family Landscape Survey | — |
-| F.2 | Term Harvesting & Normalisation | term harvesting, lexical unit, normalization, provenance, source-text terms. |
-| F.3 | Intra‑Context Sense Clustering | sense clustering, disambiguation, Local-Sense, SenseCell, counter-examples. |
-| F.4 | Role Description (RCS + RoleStateGraph + Checklists) | role template, status template, invariants, RoleStateGraph (RSG), Role Characterisation Space (RCS). |
-| F.5 | Naming Discipline for U-kind Names and RoleDescription Labels | naming conventions, lexical rules, morphology, twin registers, U-kind naming |
-| F.6 | RoleAssignment and Performed-Work Attribution Check | actual performing `U.System`, exact `U.RoleAssignment`, `performedUnderAssignment`, assignment coverage, world-side attribution |
-| F.7 | Concept‑Set Table Construction | concept-set, table, row, columns, differences |
-| F.8 | Mint-or-Reuse Decision | decision lattice, type explosion, reuse, minting new U-kinds, parsimony. |
+| F.0.1 | Source-Local Meaning Recovery | troubling word use, exact source and edition, source-local meaning, local expression, optional durable address |
+| F.1 | Question-Relative Source Selection | receiving question, intended use, exact source and edition, answer-changing source role, finite source cut |
+| F.2 | Term Harvesting & Normalisation | exact source and edition, effective ReferenceScheme, LocalExpression, LocalSenseClaim, LNF |
+| F.3 | Source-Local Sense Clustering | source expression, LocalSenseClaim, effective ReferenceScheme, alias consolidation, counterexample |
+| F.4 | SystemRoleKindDescription — Describing an Exact System-Role Kind | system-role-kind description, local kind, classification criterion, effective scheme, description episteme |
+| F.5 | Naming Discipline for U-kind Names and SystemRoleKindDescription Labels | U-kind name, system-role-kind name, `SystemRoleKindDescription` label, Plain and Tech designations, local meaning |
+| F.6 | SystemRoleAssignment and Performed-Work Attribution Check | Work attribution, performer System, exact assignment occurrence, holder equality, temporal coverage |
+| F.7 | Concept-Set Table Construction | exact local claim, optional SchemeSenseCell, comparison surface, obtaining relation, direction |
+| F.8 | Mint-or-Reuse Decision | subject before name, governed value or relation, proposed naming use, local phrase, designation |
 | F.9 | Alignment and Bridge across Contexts | exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections, relation-semantic profile, obtaining Bridge |
-| F.9.1 | Bridge Stance Overlay | bridge stance, stance overlay, interpretive gloss, projection note, rename note |
+| F.9.1 | Bridge Stance Note | bridge stance note, bounded-use claim, interpretive gloss, local rename, operationalization |
 | F.10 | Status Families Mapping (Evidence • Standard • Requirement) | status, evidence, standard, requirement, polarity |
-| F.11 | Method Quartet Harmonisation | Method, MethodDescription, Work, Actuation, Role–Method–Work alignment. |
-| F.12 | Service Acceptance Binding | Service Level Objective (SLO), Service Level Agreement (SLA), acceptance criteria, binding, observation. |
+| F.11 | Method Quartet Harmonisation | Method, MethodDescription, dated Work, control or transformation output, enactment |
+| F.12 | Service Acceptance–Work Evidence Link | PromiseContent, delivery Work, observation, measured value, evaluation Work |
 | F.13 | Lexical Continuity & Deprecation | evolution, deprecation, renaming, splitting terms, merging terms. |
-| F.14 | Anti‑Explosion Control (Roles & Statuses) | vocabulary growth, guard-rails, separation-of-duties, bundles, reuse. |
+| F.14 | Anti-Explosion Control for System-Role and Status Name Families | vocabulary explosion, system-role names, status names, designation, assignment |
 | F.15 | Static and Regression Conformance Harness for Unification | static checks, regression tests, acceptance tests, validation, SenseCell testing. |
-| F.16 | Worked‑Example Template (Cross‑Domain) | didactic template, example, pedagogy, cross-domain illustration. |
+| F.16 | Worked-Example Template (Cross-Domain) | working situation, practical gain, actual values, direct relations, exact sources |
 | F.17 | Unified Term Sheet | — |
 | F.18 | Local-First Unification Naming Protocol | — |
 | F.19 | Ontology-First Plain Technical Rewriting | — |

@@ -1,25 +1,26 @@
 ---
 id: F.7
-title: Concept‑Set Table Construction
+title: "Concept-Set Table Construction"
 status: Stable
 keywords:
-  - "concept-set"
-  - table
-  - row
-  - columns
-  - differences
-  - comparisons.
+  - exact local claim
+  - optional SchemeSenseCell
+  - comparison surface
+  - obtaining relation
+  - direction
+  - loss
+  - evidence
+  - receiving use.
 dependencies:
   builds_on:
     - F.3
     - F.9
+    - F.17
   coordinates_with:
     - A.6.9
-  prerequisite_for:
-    - F.8
 ---
 
-# F.7: Concept‑Set Table Construction
+# F.7: Concept-Set Table Construction
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -27,275 +28,227 @@ dependencies:
 
 ---
 
-## F.7 - Concept‑Set Table
+## F.7 - Concept-Set Table
 
-**“Show one thing across Contexts—only where explicit bridges allow it.”**
+**“Put exact local meanings and already established relations side by side; let the table display the argument, never create it.”**
 
 **Status.** Architectural pattern.
-**Depends on.** E.10.D1 **Lexical Discipline for ‘Context’** (Context ≡ `U.BoundedContext`); **F.0.1 senseFamily (normative)**; F.1 **Domain‑Family Landscape Survey**; F.2 **Term Harvesting**; F.3 **Intra‑Context Sense Clustering** (SenseCells); F.5 **Naming Discipline**; F.9 **Alignment & Bridge Across Contexts**.
-**Coordinates with.** F.4 **Role Description**; F.6 **Role Assignment & Enactment Cycle (Six-Step)**; Part C patterns (for examples), **MM‑CHR (for Characteristic)**; A.6.9 (RPR‑XCTX for repairing umbrella cross‑Context sameness/alignment prose before it justifies rows).
-**Aliases (informative).** *Concept‑Set table*, *comparison grid*.
+**Depends on.** E.10.D1 **Recovering What “Context” Means in Use**; F.0.1 **Source-Local Meaning Recovery**; F.1 **Question-Relative Source Selection**; F.2 **Term Harvesting**; F.3 **Source-Local Sense Clustering**; F.17 for optional exact cells; F.5 **Naming Discipline**; F.9 for actual semantic relations and their separate bounded-use claims.
+**Coordinates with.** F.4 **SystemRoleKindDescription**; F.6 **SystemRoleAssignment and Performed-Work Attribution Check**; direct Part C patterns for the compared values; C.16 for characteristics; A.6.9 when umbrella sameness wording must be repaired before a relation is asserted.
+**Aliases (informative).** *Concept-Set table*; *comparison grid*; *Giants’ table*.
 
 ### F.7:1 - Intent & applicability
 
-**Intent.** Provide a **single, didactic page** where each **row** presents **one Concept‑Set**—a *set of SenseCells from different Contexts that we are licensed (by explicit Bridges) to treat as “the same for a stated scope”*. Columns are **Contexts**; cells carry **local labels**. The table **does not invent equivalences**: it **summarises** already declared **F.9 Bridges**, exposing *scope, losses, and counter‑examples* at a glance.
+**Intent.** Give a reader one compact surface for comparing exact source-local claims, optional F.17 cells, and any relations that already obtain between them. The table also shows the stated comparison or receiving use, direction, losses, evidence, and counterexamples. It makes a distributed argument readable without turning row membership into sameness or permission.
 
-**Applicability.** Use whenever cross-context reading is necessary (naming admitted U-kinds, roles, methods, characteristic terms, teaching contrasts, assignment/enactment-adjacent terminology). It is a **reading lens**, not a data model: **notation-free**, **governance-free**, **Context-loyal**.
+**Use this when.** Two or more selected sources must be compared for one named question, teaching contrast, designation choice, or receiving use, and prose alone scatters the relevant distinctions.
 
-**Non‑goals.** No hidden merges. No “global terms”. No workflows or tool schemas. The table is a **conceptual display** of *licensed sameness* and *honest non‑sameness*.
+**Do not use this when.** One local claim is enough, or no receiving comparison is named. A table is optional. It creates no value, kind, relation, classification, assignment, evidence use, reliance, verdict, or authorisation.
 
 ### F.7:2 - Problem frame
 
-Without a disciplined Cross‑context view:
+Cross-source comparison commonly fails through:
 
-1. **Silent equivalence.** Readers assume sameness by name alone (e.g., *process*).
-2. **Loss denial.** Mappings hide what is dropped (DesignRunTag, units, agency).
-3. **Name inflation.** Convenience root kind labels are coined to avoid facing heterogeneity.
-4. **Cognitive scatter.** Concepts drift across documents without one compact, teachable “where‑what‑how‑same” view.
+1. **Silent equivalence:** similar labels are treated as one meaning.
+2. **Loss denial:** an actual relation is shown without direction or limitation.
+3. **Name inflation:** a new umbrella label is coined merely because several entries share a row.
+4. **Cognitive scatter:** source meanings, relations, evidence, and the receiving question are separated across documents.
 
 ### F.7:3 - Forces
 
-| Force  | Tension to resolve  |
+| Force | Tension to resolve |
 | --- | --- |
-| **Locality vs comparison**  | Meaning lives in Contexts; yet we must **compare** Contexts to reason across disciplines.  |
-| **Didactics vs fidelity**  | A compact row is easy to grasp; it must still show **scope and loss** honestly.  |
-| **Simplicity vs completeness** | A minimal grid aids memory; temptation to overload it with proofs and procedures must be resisted.  |
-| **Sameness vs difference**  | Some families **cannot** be unified; the table must support **contrast rows** without pretending equivalence. |
+| **Locality vs comparison** | Each meaning remains source-local, yet the reader must compare them. |
+| **Didactics vs fidelity** | A compact row must not hide direction, loss, evidence, or a missing relation. |
+| **Simplicity vs completeness** | The page should be memorable without pretending that the table contains the full proof. |
+| **Similarity vs relation** | Entries may look alike while no identity, hierarchy, or substitution relation obtains. |
 
 ### F.7:4 - Core idea (didactic)
 
-A **Concept‑Set** is a **finite set of addresses**
+A **Concept-Set row** is a didactic grouping for one stated comparison or use. It contains:
 
-$$
-\text{CS}=\{\langle \text{Context}_i,\ \text{SenseCell}_i\rangle\}_{i=1..n}
-$$
+* the exact sources and editions;
+* each source-local claim, or its F.17 SchemeSenseCell when durable addressability is useful;
+* every **already obtaining** relation that matters here, with direction and declared loss;
+* the separate conclusion about the named receiving comparison or use;
+* the evidence or direct pattern that supports each substantive claim;
+* a counterexample or boundary showing where the comparison stops.
 
-that FPF **treats as one** *for a declared scope* because there exist **F.9 Bridges** connecting these SenseCells pairwise (directly or via a short chain) with **congruence level** $\text{CL}$ above a **threshold** suitable for that scope. The **table row** shows:
+The word *set* names the entries collected for display. It does not assert that they are one value. A row may show an identity, overlap, ordering, incompatibility, disjointness, or no relation at all, but only because that claim is established outside the layout. F.9 is used only when the actual relation is between distinct local meanings. For every other relation, cite the pattern that defines, constrains, or tests it.
 
-* **FPF Label** *(Tech/Plain)* — the *didactic, FPF‑level* name chosen per F.5.
-* **Row Scope** — where “being one” is safe (e.g., *Naming-only*, *assignment/enactment-eligibility*, *KD-CAL metric*, *Type‑structure*).
-* **Row CL(min)** — the **minimum CL** of the Bridges that justify the row.
-* **Context columns** — each cell: the **local label** + (optional) short cue.
-* **Rationale (one line)** — why sameness is warranted *for this scope*.
-* **Counter‑examples (one line)** — where/why sameness **breaks**.
+### F.7:5 - Minimal vocabulary
 
-> **Memory hook.** *A Concept‑Set row is a promise:* “You may **read across** these Contexts **this far—and no farther**.”
+* **Local entry** — an exact LocalSenseClaim or optional F.17 SchemeSenseCell, with its source and edition and effective scheme.
+* **Obtaining relation** — a relation already supported under its direct pattern; it is not inferred from co-placement.
+* **Direction** — which participant is source and which is target when the relation is asymmetric.
+* **Loss or limit** — what the relation or receiving use does not preserve.
+* **Receiving-use conclusion** — the separate claim that judges whether and how the entries and relations may be used for one named purpose.
+* **Contrast row** — a row that teaches a difference or an unresolved comparison and expressly asserts no sameness.
+* **Characteristic** — a comparandum defined by its direct characteristic pattern; a table may display measured or target values but does not define the characteristic.
 
-### F.7:5 - Minimal vocabulary (this pattern only)
+### F.7:6 - The table
 
-* **Context** — shorthand for `U.BoundedContext` (per E.10.D1).
-* **senseFamily** — **referenced from F.0.1**; not redefined here; used to **type** rows and to require **uniformity** within a row.
-* **SenseCell** — a **(Context × Local‑Sense)** address from F.3.
-* **Bridge (F.9)** — an explicit, declarative Cross‑context mapping with a **congruence level** **CL** and **loss note**.
-* **Characteristic (MM‑CHR)** — measurable comparandum defined in **MM‑CHR**; may be referenced in **Measurement/KD‑metric** rows; **do not** use “axis” only as a euphemism.
-* **Concept‑Set (row)** — a *licensed sameness* across Contexts, bounded by **Row Scope** and **Row CL(min)**.
-* **Contrast row** — a *non‑sameness* row: same surface across Contexts with **no** sufficient Bridges; teaches **difference**, not unity.
+Use the smallest columns that make the current argument recoverable:
 
-### F.7:6 - The table (conceptual layout)
+| Comparison or use | Exact source-local entries | Obtaining relations and direction | Loss and boundary | Basis and evidence | Receiving-use conclusion |
+| --- | --- | --- | --- | --- | --- |
 
-> One page. Fixed column order by Context. Each row fits in **five lines** max.
+For a teaching contrast, the relation column may say **none asserted** and the conclusion may say **keep distinct**. For an F.9 relation, show its declared relation kind, direction, CL if that relation actually defines one, and loss. Do not compute a row-wide CL or replace the separate bounded-use claim with a table label.
 
-```
-FPF Label (Tech / Plain) | Row Scope | Row CL(min) | [Context A] local label | [Context B] local label | [Context C] local label | Rationale | Counter‑examples
-```
+**Reading rules:**
 
-**Reading rules (didactic):**
+1. **Entries stay local.** A cell cites the source’s expression and claim; it is not a translation supplied by the table.
+2. **Relations stay direct.** For each relation, cite the pattern that defines, constrains, or tests it and the evidence supporting the claim.
+3. **Use stays separate.** “These may be compared for this report” is a claim with its own basis, not a property of the row.
+4. **Unknown stays unknown.** A blank or unresolved relation is not an invitation to infer similarity.
+5. **Loss stays visible.** If the limit needs more than one line, link to the underlying relation or evidence rather than compressing it away.
 
-1. **Cells are local.** A cell is **not** a translation; it is the Context’s **own** label for its SenseCell.
-2. **Scope is king.** The FPF label only licenses sameness **within its Row Scope**. Outside that scope, treat cells as **different**.
-3. **Row CL(min) governs trust.** Lower CL ⇒ narrower applicability; **never** up‑scope a row without revisiting Bridges.
-4. **Rationale & counter‑examples** are **obligatory one‑liners**; if you need paragraphs, you need an F.9 walkthrough, not a row.
+The nickname **Giants’ table** recalls that comparison relies on prior source work. It signals humility toward those sources, not authority supplied by the table.
 
-**Didactic name rationale** “Giants' table’” that alludes to *standing on the shoulders of giants*: each row explicitly leans on authoritative context of meaning (**U.BoundedContext**) established by prior disciplines and not imagined. It does **not** mean a physically large table; the name signals epistemic humility and traceable reliance on those sources. "We are like dwarfs on the shoulders of giants, so that we can see more than they, and things at a greater distance, not by virtue of any sharpness of sight on our part, or any physical distinction, but because we are carried high and raised up by their giant size." by Bernard of Chartres , d. c.1130, French philosopher.
+### F.7:7 - Conceptual construction
 
-### F.7:7 - Conceptual construction (thought moves, not workflow)
+* **Start from a question.** State the comparison or receiving use before selecting entries.
+* **Bring exact local meanings.** Use F.0.1, F.2, F.3, and F.17 only as needed.
+* **Bring relations, do not manufacture them.** Cite the direct pattern and evidence for each relation that matters.
+* **State the receiving-use conclusion separately.** Say what the current comparison permits, with its basis and limits.
+* **Keep the row small.** Usually two to four entries are enough; add another only when it changes the answer.
+* **Use contrast honestly.** When no adequate relation is established, show the difference rather than forcing a unification.
 
-> The table is derived from earlier patterns; it **creates nothing new**.
+### F.7:8 - Invariants
 
-* **Sourcing.** Candidate cells come **only** from **SenseCells** (F.3).
-* **Licensing.** A row exists **iff** the relevant **Bridges (F.9)** already justify sameness at the chosen **Row Scope**.
-* **Bounding.** Prefer **2–4 Contexts** per row (parsimony); add more only if each adds a *distinct necessity* for the sameness claim.
-* **Typing.** A row is **typed by senseFamily**: Role, Status, Type‑structure, Measurement, etc. **Do not mix senseFamilies** in one row.
-* **Temporal honesty.** A row’s cells must share **compatible DesignRunTag**; if not, either split into two rows or mark a **contrast row**.
+1. **Exact entries.** Every filled source-local cell identifies the exact source and edition and claim, or an exact F.17 cell.
+2. **No row-created relation.** Co-placement, matching labels, or a shared FPF designation establishes nothing about the entries.
+3. **Direct relation basis.** Every stated relation cites its direct pattern and available evidence; F.9 is conditional, not universal.
+4. **Separate receiving use.** Any conclusion about comparison, substitution, reporting, or reuse is stated and supported separately.
+5. **Direction, time stance, and loss.** Asymmetric relations show direction; any design-time, run-time, or other temporal difference that changes the comparison is explicit; every material limitation remains visible.
+6. **No automatic closure.** Relations are not completed pairwise or transitively merely to fill a row.
+7. **No universal row type.** A `senseFamily` label is not required and cannot substitute for an intensional account of what is being compared.
+8. **Parsimony.** Keep only entries and columns that change the current answer.
+9. **Didactic bound.** Split a row that a careful reader cannot understand in about thirty seconds.
 
-### F.7:8 - Invariants (normative)
+### F.7:9 - Micro-illustrations
 
-1. **Context‑loyal cells.** Every non‑empty cell is a **SenseCell** address; no minted paraphrases.
-2. **Bridge sufficiency.** For a *Concept‑Set* row, **every pair** of filled cells is connected by an **F.9 Bridge path** whose **bottleneck CL** ≥ **Row CL(min)** printed for the row.
-3. **Scope declaration.** Each row **MUST** declare a **Row Scope** chosen from a small controlled set (e.g., *Naming-only*, *assignment/enactment-eligibility*, *KD-metric*, *Type-structure*).
-4. **senseFamily uniformity.** All cells in a row belong to the **same senseFamily** (Role **or** Status **or** Type-structure **or** Measurement…).
-5. **Temporal compatibility.** Either all cells share the **same stance**, or the row is a **contrast row** (no sameness claim).
-6. **Loss disclosure.** If any Bridge in the row has a **loss note**, the row **MUST** include a **counter‑example** that illustrates that loss in one line.
-7. **No stealth expansion.** Adding a new cell to a row **MUST NOT** lower the printed **Row CL(min)** without updating **Row Scope** or splitting the row.
-8. **Parsimony.** A row with only one filled cell is **forbidden** (that would be local talk, not a Cross‑context concept).
-9. **Didactic bound.** A row that cannot be read in **≤ 30 seconds** violates didactic primacy and must be split.
+> The examples show table shapes. Every positive relation still requires its own evidence in an actual use.
 
-### F.7:9 - Micro‑illustrations (safe patterns)
+#### (a) Class-order comparison
 
-> Illustrative only; these presume corresponding **F.9 Bridges** exist with stated CL and losses.
+| Comparison or use | Exact source-local entries | Obtaining relations | Loss and boundary | Basis | Conclusion |
+| --- | --- | --- | --- | --- | --- |
+| Explain two class-order notations | OWL 2 `SubClassOf`; FPF `U.SubtypeRelation` claim | An explicit representation or semantic relation, if established for the selected expressions | OWL profile semantics and FPF kind criteria may differ | C.3, C.29, A.6.3.RT, and cited sources | Use one didactic gloss only within the stated notation comparison; do not include FCA order by resemblance. |
 
-**(a) Subtyping across type‑formalisms (Type‑structure row)**
+#### (b) Measurement comparison
 
-| FPF Label  | Row Scope  | Row CL(min) | OWL 2  | Kind-CAL  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- |
-| **is‑a (Tech)** / *type hierarchy* (Plain) | Type‑structure | CL = 3  | `rdfs:subClassOf` | `U.SubtypeRelation` | Both are partial‑order *class* subsumption used for inheritance. | FCA *concept* order is not a class subsumption; keep it out or CL drops. |
+| Comparison or use | Exact source-local entries | Obtaining relations | Loss and boundary | Basis | Conclusion |
+| --- | --- | --- | --- | --- | --- |
+| Compare values against a service target | SOSA result claim; ISO 80000 quantity value; ITIL metric value | Exact measurement, scale and unit, and any source-local semantic relations that actually obtain | Composite ITIL indices may lack unit fidelity | C.16, F.9 when needed, cited observations | Comparable only for the named characteristic, scale conversion, population, and window. |
 
-**(b) “Observation result value” (Measurement row)**
+#### (c) Contrast: *process*
 
-| FPF Label  | Row Scope | Row CL(min) | SOSA/SSN  | ISO 80000‑1  | ITIL 4  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **result‑value** / *measured value* | KD‑metric | CL = 2  | `sosa:Result` (literal) | `QuantityValue` (unit‑bearing) | *metric value* (service KPI) | Values can be read as numbers tied to a Characteristic; ITIL metric uses same notion when unitised. | ITIL “metric” may be composite indices (loss of unit fidelity). |
+| Comparison or use | Exact source-local entries | Obtaining relations | Loss and boundary | Basis | Conclusion |
+| --- | --- | --- | --- | --- | --- |
+| Prevent homonym collapse | BPMN workflow graph; PROV time-bounded activity; thermodynamic trajectory | **None asserted by this row** | Design structure, occurrence, and trajectory are different subjects | F.0.1, F.3, and direct source passages | Keep distinct unless a later question establishes a specific relation. |
 
-**(c) Contrast row: “process” (no sameness)**
+### F.7:10 - Anti-patterns & remedies
 
-| FPF Label  | Row Scope | Row CL(min) | BPMN 2.0  | PROV‑O  | Thermodynamics  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **process** (contrast) | —  | —  | *graph of flow nodes* | *time‑bounded activity* | *state‑space trajectory* | Same surface, **different** senses; no licensed sameness. | Any attempt to equate design‑graph with run‑occurrence fails stance compatibility. |
-
-### F.7:10 - Anti‑patterns & remedies
-
-| #  | Anti‑pattern  | Symptom in a row  | Why it breaks thinking  | Remedy (conceptual move)  |
+| # | Anti-pattern | Symptom | Why harmful | Remedy |
 | --- | --- | --- | --- | --- |
-| **AP‑1**  | **Bridge‑free sameness**  | Cells listed as “same” because their labels look alike; no cited Bridges.  | Violates locality; imports meaning across Contexts by name.  | A row **exists only** if backed by **F.9 Bridges**. Otherwise produce a **contrast row**.  |
-| **AP-2**  | **Scope creep**  | Row labelled “Type-structure” but used to justify **assignment/enactment-eligibility** or KD metrics. | Scope licences are not transferable; inference leaks.  | Keep a **small controlled set of Row Scopes**. If use widens, **mint a new row** or **re-bridge** with higher CL. |
-| **AP‑3**  | **senseFamily mixing**  | One row mixes Role, Status, Measurement, and Type‑structure cells.  | Conflates senseFamily (F.0.1); readers cannot tell “what kind of sameness”. | **Type each row.** If two senseFamilys are needed, **split** into two rows.  |
-| **AP‑4**  | **Temporal blur**  | Cells with incompatible DesignRunTag declared “same”.  | Design artefacts ≠ run occurrences; claims invert.  | Either **harmonise stance** (choose only compatible cells) or publish a **contrast row**.  |
-| **AP‑5**  | **Loss denial**  | Bridges carry loss notes, but the row omits counter‑examples.  | Readers over‑trust; misuse outside safe scope.  | Add a **one‑line counter‑example** that illustrates the loss.  |
-| **AP‑6**  | **CL averaging**  | Row CL(min) computed as an average of heterogeneous Bridges.  | The weakest link governs; averages overstate safety.  | Row CL(min) is the **bottleneck** (minimum along connecting paths).  |
-| **AP‑7**  | **Overwide rows**  | 6–8 Contexts in one row; hard to read; subtle mismatches hide.  | Violates didactic primacy; invites hidden losses.  | **Parsimony**: 2–4 Contexts per row unless each extra cell has a **distinct necessity** you can state in one line.  |
-| **AP‑8**  | **Minted paraphrases**  | Cells reword a Context’s label instead of citing the SenseCell.  | Hides locality; future drift becomes invisible.  | **Cells are Context‑loyal.** Use the Context’s own SenseCell label.  |
-| **AP‑9**  | **Duplicate rows by style** | Two rows with the same cell set but different FPF labels.  | Name inflation; readers assume two distinct concepts.  | Keep **one row** per Concept‑Set per scope. Alternative labels appear as **aliases** in F.5, not new rows.  |
-| **AP‑10** | **Implied transitivity**  | A↔B and B↔C Bridges exist; row silently assumes A↔C at the same CL.  | Paths can reduce CL; semantics might not compose.  | Compute CL for **A↔C via bottleneck**; if too low, either reduce **Row Scope** or **omit** the cell.  |
+| **AP-1** | Row-created sameness | Entries are called “the same” because they share a row. | Layout is mistaken for evidence. | State the actual relation or mark a contrast. |
+| **AP-2** | Scope label as licence | “Naming-only” or another row label is treated as permission. | The receiving-use claim and its evidence disappear. | Write the use conclusion separately. |
+| **AP-3** | `senseFamily` typing | One broad label is used instead of explaining the comparison. | Hidden kinds and relations remain unnamed. | State the intensional comparison and direct relation. |
+| **AP-4** | Temporal blur | Design descriptions and Work occurrences are treated as interchangeable. | MethodDescription and Work collapse. | Show the distinction and any actual relation through F.11, A.3, and A.15. |
+| **AP-5** | Loss denial | A relation is shown without its material limitation. | Readers over-transfer. | Add the loss and a concrete counterexample. |
+| **AP-6** | Row CL | A minimum or average CL is computed across heterogeneous relations. | One number collapses unrelated claims. | Keep CL only on the F.9 relation that declares it; assess the receiving use separately. |
+| **AP-7** | Overwide row | Many sources are added “for completeness”. | Differences hide and the entry cost rises. | Keep two to four answer-changing entries. |
+| **AP-8** | Minted paraphrase | A cell replaces the source expression with a new umbrella term. | Provenance and locality vanish. | Cite the exact local claim; put any selected designation in its own column. |
+| **AP-9** | Duplicate rows by wording | The same argument is repeated under different labels. | Readers infer distinct concepts where none were established. | Keep one comparison and let F.5 manage aliases. |
+| **AP-10** | Automatic transitivity | A–B and B–C are used to assert A–C. | Relation composition may not hold or may add loss. | State only relations whose composition is justified by their direct patterns. |
 
 ### F.7:11 - Worked examples
 
-> Each example gives a **row** (compact), then a **reading** explaining scope and limits. All sameness claims presuppose suitable **F.9 Bridges** with the stated CL.
+#### F.7:11.1 - Actor wording across BPMN and PROV
 
-#### F.7:11.1 - Behavioural actor across Contexts (naming‑only)
+| Comparison or use | Exact entries | Relation | Boundary | Basis | Conclusion |
+| --- | --- | --- | --- | --- | --- |
+| Choose a plain-language heading for a teaching paragraph | BPMN **Participant** claim; PROV **Agent** claim | No identity asserted; any F.9 relation must be established for the exact claims | PROV agents include software and organisations; BPMN participants have model-specific structure | Source passages and F.0.1 | The word **party** may be used as an explanatory umbrella only in this paragraph if the sentences retain each source’s distinct claim. |
 
-| FPF Label (Tech / Plain)  | Row Scope  | Row CL(min) | BPMN 2.0  | PROV‑O  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- |
-| **actor** / *party that participates* | Naming‑only | CL = 2  | **Participant** | **Agent** | Both denote a bearer that can be named as the party to which activities are attributed. | PROV **Agent** includes software agents; BPMN **Participant** is typically an organisation lane/pool. |
+#### F.7:11.2 - Runtime occurrence comparison
 
-**Reading.** The row licenses a **glossary‑level sameness** for didactic prose (“the actor”). It does **not** license modelling **identity** or inference across Contexts.
+| Comparison or use | Exact entries | Relation | Boundary | Basis | Conclusion |
+| --- | --- | --- | --- | --- | --- |
+| Report selected PLC task runs as provenance activities | IEC task-execution claim; PROV Activity claim | A stated source-local semantic or representation relation, direction IEC → PROV, when actually established | PROV omits scan-cycle and scheduling semantics | F.9 or the direct representation pattern plus evidence | Report only the covered occurrence facts; do not infer that every PROV Activity is an IEC task run. |
 
-#### F.7:11.2 - Execution occurrence (assignment/enactment-eligibility)
+Performed-Work attribution remains an A.15.1 and F.6 claim about actual Work and system-role assignment. The table supplies neither.
 
-| FPF Label  | Row Scope  | Row CL(min) | PROV‑O  | IEC 61131‑3  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- |
-| **execution-occurrence** / *a run that happens* | assignment/enactment-eligibility | CL = 2  | **Activity** (time-bounded occurrence using/generating entities) | **Task execution** (cyclic/event-driven program run) | Both are **run-time** occurrences that can support `Work.performedBy = RoleAssignment` or a named `RoleEnactmentFact`. | BPMN **Process** is a **design** graph; not an occurrence—exclude. |
+#### F.7:11.3 - Measured value and target
 
-**Reading.** Safe to use as the **run-time occurrence referenced by performed-work attribution** when we say “this Work was performed under an assignment”. Not safe to equate **all** PROV Activities with **all** PLC task runs for analytics.
+| Comparison or use | Exact entries | Relation | Boundary | Basis | Conclusion |
+| --- | --- | --- | --- | --- | --- |
+| Judge an observed service characteristic against a target | SOSA observation and its result; ISO quantity value if used; ITIL service target | Measurement, scale, and unit relations; F.9 only for a genuine local-meaning relation | Composite KPI, sampling, and unit limits | C.16, A.10, B.3, and F.12 | Compare only the named characteristic, population, and window with adequate evidence. |
 
-#### F.7:11.3 - Result value as KD‑metric (measurement)
+#### F.7:11.4 - Class inclusion and FCA order
 
-| FPF Label  | Row Scope | Row CL(min) | SOSA/SSN  | ISO 80000‑1  | ITIL 4  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **result‑value** / *measured value* | KD‑metric | CL = 2  | **Result** (literal) | **QuantityValue** (unit‑bearing) | **metric value** | A number representing a **Characteristic** at observation time; can be unitised and compared to targets. | ITIL “metric” may be a composite index; units may be implicit. |
+A contrast row may show OWL class inclusion, FPF subtype, and FCA concept order together while stating that FCA order is not class inclusion. A positive relation between the first two is still a separate claim with its own semantics and evidence.
 
-**Reading.** Licences **metric tables** that join observations to service targets; warns that composite KPIs may violate unit fidelity.
+#### F.7:11.5 - *Role* trigger word
 
-#### F.7:11.4 - Subtype relation (type‑structure)
+Show NIST RBAC **role** as a permission grouping and a local system-role-kind claim as a kind whose instances are Systems. Mark them **distinct subjects**. Use E.10.ROLE to recover other uses such as relation participation or signature position; do not assign them one `senseFamily` merely because the spelling matches.
 
-| FPF Label  | Row Scope  | Row CL(min) | OWL 2  | Kind-CAL  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- |
-| **is‑a** / *type hierarchy* | Type‑structure | CL = 3  | `rdfs:subClassOf` | `U.SubtypeRelation` | Both are partial orders used for inheritance. | FCA **concept order** is not a class subsumption—exclude or publish another row. |
+### F.7:12 - Safe reasoning moves
 
-#### F.7:11.5 - Contrast: “role” (access vs behaviour)
+1. **Name the comparison.** What question or receiving use makes the row worth having?
+2. **Recover each entry.** Cite its exact source, scheme, expression, and local claim.
+3. **List only obtaining relations.** For each, state direction when relevant, the pattern that defines, constrains, or tests it, the supporting evidence, the loss, and any temporal difference that changes the comparison.
+4. **Judge the use separately.** Explain what the named use may conclude and why.
+5. **Expose absence.** When no relation is established, say so and use a contrast row.
+6. **Resist closure.** Do not invent missing pairwise or transitive relations.
+7. **Extend cautiously.** Add a source only when its claim or relation changes the answer; re-evaluate the use conclusion.
+8. **Keep evidence visible.** A table cell never replaces the evidence-use or reliance relation.
 
-| FPF Label  | Row Scope | Row CL(min) | NIST RBAC  | BPMN 2.0  | Rationale  | Counter‑examples  |
-| --- | --- | --- | --- | --- | --- | --- |
-| **role** (contrast) | —  | —  | **Role** (permission set) | **Participant/Actor** (behavioural mask) | Same surface; **different senseFamilys** (Status vs Role/behaviour). | Any attempt to unify collapses deontics into behaviour; stance and effects differ. |
-
-**Reading.** This row **teaches difference**; it deliberately **does not** license sameness.
-
-### F.7:12 - Reasoning primitives (judgement schemas, notation‑free)
-
-> All judgements are **pure** (no side effects). “Contexts” are `U.BoundedContext`. `SC(C)` denotes a SenseCell in Context `C`. `CL(X↔Y)` is the congruence level of the **best** Bridge path (F.9) between SenseCells `X` and `Y` (bottleneck along that path).
-
-#### F.7:12.1 - Row licensing
-
-**Form.**
-`S = {SC(C₁), …, SC(Cₙ)}, Scope = s, τ(s) = requiredCL ⊢ licensable(S,s) ⇔ (∀ i<j: CL(SC(Cᵢ)↔SC(Cⱼ)) ≥ requiredCL ∧ senseFamily (S) is uniform ∧ stance(S) compatible)`
-
-**Reading.** A set of cells **licenses** a row of scope `s` iff every pair is bridged at or above the **required CL** for that scope, all cells sit in the **same senseFamily**, and **DesignRunTag** is compatible.
-
-#### F.7:12.2 - Bottleneck CL for a row
-
-**Form.**
-`RowCL(S) = min_{i<j} CL(SC(Cᵢ)↔SC(Cⱼ))`
-
-**Reading.** The row’s CL is the **minimum** congruence level across all pairs (the weakest link).
-
-#### F.7:12.3 - Scope guard
-
-**Form.**
-`licensable(S,s) ∧ s ⊑ s' ⊢ licensable(S,s') only if RowCL(S) ≥ τ(s')`
-
-**Reading.** You may **tighten scope** (use the row for a higher-scope purpose) only if the row’s `CL` meets the **higher threshold** for that scope.
-
-#### F.7:12.4 - Contrast decision
-
-**Form.**
-`(∃ i<j: CL(SC(Cᵢ)↔SC(Cⱼ)) < τ(Naming‑only)) ⊢ publish‑contrast(S)`
-
-**Reading.** If even **Naming‑only** cannot be licensed, publish a **contrast row** instead of forcing sameness.
-
-#### F.7:12.5 - Row extension guard
-
-**Form.**
-`licensable(S,s) ∧ add SC(Cₖ) ⊢ licensable(S∪{SC(Cₖ)}, s) iff ∀ i: CL(SC(Cᵢ)↔SC(Cₖ)) ≥ τ(s)`
-
-**Reading.** You may add a new cell only if it bridges to **every existing cell** at the row’s scope.
-
-#### F.7:12.6 - Loss disclosure obligation
-
-**Form.**
-`licensable(S,s) ∧ (∃ i<j: lossNote on Bridge(SC(Cᵢ),SC(Cⱼ))) ⊢ row must carry ≥1 counter‑example`
-
-**Reading.** Any loss note on any supporting Bridge obliges the row to include a **counter‑example one‑liner**.
-
-### F.7:13 - Relations (with other patterns)
+### F.7:13 - Relations
 
 **Builds on:**
-F.1 **Contexts fixed** → defines the column set; F.2 **Harvest** → supplies harvested terms; F.3 **SenseCells** → provide cell addresses; F.5 **Naming Discipline** → provides the two‑register **FPF labels**; F.9 **Bridges** → justify each row.
+
+- Use **F.1** for the exact source cut and receiving question, and use **F.2** and **F.3** for exact expressions and source-local claims.
+- Use **F.17** only when durable local-meaning addresses are needed.
+- Use **F.5** for selected designations without making them the values being named.
+- Use **F.9** to define and test a relation between exact local meanings and to state the separate bounded-use claim when that is the actual relation family. A table creates none of these facts.
 
 **Constrains:**
-F.4 **Role Description** — when a template cites an FPF label from the table, it **inherits the Row Scope**; no template may claim semantics beyond the row’s licence.
-F.6 **Role Assignment & Enactment Cycle (Six-Step)** — Move M‑4 (“choose label”) must reference a row if it wants Cross‑context reading.
 
-**Used by.**
-Part C patterns for didactic alignment pages; Part B trust calculus (B.3) may consume **Row CL(min)** when computing translation penalties.
+- **F.4** may cite a table for reader navigation, but the direct kind description and C.3 membership criterion remain the basis for a local system-role-kind claim.
+- **F.6** may reuse a designation from the table; the row supplies neither classification, assignment, Work, nor performed-work attribution.
 
-### F.7:14 - Migration notes (conceptual)
+**Used by.** Part C patterns may use the table as a didactic comparison surface. B.3 may rely only on exact evidence and obtaining relations, never on row position or a computed row score.
 
-1. **Bridge update.** If any supporting Bridge’s CL changes, recompute **Row CL(min)**. If it drops below the printed value, either **lower Row Scope**, **split** the row, or **retire** it.
-2. **New Context appears.** Do **not** auto‑expand rows. Test with **12.5**; add only if it brings a **distinct necessity**.
-3. **Sense revision inside a Context.** If a SenseCell splits (F.3), decide which child cell (if any) remains in the row; the rest may require **new rows** or a **contrast**.
-4. **Scope promotion.** To use a row for a higher-scope purpose (e.g., from **Naming-only** to **assignment/enactment-eligibility**), first ensure **Row CL(min) ≥ τ(new scope)**; otherwise construct **new Bridges** or **decline** promotion.
-5. **Deprecation.** If a row no longer meets its invariant, mark its FPF label as **retired** in F.5 and point to successor rows (if any).
-6. **Edition churn.** When a Context is superseded (F.1), either keep the cell (if semantics stable) or treat the successor as a **new Context** and re‑evaluate licensability.
+### F.7:14 - Migration notes
 
-### F.7:15 - Acceptance tests (SCR/RSCR — concept‑level)
+1. **Relation changes.** Update the exact relation cell and re-evaluate only the receiving-use conclusions that depended on it.
+2. **New source.** Do not auto-expand rows; add it only if it changes the stated comparison.
+3. **Local claim splits.** Replace the old entry with the relevant child claim or split the comparison.
+4. **Use widens.** Re-evaluate the new use directly; a former row label grants no promotion.
+5. **Designation changes.** Update F.5 wording without changing source-local entries or relations.
+6. **Edition changes.** Recover the successor claim and recheck affected relations; preserve the earlier source identity where historical claims remain relevant.
 
-#### F.7:15.1 - Static conformance checks (SCR)
+### F.7:15 - Acceptance tests
 
-* **SCR‑F7‑S01 (Context‑loyal cells).** Every non‑empty cell references an existing **SenseCell** (F.3) in a declared Context (F.1).
-* **SCR‑F7‑S02 (Closure & bottleneck).** For each Concept‑Set row, **every pair** of cells has a Bridge path with CL ≥ **Row CL(min)** printed; **Row CL(min)** equals the **minimum** pairwise CL.
-* **SCR‑F7‑S03 (Typed & scoped).** Each row declares a **Row Scope** from the controlled set and is **senseFamily‑uniform** (Role **or** Status **or** Measurement **or** Type‑structure…).
-* **SCR‑F7‑S04 (Temporal compatibility).** Non‑contrast rows have **compatible** DesignRunTag across cells.
-* **SCR‑F7‑S05 (Loss disclosure).** If any supporting Bridge has a recorded loss, the row includes **≥1 counter‑example** line.
-* **SCR‑F7‑S06 (Parsimony).** Rows contain **2–4 Contexts** unless a one‑line necessity is stated for each extra Context.
+#### F.7:15.1 - Static conformance
 
-#### F.7:15.2 - Regression checks (RSCR)
+* **SCR-F7-S01 (exact entries).** Every local entry identifies an exact claim or F.17 cell and its source and edition.
+* **SCR-F7-S02 (no row-created fact).** No relation or permission is inferred from co-placement, label similarity, or layout.
+* **SCR-F7-S03 (relation basis).** Every positive relation cites the pattern that defines, constrains, or tests it, states direction where relevant, and cites its evidence.
+* **SCR-F7-S04 (receiving use).** Every practical use conclusion is separate from the row and has its own basis.
+* **SCR-F7-S05 (loss disclosure).** Material limitations and counterexamples remain visible.
+* **SCR-F7-S06 (parsimony).** Every extra entry changes the current comparison or use.
 
-* **RSCR‑F7‑E01 (Bridge drift).** After any Bridge change (F.9), recompute **Row CL(min)**; flag rows whose scope is now overstated.
-* **RSCR‑F7‑E02 (Sense split).** After a SenseCell splits (F.3), ensure rows referencing it either pick a child cell or retire.
-* **RSCR‑F7‑E03 (Scope integrity).** No consumer pattern uses a row outside its declared **Row Scope**.
-* **RSCR‑F7‑E04 (No stealth growth).** Additions of cells never lower **Row CL(min)** silently; if they do, either split the row or reduce scope.
+#### F.7:15.2 - Regression
 
-### F.7:16 - Didactic distillation (60‑second teaching script)
+* **RSCR-F7-E01 (relation drift).** A changed relation triggers re-evaluation of dependent use conclusions, not a global row score.
+* **RSCR-F7-E02 (sense split).** A split local claim leaves no ambiguous cell reference.
+* **RSCR-F7-E03 (use integrity).** No consumer treats a row label as licence outside the stated conclusion.
+* **RSCR-F7-E04 (no stealth growth).** New entries create no silent relation, closure, or widened use.
 
-> “A **Concept-Set row** shows **one idea across Contexts**—but only where explicit **Bridges** license it. Columns are Contexts; cells are **their own labels**. The row prints a **scope** (‘Naming-only’, ‘assignment/enactment-eligibility’, ‘Type-structure’, ‘KD-metric’) and the **weakest CL** that justifies reading across. A **one‑line rationale** says why sameness is safe **here**; a **counter‑example** warns where it breaks. Keep rows small (2–4 Contexts), typed (don’t mix senseFamilies), and temporally honest (design vs run stance). If Bridges don’t suffice, publish a **contrast row** instead. The table doesn’t invent meaning; it **summarises licensed sameness** so readers can cross disciplines without smuggling assumptions.”
+### F.7:16 - Didactic distillation
+
+> “A Concept-Set table is a comparison surface. Put the exact source-local claims in it, then list only relations that have already been established, with direction and loss. State separately what one named comparison or use may conclude and why. A shared row, a shared label, or a minimum score proves nothing. If no relation is known, show a contrast. The table makes the reasoning easier to read; it never supplies the reasoning.”
 
 ### F.7:End

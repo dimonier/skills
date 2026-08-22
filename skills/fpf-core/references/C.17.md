@@ -1,40 +1,44 @@
 ---
 id: C.17
-title: "Creativity‑CHR — Characterising Generative Novelty & Value"
+title: Characterising Generative Novelty and Value
 status: Stable
 keywords:
-  - "Creativity-CHR"
-  - "Novelty@context"
-  - "Use-Value and ValueGain"
-  - Surprise
+  - "qualitative-first evaluation"
+  - named comparison basis
+  - Novelty
+  - "Use-Value"
   - ConstraintFit
-  - Diversity_P
-  - Originality
-  - ResourceEfficiency
-  - "MM-CHR measurement templates"
-  - ReferenceBase
+  - bounded quantitative result
   - evidence
-  - portfolio composition.
+  - uncertainty
+  - incomparability.
 dependencies:
   builds_on:
-    - C.16
     - A.17
     - A.18
     - A.19
+    - A.19.ECS
+    - C.16
+    - C.2.1
+    - A.1.1
+    - A.10
+    - B.3
   coordinates_with:
-    - B.5.2.1
     - C.18
     - C.19
-    - A.13
-    - A.10
-    - C.9
-    - B.3
-    - B.4
-    - F.5
+    - G.5
+    - C.11
+    - F.9
     - F.18
+    - B.4
+    - G.11
+    - A.15.1
+    - F.6
+    - A.3.1
+    - A.3.2
 ---
 
-# C.17: Creativity‑CHR — Characterising Generative Novelty & Value
+# C.17: Characterising Generative Novelty and Value
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -42,720 +46,403 @@ dependencies:
 
 ---
 
-## C.17 - Characterising Generative Novelty & Value (Creativity‑CHR)
+## C.17 - Characterising Generative Novelty and Value
 
-**Status.** Mechanism specification (**CHR**) — normative where stated.
-**Depends on.** A‑kernel (A.1–A.15), **A.17/A.18/A.19** characteristic-space discipline, **MM‑CHR** measurement infrastructure (C.16), **KD‑CAL** and **Sys‑CAL** for carriers and holons, **Decsn‑CAL** (utility), and declared must-constraint owners such as E.5, D.1-D.5, or service-acceptance patterns.
-**Coordinates with.** **B.5.2.1 NQD** (abductive generator) for search instrumentation, A.13 for agential participation and the A.17/A.18/A.19/C.16/A.10 stack for measured characteristics and evidence, planned **C.9 Agency Characteristic Profile** only as future consolidation, B-cluster trust/assurance (B.3), Canonical Evolution Loop (B.4), Role Assignment & Enactment Cycle (Six-Step) (F.6), and Naming Discipline for U-kinds, role names, and local term sheets (F.5).
-**Guard‑rails.** Obeys E‑cluster authoring rules (Notational Independence; DevOps Lexical Firewall; Unidirectional Dependency).
+**Status.** Evaluation and measurement-use pattern; normative where stated.
 
-**What this pattern provides (exports):**
+**Depends on.** `A.17`, `A.18`, and `A.19` for Characteristics, Scales, and CharacteristicSpaces; `A.19.ECS` for the evaluation-space specification; `C.16` for measurement; `C.2.1` and `A.1.1` for claim-bearing results and models; `A.10` and `B.3` for evidence, reliance, and assurance; and the patterns that define the current objective, acceptance criterion, and must-constraints.
 
-This pattern exports **Characteristics** and measurement templates **only**. It **does not** export any Γ\_\* operators, retained-set composition rules, `Front`/`Archive`/`Shortlist` heads, or selection/scalarization policies; those live in **C.18 NQD-CAL**, **C.19 E/E-LOG**, and **G.5** (or **Decsn-CAL** for decision lenses). A Context _publishes_ the measurement space and admissible policies; later choice using that space is attributed to a declared `DecisionSubject` at explicit `DecisionSubjectGranularity` under a named lens.
+**Coordinates with.** `C.18` for generation, Archive, and Front; `C.19` for pool policy and tie-break use; `G.5` for selector-facing declarations; `C.11` for choice; `F.9` for an actual cross-reference-scheme Bridge; `F.18` for naming-candidate diversity; `B.4` and `G.11` for evolution and refresh; `A.15.1`, `F.6`, and `A.3.1` for dated overall-assessment Work; `A.3.2` when a relied-on MethodDescription matters; and `A.6.1` only when the assessment also uses one exact operation declared by a separately admitted `U.Mechanism` and a claim needs that operation's application or bindings.
 
-* **`U.CreativitySpace`** — a **CharacteristicSpace** (CHR) with named **Characteristics** and scale metadata for evaluating creative work/outcomes **inside a `U.BoundedContext`**.
-* **`U.CreativityProfile`** — a vector of coordinates in `U.CreativitySpace` attached by a **`U.Evaluation`** to a specific **Outcome** (usually an `U.Episteme` produced by `U.Work`).
-* **Core Characteristics (kernel nucleus; Context‑extensible):**
-1. **`Novelty@context`** — distance from a **`ReferenceBase`** in the current Context/time window; ∈ \[0, 1].
-2. **`Use‑Value`** *(alias: `ValueGain`)* — measured or predicted improvement against a **declared objective**; interval/ratio scale per Context.
-3. **`Surprise`** — negative log‑likelihood under a **GenerativePrior**; bits or nats.
-4. **`ConstraintFit`** — degree of **must‑constraint** satisfaction under the declared constraint owner or service-acceptance policy; ∈ \[0, 1].
-5. **Diversity_P (declared retained-set / portfolio-level)** — coverage/dispersion (set-level). **Illumination** is a **report-metric over Diversity_P** (coverage/QD-score summaries). It is **report-only** and **never** part of the primary dominance test.
-6. **`AttributionIntegrity`** — provenance/licensing discipline for lawful, transparent recombination; ∈ \[0, 1].
-7. **`FamilyCoverage`** — (count, polarity ↑, scope=declared retained set or portfolio, unit=families, provenance: F1‑Card)
-8. **`MinInterFamilyDistance`** — (ratio [0,1] or metric units, polarity ↑, scope=declared retained set or portfolio, DistanceDef@F1‑Card)
-9. **`AliasRisk`** —  (ratio [0,1], polarity ↓, diagnostic; drop if dSig ≥3/5 characteristics collide)
-10. **`U.DomainDiversitySignature (dSig)`** — 5‑tuple over discrete characteristics **[Sector, Function, Archetype, Regime, MetricFamily]**  attached to each `U.BoundedContext`. Used for **Near‑Duplicate** diagnostics and `AliasRisk`. Policy: flag as Near‑Duplicate when ≥3 characteristics match; see F.1 invariants and SCR‑F1‑S08..S09.
-11. **Note (AliasRisk binding).** `AliasRisk` MAY be computed using `dSig` collision diagnostics; a Context MUST declare the collision rule and policy id in DescriptorMap provenance when AliasRisk is reported.
+### C.17:0 - Use this when
 
-* **Supporting types (linking points):**
+Use C.17 when someone must say whether a design, code change, theory, policy proposal, dated Work occurrence, or finite candidate set—the bearer being discussed—is new relative to a named comparison basis and useful for a stated objective or must-criterion.
 
-  * **`U.ReferenceBase`** — the domain‑local corpus (by Context & time window) used to compute `Novelty@context`.
-  * **`U.SimilarityKernel`** — a declared similarity metric class for the Context (text/image/design/code/etc.), with invariance notes.
-  * **`U.GenerativePrior`** — a predictive model over the Context’s artifacts/behaviours used to compute `Surprise`.
-  * **`U.CreativeEvaluation`** — a specialisation of `U.Evaluation` that yields a `U.CreativityProfile` and the Evidence Graph Ref.
-  * **`EffortCost`** *(advisory)* — resource outlay to achieve the outcome; from a work/resource ledger whose dated Work, aggregation, measurement, and provenance follow **A.15.1**, **B.1.6**, **C.16**, and **A.10**; planned values remain **A.15.2** WorkPlan content. *(For normalization and planning; not itself “creativity.”)*
+Begin with the smallest useful answer:
 
-* **Operators (first tranche):** `composeProfiles` (set → declared retained-set profile), `dominates` (partial order in space), `frontier` (Pareto set), `normaliseByEffort`. *(Formal laws introduced in Quarter 2.)*
-* **Relations (informative; not exported):** dominance relation (partial order in the space), frontier predicate (Pareto set), retained-set composition view. *C.17 exports no operators and does not mint public set-result family heads; these are mathematical relations only.*
-*
-> **Scope note.** This pattern **does not** define who is “a creative person.” It characterises **creative outcomes and episodes** as **observed in Work** and **expressed as Epistemes**. Agency (capacity to originate) is identified under A.13 and measured through A.17/A.18/A.19/C.16/A.10; planned **C.9 Agency Characteristic Profile** may later consolidate that profile but supplies no current governing force. Here we measure **what came out** and **how it scores** against stated goals and references. A **Context publishes** the measurement space and admissible policies; later choice is attributed to a declared `DecisionSubject` at explicit `DecisionSubjectGranularity`, using a named lens within that space. CHR exports **no Γ‑operators** and **no team workflow rules**.
+1. identify the bearer being discussed;
+2. say what it is new compared with;
+3. say which objective, acceptance criterion, or must-constraint matters;
+4. state the supported difference, its practical consequence, the evidence used, and the limit of that support.
 
-### C.17:1 - Motivation & Intent (manager’s read‑first)
+Stop there when a qualitative answer is enough. A discussion does not need a score, profile, reusable record, or dated assessment merely because it uses the words *novel*, *useful*, or *creative*.
 
-**Problem we solve.** Teams talk past each other about “creativity”: some prize **novelty**, others **business value**, others **originality** or **risk‑managed invention**. Without a shared, context‑local measurement space, reviews derail, portfolios drift, and safety constraints are waived ad‑hoc.
+Open the stronger branch only when the receiving use needs a quantified coordinate, a comparison-ready result, later reliance, or an audit trail. Then every coordinate must follow its truthful measurement or ascription route before the coordinate claims can support a bounded aggregate result.
 
-**Intent.** Provide a **small, universal measurement kit** that turns “this is creative” into **checkable, context‑local statements** — grounded in **evidence**, aligned to **objectives**, and **composable** from individuals to portfolios.
+**What changes in practice.** A team can replace an unqualified creativity label with the comparison basis, practical criterion, supported difference, consequence, uncertainty, and stopping point. When numbers matter, it can also reproduce the complete result chain.
 
-**Manager’s one‑screen summary (what you can do with it):**
+**Not this pattern when.** Use `C.18` to generate candidates or maintain an Archive or Front, `C.19` to change pool treatment, `G.5` to declare selector-facing set results, `C.11` to make a choice, and `A.13` to characterize agency or autonomy. Use C.17 to report characteristics and bounded conclusions, not to generate, retain, rank, approve, fund, enact, make a service promise, classify a person as creative, measure a person's creative capacity, organize a team, or prescribe a workflow.
 
-1. **Score** a design/code/theory change on **Novelty–Value–Surprise–ConstraintFit** with declared references and models.
-2. **Compare** options in a **Pareto sense** (no single magic score forced).
-3. **Consider** constraints as a **coordinate** in the space; compare options on **frontiers** while keeping Context for high‑novelty options
-4. **Track** the declared retained set’s **Diversity_P** to avoid local maxima and groupthink.
-5. **Defend** decisions with an auditable **CreativeEvaluation** that cites **what was new relative to which base**, **how value was measured**, and **why this counts here**.
+Do not infer a person's or System's creative capacity from a C.17 result. Strong agency can still yield a weak result, while useful scaffolding can help produce a strong result; C.17 characterizes the bearer and evidence named in the current claim.
 
-### C.17:2 - Forces
+### C.17:1 - The practitioner route
 
-| Force  | Tension we must resolve  |
+#### C.17:1.1 - Qualitative first move
+
+Name the bearer, comparison set, practical objective or must-criterion, observed or argued difference, supported consequence, evidence, and limitation. A useful statement can be as simple as:
+
+> Compared with the admitted five-year pump-design set, P-22's inspected split-clamp arrangement is a supported difference. The cited assembly evidence supports shorter assembly, and the design must not require new tooling. The inspection does not support claims about other pump families.
+
+This is already a valid C.17 result for an ordinary design discussion. It does not imply a numerical Novelty value or an overall assessment occurrence.
+
+#### C.17:1.2 - Quantified or reusable branch
+
+When a quantified, comparison-ready, or reusable result is needed:
+
+1. select one A.19 CharacteristicSpace and its `A.19.ECS` specification;
+2. fix the finite comparison corpus, inclusion rule, source editions, scope, comparison window, and evidence;
+3. identify the objective, acceptance criterion, and must-constraints actually used;
+4. identify the similarity or measurement Method used and any model, encoder, distance definition, invariances, calibration, and uncertainty basis it needs;
+5. for each coordinate, cite an existing complete `C.16` measurement result, perform and constitute the missing C.16 measurement, or state a `C.2.1` non-measurement ascription under its declared rule;
+6. form only the aggregate conclusion needed by the receiving comparison;
+7. add an optional profile payload, representation, or record only when a named receiver needs it.
+
+Return only the missing premise that blocks the current coordinate or conclusion. A missing measurement does not invalidate independent qualitative claims or other coordinates.
+
+#### C.17:1.3 - Dated overall-assessment branch
+
+Open this branch only when the claim says that an overall assessment actually occurred and later reliance needs that fact. Identify the evaluator System, the obtaining `F.6` assignment, the dated Work, and the admitted Method enacted by that Work. Only the evaluator System performs the assessment Work. A separate MethodDescription may explain the reusable Method; it is not enacted. Coordinate-measurement Work remains its own `C.16` Work, and the aggregate result states claims.
+
+Do not infer an A.6.1 operation application from the Method, Work, configuration, or result. If a receiving claim separately asserts an exact operation application or binding, satisfy the current A.6.1 application account and cite that application. Otherwise retain only the C.17-local evaluator System, assignment, Method enactment, dated assessment Work, coordinate results, and aggregate result that the claim actually needs.
+
+### C.17:2 - Keep the evaluation objects distinct
+
+| What the reader needs | C.17 treatment |
 | --- | --- |
-| **Universality vs. domain detail**  | One kit must serve hardware design, software, policy, and science, yet let each Context pick similarity kernels, priors, and value models. |
-| **Invention vs. constraint**  | Creative leaps are valuable; safety, ethics, and acceptance are non‑negotiable.  |
-| **Local truth vs. Cross‑context reuse** | Meaning is context‑local (A.1.1); yet we need Bridges to compare across organisations/disciplines.  |
-| **Single score vs. frontier**  | Management wants a number; reality is multi‑objective.  |
-| **Randomness vs. intention**  | Random noise looks “novel” yet useless; planned recombination can be highly creative.  |
-
-**Design answer.** A **context‑local CreativitySpace** with a **small set of characteristics**, each with **clear measurement templates** and **Evidence Graph Ref**; composition uses **frontiers and partial orders**, not forced scalarisation.
-
-### C.17:3 - Solution Overview — The context‑local CreativitySpace
-
-**Idea.** Creativity is **not a type**; it is a **profile** measured on an **outcome** (episteme) or **episode** (set of works) **inside a bounded context**. The context supplies the **ReferenceBase**, **SimilarityKernel**, **GenerativePrior**, **objective function(s)**, and **acceptance constraints**.
-
-**Objects in play (A‑kernel alignment):**
-
-* A **system** (person, team, service) performs **`U.Work`** under a role (A.2).
-* That work yields a **carrier** (doc/model/design/code), i.e., an **`U.Episteme`**.
-* We apply a **`U.CreativeEvaluation`** to that episteme (and linked work) to produce a **`U.CreativityProfile`** with evidence.
-
-**Cre­ativitySpace (first‑class CHR):**
-`U.CreativitySpace(Context) := 〈Novelty@context, ValueGain, Surprise, ConstraintFit, Diversity_P, AttributionIntegrity, EffortCost?〉`
-with **scale**/**unit** metadata from **MM‑CHR** (C.16), and Context‑specific **measurement methods** bound by **MethodDescription**.
-
-**DesignRunTag split (A.4):**
-
-* **Design‑time**: score **concepts** or **specs** against **surrogate value models** and **priors**; record **assumptions** (USM scopes; A.2.6).
-* **Run‑time**: recompute **ValueGain** and **ConstraintFit** from Work evidence (service acceptance, KPIs) and refresh **Surprise** if priors update.
-
-### C.17:4 - Vocabulary (CHR terms & D‑stubs)
-
-> Names are **context‑local**; below are kernel terms. Roles like “Designer/Reviewer” are contextual (A.2). **Documents don’t act** (A.7/A.12); they are **evaluated**.
-
-1. **`U.ReferenceBase`** *(D).* A curated, versioned **set of artifacts** (epistemes) and/or behaviours that define “what exists already” **in this Context and time window**.
-  **Conformance (RB‑1):** must declare **inclusion criteria**, **time span (`TimeWindow`)**, and **coverage notes**.
-
-2. **`U.SimilarityKernel`** *(D).* A declared **metric family** with invariances (e.g., text: cosine over embeddings, image: LPIPS, code: AST graph edit).
-  **Conformance (SK‑1):** must cite **MethodDescription** and **test corpus**; state **limits**.
-
-3. **`U.GenerativePrior`** *(D).* A model that yields **likelihood** of artifacts given the Context’s history (n‑gram/LM, design grammar, trend model).
-  **Conformance (GP‑1):** must publish **training slice**, **fit method**, **perplexity/fit metrics**, and **refresh policy**.
-
-4. **`U.CreativeOutcome`** *(D).* Any **`U.Episteme`** put forward for creative evaluation (e.g., new design, algorithm, spec, policy draft).
-  **Note.** If the outcome is a **system change** without a single carrier, attach the evaluation to a **bundle** (set) of carriers referenced from Work.
-
-5. **`U.CreativeEvaluation`** *(D).* A **`U.Evaluation`** that outputs a **`U.CreativityProfile`** and anchors to **ReferenceBase**, **Kernel/Prior**, **objective(s)**, **acceptance tests**, and **Work evidence**.
-
-6. **`U.CreativityProfile`** *(D).* The **coordinate tuple** in `U.CreativitySpace` with provenance to the above inputs and **USM scopes**.
-  **Conformance (CP‑1):** profile **must** include **scales/units**, **scopes**, **confidence bands** (B.3), and the **edition** of space definitions.
-
-### C.17:5 - The Core Characteristics (kernel nucleus)
-
-Each characteristic is specified per **MM‑CHR (C.16)** with: **name**, **intent**, **carrier**, **polarity**, **scale type**, **measurement template**, **evidence**, **scope (USM)**, and **didactic cues**. *Context profiles MAY add characteristics; kernel characteristics MAY NOT be removed without a Bridge.*
-
-#### C.17:5.1 - `Novelty@context` — “How unlike the known set is this?”
-
-* **Intent.** Quantify **distinctness** of the outcome relative to **`U.ReferenceBase`** (global or targeted slice).
-* **Carrier.** `U.Episteme` (the outcome).
-* **Polarity.** Higher is “more novel.”
-* **Scale.** **\[0, 1]**; ratio (0 = duplicate under kernel; 1 = maximally distant).
-* **Measurement template (normative pattern):**
-
-  1. Declare **ReferenceBase** `B` and **TimeWindow** window.
-  2. Declare **SimilarityKernel** `σ` and its invariances.
-  3. Compute **`Novelty@context := 1 − max_{b∈B} sim_σ(outcome, b)`**, or a robust variant (top‑k mean).
-  4. Publish **sensitivity note** (how results shift with kernel/`B`).
-* **Evidence.** Kernel/version id; top‑k neighbours with distances; ablation on invariances.
-* **Scope hooks (USM).** `B` **must** be a declared **slice**; Cross‑context use needs a **Bridge** with **CL** and **loss notes**.
-* **Didactic cues.**
-
-  * **Not** “randomness.” Noise has high novelty, low value.
-  * **Local, not global.** Novelty is **to this Context now**, not timeless originality.
-
-#### C.17:5.2 - `Use‑Value` *(alias: `ValueGain`)* — “What good did this add under our objective?”
-
-* **Intent.** Quantify **benefit** vs a baseline objective (Decsn‑CAL utility, Service acceptance, KPI).
-* **Carrier.** Outcome (episteme) with **Work** evidence.
-* **Polarity.** Higher is better.
-* **Scale.** Interval/ratio, unit **declared by the Context** (e.g., ΔSNR, % defects, profit/period).
-* **Measurement templates (pick one):**
-
-  * **Measured:** `ValueGain := metric_after − metric_before` (declare counterfactual method).
-  * **Predicted:** `E[ValueGain | model]` with error bars; update post‑run.
-  * **Evidence.**  Declared **objective/criterion**; measurements or credible predictions; counterfactual method (A/B, back‑test, causal inference).
-  * **Scope.** State the **context window** used for the objective; claims outside that window are **informative only**.
-  * **Didactic cues.**
-
-  * Value is **relative to stated objective**; if the objective is wrong, the value reflects it.
-  * Keep **counterfactual discipline**; otherwise “gain” is storytelling.
-
-#### C.17:5.3 - `Surprise` — “How improbable under our learned world?”
-
-* **Intent.** Capture **unexpectedness** given **`U.GenerativePrior`**.
-* **Carrier.** Outcome.
-* **Polarity.** Higher surprise = more unexpected.
-* **Scale.** **bits** or **nats**: `Surprise := −log p_prior(outcome)`.
-* **Measurement template:**
-
-  1. Declare **GenerativePrior** (training slice, model class).
-  2. Encode outcome for the prior; compute likelihood proxy.
-  3. Publish calibration curve (reliability diagram / PIT histogram).
-* **Evidence.** Model cards; fit metrics; OOD diagnostics; refresh policy.
-* **Scope.** Training slice declared as **ContextSlice**; Bridges penalise **R** (trust), not the value itself (A.2.6).
-* **Didactic cues.**
-
-  * **Novelty vs Surprise:** high novelty under one kernel may be low surprise under a broad prior; publish both.
-
-#### C.17:5.4 - `ConstraintFit` — “Did it honour the non‑negotiables?”
-
-* **Intent.** Ensure **mandatory constraints** (safety, ethics, standards, SLOs) are satisfied.
-* **Carrier.** Outcome + Work evidence.
-* **Polarity.** Higher is **better** (1 = all mandatory satisfied).
-* **Scale.** **\[0, 1]**, ratio or pass/fail.
-* **Measurement template:** declare **set `C_must`** under its governing constraint owner or service-acceptance policy, compute **`ConstraintFit := |{c∈C_must : pass(c)}| / |C_must|`**; optionally weight per criticality.
-* **Evidence.** Checklists, tests, audits; Who/Role performed the **SpeechActs** (approvals/waivers).
-* **Scope.** Constraints are **context‑local**; Cross‑context requires **Bridge**; waivers are **SpeechAct Work** with RSG gates (A.2.5).
-* **Interpretation note.** Low `ConstraintFit` signals tension with declared **must‑constraints** and warrants reframing or redesign; **this pattern does not prescribe go/no‑go rules**.
-
-#### C.17:5.5 - `Diversity_P` *(declared retained-set / portfolio-level)* — “Are we exploring the space?”
-
-* **Intent.** At the **set** level, avoid myopic exploitation; promote **coverage**.
-* **Carrier.** A **set** of outcomes.
-* **Polarity.** Higher means **broader coverage** (not “better” per se).
-* **Scale.** Set‑functional; Context defines metric (e.g., **average pairwise distance**, **k‑cover** over features).
-* **Template.** Declare **kernel** and **covering policy**; compute score and **coverage map (illumination)**; relate to **USM ClaimScopes**.
-* **Alignment note.** The **illumination/coverage** view corresponds to *IlluminationScore* used by **B.5.2.1 NQD‑Generate**; no separate characteristic is introduced here—measure it as part of `Diversity_P`.
-* **Evidence.** Distance matrix/cover plots; sensitivity to kernel.
-* **Didactic cue.** Use **Diversity\_P** to **shape portfolios**, not to pick single winners.
-* **Marginal gain (for generators)** — normative. For a candidate h and current set S, ΔDiversity_P(h | S) := Diversity_P(S ∪ {h}) − Diversity_P(S). Contexts using NQD SHALL compute D as this marginal and publish the Diversity_P definition alongside the CharacteristicSpace/kernel and TimeWindow.
-
-**Heterogeneity Characterisation**
-* FamilyCoverage  (polarity ↑) — count of distinct domain‑families covered by a declared retained set, portfolio, or triad; unit: families; window: declared.
-* MinInterFamilyDistance (polarity ↑) — min distance between selected families in DescriptorMap for that declared retained set, portfolio, or triad; unit: per DistanceDef; window: declared.
-* AliasRisk (polarity ↓) — collinearity/near‑duplicate risk indicator for contextual signatures; unit: score (0–1) with policy id.
-
-**Lexical special case (F.18 naming).**
-For **lexical CandidateSets** used by Name Cards (F.18), **Diversity_P SHALL be computed over head-term families, not over raw strings**. Variants that share the same lexical head (e.g., “Reference plane”, “Plane of reference”, “Planar reference”) **MUST** be treated as one family for coverage and distance; only candidates with distinct heads contribute to lexical Diversity_P. This aligns lexical use of Diversity_P with `FamilyCoverage` / `AliasRisk` and prevents inflating diversity by near-synonyms of a single head.
-
-#### C.17:5.6 - `AttributionIntegrity` — “Did we credit sources and licences correctly?”
-
-* **Intent.** Discourage “novelty theft”; ensure **recombination** is **lawful and transparent**.
-* **Carrier.** Outcome + provenance graph.
-* **Polarity.** Higher is better.
-* **Scale.** **\[0, 1]**; fraction of **required attributions/licence duties** satisfied.
-* **Template.** Trace graph coverage against Context policy; licence constraints as declared must-constraint rules.
-* **Evidence.** PROV‑style links; licence scans; acknowledgements.
-* **Didactic cue.** High `AttributionIntegrity` signals lawful and transparent recombination; low values indicate unacceptable practice in most Contexts.
-* **Default role.** `AttributionIntegrity` is **measurable but non‑dominant**. It MAY serve as a **policy filter/tie‑break** (C.19). If certain attribution duties are **must‑constraints**, they belong to **ConstraintFit** under the declared constraint owner and act as **eligibility gates**. It is **not** part of the default dominance set.
-* **Dominance & gating note (normative).** `AttributionIntegrity` is a measurable **Characteristic**; it is **not** in the default dominance set. Contexts MAY use it as a **filter** or **tie‑break** via policy (C.19). Legal/ethical **must‑fit** checks live in **ConstraintFit** under the declared constraint owner; failing those blocks eligibility **before** dominance.
-
-#### C.17:5.7 - `EffortCost` *(advisory)* — “What did it take?”
-
-* **Intent.** Normalise comparisons by cost; not part of “creativity” per se.
-* **Carrier.** WorkLedger.
-* **Polarity.** Lower is better when used as denominator.
-* **Scale.** Resource units (hours, energy, \$).
-* **Template.** Sum cost categories over Work that produced the outcome.
-* **Evidence.** Time/resource logs; BOM deltas.
-* **Didactic cue.** Use **`CreativityPerCost := f(Novelty@context, ValueGain, Surprise)/EffortCost`** for operations planning, not for excellence awards.
-
-### C.17:6 - Conformance Checklist (first tranche)
-
-| ID  | Requirement (normative)  | Purpose / audit hint  |
-| --- | --- | --- |
-| **CC‑CR‑1 (context‑locality)**  | Every **CreativityProfile** **MUST** name the **`U.BoundedContext`** and the **edition** of `U.CreativitySpace`.  | Prevents Cross‑context slippage.  |
-| **CC‑CR‑2 (Declared bases)**  | **Novelty@context** claims **MUST** declare `ReferenceBase`, `SimilarityKernel`, and `TimeWindow`; **Surprise** claims **MUST** declare `GenerativePrior` and its training slice.  | Makes “new to whom?” and “unexpected under what?” explicit.  |
-| **CC‑CR‑3 (Objective anchor)**  | **ValueGain** **MUST** reference the **objective** (KPI/utility) and **counterfactual method** (if predicted, the model).  | Stops free‑form value stories.  |
-| **CC‑CR‑4 (Must‑fit)**  | If **must** constraints exist, **ConstraintFit** **MUST** be present; enactment decisions **SHALL** treat `ConstraintFit<1` as **fail**, unless an explicit **waiver SpeechAct** exists. | Keeps safety & ethics non‑negotiable.  |
-| **CC‑CR‑5 (Evidence)**  | Each coordinate **MUST** have Evidence Graph Ref (neighbours, tests, logs, model cards).  | Enables audit & replication.  |
-| **CC‑CR‑6 (Scopes)**  | Profiles **MUST** include **USM scopes** (ClaimScope/WorkScope) relevant to measurement; off‑scope claims are advisory.  | Ties numbers to where they hold.  |
-| **CC‑CR‑7 (No scalarisation by default)** | The pattern **SHALL NOT** force a single scalar “creativity score.” If a Context defines one, it **MUST** publish the weighting and its drift policy.  | Keeps decisions on a Pareto frontier unless a policy opts‑in. |
-| **CC‑CR‑8 (Bridge discipline)**  | Cross‑context comparisons **MUST** use a **Bridge** with **CL** and recorded **losses**; any mapped coordinate **MUST** note penalties in the **R** lane, not silently alter the value.  | Honest portability.  |
-
-### C.17:7 - Manager’s Quick‑Start (apply in 5 steps)
-
-1. **Name the Context** *(context + edition)*.
-2. **Pick measurement defaults** *(kernel, prior, objective, constraints)* from the Context’s handbook.
-3. **Score outcome** → `Novelty@context`, `Use‑Value`, `Surprise`, `ConstraintFit`.
-4. **Decide by declared set result**: identify the non-dominated `Front`; emit a `Shortlist` only through one named lens or policy when selector-facing publication is needed; use **ConstraintFit** as a gate; apply **policy** if a scalar is approved.
-5. **Record a CreativeEvaluation** with evidence; if crossing Contexts, attach the **Bridge id**.
-
-> **Mental check.** *New to our base? Helpful to our objective? Unexpected under our model? Safe & licenced?*
-> If any answer is “unknown,” you are **not done measuring**.
-
-### C.17:8 - Archetypal Grounding (three domains)
-
-**(a) Manufacturing design change)**
-*Outcome.* New impeller geometry for Pump‑37.
-*Context.* `PlantHydraulics_2026`.
-*Novelty@context* 0.42 (shape‑descriptor kernel vs last 5 years).
-*ValueGain.* +6.8% flow @ same power (bench Work).
-*Surprise.* 1.3 bits (within evolutionary trend prior).
-*ConstraintFit.* 1.0 (materials, safety, noise).
-*Decision.* **Frontier-based choice**: modest novelty, clear value, safe. The retained exploration set keeps **Diversity\_P** by also funding one high‑surprise concept for exploration.
-
-**(b) Software architecture refactor)**
-*Outcome.* New concurrency model for ETL.
-*Context.* `DataPlatform_2026`.
-*Novelty\_G.* 0.27 (AST/edit kernel vs internal corpus).
-*ValueGain.* −20% latency, −35% p95 stalls (A/B Work).
-*Surprise.* 0.5 bits (trend prior expected co‑routines).
-*ConstraintFit.* 0.83 (fails SoD—same author as reviewer).
-*Decision.* Return for **SoD fix**; then likely adopt. Creativity is **not** a waiver over governance.
-
-**(c) Scientific hypothesis)**
-*Outcome.* A new scaling law claim.
-*Context.* `GraphDynamics_2026`.
-*Novelty\_G.* 0.66 (formula kernel vs literature base).
-*ValueGain.* Predicted: explains 12 prior anomalies (model check).
-*Surprise.* 3.7 bits (strongly unexpected under prior).
-*ConstraintFit.* 1.0 (ethics N/A; evidence roles bound with decay windows).
-*Decision.* Fund **replication Work**; track **R** decay per policy.
-
-### C.17:9 - Anti‑Patterns (fast fixes)
-
-| Anti‑pattern  | Why it fails  | Fix with this FPF pattern  |
-| --- | --- | --- |
-| **“Creativity = randomness.”** | Noise yields high `Novelty@context`, low `ValueGain` and often low `ConstraintFit`. | Evaluate **all four** characteristics; require ConstraintFit=1 for musts.  |
-| **Global originality claims.** | Ignores context‑local meaning and current corpus.  | Declare **Context & ReferenceBase**; cross Contexts only via **Bridge**.  |
-| **One magic score.**  | Hides trade‑offs; fragile under drift.  | Decide on **Pareto frontier**; publish scalar only with explicit weights/policy. |
-| **Hand‑wavy value.**  | No objective → no audit.  | Tie to **Service/KPI** or **utility**; state **counterfactual**.  |
-| **Silent borrowing.**  | Legal/ethical risk; reputational damage.  | Track **AttributionIntegrity**; licence scans in evidence.  |
-
-### C.17:10 - Relations
-
-* **A.2 Role & A.15 Run‑alignment.** Creative **Work** is performed by **systems in roles**; outcomes are **epistemes**. Creativity is **measured by `U.Evaluation`**, not “done by a document.”
-* **B.3 Trust/Assurance.** Coordinates carry **confidence bands**; Bridges lower **R** by **CL**. A.2.4 evidence-use relations bind datasets and benchmarks used in measurements.
-* **Agency characterization.** A.13 identifies agential participation and the domain profile; A.17/A.18/A.19/C.16/A.10 govern measured characteristics and evidence. Planned C.9 may later consolidate the profile but supplies no current governing force. A high-agency system may still output low-creativity outcomes (and vice versa with strong scaffolding).
-* **A.2.6 USM (Scope).** All measurements sit on **ContextSlices**; `G‑ladder` is explicitly **not** used (C.17 follows A.2.6’s set‑valued scopes).
-* **D‑cluster ethics.** **ConstraintFit** is where **must** constraints, ethics, and safety bind the evaluation; waivers are explicit **SpeechActs**.
-
-### C.17:11 - Authoring Aids (didactic cards)
-
-* **Write the Context.** Context + edition on every profile.
-* **Name the base & kernel.** Without them, `Novelty@context` is undefined.
-* **State the objective.** Value without a KPI is a story.
-* **Publish priors.** Surprise needs a trained model with cards.
-* **Gate by musts.** `ConstraintFit` < 1 blocks enactment unless waived.
-* **Prefer frontiers.** Identify non-dominated options on the declared `Front`; emit a `Shortlist` only through one named lens or policy when publication needs that head.
-* **Bridge explicitly.** Cross‑context talk needs CL and loss notes.
-
-### C.17:12 - CSLC recap and the Creativity CharacteristicSpace
-
-**Purpose.** Ground “creativity” as a **measurable family of characteristics** (CHR) rather than a role, capability, or virtue. Each characteristic is scoped to a **`U.BoundedContext`**, evaluated on **`U.Work`** episodes, **`U.Episteme`** values such as design sketches or models, or **holders** (systems/teams) via **MM‑CHR** exports (`U.DHCMethodRef`, `U.Measure`, `U.Unit`, `U.EvidenceStub`), using the **CSLC** discipline (*Characteristic / Scale / Level / Coordinate*).
-
-> **Strict Distinction (A.7) reminders.**
-> *Creativity is not a Role* (no one “plays CreativityRole”). It’s a **characterisation** of outcomes/process.
-> *Creativity is not Work* (no resource deltas). Work **produces** work results or publications that we later characterise.
-> *Creativity is not a service promise clause* (no external promise). Promise clauses are judged from Work; creativity may correlate with value.
-
-#### C.17:12.1 - The Creativity CharacteristicSpace (CHR‑SPACE)
-
-The core **characteristics** below are **kernel‑portable** names; Contexts **specialise** them (rename if needed, but keep semantics). Each characteristic declares: **what we measure**, **on what carrier**, **typical scale**, and **where it lives** in FPF.
-
-| Characteristics (kernel name)  | What it captures (intuitive)  | Measured on  | Typical scale (CSLC)  | Lives with / checked by  |
-| --- | --- | --- | --- | --- |
-| **Novelty\@context**  | Distance from known ideas **in this Context**  | `U.Episteme` value or `U.Work` set | Ratio or bounded \[0..1] via *similarity→distance* | `KD‑CAL` corpus + `U.BoundedContext` |
-| **Use‑Value**  | Benefit vs a **declared objective**  | `U.Episteme` value or `U.Evaluation` | Ordinal (Fail/Partial/Pass) or scalar KPI  | `B.3` Evidence & `U.Evaluation`  |
-| **Surprise**  | Unexpectedness under the Context’s **GenerativePrior**  | `U.Episteme` value | bits or nats (−log‑likelihood)  | Prior cards & calibration  |
-| **ConstraintFit**  | Degree of **must‑constraints** satisfied while exploring  | `U.Work` or `U.Episteme` value | % satisfied (0–100)  | Declared constraint owner + step guards |
-| **Diversity_P**  | Declared retained-set **coverage/dispersion** (incl. coverage map view)  | Set of `U.Episteme` values | Set‑functional; coverage index  | `Γ_ctx` fold + USM ClaimScopes  |
-| **AttributionIntegrity** | Lawful and transparent **provenance/licensing**  | `U.Episteme` value plus provenance | \[0,1]  | PROV + declared constraint policy |
-
-> **Locality.** **Every characteristic is context‑local** (e.g., **Novelty\@context**). Cross‑context claims **must** use a **Bridge** and record **CL** penalties (B.3). No global novelty.
-
-#### C.17:12.2 - Context extensions & policy‑level characteristics (non‑kernel)
-
-The following **context‑local** characteristics remain available but are **not** part of the kernel nucleus; use them as **derived** or **policy** measures:
-
-* **ReframeDelta** — change in the **problem frame** that improves solvability (episteme‑pair; ordinal).
-* **Compositionality** — degree of **re‑use and new relations** among parts (`U.Episteme` value; boolean + structure score).
-* **Transferability\@X** — portability to **Context X** via a Bridge (`U.Episteme` value; ordinal + CL penalty).
-* **DiversityOfSearch** — breadth of **approach classes tried** (work set; count/rate).
-* **Time‑to‑First‑Viable** — elapsed time to first **Use‑Value = Pass** (work; duration).
-* **Risk‑BudgetedExperimentation** — planned vs realized exploration share (workplan vs work; ratio; policy gate).
-
-> **Compatibility note.** This split removes duplicate “core lists” and aligns C.17 with **B.5.2.1 NQD** and **C.16/A.17–A.18**: the **kernel nucleus** captures creativity *qualities*; the items above instrument Work, policy, or declared retained-set shaping without renaming `Front`, `Archive`, or `Shortlist`.
-
-#### C.17:12.3 - Scale choices (CSLC discipline)
-
-For each characteristic, **declare the scale** explicitly (nominal / ordinal / interval / ratio). **Do not** average ordinal scores; fold with medians or distributional summaries. Choose **units** (when applicable) and **coordinate** semantics (e.g., what “distance” means).
-
-* *Novelty\@context.*
-  Coordinate = `1 − max_similarity(candidate, corpus)` with a declared encoder (text, graph, CAD). Unitless in \[0..1]. Document encoder & corpus freeze (`A.10` Evidence Graph Ref).
-* *Use‑Value.*
-  `Pass` iff **acceptanceSpec** (from `U.PromiseContent` or Decision KPI) is met from **Work** evidence; else `Partial`/`Fail`. For scalar KPIs, publish mean ± CI and the acceptance threshold; predicted values carry error bars and are updated post‑run.
-* *ConstraintFit.*
-  Ratio = satisfied / declared **must** constraints. Constraints are context-local declared rules; **count only declared** ones (no unspoken “norms”).
-
-#### C.17:12.4 - Metric templates (normative kernels + manager‑ready variants)
-
- **Template syntax (MM‑CHR):**
-`U.DHCMethod { name, context, carrierKind, definition, unit?, scale, EvidencePin, acceptanceHook? }`
-*Note:* Data instances carry `DHCMethodRef` pointing to this template.
-
-##### C.17:12.4.1 - Templates (kernel definitions)
-
-1. **`MT.Novelty@context`**
-
-* **carrierKind:** candidate `U.Episteme` value or work output.
-* **definition:** `1 − max_sim(encode(x), encode(y))` over y in **ReferenceSet**@Context.
-* **scale:** ratio \[0..1].
-* **EvidencePin:** `{ReferenceSetId, EncoderId, Version}`; frozen by `A.10`.
-* **notes:** Publish encoder & corpus drift in RSCR.
-
-2. **`MT.Use‑Value`**
-
-* **carrierKind:** work-fulfillment occurrence and resulting decision-memo publication.
-* **definition:** Evaluation of an outcome against a declared **objective/criterion** for the current context (or predicted value with explicit model & error).
-* **scale:** ordinal {Fail, Partial, Pass} or scalar KPI.
-* **EvidencePin:** links to `U.Work` that **fulfilPromiseContent\`**; cite acceptanceSpec edition.
-
-3. **`MT.ConstraintFit`**
-
-* **carrierKind:** `U.Work` or `U.Episteme` value.
-* **definition:** `|{c∈C_must : pass(c)}| / |C_must|` within the **MethodDescription** scope; optional weighting by criticality allowed if declared.
-* **scale:** ratio \[0..1].
-* **EvidencePin:** declared constraint list; checks from Work telemetry.
-
-4. **`MT.ReframeDelta`**
-
-* **carrierKind:** Episteme pair (ProblemStatement v0→v1).
-* **definition:** Categorise frame change as {None, Local, BoundaryShift, Systemic}; **justify** with a Scope diff (`A.2.6 U.ContextSlice` delta) and causal map simplification.
-* **scale:** ordinal 0–3.
-* **EvidencePin:** diff publication plus Bridge notes if Cross‑context.
-
-5. **`MT.DiversityOfSearch`**
-
-* **carrierKind:** Work set (episode).
-* **definition:** Count of **distinct approach classes** tried (domain‑local typology) / time.
-* **scale:** count; derived rate.
-* **EvidencePin:** tagged Work items; typology lives in the Context glossary.
-
-6. **`MT.Compositionality`**
-
-* **carrierKind:** `U.Episteme` value.
-* **definition:** set aggregator (Compose‑CAL) of reused components ≥ K and presence of novel relation among ≥ 2 parts.
-* **scale:** boolean + secondary “structure score” (e.g., depth or edge novelty).
-* **EvidencePin:** component graph + provenance of parts.
-
-7. **`MT.Transferability@X`**
-
-* **carrierKind:** `U.Episteme` value.
-* **definition:** Applicability in target **Context X** via a **Bridge**; report **CL** and residual scope slice.
-* **scale:** ordinal {not portable, portable with loss, near‑iso}; record CL (0–3).
-* **EvidencePin:** Bridge id + pilot Work in X.
-
-8. **`MT.Time‑to‑First‑Viable`**
-
-* **carrierKind:** Work episode.
-* **definition:** elapsed wall‑clock to first `UsefulnessEvidence = Pass`.
-* **scale:** duration.
-* **EvidencePin:** first passing `U.Work` id.
-
-9. **`MT.Risk‑BudgetedExperimentation`**
-
-* **carrierKind:** WorkPlan vs Work.
-* **definition:** `(Planned exploratory spend) / (Allowed risk budget)` and realised counterpart; flag **overrun**.
-* **scale:** ratio + policy gate (pass/fail).
-* **EvidencePin:** WorkPlan ledger vs `WorkLedger`.
-
-##### C.17:12.4.2 - Manager’s quick checks (plain‑language adapters)
-
-* **Novelty** without a **frozen corpus** is **storytelling**—freeze corpus, fix encoder, then score.
-* **Use‑Value** without a **consumer‑facing acceptance** is a **proxy**—bind to a **Service** or explicit Objective.
-* **Diversity** counts **approach classes**, not color‑swap variants—publish your typology.
-
-### C.17:13 - Novelty & transfer are **context‑local** (Bridges mandatory)
-
-**Rule N‑1 (Locality).** `Novelty@context` is defined **only** within its `U.BoundedContext`. **Never** compare scores across Contexts without an **Alignment Bridge** (F.9).
-
-**Rule N‑2 (Directional mapping).** A Bridge may assert a **directional** substitution (e.g., *Novelty\@DesignLab → Novelty\@Manufacturing* with CL = 2, **loss:** aesthetics encoder absent). Reverse mapping is **not** implied.
-
-**Rule N‑3 (Penalty to R, not to G).** Cross‑context novelty **does not** change scope **G**; it **reduces R** (reliability) by the **CL penalty** (B.3), unless validated by pilot Work in the target Context.
-
-**Practical pattern.** Publish novelty **with its Context tag** and—when reused—attach the **Bridge id** and target‑context **pilot** outcomes.
-
-### C.17:14 - Anti‑Goodhart guard (use creativity metrics safely)
-
-> **Goodhart’s Law:** “When a measure becomes a target, it ceases to be a good measure.” — We bake in **guards** so creativity scoring **improves** outcomes instead of gaming them.
-
-#### C.17:14.1 - Guard‑rails (normative)
-
-* **G‑1 Paired appraisal.** **Never** assess **Novelty** in isolation; pair it with **Use‑Value** or **ConstraintFit** to avoid proxy myopia
-* **G‑2 Frozen references.** Novelty requires **frozen corpus + encoder**; changes create a **new edition** and **RSCR** rerun. Portfolio-publication heuristics and selection heuristics are **policy-level** (see **C.19**); do not “reward” Illumination beyond its role as a report-metric.
-* **G‑3 Time‑lag sanity.** Include a **post‑fact check** (e.g., 30–90‑day retention or cost‑to‑serve delta) before celebrating “creative wins.”
-* **G‑4 Exploration budget.** Tie **DiversityOfSearch** to **Risk‑BudgetedExperimentation**; flag overspend.
-* **G‑5 No ordinal averaging.** Do not average **ordinal** scales; use distributions/medians or convert only under declared models.
-
-#### C.17:14.2 - Conformance Checklist — **CC‑C17‑M (metrics & guards)**
-
-| ID  | Requirement  | Practical test  |
-| --- | --- | --- |
-| **CC‑C17‑M.1** | Each metric instance **MUST** cite its **Context**, **edition**, and **evidence hooks** (corpus/encoder, acceptanceSpec, constraint set). | Scorecard lists `ContextId`, `Edition`, and hook ids resolvable via `A.10`. |
-| **CC‑C17‑M.2** | **Novelty** scores **MUST NOT** be used to approve Work without a **paired gate** (**Use‑Value** **or** **ConstraintFit**).  | Find decisions referencing novelty; check co‑gate present.  |
-| **CC‑C17‑M.3** | Cross‑context reuse **MUST** cite a **Bridge** and record **CL**; **R** is penalised accordingly.  | Scorecards with foreign Context tag lacking Bridge → **fail**.  |
-| **CC‑C17‑M.4** | Ordinal metrics **MUST** be summarised with medians/distributions, not means, unless a declared model justifies numeric treatment.  | Reports using a mean on ordinal without model → **fail**.  |
-| **CC‑C17‑M.5** | Metric templates **MUST** be versioned; changing encoder, reference set, or acceptanceSpec **creates a new edition**.  | Diff shows changed hooks without edition bump → **fail**.  |
-
-### C.17:15 - Worked mini‑cases (engineer‑manager focus)
-
-> **All names are context‑local; bridges and editions are explicit.**
-> We show **(a)** what is measured, **(b)** who acts, **(c)** what is accepted, and **(d)** how evidence flows.
-
-#### C.17:15.1 - Case A — Hardware ideation sprint (manufacturing design)
-
-* **Context.** `DesignLab_2026`.
-* **Objective.** Reduce fastener count by ≥ 30 % without tooling changes.
-* **MethodDescription.** “Morphological matrix ideation v2.”
-* **Work.** 1‑day sprint, 6 sessions.
-* **Metrics.** `Novelty@context` (encoder: CAD‑graph v1; ReferenceSet: in‑house assemblies), `ConstraintFit` (no‑tooling‑change), `Use‑Value` (acceptance: Pass if sim shows ≤ +5 % assembly time).
-* **Roles.** Performers = design cell (#TransformerRole); Observer = methods coach (#ObserverRole ⊥).
-* **Outcome.** 22 candidates; 4 **Pass** usefulness; best `Novelty`=0.41 with **100 %** constraints respected; `Time‑to‑First‑Viable` = 3 h 40 m.
-* **Evidence.** Scorecard episteme holds metrics; links to Work ids; acceptance tied to internal **promise content** “Design‑for‑Assembly Simulation”.
-
-**Manager’s read.** “We didn’t just produce ‘novel’ shapes; 4 passed the sim and respected constraints, within the day.”
-
-#### C.17:15.2 - Case B — Data‑science hypothesis generation (health analytics)
-
-* **Context.** `Cardio_2026`.
-* **Objective.** Find a new risk factor candidate for readmission (< 30 days).
-* **MethodDescription.** “Causal discovery v3 + clinician review.”
-* **Metrics.** `DiversityOfSearch` (approach classes: feature ablation, IVs, DAG‑learners), `Novelty@context` (text encoder over prior hypotheses), `Use‑Value` (AUROC uplift ≥ 0.03 on hold‑out), `Transferability@Hospital_B` (Bridge CL=2).
-* **Roles.** SRE pipeline (#ObserverRole) computes metrics; clinicians (#ReviewerRole) set acceptance; data squad (#TransformerRole) performs experiments.
-* **Outcome.** Two candidates; one meets AUROC uplift; **Transferability** requires follow‑up (CL penalty).
-* **Evidence.** Episteme bundle: model cards, hold‑out plots, Bridge note.
-
-**Manager’s read.** “One candidate works **here**; plan a pilot at Hospital B (we recorded CL=2).”
-
-#### C.17:15.3 - Case C — Product squad reframing (software UX)
-
-* **Context.** `SaaS_Onboarding_2026`.
-* **Objective.** Reduce time‑to‑value (TTV) by 20 %.
-* **MethodDescription.** “JTBD interviews + onboarding flow experiments.”
-* **Metrics.** `ReframeDelta` (BoundaryShift: split onboarding into ‘job setup’ and ‘first result’), `Use‑Value` (TTV ‑22 % on A/B), `Risk‑BudgetedExperimentation` (within cap), `Compositionality` (reuse of existing workflow widgets).
-* **Roles.** UX researcher (#ObserverRole), squad (#TransformerRole), product ops (#ReviewerRole).
-* **Outcome.** Frame changed; TTV target passed; experiments within budget.
-* **Evidence.** Reframing episteme with Scope diff + A/B report.
-
-**Manager’s read.** “We changed the problem frame and proved the value drop—within risk limits.”
-
-#### C.17:15.4 What these cases illustrate (tie‑backs)
-
-* **Locality.** All novelty/usefulness claims are **Context‑tagged**; Cross‑context steps use **Bridges** with **CL**.
-* **Dual‑gate.** Novelty never acts alone; usefulness/constraints co‑gate decisions.
-* **SoD & Evidence.** Observers are **separate** from performers; metrics live on **epistemes** with **frozen hooks**; Work proves fulfillment.
-
-### C.17:16 - Working examples
-
-#### C.17:16.1 - Software (algorithmic/architectural ideation)
-
-**Kernel characteristics (↑/↓/gate).**
-Novelty↑ (algorithmic / compositional), Use‑Value↑ (targeted user/job metric), ConstraintFit=gate (resource/latency envelope), Cost‑to‑Probe↓ (hours to runnable spike), Evidence‑Level↑ (tests/benchmarks confidence), Option‑Value↑ (paths unlocked), RegretRisk↓ (scope of adverse impact if wrong).
-
-**Priors.**
-
-* Novelty prior **skeptical** beyond nearest known family (discount by conceptual distance).
-* Evidence prior at **L0** (B.3) until benchmarks exist; regression tests act as **ObserverRole** evidence.
-
-**Context card (one screen).**
-
-* Γ\_bundle: Cost = sum; ConstraintFit = AND; Novelty = subadditive; Evidence = min (chain) / SpanUnion (indep).
-
-#### C.17:16.2 - Hardware (mechanical/electro‑mechanical concepting)**
-
-**Kernel characteristics.**
-Novelty↑ (principle/material), Use‑Value↑ (performance delta), ConstraintFit=gate (manufacturability window), Time‑to‑Probe↓ (bench jig), Cost‑to‑Probe↓, SafetyRisk↓ (hazard), Evidence‑Level↑ (bench data), Option‑Value↑ (platform reuse).
-
-**Priors.**
-
-* SafetyRisk has **WLNK** priority (R must cover hazard chain).
-* ConstraintFit must pass **manufacturing gate** before frontier inclusion.
-
-**Context card.**
-* Γ\_bundle: Hazard = max; ConstraintFit = AND; Cost = sum+coupling; Evidence = min on chain; Scope via **WorkScope** (A.2.6).
-
-#### C.17:16.3 - Policy design (rules/standards/programs)
-
-**Kernel characteristics.**
-Novelty↑ (institutional), Use‑Value↑ (measurable social/operational effect), ConstraintFit=gate (legal/operational), Cost‑to‑Probe↓ (pilot), Evidence‑Level↑ (triangulated), EthicalRisk↓ (D‑cluster), Option‑Value↑ (coalitions/pathways), Scope (ClaimScope G) explicit.
-
-**Priors.**
-* EthicalRisk uses **status‑only** eligibility conditions; Evidence aging (decay) is **fast**; cross‑context Bridges carry **CL** penalties.
-
-**Context card.**
-* Γ\_bundle: EthicalRisk = max; ConstraintFit = AND (legal & operational); Cost = sum; Evidence = min/SpanUnion; Scope = ClaimScope (A.2.6).
-
-### C.17:17 - Consequences & fit (for engineer‑managers)
-
-* You can **reason on paper** about creativity: compare with **dominance**, pick along a **frontier**, and steer exploration with a few **policy characteristics**.
-* Changes to the space (**scales, eligibility conditions, operators**) are handled by **RSCR**, so decisions are **explainable over time**.
-* The **Context handbooks** are a **thinking OS**: one screen to start ideating without importing tool stacks or management playbooks.
-
-### C.17:17.1 - Cross-scale characteristics need one visible distortion account
-
-- Cross-scale talk should state what characteristics are being preserved, aggregated, projected, or lost when the line moves between scales such as organism, species, population, or ecosystem.
-- `BridgeDistortionNote` is the explicit warning that one bridge, aggregation, or projection changes what can be compared directly.
-- A distortion note does not cancel the declared `Front`, `Archive`, or `Shortlist`; it says how far one cross-scale reading can be trusted without further qualification.
-- When one retained set, frontier view, or transition path is projected into one atlas-like reading, keep the distortion note near that projection instead of leaving the loss to implication.
-- If that projection also depends on one declared `OutcomeMapRef` or `TransitionRelationRef`, cite that support next to the distortion note so the reader can see both why the projection is useful and where it stops being faithful.
-- Different atlas-like projections over the same retained set or frontier may preserve different characteristics; keep those differences visible instead of treating one cross-scale view as information-preserving by default.
-- This lets the line say both `the bridge is useful` and `the bridge is not information-preserving in every respect`.
-
-### C.17:17.2 - `Use-Value` is not the whole `Q-set` by default
-
-- `Use-Value` may be one member of a declared `Q-set`, but it is not the whole `Q-set` by default.
-- When creativity or novelty characteristics stay outside the declared `Q-set`, keep that placement visible as tie-breaker, telemetry, archive-retention reason, or explicitly promoted criterion under policy.
-- Do not let `Use-Value` language silently promote `Novelty@context`, `DeltaDiversity_P`, `Surprise`, or `IlluminationSummary` into current dominance.
-
-### C.17:18 - Relations
-
-* **Builds on**: B.1 Γ‑algebra (WLNK/COMM/IDEM/MONO), B.3 Trust & Assurance (F–G–R, CL), A.2.6 USM (Claim/Work scopes), A.10 Evidence Graph Referring.
-* **Coordinates with**: A.2 Role suite (Observer/Evidence roles for probes), A.15 (Work & plans for probes), C.16 MM‑CHR (scale polarity & units). **C.18 NQD-CAL** (generation/illumination operators Γ_nqd.\*) and **C.19 E/E-LOG** (policies, selection, and declared retained-set rules). This CHR remains measurement-only.
-* **Defers to**: F.9 Bridges for Cross‑context transfers; D‑cluster for ethical/speech‑act gates.
-
-### C.17:19 - Quick reference cards (tear‑out)
-
-* **Dominance test**: apply **indicators** + **eligibility conditions** + **trust**; then partial order.
-* **Frontier use**: **show frontier** + **name the lens** that picked your choice.
-* **Retained-set policy**: keep `ExploreShare` and `WildBetQuota`; set `BackstopConfidence`; rebalance on cadence.
-
-### C.17:20 - Conformance Checklist (pattern‑level, normative)
-
-> *Pass these and your CS modelling remains a thinking architecture, not a team‑management manual.*
-
-**CC‑C17‑1 (context‑local CS).**
-Every **CreativitySpace** (the characteristic set where ideation and selection are measured) **MUST** be defined *inside one* `U.BoundedContext`; all characteristics and their scales are local to that Context. (Bridges with CL penalties are required across Contexts; see §C.17.16.)
-
-**CC‑C17‑2 (Characteristics, not “characteristics”).**
-Each CS dimension **SHALL** be a named **Characteristic** per **MM‑CHR**, with kind (`qualitative`, `ordinal`, `interval`, `ratio`, or `set‑valued`), unit and scale, polarity, and admissible operations. No free‑floating coordinates. (A.CHR‑NORM / A.CSLC‑Kernel.)
-
-**CC‑C17‑3 (Profile ≠ plan).**
-A **Profile** is a *state description over characteristics* (what the option *is* in CS); a **Plan** or **Method** is *how you will act*. Never encode choices or schedules into the profile.
-
-**CC‑C17‑4 (Portfolio / retained-set view = set + rule).**
-A **Portfolio** or retained-set view is a declared set of candidate profiles **plus** a selection or retention rule (objective + constraints) declared *in the same Context*. It is not a synonym for `Palette`, `Front`, `Archive`, `Shortlist`, or `RankedShortlist`; use the specific set-result family head when that head is recoverable. Presenting only a scatterplot is non‑conformant.
-
-**CC‑C17‑5 (Dominance operator well‑typed).**
-A dominance claim **MUST** name the **characteristic subset and polarity** under which it is evaluated. Dominance on incomparable scales (or mixed polarities without explicit transformation) is invalid.
-
-**CC‑C17‑6 (Frontier from rule, not from taste).**
-A **Frontier** (Pareto or constraint‑bound) **SHALL** be computed from the declared selection rule; drawing a “nice hull” by eye fails conformance.
-
-**CC‑C17‑7 (Search–Exploit as **dynamics**, not policy dogma).**
-Exploration/exploitation **MUST** be expressed as a **dynamics on the declared retained-set measure(s)** (e.g., exploration share as a function of marginal value of information), *not* as a prescriptive budget recipe. Objective, constraint, and decision-policy statements belong to Decsn‑CAL / C.19; C.17 may cite them, but does not own or restate them.
-
-**CC‑C17‑8 (Evidence Graph Referring for scores).**
-Any numeric score in a profile **MUST** cite its **MeasurementTemplate** (MM‑CHR) and the **observation/evaluation** that yielded it. No anonymous numbers.
-
-**CC‑C17‑9 (Separable uncertainty lanes).**
-Keep **aleatory** vs **epistemic** uncertainty separate on characteristics; their combination rule **MUST** be stated (e.g., interval arithmetic, conservative bound).
-
-**CC‑C17‑10 (Time is explicit).**
-Comparisons across iterations **MUST** state `TimeWindow` (snapshot window) and whether *drift* or *refit* occurred (§C.17.14). “Latest” is not a time selector.
-
-**CC‑C17‑11 (No proxy collapse).**
-If a composite “creativity index” is used, its **aggregation algebra** (weights, monotone transforms) **MUST** be declared; the primitive characteristics remain queryable.
-
-**CC‑C17‑12 (Work stays on Work).**
-Resource/time actuals and run logs live on `U.Work`; CS never carries actuals. We reason **about** profiles / retained sets; we do not audit operations here.
-
-### C.17:21 - Worked‑Context Handbooks (concept cards, not runbooks)
-
-> *Each Context publishes one page per card. These are **thinking kernels**: priors, objectives, admissible characteristics, and example transforms. No staffing, no process charts.*
-
-**(a) Kernel Card — “What is a creative win here?”**
-
-* **Context:** `<Context/Edition>`
-* **Purpose Characteristic(s):** what “win” means (e.g., *Novelty*, *Usefulness*, *Adoptability*), with polarity and admissible ops.
-* **Constraint Characteristics:** *Risk*, *Cost of change*, *Time to learn*, etc.
-* **Objective** *(Decsn‑CAL pointer)*: Maximise `<purpose>` subject to declared constraints.
-* **Frontier Rule:** Pareto over `{purpose ↑, risk ↓, cost ↓, time ↓}`.
-* **Evidence Hooks:** which observations/evaluations populate each characteristic.
-
-**(b) Priors Card — “What we believe before seeing data.”**
-
-* **Default priors** on uncertainty for each characteristic (e.g., Beta for adoption probability).
-* **Bridge policy:** minimal CL acceptable for imported profiles.
-* **Exploration prior:** initial exploration share as a function of prior entropy.
-
-**(c) Objective Variants Card — “Admissible objective shapes.”**
-
-* Catalog the *few* objective forms this Context allows (lexicographic tie‑break, ε‑constraint, max‑min fairness), with **didactic pictures** of their frontiers.
-* State when to switch objective (e.g., during bootstrapping vs exploitation).
-
-**(d) Ready‑to‑use transforms** *(MM‑CHR aligned)*
-
-* Monotone maps (e.g., log utility), normalizations, ordinal→interval “do & don’t” (only with evidence of order‑to‑interval validity).
-* **Forbidden transforms** list (e.g., averaging ordinal ranks).
-
-These cards are *conceptual fixtures*; **Tooling** may implement them, **Pedagogy** may teach them, but **C.17** only standardises their content as **thinking supports**.
-
-### C.17:22 - Placement sanity‑check across the pattern language *(avoid scope creep)*
-
-* **MM‑CHR (C.16):** defines **Characteristic/Scale/Unit/Measure** and the *characterisation discipline*. **All** CS dimensions live there; C.17 **uses** them, never re‑defines scales.
-* **A.CHR‑SPACE (A.19):** exports **CharacteristicSpace & Dynamics hooks**; C.17 is a **Contexted specialisation** for creative reasoning (profiles / retained sets / selection).
-* **Decsn‑CAL (C.11):** defines **objective functions, constraints, preference orders, utility proofs**, and the **search–exploit dynamics** as decision policies. C.17 only **names** the hooks (objective, rule), keeps policy math out.
-* **KD‑CAL (C.2) & B.3 (Trust):** carry **evidence provenance**, **assurance** and **congruence penalties (CL)** for Cross‑context reuse. C.17 requires anchors; it does not invent confidence calculus.
-* **Compose‑CAL (C.13):** governs **set/union/slice** aggregation; a declared retained set is a **Γ\_m.set** over profiles; frontier is derived **without** ad‑hoc geometry.
-* **B.4 Canonical Evolution Loop:** where *Run→Observe→Refine→Deploy* sits. C.17 supplies the **view** in which refinement is judged.
-
-**Out of scope here:** team staffing, budgeting workflows, data‑governance procedures, ticket states, any “how to manage people”. This pattern organises **thought**, not **teams**.
-
-### C.17:23 - Anti‑patterns & canonical rewrites (conceptual hygiene)
-
-1. **characteristic‑speak.** “Along the novelty characteristic…” → **Rewrite:** “Along the **Novelty characteristic** (ordinal; higher is better)…”.
-2. **Pretty hulls.** Drawing a convex hull and calling it a frontier → **Rewrite:** compute Pareto under declared characteristic polarities.
-3. **Ordinal arithmetic.** Averaging ranks or Likert values → **Rewrite:** either treat as **ordinal** and use **order‑safe** operators, or justify an interval mapping via MM‑CHR evidence.
-4. **Proxy tyranny.** Single composite index driving choice unseen → **Rewrite:** publish **primitive characteristics**, index formula, and sensitivity.
-5. **Policy‑as‑math.** “10% wild bets” as a rule → **Rewrite:** declare an **exploration dynamics** tied to value‑of‑information; if keeping a heuristic, label it as such.
-6. **Global meaning.** Porting a profile from another Context by name → **Rewrite:** attach a **Bridge** with CL and loss notes; adjust trust, not scales.
-7. **Plan‑profile blur.** Putting milestones into profiles → **Rewrite:** move schedules to `U.WorkPlan`; keep CS for *how options compare*, not *how to execute*.
-
-### C.17:24 - Minimal didactic cards (one screen each)
-
-**(1) Profile Card**
-
-* **Option id & Context**
-* **Characteristics table** (value, unit and scale, uncertainty split)
-* **Evidence Graph Ref** (Observation/Evaluation ids)
-* **Notes** (bridges used, CL penalties)
-
-**(2) Declared Set-with-Rule Card**
-
-* **Set of candidate profiles (refs)**
-* **Objective & constraints** (Decsn‑CAL pointer)
-* **Dominance subset** & **Frontier snapshot** (with TimeWindow)
-* **Delta vs previous** (entered/exited/moved)
-
-**(3) Search–Exploit Card** *(conceptual)*
-
-* **Exploration share** as function of **marginal VOI** (symbolic)
-* **Update cadence** (TimeWindow policy)
-* **Stop conditions** (e.g., VOI below threshold; risk bound reached)
-
-**(4) RSCR Summary Card**
-
-* **What changed?** (refit/Δ±)
-* **Sentinels status**
-* **Frontier churn**
-* **Bridge CL drift**
-
-These cards are **thinking scaffolds**; they do not prescribe org process.
-
-### C.17:25 - Consequences (informative)
-
-| Benefit  | Why it matters  |
+| Evaluation space | `CreativityCharacteristicSpace` is a local designator for one A.19 `U.CharacteristicSpace`. Its slots bind selected Characteristics to Scales and value sets. |
+| Evaluation specification | One `C.2.1` episteme specializes `A.19.ECS` for the selected bearer kind and use. It states applicability, coordinate meanings, evidence and missingness rules, calibration, result shape, protected trade-offs, stop, and reopen conditions. |
+| Comparison basis | A finite corpus or reference set, with inclusion rule, source editions, coverage boundary, and comparison window. Use a separate source-selection episteme when the selection must persist. |
+| Similarity or measurement procedure | One `U.Method`, with a separate MethodDescription when needed. Identify the model, encoder, distance definition, invariances, calibration, and limits used by that Method. |
+| Generative expectation | One model episteme and its separately recoverable training basis: members or selection rule, source editions, training window, preprocessing, and evidence. |
+| Evaluated bearer | The design, episteme, System, dated Work, finite set, or change under its already established kind. *Creative outcome* may remain ordinary prose; it is not another kind. When a change or Work episode has no single result episteme, identify that actual bearer and cite the result-and-evidence bundle used by the claim instead of wrapping the bundle in a new outcome kind. |
+| Coordinate result | One claim about the bearer, characteristic, scale value, scope, use, window, method or probe, basis, rationale, uncertainty, and evidence. |
+| Aggregate result | One `CreativityEvaluationResult` episteme whose EntityOfConcern is the bearer and whose claims state only the bounded coordinate and comparison conclusion. |
+| Optional profile | `CreativityProfile` is a local, non-arithmetic payload containing selected coordinate-claim references, their declared arrangement, and any current frontier or incomparability annotation. |
+| Representation and publication | A table, chart, dashboard, or publication form represents or publishes the payload or result. It is not the payload or result. |
+| Optional record | A separate `CreativityEvaluationRecord` episteme may package references to the configuration, results, profile, evidence, rendering, and actual Work for a named receiver. |
+| Assessment occurrence | Dated Work exists only when an overall assessment actually occurred and its System, assignment, Method enactment, Work extent, and evidence are recoverable. Any claimed application of a Mechanism operation is a separate conditional fact under A.6.1. |
+
+Changing a space slot, corpus membership or inclusion rule, model claims or training basis, objective, criterion, constraint, Scale meaning, scope, or window reopens only the coordinate claims that depend on that change and any aggregate conclusion that uses them.
+
+#### C.17:2.1 - Retired predecessor heads
+
+The following names no longer introduce root kinds:
+
+| Retired head | Use instead |
 | --- | --- |
-| **context‑local rigour**  | Creative comparison is made decidable *where meaning lives*; Cross‑context reuse is explicit and penalised only in trust, not scale. |
-| **Frontier honesty**  | Decisions rest on declared characteristics and polarities; frontiers follow rules, not taste.  |
-| **Temporal comparability** | RSCR prevents silent drift; “better/worse” claims retain meaning over iterations.  |
-| **Method independence**  | Any tooling can implement the cards; C.17 remains a conceptual API for thought.  |
+| `U.CreativitySpace` | the selected A.19 CharacteristicSpace, locally called `CreativityCharacteristicSpace` when a short name helps |
+| `U.CreativityProfile` | the optional local `CreativityProfile` payload, with any representation, publication form, or record identified separately |
+| `U.ReferenceBase` | the finite corpus or reference set and, when needed, its source-selection episteme |
+| `U.SimilarityKernel` | the Method used plus its model, encoder, distance definition, calibration, and limits |
+| `U.GenerativePrior` | the model episteme and its separate training basis |
+| `U.CreativeOutcome` | the bearer under its existing kind |
+| `U.CreativeEvaluation` | the separately recoverable configuration, coordinate claims, aggregate result, optional payload and record, and any actual assessment Work |
 
-**Trade‑offs:** upfront ceremony (declare characteristics, polarity, TimeWindow) and disciplined bridges. The payoff is comparability and explainability.
+Earlier results remain historical epistemes under their original editions. Relate an earlier and later result as editions only when both results and the continuity claim are recoverable; do not retype an old result merely because the current ontology is clearer.
 
-### C.17:26- Open questions (non‑normative, research hooks)**
+### C.17:3 - Evaluation configuration
 
-* **Information geometry of CS:** can certain Contexts justify canonical distance metrics across characteristics without violating MM‑CHR parsimony?
-* **Multi‑agent exploration:** how to couple individual CS frontiers into a *co‑exploration* equilibrium without importing team governance?
-* **Learning‑to‑rank vs measurement:** what minimal evidence suffices to treat an ordinal characteristic as interval for the purpose of frontier estimation?
+The configuration must make these questions answerable:
+
+- Which bearer is evaluated, for which use and ClaimScope, over which selected slices and window?
+- Which CharacteristicSpace and `A.19.ECS` specification supply the Characteristics, Scales, value meanings, missingness rules, and admissible comparisons?
+- Which finite corpus or reference set supplies the comparison basis, and how were its members admitted?
+- Which Method, model, encoder, distance definition, calibration, and uncertainty basis produced or supports each value?
+- If the Method compares a representation or observation instead of the bearer directly, which bearer and representation or observation are related, what describing, projection, measurement, or other stated relation supports the inference, and do the corpus members use a compatible comparison basis? If not, state the mapping and relevant loss.
+- Which objective, acceptance criterion, and must-constraints are current, and which source epistemes state them? Their inclusion in the configuration does not make their claims true.
+- If the result claims improvement or gain, which baseline and comparison or counterfactual Method make the difference testable?
+- Which evidence supports the difference, consequence, coordinate, or comparison conclusion, and what use may rely on it?
+
+For each objective, criterion, or constraint on which the result depends, keep its EntityOfConcern, effective ReferenceScheme, edition or currentness basis, and subject-defined predicate recoverable. Do not use a generic container label to answer several of these questions at once. Add only the source, scheme, scope, model-use, comparison, or evidence relation the current claim needs.
+
+Keep prospective and observed readings distinct. A prospective reading may use a surrogate model and stated assumptions to compare designs before use; an observed reading uses later Work, service, or other outcome evidence. Do not overwrite the prediction as though it had been an observation. Preserve both result editions when the comparison matters, and reopen only the coordinates and conclusions that relied on the superseded prediction.
+
+### C.17:4 - Core characteristics
+
+Each selected characteristic has a declared Scale, polarity, admissible operations, missingness rule, and evidence route. An ordinal value is not averaged unless a declared model justifies an interval interpretation.
+
+#### C.17:4.1 - Novelty: unlike which admitted set?
+
+Novelty describes supported difference from a finite comparison corpus under one declared similarity Method. When that Method returns a calibrated similarity result on `[0,1]` for each like-for-like comparison, that source result keeps its declared Similarity Scale. The following transformation defines a bounded value on a corresponding declared Novelty Scale, whose meaning is difference from the corpus and whose positive polarity increases as maximum similarity falls:
+
+`Novelty = 1 - max similarity(bearer, corpus member)`
+
+A declared normalization to `[0,1]` may be part of the Method; state its source Scale and transformation. If the Method uses another similarity or distance Scale, state the lawful coordinate construction and resulting Scale instead of reusing this formula. Subtracting an unrestricted result from one does not make it bounded.
+
+When the Method compares representations or observations rather than the evaluated bearers themselves, name each bearer and the value actually compared, together with the describing, projection, measurement, or other stated relation that lets the comparison support the bearer-level claim. Use a compatible basis for corpus members, or state the mapping and relevant loss. A direct like-for-like comparison of epistemes needs no extra representation relation.
+
+A robust top-k variant is allowed when declared. The result identifies the Novelty Characteristic and Scale editions, corpus and inclusion rule, source editions, comparison window, Method, model or encoder edition, distance definition, invariances, calibration, uncertainty, ClaimScope, evidence, and intended use. Changing any load-bearing element creates a different comparison basis or result edition.
+Those identifiers make the result reproducible; they do not by themselves show that the value is robust. When the value materially affects a comparison or pool treatment, use diagnostics suited to the claim. For example, inspect the nearest corpus members and their distances, repeat the reading with a plausible alternative corpus or similarity Method and report the sensitivity, and remove a claimed invariance to see whether it materially changes the result. These are bounded diagnostic examples, not one mandatory algorithm. If no robustness check was performed, report the supported value and uncertainty without calling it robust.
+
+Novelty is neither timeless originality nor a property detached from its comparison basis. A label such as `Novelty@context` is not an executable input and must not substitute for the result chain.
+
+#### C.17:4.2 - Use-Value: useful for which objective?
+
+Use-Value, historically also called `ValueGain`, reports the bearer's supported usefulness or contribution to one declared objective or acceptance criterion. An ordinary usefulness statement may use an ordinal Scale such as `Fail | Partial | Pass`; it does not need a counterfactual merely because the bearer is useful for the stated purpose.
+
+When the result claims an improvement or gain, identify both the baseline and the comparison or counterfactual Method that makes the difference meaningful. One bounded measured construction is `ValueGain = metric_after - metric_before` under a fixed metric and window. An A/B comparison, back-test, or causal-inference Method may provide the comparison when it fits the claim. Cite the before and after measurements and the Work or other evidence on which they rely. A predicted gain identifies its model, error, baseline, and intended later update. Without a baseline and an appropriate comparison Method, say what usefulness is supported; do not report an observed gain.
+
+Use-Value may be one member of a declared Q-set, but it is not the whole Q-set by default. If it stays outside Q, name its actual use as a side condition or tie-breaker. Do not silently promote Novelty, Surprise, `DeltaDiversity_P`, or Illumination into dominance.
+
+#### C.17:4.3 - Surprise: unexpected under which model?
+
+Surprise reports how improbable one declared sample of the bearer is under one generative model. For a discrete probability, a common raw result is `-log p(sample)` in bits or nats. State the modeled sample unit and encoding and how bearer size is handled. Compare bearers only under a justified common extent, a declared per-unit or code-length normalization, or another calibrated rule suited to the model. For a continuous model, identify the measure as well as the representation; a density value alone is not representation-independent. Otherwise keep the raw model result within its exact basis and do not treat it as a comparable Surprise coordinate. Also identify the model episteme and edition, training basis, preprocessing, fit and out-of-distribution checks, calibration, refresh condition, and limits.
+
+Novelty and Surprise answer different questions. A bearer may be unlike the selected corpus yet unsurprising under a broad model, or close to known examples yet surprising under a narrow model. Keep both results visible when both matter.
+
+#### C.17:4.4 - ConstraintFit: which must-criteria hold?
+
+ConstraintFit reports satisfaction of the declared must-constraints under their predicates and source epistemes. Use `E.5`, `D.1`-`D.5`, or a service-acceptance pattern only when it supplies the actual predicate or source for the current must-criterion. A ratio such as `passed declared must-constraints / all declared must-constraints` is allowed when the set and any criticality weights are explicit.
+
+A failing must-constraint makes the bearer ineligible for the affected use unless the receiving constraint or decision pattern recognizes an independently obtaining exception or waiver effect. A waiver speech act alone does not change eligibility. If no pattern defines the needed effect, return the missing relation rather than treating communication as authorization.
+
+#### C.17:4.5 - AttributionIntegrity
+
+AttributionIntegrity reports how completely the applicable provenance, authorship, source, and licence duties are met. First identify the duty set and the source that makes each duty applicable. One bounded local construction is `satisfied required duties / all applicable required duties` on a declared ratio Scale; mark unresolved and inapplicable duties separately rather than treating them as satisfied. Provenance links, licence scans, and acknowledgements are example evidence routes.
+
+When the applicable-duty set is empty, do not compute the ratio. Omit AttributionIntegrity when the receiving use does not need it; when that use needs an explicit disposition, return `not applicable` under the declared Scale and missingness rule. That disposition is not a pass and cannot by itself pass a filter, break a tie, establish legal adequacy, or satisfy a must-constraint. Keep it distinct from an unresolved duty that does apply.
+
+This reading does not by itself establish legal adequacy. It is measurable but not in the default dominance set; an applicable policy may use it as a filter or tie-breaker. When a duty is a must-constraint, its pass or failure belongs in ConstraintFit and affects eligibility there.
+
+#### C.17:4.6 - EffortCost
+
+EffortCost reports actual resource outlay through `A.15.1` dated Work, `B.1.6` resource aggregation, `C.16` measurement, and `A.10` evidence. Planned effort remains `A.15.2` WorkPlan content. Use cost-normalized readings for planning or comparison only under a declared rule; cost is not itself creativity, and a profile does not carry operational actuals.
+
+### C.17:5 - Retained-set and optional applied readings
+
+#### C.17:5.1 - Diversity and illumination
+
+`Diversity_P` describes coverage or dispersion of one declared retained set under a named measurement policy. A local policy may, for example:
+
+- take the average pairwise distance among the admitted members under one declared descriptor map, distance Method, and Scale; or
+- report how much of a declared feature partition is covered, using a stated covering radius or k-cover rule.
+
+Neither construction is universal. The result identifies the retained set and membership rule, measurement-policy and Scale editions, descriptor or feature source editions, distance or covering definition, comparison window, and evidence. A distance matrix or coverage map can show the calculation. When the reading affects a decision, vary a plausible kernel, distance definition, covering threshold, or admitted-member set and report whether the conclusion changes.
+
+For a candidate `h` and retained set `S`, the same local policy may use the marginal reading `DeltaDiversity_P`, also written `ΔDiversity_P`:
+
+`DeltaDiversity_P(h | S) = Diversity_P(S plus h) - Diversity_P(S)`
+
+Illumination is a report over `Diversity_P`, such as a coverage map or QD-score summary. It is telemetry, not a primitive characteristic and not part of the default dominance set. Use `C.18` to maintain an Archive or Front and `C.19` to state any pool policy that uses these readings.
+
+Optional retained-set readings include:
+
+- `FamilyCoverage`: coverage of locally defined families under a named policy and Scale;
+- `MinInterFamilyDistance`: the smallest distance among declared families, with descriptor map, distance definition, Scale, and family-representation rule;
+- `AliasRisk`: a near-duplicate or alias diagnostic with collision policy, descriptor source edition, and Scale;
+- `DescriptorVector`: an optional descriptor payload whose dimensions and interpretation the same local policy declares.
+
+These readings characterize the named set. They do not admit sources, select members, establish universality, or widen applicability. For naming candidate sets, apply `F.18`'s head-term-family anti-inflation rule rather than restating that lexical rule here.
+
+#### C.17:5.2 - Optional applied characteristics
+
+The following are executable local examples, not required universal templates. Use one only when the receiving question needs it and identify its bearer, rule, Scale, and evidence.
+
+- **`ReframeDelta`.** The bearer is an ordered pair of problem-frame epistemes. One local rule compares the earlier and later frame on an ordinal Scale such as `None | Local | BoundaryShift | Systemic`; a boundary or scope diff and a changed causal map support the reading. The frame change does not by itself prove improvement, so state Use-Value separately.
+- **`Compositionality`.** The bearer is the design or episteme being assessed. One local rule requires reuse of at least a declared number of components and evidence of at least one new relation among them; it may return a boolean plus a separately defined structure reading. Cite the component graph and component provenance.
+- **`Transferability`.** The bearer is the design, result, or episteme whose use is tested in one named receiving setting. One local ordinal Scale is `not supported | supported with stated loss | supported for the stated use`. Cite receiving-use pilot evidence and the preserved and lost meaning; use an F.9 Bridge only when a relation between different reference-scheme senses actually obtains.
+- **`DiversityOfSearch`.** The bearer is a finite set of dated Work attempts. Count distinct approach classes under a declared local typology, optionally as a rate over a stated time window, and cite the tagged Work and typology. Cosmetic variants do not create new classes.
+- **`Time-to-First-Viable`.** The bearer is one Work episode. Measure elapsed time from a declared start to the first dated result that passes the stated viability criterion; cite the timestamps and passing evidence. If no result passed, report `not yet obtained` or a right-censored duration rather than the time to the first runnable output.
+- **`Risk-BudgetedExperimentation`.** Compare the applicable WorkPlan with the resulting dated Work set. One local rule reports planned exploratory resource use divided by the allowed risk budget and the realized ratio separately, with any overrun visible. Cite the WorkPlan, actual Work, and resource evidence; the reading does not grant the budget or authorize the Work.
+
+These examples do not create another universal characteristic family. Readings about actual attempts, elapsed time, or realized experimentation depend on dated Work; planned experimentation depends on a WorkPlan.
+
+#### C.17:5.3 - Other domain characteristics
+
+The six applied readings above are examples, not the extension boundary. A configuration may select other Characteristics already established for the current use—for example, time or cost to probe, evidence sufficiency, safety or ethical risk, option value, or regret risk. Keep each selected Characteristic's bearer, Scale, polarity, defining source, Method, and evidence. A safety or ethical must remains an eligibility condition through ConstraintFit; evidence sufficiency does not become creativity; and scope does not become another coordinate merely because every claim needs one.
+
+When one comparison covers several components, attempts, or Work occurrences, identify the lawful aggregation separately for each Characteristic. For example, compatible costs may sum, all declared must-constraints may have to pass, a domain risk rule may use its own conservative combination, and evidence may follow an applicable `B.3` relation. These are examples, not C.17 defaults. If no declared aggregation supports the combined reading, keep the component results separate.
+
+Any prior or default used for Novelty, evidence, risk, or another selected reading remains a separately supported model or policy claim with its source and edition. C.17 does not publish domain priors merely because a reusable configuration is convenient.
+
+### C.17:6 - Results, profiles, and assessment Work
+
+#### C.17:6.1 - Coordinate claims
+
+For each selected characteristic, choose one truthful route:
+
+- cite an already constituted `C.16` measurement-result episteme and its complete measurand, Characteristic, Scale, Method, application, dated measurement Work, bindings, time, uncertainty, and evidence chain;
+- if the current action measures the coordinate, constitute that complete C.16 chain before using the value;
+- if the claim applies a declared criterion without measuring, state a `C.2.1` ascription and its rule.
+
+A numeric model output, criterion label, dashboard cell, or formula alone is not a measurement result.
+
+#### C.17:6.2 - Aggregate result
+
+`CreativityEvaluationResult` is one bounded `C.2.1` episteme about the bearer. Its ClaimGraph cites the selected coordinate claims, CharacteristicSpace and specification, scope, use, window, evidence, current eligibility consequence, and any frontier or incomparability conclusion. It is not an arithmetic total and does not create a universal creativity kind.
+
+The result may say that a bearer is eligible for one comparison, incomparable on a missing coordinate, or non-dominated within one declared set. It does not choose, approve, publish, retain, or enact the bearer.
+
+#### C.17:6.3 - Optional payload, record, and rendering
+
+Use `CreativityProfile` only as the local name for the optional non-arithmetic payload of coordinate-claim references, their arrangement, and current frontier or incomparability annotation. A table, chart, or dashboard is a separate representation. A `CreativityEvaluationRecord` is a separate optional episteme that packages references for a named receiver.
+
+Do not alternate among *result*, *profile*, *record*, and *dashboard* as if they were synonyms.
+
+### C.17:7 - Comparison, gates, and selection boundary
+
+1. Never use Novelty alone to approve or prefer a bearer. Pair it with Use-Value or the relevant ConstraintFit gate.
+2. State the selected characteristic subset, polarities, eligibility conditions, and comparability basis of every dominance claim.
+3. Preserve partial orders and incomparability. A Pareto or constraint-bounded Front follows from the declared rule; a visually pleasing hull is not a frontier.
+4. Do not force one scalar creativity score. If a receiving policy uses an index, publish its weights or curves, admissible transformations, uncertainty treatment, sensitivity, and drift rule while keeping the primitive coordinates queryable.
+5. Do not average ordinal Scales without an accepted model that supports the conversion.
+6. A result may state a frontier relation over a declared set. Use `C.18` to maintain the current Front and Archive, `C.19` to state pool treatment and tie-break policy, `G.5` to declare selector-facing results, and `C.11` to make the choice.
+
+### C.17:8 - Evidence, uncertainty, and resistance to gaming
+
+Every quantitative result names its evidence, calibration, uncertainty, and validity window. Keep aleatory and epistemic uncertainty separate and state any rule that combines them. A claim imported from another source or scale states the preserved meaning, lost meaning, direction, receiving use, and evidence limit; use `F.9` only when an actual Bridge between reference-scheme senses is needed.
+
+Apply these anti-Goodhart guards:
+
+- pair Novelty with Use-Value or ConstraintFit;
+- freeze the comparison corpus, encoder or model, and Scale edition for the result; a load-bearing change creates a new result basis;
+- keep Illumination as telemetry unless an explicit policy promotes it for a named use;
+- check delayed practical consequences, such as retention, maintenance burden, or cost-to-serve, before celebrating a proxy win;
+- connect `DiversityOfSearch` to the declared experimentation allowance and report overspend;
+- retain primitive coordinates and sensitivity when a composite index is used.
+
+When a corpus, inclusion rule, model, encoder, Scale, criterion, window, or cross-source premise changes, leave a compact change account: the previous and new editions, what changed in the basis, which coordinates and aggregate conclusions reopen, whether eligibility or frontier membership changed, and which next observation can settle the difference. *Latest* is not a reproducible selector. Use `B.4` and `G.11` for the refresh; the change account explains the comparison and does not replace the new result.
+
+Goodhart's law is a useful historical warning, not evidence for any result. The safeguards above do the operational work.
+
+Evidence can support a result without establishing assurance. Ordinary use stops with proportionate evidence. Enter `B.3` only when the receiving assurance claim or material-reliance threshold requires it.
+
+When that receiving use requires independent assessment or segregation of duties, name the Systems that performed any bearer-producing, coordinate-measurement, or overall-assessment Work and the assignments relevant to the independence claim. State the relevant conflict or independence evidence. Do not impose this assurance arrangement on an ordinary qualitative discussion that makes no independence claim.
+
+#### C.17:8.1 - Cross-scale and cross-source limits
+
+When a reading moves across scales, state which Characteristics are preserved, aggregated, projected, or lost and cite the actual aggregation, projection, transition, temporal cross-scale, or Bridge relation on which the reading depends. Keep a plain distortion note next to the projection. If the receiving use needs the named A.0 qualifier structure, use `A.0:QF.2a` and its optional `OutcomeMapRef`, `TransitionRelationRef`, or `BridgeDistortionNote`; otherwise the plain loss statement is enough.
+
+Different projections of the same retained set or frontier may preserve different information. A useful projection is not automatically information-preserving, and one atlas-like view does not cancel the original Front, Archive, or result.
+
+When claims come from different source schemes or corpora, do not compare by matching labels. State the actual mapping, Bridge when required, direction, loss, calibration, and receiving use. A target-use pilot may improve evidence for that use; it does not make the source and target bases identical.
+
+### C.17:9 - Worked cases
+
+#### C.17:9.1 - Pump design: stop early or open the measurement branch
+
+Identify `P-22` as the exact design episteme. Compared with the admitted five-year pump-design set, its inspected split-clamp arrangement is a supported difference. Assembly evidence supports shorter assembly, and the candidate must not require new tooling. State what was inspected and the limit of that support. Stop here when the discussion needs neither a quantified coordinate nor a reusable result.
+
+To use Novelty value `0.42`, cite `P22-NoveltyResult-4`, an already constituted C.16 measurement-result episteme. Its chain identifies P-22 as measurand, the Novelty Characteristic and Scale, exact similarity Method, the calibrated `[0,1]` CAD-graph similarity result used by the declared Novelty construction, encoder and model edition, uncertainty, dated measurement Work, actual bindings, time, and evidence. The Method compares `P22-CADGraph-7`, produced from and representing P-22 under `CADGraphProjection-2`, with graphs produced by the same projection for every corpus design; the result states that this projection omits surface finish and manufacturing tolerances. If the current action measures novelty, constitute that chain first. State the no-tooling-change coordinate as a C.2.1 ascription under its declared criterion unless it was independently measured.
+
+One `CreativityEvaluationResult` may cite those coordinates and state only that P-22 is eligible for the current comparison and lies on the declared non-dominated set. Building that result does not assert separate overall-assessment Work.
+
+If an audit later asserts that an overall assessment occurred, identify the evaluator System, its exact assignment, `PumpCreativityAssessment-17` Work, and `PumpCreativityAssessmentMethod-2`; state that the Work enacts the Method. The MethodDescription explains the Method, the result states claims, and coordinate-measurement Work stays separate. Do not add an A.6.1 operation application merely because those values are recorded. If the audit separately asserts an exact operation application or binding, satisfy the current A.6.1 application account and cite that application.
+
+#### C.17:9.2 - Software and algorithmic design
+
+**Software design.** In this worked example, `ETL-Parallel-12` is compared with 40 admitted internal pipeline designs through `ASTGraphSimilarity-3`, whose declared Novelty construction uses calibrated `[0,1]` similarities. The Method compares AST-graph representations produced by the same declared parser and projection for the evaluated design and every corpus design; the result states that runtime configuration and deployment topology are not preserved by that projection. Its Novelty result is `0.36`. A fixed-workload benchmark reports an 18% lower p95 latency than the serial baseline, but the segregation-of-duties test fails. The benchmark run, corpus edition, nearest-neighbour report, and policy test are the evidence. The result therefore supports a latency gain but leaves the design ineligible for the stated use; redesign the isolation boundary and repeat the affected tests before any pool or choice decision.
+
+**Algorithmic search Work.** `SpikeSet-7` contains nine dated attempts in three declared approach classes over six hours. Tagged Work records support `DiversityOfSearch = 3 classes`; the first runnable output appeared after 2 h 10 m. The held-out viability test was never run, so `Time-to-First-Viable` is not established. The practical action is to run that test, not to relabel time-to-first-runnable as viability.
+
+#### C.17:9.3 - Health analytics
+
+For `Cardio-Readmit-H4`, the held-out AUROC is `0.79` against a `0.75` baseline under the frozen test set, clearing the declared uplift threshold of `0.03`. The model card, held-out plot, and evaluation Work support that local Use-Value result. No receiving-use pilot has yet been performed at Hospital B, so Transferability there remains unsupported. Use the local result for the applicable pool or choice question, but leave the target-hospital claim open until pilot evidence exists. Use an F.9 Bridge only if the two hospitals' reference schemes require one.
+
+#### C.17:9.4 - Product reframing
+
+`OnboardingFrame-v1` treats onboarding as one completion task; `OnboardingFrame-v2` separates job setup from obtaining the first result. The declared ReframeDelta rule returns `BoundaryShift`, supported by the frame diff and a simpler causal map. In a four-week A/B comparison, v2 reduces median time-to-value by 22% against the control baseline, clearing the 20% objective. Exploratory Work used 9 of the 12 allowed staff-days, so the realized risk-budget ratio is `0.75` with no overrun. The frame diff, A/B report, WorkPlan, and Work records support the result. This evidence can inform the later choice; it does not make the choice.
+
+#### C.17:9.5 - Scientific and policy proposals
+
+**Scientific proposal.** `ScalingRelation-S4` has Novelty `0.61` from the declared calibrated `[0,1]` similarity construction relative to the admitted literature corpus. The Novelty Method compares one text embedding that describes the proposal with embeddings produced by the same encoder for every corpus paper; the result names that projection and states that notation and experimental detail may be lost. Its Surprise is `4.1 bits per token` under `PriorModel-2`, using the same versioned tokenizer and abstract-text sample unit for the proposal and model basis; the per-token normalization handles text length but does not support a claim about equations or full papers. The corpus, neighbour report, model calibration, and derivation evidence support those coordinates, but independent replication is missing. Report the proposal as a preliminary bounded result and seek replication before a reliance claim.
+
+**Policy proposal.** In a municipal permit-triage pilot, `Policy-P8` reduces median processing time by 12% against the prior-procedure baseline and passes the declared legal-form test. Subgroup error evidence required by the equity must-criterion is missing, so ConstraintFit and eligibility are not established. Keep the proposal out of an approval-facing comparison until the subgroup test is complete; the time result remains usable for its narrower operational question.
+
+### C.17:10 - Manager quick start
+
+1. Name the bearer, comparison corpus, objective, and must-criteria.
+2. State the smallest supported difference and consequence; stop if that answers the question.
+3. When numbers matter, select the space and specification and build each coordinate through C.16 or C.2.1.
+4. Compare with declared gates and a partial order; keep incomparability visible. When a retained set matters, report its declared `Diversity_P` or other needed set reading without turning that reading into selection policy.
+5. Pass any generation, retention, policy, or choice question to C.18, C.19, G.5, or C.11 with the result references they need.
+
+#### C.17:10.1 - Optional one-page comparison brief
+
+When several people must reuse the same comparison, publish one short view containing only the fields they need:
+
+- the working question, bearer, intended use, and stop;
+- the finite corpus or reference set, inclusion rule, source editions, and window;
+- the selected Characteristics, Scales, polarities, admissible operations, and missingness rules;
+- the objective, must-criteria, eligibility consequence, and their sources;
+- the Methods, models or priors actually used, with calibration, uncertainty, and evidence;
+- the coordinate-result references and any declared set, frontier, or incomparability statement;
+- the applicable C.19 policy, G.5 declaration, or C.11 choice reference when later work relies on one; and
+- the basis-change and reopen condition when editions or evidence change.
+
+This brief is a representation of the selected configuration and results. It does not create a result, policy, choice, WorkPlan, prior, or domain default. Put a reusable transform or objective form in the pattern that defines it and cite that definition here; do not make the brief a second source of the rule.
+
+### C.17:11 - Conformance checklist
+
+| ID | Requirement |
+| --- | --- |
+| `CC-C17-1` | The result identifies the bearer, comparison basis, objective or must-criterion, supported difference or coordinate, consequence, evidence, and limit needed by its use. |
+| `CC-C17-2` | A qualitative result stops before scores, reusable objects, or Work detail when none is needed. |
+| `CC-C17-3` | Every selected characteristic has a declared Characteristic, Scale, polarity, admissible operations, missingness rule, and evidence route under one selected A.19 space and A.19.ECS specification. |
+| `CC-C17-4` | Novelty identifies the finite corpus and inclusion rule, source editions, comparison window, Method, distance definition, coordinate construction and resulting Scale, calibration, uncertainty, scope, evidence, and use. The `1 - max similarity` construction requires calibrated `[0,1]` similarity results or a declared lawful normalization to that range. When representations or observations are compared instead of the bearers, the result identifies both, the describing, projection, measurement, or other support relation, a compatible corpus basis or stated mapping, and relevant loss. When the value is load-bearing, the evidence includes an appropriate robustness diagnostic such as nearest-neighbour inspection, corpus/Method sensitivity, or an invariance ablation; the input inventory alone is not robustness evidence. |
+| `CC-C17-5` | Surprise identifies one model episteme and its separate training basis, modeled sample unit, encoding, size treatment, and discrete probability or continuous measure. A cross-bearer comparison uses a justified common extent, declared per-unit or code-length normalization, or another calibrated rule; otherwise the raw result stays basis-local. Use-Value identifies its objective or criterion; an improvement or gain also identifies its baseline and comparison or counterfactual Method. ConstraintFit identifies the must-constraints and their sources. AttributionIntegrity identifies the applicable duty set, the source or rule used to determine applicability, Scale, missingness rule, and evidence for each duty it evaluates. An empty applicable-duty set produces no numeric ratio; omit the characteristic or return explicit `not applicable`, distinct from an unresolved applicable duty. |
+| `CC-C17-6` | Each coordinate is either a complete C.16 measurement result or a C.2.1 non-measurement ascription under an explicit rule. A displayed number alone fails. |
+| `CC-C17-7` | Aggregate result, optional profile payload, representation or publication form, optional record, and any dated assessment Work remain distinct. |
+| `CC-C17-8` | Novelty is paired with Use-Value or ConstraintFit for approval-facing use; must-constraint failure remains an eligibility failure unless an independently valid exception applies. |
+| `CC-C17-9` | Dominance names the characteristic subset, Scale compatibility, polarity, eligibility conditions, and comparison rule. Frontiers are computed from that rule; scalarization is explicit and primitive coordinates remain available. |
+| `CC-C17-10` | Every used retained-set or applied reading identifies its bearer or set, local rule and Scale, and evidence. `Diversity_P`, Illumination, retained-set readings, and Work readings do not silently become selection rules or characteristics of a different bearer. |
+| `CC-C17-11` | Uncertainty, evidence, time window, model or corpus drift, and any cross-source or cross-scale loss are visible at the claim that depends on them. |
+| `CC-C17-12` | Dated overall-assessment Work is asserted only with its actual System, assignment, Method enactment, Work extent, and evidence. Do not infer an A.6.1 operation application from those facts. When an exact application or binding is separately claimed, satisfy the current A.6.1 application account and cite that application. Coordinate-measurement Work remains separate. |
+| `CC-C17-13` | Use C.17 to report characteristics and comparison results, C.18 for generation plus Archive and Front maintenance, C.19 for pool policy, G.5 for selector-facing declarations, and C.11 for choices. |
+| `CC-C17-14` | The seven retired predecessor heads are not used to create new kinds or actors. |
+| `CC-C17-15` | A cold reader can tell what to inspect first, when to stop, and what additional evidence is required for the stronger branch. |
+
+### C.17:12 - Common failures and repairs
+
+| Failure | Repair |
+| --- | --- |
+| “It is creative.” | Name the bearer, comparison basis, practical criterion, supported difference, consequence, and limit. |
+| Novelty without a fixed corpus and Method | Fix the finite corpus, inclusion rule, model or encoder, Method, Scale, and comparison window before using a coordinate. |
+| Randomness treated as creativity | Pair Novelty or Surprise with Use-Value and ConstraintFit. |
+| Gain without a baseline | Name the before-state and the A/B, back-test, causal-inference, or other comparison Method appropriate to the claim; otherwise report supported usefulness rather than gain. |
+| One magic score | Keep primitive coordinates, gates, partial order, incomparability, and sensitivity visible. |
+| Pretty scatterplot called a frontier | State the eligibility and dominance rule and compute the non-dominated set. |
+| Ordinal arithmetic | Use order-safe summaries or justify the model that supports an interval interpretation. |
+| Profile-plan blur | Keep the profile as coordinate-claim payload; put intended Work in a WorkPlan and actuals on dated Work. |
+| Dashboard as evidence or result | Identify the result and evidence independently; treat the dashboard as a representation. |
+| Global or cross-scale novelty | Name the source and receiving bases, mapping, direction, loss, evidence, and use. |
+| Illumination or diversity silently drives selection | Keep it as telemetry unless a C.19 pool policy declares the use. |
+| Pattern, model, record, or assignment said to assess | Name the System and dated Work only when an actual assessment occurred; otherwise state the result claim directly. |
+
+### C.17:13 - Consequences
+
+**Benefits.** Teams can discuss novelty and value before building a metric stack; stronger results remain reproducible and comparable; trade-offs and incomparability stay visible; and generation, policy, choice, Work, evidence, and publication keep their own boundaries. No particular tool or rendering is required: an implementation is suitable when it preserves the declared configuration, result chain, evidence, and limits.
+
+**Costs.** Quantified claims require a fixed corpus, explicit Scales and Methods, evidence, uncertainty, and edition discipline. Cross-source and cross-scale comparisons sometimes remain incomparable.
+
+**Limits.** A C.17 result does not prove that a bearer is good, authorize Work, define universal novelty, supply a selection policy, or establish assurance. It makes the bounded claims and their dependencies inspectable.
+
+### C.17:14 - SoTA-Echoing and source use
+
+**Source-currentness boundary (reviewed through 2026-08-15).** The sources below were selected because they change what a C.17 user inspects or reports. They do not install one creativity theory, automated judge, metric, or search algorithm as the FPF default. Reopen this source-use judgement when a cited source is corrected, retracted, or materially superseded; when new cross-domain evidence overturns one of the stated consequences; or when a proposal would make one automated metric, corpus, encoder, QD descriptor, or proxy score normative. Use `G.11` for that refresh.
+
+| Current practice and source | Source-use decision | Concrete C.17 consequence |
+| --- | --- | --- |
+| Judge novelty and usefulness as distinct, context-dependent questions. Harvey and Berry, `Toward a Meta-Theory of Creativity Forms: How Novelty and Usefulness Shape Creativity`, *Academy of Management Review* 48(3):504-529 (2023), DOI `10.5465/amr.2020.0110`; Sen et al., `Automated Creativity Evaluation of Language Models Across Open-Ended Tasks`, ACL 2026, DOI `10.18653/v1/2026.acl-long.1061`. | **Adopt** the separation of creative breadth from task fulfilment and the dependence of usefulness on the practical situation. **Adapt** it by using the named comparison basis, Use-Value, and ConstraintFit already defined here. **Reject** a context-free creativity score and the cited paper's particular semantic-entropy or automated-judge machinery as universal FPF measures. | The first move names both what the bearer differs from and which objective or must-criterion matters. Approval-facing use cannot substitute Novelty for Use-Value or ConstraintFit; `CC-C17-1`, `CC-C17-5`, and `CC-C17-8` test that boundary. |
+| Preserve a collection of different locally strong alternatives when the question needs coverage rather than one winner. Qin et al., `A survey on Quality-Diversity optimization: Approaches, applications, and challenges`, *Swarm and Evolutionary Computation* 100:102240 (2026), DOI `10.1016/j.swevo.2025.102240`. | **Adopt** the quality-diversity and illumination insight that coverage and local quality can matter together. **Adapt** it as `Diversity_P`, Illumination, or another declared retained-set reading. **Reject** MAP-Elites, a QD score, feature descriptor, container, or quota as a default C.17 method or selection rule. | A set reading stays telemetry with its bearer, rule, Scale, and evidence. Use `C.18` for Archive and Front maintenance, `C.19` for pool treatment, and `G.5` for selector-facing declarations; `CC-C17-9` and `CC-C17-10` keep these moves separate. |
+| Test whether a result survives reasonable corpus, metric, and representation choices. Lu et al., `Rethinking Creativity Evaluation: A Critical Analysis of Existing Creativity Evaluations`, EACL 2026, DOI `10.18653/v1/2026.eacl-long.297`; Stein et al., `Exposing Flaws of Generative Model Evaluation Metrics and Their Unfair Treatment of Diffusion Models`, NeurIPS 2023, DOI `10.52202/075280-0165`. | **Adopt** sensitivity checking and comparison with evidence suited to the receiving domain. **Adapt** it by making the corpus, inclusion rule, Method, model or encoder, distance, calibration, and uncertainty part of the claim. **Reject** transfer of one metric across domains, minor prompt or implementation stability as validity, and leaderboard standing as evidence of the bearer characteristic. | For a load-bearing value, inspect neighbours and run the applicable corpus/Method sensitivity or invariance probe. If the conclusion changes, report that dependence or incomparability instead of hiding it in one score; `CC-C17-4` and `CC-C17-11` make this visible. |
+| Check whether optimizing a proxy stops improving the result that matters. Gao, Schulman, and Hilton, `Scaling Laws for Reward Model Overoptimization`, ICML 2023, PMLR 202:10835-10866, `https://proceedings.mlr.press/v202/gao23h.html`. | **Adopt** the warning that further proxy optimization can reduce performance under a separate target judgement. **Adapt** it by retaining primitive coordinates, gates, evidence, and held-out or delayed observations and by giving the local result a stop or reopen condition. **Reject** the reward-model setting or its fitted scaling law as a universal degradation model, and reject a rising proxy score as evidence that the bearer improved. | The design and policy cases keep tooling and legal or equity gates visible even when another value improves. Scalarization never erases the primitive coordinates; later target evidence can reopen only the claims that relied on the proxy. |
+
+These decisions reinforce the existing route rather than add another assurance layer. In the pump case, inspect the admitted design set and tooling constraint; in the hospital case, keep the held-out result separate from unsupported transfer; in the policy case, keep the missing subgroup evidence as an eligibility gap. The source record therefore changes the comparison and robustness work already required by the cases and checklist, not the practitioner-first entry.
+
+### C.17:15 - Open questions
+
+The following are research questions, not current requirements:
+
+- Under what evidence can a domain justify a stable distance across several creativity Characteristics without hiding their different Scales?
+- How can several agents' partial frontiers be related without importing team-governance assumptions or forcing one scalar objective?
+- What evidence is sufficient to treat an ordinal reading as interval-like for one declared frontier-estimation use?
+- Which delayed observations best reveal when Novelty, Use-Value, or Illumination has become a gamed proxy?
+
+### C.17:16 - Relations
+
+- **Builds on:** `A.17`, `A.18`, `A.19`, `A.19.ECS`, `C.16`, `C.2.1`, `A.1.1`, `A.10`, and `B.3`.
+- **Coordinates with:** `A.13` for a separate agency or autonomy claim, `F.9` for an actual Bridge, `F.18` for lexical candidate-family diversity, `A.0:QF.2a` for an optional structured cross-scale qualifier, `B.4` and `G.11` for evolution and refresh, `A.15.1`, `A.15.2`, `B.1.6`, `F.6`, `A.3.1`, and `A.3.2` for Work, plans, resources, and Method descriptions, and `A.6.1` only for a separately claimed application of one exact declared Mechanism operation.
+- **Supplies results to:** `C.18`, `C.19`, `G.5`, and `C.11` without taking over generation, set stewardship, pool policy, declaration, or choice.
 
 ### C.17:End

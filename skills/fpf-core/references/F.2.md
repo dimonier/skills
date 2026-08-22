@@ -3,14 +3,17 @@ id: F.2
 title: "Term Harvesting & Normalisation"
 status: Stable
 keywords:
-  - term harvesting
-  - lexical unit
-  - normalization
-  - provenance
-  - "source-text terms."
+  - exact source and edition
+  - effective ReferenceScheme
+  - LocalExpression
+  - LocalSenseClaim
+  - LNF
+  - optional SchemeSenseCell.
 dependencies:
   builds_on:
     - F.1
+    - F.0.1
+    - E.10.D1
   prerequisite_for:
     - F.3
 ---
@@ -25,297 +28,207 @@ dependencies:
 
 ## F.2 — Term Harvesting & Normalisation
 
-**“Harvest words *inside Contexts*, name them in the Context’s own idiom, and stop there.”**
+**“Harvest the source’s own words, recover what they mean there, and stop before comparison.”**
 **Status.** Architectural pattern.
-**Depends on.** E.10.D1 **Lexical Discipline for “Context” (D.CTX)**; **F.0.1 Contextual Lexicon Principles** (Source - Local Meaning - Bridge‑Only Crossing); A.7 **Strict Distinction**; A.11 **Ontological Parsimony**.
-**Coordinates with.** F.1 **Context Map via Context Cards**; F.3 **Intra‑Context Sense Clustering**; F.4 **Role Description**; F.9 **Alignment & Bridge Across Contexts**.
-**Aliases (informative).** *context‑local harvesting*; *Local normalisation*.
+**Depends on.** F.1 **Question-Relative Source Selection**; F.0.1 **Source-Local Meaning Recovery**; E.10.D1 **Recovering What “Context” Means in Use**; A.7 **Strict Distinction**; A.11 **Ontological Parsimony**.
+**Coordinates with.** F.3 **Source-Local Sense Clustering**; F.17 for an optional durable cell and basis relation; F.4 **SystemRoleKindDescription** when the recovered subject is a local system-role kind; F.9 only for an actual relation between distinct local meanings.
+**Aliases (informative).** *source-local harvesting*; *local normalisation*.
 
 ### F.2:1 - Intent & applicability
 
-**Intent.** Provide a **conceptual** (notation‑free) discipline for turning *Context‑internal usage* into **context‑local lexical units** ready for later reasoning—without Cross‑context merging and without slipping into governance or tooling. The result is a **small, auditable set of context‑local names and glosses** that faithfully reflect how the canon speaks.
+**Intent.** Turn usage in an exact source and edition into a small, auditable set of source-local expressions and one-sentence meaning claims. Keep the source’s idiom, help a cold reader, and withhold every cross-source conclusion.
 
-**Applicability.** Use whenever a unification line (from F.1) needs **actual words** to be referenced by patterns in Part C (Extention patterns) or by Role Descriptions (F.4). Re‑enter F.2 when a canon/edition changes or when a new Context is admitted in F.1.
+**Use this when.** F.1 has selected a source because it can change the receiving answer, and the reader needs the actual words that carry its contribution. Re-enter when the selected edition, passage, language, or interpretation basis changes enough to change meaning.
 
-**Non‑goals.** No global labels; no Cross‑context equivalence; no workflow or role descriptions; no storage/API talk. F.2 specifies **how to think**, not how to “run a pipeline”.
+**Do not use this when.** The words are already recovered precisely enough for the receiving question, or the current task is to relate two local meanings; use F.9 for that relation. F.2 creates no global term, kind, assignment, behaviour, obligation, or storage scheme.
 
 ### F.2:2 - Problem Frame
 
-Even with Contexts fixed (F.1), three mistakes recur:
+Three mistakes recur even after the right sources are selected:
 
-1. **Word‑centrism.** Treating a string as if it carried its meaning across Contexts (*process*, *role*, *service*).
-2. **Over‑normalisation.** Forcing one spelling/morphology across different canons, erasing Context‑specific cues.
-3. **Premature structure.** Smuggling behaviour, deontics, or type structures into what should remain **lexical**.
+1. **Word-centrism.** A string such as *process*, *role*, or *service* is treated as though it carried one meaning everywhere.
+2. **Over-normalisation.** Spelling or morphology is forced into a house style and source-specific cues disappear.
+3. **Premature structure.** A short lexical note quietly acquires behavioural, deontic, measurement, or kind claims that the source passage does not establish.
 
-F.2 prevents these by **localising** meaning and **naming** strictly **inside** each Context.
+F.2 prevents these mistakes by tying each expression and local-sense claim to the exact source basis that supports it.
 
 ### F.2:3 - Forces
 
-| Force  | Tension to resolve  |
+| Force | Tension to resolve |
 | --- | --- |
-| **Uniformity vs locality** | Desire for consistent names vs Context‑specific idioms that must be preserved.  |
-| **Parsimony vs recall**  | Keep the harvested set small vs keep rare but pivotal terms that unlock bridges. |
-| **Didactics vs fidelity**  | Two‑register labels (tech/plain) vs fidelity to the canon’s own phraseology.  |
-| **Speed vs safety**  | Move fast to enable F.3/F.4 vs avoid any Cross‑context conclusion in F.2.  |
+| **Uniformity vs locality** | Readers benefit from stable labels, but the source’s own idiom must remain visible. |
+| **Parsimony vs recall** | Keep the harvest small while retaining rare terms that materially affect later reasoning. |
+| **Didactics vs fidelity** | A Plain label should help a newcomer without widening the source-local claim. |
+| **Speed vs safety** | Move quickly enough to support F.3 and F.4 without smuggling in a cross-source relation. |
 
 ### F.2:4 - Core idea (didactic)
 
-**Harvest *inside* each Context; name *in that Context’s idiom*; do not cross Contexts.**
-For every Context (a **U.BoundedContext** from F.1), you gather **attested phrases** as *thought-cues*, choose a **Local Normal Form (LNF)** that matches the Context's idiom, attach a **two-register label** (Tech/Plain), and write a **one-sentence gloss**. That's all. These *local lexical units* become **Local-Senses** in F.3 and later addressable **SenseCells** (Context x Local-Sense). Cross-context sameness, behavioural claims, deontics, and durable kindhood are handled by F.9, A.15, E/E-LOG, or admission under E.24.UK and C.3 when those claims are being made.
+For each needed use, name the **exact source and edition**, the relevant passage, and the **effective `U.ReferenceScheme`** under which the passage is being read. Harvest an attested **LocalExpression**, choose a minimally edited **Local Normal Form (LNF)**, add Tech and Plain labels, and state the **LocalSenseClaim** in one sentence.
+
+That is the ordinary F.2 result. If later work needs a durable address, F.17 may represent it as `SchemeSenseCell = <ReferenceScheme, LocalExpression, LocalSenseClaim>` and record the basis relation. The cell is optional and does not replace the source, passage, or claim. F.2 establishes no relation to another source-local meaning.
 
 ### F.2:5 - Minimal vocabulary (this pattern only)
 
-* **Context** — Tech‑register alias for **U.BoundedContext** (per E.10.D1).
-* **Attested phrase** — A short, verbatim cue from the canon that shows how a word is used **in this Context** (citation idea, not a record format).
-* **Local Normal Form (LNF)** — The Context‑specific canonical surface you will use when referring to the term in this Context (minimal editing: spelling/hyphenation/casing per the canon).
-* **Two‑register label** — **Tech** (engineer‑facing) and **Plain** (pedagogic) forms for the same Context‑local meaning.
-* **Gloss (one‑sentence)** — A **Context‑faithful** description of how the canon uses the term, at **minimal generality**.
-* **Local lexical unit** — The quintet *(Context, LNF, Tech, Plain, Gloss)*. This is F.2’s only outcome.
-* **Homonymy (signal)** — Awareness that the **same string** has **different local lexical units** across Contexts (no relation asserted).
-* **SenseCell** *(appears downstream)* — Address **(Context × Local‑Sense)** minted in F.3; mentioned here so you know what you’re preparing.
+* **Exact source basis** — the selected source, edition or version, relevant passage, and effective `U.ReferenceScheme` needed to recover this use.
+* **Attested phrase** — a short verbatim cue showing how the expression is used in that source.
+* **LocalExpression** — the exact expression whose source-local meaning is being recovered.
+* **Local Normal Form (LNF)** — the minimally edited surface used to cite that expression while preserving the source’s spelling, hyphenation, and casing.
+* **Tech and Plain labels** — an engineer-facing label faithful to the source and a newcomer-facing label that does not add scope.
+* **LocalSenseClaim** — one sentence saying what the expression means in this source use, at the least generality needed by the receiving question.
+* **Source-local lexical note** — the exact source basis, expression and LNF, labels, claim, and one or two attested cues. This is F.2’s ordinary outcome.
+* **Homonymy signal** — notice that the same string supports different local claims; this notice is not a relation between those claims.
+* **SchemeSenseCell** — F.17’s optional three-part address, used only when durable reuse needs it.
 
-> *Everything above is a way of thinking. None of it implies a database, statuses, or roles.*
+### F.2:6 - Solution — three mental moves
 
-### F.2:6 - Solution — three mental moves (notation‑free)
+#### F.2:6.1 - Move A — Recover the basis
 
-#### F.2:6.1 - Move A — **Localise the word**
+Ask: **“Which exact source use am I reading, and under which interpretation rules?”**
 
-**Question to ask.** *“In which Context am I hearing this word?”*
-**Action (mental).** Point to a specific **Context** (from F.1). Grab 1–2 **attested phrases** that are representative **in this Context**.
-**Outcome.** You stop thinking “global word” and start thinking “context‑local usage”.
+Name the source and edition, locate the passage, and recover the effective reference scheme with F.0.1. Take one or two representative phrases. If you cannot identify that basis, do not harvest the word yet.
 
-*Micro‑cue.* If you cannot name the Context, do not harvest the word.
+#### F.2:6.2 - Move B — Name the local meaning faithfully
 
-#### F.2:6.2 -Move B — **Name it in the Context’s idiom**
+Ask: **“How does this source itself say it?”**
 
-**Question to ask.** *“How would this Context itself write it?”*
-**Action (mental).** Choose the **LNF** (Context‑conformant spelling/hyphenation). Then write the **two‑register label** and a **one‑sentence gloss** that says **what the canon means here**—nothing more.
-**Outcome.** You have a **local lexical unit** *(Context, LNF, Tech, Plain, Gloss)*.
+Choose the LNF with minimal editing. Keep an idiomatic Tech label, add a genuinely explanatory Plain label, and write one LocalSenseClaim. Prefer the source’s head noun and meaningful modifiers. Put behavioural equations, obligations, measurements, and kind criteria under their direct patterns rather than inside the lexical note.
 
-*Micro‑cues.*
-• Prefer the canon’s head noun; keep canonical hyphens; avoid invented compounds.
-• The **Plain** label should help a non‑specialist; the **Tech** label should match engineers’ eyes.
-• The **Gloss** must fit on a single line; put details in F.3.
+#### F.2:6.3 - Move C — Fence the result
 
-#### F.2:6.3 - Move C — **Fence it off**
+Ask: **“What has this source use not established?”**
 
-**Question to ask.** *“What must I refuse to conclude here?”*
-**Action (mental).** Explicitly **refuse** to: (1) compare across Contexts, (2) fold morphology that the canon treats as meaningful, (3) embed behaviour, deontics, or type structure.
-**Outcome.** A clean, **context‑local** lexical unit that will be safe to cluster in F.3 and safe to bridge (or not) in F.9.
+Refuse to infer sameness, substitution, hierarchy, or transfer across sources; refuse to merge a materially different edition or language use by spelling alone; and refuse to treat the expression as the value that the substantive claim is about. Record an itch to compare for F.9, but do not settle it in F.2.
 
-### F.2:7 - Guard‑rails (normative, lightweight)
+### F.2:7 - Guard-rails (normative, lightweight)
 
-1. **context‑locality.** Every local lexical unit **MUST** cite a Context (U.BoundedContext from F.1).
-2. **Context‑idiom normalisation.** LNF **MUST** respect the Context’s idiom (spelling/hyphenation/casing) and use **minimal edits**.
-3. **Two registers.** Each unit **SHOULD** carry both **Tech** and **Plain** labels for didactics; if one is missing, justify.
-4. **Minimal generality (G‑1).** The gloss **MUST** be as specific as the Context’s canon requires—no broader.
-5. **EntityOfConcern / Description / specification-use hygiene (A.7).** **MUST NOT** include behaviour equations, deontic rules, measurement math, or type axioms; those belong to patterns.
-6. **No Cross‑context claims.** **MUST NOT** assert equivalence, subsumption, or similarity with terms in other Contexts (F.9 only).
-7. **Edition honesty.** If the Context’s canon has multiple editions with shifting usage, treat them as distinct Contexts in F.1 before harvesting.
-8. **Parsimony.** Prefer **few, telling** lexical units over long tails; keep head terms that will power F.3/F.4/F.9.
+1. **Basis visible.** Every harvested expression **MUST** name the exact source and edition and the effective reference scheme needed to recover its meaning.
+2. **Idiomatic normalisation.** LNF **MUST** preserve meaningful source spelling, hyphenation, casing, and modifiers with minimal edits.
+3. **Two registers.** Each note **SHOULD** carry Tech and Plain labels; the Plain label must explain rather than broaden.
+4. **Minimal generality.** The LocalSenseClaim **MUST** say no more than the source use and receiving question require.
+5. **Category hygiene.** A lexical note **MUST NOT** stand in for behaviour, obligation, measurement, kind, assignment, Work, or evidence.
+6. **No cross-source claim.** F.2 **MUST NOT** assert equivalence, subsumption, similarity, permission, or transfer between local meanings.
+7. **Edition and language honesty.** When edition or language changes meaning, recover a distinct source-local claim and interpretation basis; do not manufacture a universal “new Context” rule.
+8. **Parsimony.** Keep the head expressions that affect F.3, F.4, F.8, or a real F.9 question; omit an unused tail.
 
-### F.2:8 - Micro‑examples (illustrative, context‑local)
+### F.2:8 - Micro-examples
 
-> Each line is *one* local lexical unit. No relations are implied across lines.
+> Each item is one source-local lexical note. Their proximity asserts no relation.
 
-* **Context:** *BPMN 2.0 (2011)* — **LNF:** `process`
-  **Tech:** `process` - **Plain:** `workflow process`
-  **Gloss:** “Directed graph of flow nodes and sequence flows enacted by participants.”
-
-* **Context:** *PROV‑O (2013)* — **LNF:** `activity`
-  **Tech:** `activity` - **Plain:** `temporal occurrence`
-  **Gloss:** “Time‑bounded occurrence that uses and generates entities and is linked to agents.”
-
-* **Context:** *ITIL 4 (2020)* — **LNF:** `service‑level‑objective`
-  **Tech:** `service‑level‑objective` - **Plain:** `service target`
-  **Gloss:** “Target value for a service characteristic within a service promise vocabulary.”
-
-* **Context:** *NIST RBAC (2004)* — **LNF:** `role`
-  **Tech:** `access‑role` - **Plain:** `permission role`
-  **Gloss:** “Named grouping of permissions assignable via sessions.”
-
-* **Context:** *SOSA/SSN (2017)* — **LNF:** `observation`
-  **Tech:** `observation` - **Plain:** `measurement act`
-  **Gloss:** “Act applying a procedure to a feature of interest to produce a result.”
-
-* **Context:** *IEC 61131‑3* — **LNF:** `task`
-  **Tech:** `task` - **Plain:** `runtime program execution`
-  **Gloss:** “Cyclic or event‑driven execution unit for control programs.”
+* **BPMN 2.0 (2011), effective BPMN scheme** — expression and LNF `process`; Tech **process**; Plain **workflow graph**; claim: “A graph of flow nodes and sequence flows specifying orchestration among participants.”
+* **PROV-O (2013), effective PROV scheme** — expression and LNF `activity`; Tech **activity**; Plain **time-bounded occurrence**; claim: “An occurrence that uses or generates entities and may be associated with agents.”
+* **ITIL 4 (2020), selected service-management use** — expression and LNF `service-level objective`; Tech **SLO**; Plain **service target**; claim: “A target value or range for a service characteristic.”
+* **NIST RBAC (2004), RBAC scheme** — expression and LNF `role`; Tech **access role**; Plain **permission grouping**; claim: “A named grouping of permissions used in access-control assignment.”
+* **SOSA/SSN (2017), SOSA scheme** — expression and LNF `observation`; Tech **observation**; Plain **act of observing**; claim: “An act applying a procedure to a feature of interest to obtain a result.”
+* **IEC 61131-3, cited edition and runtime passage** — expression and LNF `task`; Tech **task**; Plain **scheduled program execution**; claim: “A cyclic or event-driven runtime unit that invokes programs.”
 
 ### F.2:9 - Didactic heuristics (informative)
 
-* **Keep the Context prefix in your inner speech.** Say “*process (BPMN)*”, “*activity (PROV)*”.
-* **Prefer head nouns.** If the canon says “service‑level objective”, do not shorten it to “objective”.
-* **Resist elegance that erases signal.** Hyphens and case often carry the Context’s culture; keep them.
-* **Gloss from use, not from opinion.** Quote in your mind, then compress; avoid importing definitions from neighbouring Contexts.
+* Keep the source in your inner speech: say “process in BPMN 2.0” and “activity in PROV-O”.
+* Prefer the source’s head noun and meaningful modifier: do not shorten *service-level objective* to *objective*.
+* Preserve spelling or case when it carries source signal.
+* Compress from attested use, not from a neighbouring theory.
+* When *role*, *function*, *process*, or another trigger word appears, recover the actual subject before choosing a label.
 
-### F.2:10 - Anti‑patterns & remedies
+### F.2:10 - Anti-patterns & remedies
 
-| #  | Anti‑pattern  | Symptom (in thought or prose)  | Why harmful  | Remedy (conceptual move)  |
+| # | Anti-pattern | Symptom | Why harmful | Remedy |
 | --- | --- | --- | --- | --- |
-| **A1**  | **Global normal form**  | One “canonical” label reused across Contexts.  | Erases local meaning; invites stealth bridges.  | Keep **LNF per Context**; any Cross‑context relation belongs to **F.9** only.  |
-| **A2**  | **String = meaning**  | Assuming identical strings denote one concept across Contexts.  | Homonym collision (*process*, *role*, *service*).  | Always prefix mentally with the **Context**; treat same string in different Contexts as **different units**.  |
-| **A3**  | **Over‑normalisation**  | Folding hyphens/case/morphology “for consistency”.  | Loses the canon’s idiom; breaks citations.  | **Minimal edits** toward the Context’s idiom; never toward a global house‑style.  |
-| **A4**  | **Headless multiword**  | Truncating to a head (“objective” for “service‑level objective”).  | Ambiguity; collapses scope.  | Preserve canonical **head‑modifier** as LNF when meaningful.  |
-| **A5**  | **Premature structure**  | Embedding behaviour, deontics, units, or type axioms into the gloss. | EntityOfConcern / Description / specification-use mixing (violates A.7); biases later patterns.  | Gloss **usage**, not calculus; structural content belongs to Extention Patterns in Part C.  |
-| **A6**  | **Cross‑context folding**  | “BPMN workflow ≈ PROV activity” written inside F.2.  | Hidden bridge; unpriced losses.  | No Cross‑context claims in F.2; write the **itch to bridge** for **F.9**.  |
-| **A7**  | **Edition blur**  | “BPMN” without year/profile; mixing excerpts across editions.  | Silent sense shift; unrepeatable reasoning.  | Treat distinct editions as **distinct Contexts** in F.1, then harvest.  |
-| **A8**  | **Vendor‑dialect elevation** | Treating a DSL/keyword list as “the domain”.  | Projectionism; narrow idiom dominates.  | If needed, model the DSL as **one context among others**; keep heterogeneity from F.1.  |
-| **A9**  | **Tail chasing**  | Harvesting hundreds of rare terms.  | Cognitive overload; dilutes signal.  | Keep **head terms** that feed F.3/F.4/F.9; justify rare units by their bridging value.  |
-| **A10** | **Fake symmetry**  | Tech and Plain labels are identical jargon.  | Didactic failure.  | Make **Plain** genuinely explanatory; keep **Tech** faithful to the canon.  |
-| **A11** | **Temporal fudge**  | Using run‑time words in design Contexts (or vice versa).  | Category drift; later contradictions.  | Respect the Context’s **DesignRunTag** from its Card (F.1 §7.2).  |
-| **A12** | **Cross‑language collapse**  | Merging bilingual terms as one unit.  | Erases idiom‑specific signals; hides normative mapping gaps. | Treat each language edition as its **own Context** unless the canon declares a normative mapping.  |
-| **A13** | **Alias inflation**  | Inventing new local names “for clarity”.  | Strays from the canon; hinders bridging.  | Prefer the canon’s idiom; keep invented phrasings to the **Plain** register only.  |
-| **A14** | **Role/status conflation**  | RBAC “role” glossed as behavioural role.  | Cross‑family bleed; wrong assignment later.  | Call out the Context in the label: **access‑role (RBAC)** vs **participant (BPMN)**; keep senses disjoint. |
+| **A1** | Global normal form | One canonical label is reused across sources. | It erases source-local meaning. | Keep an LNF per recovered source use; relate meanings only in F.9. |
+| **A2** | String = meaning | Identical spelling is treated as one concept. | Homonyms such as *role* and *process* collapse. | State source, scheme, and LocalSenseClaim before comparison. |
+| **A3** | Over-normalisation | Case, hyphens, or modifiers are removed for consistency. | Source cues and citations become unreliable. | Make only minimal edits. |
+| **A4** | Headless multiword | *Service-level objective* becomes *objective*. | Scope disappears. | Preserve the meaningful compound. |
+| **A5** | Premature structure | A gloss contains equations, duties, or kind axioms. | A lexical note is asked to establish a substantive fact about another value. | Route the substantive claim to its direct pattern. |
+| **A6** | Cross-source folding | “BPMN process ≈ PROV activity” appears in F.2. | A relation and its losses are hidden. | Leave the comparison to F.9. |
+| **A7** | Edition blur | A source name has no edition although usage changed. | The claim cannot be replayed. | Name the exact edition and recover the changed meaning afresh. |
+| **A8** | Dialect elevation | A tool keyword list is treated as the whole domain. | One source use displaces other evidence. | Keep it as one exact source basis. |
+| **A9** | Tail chasing | Hundreds of unused terms are harvested. | Signal and working memory are diluted. | Keep terms that change the receiving answer. |
+| **A10** | Fake Plain label | Tech and Plain repeat the same jargon. | The cold reader gains nothing. | Explain the use without widening it. |
+| **A11** | Design-time and run-time blur | A design expression is glossed as an occurrence, or conversely. | MethodDescription and Work collapse. | State the actual source-local claim and route the distinction through F.11, A.3, and A.15. |
+| **A12** | Cross-language collapse | Bilingual expressions are merged because a dictionary aligns them. | Normative and idiomatic differences vanish. | Recover each source use; assert a relation only when one obtains. |
+| **A13** | Alias inflation | A new technical term is invented “for clarity”. | It competes with the source and hides provenance. | Keep inventions, if needed, only as bounded Plain labels. |
+| **A14** | Role–status conflation | RBAC *role* is glossed as an acting system role. | Permission and agency claims mix. | Say **access role (RBAC)** and use E.10.ROLE and F.4 for any system-role claim. |
 
-### F.2:11 - Worked examples (context‑local only)
+### F.2:11 - Worked examples
 
-> Each line is a **local lexical unit** *(Context, LNF, Tech, Plain, Gloss)*.
-> No Cross‑context relation is implied. Later clustering (F.3) and bridges (F.9) may connect them.
+#### F.2:11.1 - Enactment and sensing
 
-#### F.2:11.1 Enactment + sensing
+The BPMN, PROV-O, SOSA/SSN, and ITIL notes above remain four separate source-local claims. They let a writer say “compare an SOSA observation result with the ITIL service target” while withholding any claim that BPMN *process* and PROV *activity* are the same.
 
-* **Context:** *BPMN 2.0 (2011)* — **LNF:** `process`
-  **Tech:** `process` - **Plain:** `workflow process`
-  **Gloss:** “Directed graph of flow nodes and sequence flows enacted by participants.”
+#### F.2:11.2 - Control and services
 
-* **Context:** *PROV‑O (2013)* — **LNF:** `activity`
-  **Tech:** `activity` - **Plain:** `temporal occurrence`
-  **Gloss:** “Time‑bounded occurrence that uses and generates entities and links to agents.”
+* **State-space control source, cited passage and scheme** — `actuation`; Plain **control output**; claim: “A signal applied to influence plant state or output.”
+* **IEC 61131-3, cited runtime passage and scheme** — `task`; Plain **scheduled program execution**; claim as above.
+* **ITIL 4 (2020), incident-management use** — `incident`; Plain **reported service disruption**; claim: “An unplanned interruption or reduction in service quality.”
 
-* **Context:** *SOSA/SSN (2017)* — **LNF:** `observation`
-  **Tech:** `observation` - **Plain:** `measurement act`
-  **Gloss:** “Act applying a procedure to a feature of interest to produce a result.”
+This prevents a plant fault from becoming an ITIL incident merely because a writer wants one word for both.
 
-* **Context:** *ITIL 4 (2020)* — **LNF:** `service‑level‑objective`
-  **Tech:** `service‑level‑objective` - **Plain:** `service target`
-  **Gloss:** “Target value for a service characteristic within a service promise vocabulary.”
+#### F.2:11.3 - Kind, method, and knowledge sources
 
-*Thinking pay‑off:* you can phrase “compare **observation** to **service‑level‑objective**” without importing workflow or provenance semantics.
+* **OWL 2 profile source** — `subClassOf`; Plain **class inclusion**; claim: “Every instance of the first class is an instance of the second.”
+* **FCA source** — `formal concept`; Plain **extent–intent pair**; claim: “A maximal object–attribute pair under the stated Galois connection.”
+* **SPEM 2.0 and ISO 24744 sources** — `method`; Plain **way of doing**; claim recovered from the cited method passage.
+* **SOSA/SSN (2017)** — `procedure`; Plain **observation recipe**; claim: “A description of how an observation may be carried out.”
 
-#### F.2:11.2 Sys‑CAL / LCA‑CAL + services
+The notes do not turn an FCA concept into a root kind or a procedure description into a Method. Those are separate claims under their direct patterns.
 
-* **Context:** *State‑space control texts* — **LNF:** `actuation`
-  **Tech:** `actuation` - **Plain:** `control output`
-  **Gloss:** “Signal applied to the plant to influence state or output.”
+### F.2:12 - Safe reasoning moves
 
-* **Context:** *IEC 61131‑3* — **LNF:** `task`
-  **Tech:** `task` - **Plain:** `runtime program execution`
-  **Gloss:** “Cyclic or event‑driven execution unit for control programs.”
-
-* **Context:** *ITIL 4 (2020)* — **LNF:** `incident`
-  **Tech:** `incident` - **Plain:** `reported disruption`
-  **Gloss:** “Unplanned interruption or reduction in the quality of a service.”
-
-*Thinking pay‑off:* avoids calling a plant fault an “incident” unless you **cross Contexts later** with an explicit bridge.
-
-#### F.2:11.3 Kind-CAL + method/work stack + KD‑CAL
-
-* **Context:** *OWL 2 (profiles)* — **LNF:** `subclass‑of`
-  **Tech:** `subclass‑of` - **Plain:** `is‑a (type hierarchy)`
-  **Gloss:** “C ⊑ D: every instance of C is an instance of D.”
-
-* **Context:** *FCA corpus* — **LNF:** `formal‑concept`
-  **Tech:** `formal‑concept` - **Plain:** `extent–intent node`
-  **Gloss:** “Maximal (objects, attributes) pair under a Galois connection.”
-
-* **Context:** *SPEM 2.0 / ISO 24744* — **LNF:** `method`
-  **Tech:** `method` - **Plain:** `abstract way of doing`
-  **Gloss:** “Abstract how‑to independent of specification or execution.”
-
-* **Context:** *SOSA/SSN (2017)* — **LNF:** `procedure`
-  **Tech:** `procedure` - **Plain:** `measurement recipe`
-  **Gloss:** “Specification guiding how an observation is produced.”
-
-*Thinking pay-off:* discourages treating an FCA "concept" as a root kind, or a **procedure** as a **method** without later proof.
-
-### F.2:12 - Reasoning primitives (judgement schemas, notation‑free)
-
-> Read each as a **permitted mental move** over the outcomes of F.2.
-> Symbols: `R` = Context (U.BoundedContext), `u` = local lexical unit, `s` = lexical string.
-
-1. **Localisation**
-  `heard(s) ∧ R chosen ⊢ localize(s,R)`
-  *You decide to hear `s` only **in** Context `R`.*
-
-2. **Context‑idiom normalisation**
-  `localize(s,R) ⊢ LNF_R(s) = ℓ`
-  *Within `R`, the **Local Normal Form** for `s` is `ℓ`.*
-
-3. **Unit formation**
-  `LNF_R(s)=ℓ ∧ labelTech=t ∧ labelPlain=p ∧ gloss=g ⊢ unit(u) = ⟨R,ℓ,t,p,g⟩`
-  *A **local lexical unit** is formed (quintet).*
-
-4. **Lexical‑only guard**
-  `unit(u) ⊢ lexicalOnly(u)`
-  *No behavioural/deontic/type math is attached to the gloss.*
-
-5. **Homonymy signal (Cross‑context)**
-  `LNF_Ra(s)=ℓa ∧ LNF_Rb(s)=ℓb ∧ Ra≠Rb ⊢ homonymy(s) ⊇ {Ra,Rb}`
-  *Same string across Contexts is flagged as **different** by default.*
-
-6. **Minimal generality check**
-  `unit(u) ⊢ minimal(u) ⇔ gloss(u) says no more than the Context’s usage requires`
-  *The gloss fits the Context; broader claims are withheld.*
-
-7. **Two‑register adequacy**
-  `unit(u) ⊢ didactic(u) ⇔ (tech(u) faithful) ∧ (plain(u) explanatory)`
-  *Tech stays canonical; Plain helps non‑specialists.*
-
-8. **No Cross‑context conclusion**
-  `unit(u@Ra), unit(v@Rb), Ra≠Rb ⊢ ¬(u ≡ v) (within F.2)`
-  *F.2 never asserts Cross‑context equivalence.*
-
-9. **Ready‑for‑F.3 signal**
-  `lexicalOnly(u) ∧ minimal(u) ∧ didactic(u) ⊢ readyF3(u)`
-  *A unit is suitable input for **intra‑Context clustering** in F.3.*
+1. **Localise.** Hear the expression only in the exact source use now under examination.
+2. **Recover.** Identify the edition, passage, effective scheme, and source-local claim.
+3. **Normalise minimally.** Choose an LNF that preserves the source’s idiom.
+4. **Explain twice.** Keep an idiomatic Tech label and a genuinely helpful Plain label.
+5. **Check scope.** Tighten any sentence that says more than the passage supports.
+6. **Signal homonymy.** Note repeated spelling without claiming a relation.
+7. **Stop.** When the local note is clear enough for the receiving question, do not add a cell or comparison merely for completeness.
+8. **Address only when needed.** Use F.17’s three-part cell when later reuse requires stable addressability.
 
 ### F.2:13 - Relations
 
 **Builds on:**
-**F.1** (Contexts fixed; heterogeneity/parsimony in place).
-**E.10.D1 D.CTX** (Context ≡ U.BoundedContext; “Problem Frame” reserved for narrative).
-**F.0.1** (Source - Local Meaning - Bridge‑Only Crossing).
+
+- Use **F.1 Question-Relative Source Selection** to recover the exact sources, editions, answer-changing contributions, and receiving question.
+- Use **F.0.1 Source-Local Meaning Recovery** to recover the exact source-local claim.
+- Use **E.10.D1** when vague *context* wording hides source, scheme, scope, situation, or use.
+- Use **F.17** for a durable `SchemeSenseCell` and basis relation only when later reuse needs that address.
 
 **Constrains:**
-**F.3** (Intra‑Context Sense Clustering): operates **only** on units **from one Context**; produces Local‑Senses and addressable **SenseCells**.
-**F.4** (Role Description Definition): may **cite SenseCells**, not raw strings.
-**F.9** (Alignment & Bridge): consumes **homonymy signals**; declares explicit Cross‑context mappings with loss policies.
 
-**Used by.**
-Extention patterns in Part C when referencing domain idioms (labels stay **context‑local**).
+- **F.3** clusters exact expressions and local claims under one effective scheme; it does not infer sameness across sources.
+- **F.4** may cite an exact F.17 cell when a local system-role-kind description needs it; a harvested expression establishes no kind.
+- **F.9** receives exact local meanings only when a proposed use needs an actual relation between them. F.2 supplies no Bridge, equivalence, direction, or use licence.
 
-### F.2:14 - Migration notes (conceptual)
+**Used by.** Part C patterns may cite the exact source expression and local-sense claim. The direct subject pattern still defines or constrains the value in the current claim.
 
-1. **New edition appears.** Add a Context in F.1; harvest afresh in F.2 using that Context; do not overwrite earlier units.
-2. **Idiomatic update discovered.** If your LNF fought the canon’s idiom, **re‑LNF** within the same context; keep labels/glosses steady unless the canon itself differs.
-3. **Ambiguity inside a Context.** If use splits, **mint two units** with distinct glosses; F.3 will sort their relation (same/different Local‑Sense).
-4. **Language split.** Treat each language canon as its **own Context**; resist cross‑language merges in F.2.
-5. **Tail pruning.** If units accumulate without feeding F.3/F.4/F.9, drop them from the working set; keep head terms that carry bridges.
-6. **DSL quarantine.** If a tool dialect is unavoidable, keep it as one context among others; never let it define the idiom for other Contexts.
+### F.2:14 - Migration notes
 
-### F.2:15 - Acceptance tests (SCR/RSCR — concept‑level)
+1. **New edition.** Recover the changed passage and scheme; keep the earlier note if its source use remains relevant.
+2. **Idiomatic correction.** Repair the LNF without silently changing the LocalSenseClaim.
+3. **Ambiguity in one source.** Recover two claims when selectional frames or entailments differ; F.3 tests the split.
+4. **Language change.** Determine whether the language edition changes source wording, reference scheme, or both; do not merge by translation alone.
+5. **Tail pruning.** Remove working notes that do not affect an active question; preserve cited source evidence elsewhere as required.
+6. **Tool dialect.** Keep it as one exact source basis and do not let it define other sources’ idiom.
 
-#### F.2:15.1 - Static conformance (SCR)
+### F.2:15 - Acceptance tests
 
-* **SCR‑F2‑S01 (context‑locality).** Every unit cites a Context from F.1.
-* **SCR‑F2‑S02 (Idiomatic LNF).** Each LNF reflects the Context’s spelling/hyphenation/casing with **minimal edits**.
-* **SCR‑F2‑S03 (Two registers).** Each unit carries both **Tech** and **Plain** labels; if not, a reason exists tied to didactics.
-* **SCR‑F2‑S04 (Lexical‑only).** No gloss contains behaviour, deontics, measurement math, or type axioms.
-* **SCR‑F2‑S05 (No Cross‑context claims).** Nowhere does F.2 assert equivalence/similarity/subsumption across Contexts.
-* **SCR‑F2‑S06 (Minimal generality).** Glosses match the Context’s use; no globalisation.
-* **SCR‑F2‑S07 (Temporal honesty).** For Contexts with fixed DesignRunTag, units and glosses respect it.
+#### F.2:15.1 - Static conformance
 
-#### F.2:15.2 - Regression (RSCR)
+* **SCR-F2-S01 (basis).** Every note names the exact source and edition and the effective scheme required to recover the claim.
+* **SCR-F2-S02 (idiomatic LNF).** Each LNF preserves meaningful spelling, hyphenation, casing, and modifiers.
+* **SCR-F2-S03 (two registers).** Tech is faithful and Plain is explanatory without added scope.
+* **SCR-F2-S04 (lexical boundary).** No note substitutes for behaviour, obligation, measurement, kind, assignment, Work, or evidence.
+* **SCR-F2-S05 (no cross-source claim).** F.2 asserts no equivalence, hierarchy, transfer, or permission between local meanings.
+* **SCR-F2-S06 (minimal generality).** Each LocalSenseClaim is no broader than its source use and receiving question.
 
-* **RSCR‑F2‑E01 (Edition split).** Introducing a new edition yields new units under a new Context; earlier units persist unchanged.
-* **RSCR‑F2‑E02 (Normaliser stability).** Adjusting an LNF does not silently widen/narrow the gloss.
-* **RSCR‑F2‑E03 (Language split).** Adding a second language yields a second Context; no bilingual collapse in F.2.
-* **RSCR‑F2‑E04 (No stealth bridges).** After updates, F.2 still contains **zero** Cross‑context identity claims; any mapping appears only in F.9.
-* **RSCR‑F2‑E05 (Head‑term focus).** Periodic check shows the unit set remains small and oriented to F.3/F.4/F.9 needs.
+#### F.2:15.2 - Regression
 
-### F.2:16 - Didactic distillation (60‑second script)
+* **RSCR-F2-E01 (edition change).** A changed edition produces a newly recovered claim only where meaning changed; earlier source identity remains visible.
+* **RSCR-F2-E02 (normaliser stability).** LNF edits do not silently widen or narrow the claim.
+* **RSCR-F2-E03 (language honesty).** Translation does not create unproved sameness.
+* **RSCR-F2-E04 (no stealth relation).** New notes still contain no cross-source identity or use claim.
+* **RSCR-F2-E05 (head-term focus).** The working set remains small and tied to actual downstream questions.
 
-> “In F.2 you **harvest inside Contexts**. For each Context, pick the canon’s own phrasing, choose a **Local Normal Form** in that idiom, add **Tech** and **Plain** labels, and write a one‑sentence **Gloss** that matches how that Context talks. Stop there. No bridging, no behaviour, no equations. If the same string appears in another Context, treat it as a **different unit**. These units feed F.3, where you’ll sort senses **within** a Context, and F.9, where you’ll relate Contexts explicitly. This keeps meaning local, names faithful, and later reasoning clean.”
+### F.2:16 - Didactic distillation
+
+> “Name the exact source and edition, find the passage, and say under which reference scheme you are reading it. Keep the source’s own expression, add a faithful Tech label and a helpful Plain label, and state its local meaning in one sentence. Stop there. The same spelling elsewhere proves nothing. Use F.17 only if you need a stable address, and use F.9 only if a real relation between two local meanings must be tested.”
 
 ### F.2:End

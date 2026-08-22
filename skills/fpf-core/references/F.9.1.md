@@ -1,29 +1,32 @@
 ---
 id: F.9.1
-title: Bridge Stance Overlay
+title: Bridge Stance Note
 status: Stable
 keywords:
-  - bridge stance
-  - stance overlay
+  - bridge stance note
+  - "bounded-use claim"
   - interpretive gloss
-  - projection note
-  - rename note
-  - "language-state comparisons"
-  - overlay annotation.
+  - local rename
+  - operationalization
+  - partial analogy
+  - projection
+  - "non-equivalence."
 dependencies:
   builds_on:
     - F.9
-    - C.2.2
-    - A.16.0
+    - C.2.1
   coordinates_with:
+    - A.10
+    - B.3
     - A.6.3.CSC
     - E.17.ID.CR
-    - E.17.1
     - C.16.Q
-    - A.6.A
+    - E.24.PUB
+    - F.17
+    - F.18
 ---
 
-# F.9.1: Bridge Stance Overlay
+# F.9.1: Bridge Stance Note
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -31,195 +34,207 @@ dependencies:
 
 ---
 
-## F.9.1 - Bridge Stance Overlay
+## F.9.1 - Bridge Stance Note
 
 > **Type:** Architectural (A)
 > **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
-**Plain-name.** Bridge-card stance overlay.
-**One-line summary.** `BridgeStanceOverlay` governs one stance annotation over an existing `F.9` bridge card so authors can say how to read that bridge without changing its kind, direction, `CL`, or loss notes and without treating the overlay as bridge authority or as a cure for missing source-bearing return.
-**Primary EntityOfConcern in plain terms.** One overlay annotation attached to an existing `F.9` bridge card; not the bridge card itself, not a second bridge kind, and not the pattern that governs coarsened renderings.
-**Use this when.** Use this overlay when an existing bridge card already exists and the real need is one compact stance label such as `localRename`, `operationalizes`, `partialAnalogy`, `projection`, or `nonEquivalent` that helps readers interpret that bridge without widening its substitution licence.
-**Start here when.** Your first honest artefact is already an `F.9` bridge card, and the practical question is how to read that bridge rather than whether a bridge exists at all.
-**What goes wrong if missed.** Authors fall back to vague phrases like "roughly analogous" or "just a rename", and readers either over-read the gloss as silent bridge authority or under-read it as disposable style.
-**What this buys.** One compact interpretive gloss over an existing bridge card that stays reusable, keeps the bridge taxonomy stable, and still leaves source-bearing return and bridge publication duties where they belong.
-**Not this pattern when.** Not this overlay when the case is the bridge card itself under `F.9`, or when a coarsened rendering still needs source-bearing return before any bridge-bearing use is admissible; use `A.6.3.CSC Controlled Semantic Coarsening` for that coarsened-rendering relation.
+**Plain name.** A short note that helps a reader interpret one particular use of a Bridge.
 
-### F.9.1:1 - Problem frame
-When positions or trajectories in language-state work are compared across schools or contexts, authors often need a disciplined interpretive gloss on top of a formal bridge card. The gloss must help reading without becoming a second bridge taxonomy.
+**One-line summary.** A bridge stance note is a separate claim-bearing episteme about one exact F.9 bounded-use claim. It may say that the use is best read as a local rename, operationalization, partial analogy, projection, or warning against equivalence. It changes neither the Bridge nor the claim it explains.
 
-### F.9.1:2 - Problem
-Authors often express stance informally ("roughly analogous", "really a projection", "just a rename"), which makes bridge interpretation unstable. A full second taxonomy would be worse: it would compete with the core bridge kinds.
+**Use this when.** Use F.9.1 after an F.9 Bridge has been shown to obtain and a separate bounded-use claim already says what someone proposes to do with that Bridge, in which direction, under which rule, and with what tolerated loss. Add a stance note only when one short interpretive cue will help a reader without replacing those facts.
+
+**Start here when.** You already have the Bridge and its bounded-use claim, but a reader may still overread a phrase such as “operationalizes”, “projection”, or “roughly analogous”.
+
+**First useful move.** Point to the exact bounded-use claim and write one ordinary sentence: “For this named use, read the relation as `___`; do not infer `___`.” Choose a stance word only if it makes that sentence shorter and clearer.
+
+**What goes wrong if missed.** A friendly gloss starts acting like proof of equivalence, permission to substitute, or evidence that a use happened. The opposite failure also occurs: authors build a second bridge taxonomy merely to explain how one already warranted use should be read.
+
+**What this buys.** Readers get a compact caution or reading aid while the Bridge, proposed use, evidence, reliance, authorization, actual downstream act, and optional publication package remain separately checkable.
+
+**Not this pattern when.** Use F.9 when the Bridge or suitability of a proposed use is still unsettled. Use A.6.3.CSC when a shortened or coarsened rendering needs a source tether, a narrower admissible use, blocked downstream uses, or a return trigger. Do not create a stance note merely because a comparison sounds informal.
+
+### F.9.1:1 - Problem
+
+People often need one short gloss after they have established a cross-local semantic relation and judged one bounded use of it. “Operationalizes”, “partial analogy”, and “projection” can be helpful, but each can also sound stronger than the underlying claim. The task is to make the intended reading explicit without making the gloss a Bridge kind, a use licence, or a substitute for evidence.
+
+### F.9.1:2 - Object and identity
+
+A bridge stance note is an ordinary C.2.1 episteme. It is not a U-kind and it is not part of the Bridge occurrence.
+
+Its C.2.1 identity is settled as follows:
+
+- its `EntityOfConcern` is one exact F.9 bounded-use claim;
+- its `ClaimGraph` states the selected stance, the ordinary-language reading that stance abbreviates, and the nearest overread it rejects;
+- its effective `ReferenceScheme` supplies the local meanings of the stance wording.
+
+Changing the bounded-use claim, stance, material reading boundary, or effective scheme identifies another stance episteme. Rewording that preserves those values may be a new edition of the same claim-bearing account under the applicable C.2.1 edition rule. Changing how the note is published or found—for example, its Card, registry entry, file, or visual placement—does not reidentify it.
+
+The underlying bounded-use claim remains primary. It names the obtaining Bridge, proposed use, direction, correspondence rule, tolerated loss, and polarity. The stance note describes how to read that claim; it supplies none of those values and cannot change them.
 
 ### F.9.1:3 - Forces
+
 | Force | Tension |
-|---|---|
-| **Expressive stance vs bridge discipline** | Add interpretive clarity without introducing a rival bridge-kind system. |
-| **Reuse vs inflation** | Make stance annotations reusable across bundles while keeping bridge cards structurally governed by `F.9`. |
-| **Interpretive help vs substitution abuse** | Help readers interpret a bridge without silently licensing substitution beyond what `F.9` allows. |
+| --- | --- |
+| Readability and exactness | One short cue can help a reader, but the cue cannot carry the relation or use semantics by itself. |
+| Reuse and locality | A small vocabulary is reusable, while every stance still belongs to one exact bounded-use claim. |
+| Help and overread | A friendly gloss should aid interpretation without widening equivalence, substitution, authority, or reliance. |
+| Loss emphasis and duplicate claims | A stance may foreground one material loss, but it should not restate or silently alter the bounded-use claim. |
 
 ### F.9.1:4 - Solution
-A Bridge Stance Overlay is a local interpretive annotation attached to an existing `F.9` bridge card. It does not change the underlying bridge kind, direction, `CL`, or loss notes.
 
-#### F.9.1:4.1 - Starter overlay vocabulary
-| Stance | Intended reading | What it does **not** imply |
-|---|---|---|
-| `localRename` | the target term is near-renaming within the current context boundary; if a cross-context relation is live, the `F.9` bridge card must exist first | automatic cross-context identity |
-| `operationalizes` | the target is a procedural or operational reading aid over the declared bridge | enactment, implementation, execution permission, gate approval, `A.15` work authority, or type-structure equivalence |
-| `partialAnalogy` | some explanatory pattern is shared, but only partially | admissible substitution |
-| `projection` | the target is a deliberate reduction or aspectual projection of the source bridge reading | completeness, reversibility, loss governance, recoverability governance, narrower-use permission, or source reopen |
-| `nonEquivalent` | the bridge card does not license equivalence or silent substitution | `Disjoint`, `CL=0`, or a full incompatibility verdict unless the bridge card itself says so |
+#### F.9.1:4.1 - Recover the claim before writing the gloss
 
-#### F.9.1:4.2 - Boundary rule
-A stance annotation is interpretive help for authors and readers. It is not a second bridge ontology, not a bridge card, and not a permission and not a publication with named authority-reference relation.
+Before adding a stance note, check four things:
 
-It is also not the coarsening governing pattern. Labels such as `projection` or `nonEquivalent` may help a reader interpret an already-declared bridge, but they do not carry source tether, narrower admissible use, non-admissible downstream use, or reopen duty for a coarsened rendering. If that coarsened-rendering relation becomes primary, it belongs to `A.6.3.CSC Controlled Semantic Coarsening` rather than being absorbed into stance language. If return to the source-bearing episteme or source publication is still needed before any bridge reading is admissible, reopen that episteme or publication before adding stance.
+1. the two exact F.17 local senses are known;
+2. an F.9 Bridge between them obtains;
+3. one separate bounded-use claim identifies the proposed use, direction, rule, tolerated loss, and polarity; and
+4. the stance note has a named reader benefit that the claim does not already express plainly enough.
 
-#### F.9.1:4.3 - Relation to `CL` and loss
-- `CL` still governs substitution licence.
-- loss notes still govern what fails to carry.
-- stance annotations merely say how the author wants the bridge to be read.
+If items 1 or 2 are missing, return to F.9. If item 3 is missing, write and test the bounded-use claim. If item 4 is missing, stop: no stance note is needed.
 
-If the stance materially affects interpretation, the bridge card should publish explicit loss notes that match it.
+#### F.9.1:4.2 - Write one bounded reading
+
+Write the note in this order:
+
+- cite the bounded-use claim it explains;
+- state one plain reading of that claim;
+- name one primary stance when a reusable label helps;
+- state the nearest likely overread; and
+- emphasize a material loss only when that emphasis changes how the reader should understand the claim.
+
+The stance note may cite evidence or a current A.10 or B.3 reliance result, but it does not create either. If the proposed direction, rule, tolerated loss, polarity, or reliance result changes, repair that object under F.9, A.10, or B.3 rather than editing the stance as a proxy.
+
+#### F.9.1:4.3 - Starter stance vocabulary
+
+| Stance | Plain reading | Nearest overread to reject |
+| --- | --- | --- |
+| `localRename` | For this use, the receiving expression is being read as a near-renaming within the stated local boundary. | Cross-local identity or unrestricted replacement. |
+| `operationalizes` | For this use, the receiving expression gives a procedural, observable, or measurable reading of the source. | Enactment, implementation, work authority, permission, or type-structure equivalence. |
+| `partialAnalogy` | For this use, the two senses share one stated explanatory pattern and differ elsewhere. | Admissible substitution or equivalence. |
+| `projection` | For this use, the receiving expression keeps one stated aspect and drops others. | Completeness, reversibility, recoverability, or permission to ignore the dropped distinctions. |
+| `nonEquivalent` | For this use, read the comparison as an explicit warning against equivalence. | A claim of disjointness, a negative Bridge claim, or a general ban beyond the stated use. |
+
+These labels are optional local designations inside the stance episteme. They are not Bridge kinds, levels, scores, permissions, or a second taxonomy. If a plain sentence is clearer, use the sentence without minting a label.
+
+A stance word carries no direction by itself. Direction belongs to the bounded-use claim it explains: a `projection` reading in one direction never establishes the reverse reading or use.
+
+#### F.9.1:4.4 - Keep Bridge, use, reliance, and packaging separate
+
+- A practitioner uses F.9 to test and record whether the Bridge obtains.
+- The bounded-use claim says whether that Bridge suits one named use.
+- A practitioner uses A.10 or B.3 to judge whether current evidence or assurance supports relying on that claim.
+- The stance note says how to read that one claim.
+- The pattern that directly constrains a proposed comparison, translation, publication, Work occurrence, or other downstream act decides its authorization; evidence about that act says whether it occurred. The stance note does neither.
+
+A Bridge Card is optional claim-bearing packaging. A Card may publish the Bridge description, bounded-use claim, evidence references, reliance result, and stance note together, but the Card is not a prerequisite for any of them. The Card's layout and edition, and any publication occurrence or file carrying it, remain separate from the objects it brings together.
+
+`CL` is optional F.9 shorthand for evidence strength about a stated correspondence. It is not a substitution threshold and does not rank the stance. A stance note may not turn `CL`, a loss note, or friendly wording into suitability or permission.
+
+#### F.9.1:4.5 - Preserve source return and coarsening boundaries
+
+A `projection` or `nonEquivalent` stance can highlight loss, but it does not provide the source tether, narrower admissible use, blocked downstream use, or return trigger required for controlled coarsening. When those duties are live, use A.6.3.CSC and keep the stance note only if it still helps explain an independently established bounded-use claim.
+
+Publication does not cure a missing source. If a reader must return to a source episteme or source publication before the Bridge or bounded-use claim can be checked, perform that return first.
 
 ### F.9.1:5 - Archetypal Grounding
-**Tell.** A stance annotation says how to read the bridge, not what the bridge kind structurally is.
 
-**Show (System).** An operator alarm label may `operationalizes` a broader control cue without becoming identical to it.
+#### F.9.1:5.1 - Local rename inside one bounded use
 
-**Show (Episteme).** A TAE felt-sense phrase may be only a `partialAnalogy` to a later formal term.
+An obtaining Bridge and a separate affirmative bounded-use claim say that one operational label is suitable as a near-renaming of another in one proposed glossary use. A `localRename` stance can make that reading quick to recognize. It establishes neither cross-local identity nor unrestricted replacement outside the stated use. The claim says nothing by itself about authorization or whether anyone actually changed or used the glossary.
 
-### F.9.1:6 - Bias-Annotation
-Lenses tested: **Gov**, **Arch**, **Onto/Epist**, **Prag**, **Did**. Scope: **Universal** for stance overlays attached to existing `F.9` Bridge Cards inside FPF.
-This pattern favors disciplined cross-school comparison and bridge readability over sweeping synonym claims. The main mitigation is that every stance remains subordinate to the underlying Bridge Card, its direction, `CL`, and loss notes, with explicit handoff to `A.6.3.CSC` when the issue under repair is source-bearing return for a coarsened rendering rather than bridge-card reading.
+#### F.9.1:5.2 - Operational reading of a control cue
 
-### F.9.1:7 - Conformance Checklist
-- `CC-F.9.1-1` A stance annotation **SHALL NOT** replace the underlying `F.9` bridge kind.
-- `CC-F.9.1-2` Stance annotations **SHOULD** be accompanied by explicit loss notes when they materially affect interpretation.
-- `CC-F.9.1-3` `nonEquivalent` **SHALL** block silent substitution.
-- `CC-F.9.1-4` A stance annotation **SHALL NOT** claim higher-CL sameness than the bridge card's `CL` and kind allow.
-- `CC-F.9.1-5` A stance annotation **SHALL NOT** stand in for source-bearing return when a coarsened rendering still needs reopen before any bridge-bearing reading is admissible; that relation belongs to `A.6.3.CSC Controlled Semantic Coarsening`.
+An F.9 `Partial-overlap` Bridge obtains between one exact operator-alarm sense and one broader control-cue sense. A separate affirmative bounded-use claim says that this Bridge is suitable for using the alarm term in one training explanation, in the alarm-to-control direction, under a rule that preserves the response trigger but not the complete control model, with zero tolerance for treating the term as implementation authority. A current A.10 reliance judgment says the available evidence supports relying on that narrow claim.
 
-### F.9.1:8 - Common Anti-Patterns and How to Avoid Them
-- **Annotation as ontology.** Do not treat stance as the bridge kind itself.
-- **Friendly-vague analogy.** If the relation is high-loss, say so explicitly.
-- **Stance inflation.** Do not use the annotation to smuggle in substitution rights that `F.9` withholds.
-- **Stance as coarsened-rendering cure.** Do not add `projection`, `localRename`, or another overlay as if that repaired a coarsened note that still needs source-bearing return before bridge reading.
+A stance note may now say: “For this training explanation, read the alarm term as operationalizing the response-trigger part of the control cue; do not read it as the complete control model or as permission to change the controller.” The stance is `operationalizes`. Whether an instructor is authorized to use that wording and whether any training Work actually uses it remain separate. No Card is required; a Card may package the already separate objects if durable reuse pays.
 
-### F.9.1:9 - Consequences
-The benefit is reusable interpretive clarity for bridge-heavy bundles and school comparisons. The trade-off is one more declared annotation layer on bridge cards.
+#### F.9.1:5.3 - Projection into a report
 
-### F.9.1:10 - Rationale
-`U.LanguageStateSpace` and `U.LanguageStateMoveTrajectory` create many legitimate cross-school comparisons. `F.9.1` gives those comparisons a reusable stance vocabulary without fragmenting the underlying `F.9` bridge discipline.
+An obtaining Bridge and a bounded-use claim say that the Bridge is suitable for showing one aspect of a rich operations concept in one proposed weekly-report use. The claim names the report use, direction, correspondence rule, and tolerated omission. A `projection` stance note may foreground that the report keeps only queue age and drops causal and capacity distinctions. Any authority to publish the report and evidence that a report actually showed that aspect remain separate.
 
-The practical gain is narrow but real: teams already use short stance glosses in review work, and without a governed overlay those glosses either smuggle bridge `CL` through casual wording or sprawl into a second bridge taxonomy. Keeping the overlay subordinate to the bridge card lets bundles reuse interpretive cues while the boundary rule and the worked `projection` anti-case keep source-bearing return and bridge publication duty where they belong.
+If readers must return to the source account before making a staffing or release decision, follow A.6.3.CSC: return to the source and do not use the report for those decisions. The stance note alone cannot set that boundary.
+
+#### F.9.1:5.4 - Partial analogy without substitution
+
+Two schools use different senses that share one explanatory pattern. For example, a TAE felt-sense phrase and a later formal term may share one stated explanatory feature while differing elsewhere. Their F.9 Bridge obtains, and an affirmative bounded-use claim says that the Bridge is suitable for one teaching comparison while rejecting method transfer. A `partialAnalogy` stance helps the reader notice the shared pattern. It neither makes the methods equivalent nor authorizes or proves a teaching act.
+
+#### F.9.1:5.5 - `nonEquivalent` is a warning, not a verdict generator
+
+An affirmative bounded-use claim says that the Bridge is suitable for placing two senses in the same comparison table but not suitable for substitution. A `nonEquivalent` stance may make that limit easy to see. The label does not authorize a table or show that one was produced; nor does it make the Bridge `Disjoint`, set `CL=0`, negate another use, or prohibit a future use with different direction, rule, and tolerance.
+
+#### F.9.1:5.6 - Anti-case: the gloss comes first
+
+“The dashboard metric is basically a projection of operational resilience” supplies neither exact local senses, an obtaining Bridge, nor a bounded-use claim. Do not attach a stance label. Recover the senses and F.9 relation, then state the exact proposed use and its tolerated loss. If the dashboard is a controlled reduction, also apply A.6.3.CSC.
+
+### F.9.1:6 - Conformance checklist
+
+1. One exact F.9 Bridge obtains before the stance note is cited.
+2. One separately constituted bounded-use claim names the proposed use, direction, correspondence rule, tolerated loss, polarity, and effective scheme.
+3. The stance note is a separate C.2.1 episteme whose EntityOfConcern is that exact bounded-use claim.
+4. The note states a plain reading and nearest likely overread; a stance token is optional.
+5. The stance changes neither Bridge kind nor Bridge identity, claim identity or polarity, reliance, authorization, nor any downstream occurrence.
+6. A Card is optional packaging, not a prerequisite or source of truth.
+7. `CL`, observed loss, permitted loss, reliance, and stance remain distinct.
+8. One primary stance is normally enough; additional cautions belong in plain boundary or loss wording.
+9. Reusing a stance label for another claim requires a new local justification; equal labels do not identify the claims or their losses.
+10. A coarsened rendering that needs source return, narrowed use, or blocked downstream use applies A.6.3.CSC.
+
+### F.9.1:7 - Common Anti-Patterns and How to Avoid Them
+
+| Failure | Why it fails | Repair |
+| --- | --- | --- |
+| Card-first entry | Packaging is made a prerequisite for relation or claim truth. | Start from the obtaining Bridge and exact bounded-use claim; add a Card only when reuse pays. |
+| Stance as Bridge kind | The gloss competes with F.9 relation semantics. | Keep the F.9 kind unchanged and make the stance a separate episteme about one use claim. |
+| Stance as licence | Friendly wording silently authorizes substitution or action. | State claim polarity and current reliance separately; apply the pattern that defines the needed authorization. |
+| `CL` as threshold | Evidence shorthand becomes a rule for use. | Keep `CL` in the evidence account and retain the exact use rule and tolerated loss in the bounded-use claim. |
+| Loss note as tolerance | An observed difference is treated as accepted loss. | Keep observed loss in evidence and permitted loss in the bounded-use claim. |
+| Several stance tags | Labels replace one intelligible sentence and hide incompatible readings. | Use one primary stance plus plain loss and boundary wording. |
+| Stance as coarsening cure | `projection` or `nonEquivalent` replaces source return and blocked-use duties. | Apply A.6.3.CSC and keep the stance only as optional interpretation help. |
+| Bundle-wide stance identity | Equal labels on several claims are treated as one reusable semantic relation. | Treat each stance episteme as local to its exact bounded-use claim. |
+
+### F.9.1:8 - Consequences
+
+**Benefits.** A reader receives one concise interpretive cue without losing the exact relation, use, evidence, or action boundary. Cards remain optional, and the same Bridge may support several independently judged uses and stance notes.
+
+**Costs.** Authors must identify the bounded-use claim before adding a stance. Some older card-first records need one extra claim reference and may lose a decorative stance that has no practical reader benefit.
+
+**Limits.** F.9.1 neither establishes a Bridge nor judges suitability, evidence, reliance, permission, performance, publication, or controlled coarsening. It explains one already constituted bounded-use claim.
+
+### F.9.1:9 - Rationale
+
+The stance vocabulary is useful because practitioners already write short interpretive glosses. The ontology stays small by treating each gloss as ordinary claim-bearing content rather than a new relation kind or universal classification. Making the bounded-use claim the EntityOfConcern also keeps a Card as optional publication packaging rather than the subject or source of the relation and use claims. One primary stance per claim is a readability default, not a new cardinality law. The real criterion is whether the note makes the claim easier to understand without hiding a materially different reading; when one ordinary sentence does that better, the sentence wins.
+
+### F.9.1:10 - Bias-Annotation
+
+**Favored reading.** Prefer disciplined, claim-local comparative reading to sweeping synonym claims. **Counter-risk.** Do not turn harmless comparison into a Bridge, bounded-use claim, reliance judgment, and stance note when that machinery changes no action. Apply the four checks in 4.1; when item 4 has no reader benefit, stop.
 
 ### F.9.1:11 - SoTA-Echoing
-**SoTA note.** This section does not mint an independent second bridge rule track. It stays truthful only when the boundary rule, conformance checklist, worked bridge-card examples, and legacy-note repair below still tell the same story about the stance staying subordinate to the bridge card.
 
-**Traditions covered.** This overlay binds itself to comparative-theory glossing, design-translation annotation, operator documentation, and other practices that add short interpretive stance labels on top of already governed bridge cards.
+| Claim/practice | Source | Alignment | Adopt / adapt / reject effect |
+| --- | --- | --- | --- |
+| Keep concepts, designations, definitions, and relations distinguishable. | ISO 704:2022; ISO 1087:2019. | A stance label remains a designation inside one claim-bearing episteme, not the Bridge or bounded-use claim. | **Adopt** the distinction; **reject** treating the label as relation or use truth. |
+| Tie reusable short names to an explicit subject and scope. | OpenTelemetry Semantic Conventions, cited predecessor edition 2025. | A small stance vocabulary aids recognition only inside one exact bounded-use claim. | **Adapt** the naming move; **reject** equivalence or use authority from common spelling. |
+| Keep validation and metadata distinct from the data or resource described. | W3C SHACL 2017; DCAT v3 2024. | A stance note and optional Card remain inspectable without becoming the Bridge, evidence, or downstream act. | **Adopt** the separation; **reject** packaging as truth or occurrence. |
 
-| Claim need | SoTA practice (post-2015) | Primary source (post-2015) | Alignment with `F.9.1` | Adoption status |
-| --- | --- | --- | --- | --- |
-| A short stance label can help reading only if the underlying concept/relation remains explicit. | Terminology practice distinguishes concepts, designations, definitions, and relations, and treats a designation as a representation of a concept rather than the concept itself. | ISO 704:2022; ISO 1087:2019. | `F.9.1` lets a stance word such as `localRename` or `projection` guide reading only after the underlying `F.9` bridge card remains primary. | **Adopt/Adapt.** Adopt designation/concept separation; adapt it into local stance overlays; reject treating the stance word as a bridge kind. |
-| Viewpoint notes and model annotations help users only when they remain subordinate to the described relation. | Architecture-description and model-based engineering practice use viewpoints, views, model elements, and traceable semantics to keep explanatory descriptions tied to explicit underlying descriptions. | ISO/IEC/IEEE 42010:2022; OMG SysML v2.0 Language Specification (2025). | `F.9.1` keeps stance overlays subordinate to bridge kind, direction, `CL`, and loss notes, with worked examples showing where the overlay helps and where it must wait. | **Adapt.** Adapt viewpoint/traceability discipline to bridge-card reading; reject a second bridge taxonomy. |
-| Shared operational names and semantic attributes aid observability and documentation, but common naming does not by itself license substitution. | Contemporary observability practice standardizes common operation and data names while keeping those conventions tied to explicit resources, spans, metrics, logs, and profiles. | OpenTelemetry Semantic Conventions (2025). | `F.9.1` adopts the value of short reusable glosses, but keeps them local to the bridge card and loss notes. | **Adapt/Reject.** Adapt common-name discipline as a readability aid; reject common naming as proof of equivalence or completeness. |
-| Validation and metadata practice keeps annotations inspectable instead of letting them replace the object they annotate. | Semantic-web validation and catalog practice separates shapes/metadata from the data graph or dataset being described. | W3C SHACL (2017); W3C DCAT v3 (2024). | `F.9.1` treats a stance overlay as inspectable annotation over a bridge card, not as a substitute bridge or source-return cure. | **Adapt.** Use annotation discipline to keep stance local and reviewable. |
-
-**Worked-slice docking.** The nearest practical recovery loci here are the `localRename`, `operationalizes`, `projection`, and `partialAnalogy` examples in `F.9.1:13.1` through `F.9.1:13.4`, plus the anti-case `F.9.1:13.5`. If the SoTA claim cannot be recovered through those worked slices and the early boundary rule, do not let the citation stand in for the live pattern law.
-
-**Local stance.** Best-known current practice supports a narrow rule: stance labels are useful only when they stay visibly subordinate to a published bridge card, its direction, `CL`, loss notes, and reviewable source-cell and target-cell structure.
+SysML v2 is deliberately not used here as SoTA or lineage evidence. Its predecessor citation changed no F.9.1 rule or worked case and did not answer the present relation–claim–use separation problem. No replacement source is added merely to fill the removed row; add one only when an exact current source changes a rule or example.
 
 ### F.9.1:12 - Relations
-- Builds on: `F.9`, `C.2.2a`.
-- Primary boundary: `F.9` governs Bridge Card discipline; `F.9.1` governs only stance overlays attached to existing Bridge Cards.
-- Coordinates with: `A.16.0`, `E.17.1`, `A.6.P`, `A.6.A`, `C.16.Q`, `C.25`, and `B.4.1`.
-- Constrains: local stance annotations on bridge cards used in comparative and tradition bundles.
-### F.9.1:13 - Worked Bridge-Card Examples
+- **Builds on and coordinates with:** F.9 for the obtaining Bridge and bounded-use claim; C.2.1 for the stance episteme and its identity; A.10 and B.3 for reliance; A.6.3.CSC for controlled coarsening and source return; E.17.ID.CR for bounded comparative review; C.16.Q for quality-term repair; E.24.PUB for publication; F.17 for local sense; and F.18 for naming when that question is live.
+- **Does not replace:** the pattern that defines or constrains an actual comparison, translation, publication, Work, decision, permission, or other downstream object.
 
-#### F.9.1:13.1 - `localRename`
-A bridge card may relate two near-coextensive operational labels inside one declared context fragment and mark the stance as `localRename`. The bridge card still publishes its own direction, kind, `CL`, and loss notes. The stance only warns the reader that the author's intended reading is close renaming **within that boundary**; it does not license export of the rename beyond the stated fragment.
+#### F.9.1:12.1 - Migration rule
 
-#### F.9.1:13.2 - `operationalizes`
-A broad capability cue may be bridged to a more procedural checklist or control ritual. The bridge card may carry the stance `operationalizes` to show that the target is being read as a procedural or operational gloss over the source. The relation can still be high-loss: the procedural target need not preserve the source's broader theoretical framing, and the stance does not claim type-structure sameness, implementation authority, execution permission, gate approval, or `A.15` work authority.
+For each legacy stance passage, ask in order:
 
-#### F.9.1:13.3 - `projection`
-A rich construct may be mapped into a narrower reporting or measurement rendering. The bridge card may declare the stance `projection` when the target intentionally keeps only one aspect. The required loss notes should name the dropped dimensions, because the stance is informative only when the omitted structure is made explicit.
+1. Which exact local senses are being related?
+2. Does an F.9 Bridge obtain?
+3. Which exact bounded-use claim is being explained?
+4. Does a short stance note add reader value?
 
-Table-level note: `projection` is only a stance over a declared bridge. It does not govern loss, recoverability, narrower admissible use, non-admissible downstream use, or source reopen for a coarsened rendering; that relation belongs to `A.6.3.CSC Controlled Semantic Coarsening`.
+If question 2 or 3 has no answer, do not preserve the stance as if it supplied one. If all four answers exist, keep every useful legacy idea as the plain reading, stance, loss emphasis, example, or non-use boundary of the new C.2.1 episteme. A Card reference may remain as optional publication access, never as the stance's identity or prerequisite.
 
-#### F.9.1:13.4 - `partialAnalogy` and `nonEquivalent`
-A comparative bundle may need to mention an explanatory resemblance across traditions without claiming substitution. In such cases `partialAnalogy` may guide reading when the shared pattern is local and declared. If review concludes that this local resemblance still lacks reuse support, `nonEquivalent` should be preferred so that apparent similarity does not drift into silent replacement. The label blocks equivalence and silent substitution; it does not by itself assert `Disjoint` or `CL=0` unless the underlying `F.9` bridge card says so.
-
-#### F.9.1:13.5 - `projection` is not a coarsened-note cure
-A team may write a short comparison note saying that one report-only metric is `basically a projection` of a richer operations concept. That sentence does not by itself justify a `projection` overlay. First recover the underlying `F.9` bridge card, its direction, `CL`, and Loss Notes from the source-bearing episteme or source publication needed for the Bridge Card. Only then may the overlay say how to read that bridge. If readers still need return to the source-bearing episteme or source publication before any bridge-bearing use is admissible, the overlay must wait; it cannot repair the missing bridge card.
-
-### F.9.1:14 - Practical use guidance
-
-- Publish a stance overlay only on top of a complete bridge card that already declares bridge kind, direction, `CL`, and explicit loss notes where needed.
-- Choose the least-committing stance that truthfully describes the intended reading; do not upgrade the overlay merely because it sounds more helpful.
-- If multiple interpretive notes are needed, prefer one primary stance plus explicit loss notes rather than several competing overlays.
-- Use `nonEquivalent` when the main value of the annotation is to warn the reader away from substitution.
-- In comparative sets or tradition-focused bundles, place the overlay near the bridge card it qualifies so readers can inspect structural bridge data before reading the interpretive gloss.
-
-A practical check is simple: ask whether the overlay merely helps reading or is covertly claiming extra sameness, transport, or substitution rights. If it does the latter, revise the bridge card itself rather than decorating it.
-
-### F.9.1:15 - Legacy-note repair and boundary
-Legacy comparative notes often contain undeclared stance language such as "roughly the same", "really a projection", or "just an operational version". When such a note is normalized, the first repair step is to recover the underlying bridge card in `F.9`; only then may a Bridge Stance Overlay be added as an explicit local stance annotation.
-
-The pattern intentionally does not define a second bridge taxonomy, a new substitution calculus, or a score for bridge quality. Those responsibilities remain with the bridge card, `CL`, and declared loss discipline. Tradition bundles may carry many bridge cards with stance overlays, but the overlays remain local annotations attached to those cards, not free-standing comparative objects.
-### F.9.1:16 - Overlay Declaration Discipline
-
-A stance overlay is useful only when it stays visibly subordinate to the bridge card it qualifies.
-
-#### F.9.1:16.1 - Minimal overlay declaration
-A usable stance overlay should normally publish:
-
-- the qualified `F.9` bridge card,
-- the chosen stance term,
-- the local reason the stance is helpful,
-- and any loss emphasis that becomes especially important under that stance.
-
-Without this declaration set, a stance word becomes a decorative gloss detached from the bridge it is supposed to interpret.
-
-#### F.9.1:16.2 - One primary stance per bridge card
-A bridge card should normally carry one primary stance overlay. If several interpretive notes are needed, the extras should usually live in explicit loss notes or surrounding commentary rather than in several competing stance tags.
-
-#### F.9.1:16.3 - Overlay locality
-A stance overlay is local to the bridge card and context fragment that publish it. Reusing the same stance label elsewhere is admissible only when the new bridge card independently supports that reading.
-
-### F.9.1:17 - Interaction with `CL`, Direction, and Loss
-
-#### F.9.1:17.1 - `CL` remains prior
-If the stance sounds friendlier than the declared `CL`, `CL` wins. An `operationalizes` or `localRename` overlay cannot overrule a high-loss bridge or a low-substitution `CL` declaration.
-
-#### F.9.1:17.2 - Direction-sensitive reading
-Some stance labels read differently depending on bridge direction. A construct may project into a report-only rendering in one direction while the reverse direction is not admissible at all. Authors should therefore avoid stance prose that sounds symmetric when the bridge card is directional.
-
-#### F.9.1:17.3 - Loss emphasis rule
-When a stance is likely to invite over-reading, the loss note should state a sharper boundary rather than soften it. The overlay is useful exactly because it helps interpretation; that is also why it can mislead if the losses are understated.
-
-### F.9.1:18 - Bundle Use and Comparative Reading
-
-#### F.9.1:18.1 - Bundle-level reuse
-Tradition bundles and viewpoint bundles may reuse the same stance vocabulary across many bridge cards, but the interpretation remains card-local. Bundle reuse is a readability aid, not a warrant that similarly named overlays are structurally equivalent.
-
-#### F.9.1:18.2 - Comparative stance caution
-Two bridge cards may both be marked `projection` while dropping very different dimensions. Reviewers should therefore compare the loss notes and source-cell and target-cell structure, not the overlay term alone.
-
-#### F.9.1:18.3 - Boundary to second bridge taxonomy
-If authors start grouping bridges primarily by stance label and ignoring bridge kind, direction, `CL`, or loss, they have implicitly created a rival bridge taxonomy. `F.9.1` forbids that drift.
-
-### F.9.1:19 - Review Matrix and Migration Tests
-
-A reviewer can test stance-overlay integrity with five questions:
-
-1. **Is the underlying bridge card complete and still primary?**
-2. **Does the overlay stay within the bridge card's structural claims?**
-3. **Would the same overlay still be truthful if read in the reverse direction?** If not, the locality or directionality needs to be made clearer.
-4. **Do the loss notes carry the interpretive claim that the overlay might otherwise overstate?**
-5. **Is the bundle using stance as a readability aid, or as a covert replacement for bridge ontology?**
-
-Legacy prose about things being "really the same", "only a projection", or "just an operational version" should therefore be migrated by recovering bridge kind, direction, `CL`, and loss first, then adding an overlay only if it still adds disciplined interpretive value.
 ### F.9.1:End
