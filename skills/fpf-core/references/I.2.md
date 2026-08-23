@@ -2,7 +2,17 @@
 id: I.2
 title: Expanded Entry Disambiguation Cases
 status: Stable
-keywords: []
+keywords:
+  - first entry
+  - disambiguation
+  - compact index
+  - expanded comparison.
+dependencies:
+  builds_on:
+    - E.11
+  coordinates_with:
+    - E.10
+    - F.17
 ---
 
 # I.2: Expanded Entry Disambiguation Cases

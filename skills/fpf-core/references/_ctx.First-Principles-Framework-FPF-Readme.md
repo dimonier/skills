@@ -15,10 +15,6 @@ title: First Principles Framework (FPF) Readme
 
 > First Principles Framework (FPF) is a standards-style pattern language for turning difficult engineering, research, management, and mixed human and AI work into explicit, reviewable, improvable reasoning.
 
-- **Author:** Anatoly Levenchuk, with AI-agent assistance
-- **Version:** August 2026
-- **Status:** Normative kernel, eternal alpha: already used in working projects and development programs, while still evolving.
-
 FPF helps when a project has outgrown one clever conversation. It is useful when meanings, claims, options, evidence, architecture, work decisions, publication forms, and improvement criteria need to stay coherent across people, teams, tools, time, or AI agents.
 
 Use FPF as a reference model and pattern language, not as a linear textbook. Start from the working question you bring from your project. Bring in internal FPF terms only after they help you keep the work precise.

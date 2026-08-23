@@ -179,13 +179,14 @@
 | C.31 | Modularity and Reusable Structure Characteristics | modularity characteristics, reusable-structure characteristics, coupling, cohesion, substitutability |
 | C.31.RSA | Reusable Structure Accounting | reusable-structure accounting, reusable share, bespoke residue, accounting basis, report-only share |
 | C.31.ASAP | Architecture Scale-Amenability Preference | architecture scale preference, scale amenability, ScaleClaimTriage, scale variable, scale window |
-| C.32 | Architecture Candidate Synthesis | architecture candidate synthesis, CandidateArchitecturePalette@Project, selected structures, architecture characteristics, synthesis structure map |
+| C.32 | Architecture Candidate Synthesis | architecture candidate synthesis, CandidateArchitecturePalette@Project, selected structures, architecture characteristics, selected-structure contribution rows |
 | C.32.P2S | Problem-to-Structure Architecturing Unfolding | — |
 | C.32.HCS | Architecture-Bearing Family Characteristic Starter Packs | architecture-bearing family characteristic starter pack, architecture characteristic heads, source catalogue narrowing, first criteria questions, characteristic transfer. |
 | C.32.ACS | Architecture Characteristic Criteria Set for Improvement Cycles | architecture characteristic criteria set, criteria row, Q-Bundle, improvement cycle, proxy risk |
 | C.32.ACE | Architecture Characteristic Eval Programs | architecture-characteristic eval program, eval result, measurement boundary, parity frame, missing-data policy |
 | C.32.CONWAY | Architecture-Influence and Transformed-Architecture Correspondence | — |
 | C.32.MLAO | Multilevel Architecture Residual Optimization | multilevel architecture residual optimization, residual-reducing candidate frame, declared level, declared scope, Pareto front |
+| C.32.MWA | Practice Architecture Synthesis from Several Structures | — |
 | C.32.FAIL | Architecture Failure Recognition and Repair | architecture failure cue, architecture repair cue, stressed architecture object, selected-structure relation, candidate repair |
 | C.32.PAD | Project Architecture Decision After Candidate Synthesis | project architecture decision, ArchitectureDecisionRelation@Project, selected architecture option, affected selected structure, architecture-characteristic trade-off |
 | C.32.ADR | Architecture Decision Record Projection | architecture decision record, ADR projection, ArchitectureDecisionDescription@Project, ArchitectureDecisionRecordProjection@Project, section function |
@@ -210,6 +211,7 @@
 | E.4.DPF | Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly | — |
 | E.4.DPF.DA | Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace | — |
 | E.4.PFR | Pattern-Framework Relation and Edition Discipline | — |
+| E.4.PFIP | Principle-Framework Publication Integration and Preservation | — |
 | E.5 | Four Guard-Rails of FPF | guardrails, constraints, architecture, rules, safety |
 | E.5.1 | DevOps Lexical Firewall | lexical firewall, jargon, tool-agnostic, conceptual purity, DevOps |
 | E.5.2 | Notational Independence | notation, syntax, semantics, tool-agnostic, diagram |
@@ -231,6 +233,8 @@
 | E.11 | First-Practical Entry and Pattern-Use Discoverability Discipline | — |
 | E.11.PUA | Pattern Use in a Working Situation and First Useful Result | — |
 | E.11.PUR | Pattern-Use Applicability, Recommendation, and Coordination | — |
+| E.11.PFP | Framework Publication Form Profile | — |
+| E.11.DSG | DPF Suite Guide | — |
 | E.12 | Didactic Primacy & Cognitive Ergonomics | didactic, cognitive load, ergonomics, usability, Rationale Mandate |
 | E.13 | Pragmatic Utility and Value Alignment | pragmatic utility, proxy-to-value alignment, Goodhart, Campbell, surrogation |
 | E.14 | Human-Centric Working-Model | working model, human-centric, publication surface, grounding, assurance layers. |
@@ -255,11 +259,13 @@
 | E.21 | FPF Pattern-Quality Evaluation CharacteristicSpace | — |
 | E.22 | Improvement-Oriented Quality Evaluation Question Framing | — |
 | E.23 | Quality Improvement Loop Method | — |
+| E.23.CDI | Developing Capability for a Named Work Family | — |
 | E.24 | U.Ontic and Ontic Introduction Discipline | — |
 | E.24.CD | Ontic Candidate Detection and First-Use Disposition | — |
 | E.24.PUB | Ontic Description and Publication Discipline | — |
 | E.24.UK | U-kind Admission and Ontic Settlement | — |
 | F.0.1 | Source-Local Meaning Recovery | troubling word use, exact source and edition, source-local meaning, local expression, optional durable address |
+| F.0.2 | Conceptual Synthesis across Source Ontologies | — |
 | F.1 | Question-Relative Source Selection | receiving question, intended use, exact source and edition, answer-changing source role, finite source cut |
 | F.2 | Term Harvesting & Normalisation | exact source and edition, effective ReferenceScheme, LocalExpression, LocalSenseClaim, LNF |
 | F.3 | Source-Local Sense Clustering | source expression, LocalSenseClaim, effective ReferenceScheme, alias consolidation, counterexample |
@@ -295,7 +301,7 @@
 | G.11 | Telemetry-Driven Refresh & Decay Orchestrator | telemetry, refresh, decay, RSCR, PathSlice |
 | G.12 | DHC Dashboards — Discipline-Health Time-Series (admissible telemetry, generation-first) | dashboard, DHC, discipline health, time-series, admissible telemetry |
 | G.13 | External Interop Hooks for SoTA Discipline Packs (conceptual; normative when used) | interop, external index, claim mapper, mapping policy, plane map |
-| I.2 | Expanded Entry Disambiguation Cases | — |
+| I.2 | Expanded Entry Disambiguation Cases | first entry, disambiguation, compact index, expanded comparison. |
 
 ## Cross-references
 - Full monolith: `FPF-Spec.md`
