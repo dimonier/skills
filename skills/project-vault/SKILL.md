@@ -205,7 +205,7 @@ Create a WRK file when:
    - `status`: `performed` (completed), `partial` (partial), `probe` (reconnaissance), `rework-needed`.
 4. Write the body: 1–3 paragraphs describing the completed work. Do not duplicate the content of the output artifact.
 5. Add a line to the track's "Completed moves": `[[WRK-YYYY-MM-DD-hhmmss]] — FPF-pattern: brief essence`.
-6. Add a line to `project-vault/work/_index.md` (table: ID, Track, FPF-pattern, Essence).
+6. Add a line to `project-vault/work/_index.md` (table: ID, Track, FPF-pattern, Essence). **Append new entries to the bottom** of the table (chronological order). A few works done in parallel may make the order slightly non-chronological — that is acceptable, do not re-sort.
 7. If the step closes a PlanItem — **delete** the item from the track's "Next moves" (the completed item is recorded by the WRK in "Completed moves"), renumber the remaining items if necessary. Do not strike through `~~...~~` and do not mark `[x]`. If partial — leave it with a clarification.
 8. If the step created new entities (DEC, RISK, Q, CON, TRK) — update the corresponding `_index.md`.
 

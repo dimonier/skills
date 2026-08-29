@@ -8,6 +8,9 @@ dependencies:
     - A.2.1
     - A.4
     - A.7
+    - A.13
+    - A.15.1
+    - F.6
   coordinates_with:
     - A.3.1
     - A.3.2

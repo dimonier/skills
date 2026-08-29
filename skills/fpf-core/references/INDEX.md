@@ -6,6 +6,7 @@
 | A.1 | Holon Ontic Foundation (U.Holon and Admitted Holon Kinds) | — |
 | A.1.1 | Bounded Model-Use Structure and DDD Bounded-Context Recovery | — |
 | A.1.SCR | Finding the Acting or Changed System | — |
+| A.1.CSD | Discovering Systems That May Bear Consequences | — |
 | A.1.STM | Using the System-Thinking Long Mantra | — |
 | A.2 | System-Role Kinds and Assignments | system-role kind, local System classification, `U.SystemRoleAssignment`, holder System, assignment |
 | A.2.1 | `U.SystemRoleAssignment` - Contextual System-Role Assignment | direct assignment species, holder System, system-role kind, assignment predicate, identity |
@@ -17,9 +18,10 @@
 | A.2.7 | SystemRoleKindRelationStructure - Relations among System-Role Kinds | relations among system-role kinds, `U.SubkindOf`, substitution, incompatibility, joint assignment requirement |
 | A.2.8 | `U.Commitment` (Deontic Commitment Relation) | individual duty, actual bearer, obligation, recommendation-as-duty, prohibition |
 | A.2.8.PER | Granted Permission, Exercise, and Non-Prohibition | weak non-prohibition finding, policy-valid strong grant, matching dated-work exercise, checked non-violation, permission or prohibition conflict |
-| A.2.9 | `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records) | admitted speech-act Work kind, actual communicative occurrence, performing `U.System`, authority-grounding assignment, optional `SpeechActRecord` |
+| A.2.9 | `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records) | named receiving use, response versus achievement, smallest repair or stop, independently admitted speech-act Work, A.13-qualified actual performer |
 | A.3 | Transformer Constitution (Quartet) | — |
 | A.3.1 | `U.Method`: Reusable Way of Doing with Explicit Applicability | — |
+| A.3.1.MR | Candidate-Method Recovery from Work Evidence | — |
 | A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method-description membership, claim-bearing episteme, exact `U.Method` EntityOfConcern, substantive way-of-doing claim, same method versus equivalent descriptions |
 | A.3.3 | U.Dynamics: State-Space and Transition-Law Episteme | dynamics, state space, transition law, observation relation, prediction |
 | A.3.4 | `U.Transformation`: Bounded Change Under Conditions | actual bounded change, changed referent, occurrence boundary, actual subject facts, continuity and reidentification |
@@ -62,15 +64,17 @@
 | A.10 | Evidence Graph Referring (C-4) | relied-on claim, bounded use, claim/result episteme, source publication, carrier |
 | A.11 | Ontological Parsimony | parsimony, composition, non-redundancy, kernel growth, U-kind admission. |
 | A.12 | Acting-Side Externalization and Reflexive Split | — |
-| A.13 | The Agential Role & Agency Spectrum | agential participation, local system-role kind, `U.SystemRoleAssignment`, agency spectrum, autonomy grading |
-| A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | mereology, part-of, ComponentOf, PortionOf, PhaseOf |
-| A.15 | System-Role–Method–Work Alignment | system-role kind, assignment, Method, MethodDescription, WorkPlan |
-| A.15.1 | `U.Work`: Dated Performed Work Occurrence | admitted `U.Work` kind, world-side dated occurrence, actual performer `U.System`, covering `U.SystemRoleAssignment`, `performedUnderAssignment` |
+| A.13 | The Agential Role & Agency Spectrum | exact System, local agential system-role kind and criterion, classification, obtaining assignment, scope |
+| A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | part, member, belongs to, component, constituent |
+| A.15 | System-Role–Method–Work Alignment | A.13 core, system-role kind, independent A.15.1 Work admission, separate later F.6 attribution, same obtaining assignment |
+| A.15.1 | `U.Work`: Dated Performed Work Occurrence | independent `U.Work` admission, world-side dated occurrence, exact performance history, A.13-qualified actual performer `U.System`, enacted Method |
 | A.15.2 | `U.WorkPlan`: The Schedule of Intent | intended-work episteme, present EntityOfConcern, possible future performance, `PlanItem` content, horizon |
 | A.15.3 | `SlotFillingsPlanItem` — Declaration-Local Planned Designation | WorkPlan claim content, intended-performance designator, exact declaration member, direct owner, participant/argument/result meaning |
 | A.15.4 | Work-Relevant Appearance-Based Reliance Repair | appearance-based reliance, exact attempted use, independent required-position rows, governing pattern and direct object, project-side reference |
 | A.15.5 | Work-Entry Readiness and Full-Kit Preparation | work-entry readiness, full-kit condition, readiness before work entry, commitment disposition, prospective permission inputs |
 | A.15.6 | Project, Process, and Case Recovery through Work, Method, and Transformation | — |
+| A.15.7 | Situation-Responsive Work Steering and Next-Action Selection | — |
+| A.15.8 | Work-Performance Configuration and Recovery Testing | — |
 | A.15.PROD | Production Work, Entity-Identity Inception, and Production Completion Recovery | — |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
 | A.16.0 | `U.LanguageStateMoveTrajectory` - Optional trajectory-account normal form over the language-state `U.CharacteristicSpace` | trajectory account, lineage, fork, merge, supersedes |
@@ -111,7 +115,7 @@
 | B.3 | Trust and Assurance Calculus | — |
 | B.3.3 | Assurance Subtypes & Levels | assurance levels, L0-L2, TA, VA, LA |
 | B.3.4 | Evidence Decay & Epistemic Debt | evidence aging, decay, freshness, epistemic debt, stale data. |
-| B.3.5 | Working-Model Relations & Grounding (CT2R-LOG) | grounding, constructive trace, working model, assurance layer, CT2R |
+| B.3.5 | Working-Model Relations & Grounding (CT2R-LOG) | — |
 | B.4 | Canonical Evolution Loop | evolution loop, DesignRunTag feedback, observe-notice-stabilize-route, drift repair, knowledge refinement |
 | B.4.1 | Observe -> Notice -> Stabilize -> Route | routed cue set, route plurality, route selection, pre-abductive seam, task-family specialization route. |
 | B.5 | Canonical Reasoning Cycle | reasoning, problem-solving, Abduction-Deduction-Induction, scientific method. |
@@ -140,6 +144,7 @@
 | C.3.5 | `KindAT` — Intentional Abstraction Facet for Kinds (K0…K3) | KindAT, K0-K3, editorial facet, declaration planning, assurance planning. |
 | C.3.A | Typed Guard Macros for Kinds + USM (Annex) | declaration compatibility, exact candidate judgment, true/false/unknown, guard refusal, regulatory |
 | C.11 | Decision Theory (Decsn-CAL) | decision theory, DecisionSubject, OptionSet, comparison basis, ChoiceRule |
+| C.11.CRC | Configuration-Relative Contribution Comparison | finite change, current configuration S0, candidate configuration S1, result and resource vectors, interactions |
 | C.13 | Constructional Mereology (Compose‑CAL) | mereology, part-whole, composition, sum, set |
 | C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurand, measurement subject, Characteristic, Scale, Level/Coordinate |
 | C.16.P | Characteristic and Scale Precision Restoration | — |
@@ -224,6 +229,7 @@
 | E.9 | Design-Rationale Record (DRR) Method | — |
 | E.9.DA | DRR Decision-Adequacy Evaluation CharacteristicSpace | — |
 | E.10 | Unified Lexical Rules for FPF | — |
+| E.10.LRN | Recovering What “Learning” Means in the Current Claim | learn, learning, learned, taught, trained |
 | E.10.MOVE | Move and Readiness Wording Precision Restoration | — |
 | E.10.ARCH | Wording-Use Ontological Precision Restoration Architecture | — |
 | E.10.ROLE | Recovering What “Role” Means in the Current Claim | ambiguous role wording, system-role kind, assignment, relation participant, declaration slot |
@@ -271,7 +277,7 @@
 | F.3 | Source-Local Sense Clustering | source expression, LocalSenseClaim, effective ReferenceScheme, alias consolidation, counterexample |
 | F.4 | SystemRoleKindDescription — Describing an Exact System-Role Kind | system-role-kind description, local kind, classification criterion, effective scheme, description episteme |
 | F.5 | Naming Discipline for U-kind Names and SystemRoleKindDescription Labels | U-kind name, system-role-kind name, `SystemRoleKindDescription` label, Plain and Tech designations, local meaning |
-| F.6 | SystemRoleAssignment and Performed-Work Attribution Check | Work attribution, performer System, exact assignment occurrence, holder equality, temporal coverage |
+| F.6 | SystemRoleAssignment and Performed-Work Attribution Check | already admitted `U.Work`, complete post-admission A.13/A.15.1/F.6 basis, exact Work-assignment relation, same obtaining A.13 assignment, direct case fact |
 | F.7 | Concept-Set Table Construction | exact local claim, optional SchemeSenseCell, comparison surface, obtaining relation, direction |
 | F.8 | Mint-or-Reuse Decision | subject before name, governed value or relation, proposed naming use, local phrase, designation |
 | F.9 | Alignment and Bridge across Contexts | exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections, relation-semantic profile, obtaining Bridge |

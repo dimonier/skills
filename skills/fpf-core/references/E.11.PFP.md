@@ -71,7 +71,7 @@ For an all-in-one Markdown publication, preserve the product-declared compact op
 
 The title and Readme H1 are separate product declarations. A checker receives both exact strings; it does not derive the Readme H1 by concatenating `Readme` to a longer carrier title. The common profile does not insert a metadata block, edition record, warning, or other lines into a compact predecessor opening merely to make products look alike. A product-specific builder may pin a compact front shape, including the line at which the ToC begins, when that shape protects an established reader entry.
 
-Between the title and ToC, retain only the shortest public cues already justified by product use. An exact edition designation or locator belongs there only when its possible values change the reader's next use, reliance, return, language, dependency, or access choice. When such a cue is present, project it from one product-owned edition or relation record; do not maintain a second editable copy. Add authorship, credit, date, lifecycle, dependency, language, or access only under the same next-working-move test. A date is a cue, not edition identity, and a visible lifecycle word is not evidence of acceptance, currentness, maintenance, availability, access, or authorization.
+Between the title and ToC, retain only the shortest public cues already justified by product use. An exact edition designation or locator belongs there only when its possible values change the reader's next use, reliance, return, language, dependency, or access choice. When such a cue is present, project it from one product-owned edition or relation record; do not maintain a second editable copy. Add authorship, credit, date, dependency, language, access, or a product-declared maintenance status, support window, or currentness window only under the same next-working-move test. A date is a cue, not edition identity, and a visible status or window is not evidence of acceptance, currentness, maintenance, availability, access, or authorization.
 
 Reader front matter extends from the opening title through the Readme and Preface up to the first pattern-body collection H1. It must not contain campaign keys; candidate, review, or result identifiers; local disk or repository paths; source or candidate digests; Git commits or blobs; generated comments; build commands; machine warnings; or "do not edit" instructions. Detailed edition, provenance, rebuildability, and maintenance records remain adjacent maintainer evidence or product-declared reference-tail material unless a separately selected public use justifies a reader-facing projection.
 
@@ -87,6 +87,10 @@ Place the one authoritative logical pattern index after those public-unit entrie
 
 Across all segments, every pattern body has exactly one row, every row resolves to exactly one body, and no PatternID appears twice. A Part label groups rows for navigation; it is not a pattern row, a semantic parent, or another index.
 
+PatternID, title, Part, and `§` position remain separate even when one row displays them together. PatternID supplies the stable public address within the named framework; the title explains the pattern; Part and `§` show where the current edition places it. Within each Part, the ToC rows and pattern bodies follow the same order. That order need not ascend by PatternID, and moving or retitling a pattern does not by itself change its PatternID.
+
+When the surrounding text does not already identify the framework, name the framework together with the PatternID. To select the body published in one edition, also name that framework edition. For a DPF, `E.4.DPF` supplies the choice of reference code and local locator, and the continuity decision; this profile only makes the selected distinctions visible in the publication.
+
 Reserve `Support index — <lookup job>` for a secondary pattern lookup. Its exact header is:
 
 ```text
@@ -95,21 +99,57 @@ Reserve `Support index — <lookup job>` for a secondary pattern lookup. Its exa
 
 Ordinary relation, source-return, maintenance, and reference tables may cite PatternIDs under truthful headings and other complete headers. Do not infer that they are indexes from their cell values. Reject a second `# Table of Contents`, a `Pattern Index` heading for the same job, an authoritative header outside the authoritative ToC region, or a support heading and header that do not occur together. Public-unit entries are navigation inside the one ToC, not another pattern catalogue.
 
-#### E.11.PFP:4.3 - Give each practical entry five recognizable fields
+#### E.11.PFP:4.3 - Keep one practical-entry set and two visible forms
 
-Start the Readme body with `## Practical entries`. Each `###` entry uses these fields in order:
+Start the Readme body with `## Practical entries`. The product maintains one declaration for every selectable example and assigns each key exactly one public form: ordinary practical entry or Practical-Use Card. Each declared key occurs once, at H3 for an ordinary entry or at H4 for a card. A compact locator may precede or follow these examples, but it is a finding aid rather than another editable entry set.
 
-1. `Situation`;
-2. `Question`;
-3. `First useful result or honest blocker`;
-4. `Start with`; and
-5. `Stop or return`.
+The Readme says plainly that its entries are selected examples, not a catalogue or coverage boundary. It tells the reader to bring the actual question and to use the product's index, direct patterns, or another finding aid when no example fits. The selected examples should make two uses visible without implying that every question belongs to either displayed case:
 
-`Start with` resolves to one current PatternID or a named small route. `Stop or return` gives the ordinary non-use boundary, the sufficient first-result boundary, or the exact missing input. Keep richer branches, tests, and boundary notes when they help the reader; the five fields are a recognition layer, not a ceiling on useful content.
+- an ordinary entry shows how one direct pattern or one bounded direct route can answer a comparatively simple difficulty without a mantra; and
+- a Practical-Use Card shows a recurring complex difficulty whose useful answer spans several direct pattern contributions and whose long dependency is easier to retain with a mantra.
 
-An independently published Readme starts with its exact product-declared Readme H1. If identifying the edition outside the surrounding carrier changes use or return, follow that H1 with the same shortest public cue and then emit `## Practical entries`; otherwise do not duplicate an edition or maintenance record merely to make the file look complete. The standalone Readme is another carrier of the same edition form, not another edition.
+Use this ordinary-entry form:
 
-This profile keeps the structural keys in canonical English. A translation may translate surrounding prose and values and may add a human-readable gloss, but it does not silently replace or reorder the keys. A translated structural-key profile needs a separately selected recovery and checking rule. Test the translated and low-tool carrier with actual readers and navigation tools rather than treating English parser success as accessibility evidence.
+```text
+### <ordinary-entry key> — <plain title>
+
+- **Situation:** <recognizable working situation>
+- **Question:** <practical question>
+- **First useful result or honest blocker:** <smallest useful result or exact blocker>
+- **Start with:** <direct PatternID or bounded plausible set>
+- **Stop or return:** <ordinary stop, wrong-turn return, or reopen condition>
+```
+
+When the product selects at least one card, place all selected cards under one group:
+
+```text
+### Practical-Use Cards
+
+<plain statement that these are selected examples of extended cross-pattern use, not a catalogue or prescribed workflow>
+
+#### <card key> — <plain title>
+
+- **Situation:** <recognizable recurring difficulty>
+- **Question:** <practical question>
+- **First useful result or honest blocker:** <smallest useful result or exact blocker>
+- **Mantra:** <plain repeatable wording that retains the cross-pattern dependency>
+- **Start with:** <direct PatternIDs or bounded route>
+- **Stop or return:** <ordinary stop, wrong-turn return, or reopen condition>
+
+##### Expansion for <card key>
+
+<optional explanation only>
+```
+
+`### Practical-Use Cards` is a group inside the one `Practical entries` set, not another front door or selectable key. Omit the group when the product selects no cards. The card's canonical structural field is `Mantra`; its value begins directly with the repeatable wording and needs no `Local`/`Long` prefix. A local reminder for one direct pattern or bounded result may remain in that pattern, an ordinary entry, or other teaching material, but it does not by itself select the richer card form. `E.11` owns this content decision.
+
+Every selectable ordinary entry and card shares one product-wide semantic-key namespace. The product declaration assigns each key one form, so a key cannot occur as both H3 and H4. An H5 expansion repeats its enclosing card key only to attach optional explanation; it is not another selectable occurrence. A card has zero or one expansion. Its compact portion ends after `Stop or return`; the expansion ends at the next H4-or-higher heading or the end of the group. The expansion may explain branch choices, examples, or exact result support, but cannot contain another H4 card or H5 expansion.
+
+The product-language application declares one deterministic reading-burden measure and two maxima: one for the mantra and one for the complete compact card. The measure must suit the publication language; whitespace counting is suitable only where it meaningfully measures reading burden. The maxima protect scanability and recall. They are not targets, proof of reader value, a fixed card count, or authority to delete a choice-changing distinction. Content that a compact card cannot carry truthfully returns to the direct patterns or, only when first choice needs it, the same-key expansion.
+
+Applying this grammar does not select a card, prove that the examples cover the product, or show that every cited pattern is needed in a particular case. `E.11` defines the direct-entry/card comparison, cross-pattern mnemonic-gain test, and non-exhaustive discoverability purpose. The product-specific E.4 pattern declares its selected example keys, forms, reading-burden measure, and two limits. A validator consumes those values and checks structure; it does not decide content value.
+
+This profile keeps structural field keys in canonical English. A translation may translate surrounding prose and values and may add a human-readable gloss, but it does not silently replace or reorder the field keys. A translated structural-key profile needs a separately selected recovery and checking rule. Test translated and low-tool publications with actual readers and navigation tools rather than treating English parser success as accessibility evidence.
 
 #### E.11.PFP:4.4 - Keep support units and adjacent products distinct
 
@@ -131,7 +171,7 @@ The common form check handles only recoverable syntax and projection agreement:
 - the required H1 sequence plus the product-declared body and reference tail;
 - product-declared Readme and Preface entries in the established ToC grammar, before the logical pattern index, with no generic rival mini-menu;
 - authoritative index segments, aggregate row/body bijection, duplicates, and reserved support-index grammar;
-- the Readme heading and five ordered fields; and
+- the Readme's one practical-entry set; its explicit examples-not-coverage statement; the product's declaration of example keys and forms; exactly one H3 ordinary entry or H4 card per declared key; five ordered ordinary-entry fields; a non-empty card-group explanation; six ordered card fields; the shared reading-burden measure and mantra/card limits; and zero or one same-key H5 expansion with the declared boundary; and
 - equality and source agreement of every optional public cue that is actually projected.
 
 For Markdown grouping, one canonical bounded invocation runs the focused source-hazard guard and a parser-backed render together. It returns the rendered heading outline and block, list, table, code, and link structure for inspection while the candidate is already loaded. The agent does not discover a second renderer or reread the same file merely to close that form question. A clean mechanical result supports but does not replace the reader-visible judgement.
@@ -142,9 +182,11 @@ Neither check decides framework scale from pattern count. Report `pattern_count 
 
 #### E.11.PFP:4.6 - Return the form result without overclaiming
 
-Return the exact framework edition, edition-record source, carriers checked, form units found, public-cue agreement, logical-index result, practical-entry result, product-specific tail checked, and every mismatch or unresolved ref. Say separately whether the edition, carrier, publication occurrence, availability, currentness, or framework adequacy has an applicable result. Do not infer those claims from form conformance.
+Return the exact framework edition, edition-record source, carriers checked, form units found, public-cue agreement, logical-index result, practical-entry declaration and form result, product-specific tail checked, and every mismatch or unresolved ref. Say separately whether the edition, carrier, publication occurrence, availability, currentness, or framework adequacy has an applicable result. Do not infer those claims or the truthfulness of card selection from form conformance.
 
 ### E.11.PFP:5 - Archetypal Grounding
+
+**DPF with non-ascending pattern addresses.** A Systems Engineering DPF edition orders `SYSE.1`, `SYSE.16`, `SYSE.17`, and `SYSE.2` because that sequence helps readers. Its ToC rows and H2 bodies follow the same order. The `§` column reports each current position; it is not part of the PatternID. A later move changes the rows and bodies together without renumbering a continuing pattern. A citation outside the carrier says `Systems Engineering DPF, SYSE.16`; one intended to recover the earlier body also names the edition.
 
 **DPF, all-in-one and low-tool.** A horticulture DPF is distributed as one Markdown file and a printed copy. Both open with the public framework name and `Edition: Horticulture DPF 2.1`; the Markdown line links to a public edition page and the print line gives the same public address. The ToC, practical entries, Preface, four pattern bodies, coverage account, and refresh note follow. Authorship, source provenance, and change history remain reachable after the bodies. Readers can identify and return to the edition without crossing build records before their first working question.
 
@@ -166,7 +208,7 @@ Return the exact framework edition, edition-record source, carriers checked, for
 | Arch | A file, website, or combined package is treated as the product or edition, or every nearby result is forced into the framework form. | Name edition, publication form, carrier, occurrence, support unit, and adjacent product separately; apply this profile only to framework constituents. |
 | Onto-Epist | A date, filename, digest, or editable front block becomes edition identity or evidence that a relation obtains. | Use one stable public designation and edition-record return; project only exact facts from their own records. |
 | Prag | Administrative completeness displaces the reader's first question, or an optional cue appears without changing use. | Put the smallest useful edition cue first, then the ToC and practical entries; require a named reader decision for every extra front cue. |
-| Did | Predictable labels become rigid English-only machinery, or terse navigation hides the patterns needed to act. | Keep recognizable headings and five entry fields, retain useful detail, and test translations, low-tool carriers, headings, labels, and navigation with their intended readers. |
+| Did | Predictable labels become rigid English-only machinery, terse navigation hides the patterns needed to act, examples read as a coverage catalogue, or compactness deletes a choice-changing distinction. | Keep recognizable headings, the five-field ordinary form and six-field card form, explicit non-exhaustive wording, one product-language burden measure with mantra/card maxima, useful detail, and direct-pattern return; test translations, low-tool carriers, navigation, and mnemonic recall with intended readers. |
 
 ### E.11.PFP:7 - Conformance Checklist
 
@@ -178,9 +220,12 @@ Return the exact framework edition, edition-record source, carriers checked, for
 | CC-PFP.4 Extra cues earn their place | Every cue before the ToC is projected from its exact record and changes a named reader decision or action; no common optional field is required merely for completeness. |
 | CC-PFP.5 Development state excluded | Reader front matter contains no campaign or candidate identifier, local path, digest, Git identity, generated comment, build command, machine warning, or maintainer instruction. |
 | CC-PFP.6 Entries and order recognizable | The title, compact cues, ToC, Readme and Preface entries in the product's established ToC grammar, Readme, Preface, pattern collection, and product-declared reference tail occur in the selected order; every declared target resolves where links are used. |
-| CC-PFP.7 Logical index singular | One logical index may use several labelled segments, but aggregate row/body membership is bijective and PatternIDs are unique. |
+| CC-PFP.7 Logical index and order truthful | One logical index may use several labelled segments, but every pattern row resolves to one body, every body has one row, and PatternIDs are unique within the named framework. PatternID is separate from title, Part, and `§` position; ToC and body order agree within each Part even when PatternIDs are non-ascending. When the surrounding text does not identify the framework, a citation names the framework together with the PatternID; a citation selecting the body published in one edition also names that edition. |
 | CC-PFP.8 Other tables remain truthful | Only the closed authoritative and support-index grammars are treated as indexes; relation and reference tables are not reclassified from cell values. |
-| CC-PFP.9 Practical entry usable | Every entry gives the five fields in order and retains any richer content needed for the first useful result and stop boundary. |
+| CC-PFP.9 One entry set and declaration | One `Practical entries` set contains every selectable ordinary entry and selected card. One declaration for the product assigns every key exactly one form; each key has exactly one selectable H3 ordinary-entry or H4 card occurrence, and no rival key list or entry set exists. |
+| CC-PFP.9a Ordinary entry usable | Every ordinary entry gives the five fields in order and retains any richer content needed for the first useful result and stop boundary. No mantra is forced onto a locator or ordinary entry. |
+| CC-PFP.9b Selected card usable | Every selected card gives the six fields in order, begins its `Mantra` value directly with repeatable plain wording, preserves a real path through several direct pattern contributions, returns to those patterns, and has zero or one same-key H5 expansion outside the compact card. Applying the form is not evidence that the card should have been selected. |
+| CC-PFP.9c Product-language guard shared | The product declares one measurable language-appropriate reading-burden rule plus mantra and compact-card maxima, and authoring and validation consume the same values. Canonical English field keys do not make whitespace limits universal. The limits check compactness; they neither select cards nor prove example coverage. |
 | CC-PFP.10 Readme projection restrained | A standalone Readme repeats a short edition cue only when circulating without it would change use or return; it does not duplicate the edition or rebuildability record. |
 | CC-PFP.11 Product boundary preserved | Framework support units share the declared framework boundary; independently useful adjacent products retain their own identity, form, access, and maintenance. |
 | CC-PFP.12 Combined carrier neutral | Every constituent product keeps its own form and identity; E.11.PFP applies only to framework constituents. |
@@ -192,34 +237,39 @@ Return the exact framework edition, edition-record source, carriers checked, for
 
 | Anti-pattern | What fails | Repair |
 | --- | --- | --- |
-| Complete record before entry | Author, assistance, date, lifecycle, dependency, provenance, or the whole edition record appears before the ToC merely because it exists. | Preserve the product's compact opening; project only cues whose possible values change a named reader move and keep the full record in maintainer evidence or the justified reference tail. |
+| Complete record before entry | A maintainer detail—such as authorship, assistance, date, dependency, provenance, a product-declared maintenance status, support window, or currentness window—or the whole edition record appears before the ToC merely because it exists. | Preserve the product's compact opening; project only cues whose possible values change a named reader move and keep the full record in maintainer evidence or the justified reference tail. |
 | Development state as public identity | Candidate keys, local paths, digests, commits, blobs, generated comments, or machine warnings describe the publication to readers. | Keep them in builder or maintainer evidence; publish a stable designation and public return. |
 | Date as edition identity | Two editions on one day become indistinguishable. | Use a stable public designation linked to the exact edition record; show a date only when it changes reader use. |
 | Fresh navigation grammar | A generic mini-menu is inserted ahead of an established ToC, duplicating units and making one product unlike itself. | Extend the product's existing non-pattern ToC segment and make the checker recognize that exact grammar. |
 | Flat-index compulsion | Visible Part grouping is removed merely to satisfy one-table code. | Check one logical index across consistently headed, uniquely labelled segments. |
 | Index by cell guess | A relation or source-return table is rejected because it cites PatternIDs and titles. | Recognize only the closed authoritative and support-index grammars. |
+| Position used as PatternID | Patterns are renumbered when the ToC changes, or identifier order is read as dependency, Method order, or semantic hierarchy. | Keep PatternID stable while the pattern continues, show current `§` position separately, keep ToC and body order aligned, and state every substantive relation in its own field or claim. |
 | Readme as another edition | The standalone Readme mints its own designation or copies a full editable record. | Repeat only the shortest cue whose absence would change use or return when the Readme circulates independently; never duplicate the edition or rebuildability record. |
 | Outside the pattern set means another product | A Preface, coverage account, or refresh note is split into a product with no independent use. | Keep it as a named support unit when it shares the framework boundary. |
 | Shared use means one product | A cross-framework registry or service is absorbed into one DPF. | Treat shared use as a prompt to inspect the boundary; preserve an independent product when its own use and maintenance make that useful. |
 | Combined carrier merges products | A framework and catalogue receive one identity and one framework index. | Keep the outer carrier neutral and each constituent in its own selected form. |
-| Parser pass as accessibility | Canonical English labels parse, so translation, assistive navigation, low-tool return, and cold-reader use are assumed. | Test the actual carrier and reader route; repair headings, labels, links, and projections without weakening source return. |
+| Parser pass as accessibility | Canonical English labels parse, so translation, assistive navigation, low-tool return, and cold-reader use are assumed. | Test the actual carrier and reader route; repair headings, labels, links, projections, and mnemonic wording without weakening source return. |
+| Rival entry sets or key registries | Ordinary entries and cards are maintained as separate front doors or the same key appears once in each list. | Keep one `Practical entries` set and one declaration for the product that assigns every selectable key one form and one occurrence. |
+| Card classification by syntax | An H4, six fields, a short body, or a historical label is treated as proof that the reader needs a card. | Use `E.11` to compare the same truthful content without a mantra; the form checker only verifies the selected form. |
+| One candidate's labels, example inventory, and limits made universal | Another product must publish the same topics or another language must use one candidate's labels and whitespace limits even when they do not support its readers. | Preserve the shared field order and direct-versus-cross-pattern distinction, but let each product select its non-exhaustive examples and declare one suitable measure with mantra/card maxima. |
 
 ### E.11.PFP:9 - Consequences
 
-Readers retain each product's compact familiar opening and find Readme and Preface in the ToC grammar already used by that product, before the one authoritative pattern index. Optional public cues remain recoverable from one source when they change use, while development and rebuildability records stay out of reader front matter. Builders gain checks that fail on missing public-unit entries, structural, projection, and development-state drift without guessing table meaning, inventing a rival navigation block, or forcing a second renderer-discovery pass.
+Readers retain each product's compact familiar opening and find Readme and Preface in the ToC grammar already used by that product, before the one authoritative pattern index. Inside the Readme they see one explicitly non-exhaustive practical-entry set: ordinary examples show cheap direct use, while only honestly selected cross-pattern cards add a visible mantra and an optional bounded expansion. Optional public cues remain recoverable from one source when they change use, while development and rebuildability records stay out of reader front matter. Builders gain checks that fail on missing public-unit entries, duplicate or cross-form keys, card grammar, structural, projection, and development-state drift without guessing table meaning, deciding card value or coverage, inventing a rival navigation block, or forcing a second renderer-discovery pass.
 
 ### E.11.PFP:10 - Rationale
 
-The shared rule fixes only the recognition points whose reuse pays across FPF, DPF, and LPF: a compact product-declared opening, Readme and Preface represented in the established ToC grammar, one logical pattern index, practical-entry fields, truthful product boundaries, and recognizable major units. It leaves titles, optional public cues, the exact product-native ToC segment, front line shape, and reference tails with the product-specific rule because their value depends on the reader's choice. Limiting the profile this way preserves deterministic checking without turning one candidate's navigation experiment or maintenance record into a universal reader experience.
+The shared rule fixes only the recognition points whose reuse pays across FPF, DPF, and LPF: a compact product-declared opening, Readme and Preface represented in the established ToC grammar, one logical pattern index, one explicitly non-exhaustive practical-entry set with five-field ordinary examples and six-field selected cards, truthful product boundaries, and recognizable major units. It leaves titles, optional public cues, the exact product-native ToC segment, example selection, the reading-burden measure and two limits, front line shape, and reference tails with the product-specific rule because their value depends on the reader's choice and publication language. Limiting the profile this way preserves deterministic checking without turning one product's navigation experiment, example inventory, or maintenance record into a universal reader experience.
 
 ### E.11.PFP:11 - SoTA-Echoing
 
 | Current source or practice | Qualification and by-value decision | Contribution adopted here | Shortcut rejected and receiving loci |
 | --- | --- | --- | --- |
+| Current FPF `E.4.DPF:4.0.3` and its bounded `E.4.DPF:11` source comparison | Current FPF decision checked 2026-08-27. **Reuse by value:** E.4.DPF decides the DPF code, local locator, practical-answer continuity, and migration return; its source row qualifies W3C persistence and series/version guidance plus historical DITA local-identifier evidence. This profile does not repeat or extend that decision. | Section 4.2 and `CC-PFP.7` display PatternID, title, Part, current position, the framework designation when needed, and edition-specific body reference distinctly while leaving continuity with E.4.DPF. | Identifier syntax, numeric order, adjacency, Part, and form conformance are not identity evidence. The W3C/OASIS narrative is not duplicated here. Reopen only the affected display or citation rule if E.4.DPF changes or a real publication cannot retain the distinction. |
 | [ISO/IEC/IEEE 26514:2022, *Design and development of information for users*](https://www.iso.org/standard/77451.html) | Current published international standard checked 2026-08-22. **Adapt:** retain its user-needs, audience/task, presentation, packaging, version/change-control, and maintenance concerns without importing a universal document template. | Start from reader need; keep public information identifiable, presentable in different media, and maintainable across editions. | A complete maintainer record is not automatically the best front. Applied in 4.1, 4.3, 4.5, Grounding, and CC-PFP.2-5/10/14. |
 | [Diátaxis](https://diataxis.fr/start-here/) and its [how-to guidance](https://diataxis.fr/how-to-guides/) | Current maintained documentation architecture checked 2026-08-22. **Adapt:** organize entry around what the reader is trying to do and keep action-guiding routes concrete; do not force its four document modes into FPF product kinds. | Practical entries lead from situation and question to a first useful result, direct route, and stop or return; optional detail earns its place by use. | A metadata-first home page and one rigid document taxonomy are both rejected. Applied in 4.1, 4.3, Grounding, CC-PFP.2/4/9, and Consequences. |
 | [W3C Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/), especially multiple ways, headings and labels, and consistent navigation | Current W3C Recommendation checked 2026-08-22. **Adopt:** descriptive headings, consistent navigation, and more than one usable finding route where the carrier permits it. **Adapt:** the Markdown profile remains one source form, not a claim of full WCAG conformance. | Stable major headings, one authoritative ToC, practical entries, truthful labels, and explicit testing of translated and low-tool projections. | Parser success or canonical English alone is not accessibility. Applied in 4.2-4.5, Bias-Did, CC-PFP.7-10/14-15, and the accessibility anti-pattern. |
-| Current FPF `E.11`, `E.17`, and `E.24.PUB` | Current local pattern-language architecture. **Adopt:** working-question entry, bounded publication projection with source return, and separation of edition, form, carrier, occurrence, access, and use. | The shared form preserves practical entry and exact edition return while product-specific patterns keep body, reference, publication, and access decisions. | A front door does not replace pattern bodies, and a form pass does not establish product, publication, or currentness claims. Applied throughout 1, 4.3-4.6, Grounding, and Relations. |
+| Current FPF `E.11` mnemonic-selection evidence; the seminar's fifteen historical question examples; current FPF ordinary and card examples; the LPF question locator; the direct-answer DPF Suite Guide use; `E.17`; and `E.24.PUB` | Current local use comparison checked 2026-08-25. **Adopt:** E.11 separates cheap direct use from selected cross-pattern cards and selects a card by mnemonic gain. The historical seminar questions test preservation but do not set a quota or catalogue. **Qualify:** these examples and the documentation and accessibility sources above do not establish universal headings, measures, numerical limits, or topic inventories. | `E.11.PFP:4.3` and `CC-PFP.9a-c` keep one entry set, use H3 for ordinary examples and H4 for selected cards, require explicit examples-not-coverage wording, give cards six visible fields, put optional detail in one same-key H5 expansion, and make one reading-burden measure plus mantra/card maxima product-language inputs shared by authors and validators. | A six-field form for every entry, a rival card front door, a local reminder promoted to a card, syntax as proof of mnemonic gain, example inventory as coverage, and universal whitespace limits are rejected. Reopen the smallest affected form or check if actual translated, assistive, low-tool, or cold-reader use shows that the direct/card distinction, field order, expansion boundary, or burden guard prevents use. |
 
 Reopen this source use when a newer applicable standard or repeated FPF-family use shows that the profile no longer supports cold entry, edition return, segmented navigation, translation, accessibility, or product separation without avoidable reader or maintainer burden.
 

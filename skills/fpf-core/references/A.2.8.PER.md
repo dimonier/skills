@@ -13,6 +13,7 @@ dependencies:
   coordinates_with:
     - A.2.8
     - A.2.9
+    - A.13
     - F.6
     - A.6
     - A.6.B

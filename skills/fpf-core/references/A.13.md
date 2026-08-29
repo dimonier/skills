@@ -3,18 +3,25 @@ id: A.13
 title: "The Agential Role & Agency Spectrum"
 status: Stable
 keywords:
-  - agential participation
-  - "local system-role kind"
-  - "`U.SystemRoleAssignment`"
-  - agency spectrum
-  - autonomy grading
-  - "substrate-neutral autonomy."
+  - exact System
+  - "local agential system-role kind and criterion"
+  - classification
+  - obtaining assignment
+  - scope
+  - working situation
+  - window
+  - "evidence-backed core"
+  - conditional characteristic profile
+  - autonomy grading.
 dependencies:
   builds_on:
     - A.2
     - A.2.1
     - A.12
   coordinates_with:
+    - A.15
+    - A.15.1
+    - F.6
     - A.17
     - A.18
     - A.19
