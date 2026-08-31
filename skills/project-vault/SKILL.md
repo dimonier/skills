@@ -53,6 +53,10 @@ Auxiliary:
 3. **Q Registry in Context:** before filling, read active rows in `project-vault/open-questions/_index.md` (`status: open`).
 4. Fill digest only with what is verifiable from the source: context, links to created atomic files (DEC, Q, RISK, CON), reconciliation against Q registry. Decision/question/risk wording — only in atomic files, never copied into digest.
 5. For **key** decisions: create/update `project-vault/decisions/DEC-NNNN-slug.md` using customized `project-vault/decisions/_decision_template.md` or otherwise default template `templates/decision.md`; `accepted` only upon explicit approval in the source.
+   - Fill **all** sections of the DEC template. Do not invent facts absent from the source; if something is unknown / not discussed / not applicable — state that in one or two words («не обсуждалось» / «неизвестно» / «не применимо»).
+   - Set `decision_type` (one of `adr` | `org` | `strategy` | `scope` | `process` | `procurement` | `product`); fill `characteristic` only for `decision_type: adr`.
+   - If «Рассмотренные варианты» lists ≥2 options — fill «Сравнение вариантов» (criteria + result per option). If one option — «вариант один».
+   - Always fill «Условия пересмотра» (revisit conditions); set `revisit_by` or note it is open-ended.
 6. Execute common steps below.
 
 **When input is insufficient:**
