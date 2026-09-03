@@ -5,7 +5,7 @@ closed_at: "YYYY-MM-DD"
 resolved_by:
   - ../../../sources/digests/YYYY-MM-DD_slug.md
 knowledge_refs:
-  - path: ../../../state/overview.md
+  - path: ../../../sources/digests/YYYY-MM-DD_slug.md
     note: "Pointer to section or bullet"
 claim_type: fact
 sources:

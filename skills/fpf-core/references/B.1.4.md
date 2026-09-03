@@ -87,7 +87,8 @@ ContextTemporalAggregation@Context:
   relatedWholeReidentificationRefs?
   evidenceOrSourceRefs
   admissibleUse
-  nonAdmissibleOverread
+  stopOrReturnCondition
+  groundedNonAdmissibleOverread?
   strongerSourceReturnCondition
 ```
 

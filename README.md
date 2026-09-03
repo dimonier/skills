@@ -26,25 +26,30 @@ The skills transform the AI into a specialized assistant that follows proven met
 
 ## Table of Contents
 
-- [Frameworks \& Methodologies](#frameworks--methodologies)
-  - [First Principles Framework (FPF Core)](#-first-principles-framework-fpf-core)
-  - [FPF Narrative Prose](#-fpf-narrative-prose)
-  - [FPF Literacy \& DPF Authoring](#-fpf-literacy--dpf-authoring)
-  - [Layered Framework Workspace Architecture](#-layered-framework-workspace-architecture)
-- [Business Analysis \& Requirements Engineering](#business-analysis--requirements-engineering)
-  - [Business Analysis \& Requirements Engineering](#-business-analysis--requirements-engineering)
-- [Text Analysis \& Writing](#text-analysis--writing)
-  - [Reverse-Engineering Texts](#-reverse-engineering-texts)
-- [Document Processing](#document-processing)
-  - [PDF to Markdown (pdf2md)](#-pdf-to-markdown-pdf2md)
-- [Development Tools](#development-tools)
-  - [FPF Sync](#-fpf-sync)
-  - [Agent Skill Builder](#-agent-skill-builder)
-- [Project Management](#project-management)
-  - [Project Vault](#-project-vault)
-- [Space Planning \& Organization](#space-planning--organization)
-  - [Bathroom Planner](#-bathroom-planner)
-  - [Wardrobe Planner](#-wardrobe-planner)
+- [Custom Agent Skills Collection](#custom-agent-skills-collection)
+  - [How to Use](#how-to-use)
+    - [Installation](#installation)
+    - [Usage](#usage)
+  - [Table of Contents](#table-of-contents)
+  - [Frameworks \& Methodologies](#frameworks--methodologies)
+    - [🧠 First Principles Framework (FPF Core)](#-first-principles-framework-fpf-core)
+    - [⚡ FPF Narrative Prose](#-fpf-narrative-prose)
+    - [📖 Pattern Language as Agent Skill (PLAS)](#-pattern-language-as-agent-skill-plas)
+    - [🏗️ Layered Framework Workspace Architecture](#️-layered-framework-workspace-architecture)
+  - [Business Analysis \& Requirements Engineering](#business-analysis--requirements-engineering)
+    - [📋 Business Analysis \& Requirements Engineering](#-business-analysis--requirements-engineering)
+  - [Text Analysis \& Writing](#text-analysis--writing)
+    - [🔍 Reverse-Engineering Texts](#-reverse-engineering-texts)
+  - [Document Processing](#document-processing)
+    - [📄 PDF to Markdown (pdf2md)](#-pdf-to-markdown-pdf2md)
+  - [Development Tools](#development-tools)
+    - [🔄 FPF Sync](#-fpf-sync)
+    - [🔧 Agent Skill Builder](#-agent-skill-builder)
+  - [Project Management](#project-management)
+    - [🗂️ Project Vault](#️-project-vault)
+  - [Space Planning \& Organization](#space-planning--organization)
+    - [🚿 Bathroom Planner](#-bathroom-planner)
+    - [🧥 Wardrobe Planner](#-wardrobe-planner)
 
 
 ## Frameworks & Methodologies
@@ -53,7 +58,7 @@ Structured reasoning frameworks and domain-specific methodologies for systematic
 
 ### 🧠 First Principles Framework (FPF Core)
 
-Root framework providing auditable thinking, evidence chains, and systematic problem-solving patterns. Serves as the governing foundation for all DPF and LPF skills.
+Root framework and pattern library providing auditable thinking, evidence chains, and systematic problem-solving patterns. Serves as the governing foundation for all DPF and LPF skills. Patterns are loaded individually from `references/` (pattern reference files + INDEX + context sections) via a fast index — never the full spec.
 
 **Use when:**
 - Guiding reasoning on engineering, research, and management tasks
@@ -81,25 +86,24 @@ Generates compact, unambiguous FPF-structured output at F4-F5 formality level us
 
 **Location:** `skills/fpf-narrative/`
 
-### 📖 FPF Literacy & DPF Authoring
+### 📖 Pattern Language as Agent Skill (PLAS)
 
-Helps agents understand the FPF/DPF/LPF stack, create new domain practical frameworks (DPFs), load domain knowledge, distinguish FPF-grounded answers from generic AI responses, and choose the right carrier for publication.
+Author and improve a Domain Principle Framework (DPF) or Local Practices Framework (LPF) directly in Agent-skill form (SKILL.md + references/). The edition carrier is the skill itself: `references/*.md` are the canonical pattern bodies — no monolith, no reader-facing publication form.
 
-**Depends on:** `fpf-core`
+**Depends on:** `fpf-core`, `create-agent-skill`
 
 **Use when:**
-- Teaching an agent the FPF ecosystem and its layers
-- Creating a new DPF from scratch (~1 hour draft)
-- Distinguishing vanilla AI answers from FPF-grounded reasoning
-- Deciding whether to publish in-chat vs as a file
+- Deciding whether and what to author as a DPF-skill (cold start)
+- Authoring a DPF or LPF as an agent skill (FPF-grounded or self-sufficient variant)
+- Evaluating, improving, refreshing a DPF or LPF as a skill
 
-**Location:** `skills/dpf-fpf-literacy/`
+**Location:** `skills/pattern-language-as-agent-skill/`
 
 ### 🏗️ Layered Framework Workspace Architecture
 
 Manages the FPF/DPF/LPF workspace structure: where to place frameworks, how to organize skill carriers, dependency chains, and LPF vs Project boundaries.
 
-**Depends on:** `fpf-core`, `dpf-fpf-literacy`
+**Depends on:** `fpf-core`, `pattern-language-as-agent-skill`
 
 **Use when:**
 - Organizing the FPF/DPF/LPF workspace layout
@@ -201,12 +205,14 @@ Skills for tracking project state, decisions, risks, and dependencies in a struc
 
 ### 🗂️ Project Vault
 
-Maintains project state in a structured markdown vault: atomic decision cards (DEC-NNNN), open question cards (Q-NNNN), risk cards (RISK-NNNN), contradiction cards (CON-NNNN), event chronicles, and source digests. Includes scaffold for bootstrapping a new vault, templates for digests/decisions/agendas, and inbox processing.
+Maintains project state in a structured markdown vault: atomic cards for decisions, open questions, risks, contradictions, operational tracks, and work records. Governs working tracks as the mandatory container for all productive activity (research, analysis, synthesis). Includes inbox processing and updating project vault accordingly.
 
 **Use when:**
 - Initializing a project vault from scaffold
 - Processing meeting transcripts into digests with atomic decision/question/risk/contradiction cards
 - Updating project state from dialogue briefings (owner chat updates)
+- Processing external research with two-way binding to project entities
+- Managing track-bound productive work (track lifecycle, artifacts, work records)
 - Generating next-meeting agendas from open questions, blockers, and contradictions
 - Reconciling new information against the open question registry
 - Surfacing contradictions and archiving closed entities

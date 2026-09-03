@@ -1,0 +1,23 @@
+{
+  "skill_name": "pattern-language-as-agent-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a Domain Principle Framework for hydroponic-cucumber greenhouse control as an agent skill. Recurring problems: irrigation scheduling, nutrient dosing, climate setpoint management. Ground it in FPF.",
+      "expected_output": "SKILL.md (routing dispatcher) + references/ with one E.8 body per pattern (13 sections, valid FPF governing cues, status seed), plus INDEX.md and relations.md; no assets/ monolith.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We have a local incident-response practice (triage → contain → communicate → postmortem). Turn it into a skill-carried Local Practices Framework.",
+      "expected_output": "LPF in skill form; references/ with one pattern per file; E.4.PFR relation stub; single surface, no monolith, no reader-facing publication form.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Audit this DPF-skill for FPF conformance: verify every PatternID exists in fpf-core references/, every body has the 13 E.8 sections, and the SKILL.md routing table matches each card's governing cues.",
+      "expected_output": "Findings list with exact loci: broken PatternIDs, missing E.8 sections, governing-cue mismatches between SKILL.md and the cards.",
+      "files": []
+    }
+  ]
+}

@@ -62,6 +62,7 @@
 | A.8 | Universal Core Principle | universality, transdisciplinary, domain-agnostic, kernel-level U-kind admission. |
 | A.9 | Cross-Scale Consistency (C-3) | composition, aggregation, holarchy, invariants, roll-up. |
 | A.10 | Evidence Graph Referring (C-4) | relied-on claim, bounded use, claim/result episteme, source publication, carrier |
+| A.10.1 | Revalidate Affected Uses When a Relied-on Source Changes | — |
 | A.11 | Ontological Parsimony | parsimony, composition, non-redundancy, kernel growth, U-kind admission. |
 | A.12 | Acting-Side Externalization and Reflexive Split | — |
 | A.13 | The Agential Role & Agency Spectrum | exact System, local agential system-role kind and criterion, classification, obtaining assignment, scope |
@@ -75,6 +76,7 @@
 | A.15.6 | Project, Process, and Case Recovery through Work, Method, and Transformation | — |
 | A.15.7 | Situation-Responsive Work Steering and Next-Action Selection | — |
 | A.15.8 | Work-Performance Configuration and Recovery Testing | — |
+| A.15.9 | Request and Use a Bounded Result from Another Practice | — |
 | A.15.PROD | Production Work, Entity-Identity Inception, and Production Completion Recovery | — |
 | A.16 | Language-State Move Coordination | language-state, move, admissible language-state move, reopen, sketch-backoff |
 | A.16.0 | `U.LanguageStateMoveTrajectory` - Optional trajectory-account normal form over the language-state `U.CharacteristicSpace` | trajectory account, lineage, fork, merge, supersedes |
@@ -200,6 +202,8 @@
 | C.34 | Structural Correspondence, Equivalence, and Morphism Adequacy | structural correspondence, equivalence, morphism, mapping mode, preserved structure |
 | C.35 | Structural Synthesis and Discovery Adequacy | structural synthesis, structural discovery, generated carrier, produced carrier, described structure |
 | C.36 | Cultural Evolution and Cultural-Evolution Engineering | — |
+| C.37 | Use-Bounded Representation Selection and Co-Use | — |
+| C.38 | Construct Comparable Ways to Obtain One Result | — |
 | C.36.P | Cultural-Evolution Wording-Use Precision Restoration | — |
 | D.1 | Ethical Value Plurality and FPF Boundary | — |
 | D.2 | Multilevel Ethics For System-Holon Work | — |
@@ -230,6 +234,7 @@
 | E.9.DA | DRR Decision-Adequacy Evaluation CharacteristicSpace | — |
 | E.10 | Unified Lexical Rules for FPF | — |
 | E.10.LRN | Recovering What “Learning” Means in the Current Claim | learn, learning, learned, taught, trained |
+| E.10.DEV | Recovering What Development or Evolution Means in the Current Claim | — |
 | E.10.MOVE | Move and Readiness Wording Precision Restoration | — |
 | E.10.ARCH | Wording-Use Ontological Precision Restoration Architecture | — |
 | E.10.ROLE | Recovering What “Role” Means in the Current Claim | ambiguous role wording, system-role kind, assignment, relation participant, declaration slot |
@@ -240,7 +245,7 @@
 | E.11.PUA | Pattern Use in a Working Situation and First Useful Result | — |
 | E.11.PUR | Pattern-Use Applicability, Recommendation, and Coordination | — |
 | E.11.PFP | Framework Publication Form Profile | — |
-| E.11.DSG | DPF Suite Guide | — |
+| E.11.DSG | DPF Suite Reference | — |
 | E.12 | Didactic Primacy & Cognitive Ergonomics | didactic, cognitive load, ergonomics, usability, Rationale Mandate |
 | E.13 | Pragmatic Utility and Value Alignment | pragmatic utility, proxy-to-value alignment, Goodhart, Campbell, surrogation |
 | E.14 | Human-Centric Working-Model | working model, human-centric, publication surface, grounding, assurance layers. |
@@ -266,6 +271,7 @@
 | E.22 | Improvement-Oriented Quality Evaluation Question Framing | — |
 | E.23 | Quality Improvement Loop Method | — |
 | E.23.CDI | Developing Capability for a Named Work Family | — |
+| E.23.CAE | Capability Access and Expression Differential Probe | — |
 | E.24 | U.Ontic and Ontic Introduction Discipline | — |
 | E.24.CD | Ontic Candidate Detection and First-Use Disposition | — |
 | E.24.PUB | Ontic Description and Publication Discipline | — |
