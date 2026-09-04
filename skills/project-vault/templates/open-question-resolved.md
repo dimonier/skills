@@ -1,4 +1,4 @@
-﻿---
+---
 id: Q-YYYY-NNNN
 status: closed
 closed_at: "YYYY-MM-DD"

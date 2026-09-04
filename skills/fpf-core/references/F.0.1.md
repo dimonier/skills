@@ -32,7 +32,7 @@ dependencies:
 ## F.0.1 - Source-Local Meaning Recovery
 
 > **Type:** Architectural (A)
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### F.0.1:1 - Problem frame

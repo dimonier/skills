@@ -1,7 +1,7 @@
 ---
 id: E.10.LRN
 title: Recovering What “Learning” Means in the Current Claim
-status: Candidate
+status: Stable
 keywords:
   - learn
   - learning
@@ -36,6 +36,8 @@ dependencies:
 ## E.10.LRN - Recovering What “Learning” Means in the Current Claim
 
 > **Type:** lexical and ontological precision restoration (E)
+>
+> **Status:** Stable
 >
 > **Plain name:** recover what “learning” means here
 >

@@ -64,6 +64,7 @@
 | A.10 | Evidence Graph Referring (C-4) | relied-on claim, bounded use, claim/result episteme, source publication, carrier |
 | A.10.1 | Revalidate Affected Uses When a Relied-on Source Changes | — |
 | A.11 | Ontological Parsimony | parsimony, composition, non-redundancy, kernel growth, U-kind admission. |
+| A.11.OP | Decision-Relevant Least Action and Operational Parsimony | — |
 | A.12 | Acting-Side Externalization and Reflexive Split | — |
 | A.13 | The Agential Role & Agency Spectrum | exact System, local agential system-role kind and criterion, classification, obtaining assignment, scope |
 | A.14 | Advanced Mereology: Components, Portions, Aspects & Phases | part, member, belongs to, component, constituent |

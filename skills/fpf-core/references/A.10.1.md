@@ -1,7 +1,7 @@
 ---
 id: A.10.1
 title: "Revalidate Affected Uses When a Relied-on Source Changes"
-status: Candidate
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -27,7 +27,7 @@ dependencies:
 
 **Pattern type.** Method pattern.
 
-**Status.** Candidate.
+**Status.** Stable.
 
 **Normativity.** Normative unless a passage is marked informative.
 

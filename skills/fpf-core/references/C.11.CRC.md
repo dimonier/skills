@@ -1,7 +1,7 @@
 ---
 id: C.11.CRC
 title: "Configuration-Relative Contribution Comparison"
-status: Candidate
+status: Stable
 keywords:
   - finite change
   - current configuration S0
@@ -44,6 +44,8 @@ dependencies:
 > **Plain name:** compare what this finite change adds to the current configuration
 >
 > **Type:** C-pattern
+>
+> **Status:** Stable
 >
 > **Placement:** a narrow companion used before `C.11` when its comparison basis is not yet available
 

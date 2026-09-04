@@ -38,7 +38,7 @@ dependencies:
 ## E.10.D1 - Recovering What “Context” Means in Use
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative when *context* carries meaning needed by an FPF claim; informative for quoted source wording and ordinary prose that already makes its meaning clear.
 
 ### E.10.D1:1 - Problem frame

@@ -1,7 +1,7 @@
 ---
 id: A.15.9
 title: Request and Use a Bounded Result from Another Practice
-status: Candidate
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -30,7 +30,7 @@ dependencies:
 ## A.15.9 - Request and Use a Bounded Result from Another Practice
 
 > **Type:** Method pattern
-> **Status:** Candidate
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### A.15.9:1 - Problem frame

@@ -1,4 +1,4 @@
-﻿---
+---
 updated: "2026-07-30"
 fpf_kind: DependencyClaim@Context
 ---

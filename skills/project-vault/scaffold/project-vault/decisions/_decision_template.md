@@ -1,4 +1,4 @@
-﻿---
+---
 id: DEC-NNNN-slug
 title: "Одна строка — суть решения"
 status: proposed

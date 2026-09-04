@@ -207,6 +207,8 @@ Skills for tracking project state, decisions, risks, and dependencies in a struc
 
 Maintains project state in a structured markdown vault: atomic cards for decisions, open questions, risks, contradictions, operational tracks, and work records. Governs working tracks as the mandatory container for all productive activity (research, analysis, synthesis). Includes inbox processing and updating project vault accordingly.
 
+**Depends on:** `fpf-core`
+
 **Use when:**
 - Initializing a project vault from scaffold
 - Processing meeting transcripts into digests with atomic decision/question/risk/contradiction cards

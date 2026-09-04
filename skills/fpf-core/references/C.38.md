@@ -1,7 +1,7 @@
 ---
 id: C.38
 title: Construct Comparable Ways to Obtain One Result
-status: Candidate
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -28,7 +28,7 @@ dependencies:
 ## C.38 - Construct Comparable Ways to Obtain One Result
 
 > **Type:** Method pattern
-> **Status:** Candidate
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### C.38:1 - Problem frame
