@@ -52,9 +52,11 @@ patterns (the right pattern IDs), not stale or guessed names.
    `G.11`), not aliases; verify the pattern ID is current in FPF Core.
 3. **Keep the chain unidirectional** (`E.5.3`): a DPF-skill depends on FPF and
    on other DPFs/LPFs only through explicit dependencies; it never edits FPF.
-4. **Record dependencies** in the card frontmatter (`builds_on`,
-   `coordinates_with`) and in `relations.md` (`E.4.PFR` stub), keeping dependency
-   edges separate from specialization.
+4. **Record dependencies by namespace.** FPF-dependency edges go in the card
+   frontmatter `dependencies` (`builds_on`, `coordinates_with`) — FPF codes only.
+   LPF-specialization edges go in `specialized_by` — local (`PLAS.*`/`PV.*`) codes
+   only. `relations.md` holds the intra-LPF graph (specialization + applies-to),
+   never FPF edges. The three views must agree in membership and direction.
 5. **List skill dependencies separately** in a `Skill dependencies` block (e.g.
    `create-agent-skill`) — they are not FPF governing patterns and are not cited
    as FPF pattern references.
@@ -79,7 +81,7 @@ current FPF Core, not a remembered alias.
 |---|---|
 | CC-GC.1 | Every FPF-grounded body carries a filled `Governing FPF patterns` block; a self-sufficient body declares its boundary statement instead. |
 | CC-GC.2 | Every cue names a current FPF pattern ID. |
-| CC-GC.3 | Dependency chain is unidirectional and recorded separately from specialization. |
+| CC-GC.3 | FPF-dependency (`builds_on`/`coordinates_with`) is recorded separately from LPF-specialization (`specialized_by`); `relations.md` holds intra-LPF edges only. |
 | CC-GC.4 | Skill dependencies are not mislabeled as FPF patterns. |
 
 ### PLAS.GoverningCues:8 - Common Anti-Patterns and How to Avoid Them
@@ -117,7 +119,7 @@ relevant" (alias/guessed IDs) — dropped.
 
 ### PLAS.GoverningCues:12 - Relations
 
-- **Builds on:** `E.5.3` (unidirectional dependency), `E.4.PFR` (relation records).
-- **Coordinates with:** `E.4.DPF` (external dependency naming).
+- **Builds on (FPF):** `E.5.3` (unidirectional dependency), `E.4.PFR` (relation records).
+- **Coordinates with (FPF):** `E.4.DPF` (external dependency naming).
 
 ### PLAS.GoverningCues:End

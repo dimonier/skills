@@ -3,12 +3,6 @@ id: PLAS.SelfSufficient
 title: "Authoring a DPF-skill with no FPF dependency (self-sufficient variant)"
 status: seed
 keywords: [self-sufficient, no-fpf, boundary-statement, inline-semantics, readiness-mode]
-dependencies:
-  builds_on:
-    - PLAS.EntryRoute
-  coordinates_with:
-    - PLAS.SkillLayout
-    - PLAS.PatternBody
 ---
 
 ## PLAS.SelfSufficient - Authoring a DPF-skill with no FPF dependency (self-sufficient variant)
@@ -134,7 +128,6 @@ rival: "silently re-cite FPF while claiming self-sufficiency" — dropped.
 
 ### PLAS.SelfSufficient:12 - Relations
 
-- **Builds on:** `PLAS.EntryRoute` (routes here), `create-agent-skill` (carrier mechanics).
-- **Coordinates with:** `PLAS.SkillLayout` (layout), `PLAS.PatternBody` (one body per file + readiness modes), `PLAS.Dispatcher` (routing + YAML-safe description).
+- **Specializes (LPF):** `PLAS.EntryRoute` (self-sufficient scope of the entry route), `PLAS.SkillLayout` (self-sufficient layout variant).
 
 ### PLAS.SelfSufficient:End

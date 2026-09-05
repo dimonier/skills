@@ -131,7 +131,7 @@ self-review ("you can't check yourself") — dropped.
 
 ### PLAS.QualityAndRefresh:12 - Relations
 
-- **Builds on:** `E.4.DPF.DA` (package), `E.21` (pattern), `E.23` (improvement), `G.11` (currentness).
-- **Coordinates with:** `E.22` (framing), `E.19` (admission gating), `create-agent-skill` (weak-model gate).
+- **Builds on (FPF):** `E.4.DPF.DA` (package), `E.21` (pattern), `E.23` (improvement), `G.11` (currentness).
+- **Coordinates with (FPF):** `E.22` (framing), `E.19` (admission gating).
 
 ### PLAS.QualityAndRefresh:End

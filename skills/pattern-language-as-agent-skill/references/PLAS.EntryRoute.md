@@ -11,6 +11,9 @@ dependencies:
   coordinates_with:
     - E.4.DPF.DA
     - C.33
+  specialized_by:
+    - PLAS.SelfSufficient
+    - PLAS.SkillLayout
 ---
 
 ## PLAS.EntryRoute - Deciding whether and what to author as a DPF-skill
@@ -138,8 +141,8 @@ skill later" (fork/drift) — dropped in favor of the single-surface decision.
 
 ### PLAS.EntryRoute:12 - Relations
 
-- **Builds on:** `E.4.DPF` (cold-reader + first-hour route), `E.4.PFAD` (outcome selection), `E.9` (decision record).
-- **Coordinates with:** `E.4.DPF.DA` (package adequacy once authoring begins), `C.33` (carrier classification).
-- **Specialized by:** `PLAS.SelfSufficient` (self-sufficient variant), `PLAS.SkillLayout` (carrier/edition layout).
+- **Builds on (FPF):** `E.4.DPF` (cold-reader + first-hour route), `E.4.PFAD` (outcome selection), `E.9` (decision record).
+- **Coordinates with (FPF):** `E.4.DPF.DA` (package adequacy once authoring begins), `C.33` (carrier classification).
+- **Specialized by (LPF):** `PLAS.SelfSufficient` (self-sufficient variant), `PLAS.SkillLayout` (carrier/edition layout).
 
 ### PLAS.EntryRoute:End

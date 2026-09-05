@@ -123,7 +123,7 @@ Best-known line: local-first naming. Rejected rival: tech-cryptonym / acronym he
 
 ### PLAS.Naming:12 - Relations
 
-- **Builds on:** `F.18` (local-first naming), `F.14` (anti-explosion), `E.4.DPF:4.0.3` (PatternID stability).
-- **Coordinates with:** `E.10` (kind discipline before naming), `create-agent-skill` (skill naming).
+- **Builds on (FPF):** `F.18` (local-first naming), `F.14` (anti-explosion), `E.4.DPF:4.0.3` (PatternID stability).
+- **Coordinates with (FPF):** `E.10` (kind discipline before naming).
 
 ### PLAS.Naming:End

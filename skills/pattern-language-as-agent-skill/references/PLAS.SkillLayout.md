@@ -12,6 +12,10 @@ dependencies:
   coordinates_with:
     - E.4.DPF.DA
     - E.11.PFP
+  specialized_by:
+    - PLAS.Dispatcher
+    - PLAS.PatternBody
+    - PLAS.SelfSufficient
 ---
 
 ## PLAS.SkillLayout - Canonical directory layout of a DPF-skill (single surface, no monolith, no reader-facing form)
@@ -52,7 +56,7 @@ views.
 |---|---|
 | Progressive disclosure vs one file | `SKILL.md` = routing; `references/` = on-demand bodies. |
 | Atomicity vs mega-skill | One pattern per reference file (split by action, not domain). |
-| Optional machinery vs bloat | `assets/`, `scripts/`, `templates/`, `evals/` appear only when used. |
+| Optional machinery vs bloat | `assets/`, `scripts/`, `templates/`, `scaffold/`, `evals/` appear only when used. |
 | Edition vs carrier | The skill directory is the access-facing carrier; the edition is the `C.2.1` episteme recoverable from `references/`, not from the carrier. |
 | Single surface vs reader-facing form | No reader-facing `E.11.PFP` form while there is no cold reader; if a reader emerges, it is a separate `E.24.PUB` projection. |
 | External source vs projection | An external published standard is canonical; the skill is its derived representation, with a pin record + edition-tied refresh. |
@@ -69,6 +73,7 @@ views.
 ├── assets/           # OPTIONAL: heavy resources only; NEVER a monolith
 ├── scripts/          # OPTIONAL: validators/helpers
 ├── templates/        # OPTIONAL: output skeletons
+├── scaffold/         # OPTIONAL: init/reproduction kit (dir tree + templates + scripts copy); only with a real init task
 └── evals/            # OPTIONAL: dev-only test fixtures (skill-creator); not loaded at runtime
 ```
 
@@ -110,12 +115,21 @@ views.
    "the standard". Declare a pin record (URL + edition + status) in `relations.md`
    and tie refresh to the source's edition, not to internal signals. `SKILL.md`
    states "this skill is a representation, not the standard" in one line.
-10. **One dependency graph, three views.** The graph lives in three places with a
-    division of labor: frontmatter `dependencies` (machine-readable), section
-    `:12 Relations` (human-readable), `relations.md` (the global map — canonical).
-    All three must agree; change one → change all three. `relations.md` fixes the
-    edge direction (e.g. `builds_on` as "dependent → what it builds on") with
-    unambiguous column headers.
+10. **One dependency graph, three views, two namespaces.** FPF-dependency lives in
+    the card frontmatter `dependencies` (`builds_on`, `coordinates_with` — FPF
+    codes) and mirrors in `:12 Relations` (human-readable); LPF-specialization lives
+    in `specialized_by` (local codes) and mirrors in `:12` as `Specialized by (LPF)`.
+    `relations.md` (the canonical map) holds the intra-LPF graph only — never FPF
+    edges. All views must agree in membership and direction; change one → change all.
+    `relations.md` fixes the edge direction (e.g. `builds_on` as "dependent → what it
+    builds on") with unambiguous column headers.
+11. **`scaffold/` is an optional carrier-reproduction kit.** When a skill reproduces
+    a working directory at init (e.g. a vault scaffold for an init entry path,
+    `E.4.DPF` layering D5), it may carry a `scaffold/` directory: the target
+    directory tree (with `.gitkeep`), template files, and a copy of the `scripts/`
+    it must reproduce. `scaffold/` is not `templates/` (output skeletons) — it is a
+    self-reproduction kit — and it is added only when there is a real init task, not
+    for completeness (`E.4.DPF:4`).
 
 ### PLAS.SkillLayout:5 - Archetypal Grounding
 
@@ -146,6 +160,7 @@ edition/carrier wording are the two counterweights.
 | CC-SL.7 | `relations.md` is the canonical home for the source/edition/dependency citation and the dependency graph; its column headers fix the edge direction. |
 | CC-SL.8 | An external-standard DPF declares a pin record (URL + edition + status) and edition-tied refresh; it is stated to be a representation, not the standard. |
 | CC-SL.9 | A source attachment the standard references (dashboard JSON, sample payload, schema) is preserved under `assets/`, not dropped. |
+| CC-SL.10 | `scaffold/` is used only for a real init/reproduction task (dir tree + templates + scripts copy), not as empty scaffolding. |
 
 ### PLAS.SkillLayout:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -160,6 +175,7 @@ edition/carrier wording are the two counterweights.
 | External standard without a pin record | Pin URL + edition + status in `relations.md`; refresh on edition. |
 | CHANGELOG treated as authoring residue | Classify as version history; not required, but allowed inside. |
 | Source attachment dropped during conversion | Preserve it under `assets/`; do not drop referenced examples. |
+| Empty `scaffold/` added for completeness | Add it only for a real init/reproduction task. |
 
 ### PLAS.SkillLayout:9 - Consequences
 
@@ -193,8 +209,8 @@ Best-known line: single-surface skill anatomy. Rejected rival: "monolith + deriv
 
 ### PLAS.SkillLayout:12 - Relations
 
-- **Builds on:** `E.4.DPF` (carrier assembly, edition/carrier/form separation), `C.33` (carrier vs. overread), `C.2.1` (edition identity), `E.24.PUB` (publication is a separate later relation).
-- **Coordinates with:** `E.4.DPF.DA` (package adequacy, D5 layering), `E.11.PFP` (reader-facing form out of scope while no cold reader), `create-agent-skill` (anatomy).
-- **Specialized by:** `PLAS.Dispatcher`, `PLAS.PatternBody`, `PLAS.SelfSufficient`.
+- **Builds on (FPF):** `E.4.DPF` (carrier assembly, edition/carrier/form separation), `C.33` (carrier vs. overread), `C.2.1` (edition identity), `E.24.PUB` (publication is a separate later relation).
+- **Coordinates with (FPF):** `E.4.DPF.DA` (package adequacy, D5 layering), `E.11.PFP` (reader-facing form out of scope while no cold reader).
+- **Specialized by (LPF):** `PLAS.Dispatcher`, `PLAS.PatternBody`, `PLAS.SelfSufficient`.
 
 ### PLAS.SkillLayout:End

@@ -50,8 +50,9 @@ All break atomic loading or honesty.
 
 1. **One pattern per file**, named `<DPFCode>.<PatternName>.md`.
 2. **Frontmatter:** `id`, `title`, `status`, `keywords`, `dependencies`
-   (`builds_on`, `coordinates_with`). `status` names a **readiness mode** plus a
-   level (see item 6).
+   (`builds_on`, `coordinates_with` — FPF codes only; `specialized_by` — local
+   pattern codes, present only when this card is specialized by other local
+   patterns). `status` names a **readiness mode** plus a level (see item 6).
 3. **E.8 canonical sections 1–13**, all mandatory, in order: Problem frame,
    Problem, Forces, Solution, Archetypal Grounding, Bias-Annotation, Conformance
    Checklist, Common Anti-Patterns and How to Avoid Them, Consequences, Rationale,
@@ -153,7 +154,7 @@ file" (mini-monolith body) — dropped.
 
 ### PLAS.PatternBody:12 - Relations
 
-- **Builds on:** `E.8` (pattern authoring convention), `E.4.DPF` (pattern drafting step 6).
-- **Coordinates with:** `E.21` (pattern quality), `PLAS.GoverningCues` (cue paths).
+- **Builds on (FPF):** `E.8` (pattern authoring convention), `E.4.DPF` (pattern drafting step 6).
+- **Coordinates with (FPF):** `E.21` (pattern quality).
 
 ### PLAS.PatternBody:End

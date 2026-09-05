@@ -134,7 +134,7 @@ mini-monolith" (the Mega-Skill anti-pattern) — dropped.
 
 ### PLAS.Dispatcher:12 - Relations
 
-- **Builds on:** `E.4.DPF` (dispatcher ≠ pattern bodies), `E.11` (practical entry).
-- **Coordinates with:** `E.11.PFP` (out of scope: no reader-facing form), `create-agent-skill` (description trigger).
+- **Builds on (FPF):** `E.4.DPF` (dispatcher ≠ pattern bodies), `E.11` (practical entry).
+- **Coordinates with (FPF):** `E.11.PFP` (out of scope: no reader-facing form).
 
 ### PLAS.Dispatcher:End
