@@ -1,6 +1,6 @@
 ---
 id: PV.VaultSchema
-title: "Схема и модель сущностей markdown-vault: директории, ID-аллокация, discovery"
+title: "Markdown-vault entity schema: directories, ID allocation, discovery"
 status: seed
 readiness: source-faithful
 keywords: [schema, entities, directories, id-allocation, discovery, vault.py, carrier, kind]
@@ -15,15 +15,15 @@ dependencies:
     - C.32.ADR
 ---
 
-## PV.VaultSchema - Схема и модель сущностей markdown-vault: директории, ID-аллокация, discovery
+## PV.VaultSchema - Markdown-vault entity schema: directories, ID allocation, discovery
 
-> **Trigger:** Когда нужно понять, где в хранилище живёт та или иная сущность, как ей присвоить ID, как её найти, или когда меняется схема vault (новый тип сущности, новая директория, новый носитель).
+> **Trigger:** When one needs to understand where an entity lives in the vault, how to allocate its ID, how to find it, or when the vault schema changes (a new entity kind, a new directory, a new carrier).
 > **Governing FPF patterns:**
->   → C.33 (kind-дисциплина: выбор носителя и различение kind-ов)
->   → C.2.1 (идентичность издания, независимая от носителя)
->   → E.4.DPF (layering D5: пакет-носитель, возвращающий к авторитетному предмету)
+>   → C.33 (kind discipline: carrier choice and kind distinction)
+>   → C.2.1 (edition identity, independent of the carrier)
+>   → E.4.DPF (layering D5: a package-carrier returning to the authoritative subject)
 > **Skill dependencies:**
->   → нет (схема — собственная область LPF)
+>   → none (the schema is the LPF's own field)
 
 ---
 
@@ -35,139 +35,153 @@ discovered without hand-maintained indexes.
 
 ### PV.VaultSchema:2 - Problem
 
-Хранилище дробится на два сбоя: либо структура «зарастает» ручными индексами,
-которые рассинхронизируются с атомарными файлами, либо ID раздаются «на глаз»
-по содержимому директории и случаются дубликаты/пропуски. Discovery без
-канонического реестра означает, что сущности должны быть находимы
-машинно (`grep`/`SocratiCode`), а не через поддерживаемый вручную список.
+The vault fragments into two failures: either the structure "overgrows" with manual
+indexes that desynchronize from the atomic files, or IDs are handed out "by eye"
+from the directory contents and duplicates/gaps appear. Discovery without a
+canonical registry means entities must be findable by machine
+(`grep`/`SocratiCode`), not via a hand-maintained list.
 
 ### PV.VaultSchema:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Атомарность vs сводный индекс | Сущности — атомарные файлы; ручных `_index.md` нет; авто-генерируются только `work/_index.md` и `tracks/_index.md`. |
-| Монотонность ID vs ручная нумерация | ID выдаёт CLI `vault.py next-id`; ID не переиспользуются при закрытии. |
-| Единство носителя vs рассеяние | Одна директория `project-vault/` — канонический носитель; kind-директории верхнего уровня. |
-| Discovery vs реестр | `grep` для точного поиска, `SocratiCode codebase_search` для семантического, `ls` для полного списка. |
+| Atomicity vs summary index | Entities are atomic files; no manual `_index.md`; only `work/_index.md` and `tracks/_index.md` are auto-generated. |
+| Monotonic IDs vs manual numbering | IDs are issued by the CLI `vault.py next-id`; IDs are not reused on closure. |
+| Carrier unity vs scattering | One directory `project-vault/` — the canonical carrier; top-level kind directories. |
+| Discovery vs registry | `grep` for exact search, `SocratiCode codebase_search` for semantic, `ls` for the full list. |
 
 ### PV.VaultSchema:4 - Solution
 
-**Структура верхнего уровня** (канонический носитель — `project-vault/`):
+**Top-level structure.** The canonical carrier is `project-vault/`. Two channel
+directories sit at the repository root, siblings of `project-vault/`:
+
+```text
+<repo-root>/
+  inbox/             # incoming sources (transcripts, PDFs, articles) — PV.Inbox
+  outbox/            # outgoing feedback messages — PV.Outbox
+  project-vault/     # canonical carrier, below
+```
+
+`project-vault/` layout:
 
 ```text
 project-vault/
-  decisions/         # атомарные карточки решений (DEC-NNNN.md)
-  open-questions/    # атомарные открытые вопросы (Q-NNNN.md)
-  risks/             # атомарные риски (RISK-NNNN.md)
-  contradictions/    # атомарные противоречия (CON-NNNN.md)
-  tracks/            # операционные треки (TRK-NNNN.md) + авто _index.md
-  work/              # записи ходов (WRK-YYYY-MM-DD-hhmmss.md) + авто _index.md
-  artifacts/         # артефакты, привязанные к трекам (YYYY-MM-DD-slug.md)
-  methods/           # переиспользуемые описания методов (U.MethodDescription)
-  roles/             # роли (соавторы/ответственные)
-  vocabulary/        # глоссарий терминов проекта
-  sources/           # captures/ (исходники) + digests/ (дайджесты анализа)
-  state/             # constraints.md — регуляторные и архитектурные ограничения
-  reports/           # производные сводки и отчёты (off-limits без запроса)
-  scripts/           # vault.py (ID + индексы + проверка целостности), export_dec.py
-  dependencies.md    # внешние блокеры
-  agenda-next.md     # повестка следующей встречи (по запросу)
+  decisions/         # atomic decision cards (DEC-NNNN.md)
+  open-questions/    # atomic open questions (Q-NNNN.md)
+  risks/             # atomic risks (RISK-NNNN.md)
+  contradictions/    # atomic contradictions (CON-NNNN.md)
+  tracks/            # operational tracks (TRK-NNNN.md) + auto _index.md
+  work/              # work records (WRK-YYYY-MM-DD-hhmmss.md) + auto _index.md
+  artifacts/         # artifacts bound to tracks (YYYY-MM-DD-slug.md)
+  methods/           # reusable method descriptions (U.MethodDescription)
+  roles/             # roles (co-authors/responsibles)
+  vocabulary/        # project glossary
+  sources/           # captures/ (source materials)
+  state/             # constraints.md — regulatory and architectural constraints
+  reports/           # derived summaries and reports (off-limits without a request)
+  scripts/           # vault.py (ID + indexes + integrity check), export_dec.py
+  dependencies.md    # external blockers
 ```
 
-**Сущности и их kind-директории.** Каждая сущность — атомарный `.md` с YAML
-frontmatter (`id`, `status`, `updated`, `sources`) + Markdown-телом. Закрытые
-сущности остаются на месте с `status` во frontmatter (без `archive/`-зеркала).
-`reports/` — производные сводки, создаются/обновляются только по явному запросу
-(off-limits). `roles/` и `vocabulary/` — справочные: роли и глоссарий.
+**Entities and their kind directories.** Each entity is an atomic `.md` with a YAML
+frontmatter (`id`, `status`, `updated`, `sources`) + a Markdown body. Closed
+entities stay in place with a `status` in the frontmatter (no `archive/` mirror).
+`reports/` — derived summaries, created/updated only on explicit request
+(off-limits). `roles/` and `vocabulary/` — reference material: roles and glossary.
+`outbox/` messages are the exception to the atomic-entity rule: one file = one
+outgoing message with frontmatter `created`/`addressee`/`source_project`/
+`source_context`/`status` (`pending → sent`), no monotonic ID and no `_index.md`
+(see `PV.Outbox`). `inbox/` holds raw incoming sources, cleared after processing
+(see `PV.Inbox`).
 
-**Discovery вместо ручных индексов.** Для сущностей (`decisions/`,
-`open-questions/`, `risks/`, `contradictions/`, `methods/`) ручных `_index.md`
-нет. Нахождение:
-- **Семантический поиск:** `SocratiCode codebase_search` по `project-vault/`.
-- **Точный поиск:** `grep` по директориям сущностей (напр. `grep -l "^status: open" project-vault/open-questions/`, `grep -l "^status: active" project-vault/risks/`).
-- **Полный список:** `Get-ChildItem` / `ls`.
-- **Индексы треков/ходов:** только `work/_index.md` и `tracks/_index.md`,
-  авто-генерируются `vault.py` (после каждого WRK — `vault.py all`, после смены
-  статуса трека — `vault.py tracks`).
+**Discovery instead of manual indexes.** For entities (`decisions/`,
+`open-questions/`, `risks/`, `contradictions/`, `methods/`) there are no manual
+`_index.md`. Finding:
+- **Semantic search:** `SocratiCode codebase_search` over `project-vault/`.
+- **Exact search:** `grep` across the entity directories (e.g. `grep -l "^status: open" project-vault/open-questions/`, `grep -l "^status: open" project-vault/risks/`).
+- **Full list:** `Get-ChildItem` / `ls`.
+- **Track/work indexes:** only `work/_index.md` and `tracks/_index.md`,
+  auto-generated by `vault.py` (after each WRK — `vault.py all`, after a track
+  status change — `vault.py tracks`).
 
-**ID-аллокация.** Новые ID (`DEC/Q/RISK/CON/TRK`) — только из CLI
-`python project-vault/scripts/vault.py next-id` (или `next-id CON`). ID
-монотонны и не переиспользуются; закрытие сущности не освобождает номер.
-Целостность проверяется `python project-vault/scripts/vault.py check` (нет
-дубликатов и рассинхрона ID).
+**ID allocation.** New IDs (`DEC/Q/RISK/CON/TRK`) — only from the CLI
+`python project-vault/scripts/vault.py next-id` (or `next-id CON`). IDs are
+monotonic and not reused; closing an entity does not free its number. Integrity is
+checked by `python project-vault/scripts/vault.py check` (no duplicates or ID
+desynchronization).
 
-**Путь к CLI.** Скрипт живёт в репозитории `project-vault/scripts/vault.py`
-(при init копируется из `<skill>/scripts/vault.py`). Вызов из корня репозитория:
+**CLI path.** The script lives in the repository at `project-vault/scripts/vault.py`
+(copied with the scaffold at init — see `PV.Init`). Invoked from the repository root:
 
 ```bash
 python project-vault/scripts/vault.py <command> [--path <abs-path-to-project-vault>]
 ```
 
-`--path` обязателен при вызове не из корня репозитория.
+`--path` is required when invoked not from the repository root.
 
 ### PV.VaultSchema:5 - Archetypal Grounding
 
-**Show.** Действующий vault этого проекта использует kind-директории верхнего
-уровня, атомарные DEC/RISK/Q/CON/TRK/WRK, авто-`_index.md` только для `work/` и
-`tracks/`, и `vault.py next-id` для монотонной аллокации ID.
+**Show.** This project's live vault uses top-level kind directories, atomic
+DEC/RISK/Q/CON/TRK/WRK, auto-`_index.md` only for `work/` and `tracks/`, and
+`vault.py next-id` for monotonic ID allocation.
 
 ### PV.VaultSchema:6 - Bias-Annotation
 
-Соблазн — завести ручной `_index.md` «для удобства» в каждой директории
-сущностей: выглядит зрелым, но рассинхронизируется с атомарными файлами.
-Симметричный соблазн — присвоить ID «на глаз» по `ls` вместо CLI. Оба
-разрушают то, что даёт схема: единый носитель и машинную находимость.
+The temptation is to add a manual `_index.md` "for convenience" in every entity
+directory: it looks mature but desynchronizes from the atomic files. The symmetric
+temptation is to assign an ID "by eye" from `ls` instead of the CLI. Both destroy
+what the schema provides: a single carrier and machine findability.
 
 ### PV.VaultSchema:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-VS.1 | Каждая сущность — атомарный файл в своей kind-директории. |
-| CC-VS.2 | Ручных `_index.md` в директориях сущностей нет; авто-генерируются только `work/_index.md` и `tracks/_index.md`. |
-| CC-VS.3 | ID выдаются только через `vault.py next-id`; монотонны, не переиспользуются. |
-| CC-VS.4 | Discovery достижим через `grep`/`SocratiCode`/`ls`. |
-| CC-VS.5 | Закрытые сущности остаются на месте со `status` во frontmatter, без `archive/`-зеркала. |
-| CC-VS.6 | `vault.py check` проходит без дубликатов и рассинхрона ID. |
+| CC-VS.1 | Every entity is an atomic file in its kind directory. |
+| CC-VS.2 | No manual `_index.md` in entity directories; only `work/_index.md` and `tracks/_index.md` are auto-generated. |
+| CC-VS.3 | IDs are issued only via `vault.py next-id`; monotonic, not reused. |
+| CC-VS.4 | Discovery is reachable via `grep`/`SocratiCode`/`ls`. |
+| CC-VS.5 | Closed entities stay in place with a `status` in the frontmatter, without an `archive/` mirror. |
+| CC-VS.6 | `vault.py check` passes with no duplicates and no ID desynchronization. |
 
 ### PV.VaultSchema:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| Ручной `_index.md` в директории сущностей | Убрать; discovery через `grep`/`SocratiCode`. |
-| ID присвоен по `ls` | Всегда `vault.py next-id`. |
-| Закрытую сущность переместили в `archive/` | Оставить на месте, проставить `status`. |
-| Дублирующая копия схемы в нескольких местах | Одна каноническая схема — это тело; остальное ссылается. |
+| A manual `_index.md` in an entity directory | Remove; discovery via `grep`/`SocratiCode`. |
+| ID assigned via `ls` | Always `vault.py next-id`. |
+| A closed entity moved to `archive/` | Leave in place, set a `status`. |
+| A duplicate copy of the schema in several places | One canonical schema — this body; the rest refer to it. |
 
 ### PV.VaultSchema:9 - Consequences
 
-Атомарность + машинная находимость дают надёжный discovery без реестра, но
-требуют дисциплины ID-аллокации и запрета ручных индексов. Изменение схемы
-(новый тип сущности) — это изменение границы поля практики и условие
-пересмотра решения о самом LPF.
+Atomicity + machine findability give reliable discovery without a registry, but
+require ID-allocation discipline and a ban on manual indexes. A schema change (a
+new entity kind) is a change of the field boundary and a condition for revisiting
+the decision about the LPF itself.
 
 ### PV.VaultSchema:10 - Rationale
 
-Kind-директории верхнего уровня реализуют kind-дисциплину `C.33`: носитель
-(`project-vault/`) — access-facing carrier, издание (`C.2.1`) — восстанавливаемая
-из атомарных файлов идентичность, независимая от конкретного носителя.
-Отказ от ручных индексов — следствие `E.4.DPF:4` (пропорциональность): больше
-файлов не делает фреймворк зрелее.
+Top-level kind directories implement the kind discipline of `C.33`: the carrier
+(`project-vault/`) — an access-facing carrier, the edition (`C.2.1`) — an identity
+recoverable from the atomic files, independent of a concrete carrier. Rejecting
+manual indexes is a consequence of `E.4.DPF:4` (proportionality): more files do not
+make a framework more mature.
 
 ### PV.VaultSchema:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `C.33` (kind-дисциплина, носитель vs издание) | Adopt | Канонический носитель — `project-vault/`; издание восстанавливается из атомарных файлов | Reopen при ревизии `C.33` |
-| FPF `F.14` (анти-взрыв имён/ID) | Adopt | Один ID на сущность, без alias-реестров | Reopen при ревизии `F.14` |
-| Obsidian-style «one file per entity + query» | Adapt | Атомарные файлы + `grep`/`SocratiCode` вместо dataview-запросов | Reopen при смене инструмента поиска |
+| FPF `C.33` (kind discipline, carrier vs edition) | Adopt | Canonical carrier — `project-vault/`; the edition is recovered from atomic files | Reopen on `C.33` revision |
+| FPF `F.14` (anti name/ID explosion) | Adopt | One ID per entity, no alias registries | Reopen on `F.14` revision |
+| Obsidian-style "one file per entity + query" | Adapt | Atomic files + `grep`/`SocratiCode` instead of dataview queries | Reopen on a search-tool change |
 
-Best-known line: атомарные сущности с машинным discovery. Rejected rival:
-«рукописный реестр в каждом каталоге» — отброшен из-за рассинхрона.
+Best-known line: atomic entities with machine discovery. Rejected rival: "a
+hand-written registry in every catalog" — rejected due to desynchronization.
 
 ### PV.VaultSchema:12 - Relations
 
-- **Builds on:** `C.33` (носитель vs издание), `C.2.1` (идентичность издания), `E.4.DPF` (layering D5).
-- **Coordinates with:** `F.14` (анти-взрыв ID), `F.18` (именование), `C.32.ADR` (карточки решений — один из kind-ов).
-- **Specialized by:** `PV.StateUpdate` (создание сущностей), `PV.Track` (треки как сущности), `PV.WorkRecord` (WRK как сущности).
+- **Builds on:** `C.33` (carrier vs edition), `C.2.1` (edition identity), `E.4.DPF` (layering D5).
+- **Coordinates with:** `F.14` (anti ID explosion), `F.18` (naming), `C.32.ADR` (decision cards — one of the kinds).
+- **Applied by:** `PV.StateUpdate` (entity creation), `PV.ExternalResearch` (signals into entities), `PV.Track` (tracks as entities), `PV.WorkRecord` (WRKs as entities), `PV.Report` (the `reports/` directory), `PV.Init` (reproduces the schema from the scaffold), `PV.Outbox` (the `outbox/` directory).
 
 ### PV.VaultSchema:End

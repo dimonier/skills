@@ -13,56 +13,61 @@
 ## Source / edition citation
 
 - **Skill:** `project-vault` (LPF — Local Practices Framework).
-- **Authoring scenario (EntryRoute):** исход (a) «пересмотр framework»;
-  оси — `FPF-grounded` (опирается на FPF Core) и `language-from-scratch`
-  (канонический носитель — `references/*.md` самого скилла; внешнего
-  опубликованного документа-проекции нет).
-- **Field / граница поля:** практика «управление состоянием проекта в
-  markdown-vault»: захват состояния из источников (транскрипты/диалоги),
-  привязка внешних исследований, жизненный цикл треков, запись работ,
-  создание артефактов, повестка, целостность схемы и ID.
+- **Authoring scenario (EntryRoute):** outcome (a) "revise framework";
+  axes — `FPF-grounded` (relies on FPF Core) and `language-from-scratch`
+  (the canonical carrier is this skill's own `references/*.md`; no externally
+  published projection document exists).
+- **Field / field boundary:** the practice "managing project state in a
+  markdown-vault": capturing state from sources (transcripts/dialogues), binding
+  external research, track lifecycle, work records, artifact creation, report
+  creation, schema and ID integrity.
 - **Dependency chain (unidirectional, `E.5.3`):** `project-vault` → `FPF` → (nothing).
-  `create-agent-skill` — skill-зависимость по механике носителя, не FPF-паттерн.
-  `pdf2md` — skill-зависимость `PV.Inbox` (конвертация PDF).
-- **Readiness:** все 8 паттернов — `status: seed`, readiness-режим `source-faithful`
-  (верны одобренному источнику — FPF + процедурная практика владельца);
-  не `case-validated`.
+  `create-agent-skill` — a skill dependency on carrier mechanics, not an FPF pattern.
+  `pdf2md` — a skill dependency of `PV.Inbox` (PDF conversion).
+- **Readiness:** all 10 patterns are `status: seed`, readiness mode `source-faithful`
+  (faithful to the approved source — FPF + the owner's procedural practice);
+  not `case-validated`.
 
 ## Refresh triggers (G.11)
 
-Пересматривать этот скилл (reopen → refresh по `G.11`) при наступлении любого из:
+Revisit this skill (reopen → refresh per `G.11`) on any of the following:
 
-1. **Изменение источника** (`E.4.PFR`, G.11 `EditionPinChange`): ревизия FPF Core
-   паттернов, на которые опираются governing-cues (`E.8`, `E.9`, `C.32.ADR`,
+1. **Source change** (`E.4.PFR`, G.11 `EditionPinChange`): a revision of the FPF Core
+   patterns that the governing-cues build on (`E.8`, `E.9`, `C.32.ADR`,
    `C.33`, `C.2.1`, `A.15.1`, `A.15.2`, `G.11`, `F.14`, `F.18`).
-2. **Изменение схемы vault** (граница поля практики): новый тип сущности,
-   новая директория, новый носитель или инструмент поиска → правь `PV.VaultSchema`
-   и затронутые соседние тела.
-3. **Изменение PLAS** (`E.4.PFAD`-ревизия): скилл `pattern-language-as-agent-skill`
-   меняет требования к конформности (E.8-секции, EntryRoute, carrier-механика).
-4. **Телеметрия локального использования** (G.11 `TelemetryDelta`): владелец
-   сообщает, что скилл неверно сработал, неоднозначен, или слабая модель
-   (`create-agent-skill` weak-model gate) не следует шагам без домысливания.
-5. **Изменение carrier-механики** (`create-agent-skill`): атомарность, layout
-   или single-surface договорённости меняются.
+2. **Vault schema change** (the field boundary of the practice): a new entity kind,
+   a new directory, a new carrier or search tool → edit `PV.VaultSchema` and the
+   affected neighbouring bodies.
+3. **PLAS change** (`E.4.PFAD` revision): the `pattern-language-as-agent-skill` skill
+   changes conformance requirements (E.8 sections, EntryRoute, carrier mechanics).
+4. **Local-use telemetry** (G.11 `TelemetryDelta`): the owner reports that the skill
+   misfired, is ambiguous, or a weak model (`create-agent-skill` weak-model gate)
+   does not follow the steps without invention.
+5. **Carrier-mechanics change** (`create-agent-skill`): atomicity, layout, or
+   single-surface agreements change.
 
-Минимальный маршрут пересмотра: `E.4.DPF.DA` D1–D12 + `E.21` для затронутых тел
-+ прогон `scripts/check_frontmatter.py` — без полного «царь-трека» пересборки.
+Minimal revisit route: `E.4.DPF.DA` D1–D12 + `E.21` for the affected bodies
++ a run of `scripts/check_frontmatter.py` — without a full "tsar-track" rebuild.
 
 ## Dependency graph
 
 | From (→) | To | Relation function |
 |---|---|---|
-| `PV.Inbox` | `PV.StateUpdate` | Inbox роутит транскрипты/протоколы на обновление состояния |
-| `PV.Inbox` | `PV.ExternalResearch` | Inbox роутит внешние исследования на двустороннюю привязку |
-| `PV.Inbox` | `PV.Track` | Inbox подшивает ценные артефакты в треки |
-| `PV.StateUpdate` | `PV.VaultSchema` | Создание сущностей и ID-аллокация по схеме |
-| `PV.StateUpdate` | `PV.Track` | Операционные сигналы источника заводят/меняют треки |
-| `PV.ExternalResearch` | `PV.StateUpdate` | Внешний сигнал может потребовать нового решения/риска |
-| `PV.ExternalResearch` | `PV.VaultSchema` | Сигналы пишутся в сущности vault |
-| `PV.Track` | `PV.VaultSchema` | Треки — сущности vault с авто-индексом |
-| `PV.Artifact` | `PV.Track` | Артефакт создаётся привязанным к треку |
-| `PV.WorkRecord` | `PV.Track` | WRK фиксирует шаг внутри трека |
-| `PV.WorkRecord` | `PV.VaultSchema` | WRK — сущности `work/` с авто-индексом |
-| `PV.Agenda` | `PV.StateUpdate` | Повестка берёт слоты `proposed`/`deferred` решений |
-| `PV.Agenda` | `PV.VaultSchema` | Повестка — файл `agenda-next.md` |
+| `PV.Inbox` | `PV.StateUpdate` | Inbox routes transcripts/meeting protocols to state update |
+| `PV.Inbox` | `PV.ExternalResearch` | Inbox routes external research to two-way binding |
+| `PV.Inbox` | `PV.Track` | Inbox files valuable artifacts into tracks |
+| `PV.StateUpdate` | `PV.VaultSchema` | Entity creation and ID allocation follow the schema |
+| `PV.StateUpdate` | `PV.Track` | Operational signals from a source open/change tracks |
+| `PV.ExternalResearch` | `PV.StateUpdate` | An external signal may require a new decision/risk |
+| `PV.ExternalResearch` | `PV.VaultSchema` | Signals are written into vault entities |
+| `PV.Track` | `PV.VaultSchema` | Tracks are vault entities with an auto-index |
+| `PV.Artifact` | `PV.Track` | An artifact is created bound to a track |
+| `PV.WorkRecord` | `PV.Track` | A WRK captures a step within a track |
+| `PV.WorkRecord` | `PV.VaultSchema` | WRKs are `work/` entities with an auto-index |
+| `PV.Report` | `PV.StateUpdate` | The agenda takes `proposed`/`deferred` decision slots |
+| `PV.Report` | `PV.VaultSchema` | A report is a derived summary in `reports/` |
+| `PV.Outbox` | `PV.Inbox` | Outbox messages transfer into the recipient's inbox |
+| `PV.Outbox` | `PV.VaultSchema` | `outbox/` is a channel directory with a transient message kind |
+| `PV.Init` | `PV.VaultSchema` | Init reproduces the schema from the scaffold |
+| `PV.Init` | `PV.Inbox` | Init creates `inbox/` at the repository root |
+| `PV.Init` | `PV.Outbox` | Init creates `outbox/` at the repository root |

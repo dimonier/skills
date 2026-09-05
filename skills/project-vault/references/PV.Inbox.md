@@ -1,6 +1,6 @@
 ---
 id: PV.Inbox
-title: "Приём входящих: inbox-процедура, PDF-препроцессинг, роутинг на A/R/T"
+title: "Intake: inbox procedure, PDF preprocessing, routing"
 status: seed
 readiness: source-faithful
 keywords: [inbox, intake, pdf, preprocess, routing, capture]
@@ -12,14 +12,14 @@ dependencies:
     - A.15.1
 ---
 
-## PV.Inbox - Приём входящих: inbox-процедура, PDF-препроцессинг, роутинг на A/R/T
+## PV.Inbox - Intake: inbox procedure, PDF preprocessing, routing
 
-> **Trigger:** Когда владелец просит «обработать inbox» (или аналогично), или когда в `inbox/` появились новые исходники (транскрипты, PDF, статьи, исследования).
+> **Trigger:** When the owner asks to "process the inbox" (or similar), or when new sources (transcripts, PDFs, articles, research) have appeared in `inbox/`.
 > **Governing FPF patterns:**
->   → E.11 (практический вход: именованные entry-path)
->   → C.11 (фиделити захвата исходника)
+>   → E.11 (practical entry: named entry-paths)
+>   → C.11 (fidelity of the source capture)
 > **Skill dependencies:**
->   → pdf2md (конвертация PDF в Markdown)
+>   → pdf2md (PDF to Markdown conversion)
 
 ---
 
@@ -32,96 +32,95 @@ available.
 
 ### PV.Inbox:2 - Problem
 
-Входящие приходят в смешанных форматах (транскрипты, PDF, статьи, исследования)
-и без явного роутинга либо теряются, либо обрабатываются неправильным
-процессом. PDF-исходники нельзя анализировать напрямую — нужна конвертация
-перед содержательной обработкой.
+Incoming material arrives in mixed formats (transcripts, PDFs, articles, research)
+and, without explicit routing, is either lost or processed by the wrong procedure.
+PDF sources cannot be analysed directly — a conversion is needed before substantive
+processing.
 
 ### PV.Inbox:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Смешанные форматы vs один процесс | Роутинг по типу материала: транскрипт → StateUpdate, исследование → ExternalResearch, работа → Track. |
-| PDF-фиделити vs прямой анализ | Конвертировать PDF в Markdown (pdf2md); анализировать только конвертат. |
-| Полнота vs замусоривание | После полной обработки — очистить `inbox/`. |
+| Mixed formats vs one process | Routing by material type: transcript → StateUpdate, research → ExternalResearch, work → Track. |
+| PDF fidelity vs direct analysis | Convert PDF to Markdown (pdf2md); analyse only the conversion. |
+| Completeness vs clutter | After full processing — clear `inbox/`. |
 
 ### PV.Inbox:4 - Solution
 
-1. **Запрос.** По запросу «process inbox» (и аналогичным) обработать файлы из
-   `inbox/` процедурами LPF. После полной обработки — очистить `inbox/`.
-2. **PDF-препроцессинг.** Если в `inbox/` есть `.pdf` — до содержательной
-   обработки конвертировать каждый PDF в Markdown скиллом `pdf2md` (скрипт
-   `scripts/extract_pdfs.py`, параметры `--source <inbox_dir> --first N`).
-   Результат (`.md` в `inbox/_markdown/`) использовать как исходник для
-   дальнейших процедур (StateUpdate, Track). Оригинальный PDF напрямую не
-   анализировать — только через конвертированный Markdown. Если `pdf2md`
-   недоступен или конвертация падает — зафиксировать это в результате
-   обработки inbox и уведомить владельца.
-3. **Роутинг внешних исследований.** Независимые исследования (Knowy),
-   нарративизации, статьи, доклады, туториалы — через процедуру
-   ExternalResearch с двусторонней привязкой к сущностям, принимающим ссылки
-   (Q, RISK, CON, DEC, TRK).
-4. **Роутинг на процедуры.** Транскрипт/протокол встречи → StateUpdate (и
-   связанные сущности); материал с ценными артефактами → подшить в подходящий
-   трек или создать новый (Track).
+1. **Request.** On a "process inbox" request (and similar) process the files in
+   `inbox/` with the LPF procedures. After full processing — clear `inbox/`.
+2. **PDF preprocessing.** If there is a `.pdf` in `inbox/` — before substantive
+   processing convert each PDF to Markdown with the `pdf2md` skill (script
+   `scripts/extract_pdfs.py`, parameters `--source <inbox_dir> --first N`). Use the
+   result (`.md` in `inbox/_markdown/`) as the source for the subsequent procedures
+   (StateUpdate, Track). Do not analyse the original PDF directly — only via the
+   converted Markdown. If `pdf2md` is unavailable or the conversion fails — record
+   this in the inbox-processing result and notify the owner.
+3. **Routing external research.** Independent studies (Knowy), narrativizations,
+   articles, talks, tutorials — through the ExternalResearch procedure with a
+   two-way binding to reference-bearing entities (Q, RISK, CON, DEC, TRK).
+4. **Routing to procedures.** A meeting transcript/protocol → StateUpdate (and the
+   related entities); a material with valuable artifacts → file into a fitting
+   track or create a new one (Track).
 
 ### PV.Inbox:5 - Archetypal Grounding
 
-**Show.** Обработка inbox в этом проекте: PDF конвертируется через `pdf2md`,
-транскрипты идут в StateUpdate, статьи — в ExternalResearch, после обработки
-`inbox/` пустеет.
+**Show.** Inbox processing in this project: a PDF is converted via `pdf2md`,
+transcripts go to StateUpdate, articles to ExternalResearch, and after processing
+`inbox/` is empty.
 
 ### PV.Inbox:6 - Bias-Annotation
 
-Соблазн — анализировать PDF напрямую «для скорости», пропуская конвертацию:
-теряется фиделити и воспроизводимость. Симметричный соблазн — оставить
-`inbox/` после обработки «на всякий случай»: накапливается мусор и
-необработанные сигналы.
+The temptation is to analyse a PDF directly "for speed", skipping the conversion:
+fidelity and reproducibility are lost. The symmetric temptation is to leave
+`inbox/` after processing "just in case": clutter and unprocessed signals
+accumulate.
 
 ### PV.Inbox:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-IB.1 | PDF конвертирован в Markdown до содержательной обработки; оригинал напрямую не анализируется. |
-| CC-IB.2 | Каждый материал направлен по типу: StateUpdate / ExternalResearch / Track. |
-| CC-IB.3 | После полной обработки `inbox/` очищен. |
-| CC-IB.4 | Сбой конвертации зафиксирован и доведён до владельца. |
+| CC-IB.1 | A PDF is converted to Markdown before substantive processing; the original is not analysed directly. |
+| CC-IB.2 | Every material is routed by type: StateUpdate / ExternalResearch / Track. |
+| CC-IB.3 | After full processing `inbox/` is cleared. |
+| CC-IB.4 | A conversion failure is recorded and brought to the owner. |
 
 ### PV.Inbox:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| Прямой анализ PDF без конвертации | Сначала `pdf2md`, потом обработка `.md`. |
-| Материал без явного роутинга | Определить тип и направить в нужную процедуру. |
-| `inbox/` не очищен после обработки | Очистить по завершении. |
+| Direct PDF analysis without conversion | First `pdf2md`, then process the `.md`. |
+| Material without explicit routing | Determine the type and route to the correct procedure. |
+| `inbox/` not cleared after processing | Clear it on completion. |
 
 ### PV.Inbox:9 - Consequences
 
-Надёжный intake отделяет «захват» от «содержательной обработки» и не даёт
-материалу остаться сиротой. Цена — обязательная конвертация PDF и явный
-роутинг каждого входящего.
+A reliable intake separates "capture" from "substantive processing" and does not let
+material stay an orphan. The price — mandatory PDF conversion and explicit routing
+of every incoming item.
 
 ### PV.Inbox:10 - Rationale
 
-Вход должен быть практическим (`E.11`): именованные entry-path на процедуры
-вместо одного линейного процесса. Конвертация PDF до анализа — фиделити захвата
-(`C.11`): обрабатывается верное представление исходника, а не сырой бинарник.
+The entry must be practical (`E.11`): named entry-paths to the procedures instead of
+one linear process. PDF conversion before analysis is capture fidelity (`C.11`): the
+correct representation of the source is processed, not a raw binary.
 
 ### PV.Inbox:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `E.11` (практический вход) | Adopt | Роутинг по типу материала на entry-path | Reopen при ревизии `E.11` |
-| FPF `C.11` (фиделити захвата) | Adopt | PDF → Markdown до анализа | Reopen при ревизии `C.11` |
-| `pdf2md` skill (vision-language OCR) | Adopt | Конвертация PDF в Markdown | Reopen при смене конвертера |
+| FPF `E.11` (practical entry) | Adopt | Routing by material type onto entry-paths | Reopen on `E.11` revision |
+| FPF `C.11` (capture fidelity) | Adopt | PDF → Markdown before analysis | Reopen on `C.11` revision |
+| `pdf2md` skill (vision-language OCR) | Adopt | PDF to Markdown conversion | Reopen on a converter change |
 
-Best-known line: предобработка входа до анализа. Rejected rival: «анализ PDF
-напрямую» — отброшен из-за потери фиделити.
+Best-known line: preprocessing the entry before analysis. Rejected rival: "direct
+PDF analysis" — rejected due to loss of fidelity.
 
 ### PV.Inbox:12 - Relations
 
-- **Builds on:** `E.11` (практический вход), `C.11` (фиделити захвата).
-- **Coordinates with:** `A.15.1` (исполнение intake).
-- **Specialized by:** routes to `PV.StateUpdate`, `PV.ExternalResearch`, `PV.Track`.
+- **Builds on:** `E.11` (practical entry), `C.11` (capture fidelity).
+- **Coordinates with:** `A.15.1` (intake execution).
+- **Applies to:** `PV.StateUpdate` (routes transcripts/protocols), `PV.ExternalResearch` (routes external research), `PV.Track` (files artifacts into tracks).
+- **Applied by:** `PV.Outbox` (transfers into `inbox/`), `PV.Init` (creates `inbox/`).
 
 ### PV.Inbox:End

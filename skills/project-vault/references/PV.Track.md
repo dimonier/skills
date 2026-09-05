@@ -1,6 +1,6 @@
 ---
 id: PV.Track
-title: "Трек как обязательный контейнер продуктивной работы: жизненный цикл, статусы, продолжение"
+title: "Track as the mandatory container for productive work: lifecycle, statuses, continuation"
 status: seed
 readiness: source-faithful
 keywords: [track, lifecycle, status, problem-card, track-bound, work-plan]
@@ -15,17 +15,17 @@ dependencies:
     - E.9.DA
 ---
 
-## PV.Track - Трек как обязательный контейнер продуктивной работы: жизненный цикл, статусы, продолжение
+## PV.Track - Track as the mandatory container for productive work: lifecycle, statuses, continuation
 
-> **Trigger:** Когда поступает запрос на продуктивную деятельность (исследование, анализ, синтез, проработка архитектуры, написание артефакта), или когда нужно продолжить/создать/закрыть трек.
+> **Trigger:** When a request for productive activity arrives (research, analysis, synthesis, architecture work, writing an artifact), or when a track must be continued/created/closed.
 > **Governing FPF patterns:**
->   → C.22.2 (ProblemCard@Context — проблема, контекст, разрез скоупа)
->   → G.5 (выбор метода)
->   → A.15.1 (исполнение работ)
->   → A.15.2 (план работ)
->   → E.23 (цикл улучшения качества)
+>   → C.22.2 (ProblemCard@Context — problem, context, scope cut)
+>   → G.5 (method choice)
+>   → A.15.1 (work execution)
+>   → A.15.2 (work plan)
+>   → E.23 (quality improvement cycle)
 > **Skill dependencies:**
->   → нет
+>   → none
 
 ---
 
@@ -37,143 +37,145 @@ elaboration lifecycle, and continue/retire them without skipping statuses.
 
 ### PV.Track:2 - Problem
 
-Продуктивная деятельность без контейнера расползается: работа делается вне
-трека, статусы перескакиваются, сигналы не фиксируются, «продолжим» не на что
-опереться. Трек должен быть обязательным контейнером, но при этом не
-плодиться на каждый чих (не на каждое DEC/RISK/Q).
+Productive activity without a container sprawls: work is done outside a track,
+statuses are skipped, signals are not recorded, "let's continue" has nothing to
+lean on. A track must be the mandatory container, but must not proliferate for
+every trifle (not for every DEC/RISK/Q).
 
 ### PV.Track:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Обязательность vs лёгкость | Продуктивная работа — только в треке; мелкие одношаговые запросы — без трека. |
-| Один статус vs несколько | У трека ровно один текущий статус (frontmatter + inline). |
-| Постепенность vs перескок | Всегда старт с `cue`, шаг за шагом; статусы не пропускать. |
-| Контейнер vs размножение | Трек — на операционную линию с блокерами, охватывает несколько сущностей. |
+| Mandatory vs lightweight | Productive work — only in a track; small one-step requests — without a track. |
+| One status vs several | A track has exactly one current status (frontmatter + inline). |
+| Gradual vs skip | Always start from `cue`, step by step; statuses are not skipped. |
+| Container vs proliferation | A track — for an operational line with blockers, spanning several entities. |
 
 ### PV.Track:4 - Solution
 
-**T.1 — приход запроса.**
+**T.1 — request arrival.**
 
-1. Определить: продуктивная деятельность (исследование, анализ, синтез,
-   многошаговая работа) или мелкий одношаговый запрос.
-2. Мелкая задача — выполнить без трека, отчитаться.
-3. **Запрос не указывает на трек** (напр. «продолжим», «давай дальше»):
-   a. Взять топ-5 треков по времени изменения: `Get-ChildItem
+1. Determine: productive activity (research, analysis, synthesis, multi-step work)
+   or a small one-step request.
+2. A small task — do it without a track, report.
+3. **The request does not point to a track** (e.g. "let's continue", "let's go on"):
+   a. Take the top-5 tracks by modification time: `Get-ChildItem
    project-vault\tracks\TRK-*.md | Sort-Object LastWriteTime -Descending |
    Select-Object -First 5`.
-   b. Дополнительно просмотреть **все активные** треки (не `performed`/
-   `evaluated`/`retired`) на дедлайны в «Следующих ходах»: выделить
-   `(deadline YYYY-MM-DD)` в пределах 3 дней от сегодня (включая просроченные).
-   c. Показать сводный список (топ-3 по свежести + треки с приближающимся
-   дедлайном). Сортировка: сначала просроченные, затем ближайший дедлайн, затем
-   свежие. Предложить самый срочный. Дождаться подтверждения.
-4. Продуктивная деятельность с явной темой — найти подходящий трек
-   (`SocratiCode codebase_search` или `grep -l "<keyword>" project-vault/tracks/TRK-*.md`):
-   - **Ровно один подходящий** → «Продолжаю трек TRK-NNNN (название), статус — X.
-     Перехожу к Y». Дождаться подтверждения.
-   - **Несколько похожих** → показать всех кандидатов со статусами, предложить подходящий.
-   - **Нет подходящего** → «Создаю новый трек для [суть запроса]». Дождаться подтверждения.
-5. После подтверждения — действовать по треку.
+   b. Additionally review **all active** tracks (not `performed`/
+   `evaluated`/`retired`) for deadlines in "Next moves": highlight
+   `(deadline YYYY-MM-DD)` within 3 days of today (including overdue ones).
+   c. Show a summary list (top-3 by freshness + tracks with an approaching
+   deadline). Sorting: overdue first, then nearest deadline, then fresh. Propose the
+   most urgent. Await confirmation.
+4. Productive activity with an explicit topic — find a fitting track
+   (`SocratiCode codebase_search` or `grep -l "<keyword>" project-vault/tracks/TRK-*.md`):
+   - **Exactly one fitting** → "Continuing track TRK-NNNN (name), status — X. Moving to Y". Await confirmation.
+   - **Several similar** → show all candidates with statuses, propose the fitting one.
+   - **None fitting** → "Creating a new track for [the gist of the request]". Await confirmation.
+5. After confirmation — act on the track.
 
-**T.2 — создание трека.**
+**T.2 — track creation.**
 
-1. Новый трек всегда стартует со `status: cue`.
-2. Продвижение — строго по FPF-core: `cue` → формулировка проблемной карточки
-   (C.22.2 ProblemCard@Context) → `problem-framed` → выбор метода (G.5/A.15) →
-   `method-selected` → план работ (A.15.2) → `work-planned` → исполнение (A.15.1)
-   → `performed` → оценка результата → `evaluated`.
-3. На каждом переходе: объявить в чате намерение перевести трек в следующий
-   статус с кратким обоснованием (что именно изменилось), дождаться
-   подтверждения, затем обновить трек. После смены статуса — `vault.py tracks`.
-4. Создание: файл `TRK-NNNN.md` по шаблону `tracks/_template.md`; затем `vault.py tracks`.
+1. A new track always starts with `status: cue`.
+2. Advancement — strictly per FPF-core: `cue` → problem-card formulation
+   (C.22.2 ProblemCard@Context) → `problem-framed` → method choice (G.5/A.15) →
+   `method-selected` → work plan (A.15.2) → `work-planned` → execution (A.15.1)
+   → `performed` → result evaluation → `evaluated`.
+3. On each transition: announce in chat the intent to move the track to the next
+   status with a brief justification (what exactly changed), await confirmation,
+   then update the track. After a status change — `vault.py tracks`.
+4. Creation: the file `TRK-NNNN.md` from the template `tracks/_template.md`; then `vault.py tracks`.
 
-**T.3 — продолжение трека.**
+**T.3 — track continuation.**
 
-1. При продолжении: сообщить текущий статус, следующий статус и краткое
-   обоснование перехода. Дождаться подтверждения.
-2. После подтверждения: обновить `status` во frontmatter и в полях статуса трека.
-   После — `vault.py tracks`.
-3. Новые артефакты (`artifacts/`) — перечислить в «Related entities» трека.
-4. Содержательный шаг с результатом — создать WRK (процедура WorkRecord) и
-   строку в «Выполненные ходы».
-5. Блокер обнаружен → `blocked`, блокер в поля статуса. При разблокировке —
-   вернуть предыдущий активный статус.
+1. On continuation: report the current status, the next status, and a brief
+   justification for the transition. Await confirmation.
+2. After confirmation: update `status` in the frontmatter and in the track's status
+   fields. Then — `vault.py tracks`.
+3. New artifacts (`artifacts/`) — list them in the track's "Related entities".
+4. A substantive step with a result — create a WRK (the WorkRecord procedure) and a
+   line in "Completed moves".
+5. A blocker found → `blocked`, the blocker into the status fields. On unblocking —
+   return the previous active status.
 
-**T.4 — обработка inbox и треки.**
-- Материал с исследованиями/ценными артефактами → в существующий трек или
-  создать новый (T.1–T.2).
-- Транскрипт/протокол → по StateUpdate, обновить связанные сущности (DEC, Q,
-  RISK, CON). Если встреча влияет на существующий трек — обновить
-  статус/блокеры/следующие ходы.
+**T.4 — inbox processing and tracks.**
+- A material with research/valuable artifacts → into an existing track or create a
+  new one (T.1–T.2).
+- A transcript/protocol → per StateUpdate, update the related entities (DEC, Q,
+  RISK, CON). If the meeting affects an existing track — update the
+  status/blockers/next moves.
 
-**Жизненный цикл статусов.** `cue` → `problem-framed` → `method-selected` →
-`work-planned` → `in-progress` → `performed` → `evaluated`. Боковые переходы:
-`blocked` (из любого активного), `deferred` (из любого активного), `retired`
-(терминальный). У трека ровно один текущий статус — во frontmatter и в inline-таблице.
+**Status lifecycle.** `cue` → `problem-framed` → `method-selected` →
+`work-planned` → `in-progress` → `performed` → `evaluated`. Side transitions:
+`blocked` (from any active), `deferred` (from any active), `retired` (terminal). A
+track has exactly one current status — in the frontmatter and in the inline table.
 
 ### PV.Track:5 - Archetypal Grounding
 
-**Show.** Треки этого проекта: TRK-2026-0036 прошёл `cue → problem-framed →
-method-selected → work-planned` и исполняется; каждый переход объявлялся в чате
-и фиксировался WRK.
+**Show.** This project's tracks: TRK-2026-0036 went through `cue → problem-framed →
+method-selected → work-planned` and is being executed; every transition was
+announced in chat and recorded by a WRK.
 
 ### PV.Track:6 - Bias-Annotation
 
-Соблазн — создать трек на каждое решение/риск, превращая треки в дубль реестра
-сущностей. Симметричный соблазн — перескочить статусы («сразу в in-progress»),
-теряя ProblemCard@Context. Противовесы: трек — только на операционную линию с
-блокерами, и строгое пошаговое продвижение.
+The temptation is to create a track for every decision/risk, turning tracks into a
+duplicate of the entity registry. The symmetric temptation is to skip statuses
+("straight into in-progress"), losing the ProblemCard@Context. Counterweights: a
+track — only for an operational line with blockers, and strict step-by-step
+advancement.
 
 ### PV.Track:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-TR.1 | Продуктивная работа выполняется только в треке; мелкие запросы — без трека. |
-| CC-TR.2 | У трека ровно один текущий статус (frontmatter + inline). |
-| CC-TR.3 | Старт всегда с `cue`; статусы не пропускаются. |
-| CC-TR.4 | Трек имеет хотя бы один блокер. |
-| CC-TR.5 | Треки не удаляются; retired остаются в `tracks/` со `status: retired`. |
-| CC-TR.6 | Каждый переход статуса объявлен и подтверждён; после — `vault.py tracks`. |
+| CC-TR.1 | Productive work is done only in a track; small requests — without a track. |
+| CC-TR.2 | A track has exactly one current status (frontmatter + inline). |
+| CC-TR.3 | Always starts from `cue`; statuses are not skipped. |
+| CC-TR.4 | A track has at least one blocker. |
+| CC-TR.5 | Tracks are not deleted; retired ones stay in `tracks/` with `status: retired`. |
+| CC-TR.6 | Every status transition is announced and confirmed; then — `vault.py tracks`. |
 
 ### PV.Track:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| Работа вне трека | Завести/привязать трек до начала работы. |
-| Перескок статусов | Всегда от `cue`, шаг за шагом. |
-| Трек на каждую сущность | Только на операционную линию с блокерами. |
-| Удаление retired-трека | Оставить с `status: retired`. |
-| Несколько ProblemCard в одном треке | Новый независимый сигнал → дочерний трек со своей ProblemCard. |
+| Work outside a track | Create/bind a track before starting the work. |
+| Skipping statuses | Always from `cue`, step by step. |
+| A track for every entity | Only for an operational line with blockers. |
+| Deleting a retired track | Leave it with `status: retired`. |
+| Several ProblemCards in one track | A new independent signal → a child track with its own ProblemCard. |
 
 ### PV.Track:9 - Consequences
 
-Трек как обязательный контейнер делает работу возобновляемой и аудируемой, но
-требует объявления каждого перехода и дисциплины статусов. Открытие новой
-независимой проблемы (другой EntityOfConcern / разрез скоупа) — дочерний трек, а
-не вторая ProblemCard в том же треке.
+The track as a mandatory container makes work resumable and auditable, but requires
+announcing every transition and status discipline. Opening a new independent
+problem (another EntityOfConcern / scope cut) — a child track, not a second
+ProblemCard in the same track.
 
 ### PV.Track:10 - Rationale
 
-`C.22.2` фиксирует ProblemCard@Context как ядро проблемы трека; `G.5`/`A.15` —
-выбор метода и исполнение; `A.15.2` — план работ; `E.23` — оценка результата
-(fulfilment assertion). Отсюда — жизненный цикл и обязательность контейнера.
+`C.22.2` fixes ProblemCard@Context as the core of a track's problem; `G.5`/`A.15` —
+method choice and execution; `A.15.2` — the work plan; `E.23` — result evaluation
+(the fulfilment assertion). Hence — the lifecycle and the container's mandatory
+nature.
 
 ### PV.Track:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `C.22.2` (ProblemCard@Context) | Adopt | Проблема/контекст/разрез скоупа в теле трека | Reopen при ревизии `C.22.2` |
-| FPF `A.15.2` (план работ) | Adopt | «Следующие ходы» как PlanItems | Reopen при ревизии `A.15.2` |
-| FPF `E.23` (цикл улучшения) | Adopt | `performed → evaluated` по P2W-критерию | Reopen при ревизии `E.23` |
+| FPF `C.22.2` (ProblemCard@Context) | Adopt | Problem/context/scope cut in the track body | Reopen on `C.22.2` revision |
+| FPF `A.15.2` (work plan) | Adopt | "Next moves" as PlanItems | Reopen on `A.15.2` revision |
+| FPF `E.23` (improvement cycle) | Adopt | `performed → evaluated` by the P2W criterion | Reopen on `E.23` revision |
 
-Best-known line: трек как обязательный контейнер продуктивной работы. Rejected
-rival: «работа без трека / трек на каждую сущность» — отброшен.
+Best-known line: the track as the mandatory container for productive work. Rejected
+rival: "work without a track / a track for every entity" — rejected.
 
 ### PV.Track:12 - Relations
 
-- **Builds on:** `C.22.2` (ProblemCard), `G.5` (метод), `A.15.1` (исполнение), `A.15.2` (план), `E.23` (оценка).
-- **Coordinates with:** `E.9.DA` (оценка решений).
-- **Specialized by:** `PV.Artifact` (артефакт в треке), `PV.WorkRecord` (WRK в треке), `PV.VaultSchema` (треки как сущности).
+- **Builds on:** `C.22.2` (ProblemCard), `G.5` (method), `A.15.1` (execution), `A.15.2` (plan), `E.23` (evaluation).
+- **Coordinates with:** `E.9.DA` (decision evaluation).
+- **Applies to:** `PV.VaultSchema` (tracks as vault entities).
+- **Applied by:** `PV.Inbox` (files artifacts into tracks), `PV.StateUpdate` (signals open/change tracks), `PV.Artifact` (artifacts bound to a track), `PV.WorkRecord` (WRKs capture steps in a track).
 
 ### PV.Track:End

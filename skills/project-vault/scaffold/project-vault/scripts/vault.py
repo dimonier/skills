@@ -11,8 +11,10 @@ Usage:
   python vault.py all --path "D:/path/to/project-vault"
 
 The optional `--path` (or `-p`) argument points at the project-vault directory
-(the one containing `work/` and `tracks/`). When omitted, the script derives the
-location from its own install path (`skills/project-vault/scripts` inside a repo).
+(the one containing `work/` and `tracks/`). When omitted, the script assumes it
+lives at `<project>/project-vault/scripts/vault.py` and uses the parent of
+`scripts/` as the vault dir (this holds both in the scaffold and in a deployed
+project).
 
 Call this after every WRK creation to keep indexes in sync with sources.
 
@@ -47,10 +49,10 @@ def resolve_vault_dir(cli_path):
     """Return the project-vault directory (containing work/ and tracks/)."""
     if cli_path:
         return os.path.abspath(cli_path)
-    # Fallback: scripts → project-vault → skills → .agents → repo-root
+    # The script lives in <vault>/scripts/vault.py (both in the scaffold and in
+    # a deployed project); the vault dir is the parent of scripts/.
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    repo_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(script_dir))))
-    return os.path.join(repo_root, 'project-vault')
+    return os.path.dirname(script_dir)
 
 
 def parse_frontmatter(content):
@@ -142,23 +144,23 @@ def generate_work_index(work_dir):
     lines.append('generated: true')
     lines.append('---')
     lines.append('')
-    lines.append('# Журнал выполненной работы (ходов)')
+    lines.append('# Work log (completed moves)')
     lines.append('')
     lines.append(
-        'Сквозной хронологический журнал: датированные вхождения работы '
-        '(`U.Work`, A.15.1) в рамках треков проекта. '
-        'Атомарные записи — в файлах `WRK-YYYY-MM-DD-hhmmss.md`.'
+        'An end-to-end chronological log: dated work entries '
+        '(`U.Work`, A.15.1) within the project tracks. '
+        'Atomic records — in `WRK-YYYY-MM-DD-hhmmss.md` files.'
     )
     lines.append('')
     lines.append(
-        '> Сгенерировано автоматически из frontmatter WRK-файлов '
-        'скриптом `scripts/vault.py`. '
-        'Вызывается после каждого завершённого WRK (Procedure W.2).'
+        '> Auto-generated from the WRK files\' frontmatter '
+        'by `scripts/vault.py`. '
+        'Run after each completed WRK (Procedure W.2).'
     )
     lines.append('')
-    lines.append('## Сводка')
+    lines.append('## Summary')
     lines.append('')
-    lines.append('| ID | Трек | FPF-паттерн | Суть |')
+    lines.append('| ID | Track | FPF-pattern | Gist |')
     lines.append('|----|------|-------------|------|')
 
     for r in rows:
@@ -201,21 +203,21 @@ def generate_tracks_index(tracks_dir):
     lines.append('generated: true')
     lines.append('---')
     lines.append('')
-    lines.append('# Индекс треков проработки')
+    lines.append('# Track index')
     lines.append('')
     lines.append(
-        'Сводная карта проработки проекта. Трек — операциональная линия '
-        'работы: от сигнала до выполненной работы и оценки результата.'
+        'A summary map of the project elaboration. A track is an operational line '
+        'of work: from a signal to completed work and result evaluation.'
     )
     lines.append('')
     lines.append(
-        '> Сгенерировано автоматически из frontmatter TRK-файлов '
-        'скриптом `scripts/vault.py`.'
+        '> Auto-generated from the TRK files\' frontmatter '
+        'by `scripts/vault.py`.'
     )
     lines.append('')
-    lines.append('## Сводка')
+    lines.append('## Summary')
     lines.append('')
-    lines.append('| Трек | Суть |')
+    lines.append('| Track | Gist |')
     lines.append('| ---- | ---- |')
 
     for r in rows:

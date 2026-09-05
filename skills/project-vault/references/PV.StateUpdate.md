@@ -1,9 +1,9 @@
 ---
 id: PV.StateUpdate
-title: "Обновление состояния из источника: дайджест + DEC/Q/RISK/CON из транскрипта или диалога"
+title: "State update from a source: DEC/Q/RISK/CON from a transcript or dialogue"
 status: seed
 readiness: source-faithful
-keywords: [state-update, digest, transcript, dialogue, decision, DEC, ADR, question, risk, contradiction]
+keywords: [state-update, transcript, dialogue, decision, DEC, ADR, question, risk, contradiction]
 dependencies:
   builds_on:
     - C.32.ADR
@@ -15,177 +15,179 @@ dependencies:
     - A.3.2
 ---
 
-## PV.StateUpdate - Обновление состояния из источника: дайджест + DEC/Q/RISK/CON из транскрипта или диалога
+## PV.StateUpdate - State update from a source: DEC/Q/RISK/CON from a transcript or dialogue
 
-> **Trigger:** Когда появился новый источник состояния — транскрипт встречи (Input 1) или новости диалога без транскрипта (Input 2) — и хранилище нужно привести в соответствие.
+> **Trigger:** When a new state source appears — a meeting transcript (Input 1) or dialog news without a transcript (Input 2) — and the vault must be brought in line.
 > **Governing FPF patterns:**
->   → C.32.ADR (дисциплина записи решений: problem frame → outcome → consequences → confirmation/supersession)
->   → E.9 (DRR: одно ограниченное решение, входной фильтр)
->   → C.11 (любое новое утверждение — со ссылкой на источник)
+>   → C.32.ADR (decision-record discipline: problem frame → outcome → consequences → confirmation/supersession)
+>   → E.9 (DRR: one bounded decision, input filter)
+>   → C.11 (any new claim — with a reference to the source)
 > **Skill dependencies:**
->   → нет
+>   → none
 
 ---
 
 ### PV.StateUpdate:1 - Problem frame
 
 Use this pattern to turn a meeting transcript or a dialogue briefing into a
-verifiable vault update: capture the source, write a digest, create/close atomic
-entities (DEC/Q/RISK/CON), and reconcile against the active open-question registry
-without inventing facts absent from the source.
+verifiable vault update: capture the source, create/close atomic entities
+(DEC/Q/RISK/CON), and reconcile against the active open-question registry without
+inventing facts absent from the source.
 
 ### PV.StateUpdate:2 - Problem
 
-Источник может быть бедным или противоречивым: формулировки решений размыты,
-решение упомянуто, но не одобрено, противоречие подозревается, но не заявлено.
-Если заполнять сущности «по мотивам», хранилище наполнится неподтверждёнными
-решениями и непроверенными фактами. Если не различать «выбор» и «пересказ»,
-канон решений засоряется мусорными записями.
+A source can be thin or contradictory: decision formulations are vague, a decision
+is mentioned but not approved, a contradiction is suspected but not asserted. If
+entities are filled in "by the spirit of it", the vault fills up with unconfirmed
+decisions and unchecked facts. If "choice" is not distinguished from "paraphrase",
+the decision canon clogs with junk entries.
 
 ### PV.StateUpdate:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Полнота vs верифицируемость | В дайджест — только проверяемое из источника; формулировки решений — только в атомарных файлах, не в дайджесте. |
-| Принято vs предложено | `accepted` — только при явном одобрении в источнике; иначе `proposed` + пометка «pending owner confirmation». |
-| Выбор vs пересказ | DEC — только для ограниченного архитектурного выбора с последствием; редакционное/резюме — фактом в дайджест. |
-| Один vs несколько | Одно решение = один DEC; независимые темы не сливать. |
+| Completeness vs verifiability | Record only what is verifiable from the source; decision/question/risk formulations — only in atomic files. |
+| Accepted vs proposed | `accepted` — only on explicit approval in the source; otherwise `proposed` + "pending owner confirmation". |
+| Choice vs paraphrase | DEC — only for a bounded architectural choice with consequences; editorial/summary — as context in the capture header, no DEC. |
+| One vs several | One decision = one DEC; independent topics are not merged. |
 
 ### PV.StateUpdate:4 - Solution
 
-**Input 1 — транскрипт встречи.**
+**Input 1 — meeting transcript.**
 
-1. Сохранить исходник в `project-vault/sources/captures/`.
-2. Создать `project-vault/sources/digests/YYYY-MM-DD_slug.md` по настроенному
-   `project-vault/sources/_digest-template.md` (иначе `templates/digest-meeting.md`).
-3. **Реестр открытых вопросов в контексте:** перед заполнением найти активные
-   открытые вопросы `grep -l "^status: open" project-vault/open-questions/*.md` и
-   прочитать, какие релевантны текущему источнику.
-4. Заполнить дайджест только проверяемым: контекст, ссылки на созданные
-   атомарные файлы (DEC, Q, RISK, CON), сверка с реестром вопросов.
-   Формулировки решений/вопросов/рисков — только в атомарных файлах, не
-   копировать в дайджест.
-5. Для **ключевых** решений — создать/обновить `project-vault/decisions/DEC-NNNN.md`
-   по шаблону `project-vault/decisions/_decision_template.md`. Правила:
-   - **Входной фильтр (до создания DEC):** DEC только если у высказывания есть
-     (а) ограниченный *архитектурный* вопрос, (б) положительно выбранный ответ,
-     меняющий целевую систему/дизайн с долгоживущим последствием, (в) на который
-     будущий архитектор сможет опереться. Если формулировка — про содержание
-     рабочего документа, редакционный выбор, повтор уже зафиксированной позиции
-     или резюме без выбора → записать фактом/сигналом в дайджест, DEC не создавать.
-   - **Заполнять все разделы** шаблона; не выдумывать отсутствующее — писать
-     «не обсуждалось» / «неизвестно» / «не применимо».
-   - `decision_type` — одно из `adr | org | strategy | scope | process | procurement | product`;
-     `characteristic` — только для `decision_type: adr`.
-   - «Рассмотренные варианты» ≥2 → заполнить «Сравнение вариантов»; один вариант → «вариант один».
-   - Всегда заполнять «Условия пересмотра»; `revisit_by` или пометка open-ended.
-6. Выполнить общие шаги (ниже).
+1. Save the source into `project-vault/sources/captures/`.
+2. Write 2–3 lines of summary "what the source is about" (context) into the capture header.
+3. **Open-question registry in context:** find the active open questions via
+   `grep -l "^status: open" project-vault/open-questions/*.md`, read the relevant
+   ones. If the source gives a signal on an active Q (closes / partially answers /
+   contradicts) — write it into the Q file (`status`/note + `sources` pointing to
+   the capture). A negative outcome ("no signals") is not recorded.
+4. For **key** decisions — create/update `project-vault/decisions/DEC-NNNN.md`
+   from the template `project-vault/decisions/_template.md`; the DEC's
+   `sources` — to the capture. Rules:
+   - **Input filter (before creating a DEC):** a DEC only if the statement has
+     (a) a bounded *architectural* question, (b) a positively chosen answer that
+     changes the target system/design with a long-lived consequence, (c) which a
+     future architect can rely on. If the formulation is about the content of a
+     working document, an editorial choice, a repetition of an already recorded
+     position, or a summary without a choice → record as context in the capture
+     header, do not create a DEC.
+   - **Fill all sections** of the template; do not invent what is absent — write
+     "not discussed" / "unknown" / "not applicable".
+   - `decision_type` — one of `adr | org | strategy | scope | process | procurement | product`;
+     `characteristic` — only for `decision_type: adr`.
+   - "Considered options" ≥ 2 → fill "Option comparison"; one option → "single option".
+   - Always fill "Revisit conditions"; `revisit_by` or an open-ended note.
+5. Run the common steps (below).
 
-**Input 2 — новости диалога (без транскрипта).**
+**Input 2 — dialog news (no transcript).**
 
-1. Создать `project-vault/sources/digests/YYYY-MM-DD_slug.md` по `templates/digest-dialogue.md`.
-2. Для ключевых решений — создать/обновить DEC со `sources` на дайджест.
-3. Если есть сигналы к активным Q — записать сверку.
-4. Выполнить общие шаги (ниже).
+1. The source is fixed in the entity: a signal/problem/directive → a track (or an
+   atomic entity) with a "Signal" section (the direct quote + date + provenance).
+2. For key decisions — create/update a DEC with `sources` to the dialog (provenance
+   in the frontmatter: `source_kind: user_dialogue`, `evidence_captured_at`).
+3. If there are signals to active Qs — write them into the Q files (do not create a
+   separate reconciliation record).
+4. Run the common steps (below).
 
-**Недостаточность входа.**
-- Транскрипта не хватает на осмысленный дайджест → минимальный дайджест «insufficient data» и стоп.
-- Решение упомянуто, но не одобрено явно → `status: proposed` + «pending owner confirmation».
-- Противоречие подозревается, но не заявлено → CON с `status: proposed` + «requires clarification».
-- Мнение/предпочтение, а не решение → дайджест «opinion expressed, not a decision», без DEC.
-- Диалог противоречит существующему `accepted` → CON + флаг `revisit_by` у решения.
+**Insufficient input.**
+- The transcript is not enough for a meaningful update → a minimal capture header and stop.
+- A decision is mentioned but not explicitly approved → `status: proposed` + "pending owner confirmation".
+- A contradiction is suspected but not asserted → CON with `status: proposed` + "requires clarification".
+- An opinion/preference, not a decision → no DEC; if needed — as context in the capture header.
+- The dialog contradicts an existing `accepted` → CON + a `revisit_by` flag on the decision.
 
-**Общие шаги (после Input 1 или 2).**
+**Common steps (after Input 1 or 2).**
 
-1. Создание/закрытие атомарных сущностей (DEC, Q, RISK, CON) — файл создаётся;
-   закрытые остаются на месте со `status` (без `archive/`).
-2. Новые внешние блокеры → обновить `project-vault/dependencies.md`.
-3. Новые регуляторные/архитектурные ограничения → обновить `project-vault/state/constraints.md`.
-4. **Ведение треков:** источник вводит операционный сигнал, меняет статус трека
-   или закрывает его:
-   - **Новый сигнал** → `project-vault/tracks/TRK-NNNN.md` со `status: cue` (шаблон
-     `tracks/_template.md`); затем `python scripts/vault.py tracks`.
-   - **Смена статуса** → обновить поле `status` во frontmatter и в inline-полях
-     трека. Жизненный цикл: `cue → problem-framed → method-selected → work-planned
-     → in-progress → performed → evaluated`; боковые: `blocked`, `deferred`,
-     `retired` (терминальный). После — `vault.py tracks`.
-   - **Трек закрыт/retired** → `status: retired` (остаётся в `tracks/`); затем `vault.py tracks`.
-   - **Трек разблокирован** → вернуть предыдущий активный статус; затем `vault.py tracks`.
-   - Не создавать трек на каждый DEC/RISK/Q — только на операционные линии с
-     блокерами, охватывающие несколько связанных сущностей.
-5. **Поручения владельцу репозитория:** если в источнике есть явное поручение
-   владельцу (по имени) — только прямо выраженное, без домысливания:
-   - Прочитать `project-vault/tracks/_index.md` и выбрать наиболее подходящий трек по теме.
-   - Записать поручение новым пунктом нумерованного списка в поле «Следующие
-     ходы» трека. При наличии дедлайна — `(deadline YYYY-MM-DD)`; если просрочен —
+1. Creation/closure of atomic entities (DEC, Q, RISK, CON) — the file is created;
+   closed ones stay in place with a `status` (no `archive/`).
+2. New external blockers → update `project-vault/dependencies.md`.
+3. New regulatory/architectural constraints → update `project-vault/state/constraints.md`.
+4. **Track maintenance:** the source introduces an operational signal, changes a
+   track's status, or closes it:
+   - **New signal** → `project-vault/tracks/TRK-NNNN.md` with `status: cue` (template
+     `tracks/_template.md`); then `python scripts/vault.py tracks`.
+   - **Status change** → update the `status` field in the frontmatter and in the
+     track's inline fields. Lifecycle: `cue → problem-framed → method-selected →
+     work-planned → in-progress → performed → evaluated`; side transitions:
+     `blocked`, `deferred`, `retired` (terminal). Then — `vault.py tracks`.
+   - **Track closed/retired** → `status: retired` (stays in `tracks/`); then `vault.py tracks`.
+   - **Track unblocked** → return the previous active status; then `vault.py tracks`.
+   - Do not create a track for every DEC/RISK/Q — only for operational lines with
+     blockers, spanning several related entities.
+5. **Assignments to the repo owner:** if the source has an explicit assignment to
+   the owner (by name) — only one directly expressed, without invention:
+   - Read `project-vault/tracks/_index.md` and pick the most fitting track by topic.
+   - Write the assignment as a new item of the numbered list in the track's "Next
+     moves" field. With a deadline — `(deadline YYYY-MM-DD)`; if overdue —
      `(deadline YYYY-MM-DD, overdue)`.
-   - Если поле называется «Следующий шаг» (ед.ч.) и уже занято — превратить в
-     «Следующие ходы» (мн.ч.: первый пункт — прежний шаг, второй — новое поручение).
-   - Не создавать новый трек под личное поручение — всегда в существующий.
-   - Нет подходящего трека → записать в дайджест и пометить владельцу на разрешение.
+   - If the field is called "Next step" (singular) and is already taken — turn it
+     into "Next moves" (plural: first item — the previous step, second — the new assignment).
+   - Do not create a new track for a personal assignment — always into an existing one.
+   - No fitting track → write into the capture header and flag to the owner for resolution.
 
 ### PV.StateUpdate:5 - Archetypal Grounding
 
-**Show.** Обновление после встречи в этом проекте: исходник в `captures/`,
-дайджест в `digests/`, ключевое архитектурное решение — атомарным DEC с входным
-фильтром, сверка с реестром открытых вопросов, операционный сигнал — треком.
+**Show.** A post-meeting update in this project: the source in `captures/`, a key
+architectural decision as an atomic DEC with the input filter, reconciliation with
+the open-question registry, an operational signal as a track.
 
 ### PV.StateUpdate:6 - Bias-Annotation
 
-Соблазн — повысить статус решения до `accepted` «по духу» встречи без явного
-одобрения, и соблазн — завести DEC на каждое высказывание ради полноты канона.
-Входной фильтр DEC (E.9 «cheap stop») и правило «accepted только явно» — два
-противовеса.
+The temptation is to raise a decision's status to `accepted` "in the spirit of" the
+meeting without explicit approval, and to open a DEC for every statement for the
+sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
+"accepted only explicitly" are the two counterweights.
 
 ### PV.StateUpdate:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-SU.1 | Каждое новое утверждение — со ссылкой на источник (дайджест/капчу). |
-| CC-SU.2 | `accepted` — только при явном одобрении в источнике. |
-| CC-SU.3 | Два несовместимых формулирования — атомарный CON. |
-| CC-SU.4 | DEC создан только после входного фильтра (ограниченный архитектурный выбор). |
-| CC-SU.5 | DEC-тело содержит только DEC-ID и web-URL; прочие ссылки — во frontmatter. |
-| CC-SU.6 | Смена решения = правка карточки + «История пересмотров», не дубликат. |
+| CC-SU.1 | Every new claim — with a reference to the source (capture/dialog). |
+| CC-SU.2 | `accepted` — only on explicit approval in the source. |
+| CC-SU.3 | Two incompatible formulations — an atomic CON. |
+| CC-SU.4 | A DEC is created only after the input filter (bounded architectural choice). |
+| CC-SU.5 | The DEC body carries only the DEC-ID and a web-URL; other references — in the frontmatter. |
+| CC-SU.6 | A decision change = edit the card + "Revision history", not a duplicate. |
 
 ### PV.StateUpdate:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| `accepted` без явного одобрения | `proposed` + «pending owner confirmation». |
-| DEC на редакционное/резюме | Факт/сигнал в дайджест; двусторонний сигнал в сущность. |
-| Формулировки решений скопированы в дайджест | Только в атомарных файлах. |
-| Дубликат DEC при изменении решения | Правка той же карточки + «История пересмотров». |
-| В теле DEC ссылка на дайджест/артефакт | Только DEC-ID и URL; остальное во frontmatter. |
+| `accepted` without explicit approval | `proposed` + "pending owner confirmation". |
+| DEC for editorial/summary content | Context in the capture header; no DEC. |
+| Duplicate DEC on a decision change | Edit the same card + "Revision history". |
+| A capture/artifact reference in the DEC body | Only DEC-ID and URL; the rest in the frontmatter. |
 
 ### PV.StateUpdate:9 - Consequences
 
-Строгая дисциплина записи делает канон решений опорным для будущего архитектора,
-но замедляет запись и требует явного различия «выбор / пересказ». Изменение
-решения влечёт правку с историей пересмотров, а не новый файл.
+Strict record discipline makes the decision canon a support for a future architect,
+but slows down recording and requires an explicit "choice / paraphrase" distinction.
+A decision change means an edit with a revision history, not a new file.
 
 ### PV.StateUpdate:10 - Rationale
 
-`C.32.ADR` требует problem frame → outcome → consequences → confirmation/supersession;
-`E.9` держит DRR как одно ограниченное решение с входным фильтром («cheap stop»
-для редакционных правок). `C.11` — любое утверждение со ссылкой. Отсюда —
-принято/предложено, входной фильтр DEC и «не выдумывать».
+`C.32.ADR` requires problem frame → outcome → consequences → confirmation/supersession;
+`E.9` holds a DRR as one bounded decision with an input filter ("cheap stop" for
+editorial edits). `C.11` — any claim with a reference. Hence — accepted/proposed,
+the DEC input filter, and "do not invent".
 
 ### PV.StateUpdate:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `C.32.ADR` (ADR-запись) | Adopt | Секции шаблона DEC, `accepted` только явно | Reopen при ревизии `C.32.ADR` |
-| FPF `E.9` (DRR, one bounded decision) | Adopt | Входной фильтр DEC, «одна тема — одна карточка» | Reopen при ревизии `E.9` |
-| FPF `C.11` (ссылка на источник) | Adopt | Guardrail «любое утверждение — со ссылкой» | Reopen при ревизии `C.11` |
+| FPF `C.32.ADR` (ADR record) | Adopt | DEC template sections, `accepted` only explicitly | Reopen on `C.32.ADR` revision |
+| FPF `E.9` (DRR, one bounded decision) | Adopt | DEC input filter, "one topic — one card" | Reopen on `E.9` revision |
+| FPF `C.11` (source reference) | Adopt | Guardrail "any claim — with a reference" | Reopen on `C.11` revision |
 
-Best-known line: ADR-дисциплина с входным фильтром. Rejected rival: «запись всех
-высказываний как решений» — отброшен как засорение канона.
+Best-known line: ADR discipline with an input filter. Rejected rival: "recording
+every statement as a decision" — rejected as canon clutter.
 
 ### PV.StateUpdate:12 - Relations
 
-- **Builds on:** `C.32.ADR` (запись решений), `E.9` (DRR), `C.11` (источник).
-- **Coordinates with:** `C.18`/`C.19` (пробы/сравнение), `A.3.2` (описание метода).
-- **Specialized by:** `PV.ExternalResearch` (сигналы без новых решений), `PV.Track` (треки из сигналов), `PV.Agenda` (закрытие proposed/deferred).
+- **Builds on:** `C.32.ADR` (decision records), `E.9` (DRR), `C.11` (source).
+- **Coordinates with:** `C.18`/`C.19` (probes/comparison), `A.3.2` (method description).
+- **Applies to:** `PV.VaultSchema` (entity creation/ID allocation), `PV.Track` (operational signals open/change tracks).
+- **Applied by:** `PV.Inbox` (routes transcripts), `PV.ExternalResearch` (external signals requiring new entities), `PV.Report` (closing `proposed`/`deferred` slots).
 
 ### PV.StateUpdate:End

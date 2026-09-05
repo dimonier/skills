@@ -1,9 +1,9 @@
 ---
 id: PV.ExternalResearch
-title: "Внешние исследования: двусторонняя привязка справочного материала к сущностям"
+title: "External research: two-way binding of reference material to entities"
 status: seed
 readiness: source-faithful
-keywords: [external-research, two-way-binding, digest, signal, reference, orphan]
+keywords: [external-research, two-way-binding, signal, reference, orphan]
 dependencies:
   builds_on:
     - E.4.PFR
@@ -13,132 +13,131 @@ dependencies:
     - A.3.2
 ---
 
-## PV.ExternalResearch - Внешние исследования: двусторонняя привязка справочного материала к сущностям
+## PV.ExternalResearch - External research: two-way binding of reference material to entities
 
-> **Trigger:** Когда материал не является ни транскриптом встречи, ни новостями диалога — независимое исследование (Knowy), нарративизация, статья, доклад, туториал — и его нужно учесть в принятии решений, а не оставить сиротой.
+> **Trigger:** When a material is neither a meeting transcript nor dialog news — an independent study (Knowy), a narrativization, an article, a talk, a tutorial — and it must be taken into account in decision-making rather than left as an orphan.
 > **Governing FPF patterns:**
->   → E.4.PFR (запись связей между фреймворками/сущностями)
->   → C.11 (фиделити и ссылка на источник)
->   → G.11 (свежесть/валюта внешнего материала)
+>   → E.4.PFR (recording links between frameworks/entities)
+>   → C.11 (fidelity and source reference)
+>   → G.11 (freshness/currency of external material)
 > **Skill dependencies:**
->   → нет
+>   → none
 
 ---
 
 ### PV.ExternalResearch:1 - Problem frame
 
 Use this pattern to file reference material so it is taken into account in
-decision-making: capture the source, write a digest, discover affected entities,
-propagate signals into their files (two-way), and bind the digest to at least one
-reference-bearing entity.
+decision-making: capture the source, discover affected entities, propagate signals
+into their files (two-way), and bind the source to at least one reference-bearing
+entity.
 
 ### PV.ExternalResearch:2 - Problem
 
-Внешний материал легко остаётся «сиротой»: дайджест создан, но сигналы не
-попали в сущности, и при будущем решении материал не учитывается. Односторонняя
-сверка («Reconciliation» только в дайджесте) — неполная обработка: ссылка в одну
-сторону не делает материал найденным из сущности.
+External material easily stays an "orphan": the source is saved, but the signals
+never reach the entities, and at a future decision the material is not taken into
+account. One-way capture (only in the capture, not in the entities) is incomplete
+processing: a link in one direction does not make the material findable from the
+entity.
 
 ### PV.ExternalResearch:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Учтён в решении vs сирота | Двусторонняя привязка: сигнал в файл сущности + дайджест в её `sources`/«Related entities». |
-| Один против многих сущностей | Привязать к ≥1 сущности, принимающей ссылки (Q/RISK/CON/DEC/TRK). |
-| Новое vs справочное | Атомарные сущности — только если материал вносит новое решение/риск/вопрос/противоречие. |
-| Внутри против вне скоупа | Если материал вне скоупа всех сущностей — явно «not bound — outside the project scope». |
+| Considered in decisions vs orphan | Two-way binding: a signal in the entity's file + the source in its `sources`/"Related entities". |
+| One vs many entities | Bind to ≥1 reference-bearing entity (Q/RISK/CON/DEC/TRK). |
+| New vs reference | Atomic entities — only if the material introduces a new decision/risk/question/contradiction. |
+| Inside vs outside scope | If the material is outside the scope of all entities — explicitly "not bound — outside the project scope". |
 
 ### PV.ExternalResearch:4 - Solution
 
-1. Сохранить исходник в `project-vault/sources/captures/`.
-2. Создать дайджест `project-vault/sources/digests/YYYY-MM-DD_slug.md`
-   (`source_kind`: `independent_research` / `web_article` / `conference` / `research_article`).
-3. Обнаружить активные сущности поиском по vault: `grep` для точного совпадения
-   по директориям (`grep -l "^status: open" project-vault/open-questions/`,
-   `grep -l "^status: active" project-vault/risks/`, `grep -l "^status: open"
-   project-vault/contradictions/`) и `SocratiCode codebase_search` для
-   семантического поиска релевантных DEC/Q/RISK/CON/TRK по теме. Определить,
-   какие сущности принимают ссылки и релевантны теме.
-4. Заполнить раздел «Reconciliation» дайджеста силой сигнала для каждой
-   затронутой сущности (`strong` / `partial` / `weak` / `supporting` / `no_signal`).
-5. **Разнести сигналы в сами файлы сущностей (обязательно, двусторонняя
-   связь):** для каждой затронутой сущности (Q, RISK, CON, DEC — с полем
-   `sources`/`source` или разделом «Related entities») дописать сигнал в файл.
-   Перечисление ID только в «Reconciliation» дайджеста — недостаточно.
-   - **DEC:** сигнал — пунктом в подразделе тела «Внешние сигналы» — только суть
-     + читаемое имя источника (напр. «Temporal AI Cookbook»), без путей и без
-     имён файлов vault. Дайджест — только в список `sources:` frontmatter. В теле
-     допустимы только DEC-ID и web-URL.
-   - **Q / RISK / CON:** сигнал — полем frontmatter `signal_YYYY-MM-DD` или
-     заметкой в теле «Signal YYYY-MM-DD» со ссылкой на дайджест.
-6. **Привязать дайджест хотя бы к одной сущности, принимающей ссылки:** добавить
-   дайджест в «Related entities» → «Sources»/«Artifacts» трека, либо в
-   `sources`/`source`/«Related entities» подходящей Q/RISK/CON/DEC (по теме).
-7. Атомарные сущности (DEC/Q/RISK/CON) — только если материал вносит **новое**
-   решение/риск/вопрос/противоречие. Чисто справочный материал их не требует.
-8. Если материал действительно вне скоупа всех сущностей — явно написать
-   «not bound — outside the project scope» в дайджесте (намеренное решение, не пропуск).
-9. При существенном вкладе — проверить целостность: все созданные сущности
-   оформлены и связаны; отдельного индекса не нужно (discovery через
-   `grep`/`SocratiCode`).
+1. Save the source into `project-vault/sources/captures/`; if needed, write 2–3
+   lines of summary (what the material is about) into the capture header.
+2. Discover the active entities by searching the vault: `grep` for exact matches
+   across the directories (`grep -l "^status: open" project-vault/open-questions/`,
+   `grep -l "^status: open" project-vault/risks/`, `grep -l "^status: open"
+   project-vault/contradictions/`) and `SocratiCode codebase_search` for the
+   semantic search of relevant DEC/Q/RISK/CON/TRK by topic. Determine which
+   entities accept references and are relevant to the topic.
+3. **Propagate signals into the entity files themselves (mandatory, two-way
+   binding):** for each affected entity (Q, RISK, CON, DEC — with a
+   `sources`/`source` field or a "Related entities" section) append the signal to
+   the file.
+   - **DEC:** the signal — as an item in the body's "External signals" subsection —
+     only the gist + a readable source name (e.g. "Temporal AI Cookbook"), without
+     paths and without vault file names. The source — in the `sources:` frontmatter
+     list. In the body only DEC-IDs and web-URLs are allowed.
+   - **Q / RISK / CON:** the signal — via a `signal_YYYY-MM-DD` frontmatter field or
+     a "Signal YYYY-MM-DD" note in the body with a reference to the capture.
+4. **Bind the source to at least one reference-bearing entity:** add the capture to
+   a track's "Related entities" → "Sources"/"Artifacts", or to the
+   `sources`/`source`/"Related entities" of a fitting Q/RISK/CON/DEC (by topic).
+5. Atomic entities (DEC/Q/RISK/CON) — only if the material introduces a **new**
+   decision/risk/question/contradiction. Purely reference material does not require them.
+6. If the material is genuinely outside the scope of all entities — explicitly write
+   "not bound — outside the project scope" in the capture header (a deliberate decision, not an omission).
+7. On a substantial contribution — check integrity: all created entities are formed
+   and linked; no separate index is needed (discovery via `grep`/`SocratiCode`).
 
 ### PV.ExternalResearch:5 - Archetypal Grounding
 
-**Show.** Привязка статьи в этом проекте: дайджест + сигналы в файлы открытых
-вопросов и рисков + дайджест в `sources:` DEC, чтобы при следующем решении
-материал был найден.
+**Show.** Binding an article in this project: signals in the files of open questions
+and risks + the source in a DEC's `sources:`, so that at the next decision the
+material is found.
 
 ### PV.ExternalResearch:6 - Bias-Annotation
 
-Соблазн — остановиться на «Reconciliation» в дайджесте и считать обработку
-завершённой: одна сторона связи выглядит как полная обработка, но из сущности
-материал не находится. Двусторонность — не косметика, а критерий учёта.
+The temptation is to save the source and consider the processing done: one side of
+the link looks like complete processing, but the material is not findable from the
+entity. Two-way binding is not cosmetics — it is the criterion of being taken into
+account.
 
 ### PV.ExternalResearch:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-ER.1 | Сигнал записан в файл каждой затронутой сущности (двусторонняя связь). |
-| CC-ER.2 | Дайджест привязан к ≥1 сущности, принимающей ссылки. |
-| CC-ER.3 | В теле DEC — только суть + читаемое имя источника; дайджест только во frontmatter. |
-| CC-ER.4 | Атомарные сущности созданы только для нового решения/риска/вопроса/противоречия. |
-| CC-ER.5 | Вне скоупа — явная пометка «not bound — outside the project scope». |
+| CC-ER.1 | The signal is written into the file of every affected entity (two-way binding). |
+| CC-ER.2 | The source is bound to ≥1 reference-bearing entity. |
+| CC-ER.3 | In the DEC body — only the gist + a readable source name; the source only in the frontmatter. |
+| CC-ER.4 | Atomic entities are created only for a new decision/risk/question/contradiction. |
+| CC-ER.5 | Out of scope — an explicit "not bound — outside the project scope" note. |
 
 ### PV.ExternalResearch:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| Односторонняя «Reconciliation» без записи в сущности | Дописать сигналы в файлы сущностей. |
-| Дайджест-сирота без привязки | Привязать к сущности/треку. |
-| В теле DEC путь к дайджесту/файлу | Только суть + читаемое имя; путь во frontmatter. |
+| One-way capture without writing into entities | Append the signals to the entity files. |
+| A capture orphan without a binding | Bind to an entity/track. |
+| A capture/file path in the DEC body | Only the gist + a readable name; the path in the frontmatter. |
 
 ### PV.ExternalResearch:9 - Consequences
 
-Двусторонняя привязка делает внешний материал учитываемым при будущих решениях,
-но удваивает работу по фиксации (дайджест + сигналы в каждую сущность). Материал
-вне скоупа фиксируется явно, а не молча пропускается.
+Two-way binding makes external material taken into account at future decisions, but
+requires signals in every affected entity. Out-of-scope material is recorded
+explicitly, not silently skipped.
 
 ### PV.ExternalResearch:10 - Rationale
 
-`E.4.PFR` — связи фиксируются как записи, а не подразумеваются; `C.11` — сигнал
-со ссылкой на источник; `G.11` — валюта внешнего материала. Двусторонность —
-следствие: сигнал должен быть найден из обеих сторон (сущность ↔ материал).
+`E.4.PFR` — links are recorded as entries, not implied; `C.11` — a signal with a
+source reference; `G.11` — the currency of external material. Two-way binding is a
+consequence: a signal must be findable from both sides (entity ↔ material).
 
 ### PV.ExternalResearch:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `E.4.PFR` (запись связей) | Adopt | Двусторонняя привязка дайджест ↔ сущность | Reopen при ревизии `E.4.PFR` |
-| FPF `C.11` (ссылка на источник) | Adopt | Сигналы с читаемым именем источника | Reopen при ревизии `C.11` |
-| FPF `G.11` (свежесть) | Adopt | Валюта материала в привязке | Reopen при ревизии `G.11` |
+| FPF `E.4.PFR` (link recording) | Adopt | Two-way binding source ↔ entity | Reopen on `E.4.PFR` revision |
+| FPF `C.11` (source reference) | Adopt | Signals with a readable source name | Reopen on `C.11` revision |
+| FPF `G.11` (freshness) | Adopt | Material currency in the binding | Reopen on `G.11` revision |
 
-Best-known line: двусторонняя привязка внешнего материала. Rejected rival:
-«односторонний список в дайджесте» — отброшен как неполная обработка.
+Best-known line: two-way binding of external material. Rejected rival: "one-way
+capture without signals in the entity" — rejected as incomplete processing.
 
 ### PV.ExternalResearch:12 - Relations
 
-- **Builds on:** `E.4.PFR` (запись связей), `C.11` (источник), `G.11` (свежесть).
-- **Coordinates with:** `A.3.2` (описание метода).
-- **Specialized by:** `PV.Inbox` (вход для внешнего материала), `PV.StateUpdate` (создание новых сущностей).
+- **Builds on:** `E.4.PFR` (link recording), `C.11` (source), `G.11` (freshness).
+- **Coordinates with:** `A.3.2` (method description).
+- **Applies to:** `PV.StateUpdate` (new decision/risk from a signal), `PV.VaultSchema` (signals written into entities).
+- **Applied by:** `PV.Inbox` (entry for external material).
 
 ### PV.ExternalResearch:End

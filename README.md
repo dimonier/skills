@@ -205,19 +205,19 @@ Skills for tracking project state, decisions, risks, and dependencies in a struc
 
 ### 🗂️ Project Vault
 
-Maintains project state in a structured markdown vault: atomic cards for decisions, open questions, risks, contradictions, operational tracks, and work records. Governs working tracks as the mandatory container for all productive activity (research, analysis, synthesis). Includes inbox processing and updating project vault accordingly.
+Local Practices Framework (LPF) for managing project state in a structured markdown vault: atomic cards for decisions, open questions, risks, contradictions, operational tracks, and work records. Governs working tracks as the mandatory container for all productive activity (research, analysis, synthesis). Routing `SKILL.md` + 10 `PV.*` patterns covering vault init, inbox/outbox processing, state updates, external research binding, track-bound work, and report generation.
 
 **Depends on:** `fpf-core`
 
 **Use when:**
-- Initializing a project vault from scaffold
-- Processing meeting transcripts into digests with atomic decision/question/risk/contradiction cards
-- Updating project state from dialogue briefings (owner chat updates)
-- Processing external research with two-way binding to project entities
-- Managing track-bound productive work (track lifecycle, artifacts, work records)
-- Generating next-meeting agendas from open questions, blockers, and contradictions
-- Reconciling new information against the open question registry
-- Surfacing contradictions and archiving closed entities
+- Initializing a project vault from scaffold (`PV.Init`)
+- Processing the inbox (transcripts, PDFs, articles, research) into atomic decision/question/risk/contradiction cards (`PV.Inbox`)
+- Updating project state from dialogue briefings or meeting transcripts (owner chat updates) (`PV.StateUpdate`)
+- Processing external research with two-way binding to project entities (`PV.ExternalResearch`)
+- Managing track-bound productive work (track lifecycle, artifacts, work records) (`PV.Track`, `PV.Artifact`, `PV.WorkRecord`)
+- Generating reports and next-meeting agendas from open questions, blockers, and contradictions (`PV.Report`)
+- Sending outgoing feedback or proposals to another system or skill (`PV.Outbox`)
+- Reconciling new information against the open question registry and archiving closed entities
 
 **Location:** `skills/project-vault/`
 

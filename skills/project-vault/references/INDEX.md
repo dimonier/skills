@@ -2,11 +2,13 @@
 
 | # | PatternID | Title |
 |---|---|---|
-| 1 | `PV.VaultSchema` | Схема и модель сущностей markdown-vault: директории, ID-аллокация, discovery |
-| 2 | `PV.Inbox` | Приём входящих: inbox-процедура, PDF-препроцессинг, роутинг на A/R/T |
-| 3 | `PV.StateUpdate` | Обновление состояния из источника: дайджест + DEC/Q/RISK/CON |
-| 4 | `PV.ExternalResearch` | Внешние исследования: двусторонняя привязка справочного материала |
-| 5 | `PV.Track` | Трек как обязательный контейнер продуктивной работы: жизненный цикл |
-| 6 | `PV.Artifact` | Создание артефакта, привязанного к треку, самодостаточного и отчуждаемого |
-| 7 | `PV.WorkRecord` | Запись хода (WRK): атомарная фиксация содержательного шага |
-| 8 | `PV.Agenda` | Повестка следующей встречи: вопросы, блокеры, противоречия, риски |
+| 1 | `PV.VaultSchema` | Markdown-vault entity schema: directories, ID allocation, discovery |
+| 2 | `PV.Inbox` | Intake: inbox procedure, PDF preprocessing, routing |
+| 3 | `PV.StateUpdate` | State update from a source: DEC/Q/RISK/CON |
+| 4 | `PV.ExternalResearch` | External research: two-way binding of reference material |
+| 5 | `PV.Track` | Track as the mandatory container for productive work: lifecycle |
+| 6 | `PV.Artifact` | Creating a track-bound, self-contained and alienable artifact |
+| 7 | `PV.WorkRecord` | Work record (WRK): atomic capture of a substantive step |
+| 8 | `PV.Report` | Report creation: derived summaries on request, incl. the meeting agenda |
+| 9 | `PV.Outbox` | Outgoing feedback: outbox procedure for sending notes to other systems/skills |
+| 10 | `PV.Init` | Vault initialization: scaffold copy, inbox/outbox creation |

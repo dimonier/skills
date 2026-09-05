@@ -1,6 +1,6 @@
 ---
 id: PV.WorkRecord
-title: "Запись хода (WRK): атомарная фиксация каждого содержательного шага в треке"
+title: "Work record (WRK): atomic capture of each substantive step in a track"
 status: seed
 readiness: source-faithful
 keywords: [work-record, WRK, U.Work, traceability, completed-moves]
@@ -12,14 +12,14 @@ dependencies:
     - E.17
 ---
 
-## PV.WorkRecord - Запись хода (WRK): атомарная фиксация каждого содержательного шага в треке
+## PV.WorkRecord - Work record (WRK): atomic capture of each substantive step in a track
 
-> **Trigger:** Когда внутри трека выполнен содержательный шаг, давший новый результат (артефакт, решение, анализ, структурное изменение хранилища), и его нужно зафиксировать.
+> **Trigger:** When a substantive step with a new result (an artifact, a decision, an analysis, a structural vault change) has been completed inside a track, and it must be recorded.
 > **Governing FPF patterns:**
->   → A.15.1 (U.Work — датированное вхождение работы)
->   → E.10 (kind-дисциплина: WRK как отдельная эпистема)
+>   → A.15.1 (U.Work — a dated work entry)
+>   → E.10 (kind discipline: WRK as a separate episteme)
 > **Skill dependencies:**
->   → нет
+>   → none
 
 ---
 
@@ -31,113 +31,114 @@ track's "Completed moves" stays current.
 
 ### PV.WorkRecord:2 - Problem
 
-Шаги, не зафиксированные атомарно, теряются: нельзя проследить, что именно было
-сделано и каким методом. С другой стороны, запись на каждый пустяк раздувает
-журнал. Нужен порог содержательности.
+Steps not recorded atomically are lost: one cannot trace what exactly was done and
+by which method. On the other hand, recording every trifle bloats the journal. A
+substantiveness threshold is needed.
 
 ### PV.WorkRecord:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Прослеживаемость vs раздувание | WRK — на содержательный шаг с результатом; не на рекогносцировку/мелочи/опечатки. |
-| Атомарность vs монолит | Один WRK = один датированный шаг, отдельный файл. |
-| Дублирование vs краткость | Тело WRK — 1–3 абзаца о выполненной работе, не повторяет выходной артефакт. |
+| Traceability vs bloating | A WRK — for a substantive step with a result; not for reconnaissance/trifles/typos. |
+| Atomicity vs monolith | One WRK = one dated step, a separate file. |
+| Duplication vs brevity | The WRK body — 1–3 paragraphs about the work done, not repeating the output artifact. |
 
 ### PV.WorkRecord:4 - Solution
 
-**W.1 — когда создавать WRK.** Создавать, когда:
-- Внутри трека выполнен содержательный шаг, давший новый результат (артефакт,
-  решение, анализ, структурное изменение хранилища).
-- Результат должен быть прослеживаем discovery-инструментами (`grep`,
-  `SocratiCode`, сгенерированный `work/_index.md`).
+**W.1 — when to create a WRK.** Create when:
+- A substantive step with a new result (an artifact, a decision, an analysis, a
+  structural vault change) has been completed inside a track.
+- The result must be traceable via discovery tools (`grep`, `SocratiCode`, the
+  generated `work/_index.md`).
 
-**Не создавать** для: пункта 0 в «Следующих ходах» (рекогносцировка, проверка
-свежести); мелких административных действий; исправления явных ошибок (опечатки, форматирование).
+**Do not create** for: item 0 in "Next moves" (reconnaissance, freshness check);
+small administrative actions; fixing obvious errors (typos, formatting).
 
-**W.2 — создание WRK.**
+**W.2 — creating a WRK.**
 
-1. Определить `hhmmss` — текущее время (момент завершения шага).
-2. Создать `project-vault/work/WRK-YYYY-MM-DD-hhmmss.md` по `work/_template.md`.
-3. Заполнить frontmatter:
-   - `id`, `completed` (момент завершения, `YYYY-MM-DD hh:mm:ss`), `performer`, `performed_under` (трек).
-   - `plan_item_ref` — номер пункта из «Следующих ходов» трека, который выполнен (для тонкой формы опционально).
-   - `enacted_method` — применённый FPF-паттерн (один или несколько через запятую).
-   - `input_refs` — входящие сущности (опционально для тонкой формы).
-   - `output_refs` — созданные/изменённые сущности.
-   - `status`: `performed` (завершено), `partial` (частично), `probe` (рекогносцировка), `rework-needed`.
-4. Написать тело: 1–3 абзаца о выполненной работе. Не дублировать выходной артефакт.
-5. Добавить строку в «Выполненные ходы» трека: `[[WRK-YYYY-MM-DD-hhmmss]] — FPF-паттерн: краткая суть`.
-6. **Перегенерировать индексы** после WRK: `python scripts/vault.py all` (обновит
-   `work/_index.md` и `tracks/_index.md`). Не редактировать эти файлы вручную.
-7. Если шаг закрывает PlanItem — **удалить** пункт из «Следующих ходов» (записан
-   WRK в «Выполненных ходах»), при необходимости перенумеровать. Не зачёркивать
-   и не `[x]`. Частично — оставить с уточнением.
-8. Новые сущности (DEC/RISK/Q/CON/TRK) — отдельного индекса не нужно
-   (`grep`/`SocratiCode` найдут). Новый трек — `vault.py tracks`.
+1. Determine `hhmmss` — the current time (the step's completion moment).
+2. Create `project-vault/work/WRK-YYYY-MM-DD-hhmmss.md` from `work/_template.md`.
+3. Fill the frontmatter:
+   - `id`, `completed` (the completion moment, `YYYY-MM-DD hh:mm:ss`), `performer`, `performed_under` (the track).
+   - `plan_item_ref` — the number of the item from the track's "Next moves" that was completed (optional for the thin form).
+   - `enacted_method` — the applied FPF pattern(s), comma-separated.
+   - `input_refs` — the incoming entities (optional for the thin form).
+   - `output_refs` — the created/changed entities.
+   - `status`: `performed` (done), `partial` (partial), `probe` (reconnaissance), `rework-needed`.
+4. Write the body: 1–3 paragraphs about the work done. Do not duplicate the output artifact.
+5. Add a line to the track's "Completed moves": `[[WRK-YYYY-MM-DD-hhmmss]] — FPF-pattern: the gist`.
+6. **Regenerate the indexes** after the WRK: `python scripts/vault.py all` (updates
+   `work/_index.md` and `tracks/_index.md`). Do not edit these files by hand.
+7. If the step closes a PlanItem — **remove** the item from "Next moves" (the WRK is
+   recorded in "Completed moves"), renumbering if needed. Do not strike through and
+   do not `[x]`. Partial — leave with a clarification.
+8. New entities (DEC/RISK/Q/CON/TRK) — no separate index needed (`grep`/`SocratiCode`
+   will find them). A new track — `vault.py tracks`.
 
-**W.3 — возобновление трека.** Порядок чтения при возврате:
-1. ProblemCard@Context в теле трека — сторона проблемы, контекст, разрез скоупа.
-2. «Следующие ходы» — оставшиеся PlanItems.
-3. «Выполненные ходы» — список WRK; при необходимости открыть атомарный файл.
-4. Пункт 0 в «Следующих ходах» (если есть) — действия по возобновлению.
+**W.3 — track resumption.** Reading order on return:
+1. The ProblemCard@Context in the track body — the problem side, context, scope cut.
+2. "Next moves" — the remaining PlanItems.
+3. "Completed moves" — the list of WRKs; open the atomic file if needed.
+4. Item 0 in "Next moves" (if present) — the resumption actions.
 
 ### PV.WorkRecord:5 - Archetypal Grounding
 
-**Show.** WRK этого проекта: атомарные файлы `work/WRK-YYYY-MM-DD-hhmmss.md` с
-`enacted_method` (FPF-паттерн), `plan_item_ref` на «Следующие ходы» и строкой в
-«Выполненных ходах» трека; индексы авто-генерируются `vault.py all`.
+**Show.** This project's WRKs: atomic files `work/WRK-YYYY-MM-DD-hhmmss.md` with
+`enacted_method` (an FPF pattern), `plan_item_ref` on "Next moves", and a line in the
+track's "Completed moves"; indexes auto-generated by `vault.py all`.
 
 ### PV.WorkRecord:6 - Bias-Annotation
 
-Соблазн — фиксировать WRK на каждый микрошаг, раздувая журнал и обесценивая
-прослеживаемость. Симметричный соблазн — копировать выходной артефакт в тело WRK
-вместо 1–3 абзацев. Порог содержательности и краткость — противовесы.
+The temptation is to record a WRK for every micro-step, bloating the journal and
+devaluing traceability. The symmetric temptation is to copy the output artifact into
+the WRK body instead of 1–3 paragraphs. The substantiveness threshold and brevity
+are the counterweights.
 
 ### PV.WorkRecord:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-WR.1 | WRK создан на содержательный шаг с результатом; не на мелочи/рекогносцировку. |
-| CC-WR.2 | WRK — атомарный файл с полным frontmatter (`id`, `completed`, `performer`, `performed_under`, `enacted_method`, `status`). |
-| CC-WR.3 | Тело — 1–3 абзаца, не дублирует выходной артефакт. |
-| CC-WR.4 | Строка добавлена в «Выполненные ходы» трека; индексы перегенерированы `vault.py all`. |
-| CC-WR.5 | Закрытый PlanItem удалён из «Следующих ходов». |
+| CC-WR.1 | A WRK is created for a substantive step with a result; not for trifles/reconnaissance. |
+| CC-WR.2 | A WRK is an atomic file with a full frontmatter (`id`, `completed`, `performer`, `performed_under`, `enacted_method`, `status`). |
+| CC-WR.3 | The body — 1–3 paragraphs, not duplicating the output artifact. |
+| CC-WR.4 | A line is added to the track's "Completed moves"; indexes regenerated by `vault.py all`. |
+| CC-WR.5 | A closed PlanItem is removed from "Next moves". |
 
 ### PV.WorkRecord:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| WRK на рекогносцировку/опечатку | Не создавать. |
-| Тело WRK = копия артефакта | 1–3 абзаца о работе, не о содержимом. |
-| Индексы редактируются вручную | Только `vault.py all`. |
-| PlanItem зачёркнут вместо удаления | Удалить; он зафиксирован WRK. |
+| A WRK for reconnaissance/a typo | Do not create. |
+| The WRK body = a copy of the artifact | 1–3 paragraphs about the work, not the content. |
+| Indexes edited by hand | Only `vault.py all`. |
+| A PlanItem struck through instead of removed | Remove it; it is recorded by the WRK. |
 
 ### PV.WorkRecord:9 - Consequences
 
-Атомарные WRK дают сквозную прослеживаемость шагов и методов, но требуют
-порога содержательности и дисциплины авто-регенерации индексов. WRK — отдельная
-эпистема (`U.Work`), обозначающая само вхождение работы, а не её результат.
+Atomic WRKs give end-to-end traceability of steps and methods, but require a
+substantiveness threshold and the discipline of auto-regenerating indexes. A WRK is
+a separate episteme (`U.Work`) marking the work entry itself, not its result.
 
 ### PV.WorkRecord:10 - Rationale
 
-`A.15.1` определяет `U.Work` — датированное вхождение работы; WRK фиксирует это
-вхождение как отдельную эпистему. `E.10` — kind-дисциплина: WRK отличим от
-артефакта (результата) и от трека (контейнера).
+`A.15.1` defines `U.Work` — a dated work entry; a WRK records this entry as a
+separate episteme. `E.10` — kind discipline: a WRK is distinct from an artifact (the
+result) and from a track (the container).
 
 ### PV.WorkRecord:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `A.15.1` (U.Work) | Adopt | WRK как датированное вхождение работы | Reopen при ревизии `A.15.1` |
-| FPF `E.10` (kind-дисциплина) | Adopt | WRK ≠ артефакт ≠ трек | Reopen при ревизии `E.10` |
+| FPF `A.15.1` (U.Work) | Adopt | WRK as a dated work entry | Reopen on `A.15.1` revision |
+| FPF `E.10` (kind discipline) | Adopt | WRK ≠ artifact ≠ track | Reopen on `E.10` revision |
 
-Best-known line: атомарная запись хода как U.Work. Rejected rival: «ходы прозой в
-теле трека» — отброшен как непрослеживаемый.
+Best-known line: the atomic work record as U.Work. Rejected rival: "moves as prose
+in the track body" — rejected as untraceable.
 
 ### PV.WorkRecord:12 - Relations
 
 - **Builds on:** `A.15.1` (U.Work), `E.10` (kind).
-- **Coordinates with:** `E.17` (описания/взгляды на запись).
-- **Specialized by:** `PV.Track` (WRK в треке), `PV.Artifact` (WRK после артефакта), `PV.VaultSchema` (work/ как директория).
+- **Coordinates with:** `E.17` (descriptions/views on a record).
+- **Applies to:** `PV.Track` (a WRK captures a step in a track), `PV.VaultSchema` (`work/` entities).
 
 ### PV.WorkRecord:End
