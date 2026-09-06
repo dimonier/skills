@@ -81,9 +81,9 @@ Open the fuller statement only when the receiving use also depends on measuremen
 
 ### C.27.TA:1 - Problem Frame
 
-C.27 previously carried two different concerns. One concern is temporal-claim adequacy: whether an authored claim about speed, rhythm, rate-change, recovery, or stabilization can carry a named use. The other concern is positive temporal subject matter: windows, duration, cadence, synchronization, freshness, currentness, inertia, effort over time, recovery, stabilization, and trajectory as aspects of objects or claims.
+Distinguish two concerns. One concern is temporal-claim adequacy: whether an authored claim about speed, rhythm, rate-change, recovery, or stabilization can carry a named use. The other concern is positive temporal subject matter: windows, duration, cadence, synchronization, freshness, currentness, inertia, effort over time, recovery, stabilization, and trajectory as aspects of objects or claims.
 
-The rule content located here addresses the second concern. It lets FPF say "what temporal aspect is in play?" without immediately opening an adequacy card, a dynamics model, a work plan, a causal-use record, or a transformation statement.
+C.27.TA addresses the second concern. It lets a practitioner state what temporal aspect is in play without immediately opening an adequacy card, a dynamics model, a work plan, a causal-use record, or a transformation statement.
 
 ### C.27.TA:2 - Problem
 
@@ -109,7 +109,7 @@ Without C.27.TA:
 
 #### C.27.TA:4.1 - Definition
 
-A temporal-aspect claim says that one exact object or exact claim has a time-bearing or order-bearing property under a stated temporal reference and interval. The property is claim content, not automatically a temporal claim-adequacy result, dynamics law, work trace, method, mechanism, gate, evidence relation, or permission.
+A temporal-aspect claim says that one exact object or exact claim has a time-bearing or order-bearing property under a stated temporal reference and interval. The statement is claim content, not automatically a temporal claim-adequacy result, dynamics law, work trace, method, mechanism, gate, evidence relation, or permission.
 
 Typical temporal predicates and qualifiers include:
 
@@ -169,13 +169,13 @@ Every remaining field is conditional. Add it only when changing that value could
 | bounded transformation under conditions with temporal reference | `A.3.4` plus `C.27.TA` |
 | state-space or transition-law model | `A.3.3` |
 | planned work timing | `A.15.2` |
-| dated work occurrence or trace | `A.15.1` |
+| dated work occurrence or trace | `A.15.1` for the occurrence; `A.10` for evidence and provenance when a claim relies on the trace |
 | measurement construction for rate, duration, latency, or freshness | `C.16` and related characterization patterns |
 | causal-use timing, intervention window, comparator, or follow-up interval | `C.28` |
 | benchmark freshness, baseline window, comparator edition, or parity window | `G.9` |
 | source currentness, evidence decay, provenance, or assurance refresh | evidence, source, provenance, assurance, and refresh patterns |
 
-This table supplies rule citations, not relation occurrences. When another relation is part of the temporal claim, cite that relation's declaration and independently established occurrence through the fields above.
+This table supplies rule citations, not relation occurrences. When another relation is part of the temporal claim, use the fields above to cite its declaration; cite an obtaining occurrence only after its predicate passes.
 
 #### C.27.TA:4.4 - Rhythm, Cadence, And Synchronization
 
@@ -240,7 +240,7 @@ TemporalAspectStatementClaimContent:
   aspectPredicate: recoveryTiming.
   temporalReference: release train cycle.
   windowOrInterval: two release cycles after the accepted architecture move starts.
-  measuredReadingRef?: operations-service conflict indicator, if C.16 measurement is being made.
+  measuredReadingRef?: measurement result for the operations-service conflict indicator, if C.16 measurement is being made.
   directRelationDeclarationRef?: A.3.4 transformation declaration, if that relation is current.
   obtainingRelationOccurrenceRef?: omitted here; the expected reduction is not an obtaining transformation occurrence.
   receivingUseRulePatternCitation: A.3.4 for bounded transformation, C.30 for selected architecture structure, and the evidence/result pattern for an observed effect.
@@ -251,17 +251,17 @@ TemporalAspectStatementClaimContent:
 
 #### C.27.TA:5.4 - Work Rhythm
 
-A review practice depends on a two-day response rhythm across several review positions and participants. This is ordinary readable wording; it does not by itself admit Systems, classify local system-role kinds, create assignments, establish responsibility, or prove that response Work occurred.
+A review practice depends on a two-day response rhythm across several review positions and participants. Keep a responsibility claim separate when the temporal account relies on it.
 
-Name a local system-role kind or a separate System-classification judgement only when the receiving claim uses that distinction. If it relies on an assignment, cite the directly declared relation species and its obtaining occurrence with the actual participant values, holder, applicability, and extent under `A.2.1`. An assignment may be current in a plan or availability statement before any response Work occurs; it neither classifies a System nor implies completed Work. Only when the claim says that a System performed dated response Work should it first recover that exact performer through A.13 and let A.15.1 independently admit the Work. Add F.6 only if the temporal account also consumes precise assignment-bound attribution through the same obtaining A.13 assignment; missing or failed F.6 leaves the Work intact.
+Name a local system-role kind or a separate System-classification judgement only when the receiving claim uses that distinction. If it relies on an assignment, cite the directly declared relation species and its obtaining occurrence with the actual participant values, holder, applicability, and extent under `A.2.1`. An assignment may be current in a plan or availability statement before any response Work occurs; it neither classifies a System nor implies completed Work. Only when the claim says that a System performed dated response Work should the reader first recover that exact performer through A.13 and independently admit the Work under A.15.1. Add F.6 only if the temporal account also consumes precise assignment-bound attribution through the same obtaining A.13 assignment; missing or failed F.6 leaves the Work intact.
 
 C.27.TA names the exact EntityOfConcern, rhythm or cadence predicate, temporal reference, and window. When cross-bearer coordination matters, cite the direct coupling-relation declaration and an obtaining occurrence only after its predicate passes; keep the PatternID as a separate rule citation.
 
 ### C.27.TA:6 - Bias-Annotation
 
-Lenses tested: **Onto**, **Prag**, **Epist**, **Arch**, **Gov**.
+Lenses: **Onto**, **Prag**, **Epist**, **Arch**, **Gov**.
 
-Resisted distortions:
+Distortions to watch for:
 
 - **rhythm-as-vibe:** rhythm or cadence appears without bearer, timing reference, and window;
 - **freshness-as-permission:** currentness is treated as permission, evidence, or gate passage;
@@ -297,7 +297,7 @@ Resisted distortions:
 
 | Source family | Current lesson for C.27.TA | FPF decision |
 | --- | --- | --- |
-| Control and model-predictive practice | Horizons, constraints, update intervals, and feedback timing are distinct from the controlled object and the control law. | Treat temporal aspects as named slots; use `A.3.3`, evidence, and control-related patterns for models and control claims. |
+| Control and model-predictive practice | Horizons, constraints, update intervals, and feedback timing are distinct from the controlled object and the control law. | Express temporal aspects as predicates or qualifiers in claim content; use `A.3.3`, evidence, and control-related patterns for models and control claims. |
 | David Deutsch and Chiara Marletto, "Constructor theory of time" (`arXiv:2505.08692v3`), version-specific source posture. | A task or transformation specification need not itself specify duration or the internal course of performance; duration and dynamics can be recovered through timer and clock relations among attributes. Reopen this row if a later version changes the task/duration/timer/clock separation used here. | Require C.27.TA temporal aspects to name bearer and temporal reference. Use `A.3.4` for the transformation, `A.3.3` for dynamics episteme, and C.27 only when an authored temporal claim uses the aspect for a practical use. |
 | Dynamic treatment regimes and policy evaluation | Intervention timing, follow-up interval, policy window, and outcome window must be separated before causal or policy claims are made. | Use C.27.TA for temporal windows; use `C.28` and evidence patterns for causal-use and policy claims. |
 | Object-centric process and event-log practice | A scalar throughput or latency can hide multiple bearers, event types, and interaction windows. | Name the exact EntityOfConcern, temporal predicate, and temporal reference before using a rate, cadence, or trajectory across objects. |
@@ -305,8 +305,8 @@ Resisted distortions:
 
 ### C.27.TA:10 - Consequences
 
-- C.27 can be narrowed to adequacy and supported use of authored temporal claims.
-- A.3.4 gains a clean temporal reference slot without carrying the whole temporal ontology.
+- C.27 addresses adequacy and supported use of authored temporal claims.
+- A.3.4 identifies the actual transformation; C.27.TA states its temporal aspect.
 - A.3.3 stays the dynamics episteme pattern.
 - Use the direct patterns for work planning, actual work, source currentness, benchmark parity, and evidence use.
 - Users gain one positive temporal-aspect claim before heavier adequacy, dynamics, causal, benchmark, or assurance patterns are needed.

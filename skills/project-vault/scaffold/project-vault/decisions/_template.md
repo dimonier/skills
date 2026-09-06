@@ -20,7 +20,7 @@ intended_readers:
   - "Архитекторы"
 # Характеристика архитектуры заполняется только для decision_type: adr
 characteristic: security | performance | ...
-# Источник: путь к файлу в проекте (напр. ../sources/captures/YYYY-MM-DD_slug.md), если файла нет — краткое описание
+# Источник: путь к файлу в проекте (напр. ../sources/YYYY-MM-DD_slug.md), если файла нет — краткое описание
 sources:
   - "Краткое описание источника 1"
 source_kind: meeting_processed

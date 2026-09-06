@@ -201,7 +201,7 @@ Guide for deciding when to create agent skills, how to design them well, and wha
 
 ## Project Management
 
-Skills for tracking project state, decisions, risks, and dependencies in a structured markdown vault.
+Skills for tracking project state, decisions, risks, and contradictions in a structured markdown vault.
 
 ### 🗂️ Project Vault
 

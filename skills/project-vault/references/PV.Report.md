@@ -54,7 +54,7 @@ decisions/risks/questions/contradictions).
 
 1. Only on the owner's explicit request.
 2. Derive the content from the vault: open entities (`grep`/`SocratiCode`), tracks,
-   decisions, dependencies — the report is a projection of the current state.
+   decisions — the report is a projection of the current state.
 3. Write `project-vault/reports/YYYY-MM-DD-slug.md` — one dated, self-contained
    file; no fixed template (report kinds vary).
 4. A report does not create/close entities. If the material introduces a new

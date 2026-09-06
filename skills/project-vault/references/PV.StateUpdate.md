@@ -12,7 +12,6 @@ dependencies:
   coordinates_with:
     - C.18
     - C.19
-    - A.3.2
 ---
 
 ## PV.StateUpdate - State update from a source: DEC/Q/RISK/CON from a transcript or dialogue
@@ -55,7 +54,7 @@ the decision canon clogs with junk entries.
 
 **Input 1 — meeting transcript.**
 
-1. Save the source into `project-vault/sources/captures/`.
+1. Save the source into `project-vault/sources/`.
 2. Write 2–3 lines of summary "what the source is about" (context) into the capture header.
 3. **Open-question registry in context:** find the active open questions via
    `grep -l "^status: open" project-vault/open-questions/*.md`, read the relevant
@@ -101,7 +100,8 @@ the decision canon clogs with junk entries.
 
 1. Creation/closure of atomic entities (DEC, Q, RISK, CON) — the file is created;
    closed ones stay in place with a `status` (no `archive/`).
-2. New external blockers → update `project-vault/dependencies.md`.
+2. New external blockers → an atomic `risks/RISK-NNNN.md` (external, blocking);
+   if the blocker spans several entities — also a track with `status: blocked`.
 3. New regulatory/architectural constraints → update `project-vault/state/constraints.md`.
 4. **Track maintenance:** the source introduces an operational signal, changes a
    track's status, or closes it:
@@ -128,7 +128,7 @@ the decision canon clogs with junk entries.
 
 ### PV.StateUpdate:5 - Archetypal Grounding
 
-**Show.** A post-meeting update in this project: the source in `captures/`, a key
+**Show.** A post-meeting update in this project: the source in `sources/`, a key
 architectural decision as an atomic DEC with the input filter, reconciliation with
 the open-question registry, an operational signal as a track.
 
@@ -186,7 +186,7 @@ every statement as a decision" — rejected as canon clutter.
 ### PV.StateUpdate:12 - Relations
 
 - **Builds on:** `C.32.ADR` (decision records), `E.9` (DRR), `C.11` (source).
-- **Coordinates with:** `C.18`/`C.19` (probes/comparison), `A.3.2` (method description).
+- **Coordinates with:** `C.18`/`C.19` (probes/comparison).
 - **Applies to:** `PV.VaultSchema` (entity creation/ID allocation), `PV.Track` (operational signals open/change tracks).
 - **Applied by:** `PV.Inbox` (routes transcripts), `PV.ExternalResearch` (external signals requiring new entities), `PV.Report` (closing `proposed`/`deferred` slots).
 

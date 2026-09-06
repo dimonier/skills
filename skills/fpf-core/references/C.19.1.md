@@ -171,7 +171,7 @@ BLP neither selects the architecture nor turns method-family, practice, role-sid
 
 #### C.19.1:7.2 - C.29 mathematical-lens use relation
 
-When a mathematical lens is chosen over a general, scale-amenable bearer because it is elegant, specialized, or theoretically prestigious, and a scale-advantage or declared generality-policy claim is current, `C.19.1` governs the scale-advantage and preference claim. A `C.29` application may state `CandidateMathObject`, `LensMappingMode`, `PreservedStructure`, `LostStructure`, `LensUseAdmissibilityValue`, `admissibleUse`, `nonAdmissibleUse`, and `StopCondition`; it does not supply BLP compatibility, scale dominance, or waiver evidence.
+When a mathematical lens is chosen over a general, scale-amenable bearer because it is elegant, specialized, or theoretically prestigious, and a scale-advantage or declared generality-policy claim is current, `C.19.1` governs the scale-advantage and preference claim. A `C.29` application may state `CandidateMathObject`, `LensMappingMode`, `PreservedStructure`, `LostStructure`, `LensUseBoundaryValue`, `declaredLensUse`, and `StopCondition`, with optional `blockedLensOverread?` for an overread that passes F.19's plausible-reader test; it does not supply BLP compatibility, scale dominance, or waiver evidence.
 
 If scale advantage or a declared generality policy is live, start with the cheap probe and cite the resulting bounded comparison, risk-selected `Scale-Audit`, or applicable `BLP-waiver`. If neither is live, keep the mathematical lens local and bounded by its `C.29` stop condition.
 

@@ -146,13 +146,13 @@ Triage may be the final result when it blocks the overclaim and names the narrow
 
 ### C.28:1 - Problem Frame
 
-FPF already has patterns for measurement, temporal claims, evidence, assurance, choice, exploration, call planning, fairness, parity, and mathematical lenses. Each keeps its own result. Causal support cuts across them, so a small shared interface is needed without turning C.28 into a second version of those patterns.
+FPF already has patterns for measurement, temporal claims, evidence, assurance, choice, exploration, call planning, fairness, parity, and mathematical lenses. Each keeps its own result. Causal support cuts across them, so a small shared interface is needed.
 
-The practical question is not “which causal vocabulary can we attach?” It is “what does this evidence support us to say about this causal question, and what would overturn that conclusion?”
+The practical question is “what does this evidence support us to say about this causal question, and what would overturn that conclusion?”
 
 ### C.28:2 - Problem
 
-Three collapses produce most causal overclaim:
+Three kinds of collapse can produce causal overclaim:
 
 1. **Rung collapse:** observation, intervention, and counterfactual comparison are treated as the same question.
 2. **Support collapse:** data regime, identification, estimation, direct sampling, and simulation are treated as one alternative-valued “basis”.
@@ -340,7 +340,7 @@ CommonCausalThreatScreen:
 
 **Ordinary effect case.** A randomized treatment study records `interventionWellDefinedOrConsistency=clear`, `temporalOrdering=clear`, `positivityOrOverlap=clear`, `interferenceOrSpillover=notApplicable`, `selectionCensoringOrMissingness=clear`, and `measurementErrorOrConstructShift=clear` for its declared target and window. The screen points to the trial and estimate results; it does not repeat them.
 
-**Countercase.** An observational cohort has the right rung label and a plausible estimand, but records `exchangeabilityOrConfounding=liveThreat` and `positivityOrOverlap=liveThreat` because severity is unmeasured and one treatment region has no comparator. The resulting support boundary is `unsupported` until a suitable design, bound, or new evidence closes those threats. “Observational data” was classified correctly; that label does not establish validity.
+**Countercase.** An observational cohort has the right rung label and a plausible estimand, but records `exchangeabilityOrConfounding=liveThreat` and `positivityOrOverlap=liveThreat` because severity is unmeasured and one treatment region has no comparator. The claimed effect remains `unsupported` until a suitable design or new evidence closes those threats; a suitable bound can instead support a correspondingly bounded claim. “Observational data” was classified correctly; that label does not establish validity.
 
 #### C.28:4.4 - Identification result
 
@@ -689,14 +689,14 @@ When only wording inside one publication unit is unclear, use the publication an
 | “We changed X once, so the policy works everywhere.” | Interventional result limited to its population/environment/window; transport requires exact endpoints and assumptions. |
 | “The simulator shows what would have happened.” | With no causal reliance, exit to model reporting. With causal reliance, cite the simulation result, assumptions, validation, supported model use, and unsupported realized/interventional use. |
 | “The trial was randomized, therefore the estimate is valid.” | Run the common threats: interference, attrition, measurement, adherence, and analysis can still lower the result. |
-| “The observational estimand is identified.” | Cite the identifying expression/derivation, bound, or nonidentification witness; the label alone is incomplete. |
+| “The observational estimand is identified.” | Cite the identifying expression/derivation for `identified`; a bound supports `bounded` wording, and a nonidentification witness supports `nonidentified` wording. The label alone is incomplete. |
 | “The fairness metric improved, therefore the intervention is fair.” | Report metric change. A counterfactual-fairness claim additionally needs its causal estimand, counterfactual-identifiability assumptions, estimate-consistency basis when used, and bounded C.28 support before D.5 audits it. |
 | “Logged replay says this policy is optimal.” | Cite behaviour/evaluation policies, overlap, confounding, transport, uncertainty, and bounded support; unqualified optimality is unsupported. |
 | “Method A beats Method B causally.” | Use G.9; different rungs, estimands, support components, endpoints, or windows require a bridge with stated loss, degraded parity, or abstention. |
 
 ### C.28:5 - Archetypal Grounding
 
-**System.** A product team observes better outcomes among recipients of X. Triage returns association support. If the team needs an effect claim, it opens identification or evidence-design work; C.28 does not let the observation decide deployment.
+**System.** A product team observes better outcomes among recipients of X. Triage returns association support. If the team needs an effect claim, it opens identification or evidence-design work; the deployment decision still needs its own downstream basis.
 
 **Fairness.** A report claims counterfactual fairness after a policy change. C.28 identifies the rung and estimand, exposes the additional counterfactual-identifiability assumptions, and cites an estimate with its consistency result when the audit relies on that estimate. Missing identification or consistency lowers the support result even with more of the same data. D.5 carries the `BiasAuditReport@Context` and makes the audit conclusion.
 
@@ -704,7 +704,7 @@ When only wording inside one publication unit is unclear, use the publication an
 
 **Causal RL.** An online learner combines logged behaviour, interventions, and a counterfactual-data source. The sampling-realizability result explains whether that source can be produced; dated Work and the resulting data path show whether it was produced; a separate identification or estimate result says what follows from it. Replay reward does not become an optimal-action claim.
 
-**Evidence Work.** A lab's `CounterfactualSamplingRealizabilityResult` cites its decision Method and positive construction. That result supports planning but claims no sample. The later WorkPlan remains prospective. After sampling, the lab cites dated Work, attribution, and the resulting data in an A.10 evidence path before using `realizedCounterfactualSamplingData`. Identification from those data remains a separate result.
+**Evidence Work.** A lab's `CounterfactualSamplingRealizabilityResult` cites its decision Method and positive construction. That result supports planning but claims no sample. The later WorkPlan remains prospective. After sampling, the lab cites independently admitted dated Work and the resulting data in an A.10 evidence path before using `realizedCounterfactualSamplingData`; it adds precise assignment-bound attribution only when the receiving support claim uses it. Identification from those data remains a separate result.
 
 **Simulation.** A simulator supports rehearsal and sensitivity analysis under named assumptions and validation. The support result blocks realized-sample and intervention-effect wording. A pure simulator-output report exits C.28 earlier.
 
@@ -714,12 +714,12 @@ When only wording inside one publication unit is unclear, use the publication an
 
 ### C.28:6 - Bias-Annotation
 
-Watch for causal prestige, simulation laundering, metric proxy substitution, graph sufficiency, feasibility-as-performance, data-without-Work, support-label substitution, and benchmark scalarization. The repair is not more formal vocabulary. Recover the question, support components, live threats, supported statement, unsupported statement, and reopen condition in the shortest form that remains replayable.
+Watch for causal prestige, simulation laundering, metric proxy substitution, graph sufficiency, feasibility-as-performance, data-without-Work, support-label substitution, and benchmark scalarization. Recover the question, support components, live threats, supported statement, unsupported statement, and reopen condition in the shortest form that remains replayable.
 
 ### C.28:7 - Conformance Checklist
 
 1. One exact causal-use question remains identifiable from entry to result; question, claim, estimand, evidence, and records are not treated as one object.
-2. This edition introduces no universal causal-use-question, estimand, or potential-outcome-contrast kind; it uses local refs to actual objects instead.
+2. C.28 introduces no universal causal-use-question, estimand, or potential-outcome-contrast kind; it uses local refs to actual objects instead.
 3. Data regime, identification, estimate, sampling realizability, performed sampling evidence, simulation, and transport remain distinct and may be combined.
 4. A support result states evidence support only; every publication, choice, deployment, fairness, or assurance decision remains with its direct pattern.
 5. An identified result cites an expression or derivation; a bounded result cites a bound; a nonidentified result cites an obstruction or witness.
@@ -774,7 +774,7 @@ The integrated contract is deliberately plural: SCM and graphical methods, poten
 | Current counterfactual theory | Correa and Bareinboim, 2025, [Counterfactual Graphical Models](https://proceedings.mlr.press/v267/correa25a.html) | Name graph form and calculus when the derivation depends on them. Do not make the formalism part of ordinary triage or treat a graph label as a result. |
 | Current reporting practice | TARGET Statement, BMJ 2025, [Reporting of observational studies explicitly emulating a target trial](https://www.bmj.com/content/390/bmj-2025-087179) | Retain causal question and estimand, assumptions, protocol-to-data mapping, estimate and precision, and sensitivity reporting. Reject the overread that complete reporting is identification or low risk of bias. |
 | Current bounded transport research | NeurIPS 2025, [Causal Effect Estimation under Covariate Shift](https://proceedings.neurips.cc/paper_files/paper/2025/hash/795679e4056817ee71d37680939e980f-Abstract-Conference.html) | Keep identification and estimation under a named shift explicit. This does not replace the broader endpoint and assumption requirements for other transport problems. |
-| Current sampling-realizability decision | Raghavan and Bareinboim, ICLR 2025, [Counterfactual Sampling Realizability](https://proceedings.iclr.cc/paper_files/paper/2025/hash/e59c4efcaed615db8911fecb84c1d51b-Abstract-Conference.html) | **Adopt:** make realizability a replayable prospective result with its decision Method and construction, bound, or obstruction. Reject the earlier C.28 collapse with WorkPlan, dated Work, or data. |
+| Current sampling-realizability decision | Raghavan and Bareinboim, ICLR 2025, [Counterfactual Realizability](https://proceedings.iclr.cc/paper_files/paper/2025/hash/e59c4efcaed615db8911fecb84c1d51b-Abstract-Conference.html) | **Adopt:** make realizability a replayable prospective result with its decision Method and construction, bound, or obstruction. Keep realizability separate from a WorkPlan, dated Work, or data. |
 | Current Layer-3 identification and bounds | Raghavan and Bareinboim, 2026, [Causal Identification from Counterfactual Data: Completeness and Bounding Results](https://arxiv.org/abs/2602.23541) | **Adopt as composition, not collapse:** realized counterfactual data may feed a separate identification or bound result. Producing those data still needs dated Work and an evidence path to the result; realizability alone supplies neither data nor identification. |
 | Lineage and current domain practice: potential outcomes | Rubin 1974 and later target-trial practice | Retain estimand, contrast, assignment/time zero, follow-up, outcome, and analysis plan. Use `PotentialOutcomeContrastRef`, not an unadmitted U-kind. |
 | Conditional estimator family | Chernozhukov et al. 2018, [Double/debiased machine learning](https://academic.oup.com/ectj/article/21/1/C1/5056401) | Use orthogonal scores and cross-fitting only for a selected DML Method. Reject their use as universal estimation fields. |

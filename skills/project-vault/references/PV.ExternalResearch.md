@@ -9,8 +9,6 @@ dependencies:
     - E.4.PFR
     - C.11
     - G.11
-  coordinates_with:
-    - A.3.2
 ---
 
 ## PV.ExternalResearch - External research: two-way binding of reference material to entities
@@ -51,7 +49,7 @@ entity.
 
 ### PV.ExternalResearch:4 - Solution
 
-1. Save the source into `project-vault/sources/captures/`; if needed, write 2–3
+1. Save the source into `project-vault/sources/`; if needed, write 2–3
    lines of summary (what the material is about) into the capture header.
 2. Discover the active entities by searching the vault: `grep` for exact matches
    across the directories (`grep -l "^status: open" project-vault/open-questions/`,
@@ -136,7 +134,6 @@ capture without signals in the entity" — rejected as incomplete processing.
 ### PV.ExternalResearch:12 - Relations
 
 - **Builds on:** `E.4.PFR` (link recording), `C.11` (source), `G.11` (freshness).
-- **Coordinates with:** `A.3.2` (method description).
 - **Applies to:** `PV.StateUpdate` (new decision/risk from a signal), `PV.VaultSchema` (signals written into entities).
 - **Applied by:** `PV.Inbox` (entry for external material).
 

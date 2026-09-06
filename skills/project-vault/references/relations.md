@@ -15,8 +15,8 @@
 - **Skill:** `project-vault` (LPF — Local Practices Framework).
 - **Authoring scenario (EntryRoute):** outcome (a) "revise framework";
   axes — `FPF-grounded` (relies on FPF Core) and `language-from-scratch`
-  (the canonical carrier is this skill's own `references/*.md`; no externally
-  published projection document exists).
+  (the skill directory is the access-facing carrier; the edition lives in this
+  skill's own `references/*.md`; no externally published projection document exists).
 - **Field / field boundary:** the practice "managing project state in a
   markdown-vault": capturing state from sources (transcripts/dialogues), binding
   external research, track lifecycle, work records, artifact creation, report
@@ -27,6 +27,8 @@
 - **Readiness:** all 10 patterns are `status: seed`, readiness mode `source-faithful`
   (faithful to the approved source — FPF + the owner's procedural practice);
   not `case-validated`.
+- **Publication-form checks:** `E.11.PFP` `PFM1`–`PFM12` are N/A — there is no
+  reader-facing publication form for this skill carrier.
 
 ## Refresh triggers (G.11)
 

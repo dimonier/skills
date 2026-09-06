@@ -96,7 +96,7 @@ Dyn0, Dyn1, and Dyn2 classify authored claims. They do not classify Systems, tea
 
 The recurring failure is:
 
-> A text measures or names a rate and then behaves as if it knows how to change that rate.
+> An author measures or names a rate and then assumes that this is enough to know how to change that rate.
 
 Typical consequences include:
 
@@ -109,7 +109,7 @@ Typical consequences include:
 - slowing, braking, pausing, or recovery is treated as failure merely because speed is the implicit value;
 - probe, frame, token, dashboard, or active-sensing language activates QL before ordinary patterns have carried their questions.
 
-C.27 repairs one authored-claim failure. It is not a temporal theory of everything, a dynamics model, a measurement calculus, a theory of practice, or a physics analogy promoted into FPF ontology.
+C.27 repairs one authored-claim failure. It is not a dynamics model, a measurement calculus, or a physics analogy promoted into FPF ontology.
 
 C.27 introduces no U.Force, U.Mass, U.Acceleration, U.Rhythm, U.Practice, or U.SecondOrderProcess kind. It also introduces no universal calculus, control theory, or QL model for ordinary temporal claims.
 Faster is not automatically better. A temporally adequate claim is not automatically valuable, safe, legal, ethical, feasible, promised, or assured. Direct value, quality, harm, promise, legal, safety, and assurance patterns carry those claims.
@@ -179,7 +179,7 @@ Ordinary practitioner prose may say, for example, “the engineer slowed the rol
 
 If the receiving claim relies on performed Work, identify the actual System actor, recover its A.13 core, and independently admit the dated Work under A.15.1. Add F.6 afterward only when the temporal claim also needs precise assignment-bound attribution. If the claim relies on a local system-role kind, System classification, or assignment, add each distinction separately. An assignment does not act and does not supply authority; cite its directly declared relation species and exact obtaining occurrence while still naming the holder System.
 
-A Method, policy episteme, tool, setting, physical condition, resource input, assignment, capability, or record is not another actor merely because it affects the situation. Name its actual direct relation to the temporal behavior, or keep it as an unresolved or source-side intervention claim. Keep authority, WorkPlan, capability, performed Work, and claimed effect separate.
+For a non-system input, name its actual direct relation to the temporal behavior, or keep it as an unresolved or source-side intervention claim. Keep authority, WorkPlan, capability, performed Work, and claimed effect separate.
 
 #### C.27:3.3 - Rhythm, Coasting, and Reversibility
 
@@ -376,7 +376,7 @@ Skip this section for ordinary local diagnosis and planning. It is a trigger-and
 
 #### C.27:5.1 - Pattern-Use Notes
 
-- A local resistance value of unknown is allowed. It blocks stronger use; it does not force a new theory.
+- A local resistance value of unknown is allowed. It blocks stronger use without the direct evidence or assumption boundary required for that use; it does not force a new theory.
 - A historical trend does not supply a control horizon, update rule, constraints, or stability.
 - Evidence from policy A does not carry policy B merely because both policies concern the same rate.
 - Equal final scores do not erase unequal adaptation windows, effort, rework, validity, or recovery.
@@ -385,11 +385,11 @@ Skip this section for ordinary local diagnosis and planning. It is a trigger-and
 - A temporal metric does not become value merely by publication or target use.
 - Measurement as action does not make QL relevant by itself.
 - Adding fields does not turn a diagnostic or planning claim into a causal, benchmark, promise-like, gate, or assurance claim. That use changes only when the required direct result and supported-use boundary are present.
-- Add no thin C.27 echo to every neighboring pattern. The C.27 result cites the direct result only when its supported use relies on it.
+- The C.27 result cites the direct result only when its supported use relies on it.
 
 ### C.27:6 - Bias-Annotation
 
-Lenses tested: **Onto**, **Prag**, **Epist**, **Arch**, **Gov**.
+Lenses: **Onto**, **Prag**, **Epist**, **Arch**, **Gov**.
 
 - **Onto:** source claim, described subject, temporal-aspect claim, adequacy claim, direct relation, publication occurrence, form, and carrier remain distinct.
 - **Prag:** ordinary prose, Dyn0, and Dyn1 remain cheap; the first Dyn2 result fits on one screen.
@@ -412,7 +412,7 @@ Plain speed, acceleration, effort, inertia, rhythm, agility, process, practice, 
 | C27-7 | The card names claimed input, resistance or cost, reason for the reading, supported use, unsupported use, and reopen condition without implying causal effect, Work, authority, value, promise, or assurance. |
 | C27-8 | Performed Work names the actual System actor, whose A.13 core precedes independent A.15.1 Work admission. F.6 follows only when precise assignment-bound attribution is current. An assignment remains a separate obtaining relation and never acts. |
 | C27-9 | A non-system input uses its actual direct relation or remains an unresolved or source-side intervention claim; no generic applier branch is created. |
-| C27-10 | A viability use cites an exact C.26.3 claim episteme or ClaimAddress and an exact System or A.22 Structure bearer; no generic viability or configuration relation is invented. |
+| C27-10 | A viability use cites an exact C.26.3 claim episteme or ClaimAddress and an exact System, A.22 Structure, or another subject with its direct identity rule as bearer; no generic viability or configuration relation is invented. |
 | C27-11 | Measurement, dynamics, Work, causality, benchmark, promise, value, quality, viability, scaling, adaptation, search, publication, assurance, and residual QL stay with their direct patterns. |
 | C27-12 | Cases precede the optional trigger reference, and the trigger reference copies no neighboring schema. |
 | C27-13 | At least one golden case stops at ordinary prose, Dyn0, or Dyn1, and braking or coasting is not treated as failed acceleration. |
@@ -431,7 +431,7 @@ Plain speed, acceleration, effort, inertia, rhythm, agility, process, practice, 
 | Local speed becomes aggregate agility | Name both bearers, aggregation, continuity, mix shift, and transfer boundary. |
 | Faster becomes better | Reopen value, harm, quality, promise, safety, legal, ethical, or assurance claims through their direct patterns. |
 | Every temporal word gets a profile | Use practical-use relevance, not keyword matching. |
-| Assignment, policy, Method, tool, or record becomes an actor | Name the actual System actor or the non-system object's direct relation. |
+| Influence on the situation is treated as sufficient to identify an actor | Name the actual System actor or the non-system object's direct relation. |
 | C.27 profile becomes promise or gate | Keep the unsupported use explicit and cite the direct promise, service, gate, or assurance result. |
 | Coasting becomes free evidence of success | Name the basis and window as evidence, assumption, or unknown, then state reopen. |
 | Reversibility is assumed | State reversible, costly, irreversible in the window, or unknown only when the use relies on it. |
@@ -477,7 +477,7 @@ The pattern is successful when it improves action quality more than paperwork an
 
 ### C.27:11 - SoTA-Echoing
 
-The source set below is the predecessor's June 2026 evidence basis. It supports the architecture without turning C.27 into a survey. Reopen the source use when newer work changes one of the named obligations.
+The source set below is the June 2026 basis for C.27's claim-adequacy rules. Reopen the source use when newer work changes one of the named obligations.
 
 | Source line | Lesson retained in C.27 | Boundary |
 | --- | --- | --- |

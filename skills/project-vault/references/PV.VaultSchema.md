@@ -73,29 +73,24 @@ project-vault/
   tracks/            # operational tracks (TRK-NNNN.md) + auto _index.md
   work/              # work records (WRK-YYYY-MM-DD-hhmmss.md) + auto _index.md
   artifacts/         # artifacts bound to tracks (YYYY-MM-DD-slug.md)
-  methods/           # reusable method descriptions (U.MethodDescription)
-  roles/             # roles (co-authors/responsibles)
-  vocabulary/        # project glossary
-  sources/           # captures/ (source materials)
+  sources/           # raw source materials (flat captures)
   state/             # constraints.md — regulatory and architectural constraints
   reports/           # derived summaries and reports (off-limits without a request)
   scripts/           # vault.py (ID + indexes + integrity check), export_dec.py
-  dependencies.md    # external blockers
 ```
 
 **Entities and their kind directories.** Each entity is an atomic `.md` with a YAML
 frontmatter (`id`, `status`, `updated`, `sources`) + a Markdown body. Closed
 entities stay in place with a `status` in the frontmatter (no `archive/` mirror).
 `reports/` — derived summaries, created/updated only on explicit request
-(off-limits). `roles/` and `vocabulary/` — reference material: roles and glossary.
-`outbox/` messages are the exception to the atomic-entity rule: one file = one
+(off-limits). `outbox/` messages are the exception to the atomic-entity rule: one file = one
 outgoing message with frontmatter `created`/`addressee`/`source_project`/
 `source_context`/`status` (`pending → sent`), no monotonic ID and no `_index.md`
 (see `PV.Outbox`). `inbox/` holds raw incoming sources, cleared after processing
 (see `PV.Inbox`).
 
 **Discovery instead of manual indexes.** For entities (`decisions/`,
-`open-questions/`, `risks/`, `contradictions/`, `methods/`) there are no manual
+`open-questions/`, `risks/`, `contradictions/`) there are no manual
 `_index.md`. Finding:
 - **Semantic search:** `SocratiCode codebase_search` over `project-vault/`.
 - **Exact search:** `grep` across the entity directories (e.g. `grep -l "^status: open" project-vault/open-questions/`, `grep -l "^status: open" project-vault/risks/`).

@@ -17,7 +17,7 @@ likelihood: medium
 # Вероятность наступления: high | medium | low
 created: "YYYY-MM-DD"
 # Источник: имя capture-файла (напр. 2026-08-31_cpt-chatbot-integration-stand)
-#   или относительный путь ../sources/digests/..., если capture хранится в проекте
+#   или относительный путь ../sources/..., если capture хранится в проекте
 source: "YYYY-MM-DD_slug-источника"
 ---
 
