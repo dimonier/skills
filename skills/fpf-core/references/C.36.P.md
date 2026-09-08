@@ -48,7 +48,7 @@ Use this pattern when source or project prose uses cultural-evolution wording an
 
 When generic *development*, *evolution*, or *lineage* wording still hides the changed or represented subject, continuity or membership, posture, direction or value basis, or direct owner, use `E.10.DEV` first. Continue here only when that recovery exposes a cultural-population, discipline, style, tradition, recognition, selection, transmission, retention, or mediation question whose wording is still unclear. Use `E.10.MOVE` only for a separately relied-on trajectory or path ambiguity.
 
-Trigger expressions include, for example, culture, cultural evolution, style, tradition, genre, scene, technique, practice, platform, platform regime, measurement regime, attractor, developmental machinery, cultural lineage, canon, and school. They are recognition cues, not a lexical taxonomy.
+Trigger expressions include, for example, culture, cultural evolution, style, tradition, genre, scene, technique, practice, platform, platform regime, measurement regime, attractor, developmental machinery, cultural lineage, canon, and school. They are recognition cues.
 
 #### C.36.P:0.1 - What Goes Wrong If Missed
 
@@ -89,11 +89,11 @@ Fill only the fields the receiving use needs. If the object, relation, claim, or
 
 Cultural-evolution sources and project documents use compact labels because ordinary language has to move quickly. A word such as style, genre, practice, platform, or technique may be a useful local sign. It may also hide one or more distinct objects, relations, or claims—for example a Method family, Work family, local system-role kind, System-classification judgment, assignment species or occurrence, direct participation relation, discipline, canon or memory episteme, recognition relation, selected set, archive, front, mediation System, architecture, measurement relation, publication label, or mathematical-lens claim. Ambiguity alone does not prove that several of these claims are present.
 
-C.36.P does not decide the cultural-evolution case; C.36 does that. This companion recovers only enough meaning to write the ordinary claim and use the pattern that defines or tests the next needed distinction.
+Use C.36 for the cultural-evolution case. This companion recovers only enough meaning to write the ordinary claim and use the pattern that defines or tests the next needed distinction.
 
 ### C.36.P:2 - Problem
 
-Without the repeatable recovery move above, each cultural-evolution phrase gets repaired locally. That creates four failures:
+Without recovering the object or relation, a local wording repair can produce four failures:
 
 - source labels become root kinds by spelling;
 - platform and regime labels become hidden Systems, scope containers, or authorities;
@@ -107,15 +107,15 @@ The repair must keep useful local labels while stopping them from carrying unear
 | Force | Tension |
 |---|---|
 | Local language usefulness | Communities need familiar words such as style, tradition, scene, platform, canon, and technique. |
-| FPF composability | Downstream work needs the applicable Method, Work, discipline, episteme, bridge, archive, pool, selected-set, architecture, measurement, choice, or refresh rule without turning that rule into package-routing prose. |
+| FPF composability | Downstream work needs the applicable Method, Work, discipline, episteme, bridge, archive, pool, selected-set, architecture, measurement, choice, or refresh rule with its contribution to the next action clear. |
 | Source fidelity | Some labels should remain visible because they are source terms or project terms. |
 | Ontological economy | The same labels must not mint root U-kinds or local ontologies. |
 | Precision vs readable action | The repair must preserve distinctions that change truth or action without making the reader complete an ontological form before doing the work. |
-| C.36 focus | C.36 must remain a positive cultural-evolution pattern, not a wording-repair catalogue. |
+| C.36 focus | C.36 supplies the cultural-evolution case; C.36.P supplies wording recovery. |
 
 ### C.36.P:4 - Solution
 
-Use the intended claim, not the trigger word, to select the result. Write the short ordinary statement, then open only the branch whose distinction changes the next action. The branches below name common routes; their trigger lists are examples, not a new cultural-language taxonomy.
+Use the intended claim, not the trigger word, to select the result. Write the short ordinary statement, then open only the branch whose distinction changes the next action. The branches below name common routes; their trigger lists are examples.
 
 Before these cultural routes, send unresolved generic development or evolution wording to `E.10.DEV`. Return here only when its repaired claim has a cultural-evolution subject and a cultural wording question remains; preserve its ordinary non-use, missing-information result, non-cultural population or lineage architecture gap, and one-pass stop otherwise.
 
@@ -128,24 +128,24 @@ Before these cultural routes, send unresolved generic development or evolution w
   - If the wording is about who acts or how someone is assigned, E.10.ROLE separates direct participation, a local system-role kind or classification under A.2, an assignment under A.2.1, and a relation between system-role kinds under A.2.7.
   - Use A.1.1 only when the decision depends on bounded model use or one of its direct model-applicability, actual-use, or fixed-content-coherence relations. Use A.10, C.20, or C.23 only when the claim is about evidence use, discipline composition, or method-family maturity.
 4. **Variant-set, archive, front, pool, selected-set, publication, and refresh wording.** Use C.18, C.19, G.5, E.17, E.24.PUB, G.11, or E.18.1 according to whether the next question concerns generation or retention, current-pool treatment, a selected-set result declaration, publication, refresh, or problem-to-work carry-through.
-5. **Platform, regime, and mediator wording.** Do not presume a System. The phrase may identify, for example, a mediating System or architecture, recognition or selection relation, measurement or visibility relation, publication or source-currentness relation, episteme, bounded model-use structure, direct model-use relation, claim scope, or ordinary project label. Admit a System only when that System is the object. Keep any local system-role kind, classification, and assignment separate and optional. If no admitted FPF relation states the intended claim, return A.6.RCD's `missing-governor` instead of inventing a System-plus-relation construction. Do not introduce a holon-in-role value.
+5. **Platform, regime, and mediator wording.** Do not presume a System. The phrase may identify, for example, a mediating System or architecture, recognition or selection relation, measurement or visibility relation, publication or source-currentness relation, episteme, bounded model-use structure, direct model-use relation, claim scope, or ordinary project label. Admit a System only when that System is the object. Keep any local system-role kind, classification, and assignment separate and optional. If the current governing rule needed to state or test the intended claim for the named participants and use is absent, return A.6.RCD's `missing-governor`.
 6. **Meta-holon-transition (MHT), level, boundary, feedback, model-use or scope reframe, and frustration wording.** Recover whether the claim concerns a new holon or level, whole reidentification, a System boundary, a relation that crosses a holon boundary, supervisor-subholon feedback, bounded model use or claim scope, cross-scope architecture residual, mathematical-lens use, or interlevel ethical conflict. Use A.1, A.1.1, B.2.P, B.2, B.2.2, B.2.3, B.2.4, B.2.5, C.30.ILC, C.29, D.2, D.3, or D.4 according to that recovered claim. Keep C.36 only for the cultural-evolution case.
 7. **Attractor and dynamics wording.** Use A.3.3, C.27, and C.29 only when the claim is about stable dynamics, a basin, state-transition law, temporal behavior, or mathematical-lens use. Otherwise keep the label as style or tradition term work.
 8. **Architecture wording.** Use C.30 for an architecture question or ArchitectureClaim, C.30.ASV for a structural-view question, and C.30.AD for an architecture-description question. A selected structure, ArchitectureRelation, claim, description, view, representation, and publication remain distinct. Treat `ArchitectureOf@Context` only as a legacy retrieval phrase resolved by the current C.30 edition, not as a current record or ontology.
 
 A C.36.P repair closes when the short ordinary statement names the needed object, relation, or claim and makes the next use or stop visible. The optional recovery line is not required for a clean local repair.
 
-C.36.P does not define or test development-loop semantics, archive or front relations, pool policy, selected-set result declarations, Method-family semantics, measurement, refresh, publication use, or architecture use. It returns each claim to the pattern that does.
+Use the direct patterns for development-loop semantics, archive or front relations, pool policy, selected-set result declarations, Method-family semantics, measurement, refresh, publication use, or architecture use. C.36.P recovers the wording needed to enter them.
 
 #### C.36.P:4.1 - Recovery Result Table
 
-The trigger phrases are examples, not a closed lexical kind. Recover the intended object, relation, or claim first; then use the pattern that defines or tests the distinction needed by the next action.
+The trigger phrases are examples. Recover the intended object, relation, or claim first; then use the pattern that defines or tests the distinction needed by the next action.
 
 | Trigger use | Recover first | Applicable patterns after recovery |
 |---|---|---|
 | generic development, evolution, evolved, progress, growth, adaptation, or lineage | changed or represented subject; needed continuity or membership; posture; any direction or value basis; direct owner; cultural or non-cultural boundary | `E.10.DEV` first; then C.36 or C.36.P only for a recovered cultural-evolution case, and `E.10.MOVE` only for a remaining independent trajectory or path ambiguity |
 | style, tradition, genre, scene, school, or cultural lineage | term row or actual bridge; Method or Work family; canon or memory episteme; recognition relation; selected set; publication label | F.17, F.18, F.9, C.36, A.3.1, C.20, C.18, G.5, E.17, or E.24.PUB |
-| practice, technique, developmental machinery | Method or MethodDescription; relations among Methods or a selected Structure of them; WorkPlan or dated Work; direct participation; local system-role kind or classification; assignment species or occurrence; relation between system-role kinds; bounded model-use structure or one of its direct relations; discipline position; evidence relation; quote-only wording | A.3.1, A.3.2, A.15.1, A.15.2, E.10.ROLE, A.2, A.2.1, A.2.7, A.1.1, A.10, C.20, or C.23 |
+| practice, technique, developmental machinery | Method or MethodDescription; relations among Methods or a selected Structure of them; WorkPlan or dated Work; direct participation; local system-role kind or classification; assignment species or occurrence; relation between system-role kinds; bounded model-use structure or one of its direct relations; discipline position; evidence-use claim; quote-only wording | A.3.1, A.3.2, A.15.1, A.15.2, E.10.ROLE, A.2, A.2.1, A.2.7, A.1.1, A.10, C.20, or C.23 |
 | platform, platform regime, measurement regime | mediating System or architecture; recognition, selection, measurement, visibility, publication, source-currentness, or direct model-use relation; bounded model-use structure; claim scope; ordinary project label | A.1, A.1.1, C.30, C.16, A.19, E.17, E.24.PUB, G.11, or C.36 |
 | MHT, level, boundary, feedback down, model-use or scope reframe, frustration, interlevel conflict | new holon or level; whole reidentification; System boundary; relation crossing a holon boundary; supervisor-subholon feedback; bounded model use or claim scope; cross-scope residual; mathematical-lens use; interlevel ethical conflict | A.1, A.1.1, B.2.P, B.2, B.2.2, B.2.3, B.2.4, B.2.5, C.30.ILC, C.29, D.2, D.3, or D.4 |
 | attractor, basin, stable style | loose style term or an actual dynamics, temporal, or mathematical-lens claim | F.17, F.18, F.9, A.3.3, C.27, C.29, or C.36 |
@@ -192,9 +192,9 @@ This pattern does not define the cultural-evolution case or intervention. Use C.
 
 Use C.36.P to recover one ordinary claim. Keep the optional recovery line only when a handoff or repeated use needs it. Once the meaning and applicable rule are clear, stop the wording repair and return to the project question.
 
-Earlier retrieval text may call the optional line `CulturalEvolutionWordingRecoveryLine@Context`. In this edition that name resolves to `CulturalEvolutionWordingRecoveryLine`; the suffix supplies no Context object, scope, relation, or field.
+If a source uses `CulturalEvolutionWordingRecoveryLine@Context`, read it as `CulturalEvolutionWordingRecoveryLine` qualified for local retrieval; recover any required scope or relation separately.
 
-This pattern does not create `U.Culture`, `U.Style`, `U.Tradition`, `U.Practice`, `U.Genre`, `U.Scene`, `U.Technique`, `U.Platform`, `U.PlatformRegime`, `U.MeasurementRegime`, or `U.DevelopmentalMachine`.
+Cultural labels remain usable as local signs for the recovered objects, relations, and claims.
 
 ### C.36.P:7 - Relations
 

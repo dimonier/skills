@@ -70,6 +70,9 @@ the loop has no syntactic check to catch it.
    step without inventing steps or asking for clarification.
 7. **Refresh** with `G.11`: reopen on source change, FPF edition change, local
    misuse telemetry, or supersession.
+8. **Owner-performed sync.** A repo-carrier change is materialized into the
+   installed copy only by an **owner-performed sync** — the authoring agent
+   refreshes the bodies in the repo, never the deployed projection.
 
 ### PLAS.QualityAndRefresh:5 - Archetypal Grounding
 

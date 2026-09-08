@@ -16,6 +16,9 @@ For every card in `decisions/DEC-*.md` the script:
    Fields outside this set (sources, source_kind, references, linked_tasks,
    decision_type, fpf_kind, intended_readers, publication_carrier, revisit_by,
    review_by, ...) are removed. A field that is absent is simply not added.
+   Dataview inline-queries `= this.<property>` in the body are replaced with the
+   value of that field from the full (pre-filter) frontmatter; a missing or empty
+   field becomes «—».
 
 2. Checks the *resulting* card (filtered frontmatter + body) for references to
    internal entities by ID prefix. Only references to other DEC- cards are
@@ -81,6 +84,10 @@ ENTITY_ID_RE = re.compile(
     r'\b(?:' + '|'.join(NON_DEC_ENTITY_PREFIXES) + r')-[0-9][0-9A-Za-z-]*'
 )
 
+# Dataview inline-query `= this.<property>` in the body; replaced by the value
+# of the same frontmatter field (missing/empty -> '—').
+DATAVIEW_RE = re.compile(r"`\s*=\s*this\.([A-Za-z_][A-Za-z0-9_]*)\s*`")
+
 
 def resolve_vault_dir(cli_path):
     """Return the project-vault directory (the one containing decisions/)."""
@@ -122,6 +129,22 @@ def render_card(fm, body):
     )
     body = body.strip('\r\n').strip()
     return '---\n' + yaml_text + '---\n\n' + body + '\n'
+
+
+def fm_display(value):
+    """Frontmatter value for display in text; empty/None → «—»."""
+    if value is None:
+        return "—"
+    if isinstance(value, list):
+        parts = [str(x).strip() for x in value if str(x).strip()]
+        return ", ".join(parts) if parts else "—"
+    s = str(value).strip()
+    return s if s else "—"
+
+
+def substitute_dataview(text, fm):
+    """Replace `= this.<property>` with the frontmatter value (else «—»)."""
+    return DATAVIEW_RE.sub(lambda m: fm_display(fm.get(m.group(1))), text)
 
 
 def find_internal_references(text):
@@ -211,6 +234,7 @@ def main():
             filtered += 1
             continue
 
+        body = substitute_dataview(body, fm)
         filtered_fm = filter_frontmatter(fm)
         rendered = render_card(filtered_fm, body)
 

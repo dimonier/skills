@@ -17,6 +17,8 @@ title: "First Principles Framework (FPF) - Core Conceptual Specification"
 
 - **Author:** Anatoly Levenchuk, with AI-assisted development and review
 - **Version:** September 2026
+- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for original framework content; third-party material retains its own terms.
+
 - **Status:** Normative kernel, eternal alpha: already used in working projects and development programs, while still evolving.
 
 Begin with the working question in your project; FPF helps make the reasoning explicit enough to review and improve.

@@ -33,7 +33,7 @@ The skills transform the AI into a specialized assistant that follows proven met
   - [Table of Contents](#table-of-contents)
   - [Frameworks \& Methodologies](#frameworks--methodologies)
     - [🧠 First Principles Framework (FPF Core)](#-first-principles-framework-fpf-core)
-    - [⚡ FPF Narrative Prose](#-fpf-narrative-prose)
+    - [🔬 Episteme Compaction](#-episteme-compaction)
     - [📖 Pattern Language as Agent Skill (PLAS)](#-pattern-language-as-agent-skill-plas)
     - [🏗️ Layered Framework Workspace Architecture](#️-layered-framework-workspace-architecture)
   - [Business Analysis \& Requirements Engineering](#business-analysis--requirements-engineering)
@@ -69,22 +69,22 @@ Root framework and pattern library providing auditable thinking, evidence chains
 
 **Location:** `skills/fpf-core/`
 
-### ⚡ FPF Narrative Prose
+### 🔬 Episteme Compaction
 
-Generates compact, unambiguous FPF-structured output at F4-F5 formality level using typed-slot notation. Designed for AI agent consumers and FPF-literate humans where token economy and auditability matter — diagnostics, architecture decisions, code reviews, status reports, trust assessments, system compositions. Replaces verbose prose (~65% token savings, lossless).
+Lossless compaction of epistemes: prose ↔ compact typed-slot notation at F4-F5 formality level (~65% token savings) with a source-claims vs `[bracketed]` split and reconstruction back to source. Designed for AI-agent or FPF-literate-human output where token economy and auditability matter — diagnostics, architecture decisions, code reviews, status reports, trust assessments, system compositions. This is compaction, NOT narrativization.
 
 **Depends on:** `fpf-core`
 
 **Use when:**
 - Writing diagnostics, ADRs, code reviews, or status reports for AI agent consumers
-- Composing trust/assurance assessments with F-G-R-CL tuples
-- Building Γ (gamma) system/epistemic compositions with Quintet invariants
-- Reconstructing clean prose from FPF blocks (removing all metadata)
+- Rendering prose claims as typed slots and Γ aggregation with F-G-R-CL trust metrics
+- Composing evidence provenance / ADI reasoning blocks
+- Reconstructing prose back from a compact episteme (reverse render)
 - Any context where token economy AND auditability matter
 
-**Do NOT use for:** casual chat, teaching, non-technical audiences, creative tasks.
+**Do NOT use for:** narrativization, casual chat, teaching, non-technical audiences, creative tasks.
 
-**Location:** `skills/fpf-narrative/`
+**Location:** `skills/episteme-compaction/`
 
 ### 📖 Pattern Language as Agent Skill (PLAS)
 

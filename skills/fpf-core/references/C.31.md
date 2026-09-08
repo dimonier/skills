@@ -79,7 +79,7 @@ What goes wrong if C.31 is missed: "modular" becomes a binary label; a single mo
 
 What C.31 buys in practice: the practitioner can see which modularity characteristic changes the next architecture use, which false use is blocked, which repair is plausible, and which exact subject assertion and defining or constraining ClaimGraph are needed for measurement, evidence, causal, scale, selection, or accounting claims.
 
-Not this pattern when the question under repair is only source-label recovery, module-interface relation repair, reusable-structure accounting, general measurement admissibility, quality-family claim, architecture scale-preference claim, mathematical-lens use, candidate architecture synthesis, or selection. Use `C.30.STRAT`, `A.6.M`, `C.31.RSA`, `C.16`, `C.25`, `C.31.ASAP`, `C.29`, `G.5`, or `C.11` as appropriate; do not treat C.31 as the synthesis or selector pattern.
+Not this pattern when the question under repair is only source-label recovery, module-interface relation repair, reusable-structure accounting, general measurement admissibility, quality-family claim, architecture scale-preference claim, mathematical-lens use, candidate architecture synthesis, or selection. Use `C.30.STRAT`, `A.6.M`, `C.31.RSA`, `C.16`, `C.25`, `C.31.ASAP`, `C.29`, `C.32`, `G.5`, or `C.11` as appropriate: `C.32` governs candidate architecture synthesis, `G.5` selected-set result declaration, and `C.11` local choice.
 
 ### C.31:2 - Problem
 
@@ -164,7 +164,7 @@ ModularityVectorLite:
   forbiddenOverread: reused evidence is not assurance sufficiency.
   observedProblem: the team says the platform is modular because interfaces are public and evidence is reusable, but field replacement and certification still create variant-specific work.
   relatedClaimPatternLocatorsIfClaimed: A.6.M for the module-interface relation; C.31.RSA if report-only share becomes reusable-structure accounting; A.10 or B.3 only if an exact evidence-use or assurance-use assertion is being made.
-  stopCondition: stop at local repair until measurement basis, comparability basis, and any selection or assurance use are declared by their subject patterns.
+  stopCondition: stop at local repair until measurement basis, comparability basis, and any selection or assurance use are declared under their subject patterns.
 ```
 
 Near miss: a high interface-standardization count alone is not a C.31 improvement. If field-service work, source-return events, or variant-specific evidence increase, the vector records that proxy divergence and returns to repair rather than treating the count as architecture quality.
@@ -255,7 +255,7 @@ These heads are seeds, not an exhaustive taxonomy. Use only the heads that chang
 | `ControlStructureSeparationCharacteristic` | Control responsibilities, rates, and boundaries are explicit enough for the architecture move. | ordinal or vector | LCA or control description and temporal adequacy basis | control relation is hidden inside module label | apply C.30.LCA, C.27, A.3.3, or B.3 when a control, temporal, dynamics, or assurance claim kind is being made | stability, assurance, or gate use |
 | `HiddenCouplingDiscoveryRate` | Hidden dependencies discovered after integration or change. | rate | defect and change records | dependencies appear late | expose side channel, revise interface spec, add sentinel, or reopen boundary | integration risk, repeated release, or assurance claim |
 | `CrossBoundaryChangeReach` | How many modules, views, or work items a local change touches. | distribution | change-impact records | local change travels farther than claimed | split relation, add interface grammar, revise allocation, or source return | release, decision, or comparison claim |
-| `WorkRepeatabilityShare` | Delivery, operation, or test work under repeatable method descriptions. | ratio | work records and method descriptions | work repeats as bespoke effort | move repeated work into `MethodDescription` or accept exception | work planning, evidence reuse, or scale use |
+| `WorkRepeatabilityShare` | Delivery, operation, or test work under repeatable method descriptions. | ratio | work records and method descriptions | work repeats as bespoke effort | describe the repeatable Method in a `MethodDescription` under A.3.2 or accept exception | work planning, evidence reuse, or scale use |
 | `EvidenceReuseShare` | Evidence package items reused across instances or contexts. | ratio | evidence graph and validity context | evidence is recreated or mis-scoped | move repeated evidence into reusable evidence or assurance package | certification, safety-case, or assurance claim |
 | `RegulatoryBespokeResidue` | One-off regulatory or acceptance content not covered by reusable structures. | ratio or ordinal | safety, approval, or regulatory records | each instance needs new regulatory argument | isolate residue, add reusable evidence package, or keep bounded exception | safety case, approval, or publication claim |
 | `LearningTransferCoefficient` | Improvement transfer from one instance or run to subsequent instances. | slope or elasticity | repeated work data and learning curve records | improvement claim hides time or causal assumptions | apply C.27 for temporal adequacy and C.28 for causal use | causal, benchmark, or scale-preference use |
@@ -280,7 +280,7 @@ C.31 uses residual heads only as qualitative repair cues. These heads do not cre
 
 #### C.31:4.7 - Proxy-risk discipline
 
-Every decision-facing C.31 card includes `ProxyRisk` and `AuditQuestion`. If the proxy diverges from the value it was meant to represent, the card stops at report-only use or returns to repair.
+Every decision-facing C.31 card includes `proxyRisk` and `auditQuestion`. If the proxy diverges from the value it was meant to represent, the card stops at report-only use or returns to repair.
 
 | Head | Proxy risk | Audit question |
 | --- | --- | --- |
@@ -316,7 +316,7 @@ Admissible repair results are: keep the result report-only, split or rename the 
 
 **Show.** A DSM or dependency graph can substantiate a modularity interpretation, but the graph does not by itself say which dependency kind matters, what scale applies, whether the interpretation is comparable, or what action follows.
 
-Holon and episteme: architecture and modules are selected structures of described holons for named architecture questions and uses; the described holon may be an admitted system, organization-as-system, episteme, work occurrence, discipline, or another admitted holon kind. Publication-family material uses the episteme and publication patterns. A MethodDescription is an episteme; a Method uses A.3.1, and any relation asserted for it uses the pattern that defines that relation. C.31 heads, cards, vectors, and report-only proxies are characteristic records, declared-measurement-basis records, comparability-basis records, or report-only records about those structures.
+Holon and episteme: C.31 characterizes selected module-interface and other architecture-relevant structures of described holons for named architecture questions and uses; the described holon may be an admitted system, organization-as-system, episteme, work occurrence, discipline, or another admitted holon kind. Publication-family material uses the episteme and publication patterns. A MethodDescription is an episteme; a Method uses A.3.1, and any relation asserted for it uses the pattern that defines that relation. C.31 heads, cards, vectors, and report-only proxies are characteristic records, declared-measurement-basis records, comparability-basis records, or report-only records about those structures.
 
 ### C.31:6 - Bias-Annotation
 
@@ -325,7 +325,7 @@ Holon and episteme: architecture and modules are selected structures of describe
 | Scalar bias | Refuse one modularity score unless scoring method and comparability basis are declared. |
 | Measure-first bias | Start with `ModularityVectorLite` and repair direction before C.16-heavy fields. |
 | Interface-publication bias | Treat public interfaces as only one possible basis for substantiating substitutability. |
-| Proxy bias | Add `ProxyRisk` and `AuditQuestion` to every decision-facing card. |
+| Proxy bias | Add `proxyRisk` and `auditQuestion` to every decision-facing card. |
 | Complexity umbrella bias | Keep residual heads claim-scoped and apply scale, RG, or lens subject patterns when those uses are being made. |
 | Source-label bias | Treat software, neural-network, chiplet, safety-case, product-line, block, layer, expert, cache, router, and gate labels as source examples until `C.30.STRAT` and the subject pattern recover the FPF characteristic subject, structure, scale, and admissible use. |
 
@@ -352,7 +352,7 @@ Holon and episteme: architecture and modules are selected structures of describe
 | --- | --- | --- |
 | `ScalarModularityScore` | A single score claims architecture quality. | Replace with `ModularityVectorLite`, disclosed scoring basis and subject pattern, or report-only boundary. |
 | `UntypedMeasureList` | A table of heads appears without characteristic, scale, declared measurement basis, or repair action. | Classify heads and create C.16-compatible cards only where the recovered claim needs them. |
-| `MeasurementBeforeRepair` | The practitioner is asked for full measurement before one useful move exists. | Start with three characteristics under evaluation and repair direction. |
+| `MeasurementBeforeRepair` | The practitioner is asked for full measurement before one useful move exists. | Start with at most three characteristics under evaluation and repair direction. |
 | `OpenInterfaceEqualsModular` | Interface publication is treated as modularity. | Apply relation repair through A.6.M and characterize only the interface or substitutability head under evaluation. |
 | `ComplexityAsOneCharacteristic` | Algorithmic cost, graph-connectivity cost, policy and approval cost, evidence-maintenance cost, and cognitive cost are averaged. | Keep residual heads claim-scoped and apply lens or measurement patterns when those uses are being made. |
 | `ProxyBecomesValue` | A report-only proxy becomes a beyond-local-repair claim. | State forbidden use and use the subject pattern before relying on that claim. |
@@ -370,11 +370,11 @@ Costs:
 
 - Familiar score language often has to be downgraded to report-only use.
 - Cross-case comparison requires additional C.16, C.25, G.2, comparator, evidence, or decision claim.
-- Some attractive "complexity" statements are assigned to characteristic named by value, lens, or residual cue rather than becoming a general complexity pattern here.
+- Some attractive "complexity" statements need an exact characteristic, a lens-backed interpretation, or a residual cue.
 
 ### C.31:10 - Rationale
 
-C.31 is a characterization pattern because modularity and reusable-structure talk changes engineering action through characteristics: coupling, cohesion, interface variation, substitutability, reuse, evidence reuse, hidden coupling, source-return cost, and residual growth. Those heads are useful only when their subject, scale, declared measurement or comparison basis, false use, and repair action is visible.
+C.31 is a characterization pattern because modularity and reusable-structure talk changes engineering action through characteristics: coupling, cohesion, interface variation, substitutability, reuse, evidence reuse, hidden coupling, source-return cost, and residual growth. Those heads are useful only when their subject, scale, declared measurement or comparison basis, false use, and repair action are visible.
 
 The pattern puts `ModularityVectorLite` first to preserve affordability. Many practitioners need to see one relation to repair, one interface grammar to tighten, or one residue to account for. Requiring the full measurement apparatus too early would turn C.31 into a control form and would violate the architecture source invariant: repair succeeds only when one useful admissible action remains.
 
@@ -412,13 +412,13 @@ Older or local sources may serve as lineage or worked examples only when the row
 | `C.16`, `A.17`, `A.18`, `A.19` | Govern characteristic, scale, coordinate, score, unit, comparability, and measurement admissibility. |
 | `C.25` | Governs broader quality-family Q-Bundles when modularity is used in a quality claim. |
 | `C.30` and `C.30.ASV` | Govern architecture claims and structural views that supply C.31 subjects. |
-| `C.33`, `C.34`, and `C.35` | Use these patterns for captured-structure adequacy, lost-structure adequacy, preservation adequacy, correspondence adequacy, generated-carrier adequacy, or discovered-carrier adequacy around modularity and reusable-structure material. C.31 remains the pattern for modularity, reuse, proxy-risk, report-only, and characteristic use. |
+| `C.33`, `C.34`, and `C.35` | Use C.33 and C.34 for captured-structure, lost-structure, preservation, and correspondence adequacy around modularity and reusable-structure material. Use C.35 to recover the kind of a generated or discovered result and assess its adequacy for the next architecture use. C.31 remains the pattern for modularity, reuse, proxy-risk, report-only, and characteristic use. |
 | `C.30.ILC` | Governs cross-scope residual and frustration recognition when architecture move triage is being made. |
 | `C.29` | Governs mathematical-lens use such as compression, RG, epiplexity, or graph-lens transfer. |
-| `C.27`, `C.18.1`, `C.19.1` | Govern temporal and set-dynamic claims such as learning transfer, exception slope, and scale-window movement. |
+| `C.27`, `C.18.1`, `C.19.1` | C.27 governs temporal-claim adequacy, C.18.1 scale-law lens binding, and C.19.1 scale-based comparison, preference, or waiver. For temporal or set-dynamic claims involving learning transfer, exception slope, or scale-window movement, use the applicable branch. |
 | `C.28` | Governs causal-use claims. |
-| `A.10`, `B.3`, `A.20`, `A.21` | Govern evidence, assurance, gate, safety, and release claims. |
+| `A.10`, `B.3`, `A.20`, `A.21` | Govern evidence provenance and reliance, named assurance claims, internal-constraint results, and named gate decisions, respectively. Safety and release claims use their direct domain patterns. |
 | `C.32.P2S` | Uses C.31 modularity and reusable-structure characteristics when problem pressure must continue into candidate synthesis, decision, realization, and actual-structure feedback; C.31 still governs only characteristic and report-only modularity use. |
-| `G.2`, `G.5`, `C.11` | Define SoTA-basis, set-selection, and local-decision predicates. Candidate-generation or architecture-synthesis claims stay outside C.31 unless an exact current assertion satisfies the predicate or constraint whose defining `ClaimGraph` is located through `G.5`, `C.11`, or a named architecture-synthesis pattern description; C.31 records only modularity or reusable-structure characteristic use and report-only boundaries. |
+| `G.2`, `C.32`, `G.5`, `C.11` | Define SoTA-basis, candidate architecture synthesis, selected-set declaration, and local-decision predicates, respectively. Candidate-generation or architecture-synthesis claims stay outside C.31; each requires an exact current assertion satisfying the predicate or constraint whose defining `ClaimGraph` is located through `C.32` or another named candidate-generation or architecture-synthesis pattern description. C.31 records only modularity or reusable-structure characteristic use and report-only boundaries. |
 
 ### C.31:End

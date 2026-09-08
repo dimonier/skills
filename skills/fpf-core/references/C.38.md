@@ -51,7 +51,7 @@ dependencies:
 
 Common option labels name unlike things. *Buy* may name a purchase relation, *provider* a continuing arrangement, *internal* a performer location, *reuse* an already available System, *AI* one possible Agent, and *build* many kinds of Work. Two labels can describe the same whole way, while two offers carrying the same label can differ in integration, custody, support, evidence, capability, and exit enough to reverse the choice.
 
-The error is not merely missing detail. If candidate rows seek different results, use different acceptance bases, or silently switch situations and horizons, no amount of scoring restores comparability. If possible-future rows are written as facts, the table also invents capability, authority, Work, provision, delivery, acceptance, and availability.
+The error is not merely missing detail. If candidate rows seek different results, use different acceptance bases, or silently switch situations and horizons, no amount of scoring restores comparability. If possible-future rows are written as facts, capability, authority, Work, provision, delivery, acceptance, and availability are asserted without their direct support.
 
 The needed move is to fix one result question, construct complete-enough materially different ways on one parity basis, keep premise modality visible, and freeze only truthful candidates for choice. It is smaller than a procurement or architecture programme and more complete than a make-or-buy label table.
 
@@ -111,15 +111,15 @@ For a small case, use this form:
 
 The result is a comparison claim, not an obtaining arrangement in the world. It establishes no actual performer, capability, authorization, Work, purchase, service, production, delivery, acceptance, availability, or use.
 
-#### C.38:4.4 - Choose the truthful carrier
+#### C.38:4.4 - Retain the comparison without duplication
 
-Use the least burdensome carrier that keeps the comparison recoverable:
+Use the least burdensome way to keep the comparison recoverable:
 
 1. If a domain result already carries the complete same-use comparison and declares this specialization, keep it there rather than producing a second account.
 2. Otherwise retain one ordinary `C.2.1` episteme about the one result-obtaining comparison, with a truthful EntityOfConcern and effective reference scheme.
 3. If a direct domain Method already returns the complete useful comparison more cheaply, use that Method and do not add a `C.38` account.
 
-The episteme, table, document, or diagram that carries the claims is not a world-side arrangement, selected Structure, architecture, plan, Work, or result availability. Use `A.22`, `C.30`, `C.29`, `E.17`, or another direct pattern only when its separate question is current.
+The episteme, table, document, or diagram that carries the claims does not, merely by carrying them, establish a world-side arrangement, selected Structure, architecture, plan, Work, or result availability. Use `A.22`, `C.30`, `C.29`, `E.17`, or another direct pattern only when its separate question is current.
 
 #### C.38:4.5 - Separate recognition from assurance
 
@@ -160,7 +160,7 @@ Use that direct Method. Adding a `C.38` account for the same decision would dupl
 | *AI* or *automation* | The Agent or tool's proposed contribution inside each way, plus capability, access, evidence, authority, stop, and recovery where needed. | A performer species is a whole way or receives decision authority. |
 | *arrangement* or *option* | The complete-enough claim bundle for this one comparison and its premise modality. | A new universal kind, selected Structure, architecture, or obtaining world-side relation. |
 
-**Bias check.** Do not privilege the official, fashionable, familiar, widely adopted, or institutionally praised arrangement. Popular practice often describes the previous generation's compromise. Prefer the candidate whose claimed improvement over known weaknesses is explicit and supported for this result and situation. A standard or common provider can still be the best current way, but neither officiality nor popularity proves it.
+**Bias check.** Do not privilege the official, fashionable, familiar, widely adopted, or institutionally praised arrangement. Popular practice often describes the previous generation's compromise. Prefer the candidate whose claimed improvement over known weaknesses is explicit and supported for this result and situation. A way that follows a standard or uses a common provider can still be the best current way, but neither officiality nor popularity proves it.
 
 ### C.38:7 - Conformance and practical checks
 
@@ -168,12 +168,12 @@ A use conforms only when the checks needed by its claimed comparison pass:
 
 1. One governed result, receiver, use, situation or configuration, horizon, acceptance basis, deciding System, and authority boundary are explicit.
 2. At least two materially different complete-enough ways seek that same result. Duplicate labels merge and material differences under one label split.
-3. Every decision-bearing premise is visibly supported now, proposed, or unknown; modal rows create no actual capability, authority, Work, provision, delivery, acceptance, availability, or use.
+3. Every decision-bearing premise is visibly supported now, proposed, or unknown; proposed or unknown premises establish no actual capability, authority, Work, provision, delivery, acceptance, availability, or use.
 4. The same decision-changing parity questions are applied to every way; an omitted group is justified by irrelevance to this choice.
 5. A decision-reversing unknown remains a gap or probe. Protected conditions are not hidden inside one unexplained scalar.
 6. `A.19.CPM` or `A.19.SelectorMechanism` is used only when its evidence-gating, incomparability, abstention, or set-return contribution is actually needed.
 7. Only complete-enough whole ways enter the finite `OptionSet`; `C.11` alone makes the local choice and emits the `ChoiceResult`.
-8. The truthful carrier rule prevents a duplicate episteme when an owning domain result already carries the complete comparison.
+8. The rule for retaining the comparison prevents a duplicate episteme when an owning domain result already carries the complete comparison.
 9. A retained way names its first unsupported realization branch, but no realization or later Work is claimed by the comparison.
 10. The reopen condition names a changed premise or result that can alter the comparison or choice.
 
@@ -199,7 +199,7 @@ A use conforms only when the checks needed by its claimed comparison pass:
 | --- | --- |
 | Truthful alternatives | Candidate rows become whole ways to obtain the same result rather than a mix of labels and objects. |
 | Earlier burden visibility | Integration, evidence, support, capability, custody, consequence, recovery, and exit can change the choice before commitment. |
-| Preserved modality | Plans and candidate rows do not fabricate current world-side relations. |
+| Preserved modality | Plans and candidate rows keep proposed world-side relations distinct from independently supported current ones. |
 | Better choice input | `C.11` receives a finite complete-enough `OptionSet` and visible gaps instead of being asked to repair its own candidates. |
 | Domain autonomy | Subject Methods keep architecture, provision, contracting, acceptance, realization, and assurance. |
 | Additional preparation cost | The team must resolve familiar labels and ask comparable questions before scoring or choosing. |

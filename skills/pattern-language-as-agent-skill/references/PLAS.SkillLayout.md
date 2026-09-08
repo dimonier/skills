@@ -44,8 +44,10 @@ A DPF-skill can drift into failures: a mega-`SKILL.md` that carries all subject
 knowledge (reproducing a bloated monolith), an `assets/` "canonical" file that
 reintroduces a second source, calling the skill "the edition" and collapsing the
 carrier into the edition (`C.33`), mirroring an external standard without pinning
-it, dropping a source attachment during conversion, or treating version history
-as authoring residue. The layout must keep the
+it, dropping a source attachment during conversion, treating version history
+as authoring residue, or an authoring agent editing the installed copy in the
+user-level skills directory instead of the repo carrier, silently forking the
+deployed surface from the single surface. The layout must keep the
 dispatcher routing-only, the pattern bodies atomic, the edition/carrier
 distinction explicit, and the one dependency graph consistent across its three
 views.
@@ -61,6 +63,7 @@ views.
 | Single surface vs reader-facing form | No reader-facing `E.11.PFP` form while there is no cold reader; if a reader emerges, it is a separate `E.24.PUB` projection. |
 | External source vs projection | An external published standard is canonical; the skill is its derived representation, with a pin record + edition-tied refresh. |
 | Three graph views vs drift | Frontmatter (machine), `:12` (human), `relations.md` (canonical map) — one graph, agreed direction. |
+| Repo carrier vs installed copy | The repo skill dir is the single *editable* surface; the installed copy in the user-level skills dir is a *read-only* deployment, synced only by the owner. |
 
 ### PLAS.SkillLayout:4 - Solution
 
@@ -130,6 +133,15 @@ views.
     it must reproduce. `scaffold/` is not `templates/` (output skeletons) — it is a
     self-reproduction kit — and it is added only when there is a real init task, not
     for completeness (`E.4.DPF:4`).
+12. **Deployment boundary (repo carrier vs installed copy).** The repo's skill
+    directory is the single *editable* surface. The user-level skills directory
+    (`~/.agents/skills/`, or the platform's equivalent) is a *read-only* deployment
+    projection: the authoring agent may read it for reference but must never create,
+    edit, or delete anything there. Syncing the repo carrier into the user-level
+    directory is an **owner-owned move** — the owner performs it, never the authoring
+    agent. This is the single-surface discipline extended across the deployment hop:
+    exactly one editable surface, one owner of the sync, no fork/drift between repo
+    and installed copy.
 
 ### PLAS.SkillLayout:5 - Archetypal Grounding
 
@@ -161,6 +173,7 @@ edition/carrier wording are the two counterweights.
 | CC-SL.8 | An external-standard DPF declares a pin record (URL + edition + status) and edition-tied refresh; it is stated to be a representation, not the standard. |
 | CC-SL.9 | A source attachment the standard references (dashboard JSON, sample payload, schema) is preserved under `assets/`, not dropped. |
 | CC-SL.10 | `scaffold/` is used only for a real init/reproduction task (dir tree + templates + scripts copy), not as empty scaffolding. |
+| CC-SL.11 | The authoring agent never edits the installed copy in the user-level skills directory; the sync to it is owner-owned and stated as such. |
 
 ### PLAS.SkillLayout:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -176,6 +189,7 @@ edition/carrier wording are the two counterweights.
 | CHANGELOG treated as authoring residue | Classify as version history; not required, but allowed inside. |
 | Source attachment dropped during conversion | Preserve it under `assets/`; do not drop referenced examples. |
 | Empty `scaffold/` added for completeness | Add it only for a real init/reproduction task. |
+| Editing the installed copy in the user-level skills dir | Sync is owner-owned; the authoring agent works only on the repo carrier. |
 
 ### PLAS.SkillLayout:9 - Consequences
 

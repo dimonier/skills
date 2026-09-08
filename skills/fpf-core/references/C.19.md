@@ -88,7 +88,7 @@ If a proposed pool-policy premise is expressed as *learning progress*, informati
 - Which lens or policy state is governing it?
 - Is the next admissible pool treatment to widen, keep the frontier, narrow to a subset, or sunset a line?
 - If none of those treatments is current, which subject pattern now applies, and why is the question no longer pool policy?
-- What event or threshold would justify changing that treatment next?
+- What justifies active exploration or cheaper retention now, and what change would end that justification? Readiness for exploitation is a separate question.
 
 ### C.19:0.4 - First output
 
@@ -116,11 +116,15 @@ If the live question is not treatment of a still-live pool, use the exact exit i
 Ad-hoc exploration mixes ordinal and interval claims, silently scalarizes partial orders, and loses lens or policy provenance, undermining admissibility and reproducibility.
 
 ### C.19:3 - Forces
-- Graduation vs. discovery — a direct policy condition must be satisfied while `explore_share` keeps discovery alive; assurance is cited only when the condition actually depends on a named assurance use.
+- Readiness vs. continuation — exploitation needs its direct qualification, while active exploration and cheaper retention need their own prospective contribution and affordable commitments. None of these judgements follows from the others.
 - Heterogeneity vs. focus — fairness quotas by family vs. depth on proven lines.
 - Lens expressiveness vs. audit — scalarised choices must not be called 'the frontier' and MUST record lens ids.
 
 ### C.19:4 - Solution
+
+Decide which lines remain worth exploring, which remain worth retaining without new probing, and which no longer warrant a place in the live pool. Use the pool's intended contribution and horizon, the resources and opportunity window still available, and what keeping each line displaces. State the resulting treatment and the change that would make it worth reconsidering.
+
+Judge readiness for exploitation separately. A line may warrant further research or cheap retention before it supports deployment or transfer. Conversely, neither missing readiness nor past expenditure justifies keeping it indefinitely. Retaining an archive record under C.18 need not keep the line active or fund another experiment.
 
 #### C.19:4.1a - Causal data and causal-policy exploration hook
 
@@ -147,7 +151,7 @@ Omit this tail when the pool treatment makes no causal claim and consumes no cau
 **Policy fields.** `EmitterPolicy` is a context-local, versioned policy with canonical fields:
 `{ emitterPolicyId, name?, regimeKey ∈ {UCB, Thompson, BO-EI, GP-UCB, PES, InformationGain, …}, params, explore_share∈[0,1], temperature τ≥0, rebalance_period, wild_bet_quota≥0, graduationConditionRef?, assuranceResultRef?, epsilon_dominance ε, cell_capacity K, insertionPolicyRef, dedupThreshold, deduplicationBasisRef, deduplicationUnit }`.
 
-`graduationConditionRef` cites the direct domain or policy condition that changes pool treatment. `assuranceResultRef` is present only when satisfying that condition relies on one exact B.3 result for a named assurance use and bounded scope. Neither field is an assurance level. `emitterPolicyId` is cited as `emitterPolicyRef`; the profile is not a U-kind, generation operator, staffing instruction, budget approval, or Work record.
+`graduationConditionRef` cites the direct domain or policy condition for moving a line into exploitation or extending an already supported use. `assuranceResultRef` is present only when satisfying that condition relies on one exact B.3 result for a named assurance use and bounded scope. Neither field is an assurance level. The pool policy separately states why active exploration or retention is worthwhile, what continuing commitments it needs, and what would defeat that basis. An exploration horizon may extend beyond the next local decision; it still needs a defensible prospective contribution and obtainable resources. `emitterPolicyId` is cited as `emitterPolicyRef`; the profile is not a U-kind, generation operator, staffing instruction, budget approval, or Work record.
 
 **Decision-subject clarification.** Attribute any later choice to one declared `DecisionSubject` at explicit `DecisionSubjectGranularity`. Record measurement spaces and admissible policies in the semantic-frame epistemes that state them. Use LOG to describe lenses and policies; that description does not enact a choice.
 
@@ -155,7 +159,7 @@ Omit this tail when the pool treatment makes no causal claim and consumes no cau
 
 Use the ordinary default tokens defined in `G.Core` and `G.5`. The rules below explain their pool-policy consequences without defining a rival default family.
 
-**Decision-theory bridge.** Use `C.11` for theory-side choice among already-available options and for the meaning of `ProbeBudget`, `ValueOfInformation`, and `ValueOfComputation`. A pool-policy record may use those outputs only as criteria for graduation, keep-frontier, or sunset treatment; it does not restate local choice doctrine.
+**Decision-theory bridge.** Use `C.11` for theory-side choice among already-available options and for the meaning of `ProbeBudget`, `ValueOfInformation`, and `ValueOfComputation`. A pool-policy record may use those outputs as inputs to its treatment judgement. A probe's lack of value for the next local choice does not by itself settle the value of longer-horizon exploration; that prospective contribution and its opportunity cost belong to the pool policy. A worthwhile research line need not become a prerequisite for the present decision.
 
 **Ordinary default references (if policy is unspecified):**
 - **Dominance:** consume `DefaultId.DominanceRegime` from `G.Core` and `G.5`; in ordinary Q-front use this means `{Q components}` with `ConstraintFit=pass` as **eligibility gate**.
@@ -177,13 +181,13 @@ Use the ordinary default tokens defined in `G.Core` and `G.5`. The rules below e
 **Promotion rules (policy).**
 - **Tie-breaks.** Use only the constituted and compatible results named by the current policy. Promotion of Surprise or Illumination into the dominance set MUST be declared by lens or policy id and captured in provenance.
 - **Graduation.** A candidate line or pool member moves from Explore to Exploit only when eligibility holds and the direct condition cited by `graduationConditionRef` is satisfied. When that condition relies on assurance, `assuranceResultRef` cites the exact B.3 result whose named use and bounded scope support the judgement. An optional profile may supply evidence; neither the profile nor a label graduates the line.
-- **Sunset or pivot.** A candidate line or pool member that fails the applicable VOI or direct graduation condition receives the sunset or pivot treatment at `rebalance_period`. Its optional profile remains evidence, not the treated object.
+- **Continue, retain, narrow or sunset.** At `rebalance_period`, judge the line's prospective exploration or stepping-stone contribution against the remaining opportunity, obtainable resources, retention burden and displaced lines. Keep active exploration only while that commitment is warranted; cheaper retention may remain worthwhile without new probing. Narrow, pivot or sunset when the applicable continuation basis no longer warrants the current treatment. An unsatisfied graduation condition blocks the use it governs, not continuation by itself. A defeated continuation basis can justify retirement even if much has already been spent. The optional profile remains evidence, not the treated object.
 **Policy logic is not generation or work.** In one C.19 use, compute and record a treatment over an already identified live pool. It does not recompute a C.18 front or archive, update a generator, seed a candidate, constitute dated `U.Work`, create or classify a local system-role kind, create or change an assignment occurrence or its state, establish responsibility, authority, or permission, approve a budget or plan, or authorize enactment. At enactment, recover only the branches that independently obtain; send unresolved claim-bearing “role” wording through `E.10.ROLE`.
 
 **Pool-policy pass (per `rebalance_period`).**
 1) Read the current C.18 archive/front reference and its replay boundary; do not recompute either object inside C.19.
 2) Record the governing lens and desired policy values, such as `explore_share`, emitter-profile preference, `wild_bet_quota`, or an admitted heterogeneity constraint. These are policy values, not generation actions.
-3) Apply eligibility and the direct condition cited by `graduationConditionRef`: record graduation pressure and choose exactly one `currentTreatment` from `widen | keep_frontier | narrow_to_subset | sunset_line`. If assurance is part of that judgement, cite the bounded B.3 result separately.
+3) Apply the conditions for the proposed treatment. For exploitation or a wider supported use, apply eligibility and `graduationConditionRef`, citing the bounded B.3 result when assurance is needed. For exploration or retention, assess the continuation basis and the whole pool's competing commitments. Choose exactly one `currentTreatment` from `widen | keep_frontier | narrow_to_subset | sunset_line` and state whether the retained line warrants active probing or only lower-burden retention.
 4) If that judgement requires fresh candidates, a changed emitter mix or temperature, archive insertion, or front recomputation, set `nextQuestionPatternLocator = C.18` and pass only the desired emitter profile, quota or constraint, and the exact generation/archive/front reason. Apply C.18 to decide and record the generation, archive, and front operations.
 5) If carrying out the treatment requires dated implementation, planning, staffing, or budget use, pass the policy record to the A.15 family; the policy record itself grants none of them.
 6) Emit one `PoolPolicyResult` with `livePool`, `governingLens`, `currentTreatment`, `changeTrigger`, and any inputs required by the next subject pattern. The result may justify keeping, narrowing, graduating, or sunsetting a line without taking over the named next subject pattern's operation.
@@ -232,10 +236,10 @@ Those fields define the result: live pool, governing lens, current treatment, an
 
 A `C.19` pass may close only when one explicit pool and one explicit next treatment are both visible.
 
-- Close as `widen` when the current frontier is too narrow for the declared exploration policy or when the evidence basis is too thin to justify current narrowing.
-- Close as `keep_frontier` when several lines must remain live under the current lens and no narrower admissible subset is yet justified.
-- Close as `narrow_to_subset` when one declared lens now justifies retaining one smaller internal live set without pretending that one scalar winner has already been chosen.
-- Close as `sunset_line` when one line or family region no longer clears the current lens, quota, or direct graduation condition.
+- Close as `widen` when wider exploration is warranted under the pool's contribution, horizon and resource conditions. If widening also asserts a wider supported use, satisfy that use's graduation and assurance conditions.
+- Close as `keep_frontier` when keeping the live lines is warranted under the current policy. A line retained for later reconsideration need not receive a new probe.
+- Close as `narrow_to_subset` when the continuation basis warrants a smaller internal live set, without pretending that one scalar winner has already been chosen.
+- Close as `sunset_line` when a line's prospective contribution, feasible continuation or retention no longer warrants its burden under the pool policy. Failure to graduate is not enough. Its archived result may still be retained under C.18 when that separate retention remains useful.
 
 When the question has stopped being pool policy, finish the pool-policy result and use the exact handoff in `C.19:4.4`; the next pattern is recorded outside `currentTreatment`.
 
@@ -291,13 +295,13 @@ whyNotLocalChoice = three family regions remain live
 ```
 
 **An exact capability claim supports pool treatment.**
-An A.2.2 capability instance for `diagnostic_agent_v4` is qualified for task region `alpha`, while its current statement does not establish transfer into region `beta`. A separately declared curriculum-expansion policy keeps both regions live until that transfer question changes. Because the pool treatment actually relies on the capability statement, the record cites its exact A.10 reliance account:
+An A.2.2 capability instance for `diagnostic_agent_v4` is qualified for task region `alpha`, while its current statement does not establish transfer into region `beta`. In this constructed case, a declared curriculum-expansion policy warrants keeping both regions live while beta's prospective contribution and retention burden remain acceptable. That policy does not establish transfer. Because the pool treatment actually relies on the capability statement, the record cites its exact A.10 reliance account:
 
 ```text
 livePool = diagnosis_task_regions_{alpha,beta}
 governingLens = curriculum_expansion_policy_v3
 currentTreatment = keep_frontier
-changeTrigger = a separate capability statement makes an evidence-qualified transfer claim for diagnostic_agent_v4 in region_beta
+changeTrigger = beta obtains qualified transfer support, its opportunity window closes, or its continuation burden changes
 capabilityInstanceRef = diagnostic_agent_capability_v4
 capabilityStatementRef = capability_statement_CS-44
 a10RelianceRef = A10_CS-44_keep-frontier_W8
@@ -307,14 +311,25 @@ whyNotLocalChoice = both regions remain live; no individual task or probe is sel
 
 `capabilityInstanceRef` retains the A.2.2 `U.Capability` identity; `capabilityStatementRef` retains its governed episteme identity; and `a10RelianceRef` qualifies only the stated bounded reliance. None is renamed as a signal or cue, entered into the declared dominance set, or emitted as a `ChoiceResult`.
 
-**One region should now be sunset.**
-When a region's compatible cited Novelty coordinate result no longer clears the active floor, or the region no longer clears the direct graduation condition, state that treatment directly rather than leaving the retirement implicit:
+**The same missing beta qualification permits different continuation decisions.**
+
+Hold the alpha-only capability evidence fixed in these three hypothetical policy conditions. None supports deployment in beta.
+
+| Continuation basis | Pool-policy result | What that result supports |
+| --- | --- | --- |
+| An informative beta simulation fits the available qualified setup and this month's allocation; its prospective contribution warrants the work it displaces. | `keep_frontier`, with active exploration of beta. | Keep both regions live. Use C.11 for the particular probe choice and the relevant planning and authority rules for actual work. The simulation has not yet been performed. |
+| No new beta probe now warrants its cost, but keeping the existing result and lineage costs little and preserves a named later reuse. | `keep_frontier`, with beta retained for reconsideration and no new beta probe. | Preserve the stepping stone under the existing retention basis. Reconsider when the reuse opportunity or maintenance burden changes; the retention decision creates no study assignment. |
+| Further beta work would displace a better-supported line's use of the only available setup; its prospective contribution does not warrant that displacement, and no useful lower-burden live commitment remains. | `sunset_line` for beta. | End beta's live-pool commitment. Keep an archived result only if its separate C.18 retention remains useful. Reopen if a feasible route or changed contribution warrants the cost. |
+
+A compatible Novelty floor or quota may affect these judgements when the policy justifies it for this continuation use. Its failure is not a universal retirement rule, and the unsatisfied transfer condition is unchanged across all three cases.
+
+For the third condition, the record can state:
 
 ```text
 livePool = family_region_beta
-governingLens = barbell_policy_v2
+governingLens = curriculum_expansion_policy_v3
 currentTreatment = sunset_line
-changeTrigger = reopen only if new evidence or quota deficit reactivates the region
+changeTrigger = a feasible beta route or changed prospective contribution warrants its continuation cost
 whyNotLocalChoice = other regions still remain live under the same pool policy
 ```
 
@@ -361,7 +376,7 @@ The practical handoff is therefore small: preserve the exact C.18 archive or fro
 
 ### C.19:5.1 - System grounding
 
-A product-search or architecture-search team often keeps several family regions alive even after one tempting line starts to look best locally. An admissible `C.19` result might therefore keep the frontier live under `frontier_sweeper_v3` until one retained line satisfies `graduation_condition_v3`, instead of collapsing the whole pool into one premature winner.
+A product-search or architecture-search team can keep several family regions alive even after one line looks best locally. `keep_frontier` under `frontier_sweeper_v3` is warranted while those regions' prospective contribution and commitments fit the pool policy. Graduation is reconsidered when `graduation_condition_v3` is satisfied; continued exploration or retention is reconsidered when its own basis changes. The team need not choose between premature exploitation and indefinite funded search.
 
 #### C.19:5.2 - Episteme grounding
 
@@ -391,11 +406,13 @@ No global scalarisation of partial orders; ordinal scales excluded from arithmet
 - **C19-12** If exploration collects data for a causal claim, learns or evaluates a causal policy, or treats counterfactual replay as support, `PoolPolicyResult.causalUseSpec?` **MUST** carry the target rung, claim kind, available support-component refs, supported use, unsupported use, and the C.28 support-result ref when one is consumed.
 - **C19-13** A pool-policy record for still-live loop-engineering candidates—for example, loops, agent harnesses, workflows, or DPF seeds—names the pool, governing lens, current treatment, and change trigger. Fresh generation, archive work, or front recomputation uses `C.18` as the pool-policy pass specifies. Any other next-result question uses the exact transfer in `C.19:4.4`; C.19 does not absorb improvement, declaration or publication, choice, Work, or refresh.
 - **C19-14** A pool-policy record, its evidence, and its treatment constitute neither an actual Problem nor `ProblematicForRelation`, improvement result, work result, project Work or parthood, `ChoiceResult`, public selected set, work permission, nor refreshed edition.
-- **C19-15** Graduation, scaling, or widening **MUST** cite its direct `graduationConditionRef`. If that judgement relies on assurance, `assuranceResultRef?` cites the exact B.3 result and `changeTrigger` names the satisfied condition and bounded supported scope. A policy threshold or label does not create an assurance result.
+- **C19-15** Graduation, scaling, or widening an already supported use **MUST** cite its direct `graduationConditionRef`. If that judgement relies on assurance, `assuranceResultRef?` cites the exact B.3 result and `changeTrigger` names the satisfied condition and bounded supported scope. Widening exploration, continuing a line, retaining it without new probing, or sunsetting it **MUST** follow the stated continuation basis, including its contribution, feasible commitments and opportunity cost. Failure to graduate alone supplies neither a retirement decision nor a reason for indefinite continuation. A policy threshold or label does not create an assurance result.
 
 
 
 ### C.19:8 - Common Anti-Patterns and How to Avoid Them
+
+- **Using deployment readiness to settle research continuation.** Judge active exploration and cheaper retention by their prospective contribution and remaining cost. Keep the actual qualification for deployment or transfer; past expenditure is not a reason to keep funding the line.
 
 - **Treating one scalarized top-1 as the frontier.** Avoid by naming the governing lens and keeping the live frontier distinct from any lens-ranked pick.
 - **Running exploration without one explicit next treatment.** Avoid by ending each pass with one explicit `currentTreatment` token: `widen`, `keep_frontier`, `narrow_to_subset`, or `sunset_line`. If the current question is no longer pool policy, name the next subject pattern instead of inventing another pool treatment.
@@ -405,7 +422,7 @@ No global scalarisation of partial orders; ordinal scales excluded from arithmet
 ### C.19:9 - Consequences
 
 - the result states whether the pool is being widened, kept live, narrowed, or sunset; if the question leaves pool policy, the record names the next subject pattern separately
-- heterogeneity can remain admissible without pretending every frontier is one scalar winner
+- active exploration, cheap retention and exploitation can receive different justified decisions; heterogeneity need not collapse into one scalar winner
 - the cost is stricter provenance and the need to name lenses, policies, and change triggers explicitly
 
 ### C.19:10 - Rationale

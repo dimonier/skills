@@ -147,7 +147,7 @@ sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
 | CC-SU.2 | `accepted` — only on explicit approval in the source. |
 | CC-SU.3 | Two incompatible formulations — an atomic CON. |
 | CC-SU.4 | A DEC is created only after the input filter (bounded architectural choice). |
-| CC-SU.5 | The DEC body carries only the DEC-ID and a web-URL; other references — in the frontmatter. |
+| CC-SU.5 | The DEC body carries only the DEC-ID and a web-URL; other references (source paths, entity IDs) — in the frontmatter. This applies to every body section, including "Внешние сигналы" (External signals) and "История пересмотров" (Revision history): in a signal's text only a verbal source name is allowed (e.g. "owner review 2026-09-08"); a path/ID goes to the frontmatter (`sources` for a path, `references` / `related_decisions` for entity IDs). |
 | CC-SU.6 | A decision change = edit the card + "Revision history", not a duplicate. |
 
 ### PV.StateUpdate:8 - Common Anti-Patterns and How to Avoid Them
@@ -158,6 +158,7 @@ sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
 | DEC for editorial/summary content | Context in the capture header; no DEC. |
 | Duplicate DEC on a decision change | Edit the same card + "Revision history". |
 | A capture/artifact reference in the DEC body | Only DEC-ID and URL; the rest in the frontmatter. |
+| An inline source path or entity ID in the DEC body (incl. "Внешние сигналы"/"История пересмотров") | Verbal source name in the text; path/ID to the frontmatter (`sources`/`references`). |
 
 ### PV.StateUpdate:9 - Consequences
 

@@ -116,8 +116,8 @@
 | B.2.4 | Capability and Functioning Whole Reidentification | — |
 | B.2.5 | Supervisor-Subholon Feedback Relation | — |
 | B.3 | Trust and Assurance Calculus | — |
-| B.3.3 | Assurance Subtypes & Levels | assurance levels, L0-L2, TA, VA, LA |
-| B.3.4 | Evidence Decay & Epistemic Debt | evidence aging, decay, freshness, epistemic debt, stale data. |
+| B.3.3 | Assurance Subtypes & Levels | use-qualified assurance, conceptual correspondence, verification, empirical validation, constructive support |
+| B.3.4 | Evidence Decay & Epistemic Debt | evidence currentness, age, changed premise, qualification window, refresh |
 | B.3.5 | Working-Model Relations & Grounding (CT2R-LOG) | — |
 | B.4 | Canonical Evolution Loop | evolution loop, DesignRunTag feedback, observe-notice-stabilize-route, drift repair, knowledge refinement |
 | B.4.1 | Observe -> Notice -> Stabilize -> Route | routed cue set, route plurality, route selection, pre-abductive seam, task-family specialization route. |
@@ -148,6 +148,7 @@
 | C.3.A | Typed Guard Macros for Kinds + USM (Annex) | declaration compatibility, exact candidate judgment, true/false/unknown, guard refusal, regulatory |
 | C.11 | Decision Theory (Decsn-CAL) | decision theory, DecisionSubject, OptionSet, comparison basis, ChoiceRule |
 | C.11.CRC | Configuration-Relative Contribution Comparison | finite change, current configuration S0, candidate configuration S1, result and resource vectors, interactions |
+| C.11.DUA | Decision-Useful Advice and Evidence Demands | — |
 | C.13 | Constructional Mereology (Compose‑CAL) | mereology, part-whole, composition, sum, set |
 | C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurand, measurement subject, Characteristic, Scale, Level/Coordinate |
 | C.16.P | Characteristic and Scale Precision Restoration | — |
@@ -311,7 +312,7 @@
 | G.8 | SoS-LOG Bundles & Maturity Ladders | SoS-LOG, rule ids, admissibility ledger, tri-state `{pass |
 | G.9 | Parity / Benchmark Harness | parity harness, benchmark plan, adaptation parity, freshness windows, comparator pins |
 | G.10 | SoTA Pack Shipping (pack-boundary governing definition; `SoTA-Pack(Core)`) | shipping, `SoTA-Pack(Core)`, pack-boundary governing definition, selector-ready publication surface, `AuditPins` |
-| G.11 | Telemetry-Driven Refresh & Decay Orchestrator | telemetry, refresh, decay, RSCR, PathSlice |
+| G.11 | Telemetry-Driven Refresh & Decay Orchestrator | telemetry, use-qualified currentness, refresh, RSCR, PathSlice |
 | G.12 | DHC Dashboards — Discipline-Health Time-Series (admissible telemetry, generation-first) | dashboard, DHC, discipline health, time-series, admissible telemetry |
 | G.13 | External Interop Hooks for SoTA Discipline Packs (conceptual; normative when used) | interop, external index, claim mapper, mapping policy, plane map |
 | I.2 | Expanded Entry Disambiguation Cases | first entry, disambiguation, compact index, expanded comparison. |

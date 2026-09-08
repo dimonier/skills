@@ -63,6 +63,10 @@ translating or renaming markers, or any choice that could diverge from the owner
 intent — **ask the owner before acting**; do not resolve it silently. This applies
 both when authoring a new DPF-skill and when revising an existing one.
 
+- **Deployment is owner-owned.** The authoring agent edits only the repo carrier;
+  the installed copy in the user-level skills directory is read-only and is synced
+  exclusively by the owner (`PLAS.SkillLayout:4` item 12).
+
 ## Evolution
 
 If the user is dissatisfied with the result or clarifies the process, offer to

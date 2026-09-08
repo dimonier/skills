@@ -59,6 +59,10 @@ missing CLI.
 3. **Tracking.** Empty scaffold directories carry a `.gitkeep` placeholder so git
    tracks the full tree; `git clone` reproduces every directory before it receives
    its first file.
+4. **Offer the AGENTS.md instruction.** When the LPF is used in its skill form in a
+   project, propose adding to the project's `AGENTS.md` an instruction that the
+   `project-vault` skill is mandatory for vault work (if there is no one). Ask, do not write silently:
+   the owner decides whether the project adopts the skill as the governing method.
 
 ### PV.Init:5 - Archetypal Grounding
 
@@ -80,6 +84,7 @@ copy the scaffold, create the channels at init.
 | CC-IN.1 | Init copies the scaffold (`project-vault/` + `inbox/` + `outbox/`), not a hand-built tree. |
 | CC-IN.2 | The CLI comes with the scaffold copy (`project-vault/scripts/vault.py`). |
 | CC-IN.3 | `inbox/` and `outbox/` exist at the repository root after init. |
+| CC-IN.4 | Init proposes (asks, does not silently write) an `AGENTS.md` instruction on mandatory use of the `project-vault` skill. |
 
 ### PV.Init:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -87,6 +92,7 @@ copy the scaffold, create the channels at init.
 |---|---|
 | Hand-built directory tree | Copy the scaffold. |
 | Missing `inbox/`/`outbox/` | Create them at init. |
+| A vault initialized without anchoring the skill | Offer the `AGENTS.md` mandatory-use instruction (ask the owner). |
 
 ### PV.Init:9 - Consequences
 
