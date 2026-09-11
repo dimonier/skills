@@ -3,8 +3,9 @@ Machine frontmatter check for the project-vault skill (PLAS CC-QR.6).
 
 Fails on any YAML parse error or missing required field, so the skill cannot be
 "relied on" without a passing check. Covers the routing-only SKILL.md
-(description YAML-safety) and every E.8 body in references/ (id/title/status/
-readiness), plus the INDEX.md <-> references/ consistency.
+(description YAML-safety) and every E.8 body in references/ (id/title/status,
+plus the bans on a per-card readiness key and on a repeated body cue block),
+plus the INDEX.md <-> references/ consistency.
 
 Usage:
   python check_frontmatter.py [--path <skill-dir>]
@@ -51,23 +52,33 @@ def check_skill_md(path):
         raise ValueError('SKILL.md description contains angle brackets')
 
 
-REQUIRED_BODY_KEYS = ('id', 'title', 'status', 'readiness')
-VALID_READINESS = ('source-faithful', 'case-validated')
+REQUIRED_BODY_KEYS = ('id', 'title', 'status')
+VALID_STATUS = ('seed', 'stable')
 
 
 def check_body(path):
-    fm, _ = parse_frontmatter(path)
+    fm, body = parse_frontmatter(path)
     for key in REQUIRED_BODY_KEYS:
         if key not in fm:
             raise ValueError(f"missing required key '{key}'")
+    if 'readiness' in fm:
+        raise ValueError(
+            "per-card 'readiness' key is forbidden (PLAS CC-PB.5); declare the "
+            "readiness mode collectively in SKILL.md"
+        )
     pid = fm['id']
     fname = os.path.splitext(os.path.basename(path))[0]
     if not re.match(r'^[A-Za-z0-9]+\.[A-Za-z0-9]+$', str(pid)):
         raise ValueError(f"id '{pid}' is not a <Code>.<Name> PatternID")
     if pid != fname:
         raise ValueError(f"id '{pid}' != filename '{fname}'")
-    if fm['readiness'] not in VALID_READINESS:
-        raise ValueError(f"readiness '{fm['readiness']}' not in {VALID_READINESS}")
+    if fm['status'] not in VALID_STATUS:
+        raise ValueError(f"status '{fm['status']}' not in {VALID_STATUS}")
+    if 'Governing FPF patterns' in body:
+        raise ValueError(
+            "body repeats a 'Governing FPF patterns' cue block (PLAS CC-GC.1); "
+            "FPF cues live only in frontmatter `dependencies`"
+        )
 
 
 def check_index(path, body_ids):

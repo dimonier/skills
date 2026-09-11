@@ -15,10 +15,6 @@ dependencies:
 ## PLAS.Naming - Naming the skill and PatternIDs
 
 > **Trigger:** When naming a new DPF-skill or assigning PatternIDs before public references accumulate.
-> **Governing FPF patterns:**
->   → F.18
->   → F.14
->   → E.4.DPF
 > **Skill dependencies:**
 >   → create-agent-skill (skill naming)
 
@@ -34,23 +30,24 @@ changes.
 
 Names drift into two failures: a tempting head word smuggles in a wrong prototype
 (`F.18`), or a PatternID is treated as position/title and renumbered when the body
-moves (`E.4.DPF:4.0.3`). Local skill names do not need the full `NameCard`/UTS-row
-apparatus — but they still need a governed-value-first candidate comparison.
+moves (`E.4.DPF:4.0.3`). A local skill name still requires the full
+governed-value-first candidate comparison — visible and conformance-checkable, not
+skipped or filled in after the fact.
 
 ### PLAS.Naming:3 - Forces
 
 | Force | Settlement |
 |---|---|
-| Local vs durable | A local skill name uses the F.18 discipline lightly; no `NameCard`, no `F.17` row (`F.18:0`, `F.14`). |
+| Local vs durable | A local skill name still runs the full F.18 candidate comparison; "local" bounds only the reference scope, not the process. |
 | Tech vs Plain | `name` (kebab-case) is the Tech label; folder/AGENTS wording is the Plain label. |
 | Stability vs reorder | PatternID stays while the pattern's answer continues; position is shown separately. |
 
 ### PLAS.Naming:4 - Solution
 
 1. **Skill name.** Recover the governed value first, then run a candidate
-   comparison (≥2 head families, rejected candidates, rationale) exactly as
-   `F.18:4` prescribes — but stop before minting a `NameCard`/`F.17` row (local
-   name). Follow `create-agent-skill`: kebab-case, atomic, WHAT+WHEN in the
+   comparison (≥2 head families, each rejected candidate with its own rationale)
+   exactly as `F.18:4` prescribes, and record it *before* the choice — never after
+   the fact. Follow `create-agent-skill`: kebab-case, atomic, WHAT+WHEN in the
    `description`.
 2. **Plain label.** Use `<Name>` as the human-facing folder/AGENTS wording.
 3. **DPF code + local locator.** Declare a short stable DPF code and a local
@@ -74,10 +71,10 @@ skill carrier.
 
 ### PLAS.Naming:6 - Bias-Annotation
 
-The author over-invests in naming: a full `NameCard`/`F.17` row for a local name
-that does not need it (`F.14` explosion), or a name chosen before the governed
-value is recovered. The bias is toward durable apparatus for a name that will
-never carry cross-framework reference.
+The author decides the name first and justifies it second: the candidate
+comparison is fabricated after the fact (a "rejected" list invented to support a
+foregone choice), or a name is chosen before the governed value is recovered. The
+bias is toward a foregone name dressed up as a comparison.
 
 ### PLAS.Naming:7 - Conformance Checklist
 
@@ -85,30 +82,29 @@ never carry cross-framework reference.
 |---|---|
 | CC-NM.1 | Governed value recovered before the name. |
 | CC-NM.2 | ≥2 head families compared; rejected candidates recorded. |
-| CC-NM.3 | No `NameCard`/`F.17` row minted for a local name. |
-| CC-NM.4 | PatternIDs stable; position shown separately; migration note on split/merge. |
+| CC-NM.3 | PatternIDs stable; position shown separately; migration note on split/merge. |
+| CC-NM.4 | The candidate comparison is recorded before the choice, with a per-candidate rejection rationale — no post-hoc "rejected" list. |
 
 ### PLAS.Naming:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| Full NameCard/UTS row for a local skill name | Stop at the candidate comparison (`F.14`). |
 | PatternID used as position or renumbered on move | Keep address stable; show `§` separately. |
 | Name smuggles ontology (e.g. `reviewer` as a role) | Recover the governed value; split before naming. |
+| Candidate comparison fabricated after the choice | Run the comparison first and record it before choosing; each rejected candidate gets its own rationale. |
 
 ### PLAS.Naming:9 - Consequences
 
 A stable PatternID survives reordering, but a rename later costs a migration note
 for every old reference, and the candidate comparison must be redone if the scope
-or carrier changes. A local name that stops before the durable apparatus avoids
-the `F.14` naming explosion but gives up cross-framework addressability.
+or carrier changes. The comparison, once required to be visible and checkable,
+cannot be skipped silently.
 
 ### PLAS.Naming:10 - Rationale
 
-`F.18` requires recovering the governed value before the name; local skill names
-stop before the durable `NameCard`/`F.17` apparatus (`F.14`). `E.4.DPF:4.0.3` keeps
-addresses stable while publication order changes, so a PatternID is an address,
-not a position.
+`F.18` requires recovering the governed value before the name and running a
+visible, checkable candidate comparison. `E.4.DPF:4.0.3` keeps addresses stable
+while publication order changes, so a PatternID is an address, not a position.
 
 ### PLAS.Naming:11 - SoTA-Echoing
 
@@ -123,7 +119,8 @@ Best-known line: local-first naming. Rejected rival: tech-cryptonym / acronym he
 
 ### PLAS.Naming:12 - Relations
 
-- **Builds on (FPF):** `F.18` (local-first naming), `F.14` (anti-explosion), `E.4.DPF:4.0.3` (PatternID stability).
-- **Coordinates with (FPF):** `E.10` (kind discipline before naming).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PLAS.Naming:End

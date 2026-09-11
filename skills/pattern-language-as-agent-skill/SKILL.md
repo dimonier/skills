@@ -15,16 +15,16 @@ description: |
 
 ## When to load which pattern
 
-| Situation | Load | Governing cues (FPF) |
-|---|---|---|
-| Deciding whether and what to author as a DPF-skill (cold start) | `references/PLAS.EntryRoute.md` | E.4.DPF, E.4.PFAD, E.9, E.4.DPF.DA |
-| Authoring a DPF-skill with no FPF dependency (self-sufficient variant) | `references/PLAS.SelfSufficient.md` | none — create-agent-skill (skill dependency) |
-| Setting up the skill directory layout and the single-surface decision | `references/PLAS.SkillLayout.md` | E.4.DPF, C.33, C.2.1, E.24.PUB |
-| Writing SKILL.md as a routing-only dispatcher | `references/PLAS.Dispatcher.md` | E.4.DPF, E.11 |
-| Writing one pattern body in references/ | `references/PLAS.PatternBody.md` | E.8, E.4.DPF, E.21 |
-| Naming governing-pattern cues to FPF patterns | `references/PLAS.GoverningCues.md` | E.5.3, E.4.PFR, E.4.DPF |
-| Naming the skill and PatternIDs | `references/PLAS.Naming.md` | F.18, F.14, E.4.DPF |
-| Evaluating, improving, refreshing a DPF-skill | `references/PLAS.QualityAndRefresh.md` | E.4.DPF.DA, E.21, E.23, G.11, E.22 |
+| Situation | Load |
+|---|---|
+| Deciding whether and what to author as a DPF-skill (cold start) | `references/PLAS.EntryRoute.md` |
+| Authoring a DPF-skill with no FPF dependency (self-sufficient variant) | `references/PLAS.SelfSufficient.md` |
+| Setting up the skill directory layout and the single-surface decision | `references/PLAS.SkillLayout.md` |
+| Writing SKILL.md as a routing-only dispatcher | `references/PLAS.Dispatcher.md` |
+| Writing one pattern body in references/ | `references/PLAS.PatternBody.md` |
+| Recording a card's FPF dependencies (frontmatter) | `references/PLAS.GoverningCues.md` |
+| Naming the skill and PatternIDs | `references/PLAS.Naming.md` |
+| Evaluating, improving, refreshing a DPF-skill | `references/PLAS.QualityAndRefresh.md` |
 
 ## Navigation rule
 
@@ -39,22 +39,32 @@ closing the loop.
 ## Source (single surface)
 
 `references/` IS the canonical source. Both the agent and the human author read
-and edit `references/*.md` directly. There is no `assets/` monolith and no derived
-projection to rebuild or sync. Governing-pattern cues name the governing FPF
-patterns; carrier mechanics follow `create-agent-skill`.
+and edit `references/*.md` directly. There is no `assets/` monolith and no
+reader-facing publication form to rebuild. The dependency graph has one authored home
+— each card's frontmatter `dependencies`; `references/relations.md` is a generated
+projection of the **intra-LPF Specialization** graph (`scripts/build_relations.py`),
+never hand-edited. FPF content edges and governing cues live **only** in the
+frontmatter — not repeated in card bodies or in `relations.md`. Carrier mechanics
+follow `create-agent-skill`.
 
 ## references/ status
 
 **First seed** — 8 pattern cards + INDEX + relations. Pattern bodies are draft
-`E.8` bodies, marked `seed` (with an explicit readiness mode) until they pass
-`E.21` / `E.4.DPF.DA` (see `references/PLAS.QualityAndRefresh.md`).
+`E.8` bodies marked `seed` (level only); a card's frontmatter `status` carries the
+level (`seed`/`stable`), **not** the readiness mode. They stay `seed` until they
+pass `E.21` / `E.4.DPF.DA` (see `references/PLAS.QualityAndRefresh.md`).
+
+**Readiness mode (declared collectively, per package):** `source-faithful` —
+faithful to FPF (`E.4.DPF`, `E.8`, `E.4.PFR`) + `create-agent-skill`; **not**
+`case-validated` (no heterogeneous cases yet). This follows FPF: a card's `status`
+is the pattern status (`Stable`/`Draft`), while package adequacy is a separate
+aggregate result (`E.4.DPF.DA:4.5` `DPFPackageAdequacyStatus`); no per-card
+`readiness:` key is used (`PLAS.PatternBody:4` item 6, CC-PB.5).
 
 **Self-assessment (reflexive):** this framework has not yet passed its own
 `PLAS.EntryRoute` CC-ER.1–6 — no `E.4.PFAD` answer, no `E.9` DRR, no coverage map,
 no representative application, and the authoring-scenario axes are declared but not
-yet evaluated. Readiness mode for every card is `source-faithful` (faithful to FPF +
-`create-agent-skill`), not `case-validated`. Disclosed as an honest first-seed gap,
-not silently omitted.
+yet evaluated. Disclosed as an honest first-seed gap, not silently omitted.
 
 ## Guardrails
 

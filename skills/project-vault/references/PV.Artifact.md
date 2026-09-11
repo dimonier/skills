@@ -2,24 +2,17 @@
 id: PV.Artifact
 title: "Creating a track-bound, self-contained and alienable artifact"
 status: seed
-readiness: source-faithful
 keywords: [artifact, self-contained, alienable, track-binding, plan-item]
 dependencies:
   builds_on:
     - A.15.1
     - A.15.2
     - E.24.PUB
-  coordinates_with:
-    - E.8
 ---
 
 ## PV.Artifact - Creating a track-bound, self-contained and alienable artifact
 
 > **Trigger:** When a track needs an artifact (`artifacts/YYYY-MM-DD-slug.md`) — an analysis, a project, a specification — bound to the track and recorded by a WRK.
-> **Governing FPF patterns:**
->   → A.15.1 (work execution — the artifact as output)
->   → A.15.2 (work plan — binding to a PlanItem)
->   → E.24.PUB (publication as a separate relation — alienability)
 > **Skill dependencies:**
 >   → none
 
@@ -76,7 +69,7 @@ other files. An artifact not bound to a PlanItem is not tracked in the track's p
 
 **AR.4 — recording the work (WRK).**
 
-1. Immediately after writing — create a WRK (the WorkRecord procedure).
+1. Immediately after writing — create a WRK (`PV.WorkRecord`).
 2. In `plan_item_ref` — the item from "Next moves" (from AR.1).
 3. In `output_refs` — the created artifact.
 4. Update the track's "Completed moves"; then — `python scripts/vault.py work`.
@@ -139,8 +132,8 @@ rival: "an artifact with references to internal codes" — rejected as not alien
 
 ### PV.Artifact:12 - Relations
 
-- **Builds on:** `A.15.1` (execution), `A.15.2` (plan), `E.24.PUB` (alienability).
-- **Coordinates with:** `E.8` (self-contained body).
-- **Applies to:** `PV.Track` (an artifact is created bound to a track).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.Artifact:End

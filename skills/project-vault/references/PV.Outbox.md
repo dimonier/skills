@@ -2,24 +2,20 @@
 id: PV.Outbox
 title: "Outgoing feedback: outbox procedure for sending notes to other systems/skills"
 status: seed
-readiness: source-faithful
 keywords: [outbox, feedback, outgoing, send, transfer, message, addressee]
 dependencies:
   builds_on:
-    - E.11
+    - A.7
+    - C.2.1
     - C.33
-    - C.11
+    - E.11
   coordinates_with:
     - A.15.1
 ---
 
 ## PV.Outbox - Outgoing feedback: outbox procedure for sending notes to other systems/skills
 
-> **Trigger:** When feedback, a proposal, or a note arises that is addressed to another system or skill, and it must be captured and delivered instead of evaporating after the dialog.
-> **Governing FPF patterns:**
->   → E.11 (practical entry: a named send-feedback entry-path)
->   → C.33 (kind discipline: `outbox/` and the message as a distinct kind)
->   → C.11 (capture fidelity: write the feedback faithfully before transfer)
+> **Trigger:** When feedback, a proposal, or a note arises that is addressed to another system or skill — including a substantive method-feedback signal captured at a WRK closure (`PV.WorkRecord` W.4) — and it must be captured and delivered instead of evaporating after the dialog.
 > **Skill dependencies:**
 >   → none
 
@@ -51,7 +47,10 @@ the recipient never learns what was proposed, and the sender has no record.
 1. **Capture.** When feedback/a proposal addressed to another system or skill
    arises, write one `.md` file in `outbox/` (one file = one message) with frontmatter
    `created`, `addressee`, `source_project`, `source_context`, and `status: pending`.
-   Note the send in a WRK (the current track).
+   Note the send in a WRK (the current track). A substantive method-feedback signal
+   from a WRK closure (`PV.WorkRecord` W.4) is emitted the same way — one message
+   addressed to the owning skill/author, referencing the WRK id, the rule locus
+   (PatternID / section), and a concrete proposed fix.
 2. **Transfer.** The author manually moves the message into the recipient's `inbox/`
    (or the recipient fetches it), clearing their own `outbox/`. On transfer, set
    `status: sent` if a record is kept, or remove the file.
@@ -99,27 +98,27 @@ durable vault entity (unlike DEC/Q/RISK/CON/TRK).
 
 ### PV.Outbox:10 - Rationale
 
-`C.33` kind discipline: `outbox/` is a separate kind directory and the message is a
-transient kind, distinct from the monotonic-ID entities. `E.11` practical entry: a
-named send-feedback path instead of ad-hoc chat. `C.11` capture fidelity: the
-feedback is written faithfully before it is transferred.
+`A.7` strict distinction: the message is a distinct transient kind, not a monotonic-ID
+entity; `C.33` carrier adequacy: `outbox/` is a separate channel directory. `E.11`
+practical entry: a named send-feedback path instead of ad-hoc chat. `C.2.1` capture
+constitution: the feedback is written faithfully before it is transferred.
 
 ### PV.Outbox:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `C.33` (kind discipline) | Adopt | `outbox/` + the message as a transient kind | Reopen on `C.33` revision |
+| FPF `A.7` (strict distinction) | Adopt | The message as a distinct transient kind | Reopen on `A.7` revision |
+| FPF `C.33` (carrier adequacy) | Adopt | `outbox/` as a separate channel directory | Reopen on `C.33` revision |
 | FPF `E.11` (practical entry) | Adopt | The send-feedback entry path | Reopen on `E.11` revision |
-| FPF `C.11` (capture fidelity) | Adopt | Faithful capture before transfer | Reopen on `C.11` revision |
+| FPF `C.2.1` (capture constitution) | Adopt | Faithful capture before transfer | Reopen on `C.2.1` revision |
 
 Best-known line: a symmetric outgoing channel to `inbox/`. Rejected rival:
 "feedback in the chat only" — rejected as untraceable.
 
 ### PV.Outbox:12 - Relations
 
-- **Builds on:** `C.33` (kind discipline), `E.11` (practical entry), `C.11` (capture fidelity).
-- **Coordinates with:** `A.15.1` (execution).
-- **Applies to:** `PV.Inbox` (transfers into the recipient's `inbox/`), `PV.VaultSchema` (`outbox/` as a directory).
-- **Applied by:** `PV.Init` (creates `outbox/`).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.Outbox:End

@@ -45,8 +45,28 @@ Several usage scenarios — enter per use-case (there is no single linear chain)
 
 `references/` — the canonical source: 10 E.8 pattern bodies + `INDEX.md` +
 `relations.md`. There is no monolith; `SKILL.md` is routing only. Edit
-`references/*.md` directly. The vault schema changes → edit `PV.VaultSchema`. The
-dependency map and source/edition citation — in `references/relations.md`.
+`references/*.md` directly. The vault schema changes → edit `PV.VaultSchema`.
+
+The dependency graph has its single authored home in each card's frontmatter
+`dependencies` (FPF content edges + intra-LPF Specialization). `references/relations.md`
+is the generated readable projection of the intra-LPF Specialization graph only (FPF
+content edges are not repeated there); it is rebuilt by `scripts/build_relations.py`
+(`--check` validates) and never hand-edited. The source/edition citation and refresh
+triggers live in `references/relations.md`.
+
+## Status
+
+All 10 pattern bodies are `status: seed` (first seed; not yet `E.21`-evaluated).
+Readiness mode, declared **collectively** for the package: **`source-faithful`**
+(faithful to FPF + the owner's procedural practice), **not** `case-validated` (no
+heterogeneous cases yet). Publication-form checks (`E.11.PFP` `PFM1`–`PFM12`) are N/A —
+there is no reader-facing publication form for this skill carrier.
+
+## Deployment boundary
+
+The repo's `skill/project-vault/` is the single *editable* carrier; the copy installed
+in the user-level skills directory is a *read-only* deployment, synced only by the
+owner — never by the authoring agent.
 
 ## Guardrails
 
@@ -59,7 +79,11 @@ pattern bodies (the Conformance Checklist of each `references/PV.*.md`).
 
 If the owner is unhappy with a result or refines the process — propose updating this
 skill: its `description`, the routing table, or the body of a `references/*.md`.
-The evolution of the LPF content itself follows `references/PLAS.QualityAndRefresh.md`
-from the `pattern-language-as-agent-skill` skill. Refresh triggers (when to revisit
-this skill — G.11) — in `references/relations.md`; machine frontmatter check before
-trusting the skill — `scripts/check_frontmatter.py`.
+The evolution of the LPF content itself follows `PLAS.QualityAndRefresh` (the
+`pattern-language-as-agent-skill` skill dependency), applied directly to the skill
+form. A substantive method-feedback signal captured at WRK closure (`PV.WorkRecord`
+W.4) is emitted as an outbox proposal (`PV.Outbox`) instead of being lost in the chat.
+Refresh triggers (when to revisit this skill — `G.11`) — in `references/relations.md`;
+before trusting the skill, run the machine frontmatter check
+`scripts/check_frontmatter.py` and the graph check
+`python scripts/build_relations.py --check`.

@@ -2,22 +2,17 @@
 id: PV.ExternalResearch
 title: "External research: two-way binding of reference material to entities"
 status: seed
-readiness: source-faithful
 keywords: [external-research, two-way-binding, signal, reference, orphan]
 dependencies:
   builds_on:
+    - A.10
     - E.4.PFR
-    - C.11
     - G.11
 ---
 
 ## PV.ExternalResearch - External research: two-way binding of reference material to entities
 
 > **Trigger:** When a material is neither a meeting transcript nor dialog news — an independent study (Knowy), a narrativization, an article, a talk, a tutorial — and it must be taken into account in decision-making rather than left as an orphan.
-> **Governing FPF patterns:**
->   → E.4.PFR (recording links between frameworks/entities)
->   → C.11 (fidelity and source reference)
->   → G.11 (freshness/currency of external material)
 > **Skill dependencies:**
 >   → none
 
@@ -44,7 +39,7 @@ entity.
 |---|---|
 | Considered in decisions vs orphan | Two-way binding: a signal in the entity's file + the source in its `sources`/"Related entities". |
 | One vs many entities | Bind to ≥1 reference-bearing entity (Q/RISK/CON/DEC/TRK). |
-| New vs reference | Atomic entities — only if the material introduces a new decision/risk/question/contradiction. |
+| New vs reference | Atomic entities — only if the material introduces a new **strategic/long-lived** decision/risk (or a new question/contradiction); a transient one — as a signal in a long-term entity, no standalone card. |
 | Inside vs outside scope | If the material is outside the scope of all entities — explicitly "not bound — outside the project scope". |
 
 ### PV.ExternalResearch:4 - Solution
@@ -71,7 +66,11 @@ entity.
    a track's "Related entities" → "Sources"/"Artifacts", or to the
    `sources`/`source`/"Related entities" of a fitting Q/RISK/CON/DEC (by topic).
 5. Atomic entities (DEC/Q/RISK/CON) — only if the material introduces a **new**
-   decision/risk/question/contradiction. Purely reference material does not require them.
+   decision/risk/question/contradiction. A **DEC/RISK** — additionally only for a
+   **strategic/long-lived** decision/risk (still relevant in a month/quarter); a
+   transient one → a signal in a long-term DEC/Q/RISK/CON's "Related entities"/
+   "External signals", not a standalone card. Purely reference material does not
+   require them.
 6. If the material is genuinely outside the scope of all entities — explicitly write
    "not bound — outside the project scope" in the capture header (a deliberate decision, not an omission).
 7. On a substantial contribution — check integrity: all created entities are formed
@@ -97,7 +96,7 @@ account.
 | CC-ER.1 | The signal is written into the file of every affected entity (two-way binding). |
 | CC-ER.2 | The source is bound to ≥1 reference-bearing entity. |
 | CC-ER.3 | In the DEC body — only the gist + a readable source name; the source only in the frontmatter. |
-| CC-ER.4 | Atomic entities are created only for a new decision/risk/question/contradiction. |
+| CC-ER.4 | Atomic entities are created only for a new decision/risk/question/contradiction; DEC/RISK — additionally only for a strategic/long-lived one. |
 | CC-ER.5 | Out of scope — an explicit "not bound — outside the project scope" note. |
 
 ### PV.ExternalResearch:8 - Common Anti-Patterns and How to Avoid Them
@@ -107,6 +106,7 @@ account.
 | One-way capture without writing into entities | Append the signals to the entity files. |
 | A capture orphan without a binding | Bind to an entity/track. |
 | A capture/file path in the DEC body | Only the gist + a readable name; the path in the frontmatter. |
+| A standalone DEC/RISK for a transient (one-off/weekly) matter | A signal in a long-term entity; no standalone card. |
 
 ### PV.ExternalResearch:9 - Consequences
 
@@ -116,7 +116,7 @@ explicitly, not silently skipped.
 
 ### PV.ExternalResearch:10 - Rationale
 
-`E.4.PFR` — links are recorded as entries, not implied; `C.11` — a signal with a
+`E.4.PFR` — links are recorded as entries, not implied; `A.10` — a signal with a
 source reference; `G.11` — the currency of external material. Two-way binding is a
 consequence: a signal must be findable from both sides (entity ↔ material).
 
@@ -125,7 +125,7 @@ consequence: a signal must be findable from both sides (entity ↔ material).
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | FPF `E.4.PFR` (link recording) | Adopt | Two-way binding source ↔ entity | Reopen on `E.4.PFR` revision |
-| FPF `C.11` (source reference) | Adopt | Signals with a readable source name | Reopen on `C.11` revision |
+| FPF `A.10` (source reference) | Adopt | Signals with a readable source name | Reopen on `A.10` revision |
 | FPF `G.11` (freshness) | Adopt | Material currency in the binding | Reopen on `G.11` revision |
 
 Best-known line: two-way binding of external material. Rejected rival: "one-way
@@ -133,8 +133,8 @@ capture without signals in the entity" — rejected as incomplete processing.
 
 ### PV.ExternalResearch:12 - Relations
 
-- **Builds on:** `E.4.PFR` (link recording), `C.11` (source), `G.11` (freshness).
-- **Applies to:** `PV.StateUpdate` (new decision/risk from a signal), `PV.VaultSchema` (signals written into entities).
-- **Applied by:** `PV.Inbox` (entry for external material).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.ExternalResearch:End

@@ -2,10 +2,10 @@
 id: PV.VaultSchema
 title: "Markdown-vault entity schema: directories, ID allocation, discovery"
 status: seed
-readiness: source-faithful
 keywords: [schema, entities, directories, id-allocation, discovery, vault.py, carrier, kind]
 dependencies:
   builds_on:
+    - A.7
     - C.33
     - C.2.1
     - E.4.DPF
@@ -18,10 +18,6 @@ dependencies:
 ## PV.VaultSchema - Markdown-vault entity schema: directories, ID allocation, discovery
 
 > **Trigger:** When one needs to understand where an entity lives in the vault, how to allocate its ID, how to find it, or when the vault schema changes (a new entity kind, a new directory, a new carrier).
-> **Governing FPF patterns:**
->   → C.33 (kind discipline: carrier choice and kind distinction)
->   → C.2.1 (edition identity, independent of the carrier)
->   → E.4.DPF (layering D5: a package-carrier returning to the authoritative subject)
 > **Skill dependencies:**
 >   → none (the schema is the LPF's own field)
 
@@ -156,8 +152,9 @@ the decision about the LPF itself.
 
 ### PV.VaultSchema:10 - Rationale
 
-Top-level kind directories implement the kind discipline of `C.33`: the carrier
-(`project-vault/`) — an access-facing carrier, the edition (`C.2.1`) — an identity
+Top-level kind directories implement the kind discipline of `A.7` (a schema kind is
+distinct from its carrier); the carrier (`project-vault/`) — an access-facing carrier
+returning to the authoritative subject (`C.33`), the edition (`C.2.1`) — an identity
 recoverable from the atomic files, independent of a concrete carrier. Rejecting
 manual indexes is a consequence of `E.4.DPF:4` (proportionality): more files do not
 make a framework more mature.
@@ -166,7 +163,8 @@ make a framework more mature.
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `C.33` (kind discipline, carrier vs edition) | Adopt | Canonical carrier — `project-vault/`; the edition is recovered from atomic files | Reopen on `C.33` revision |
+| FPF `A.7` (strict distinction) | Adopt | Entity kinds are atomic and distinct; no hand-maintained index kind | Reopen on `A.7` revision |
+| FPF `C.33` (carrier adequacy, carrier vs edition) | Adopt | Canonical carrier — `project-vault/`; the edition is recovered from atomic files | Reopen on `C.33` revision |
 | FPF `F.14` (anti name/ID explosion) | Adopt | One ID per entity, no alias registries | Reopen on `F.14` revision |
 | Obsidian-style "one file per entity + query" | Adapt | Atomic files + `grep`/`SocratiCode` instead of dataview queries | Reopen on a search-tool change |
 
@@ -175,8 +173,8 @@ hand-written registry in every catalog" — rejected due to desynchronization.
 
 ### PV.VaultSchema:12 - Relations
 
-- **Builds on:** `C.33` (carrier vs edition), `C.2.1` (edition identity), `E.4.DPF` (layering D5).
-- **Coordinates with:** `F.14` (anti ID explosion), `F.18` (naming), `C.32.ADR` (decision cards — one of the kinds).
-- **Applied by:** `PV.StateUpdate` (entity creation), `PV.ExternalResearch` (signals into entities), `PV.Track` (tracks as entities), `PV.WorkRecord` (WRKs as entities), `PV.Report` (the `reports/` directory), `PV.Init` (reproduces the schema from the scaffold), `PV.Outbox` (the `outbox/` directory).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.VaultSchema:End

@@ -12,20 +12,13 @@ dependencies:
   coordinates_with:
     - E.4.DPF.DA
     - E.11.PFP
-  specialized_by:
-    - PLAS.Dispatcher
-    - PLAS.PatternBody
-    - PLAS.SelfSufficient
+  specializes:
+    - PLAS.EntryRoute
 ---
 
 ## PLAS.SkillLayout - Canonical directory layout of a DPF-skill (single surface, no monolith, no reader-facing form)
 
 > **Trigger:** When scaffolding a new DPF-skill directory, reorganizing an existing one, or deciding whether the skill is the single source of truth versus a projection of a separate document.
-> **Governing FPF patterns:**
->   → E.4.DPF
->   → C.33
->   → C.2.1
->   → E.24.PUB
 > **Skill dependencies:**
 >   → create-agent-skill (skill anatomy)
 
@@ -47,10 +40,12 @@ carrier into the edition (`C.33`), mirroring an external standard without pinnin
 it, dropping a source attachment during conversion, treating version history
 as authoring residue, or an authoring agent editing the installed copy in the
 user-level skills directory instead of the repo carrier, silently forking the
-deployed surface from the single surface. The layout must keep the
+deployed surface from the single surface, or repeating the FPF dependency cue list
+in a card body instead of leaving it to the frontmatter. The layout must keep the
 dispatcher routing-only, the pattern bodies atomic, the edition/carrier
-distinction explicit, and the one dependency graph consistent across its three
-views.
+distinction explicit, and the one dependency graph authored in exactly one place
+(frontmatter), with `:12` a pointer, no cue block in the body, and `relations.md`
+generated.
 
 ### PLAS.SkillLayout:3 - Forces
 
@@ -62,7 +57,7 @@ views.
 | Edition vs carrier | The skill directory is the access-facing carrier; the edition is the `C.2.1` episteme recoverable from `references/`, not from the carrier. |
 | Single surface vs reader-facing form | No reader-facing `E.11.PFP` form while there is no cold reader; if a reader emerges, it is a separate `E.24.PUB` projection. |
 | External source vs projection | An external published standard is canonical; the skill is its derived representation, with a pin record + edition-tied refresh. |
-| Three graph views vs drift | Frontmatter (machine), `:12` (human), `relations.md` (canonical map) — one graph, agreed direction. |
+| Single graph home vs drift | Frontmatter `dependencies` is the *single authored home* of the graph; `:12` is a pointer, card bodies repeat no cue block, and `relations.md` is generated — no hand-maintained duplication. |
 | Repo carrier vs installed copy | The repo skill dir is the single *editable* surface; the installed copy in the user-level skills dir is a *read-only* deployment, synced only by the owner. |
 
 ### PLAS.SkillLayout:4 - Solution
@@ -72,7 +67,7 @@ views.
 ├── SKILL.md          # dispatcher: frontmatter (name + description) + routing table
 ├── references/       # canonical E.8 pattern bodies, one per file
 │   ├── INDEX.md      # one logical pattern index
-│   └── relations.md  # canonical home: source/edition citation + dependency graph
+│   └── relations.md  # GENERATED: source/edition citation + frontmatter-derived graph
 ├── assets/           # OPTIONAL: heavy resources only; NEVER a monolith
 ├── scripts/          # OPTIONAL: validators/helpers
 ├── templates/        # OPTIONAL: output skeletons
@@ -82,16 +77,22 @@ views.
 
 1. **`SKILL.md`** is routing-only (see `PLAS.Dispatcher`).
 2. **`references/`** holds the canonical bodies (see `PLAS.PatternBody`), plus
-   `INDEX.md` (one logical index) and `relations.md`. Both `SKILL.md` and
-   `references/*.md` are edited directly; there is no monolith and no "generated →
-   do not edit" derived copy. `relations.md` is the **canonical home** for the
-   source/edition/dependency citation and the dependency graph; `SKILL.md` carries
-   only a one-line pointer to it.
+   `INDEX.md` (one logical index) and `relations.md`. `SKILL.md` and `references/*.md`
+   are edited directly; `relations.md` is a **generated** projection of the frontmatter
+   graph (`scripts/build_relations.py`), never hand-edited. Its maintained part is the
+   source/edition citation; its graph block is generated. `SKILL.md` carries only a
+   one-line pointer to it.
 3. **`assets/`** is for logos/data/sample payloads, never a framework monolith.
    **Preserve source attachments:** an artifact the source embeds or references
    (dashboard JSON, sample payload, schema) must be saved under `assets/`, not
    dropped during conversion. Do not discard an example just because it has no
-   immediate place in a body.
+   immediate place in a body. **Embedded draw.io diagrams:** a draw.io `<svg>` of the
+   form `<svg data-type="preview" ... content="&lt;mxfile…"` is not a picture but a
+   wrapper — the diagram lives, HTML-escaped, in the `content` attribute. Recover it:
+   extract `content`, unescape exactly once → mxfile XML, check well-formed, save in
+   `assets/` as `<semantic-base>.drawio`. Do **not** keep the wrapper `<svg>` (its
+   `<foreignObject>` body is non-XHTML and opens in no tool) and do **not** regenerate
+   SVG/PNG without an explicit owner request.
 4. **`scripts/`** and **`templates/`** are added only when there is a real
    validation or output task; empty scaffolding is not added for completeness
    (`E.4.DPF:4`).
@@ -118,14 +119,21 @@ views.
    "the standard". Declare a pin record (URL + edition + status) in `relations.md`
    and tie refresh to the source's edition, not to internal signals. `SKILL.md`
    states "this skill is a representation, not the standard" in one line.
-10. **One dependency graph, three views, two namespaces.** FPF-dependency lives in
-    the card frontmatter `dependencies` (`builds_on`, `coordinates_with` — FPF
-    codes) and mirrors in `:12 Relations` (human-readable); LPF-specialization lives
-    in `specialized_by` (local codes) and mirrors in `:12` as `Specialized by (LPF)`.
-    `relations.md` (the canonical map) holds the intra-LPF graph only — never FPF
-    edges. All views must agree in membership and direction; change one → change all.
-    `relations.md` fixes the edge direction (e.g. `builds_on` as "dependent → what it
-    builds on") with unambiguous column headers.
+10. **One dependency graph; frontmatter is its single home.** Every edge lives in the
+    card frontmatter `dependencies`, and nowhere else: FPF content edges
+    `builds_on`/`coordinates_with` (FPF codes) and Specialization `specializes`
+    (local/DPF codes — the parents this card narrows, authored on the **child** side;
+    the inverse `specialized_by` is derived in `relations.md`, never authored).
+    Relation functions come from FPF `E.4.PFR:3.3` — never invent
+    one (`governs` / `applies-to` / `*all cards*` is **not** an edge, it is a content
+    fact written as prose; no governor/owner relation exists). `:12 Relations` carries
+    only a **one-line pointer** to the frontmatter and does **not** repeat the edges
+    (no duplication). `relations.md` is a **generated** readable projection of the
+    intra-LPF graph, rebuilt by `scripts/build_relations.py` (`--check` validates), and
+    is never hand-edited — one authored home, derived views (`E.4.PFR:3.2`). This
+    specialization key is a local extension of fpf-core's frontmatter (which
+    carries only `builds_on`/`coordinates_with`); the Specialization semantics still
+    trace to `E.4.PFR:3.3`.
 11. **`scaffold/` is an optional carrier-reproduction kit.** When a skill reproduces
     a working directory at init (e.g. a vault scaffold for an init entry path,
     `E.4.DPF` layering D5), it may carry a `scaffold/` directory: the target
@@ -134,14 +142,16 @@ views.
     self-reproduction kit — and it is added only when there is a real init task, not
     for completeness (`E.4.DPF:4`).
 12. **Deployment boundary (repo carrier vs installed copy).** The repo's skill
-    directory is the single *editable* surface. The user-level skills directory
-    (`~/.agents/skills/`, or the platform's equivalent) is a *read-only* deployment
-    projection: the authoring agent may read it for reference but must never create,
-    edit, or delete anything there. Syncing the repo carrier into the user-level
-    directory is an **owner-owned move** — the owner performs it, never the authoring
-    agent. This is the single-surface discipline extended across the deployment hop:
-    exactly one editable surface, one owner of the sync, no fork/drift between repo
-    and installed copy.
+    directory — authored at `<project>/skill/<skill-name>/` (the authoring carrier) —
+    is the single *editable* surface; authoring writes only there, never into the
+    runtime install directory. The user-level skills directory (`~/.agents/skills/`,
+    or the platform's equivalent) is a *read-only* deployment projection: the
+    authoring agent may read it for reference but must never create, edit, or delete
+    anything there. Syncing the repo carrier into the user-level directory is an
+    **owner-owned move** — the owner performs it, never the authoring agent. This is
+    the single-surface discipline extended across the deployment hop: exactly one
+    editable surface, one owner of the sync, no fork/drift between repo and installed
+    copy.
 
 ### PLAS.SkillLayout:5 - Archetypal Grounding
 
@@ -169,9 +179,9 @@ edition/carrier wording are the two counterweights.
 | CC-SL.4 | `INDEX.md` lists every pattern body exactly once. |
 | CC-SL.5 | Edition and carrier stay distinct: the skill is the access-facing carrier bearing the edition, not the edition itself. |
 | CC-SL.6 | Authoring residue (DRR, review notes, draft, ledger) is outside the skill; version history (CHANGELOG) is not authoring residue and is optional. |
-| CC-SL.7 | `relations.md` is the canonical home for the source/edition/dependency citation and the dependency graph; its column headers fix the edge direction. |
+| CC-SL.7 | The dependency graph has one authored home — frontmatter `dependencies` (`builds_on`/`coordinates_with` FPF codes; `specializes` local code, child-side, `specialized_by` derived); `:12` is a one-line pointer; card bodies carry no FPF cue block; `relations.md` is generated and never hand-edited. |
 | CC-SL.8 | An external-standard DPF declares a pin record (URL + edition + status) and edition-tied refresh; it is stated to be a representation, not the standard. |
-| CC-SL.9 | A source attachment the standard references (dashboard JSON, sample payload, schema) is preserved under `assets/`, not dropped. |
+| CC-SL.9 | A source attachment (dashboard JSON, sample payload, schema) is preserved under `assets/`, not dropped; an embedded draw.io `<svg>` is recovered from its `content` attribute and saved **only** as `.drawio` (wrapper not kept, SVG/PNG not regenerated). |
 | CC-SL.10 | `scaffold/` is used only for a real init/reproduction task (dir tree + templates + scripts copy), not as empty scaffolding. |
 | CC-SL.11 | The authoring agent never edits the installed copy in the user-level skills directory; the sync to it is owner-owned and stated as such. |
 
@@ -185,9 +195,12 @@ edition/carrier wording are the two counterweights.
 | "Skill is the edition" collapses carrier into edition | Say "access-facing carrier bearing the edition"; keep `C.2.1` identity recoverable from `references/`. |
 | Generated publication form drifted from references | Remove the form, or mark it a separate `E.24.PUB` projection with its own check. |
 | Source/edition citation duplicated across files | Keep it once in `relations.md`; other files point to it. |
+| Graph edges duplicated in frontmatter and `:12` | Keep edges only in frontmatter; `:12` is a pointer; generate `relations.md`. |
+| `Governing FPF patterns` cue block repeated in a card body | Remove it; FPF cues live only in the frontmatter `dependencies`. |
 | External standard without a pin record | Pin URL + edition + status in `relations.md`; refresh on edition. |
 | CHANGELOG treated as authoring residue | Classify as version history; not required, but allowed inside. |
 | Source attachment dropped during conversion | Preserve it under `assets/`; do not drop referenced examples. |
+| Embedded draw.io-SVG kept as-is (unreadable wrapper) | Recover the mxfile from the `content` attribute; save only `.drawio` in `assets/`; drop the wrapper; do not regenerate SVG/PNG. |
 | Empty `scaffold/` added for completeness | Add it only for a real init/reproduction task. |
 | Editing the installed copy in the user-level skills dir | Sync is owner-owned; the authoring agent works only on the repo carrier. |
 
@@ -223,8 +236,8 @@ Best-known line: single-surface skill anatomy. Rejected rival: "monolith + deriv
 
 ### PLAS.SkillLayout:12 - Relations
 
-- **Builds on (FPF):** `E.4.DPF` (carrier assembly, edition/carrier/form separation), `C.33` (carrier vs. overread), `C.2.1` (edition identity), `E.24.PUB` (publication is a separate later relation).
-- **Coordinates with (FPF):** `E.4.DPF.DA` (package adequacy, D5 layering), `E.11.PFP` (reader-facing form out of scope while no cold reader).
-- **Specialized by (LPF):** `PLAS.Dispatcher`, `PLAS.PatternBody`, `PLAS.SelfSufficient`.
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PLAS.SkillLayout:End

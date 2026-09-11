@@ -1,14 +1,22 @@
 # Project Vault — Relation Records
 
-> **Canonical home.** This file is the canonical home for the source/edition/
-> dependency citation and the dependency graph. The same graph appears in three
-> views — each card's frontmatter `dependencies` (machine-readable), each card's
-> `:12 Relations` (human-readable), and this file (the global map). All three must
-> agree in membership and edge direction; change one → change all three.
+> **Generated projection — do not hand-edit the graph block.** The graph has a single
+> authored home: each card's frontmatter `dependencies` — FPF content edges
+> (`builds_on`/`coordinates_with`) and local Specialization (`specializes`, authored on
+> the **child** side; the inverse `specialized_by` is derived here and is never
+> authored). This file is the derived, readable map of the **intra-LPF Specialization
+> graph only**; FPF content edges are **not** repeated here — they live only in the
+> frontmatter. Rebuilt by `scripts/build_relations.py` (`E.4.PFR:3.2`: derived views
+> cite one assertion and are never maintained independently). Run
+> `python scripts/build_relations.py` after changing frontmatter; `--check` fails on
+> drift. Cards' `:12 Relations` carry only a pointer to the frontmatter.
 >
-> **Edge direction.** A row reads `From → To` = "From depends on / is placed by /
-> applies to To". A `builds_on` edge is written as "dependent pattern → what it
-> builds on". SKILL.md carries only a one-line pointer here.
+> **Relation functions (canon).** Edges use only `E.4.PFR:3.3` functions:
+> `builds_on`, `coordinates_with`, `specializes`/`specialized_by`. `governs` /
+> `applies-to` / `→ *all cards*` is **not** an edge — it is a content fact written as
+> prose, not a graph row.
+>
+> **Direction.** `specializes` = child (narrower) → parent.
 
 ## Source / edition citation
 
@@ -24,9 +32,8 @@
 - **Dependency chain (unidirectional, `E.5.3`):** `project-vault` → `FPF` → (nothing).
   `create-agent-skill` — a skill dependency on carrier mechanics, not an FPF pattern.
   `pdf2md` — a skill dependency of `PV.Inbox` (PDF conversion).
-- **Readiness:** all 10 patterns are `status: seed`, readiness mode `source-faithful`
-  (faithful to the approved source — FPF + the owner's procedural practice);
-  not `case-validated`.
+- **Readiness:** all 10 patterns are `status: seed`; readiness mode `source-faithful`
+  (not `case-validated`), declared collectively in `SKILL.md`.
 - **Publication-form checks:** `E.11.PFP` `PFM1`–`PFM12` are N/A — there is no
   reader-facing publication form for this skill carrier.
 
@@ -35,8 +42,9 @@
 Revisit this skill (reopen → refresh per `G.11`) on any of the following:
 
 1. **Source change** (`E.4.PFR`, G.11 `EditionPinChange`): a revision of the FPF Core
-   patterns that the governing-cues build on (`E.8`, `E.9`, `C.32.ADR`,
-   `C.33`, `C.2.1`, `A.15.1`, `A.15.2`, `G.11`, `F.14`, `F.18`).
+   patterns that the cards' frontmatter `dependencies` build on (`A.7`, `A.10`,
+   `A.15.1`, `A.15.2`, `C.2.1`, `C.32.ADR`, `C.33`, `E.9`, `F.14`, `F.18`,
+   `G.11`).
 2. **Vault schema change** (the field boundary of the practice): a new entity kind,
    a new directory, a new carrier or search tool → edit `PV.VaultSchema` and the
    affected neighbouring bodies.
@@ -44,32 +52,25 @@ Revisit this skill (reopen → refresh per `G.11`) on any of the following:
    changes conformance requirements (E.8 sections, EntryRoute, carrier mechanics).
 4. **Local-use telemetry** (G.11 `TelemetryDelta`): the owner reports that the skill
    misfired, is ambiguous, or a weak model (`create-agent-skill` weak-model gate)
-   does not follow the steps without invention.
+   does not follow the steps without invention — including a substantive
+   method-feedback signal emitted from WRK closure (see `PV.WorkRecord` W.4).
 5. **Carrier-mechanics change** (`create-agent-skill`): atomicity, layout, or
    single-surface agreements change.
 
 Minimal revisit route: `E.4.DPF.DA` D1–D12 + `E.21` for the affected bodies
-+ a run of `scripts/check_frontmatter.py` — without a full "tsar-track" rebuild.
++ `scripts/check_frontmatter.py` + `scripts/build_relations.py --check` — without a
+full "tsar-track" rebuild.
 
-## Dependency graph
+## Relation graph
 
-| From (→) | To | Relation function |
+<!-- BEGIN GENERATED GRAPH -->
+### Specialization — authored (`specializes`, child → parent)
+
+| From (child) | Relation | To (parent) |
 |---|---|---|
-| `PV.Inbox` | `PV.StateUpdate` | Inbox routes transcripts/meeting protocols to state update |
-| `PV.Inbox` | `PV.ExternalResearch` | Inbox routes external research to two-way binding |
-| `PV.Inbox` | `PV.Track` | Inbox files valuable artifacts into tracks |
-| `PV.StateUpdate` | `PV.VaultSchema` | Entity creation and ID allocation follow the schema |
-| `PV.StateUpdate` | `PV.Track` | Operational signals from a source open/change tracks |
-| `PV.ExternalResearch` | `PV.StateUpdate` | An external signal may require a new decision/risk |
-| `PV.ExternalResearch` | `PV.VaultSchema` | Signals are written into vault entities |
-| `PV.Track` | `PV.VaultSchema` | Tracks are vault entities with an auto-index |
-| `PV.Artifact` | `PV.Track` | An artifact is created bound to a track |
-| `PV.WorkRecord` | `PV.Track` | A WRK captures a step within a track |
-| `PV.WorkRecord` | `PV.VaultSchema` | WRKs are `work/` entities with an auto-index |
-| `PV.Report` | `PV.StateUpdate` | The agenda takes `proposed`/`deferred` decision slots |
-| `PV.Report` | `PV.VaultSchema` | A report is a derived summary in `reports/` |
-| `PV.Outbox` | `PV.Inbox` | Outbox messages transfer into the recipient's inbox |
-| `PV.Outbox` | `PV.VaultSchema` | `outbox/` is a channel directory with a transient message kind |
-| `PV.Init` | `PV.VaultSchema` | Init reproduces the schema from the scaffold |
-| `PV.Init` | `PV.Inbox` | Init creates `inbox/` at the repository root |
-| `PV.Init` | `PV.Outbox` | Init creates `outbox/` at the repository root |
+
+### Specialization — derived inverse (`specialized_by`, parent → child)
+
+| From (parent) | Relation | To (child) |
+|---|---|---|
+<!-- END GENERATED GRAPH -->

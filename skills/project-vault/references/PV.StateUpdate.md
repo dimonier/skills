@@ -2,13 +2,12 @@
 id: PV.StateUpdate
 title: "State update from a source: DEC/Q/RISK/CON from a transcript or dialogue"
 status: seed
-readiness: source-faithful
 keywords: [state-update, transcript, dialogue, decision, DEC, ADR, question, risk, contradiction]
 dependencies:
   builds_on:
+    - A.10
     - C.32.ADR
     - E.9
-    - C.11
   coordinates_with:
     - C.18
     - C.19
@@ -17,10 +16,6 @@ dependencies:
 ## PV.StateUpdate - State update from a source: DEC/Q/RISK/CON from a transcript or dialogue
 
 > **Trigger:** When a new state source appears — a meeting transcript (Input 1) or dialog news without a transcript (Input 2) — and the vault must be brought in line.
-> **Governing FPF patterns:**
->   → C.32.ADR (decision-record discipline: problem frame → outcome → consequences → confirmation/supersession)
->   → E.9 (DRR: one bounded decision, input filter)
->   → C.11 (any new claim — with a reference to the source)
 > **Skill dependencies:**
 >   → none
 
@@ -48,6 +43,7 @@ the decision canon clogs with junk entries.
 | Completeness vs verifiability | Record only what is verifiable from the source; decision/question/risk formulations — only in atomic files. |
 | Accepted vs proposed | `accepted` — only on explicit approval in the source; otherwise `proposed` + "pending owner confirmation". |
 | Choice vs paraphrase | DEC — only for a bounded architectural choice with consequences; editorial/summary — as context in the capture header, no DEC. |
+| Strategic vs transient | DEC/RISK — only for a decision/risk a future architect can rely on in a month/quarter; a weekly/one-off, event-bound decision/risk — as context in the capture header or a signal in a long-term entity's "Related entities"/"External signals", no standalone card. |
 | One vs several | One decision = one DEC; independent topics are not merged. |
 
 ### PV.StateUpdate:4 - Solution
@@ -71,6 +67,12 @@ the decision canon clogs with junk entries.
      working document, an editorial choice, a repetition of an already recorded
      position, or a summary without a choice → record as context in the capture
      header, do not create a DEC.
+   - **Transient decisions/risks (horizon filter):** a decision or risk tied to a
+     one-off/weekly event (e.g. a one-time demo, a one-time deadline) that goes stale
+     within ~a week → **not** a standalone DEC/RISK; file it as context in the capture
+     header or as a signal in the "Related entities"/"External signals" of the
+     long-term card it concerns. Check before creating: "will this still be relevant
+     in a month/quarter?"
    - **Fill all sections** of the template; do not invent what is absent — write
      "not discussed" / "unknown" / "not applicable".
    - `decision_type` — one of `adr | org | strategy | scope | process | procurement | product`;
@@ -100,8 +102,12 @@ the decision canon clogs with junk entries.
 
 1. Creation/closure of atomic entities (DEC, Q, RISK, CON) — the file is created;
    closed ones stay in place with a `status` (no `archive/`).
-2. New external blockers → an atomic `risks/RISK-NNNN.md` (external, blocking);
-   if the blocker spans several entities — also a track with `status: blocked`.
+2. New external blockers → an atomic `risks/RISK-NNNN.md` (external, blocking) —
+   only for a **strategic/long-lived** risk (still relevant in a month/quarter). A
+   transient risk tied to a one-off/weekly event → context in the capture header or a
+   signal in a long-term RISK/DEC/Q ("Related entities"/"External signals"), no
+   standalone card. If the blocker spans several entities — also a track with
+   `status: blocked`.
 3. New regulatory/architectural constraints → update `project-vault/state/constraints.md`.
 4. **Track maintenance:** the source introduces an operational signal, changes a
    track's status, or closes it:
@@ -149,6 +155,7 @@ sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
 | CC-SU.4 | A DEC is created only after the input filter (bounded architectural choice). |
 | CC-SU.5 | The DEC body carries only the DEC-ID and a web-URL; other references (source paths, entity IDs) — in the frontmatter. This applies to every body section, including "Внешние сигналы" (External signals) and "История пересмотров" (Revision history): in a signal's text only a verbal source name is allowed (e.g. "owner review 2026-09-08"); a path/ID goes to the frontmatter (`sources` for a path, `references` / `related_decisions` for entity IDs). |
 | CC-SU.6 | A decision change = edit the card + "Revision history", not a duplicate. |
+| CC-SU.7 | DEC/RISK is created only for a strategic/long-lived decision/risk; a weekly/one-off one is filed as capture context or a signal in a long-term card, not as a standalone card. |
 
 ### PV.StateUpdate:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -159,6 +166,7 @@ sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
 | Duplicate DEC on a decision change | Edit the same card + "Revision history". |
 | A capture/artifact reference in the DEC body | Only DEC-ID and URL; the rest in the frontmatter. |
 | An inline source path or entity ID in the DEC body (incl. "Внешние сигналы"/"История пересмотров") | Verbal source name in the text; path/ID to the frontmatter (`sources`/`references`). |
+| A standalone DEC/RISK for a one-off/weekly event | Context in the capture header or a signal in a long-term card; no standalone card. |
 
 ### PV.StateUpdate:9 - Consequences
 
@@ -170,7 +178,8 @@ A decision change means an edit with a revision history, not a new file.
 
 `C.32.ADR` requires problem frame → outcome → consequences → confirmation/supersession;
 `E.9` holds a DRR as one bounded decision with an input filter ("cheap stop" for
-editorial edits). `C.11` — any claim with a reference. Hence — accepted/proposed,
+editorial edits) — the same filter yields the strategic-vs-transient horizon, applied
+to both DEC and RISK. `A.10` — any claim with a reference to its source. Hence — accepted/proposed,
 the DEC input filter, and "do not invent".
 
 ### PV.StateUpdate:11 - SoTA-Echoing
@@ -178,17 +187,16 @@ the DEC input filter, and "do not invent".
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | FPF `C.32.ADR` (ADR record) | Adopt | DEC template sections, `accepted` only explicitly | Reopen on `C.32.ADR` revision |
-| FPF `E.9` (DRR, one bounded decision) | Adopt | DEC input filter, "one topic — one card" | Reopen on `E.9` revision |
-| FPF `C.11` (source reference) | Adopt | Guardrail "any claim — with a reference" | Reopen on `C.11` revision |
+| FPF `E.9` (DRR, one bounded decision) | Adopt | DEC input filter + the DEC/RISK horizon filter, "one topic — one card" | Reopen on `E.9` revision |
+| FPF `A.10` (source reference) | Adopt | Guardrail "any claim — with a reference" | Reopen on `A.10` revision |
 
 Best-known line: ADR discipline with an input filter. Rejected rival: "recording
 every statement as a decision" — rejected as canon clutter.
 
 ### PV.StateUpdate:12 - Relations
 
-- **Builds on:** `C.32.ADR` (decision records), `E.9` (DRR), `C.11` (source).
-- **Coordinates with:** `C.18`/`C.19` (probes/comparison).
-- **Applies to:** `PV.VaultSchema` (entity creation/ID allocation), `PV.Track` (operational signals open/change tracks).
-- **Applied by:** `PV.Inbox` (routes transcripts), `PV.ExternalResearch` (external signals requiring new entities), `PV.Report` (closing `proposed`/`deferred` slots).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.StateUpdate:End

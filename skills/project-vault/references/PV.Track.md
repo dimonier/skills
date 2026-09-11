@@ -2,7 +2,6 @@
 id: PV.Track
 title: "Track as the mandatory container for productive work: lifecycle, statuses, continuation"
 status: seed
-readiness: source-faithful
 keywords: [track, lifecycle, status, problem-card, track-bound, work-plan]
 dependencies:
   builds_on:
@@ -11,19 +10,11 @@ dependencies:
     - A.15.1
     - A.15.2
     - E.23
-  coordinates_with:
-    - E.9.DA
 ---
 
 ## PV.Track - Track as the mandatory container for productive work: lifecycle, statuses, continuation
 
 > **Trigger:** When a request for productive activity arrives (research, analysis, synthesis, architecture work, writing an artifact), or when a track must be continued/created/closed.
-> **Governing FPF patterns:**
->   → C.22.2 (ProblemCard@Context — problem, context, scope cut)
->   → G.5 (method choice)
->   → A.15.1 (work execution)
->   → A.15.2 (work plan)
->   → E.23 (quality improvement cycle)
 > **Skill dependencies:**
 >   → none
 
@@ -173,9 +164,8 @@ rival: "work without a track / a track for every entity" — rejected.
 
 ### PV.Track:12 - Relations
 
-- **Builds on:** `C.22.2` (ProblemCard), `G.5` (method), `A.15.1` (execution), `A.15.2` (plan), `E.23` (evaluation).
-- **Coordinates with:** `E.9.DA` (decision evaluation).
-- **Applies to:** `PV.VaultSchema` (tracks as vault entities).
-- **Applied by:** `PV.Inbox` (files artifacts into tracks), `PV.StateUpdate` (signals open/change tracks), `PV.Artifact` (artifacts bound to a track), `PV.WorkRecord` (WRKs capture steps in a track).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.Track:End

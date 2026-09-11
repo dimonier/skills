@@ -3,12 +3,16 @@ id: PLAS.SelfSufficient
 title: "Authoring a DPF-skill with no FPF dependency (self-sufficient variant)"
 status: seed
 keywords: [self-sufficient, no-fpf, boundary-statement, inline-semantics, readiness-mode]
+dependencies:
+  specializes:
+    - PLAS.EntryRoute
+    - PLAS.SkillLayout
 ---
 
 ## PLAS.SelfSufficient - Authoring a DPF-skill with no FPF dependency (self-sufficient variant)
 
 > **Trigger:** When the authoring scenario fixed in `PLAS.EntryRoute` selects `self-sufficient`: a DPF-skill that must carry no external dependency of the FPF kind.
-> **Governing FPF patterns:** none by design — this variant deliberately carries no FPF governing cues (the self-sufficiency boundary).
+> **Self-sufficiency boundary:** this variant deliberately carries no FPF governing cues.
 > **Skill dependencies:**
 >   → create-agent-skill (skill carrier mechanics — the governing frame in place of FPF)
 
@@ -45,18 +49,19 @@ so they drift and balloon — the exact failure observed in `sfera-std-tracing`.
    (a) that the skill carries no FPF dependency and no FPF governing cues, and
    (b) its one source of truth — an approved external document, or "none / from
    scratch" for a language opened independently. This statement lives in `SKILL.md`
-   and replaces the governing-cue block.
+   in place of any FPF-dependency record.
 2. **Inline section semantics compactly.** With no FPF to reference, state the
    canonical sections and their meaning as a one-line-per-section list in
    `SKILL.md` — not a full 12-line `E.8` table. The reader needs enough to author
    and load bodies, nothing more.
 3. **Reuse the two readiness modes.** Follow `PLAS.PatternBody`'s `source-faithful`
    vs `case-validated` distinction, but ground it on the declared source rather
-   than `E.21`; `status` always names its mode.
+   than `E.21`; the mode is declared in `SKILL.md`, and a card's `status` names only
+   the level (`seed`/`stable`).
 4. **Record dependencies without FPF.** `builds_on`/`coordinates_with` name only
    the skills/documents this DPF actually depends on (the source standard, other
    self-sufficient skills); no FPF pattern IDs. A `Skill dependencies` block
-   (`create-agent-skill`, etc.) takes the place of the governing-cue block.
+   (`create-agent-skill`, etc.) takes the place of FPF dependencies.
 5. **Keep the carrier-independent cards.** `PLAS.SkillLayout`, `PLAS.Dispatcher`,
    and `PLAS.PatternBody` still govern the rules that do not require FPF
    (routing-only `SKILL.md`, one body per file, YAML-safe description, readiness
@@ -128,6 +133,9 @@ rival: "silently re-cite FPF while claiming self-sufficiency" — dropped.
 
 ### PLAS.SelfSufficient:12 - Relations
 
-- **Specializes (LPF):** `PLAS.EntryRoute` (self-sufficient scope of the entry route), `PLAS.SkillLayout` (self-sufficient layout variant).
+This card carries no FPF content edges by design (self-sufficiency boundary). Its
+Specialization edges (it narrows `PLAS.EntryRoute` and `PLAS.SkillLayout`) have their
+single authored home in this card's own frontmatter `dependencies.specializes`; the
+readable intra-LPF map is generated in `references/relations.md`.
 
 ### PLAS.SelfSufficient:End

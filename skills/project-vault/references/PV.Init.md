@@ -2,7 +2,6 @@
 id: PV.Init
 title: "Vault initialization: scaffold copy, inbox/outbox creation"
 status: seed
-readiness: source-faithful
 keywords: [init, initialize, scaffold, bootstrap, setup, vault.py, inbox, outbox]
 dependencies:
   builds_on:
@@ -15,9 +14,6 @@ dependencies:
 ## PV.Init - Vault initialization: scaffold copy, inbox/outbox creation
 
 > **Trigger:** When a new repository needs a project-vault, or when the scaffold of the skill must be (re)generated after a schema change.
-> **Governing FPF patterns:**
->   → C.33 (kind discipline: the scaffold as a carrier template reproducing the schema)
->   → E.4.DPF (layering D5: a package-carrier returning to the authoritative subject)
 > **Skill dependencies:**
 >   → none
 
@@ -102,7 +98,7 @@ changes (edited directly, never derived from a live vault).
 
 ### PV.Init:10 - Rationale
 
-`C.33` kind discipline: the scaffold is a carrier template reproducing the schema of
+`C.33` carrier adequacy: the scaffold is a carrier template reproducing the schema of
 `PV.VaultSchema`. `E.4.DPF` layering D5: the scaffold is an access-facing package
 returning to the authoritative subject (the schema).
 
@@ -110,7 +106,7 @@ returning to the authoritative subject (the schema).
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| FPF `C.33` (kind discipline) | Adopt | Scaffold as a carrier template | Reopen on `C.33` revision |
+| FPF `C.33` (carrier adequacy) | Adopt | Scaffold as a carrier template | Reopen on `C.33` revision |
 | FPF `E.4.DPF` (layering D5) | Adopt | Scaffold package → authoritative schema | Reopen on `E.4.DPF` revision |
 
 Best-known line: a reproducible, scaffold-driven init. Rejected rival: "hand-built
@@ -118,8 +114,8 @@ directory tree per repository" — rejected due to drift.
 
 ### PV.Init:12 - Relations
 
-- **Builds on:** `C.33` (kind discipline), `E.4.DPF` (layering D5).
-- **Coordinates with:** `E.11` (practical entry).
-- **Applies to:** `PV.VaultSchema` (the schema it reproduces), `PV.Inbox` (creates `inbox/`), `PV.Outbox` (creates `outbox/`).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.Init:End

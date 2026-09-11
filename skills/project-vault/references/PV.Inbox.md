@@ -2,12 +2,11 @@
 id: PV.Inbox
 title: "Intake: inbox procedure, PDF preprocessing, routing"
 status: seed
-readiness: source-faithful
 keywords: [inbox, intake, pdf, preprocess, routing, capture]
 dependencies:
   builds_on:
+    - C.2.1
     - E.11
-    - C.11
   coordinates_with:
     - A.15.1
 ---
@@ -15,9 +14,6 @@ dependencies:
 ## PV.Inbox - Intake: inbox procedure, PDF preprocessing, routing
 
 > **Trigger:** When the owner asks to "process the inbox" (or similar), or when new sources (transcripts, PDFs, articles, research) have appeared in `inbox/`.
-> **Governing FPF patterns:**
->   → E.11 (practical entry: named entry-paths)
->   → C.11 (fidelity of the source capture)
 > **Skill dependencies:**
 >   → pdf2md (PDF to Markdown conversion)
 
@@ -43,12 +39,19 @@ processing.
 |---|---|
 | Mixed formats vs one process | Routing by material type: transcript → StateUpdate, research → ExternalResearch, work → Track. |
 | PDF fidelity vs direct analysis | Convert PDF to Markdown (pdf2md); analyse only the conversion. |
-| Completeness vs clutter | After full processing — clear `inbox/`. |
+| Completeness vs clutter | After full processing — clear `inbox/` (delete the channel file regardless of material type). Nothing is lost: the routed content lives in the target track/entity and a source copy is kept in `sources/`. |
 
 ### PV.Inbox:4 - Solution
 
 1. **Request.** On a "process inbox" request (and similar) process the files in
-   `inbox/` with the LPF procedures. After full processing — clear `inbox/`.
+   `inbox/` with the LPF procedures. A source copy is kept in
+   `project-vault/sources/` (a flat capture), and the item is routed to its
+   procedure (StateUpdate / ExternalResearch / Track). After full processing — clear
+   `inbox/`: the channel file is deleted; nothing is lost, because the content lives
+   in the target track/entity and a source copy in `sources/`. This holds for
+   **every** material type — PDF, transcript, article, and an outbox-style proposal
+   (a file with `addressee`/`source_project` frontmatter addressing this
+   project/skill).
 2. **PDF preprocessing.** If there is a `.pdf` in `inbox/` — before substantive
    processing convert each PDF to Markdown with the `pdf2md` skill (script
    `scripts/extract_pdfs.py`, parameters `--source <inbox_dir> --first N`). Use the
@@ -61,7 +64,10 @@ processing.
    two-way binding to reference-bearing entities (Q, RISK, CON, DEC, TRK).
 4. **Routing to procedures.** A meeting transcript/protocol → StateUpdate (and the
    related entities); a material with valuable artifacts → file into a fitting
-   track or create a new one (Track).
+   track or create a new one (Track). An outbox-style proposal (feedback addressed
+   to this project/skill) → same routing: keep a source copy in `sources/`, file the
+   proposal's gist into a new or fitting track (Track), then clear the inbox file
+   like any other material.
 
 ### PV.Inbox:5 - Archetypal Grounding
 
@@ -82,7 +88,7 @@ accumulate.
 |---|---|
 | CC-IB.1 | A PDF is converted to Markdown before substantive processing; the original is not analysed directly. |
 | CC-IB.2 | Every material is routed by type: StateUpdate / ExternalResearch / Track. |
-| CC-IB.3 | After full processing `inbox/` is cleared. |
+| CC-IB.3 | After full processing `inbox/` is cleared — the channel file is deleted for every material type (PDF, transcript, article, outbox-style proposal); nothing is lost: the content lives in the target track/entity and a source copy in `sources/`. |
 | CC-IB.4 | A conversion failure is recorded and brought to the owner. |
 
 ### PV.Inbox:8 - Common Anti-Patterns and How to Avoid Them
@@ -91,7 +97,7 @@ accumulate.
 |---|---|
 | Direct PDF analysis without conversion | First `pdf2md`, then process the `.md`. |
 | Material without explicit routing | Determine the type and route to the correct procedure. |
-| `inbox/` not cleared after processing | Clear it on completion. |
+| `inbox/` not cleared after processing (incl. an outbox-style proposal file retained after routing) | Keep the source copy in `sources/`, then delete the inbox file on completion. |
 
 ### PV.Inbox:9 - Consequences
 
@@ -102,7 +108,7 @@ of every incoming item.
 ### PV.Inbox:10 - Rationale
 
 The entry must be practical (`E.11`): named entry-paths to the procedures instead of
-one linear process. PDF conversion before analysis is capture fidelity (`C.11`): the
+one linear process. PDF conversion before analysis is capture fidelity (`C.2.1`): the
 correct representation of the source is processed, not a raw binary.
 
 ### PV.Inbox:11 - SoTA-Echoing
@@ -110,7 +116,7 @@ correct representation of the source is processed, not a raw binary.
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | FPF `E.11` (practical entry) | Adopt | Routing by material type onto entry-paths | Reopen on `E.11` revision |
-| FPF `C.11` (capture fidelity) | Adopt | PDF → Markdown before analysis | Reopen on `C.11` revision |
+| FPF `C.2.1` (capture constitution) | Adopt | PDF → Markdown before analysis | Reopen on `C.2.1` revision |
 | `pdf2md` skill (vision-language OCR) | Adopt | PDF to Markdown conversion | Reopen on a converter change |
 
 Best-known line: preprocessing the entry before analysis. Rejected rival: "direct
@@ -118,9 +124,8 @@ PDF analysis" — rejected due to loss of fidelity.
 
 ### PV.Inbox:12 - Relations
 
-- **Builds on:** `E.11` (practical entry), `C.11` (capture fidelity).
-- **Coordinates with:** `A.15.1` (intake execution).
-- **Applies to:** `PV.StateUpdate` (routes transcripts/protocols), `PV.ExternalResearch` (routes external research), `PV.Track` (files artifacts into tracks).
-- **Applied by:** `PV.Outbox` (transfers into `inbox/`), `PV.Init` (creates `inbox/`).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.Inbox:End

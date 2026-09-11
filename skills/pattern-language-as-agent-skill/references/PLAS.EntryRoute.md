@@ -11,19 +11,11 @@ dependencies:
   coordinates_with:
     - E.4.DPF.DA
     - C.33
-  specialized_by:
-    - PLAS.SelfSufficient
-    - PLAS.SkillLayout
 ---
 
 ## PLAS.EntryRoute - Deciding whether and what to author as a DPF-skill
 
 > **Trigger:** Before writing the first pattern body — when the question is whether a new or revised DPF/LPF-as-skill is the right outcome at all.
-> **Governing FPF patterns:**
->   → E.4.DPF
->   → E.4.PFAD
->   → E.9
->   → E.4.DPF.DA
 
 ---
 
@@ -42,7 +34,7 @@ Teams rush a checklist or a source summary into a "skill" without deciding wheth
 a framework is the right result at all. They skip the cold-reader subtraction,
 publish a singleton pattern under a broad name, author a skill before settling the
 framework-scale question, or fix no authoring scenario (FPF-dependency scope and
-source-of-truth), so governing cues, status semantics, and source pinning drift.
+source-of-truth), so dependency records, status semantics, and source pinning drift.
 The result is a seed pretending to be a framework, or a projection that cannot
 state where its truth lives.
 
@@ -66,10 +58,10 @@ state where its truth lives.
 3. **Only (a) proceeds to skill authoring.** For (b)–(e), do not create a
    DPF-skill; the cheapest route or stop needs no seed package.
 4. **Select the authoring scenario** — two orthogonal axes, fixed before drafting:
-   - **FPF-dependency scope:** `FPF-grounded` (the normal case: governing-pattern
-     cues to FPF + a dependency on FPF Core) vs `self-sufficient` (no FPF
-     dependency; route to `PLAS.SelfSufficient`, which owns the boundary statement,
-     the inlined section semantics, and the local readiness modes).
+   - **FPF-dependency scope:** `FPF-grounded` (the normal case: FPF dependencies
+     recorded in the card frontmatter + a dependency on FPF Core) vs `self-sufficient`
+     (no FPF dependency; route to `PLAS.SelfSufficient`, which owns the boundary
+     statement, the inlined section semantics, and the local readiness modes).
    - **Source of truth:** `language-from-scratch` (the DPF opens a language;
      single-surface as in `PLAS.SkillLayout`) vs `representation-of-external-standard`
      (an already-published external document is canonical and the skill is a derived
@@ -141,8 +133,8 @@ skill later" (fork/drift) — dropped in favor of the single-surface decision.
 
 ### PLAS.EntryRoute:12 - Relations
 
-- **Builds on (FPF):** `E.4.DPF` (cold-reader + first-hour route), `E.4.PFAD` (outcome selection), `E.9` (decision record).
-- **Coordinates with (FPF):** `E.4.DPF.DA` (package adequacy once authoring begins), `C.33` (carrier classification).
-- **Specialized by (LPF):** `PLAS.SelfSufficient` (self-sufficient variant), `PLAS.SkillLayout` (carrier/edition layout).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PLAS.EntryRoute:End

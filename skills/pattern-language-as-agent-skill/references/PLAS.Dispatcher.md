@@ -9,14 +9,13 @@ dependencies:
     - E.11
   coordinates_with:
     - E.11.PFP
+  specializes:
+    - PLAS.SkillLayout
 ---
 
 ## PLAS.Dispatcher - SKILL.md as routing-only dispatcher with a trigger description
 
 > **Trigger:** When writing or revising the `SKILL.md` of a DPF-skill.
-> **Governing FPF patterns:**
->   → E.4.DPF
->   → E.11
 > **Skill dependencies:**
 >   → create-agent-skill (description trigger, progressive disclosure)
 
@@ -54,11 +53,11 @@ progressive disclosure or load.
    contains a `:` followed by a space or other significant YAML characters, or
    the whole frontmatter fails to parse.
 2. **Bounded context.** One short line naming the domain/use frame.
-3. **Routing table.** One row per pattern card: situation → `references/X.md` →
-   governing cues (if any). No subject knowledge in the cells beyond enough to
-   route. The table is strictly "situation → pattern" (many-to-many, primary
-   entry per use-case); columns for dependencies or edition are forbidden — those
-   live in `relations.md`.
+3. **Routing table.** One row per pattern card: situation → `references/X.md`. No
+   subject knowledge in the cells beyond enough to route. The table is strictly
+   "situation → pattern" (many-to-many, primary entry per use-case); columns for
+   dependencies, cues, or edition are forbidden — FPF dependencies live in each
+   card's frontmatter (`PLAS.GoverningCues`) and the intra-LPF map in `relations.md`.
 4. **Navigation rule (only when a single chain dominates).** Name the first card
    to load (the entry card), then the order of the rest. A linear navigation rule
    is valid only when one dominant reading chain exists. When the skill serves
@@ -127,14 +126,15 @@ lives in the body it routes to.
 |---|---|---|---|
 | `create-agent-skill` "Description is the trigger" (WHAT + WHEN, ~300-char ceiling) | Adopt | `SKILL.md` description states WHAT + WHEN and stays YAML-safe; the routing table is the body | Reopen when the description-trigger guidance changes |
 | `create-agent-skill` progressive disclosure | Adopt | `SKILL.md` stays routing-only; bodies load on demand | Reopen when the loading model changes |
-| FPF `E.11` practical entry | Adopt | Each table row maps a situation to its card + governing cues | Reopen on FPF `E.11` revision |
+| FPF `E.11` practical entry | Adopt | Each table row maps a situation to its card | Reopen on FPF `E.11` revision |
 
 Best-known line: description-triggered, routing-only dispatcher. Rejected rival: "SKILL.md as
 mini-monolith" (the Mega-Skill anti-pattern) — dropped.
 
 ### PLAS.Dispatcher:12 - Relations
 
-- **Builds on (FPF):** `E.4.DPF` (dispatcher ≠ pattern bodies), `E.11` (practical entry).
-- **Coordinates with (FPF):** `E.11.PFP` (out of scope: no reader-facing form).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PLAS.Dispatcher:End

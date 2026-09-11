@@ -258,6 +258,8 @@ Coordinate separation is by repair question. One `DRR` section may support sever
 
 #### E.9.DA:4.4a - Result-row discipline and calibration
 
+Use the question-to-ground and result-acceptance operation in `E.22:4.3` within this evaluation.
+
 A complete reusable E.9.DA coordinate result uses this table shape. An ordinary bounded review may use the coordinates as probes and return substantive findings or repaired text without creating the table:
 
 | Coordinate | Value | ShortRationale | EvidenceLocus |

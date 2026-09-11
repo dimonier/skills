@@ -37,7 +37,7 @@ Use `E.11` when a README scenario, Preface explanation, ToC cue, retrieval cue, 
 
 The ordinary reader does not arrive with a PatternID. They arrive with a project question: architecture, a working document, a comparison, a vague concern, an improvement, evidence, timing, causal use, a description, a name, wording, mathematics, state of the art, a local framework, system recognition, or system delimitation. E.11 gives that reader a recognizable entry without turning entry material into a second pattern body or universal method sequence.
 
-**First useful result.** The reader can name the working situation, the first useful result or honest blocker, one direct pattern or small plausible set to inspect, and the ordinary stop or wrong-turn return. That is enough for ordinary entry; no card form, comparison account, or project-local value is required.
+**First useful result.** The reader can name the working situation, the first useful result or blocker, one direct pattern or small plausible set to inspect, and the ordinary stop or wrong-turn return. That is enough for ordinary entry; no card form, comparison account, or project-local value is required.
 
 **Primary EntityOfConcern.** One public entry or discoverability publication unit: README first-entry guidance, Preface principle explanation, ToC query material, retrieval cue, expanded entry-disambiguation case, or a pattern-local `Problem frame`.
 
@@ -58,7 +58,7 @@ Attempts to help can create a second problem. Public guidance becomes a numbered
 | Force | Pressure on the solution |
 | --- | --- |
 | Project recognizability | Public entry starts from situations engineers recognize, not internal pattern topology. |
-| First value before apparatus | The first useful result or honest blocker appears before schemas, PatternIDs, quality vocabulary, or exact reliance fields. |
+| First value before apparatus | The first useful result or blocker appears before schemas, PatternIDs, quality vocabulary, or exact reliance fields. |
 | Technical precision | The direct pattern, result kind, identity or obtaining basis, and neighboring boundary remain recoverable when they change the choice; ordinary wording need not expose every exact field. |
 | Low burden | A newcomer should not fill forms or fabricate project values before seeing what the direct pattern can do. |
 | Bounded search | Several entries may remain plausible, so comparison needs a stop and a recoverable wrong-turn return rather than one perfect first guess. |
@@ -69,7 +69,7 @@ Attempts to help can create a second problem. Public guidance becomes a numbered
 
 ### E.11:4 - Solution - Give Each Entry Publication Unit One Job
 
-Write the short public entry first: recognizable working situation, practical question, first useful result or honest blocker, direct pattern or small plausible set, and ordinary stop or wrong-turn return. If that prose is truthful and sufficient, stop. Add an expansion, exact result basis, or durable comparison only when ambiguity or a named receiving reliance needs it.
+Write the short public entry first: recognizable working situation, practical question, first useful result or blocker, direct pattern or small plausible set, and ordinary stop or wrong-turn return. If that prose is truthful and sufficient, stop. Add an expansion, exact result basis, or durable comparison only when ambiguity or a named receiving reliance needs it.
 
 Use this distribution:
 
@@ -168,7 +168,7 @@ Use `demonstrativeSliceRef` only when the example independently passes A.22.CGUS
 
 #### E.11:4.1.1 - Cold-reader recognition and grounded public value
 
-Test every public entry against a first-time engineer, engineer-manager, or assisting agent who has not studied FPF. The heading and first sentence name a recognizable working situation; the next useful sentence names an imaginable first result or honest blocker and one direct-pattern distinction that changes the next action. PatternIDs, FPF kind names, internal quality language, and exact assurance fields remain later.
+Test every public entry against a first-time engineer, engineer-manager, or assisting agent who has not studied FPF. The heading and first sentence name a recognizable working situation; the next useful sentence names an imaginable first result or blocker and one direct-pattern distinction that changes the next action. PatternIDs, FPF kind names, internal quality language, and exact assurance fields remain later.
 
 A public value claim is grounded when the reader can recover the project need, first useful result or blocker, why one direct pattern can help, and the ordinary boundary. Add the exact potential-result kind, identity or obtaining basis, result-relative object, or conditional receiver only when omitting it would change the truth, the starting choice, the stop, or a named later reliance. The entry may stay readable prose; the reader never has to fill a card before opening the direct pattern.
 
@@ -289,9 +289,9 @@ Where an exact row is used, it carries one result template or public blocker. A 
 
 #### E.11:4.4.1 - Practical-use carry-through check
 
-Read each published entry first in the form the public will see. A passing ordinary entry exposes the recognizable situation, practical question, first useful result or honest blocker, one direct pattern or small plausible set, and the stop or wrong-turn return. This check creates no project instance, applicability verdict, result entity, relation occurrence, receiving use, or separate positive record.
+Read each published entry first in the form the public will see. A passing ordinary entry exposes the recognizable situation, practical question, first useful result or blocker, one direct pattern or small plausible set, and the stop or wrong-turn return. This check creates no project instance, applicability verdict, result entity, relation occurrence, receiving use, or separate positive record.
 
-For a selected card, also compare the same truthful entry without its mantra. The card passes only when repeating the mantra materially improves repeated or extended use under the test in `E.11:4.1`. After one read, a cold engineer or manager can repeat the formula in their own words, name the first useful result or honest blocker, follow `Start with` to the direct pattern and any conditioned next use, and use the same key to recover any optional expansion. The direct pattern remains authoritative. A short slogan that loses a choice-changing distinction fails, and a form-valid card that provides no mnemonic gain returns to ordinary-entry or locator form.
+For a selected card, also compare the same truthful entry without its mantra. The card passes only when repeating the mantra materially improves repeated or extended use under the test in `E.11:4.1`. After one read, a cold engineer or manager can repeat the formula in their own words, name the first useful result or blocker, follow `Start with` to the direct pattern and any conditioned next use, and use the same key to recover any optional expansion. The direct pattern remains authoritative. A short slogan that loses a choice-changing distinction fails, and a form-valid card that provides no mnemonic gain returns to ordinary-entry or locator form.
 
 
 When an entry needs the optional exact expansion because a promise, ambiguity, or named reliance cannot otherwise remain truthful, use this conceptual view over the already published values:
@@ -458,7 +458,7 @@ Suppose a compact row combines architecture and diagrams, evidence, dashboard us
 | ID | Check | Passing condition |
 | --- | --- | --- |
 | `E11-1` | Situation first | Public wording begins with a recognizable working situation before PatternIDs, internal topology, or quality vocabulary. |
-| `E11-2` | Useful result before apparatus | The reader can recover the first useful result or honest blocker, direct pattern or plausible set, and ordinary stop or return before any optional exact expansion. |
+| `E11-2` | Useful result before apparatus | The reader can recover the first useful result or blocker, direct pattern or plausible set, and ordinary stop or return before any optional exact expansion. |
 | `E11-3` | One publication job | README carries public first-entry situations and first results; Preface explains cross-cutting ideas; ToC and retrieval locate; local `Problem frame` sections recognize; expanded cases disambiguate. None maintains a competing canon. Use `E.11.PFP` for the common form, exact carrier order, and deterministic form checks rather than restating them here. |
 | `E11-4` | Progressive explicitness | Short prose passes when situation, first result or blocker, direct pattern, and stop or return are recoverable. The internal ladder only helps choose whether deeper expansion, exact basis, worked case, comparison history, or refresh evidence is warranted. |
 | `E11-5` | No fictitious context | Public entry, expansion, template, and walkthrough contain no fabricated reader-project `@Context` values. |

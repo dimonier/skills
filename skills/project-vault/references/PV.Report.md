@@ -2,7 +2,6 @@
 id: PV.Report
 title: "Report creation: derived summaries on request, incl. the meeting agenda"
 status: seed
-readiness: source-faithful
 keywords: [report, derived-summary, agenda, meeting, off-limits, request, projection]
 dependencies:
   builds_on:
@@ -16,10 +15,6 @@ dependencies:
 ## PV.Report - Report creation: derived summaries on request, incl. the meeting agenda
 
 > **Trigger:** When the owner asks for a derived summary of the vault — a report (`project-vault/reports/YYYY-MM-DD-slug.md`), or the next-meeting agenda in particular.
-> **Governing FPF patterns:**
->   → E.17 (a report is a description/view of entities, not a new entity kind)
->   → E.23 (improvement cycle — returning to open items)
->   → E.9 (DRR — returning `proposed`/`deferred` to a decision, for the agenda's slots)
 > **Skill dependencies:**
 >   → none
 
@@ -129,8 +124,8 @@ report composed in advance / detached from the vault" — rejected.
 
 ### PV.Report:12 - Relations
 
-- **Builds on:** `E.17` (derived view), `E.23` (return to open items), `E.9` (decision revisit).
-- **Coordinates with:** `A.15.2` (planning).
-- **Applies to:** `PV.StateUpdate` (the agenda takes `proposed`/`deferred` slots), `PV.VaultSchema` (the `reports/` directory).
+The dependency graph (FPF content edges + Specialization) has its single authored home
+in this card's frontmatter `dependencies`; it is not repeated here. The readable
+intra-LPF map is generated in `references/relations.md`.
 
 ### PV.Report:End

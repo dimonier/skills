@@ -38,18 +38,19 @@ dependencies:
 > **Status:** Stable.
 > **Normativity:** Normative [A] (Core).
 
-**One-line summary.** A `MechSuiteDescription` is a Kernel **Description** token that names a **set of distinct** `U.Mechanism.Intension` (different mechanisms, not realizations of one mechanism) and declares **suite-level obligations**, **required spec pins**, and **allowed usage protocols**, without conflating this with `MechFamilyDescription` or with publication `Pack`s.
+**Use this when.** Several distinct mechanism intensions must be used together under shared obligations. Identify the members, cite the required specifications, and state any permitted ordering.
+
+A `MechSuiteDescription` is a Kernel **Description** token that names a **set of distinct** `U.Mechanism.Intension` (different mechanisms, not realizations of one mechanism) and declares **suite-level obligations**, **required spec pins**, and any **allowed usage protocols**, without conflating this with `MechFamilyDescription` or with publication `Pack`s.
 
 **Plain-name.** mechanism suite description; mechanism suite passport.
-**Placement.** Part A → cluster A.IV (A.6), immediately after A.6.5.
 
-**Builds on.** E.8 (pattern template discipline), A.6.1 (`U.Mechanism.Intension` canonical form), A.6.5 (slot/ref discipline), E.10 (lexical + ontological rules; strict distinction; minimal specificity; kind suffixes), E.19 (conformance checks), E.18 (transformation-flow structure and P2W carry-through discipline; crossing visibility), A.21 (OperationalGate(profile) and gate-level decisions).
+**Builds on.** A.6.1 (`U.Mechanism.Intension` canonical form), A.6.5 (SlotSpecs where a RelationSignature is current), E.10 (lexical + ontological rules; strict distinction; minimal specificity; kind suffixes), E.18 (transformation-flow structure and crossing visibility), E.18.1 (P2W carry-through), A.21 (gate-level decisions).
 
-**Used by.** Any framework area that needs a stable universal kernel shared across multiple mechanisms (notably the universalization of Part G patterns, including but not limited to G.5), and any mechanism stack whose correctness is defined by **shared admissibility + transport + audit obligations** and declared mechanism intensions.
+**Used by.** Mechanism stacks governed by **shared admissibility, transport and audit obligations** and declared mechanism intensions, including shared suites reused by Part G patterns such as G.5.
 
-**Mint vs reuse.**
+**Declared vocabulary and references.**
 
-* **Mints:** `MechSuiteDescription` (KernelToken, Description) and the record names used by its canonical form: `MechSuiteId`, `SuiteObligation`, `SuiteObligations`, `SuiteSpecPins`, `SuiteProtocol`, `ProtocolStep`, `SuiteAuditObligations`.
+* **Declares:** `MechSuiteDescription` (KernelToken, Description) and the record names used by its canonical form: `MechSuiteId`, `SuiteObligation`, `SuiteObligations`, `SuiteSpecPins`, `SuiteProtocol`, `ProtocolStep`, `SuiteAuditObligations`.
 * **Reuses (by reference):** `U.Mechanism.Intension` (members), `MechFamilyDescription` / `MechInstanceDescription` (optional citations), existing pinned references such as `CN‑Spec` / `CG‑Spec` (as pins), and E.18/P2W notions (as obligations/pins), without introducing new U-kinds.
 
 **LEX.TokenClass.**
@@ -60,12 +61,12 @@ dependencies:
 * `LEX.TokenClass(SuiteProtocol) = KernelToken.`
 * `LEX.TokenClass(SuiteAuditObligations) = KernelToken.`
 
-**EntityOfConcern / Description / specification-use.** Description (D); Tech name ends with `…Description`.
+**EntityOfConcern.** A finite set of distinct mechanism intensions intended for joint use. The description's Tech name ends with `…Description`.
 Lexical note: do **not** prefix this token with `U.`. The `U.*` namespace is for admitted U-kinds and governed kernel values; `MechSuiteDescription` is a description value for a suite of mechanism intensions, not a root kind.
 
 ### A.6.7:1 - Problem frame
 
-In FPF, a **mechanism** is a node-level `U.Mechanism.Intension` with explicit SlotSpecs inside operator signatures, and a declared LawSet/guards/transport/audit (A.6.1, A.6.5). Many architectures, however, require **a stable bundle of multiple different mechanisms** that are intended to be used together under shared admissibility and crossing discipline (e.g., a characterization chain, an admissibility-gated selection pipeline, or a universal Part-G kernel that multiple `G.*` patterns must reuse).
+In FPF, a **mechanism** is a node-level `U.Mechanism.Intension` with explicit argument and result declarations for each operation and a declared LawSet/guards/transport/audit (A.6.1). Many architectures, however, require **a stable bundle of multiple different mechanisms** that are intended to be used together under shared admissibility and crossing discipline (e.g., a characterization chain, an admissibility-gated selection pipeline, or a universal Part-G kernel that multiple `G.*` patterns must reuse).
 
 FPF already has `MechFamilyDescription`, but its meaning is: **many realizations of one and the same `U.Mechanism.Intension`**. That construct cannot correctly represent a bundle of different mechanisms (different intensions), and trying to overload it creates a level error.
 
@@ -73,7 +74,7 @@ Additionally, FPF reserves “Pack” for publication/shipping bundling (e.g., G
 
 ### A.6.7:2 - Problem
 
-We need a Kernel-level descriptor that can:
+The suite user needs one description that can:
 
 1. represent a **set of distinct mechanisms** (distinct `U.Mechanism.Intension`),
 2. declare **shared obligations** that must hold across the set (e.g., crossing visibility, admissibility-citation discipline, guard decision format, penalty routing),
@@ -89,7 +90,7 @@ We need a Kernel-level descriptor that can:
 
 1. **Strict distinction (level hygiene).**
   *“many mechanisms”* must not be encoded as *“many realizations of one mechanism”*.
-  Violating this blurs specialization laws, SlotKind invariance expectations, and audit/crossing responsibilities.
+  Violating this blurs specialization laws, mechanism-declaration invariants, and audit/crossing responsibilities.
 
 2. **Minimal specificity + kind suffix discipline (E.10).**
   The token name should encode only what is essential: it is a description, it is about mechanisms, it is a suite.
@@ -109,7 +110,7 @@ We need a Kernel-level descriptor that can:
 
 ### A.6.7:4 - Solution
 
-Introduce a new Kernel description token:
+Declare the members and their shared conditions in a `MechSuiteDescription`:
 
 #### A.6.7:4.1 `MechSuiteDescription` (data model)
 
@@ -128,30 +129,30 @@ A minimal canonical form:
 ```
 MechSuiteId := Identifier  // PascalCase; stable citation handle. Versioning MAY be carried externally.
 
-SuiteObligation := one of {
-  * bridge_only_crossings,
-  * two_bridge_rule_for_described_entity_change,
-  * transport_declarative_only,
-  * penalties_route_to_r_eff_only,
-  * guard_decision_tristate(pass|degrade|abstain),
-  * unknown_never_coerces_to_pass,
-  * gate_decision_separation,
-  * guard_lexeme_reservations,
-  * cg_spec_cite_required_for_numeric_ops,
-  * no_silent_scalarisation_of_partial_orders,
-  * no_silent_totalisation,
-  * no_thresholds_in_suite_core,
-  * crossing_visibility_required,
-  * planned_slot_filling_in_work_planning_only,
-  * finalize_launch_values_in_work_enactment_only,
-  * implementation_export_discipline_when_cited
-  +}
+SuiteObligation := declared suite-level obligation
+// Canonical reusable names (not exhaustive):
+//  bridge_only_crossings,
+//  two_bridge_rule_for_described_entity_change,
+//  transport_declarative_only,
+//  penalties_route_to_r_eff_only,
+//  guard_decision_tristate(pass|degrade|abstain),
+//  unknown_never_coerces_to_pass,
+//  gate_decision_separation,
+//  guard_lexeme_reservations,
+//  cg_spec_cite_required_for_numeric_ops,
+//  no_silent_scalarisation_of_partial_orders,
+//  no_silent_totalisation,
+//  no_thresholds_in_suite_core,
+//  crossing_visibility_required,
+//  planned_slot_filling_in_work_planning_only,
+//  finalize_launch_values_in_work_enactment_only,
+//  implementation_export_discipline_when_cited
 
 SuiteObligations := { SuiteObligation[*] } // clause set; duplicates-free.
 
 MechSuiteDescription := ⟨
   mech_suite_id: MechSuiteId ,
-  mechanisms: U.Mechanism.IntensionRef[+] ,  // distinct members; references preferred
+  mechanisms: U.Mechanism.IntensionRef[+] ,  // references to distinct member intensions
   suite_obligations: SuiteObligations ,
   suite_spec_pins: SuiteSpecPins ,
   suite_protocols?: SuiteProtocol[*] ,
@@ -167,9 +168,9 @@ MechSuiteDescription := ⟨
 
 **Well-formedness constraints (admissibility; non-deontic).**
 
-* **WF‑MS‑1 (Membership set semantics).** `mechanisms` denotes a duplicates‑free set; order carries no semantics.
+* **WF‑MS‑1 (Membership set semantics).** `mechanisms` contains references to pairwise distinct mechanism intensions; field order carries no semantics.
 * **WF‑MS‑2 (Protocol closure).** If `suite_protocols` is present, then for every `ProtocolStep` in every `SuiteProtocol`, `step.mechanism ∈ mechanisms`.
-* **WF‑MS‑3 (Suite ≠ Pack).** `MechSuiteDescription` does not carry shipping/publication payloads; publication remains the role of `Pack` patterns.
+* **WF‑MS‑3 (Suite ≠ Pack).** `MechSuiteDescription` does not carry shipping/publication payloads; use the applicable shipping or publication pattern for those results.
 * **WF‑MS‑4 (Suite ≠ Mechanism).** `MechSuiteDescription` contains no `OperationAlgebra`/`LawSet`/execution semantics and is not admissible where a `U.Mechanism.*` node is required.
 
 * **Membership is by mechanism intension (order-free).**
@@ -183,34 +184,13 @@ MechSuiteDescription := ⟨
   A suite MUST NOT be named or treated as a publication pack. `Pack` remains reserved for publication/shipping bundling (e.g., G.10).
 
 * **No mechanism semantics in the suite.**
-  A suite is a **Description**, not a mechanism: it does not define `OperationAlgebra`, it does not execute, and it does not absorb gate logic.
+  A suite is a **Description**, not a mechanism: it does not define `OperationAlgebra` and does not absorb gate logic.
 
 #### A.6.7:4.2 SuiteObligations (canonical obligation vocabulary)
 
-`MechSuiteDescription` MAY declare any obligations, but the following obligation vocabulary is **canonical** and is intended to be reused across the universalization of Part G and admissibility-gated characterization stacks.
+`MechSuiteDescription` MAY declare any obligations. The canonical names in §4.1 support reuse across Part G and admissibility-gated characterization stacks; they are not an exhaustive inventory.
 
-`SuiteObligations` SHOULD be written as an explicit clause set, e.g.:
-
-```
-SuiteObligations := {
-  bridge_only_crossings,
-  two_bridge_rule_for_described_entity_change,
-  transport_declarative_only,
-  penalties_route_to_r_eff_only,
-  guard_decision_tristate(pass|degrade|abstain),
-  unknown_never_coerces_to_pass,
-  gate_decision_separation,
-  guard_lexeme_reservations,
-  cg_spec_cite_required_for_numeric_ops,
-  no_silent_scalarisation_of_partial_orders,
-  no_silent_totalisation,
-  no_thresholds_in_suite_core,
-  crossing_visibility_required,
-  planned_slot_filling_in_work_planning_only,
-  finalize_launch_values_in_work_enactment_only,
-  implementation_export_discipline_when_cited
-}
-```
+`SuiteObligations` SHOULD be written as an explicit, duplicates-free clause set. Select applicable clauses from the canonical vocabulary in §4.1 and state any additional obligations explicitly. The requirements below remain applicable under their stated conditions.
 
 **Obligation meanings (normative).**
 
@@ -279,14 +259,14 @@ SuiteSpecPins := ⟨
 
 #### A.6.7:4.4 SuiteProtocols
 
-A suite MAY describe allowed protocols (pipelines) as descriptive constraints on how suite members are intended to be composed. A protocol description:
+A suite MAY describe allowed protocols (pipelines) as descriptive constraints on how suite members are intended to be composed. A `SuiteProtocol` describes the member-operation sequence. Its description:
 
 * MUST name the member mechanisms it uses (explicitly; no “implicit use”),
 * MAY mark steps as optional,
 * MUST NOT introduce hidden crossings or hidden admissibility steps,
-* MUST treat “publish/telemetry” as an external protocol step that is realized through existing publication surfaces (e.g., Part G shipping), rather than as a hidden tail inside a mechanism.
+* MUST identify any “publish/telemetry” as an external step of the surrounding protocol, realized through existing publication surfaces (e.g., Part G shipping), rather than as a hidden tail inside a mechanism. This external step is not a `ProtocolStep` in the suite-member sequence.
 
-A canonical shape for protocols:
+A canonical shape for the suite-member sequence:
 
 ```
 SuiteProtocol := ⟨
@@ -317,9 +297,9 @@ A suite MAY require that downstream use provide certain audit anchors. These are
 
 **Norm.** A suite must never publish a `DecisionLog` or `GateDecision`. If the suite requires guard pins, it requires their **presence** as anchors so that the gate-level owner can aggregate `GuardFail`s and decide `degrade|block` per gate profile.
 
-#### A.6.7:4.6 Examples (tell–show–show discipline)
+#### A.6.7:4.6 Examples
 
-**Example 1 (conformant).** A characterization admissibility suite:
+**Example 1 (membership-and-ordering illustration).** A characterization admissibility suite. This compact form illustrates membership and ordering; a conformance demonstration must also supply the member/operation bindings and the other applicable required values.
 
 ```
 CHRMechanismSuiteDescription : MechSuiteDescription :=
@@ -337,8 +317,10 @@ CHRMechanismSuiteDescription : MechSuiteDescription :=
   finalize_launch_values_in_work_enactment_only
   suite_spec_pins requires: {CNSpecRef, CGSpecRef}
   suite_protocols includes:
-  normalize → indicatorize → score → (fold_Γ?) → compare → select → publish/telemetry
+  normalize → indicatorize → score → (fold_Γ?) → compare → select
 ```
+
+The surrounding protocol continues with external `publish/telemetry` after `select`, through the applicable publication surface.
 
 This description is not a `MechFamilyDescription` (because it contains multiple distinct mechanisms), and it is not a `Pack` (because it does not ship publications; it only declares membership and shared obligations/pins/protocols).
 
@@ -360,11 +342,11 @@ All violate the separation between mechanism/suite descriptions and gate-level o
 
 ### A.6.7:5 - Archetypal Grounding
 
-A suite is an archetypal “passport” or “capability bundle descriptor”:
+A suite is an archetypal mechanism-suite “passport”:
 
 * It answers **what mechanisms exist in the bundle** and **what shared invariants** make their composition lawful.
 * It provides **shared governing spec anchors** (pins) that downstream planning and work must cite.
-* It remains descriptive: it does not execute, it does not contain run-time outputs, and it does not replace the E.18 subgraph that actually connects nodes by `Uses` and manages crossings.
+* It remains descriptive: it does not contain run-time outputs, and it does not replace the transformation-flow structure selected under E.18 for composition and crossing visibility.
 
 ### A.6.7:6 - Bias-Annotation
 
@@ -459,16 +441,16 @@ Encoding this unity as “one mechanism” or “one family” forces false comm
 
 ### A.6.7:11 - SoTA-Echoing
 
-This pattern echoes post‑2015 best practice in modular reasoning systems: separation of **governing spec refs** from **operators**, explicit composition protocols, and strict boundaries between **decision procedures** and **gating/acceptance control**.
+Separating **governing spec refs** from **operators**, declaring composition protocols, and keeping **decision procedures** distinct from **gating/acceptance control** make the requirements of each part visible.
 
-In modern multi-step evaluation pipelines (e.g., calibrated scoring, uncertainty-aware comparison, Pareto / selected-set selection, and quality-diversity archives), correctness typically relies more on explicit governing spec refs and admissible composition than on a single monolithic “universal metric”. `MechSuiteDescription` provides the Kernel representation that allows such pipelines to be described with stable obligations while keeping domain methods and FPF patterns generators outside the universal core.
+Use this separation to describe multi-step evaluation pipelines, such as calibrated scoring, uncertainty-aware comparison, Pareto / selected-set selection, and quality-diversity archives. `MechSuiteDescription` describes their shared obligations while keeping domain methods and FPF pattern generators outside the universal core.
 
 ### A.6.7:12 - Relations
 
 * **Relates to A.6.1:** suite members are `U.Mechanism.Intension`; the suite does not replace the mechanism definition.
-* **Relates to A.6.5:** suites must not weaken slot/ref discipline; any suite protocol assumes member mechanisms follow A.6.5 invariants (SlotKind stability, correct refMode, no semantic meaning in SlotIndex).
-* **Relates to E.18 / P2W:** suite protocols describe intended composition; actual composition and crossings are expressed in E.18 subgraphs and P2W flow.
-* **Relates to E.19:** suite-level conformance is a conceptual review checklist; suites require pins/anchors rather than procedural validation.
-* **Relates to G.10:** suites are not packs; publication/shipping is handled via G.10 and MVPK faces.
+* **Relates to A.6.5:** member operation declarations retain A.6.1 argument/result meanings, ValueKinds and binding rules. A.6.5 applies only where a cited `RelationSignature` independently declares participant SlotSpecs; there SlotKind stability, correct refMode and non-semantic SlotIndex remain required.
+* **Relates to E.18 / P2W:** suite protocols describe intended composition; use E.18 for the selected transformation-flow structure and its crossings, and E.18.1 for P2W carry-through.
+* **Suite conformance:** Suite-level conformance uses the conceptual checklist in §7; suites require pins/anchors rather than procedural validation.
+* **Relates to G.10:** suites are not packs; G.10 handles shipping of Part-G outputs as a SoTA pack, while E.17 publishes reader-facing forms of an already accepted engineering account.
 
 ### A.6.7:End

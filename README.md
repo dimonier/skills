@@ -90,7 +90,7 @@ Lossless compaction of epistemes: prose ↔ compact typed-slot notation at F4-F5
 
 Author and improve a Domain Principle Framework (DPF) or Local Practices Framework (LPF) directly in Agent-skill form (SKILL.md + references/). The edition carrier is the skill itself: `references/*.md` are the canonical pattern bodies — no monolith, no reader-facing publication form.
 
-**Depends on:** `fpf-core`, `create-agent-skill`
+**Depends on:** `fpf-core`, `agent-skill-builder`
 
 **Use when:**
 - Deciding whether and what to author as a DPF-skill (cold start)
@@ -189,15 +189,18 @@ Keeps the `fpf-core` skill in sync with the canonical FPF monolith (`FPF-Spec.md
 
 ### 🔧 Agent Skill Builder
 
-Guide for deciding when to create agent skills, how to design them well, and what anti-patterns to avoid. Covers the four-layer agent guidance stack (AGENTS.md, Skills, MCP, Memory), atomicity principles, and quality gates.
+Local Practices Framework (LPF) for authoring, reviewing, and evolving agent skills: whether a skill is even the right guidance layer (vs `AGENTS.md` / MCP / Memory), trigger design (`description`), progressive disclosure, skill anatomy & frontmatter, atomicity, the weak-model quality gate, placement & portability, evolution, security & trust, and opt-in material compaction. 10 `ASB.*` patterns — routing `SKILL.md` + `references/`.
+
+**Depends on:** `fpf-core`, `skill-creator`, `episteme-compaction` (some cases)
 
 **Use when:**
 - Creating a new skill or reviewing an existing one
 - Deciding between skills vs AGENTS.md vs MCP vs Memory
 - Designing atomic, reusable skills with progressive disclosure
 - Unsure if a skill is needed at all
+- Compacting a skill's materials to a minimal size (opt-in, on explicit request)
 
-**Location:** `skills/create-agent-skill/`
+**Location:** `skills/agent-skill-builder/`
 
 ## Project Management
 

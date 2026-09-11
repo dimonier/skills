@@ -52,7 +52,7 @@
 | A.6.5 | Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline | — |
 | A.6.6 | Base Declaration Discipline - Direct relation first; reusable declaration only when needed | — |
 | A.6.7 | `MechSuiteDescription` — Description of a set of distinct mechanisms | mechanism suite, distinct mechanisms, suite obligations, spec pins, CN-Spec |
-| A.6.9 | Cross-Context Sameness Disambiguation - Repairing cross-context "same / equivalent / align" via explicit Bridges (RPR-XCTX) | ambiguous sameness, direct-owner dispatch, exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections |
+| A.6.9 | Cross-Context Sameness Disambiguation - Restoring the concrete claim behind "same / equivalent / align" (RPR-XCTX) | ambiguous sameness, direct-owner dispatch, exact F.17 `SchemeSenseCell` endpoints, different `<ReferenceScheme, LocalSenseClaim>` projections |
 | A.6.S | TargetSignature and optional ConstructorSignature - demand-driven signature engineering | — |
 | A.6.H | Wholeness Language Unpacking (RPR-WHOLE) | wholeness, integrity, part-of, boundary, environment |
 | A.7 | Strict Distinction (Clarity Lattice) | category error, EntityOfConcern ≠ Description episteme, system-role kind and assignment ≠ Work, MethodDescription ≠ Method ≠ Capability ≠ Work. |
@@ -138,6 +138,7 @@
 | C.2.5 | `U.LanguageStateClosureDegree` | closure degree, candidate-space closure, reopen, rival routes, settledness. |
 | C.2.6 | `U.LanguageStateAnchoringMode` | anchoring mode, embodiment, trace, model state, document |
 | C.2.7 | `U.LanguageStateRepresentationFactorBundle` | representation factors, locality, sparsity, symbolicity, factor bundle |
+| C.2.8 | `U.ExtractableStructuralInformation` | extractable structure, reader preparation, bounded observer, structural information, epiplexity |
 | C.2.P.DR | Declarative Representation Precision Restoration | — |
 | C.3 | Kinds, Intent and Extent, and Typed Reasoning | admitted U.Kind individual, membership distinction, KindSignature, admissibility, true/false/unknown judgment |
 | C.3.1 | U.Kind and U.SubkindOf Core | kind identity, membership criterion, continuity, U.SubkindOf direct relation, criterion entailment |
