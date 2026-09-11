@@ -9,18 +9,27 @@ These skills are designed to be automatically used by an **AI agent** when a use
 ### Installation
 
 1. Clone or download `skills` folder and its contents.
-2. Add skills from the `skills` folder to your IDE / CLI Code tool:
-   - Cursor: `~/.cursor/skills`
-   - Cloude Code: `~/.claude/skills/`
-   - Other IDE or AI agent: check documentation on where skills are located
-3. Ask AI-agent to use the skill during task execution.
+2. Add skills from the `skills` folder
+   - globally to `~/.agents/skills`
+   - or to your IDE / CLI Code tool:
+     - Cursor: `~/.cursor/skills`
+     - Cloude Code: `~/.claude/skills/`
+     - Other IDE or AI agent: check documentation on where skills are located
+   - or to a specific project:
+     - `<project dir>/.agents/skills`
+3. [Re}start an AI-agent to use the skill during task execution.
 
 ### Usage
 
-**Example workflow:**
-- User: "Help me plan my bathroom layout"
-- AI: Loads `bathroom-planner/SKILL.md` srom `skills` and applies the 10-stage methodology
-- AI guides user through measurements, zone planning, ergonomics, and implementation
+**Example workflow — Business Analysis:**
+- User: "We're kicking off a payments feature — help me pin down stakeholders and requirements"
+- AI: Loads `dpf-business-analysis/SKILL.md` from `skills` and applies its requirements lifecycle patterns
+- AI identifies stakeholders, elicits and specifies requirements, surfaces ambiguities, and builds a traceable, prioritized baseline
+
+**Example workflow — Crafting a skill:**
+- User: "I keep pasting the same release-checklist instructions to my agent — turn that into a skill"
+- AI: Loads `agent-skill-builder/SKILL.md` from `skills` and applies its authoring patterns
+- AI checks that a skill is the right layer (vs `AGENTS.md`/MCP), designs the trigger `description`, progressive disclosure, and produces a validated `SKILL.md` + `references/`
 
 The skills transform the AI into a specialized assistant that follows proven methodologies rather than ad-hoc responses.
 
