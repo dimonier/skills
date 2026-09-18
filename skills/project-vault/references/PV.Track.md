@@ -41,6 +41,7 @@ every trifle (not for every DEC/RISK/Q).
 | One status vs several | A track has exactly one current status (frontmatter + inline). |
 | Gradual vs skip | Always start from `cue`, step by step; statuses are not skipped. |
 | Container vs proliferation | A track — for an operational line with blockers, spanning several entities. |
+| Product vs service track | A product track carries a ProblemCard and the full lifecycle from `cue`; a service track is a standing line for a repeating maintenance procedure, started directly in `in-progress`. |
 
 ### PV.Track:4 - Solution
 
@@ -97,10 +98,30 @@ every trifle (not for every DEC/RISK/Q).
   RISK, CON). If the meeting affects an existing track — update the
   status/blockers/next moves.
 
+**T.5 — service track (fallback maintenance container).** A run of a repeating
+maintenance procedure (ingestion `PV.Inbox`, vault maintenance) is recorded as a WRK:
+- **into a fitting product track**, when the run's material/result belongs to one (the
+  routed material landed in or created a track);
+- **under the permanent service track**, only when no fitting product track exists
+  (e.g. the ingestion produced only atomic entities — DEC/Q/RISK/CON — with no
+  operational line).
+
+The service track itself:
+
+- Created once; marked `kind: service` in the frontmatter; permanent while the
+  procedure exists.
+- Starts directly with `status: in-progress` (a sanctioned exception to "always from
+  `cue`", CC-TR.3): it carries no ProblemCard@Context — it is a standing procedure,
+  not a problem being solved.
+- Exempt from the "at least one blocker" rule (CC-TR.4): a service line has no own
+  blocker; its posture is standing, and its "Next moves" hold the recurring
+  procedure steps.
+
 **Status lifecycle.** `cue` → `problem-framed` → `method-selected` →
 `work-planned` → `in-progress` → `performed` → `evaluated`. Side transitions:
 `blocked` (from any active), `deferred` (from any active), `retired` (terminal). A
 track has exactly one current status — in the frontmatter and in the inline table.
+A service track (T.5) is created directly in `in-progress` and stays there.
 
 ### PV.Track:5 - Archetypal Grounding
 
@@ -122,8 +143,8 @@ advancement.
 |---|---|
 | CC-TR.1 | Productive work is done only in a track; small requests — without a track. |
 | CC-TR.2 | A track has exactly one current status (frontmatter + inline). |
-| CC-TR.3 | Always starts from `cue`; statuses are not skipped. |
-| CC-TR.4 | A track has at least one blocker. |
+| CC-TR.3 | Always starts from `cue`; statuses are not skipped (exception: a service track starts directly in `in-progress` — T.5). |
+| CC-TR.4 | A track has at least one blocker (exception: a service track — T.5). |
 | CC-TR.5 | Tracks are not deleted; retired ones stay in `tracks/` with `status: retired`. |
 | CC-TR.6 | Every status transition is announced and confirmed; then — `vault.py tracks`. |
 
@@ -136,6 +157,8 @@ advancement.
 | A track for every entity | Only for an operational line with blockers. |
 | Deleting a retired track | Leave it with `status: retired`. |
 | Several ProblemCards in one track | A new independent signal → a child track with its own ProblemCard. |
+| A track opened for each inbox pass / one-step maintenance act | Record the run as a WRK under the service track (T.5). |
+| A service track forced through `cue` or given a fake blocker | A service track starts in `in-progress` with no own blocker (T.5). |
 
 ### PV.Track:9 - Consequences
 

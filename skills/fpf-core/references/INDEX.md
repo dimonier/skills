@@ -2,8 +2,10 @@
 
 | Pattern ID | Title | Keywords |
 |---|---|---|
+| FPF.Preface | FPF.Preface:21 - How To Continue After The readme | — |
 | A.0 | Onboarding Glossary (NQD & E/E‑LOG) | novelty, quality-diversity (NQD), explore/exploit (E/E-LOG), declared set result, typed portfolio publication |
 | A.1 | Holon Ontic Foundation (U.Holon and Admitted Holon Kinds) | — |
+| A.1.RI | Reidentifying an Object across Observations | — |
 | A.1.1 | Bounded Model-Use Structure and DDD Bounded-Context Recovery | — |
 | A.1.SCR | Finding the Acting or Changed System | — |
 | A.1.CSD | Discovering Systems That May Bear Consequences | — |
@@ -23,7 +25,10 @@
 | A.3.1 | `U.Method`: Reusable Way of Doing with Explicit Applicability | — |
 | A.3.1.MR | Candidate-Method Recovery from Work Evidence | — |
 | A.3.2 | `U.MethodDescription`: Description Episteme for a Way of Doing | method-description membership, claim-bearing episteme, exact `U.Method` EntityOfConcern, substantive way-of-doing claim, same method versus equivalent descriptions |
-| A.3.3 | U.Dynamics: State-Space and Transition-Law Episteme | dynamics, state space, transition law, observation relation, prediction |
+| A.3.3 | U.Dynamics: State-Space and Transition-Law Episteme | dynamics, state construction, configuration, constraints, initial data |
+| A.3.3.CC | Construct a Configuration Description under Constraints | — |
+| A.3.3.TR | Construct a Rule for State Change | — |
+| A.3.3.PI | Retain the Information Needed for Prediction | — |
 | A.3.4 | `U.Transformation`: Bounded Change Under Conditions | actual bounded change, changed referent, occurrence boundary, actual subject facts, continuity and reidentification |
 | A.3.4.P | Transformation Ontic Precision Restoration | — |
 | A.4 | Temporal Duality & Open-Ended Evolution Principle | design-time, run-time, evolution, versioning, open-ended state change |
@@ -40,6 +45,7 @@
 | A.6.3.CSC | Controlled Semantic Coarsening | — |
 | A.6.3.CR | ConservativeRetextualization - entityOfConcernRef-preserving textual re-expression | — |
 | A.6.3.RT | Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition | — |
+| A.6.3.RT.OE | Construct an Operative Expression | — |
 | A.6.3.NAR | Structure-to-Narrative Rendering | — |
 | A.6.4 | EntityOfConcern retargeting | — |
 | A.6.P | Relational Precision Restoration — Recovering Direct Relations from Under-Specified Claims | — |
@@ -121,12 +127,22 @@
 | B.3.5 | Working-Model Relations & Grounding (CT2R-LOG) | — |
 | B.4 | Canonical Evolution Loop | evolution loop, DesignRunTag feedback, observe-notice-stabilize-route, drift repair, knowledge refinement |
 | B.4.1 | Observe -> Notice -> Stabilize -> Route | routed cue set, route plurality, route selection, pre-abductive seam, task-family specialization route. |
-| B.5 | Canonical Reasoning Cycle | reasoning, problem-solving, Abduction-Deduction-Induction, scientific method. |
+| B.5 | Canonical Reasoning Cycle | — |
+| B.5.MPC | Connect Physical, Mathematical and Computational Reasoning | — |
+| B.5.MPC.R | Repair a Physical-Mathematical-Computational Connection | — |
+| B.5.RC | Recover a Construction from Its Description | — |
+| B.5.RA | Recover an Argument for Its Next Use | — |
+| B.5.RR | Revise Reasoning After a Premise or Question Changes | — |
+| B.5.FM | Construct a First Model for the Working Question | — |
+| B.5.TU | Construct a Working Use of an Unfamiliar Theory | — |
+| B.5.TC | Compare Theoretical Accounts for a Working Question | — |
+| B.5.QD | Develop a New Question from a Result or Construction | — |
 | B.5.1 | Explore → Shape → Evidence → Operate | development state cycle, open-ended progression, state machine, Explore, Shape |
 | B.5.2 | Abductive Loop | abduction, explanatory prompt, candidate hypotheses, plausibility filters, origin trace |
 | B.5.2.0 | `U.AbductivePrompt` | abductive prompt, prompt species, rival-set discipline, threshold crossing, explanation-ready cue. |
 | B.5.2.1 | Creative Abduction with NQD | creative abduction, NQD binding, Γ_nqd.generate, Creativity-CHR, Q-front |
 | B.5.3 | Domain-Concept Bridge | domain vocabulary, source-local meaning, F.17 cell, basis relation, direct relation |
+| B.5.4 | Recognize a Reusable Concept in a Concrete Situation | — |
 | C.2 | KD‑CAL | knowledge, epistemic, evidence, trust, assurance |
 | C.2.1 | `U.Episteme`: Constitution, Empirical Grounding, and Edition Relations | — |
 | C.2.P | Epistemic Precision Restoration | — |
@@ -152,6 +168,9 @@
 | C.11.DUA | Decision-Useful Advice and Evidence Demands | — |
 | C.13 | Constructional Mereology (Compose‑CAL) | mereology, part-whole, composition, sum, set |
 | C.16 | Measurement & Metrics Characterization (MM‑CHR) | measurand, measurement subject, Characteristic, Scale, Level/Coordinate |
+| C.16.MR | Construct a Measurement Relation | — |
+| C.16.IR | Determine What an Indication Can Resolve | — |
+| C.16.RM | Repair a Measurement Model or Arrangement | — |
 | C.16.P | Characteristic and Scale Precision Restoration | — |
 | C.16.Q | Quality-Term Precision Restoration | — |
 | C.17 | Characterising Generative Novelty and Value | qualitative-first evaluation, named comparison basis, Novelty, Use-Value, ConstraintFit |
@@ -176,7 +195,12 @@
 | C.27 | Temporal Claim Adequacy: State Readings, Temporal Trends, and Intervention-Sensitive Change | temporal claim adequacy, temporal claim, state reading, rate reading, temporal trend |
 | C.27.TA | Temporal Aspect: Time Windows, Rhythm, Cadence, and Currentness | temporal aspect, time window, freshness, currentness, rhythm |
 | C.28 | CausalUse-CAL: Causal-Use Questions, Identification, and Realizability | causal-use question, causality ladder, association, intervention, counterfactual |
-| C.29 | Mathematical Lens Use | mathematical lens, structure-preserving representation, lens mapping mode, preserved structure, lost structure |
+| C.28.MR | Derive an Intervention Consequence by Mechanism Replacement | — |
+| C.29 | Mathematical Lens Use | — |
+| C.29.1 | Mathematical Result Transfer | — |
+| C.29.2 | Computational Formulation | — |
+| C.29.3 | Computational Realization | — |
+| C.29.BB | Construct a Balance across a Boundary | — |
 | C.30 | Grounded Architecture and Selected-Structure Adequacy | grounded architecture, ArchitectureOf@Context, selected structure, architecture claim, architecture question card |
 | C.30.AD | Architecture Description Adequacy | architecture description, ArchitectureDescription@Context, architecture description use card, architecture structural view, viewpoint |
 | C.30.AD.BA | Built-Asset Architecture Description and Reference Designation | — |
@@ -207,7 +231,12 @@
 | C.36 | Cultural Evolution and Cultural-Evolution Engineering | — |
 | C.37 | Use-Bounded Representation Selection and Co-Use | — |
 | C.38 | Construct Comparable Ways to Obtain One Result | — |
+| C.39 | Find and Develop a Way to Obtain a Result | — |
+| C.39.RO | Turn a Construction into a Reusable Operation | — |
+| C.40 | Develop Branching Search from Reusable Material | — |
+| C.40.CD | Develop Problems and Ways of Solving Them Together | — |
 | C.36.P | Cultural-Evolution Wording-Use Precision Restoration | — |
+| C.36.RP | Sustain and Renew Shared Ways of Working | — |
 | D.1 | Ethical Value Plurality and FPF Boundary | — |
 | D.2 | Multilevel Ethics For System-Holon Work | — |
 | D.3 | Interlevel Ethical Conflict Structure | — |
@@ -237,6 +266,7 @@
 | E.9.DA | DRR Decision-Adequacy Evaluation CharacteristicSpace | — |
 | E.10 | Unified Lexical Rules for FPF | — |
 | E.10.LRN | Recovering What “Learning” Means in the Current Claim | learn, learning, learned, taught, trained |
+| E.10.INT | Recovering What Interest or Curiosity Means Here | — |
 | E.10.DEV | Recovering What Development or Evolution Means in the Current Claim | — |
 | E.10.MOVE | Move and Readiness Wording Precision Restoration | — |
 | E.10.ARCH | Wording-Use Ontological Precision Restoration Architecture | — |

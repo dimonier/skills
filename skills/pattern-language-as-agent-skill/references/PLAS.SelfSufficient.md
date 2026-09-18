@@ -56,8 +56,10 @@ so they drift and balloon — the exact failure observed in `sfera-std-tracing`.
    and load bodies, nothing more.
 3. **Reuse the two readiness modes.** Follow `PLAS.PatternBody`'s `source-faithful`
    vs `case-validated` distinction, but ground it on the declared source rather
-   than `E.21`; the mode is declared in `SKILL.md`, and a card's `status` names only
-   the level (`seed`/`stable`).
+   than `E.21`; a self-sufficient card **carries the mode explicitly in `status`**
+   (`status: source-faithful` / `status: case-validated`). This is the documented
+   exception to `CC-PB.5`: the card has no FPF-governed pattern-status level
+   (`Stable`/`Draft`) to name, so the mode stands in for it.
 4. **Record dependencies without FPF.** `builds_on`/`coordinates_with` name only
    the skills/documents this DPF actually depends on (the source standard, other
    self-sufficient skills); no FPF pattern IDs. A `Skill dependencies` block
@@ -92,7 +94,7 @@ rebuilds what `create-agent-skill` already gives. The boundary statement and the
 | CC-SS.1 | An explicit self-sufficiency boundary statement names the single source of truth (or "none"). |
 | CC-SS.2 | No FPF pattern ID appears as a governing cue; dependencies name only real dependencies. |
 | CC-SS.3 | Section semantics are inlined compactly (one line per section), not as a full `E.8` table. |
-| CC-SS.4 | `status` carries an explicit readiness mode (`source-faithful` vs `case-validated`). |
+| CC-SS.4 | `status` carries an explicit readiness mode (`source-faithful` vs `case-validated`) — the self-sufficient exception to `CC-PB.5`. |
 | CC-SS.5 | Carrier-mechanics rules (routing-only `SKILL.md`, one body per file, YAML-safe description) still hold. |
 
 ### PLAS.SelfSufficient:8 - Common Anti-Patterns and How to Avoid Them

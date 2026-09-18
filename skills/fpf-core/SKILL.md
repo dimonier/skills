@@ -1,12 +1,23 @@
 ---
 name: fpf-core
 description: First Principles Framework core patterns. Use when doing engineering, research, management, or mixed human/AI work. ALWAYS use as governing patterns for any DPF or LPF work. Load individual patterns from references/ as needed — never read the full spec unless doing deep audit.
+license: CC-BY-4.0
 ---
 
 # FPF Core Pattern Library
 
 **Depends on:** nothing (root of dependency chain)
-**Source of truth:** `assets/FPF-Spec.md` — canonical specification (108K+ lines)
+**Source of truth:** `assets/FPF-Spec.md` — canonical specification (115K+ lines)
+
+## License / Attribution
+
+Adapted from Anatoly Levenchuk, First Principles Framework (FPF), September 2026,
+https://github.com/ailev/FPF. Copyright (c) Anatoly Levenchuk.
+Licensed under CC BY 4.0, https://creativecommons.org/licenses/by/4.0/.
+Provided "as is", without warranties of any kind.
+Changes: decomposed the monolithic specification into per-pattern reference files,
+added a routing INDEX, and abridged the context sections. The bundled
+`assets/FPF-Spec.md` is redistributed verbatim. See `LICENSE` for the full license text.
 
 ## How to Use
 
@@ -50,4 +61,4 @@ load those too from `references/`. Each reference lists its own dependencies.
 
 ## References Status
 
-**Ready** — 317 pattern reference files + INDEX + 41 context sections.
+**Ready** — 347 pattern reference files + INDEX + 41 context sections.

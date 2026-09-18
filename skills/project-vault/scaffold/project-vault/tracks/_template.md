@@ -1,6 +1,7 @@
 ---
 id: TRK-NNNN
 fpf_kind: WorkTrackCard@Context
+kind: product | service  # опционально: service — постоянный сервисный трек (PV.Track T.5); по умолчанию product
 status: cue | problem-framed | method-selected | work-planned | in-progress | performed | evaluated | blocked | deferred | retired
 responsible: ""
 updated: YYYY-MM-DD

@@ -83,7 +83,10 @@ entities stay in place with a `status` in the frontmatter (no `archive/` mirror)
 outgoing message with frontmatter `created`/`addressee`/`source_project`/
 `source_context`/`status` (`pending → sent`), no monotonic ID and no `_index.md`
 (see `PV.Outbox`). `inbox/` holds raw incoming sources, cleared after processing
-(see `PV.Inbox`).
+(see `PV.Inbox`). A **service track** is still a `tracks/TRK-NNNN.md` file in the
+same flat `TRK` ID namespace — no new directory, no new ID prefix; it is marked
+`kind: service` in the frontmatter and is the WRK container for repeating
+maintenance procedures (see `PV.Track` T.5).
 
 **Discovery instead of manual indexes.** For entities (`decisions/`,
 `open-questions/`, `risks/`, `contradictions/`) there are no manual

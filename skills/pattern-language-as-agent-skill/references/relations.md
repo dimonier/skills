@@ -32,6 +32,8 @@
 
 | From (child) | Relation | To (parent) |
 |---|---|---|
+| `PLAS.CompactedProjection` | `specializes` | `PLAS.PatternBody` |
+| `PLAS.CompactedProjection` | `specializes` | `PLAS.SkillLayout` |
 | `PLAS.Dispatcher` | `specializes` | `PLAS.SkillLayout` |
 | `PLAS.GoverningCues` | `specializes` | `PLAS.PatternBody` |
 | `PLAS.PatternBody` | `specializes` | `PLAS.SkillLayout` |
@@ -45,7 +47,9 @@
 |---|---|---|
 | `PLAS.EntryRoute` | `specialized_by` | `PLAS.SelfSufficient` |
 | `PLAS.EntryRoute` | `specialized_by` | `PLAS.SkillLayout` |
+| `PLAS.PatternBody` | `specialized_by` | `PLAS.CompactedProjection` |
 | `PLAS.PatternBody` | `specialized_by` | `PLAS.GoverningCues` |
+| `PLAS.SkillLayout` | `specialized_by` | `PLAS.CompactedProjection` |
 | `PLAS.SkillLayout` | `specialized_by` | `PLAS.Dispatcher` |
 | `PLAS.SkillLayout` | `specialized_by` | `PLAS.PatternBody` |
 | `PLAS.SkillLayout` | `specialized_by` | `PLAS.SelfSufficient` |

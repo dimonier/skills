@@ -45,6 +45,7 @@ the decision canon clogs with junk entries.
 | Choice vs paraphrase | DEC — only for a bounded architectural choice with consequences; editorial/summary — as context in the capture header, no DEC. |
 | Strategic vs transient | DEC/RISK — only for a decision/risk a future architect can rely on in a month/quarter; a weekly/one-off, event-bound decision/risk — as context in the capture header or a signal in a long-term entity's "Related entities"/"External signals", no standalone card. |
 | One vs several | One decision = one DEC; independent topics are not merged. |
+| Named vs role attribution | The DEC body stays impersonal: no personal names and no "owner"-style attribution; attribute by role or situation. A specific person — only in the frontmatter `decision_owner`. |
 
 ### PV.StateUpdate:4 - Solution
 
@@ -79,6 +80,11 @@ the decision canon clogs with junk entries.
      `characteristic` — only for `decision_type: adr`.
    - "Considered options" ≥ 2 → fill "Option comparison"; one option → "single option".
    - Always fill "Revisit conditions"; `revisit_by` or an open-ended note.
+   - **Body attribution (no names, no "owner"):** the DEC body never contains personal
+     names/surnames and never attributes by "the owner" (ambiguous — owner of what?).
+     Attribute by role or situation (e.g. "architect", "decided at the review"). If a
+     specific person made the decision, record that person only in the frontmatter
+     field `decision_owner` — never in the body.
 5. Run the common steps (below).
 
 **Input 2 — dialog news (no transcript).**
@@ -156,6 +162,7 @@ sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
 | CC-SU.5 | The DEC body carries only the DEC-ID and a web-URL; other references (source paths, entity IDs) — in the frontmatter. This applies to every body section, including "Внешние сигналы" (External signals) and "История пересмотров" (Revision history): in a signal's text only a verbal source name is allowed (e.g. "owner review 2026-09-08"); a path/ID goes to the frontmatter (`sources` for a path, `references` / `related_decisions` for entity IDs). |
 | CC-SU.6 | A decision change = edit the card + "Revision history", not a duplicate. |
 | CC-SU.7 | DEC/RISK is created only for a strategic/long-lived decision/risk; a weekly/one-off one is filed as capture context or a signal in a long-term card, not as a standalone card. |
+| CC-SU.8 | The DEC body contains no personal names/surnames and no "owner"-style attribution; attribution is by role/situation, and a specific person is recorded only in the frontmatter field `decision_owner`. |
 
 ### PV.StateUpdate:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -167,6 +174,7 @@ sake of canon completeness. The DEC input filter (E.9 "cheap stop") and the rule
 | A capture/artifact reference in the DEC body | Only DEC-ID and URL; the rest in the frontmatter. |
 | An inline source path or entity ID in the DEC body (incl. "Внешние сигналы"/"История пересмотров") | Verbal source name in the text; path/ID to the frontmatter (`sources`/`references`). |
 | A standalone DEC/RISK for a one-off/weekly event | Context in the capture header or a signal in a long-term card; no standalone card. |
+| A personal name or an "owner"-style attribution in the DEC body | Attribute by role/situation; the person goes to the frontmatter `decision_owner`. |
 
 ### PV.StateUpdate:9 - Consequences
 

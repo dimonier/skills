@@ -49,6 +49,11 @@ substantiveness threshold is needed.
 - The result must be traceable via discovery tools (`grep`, `SocratiCode`, the
   generated `work/_index.md`).
 
+`performed_under` names the container: the fitting **product track** when the work
+belongs to one, or the **service track** for a maintenance run that fits no product
+track (inbox intake with no fitting track, vault maintenance — `PV.Track` T.5). Either
+way the run is "inside a track".
+
 **Do not create** for: item 0 in "Next moves" (reconnaissance, freshness check);
 small administrative actions; fixing obvious errors (typos, formatting).
 
@@ -57,7 +62,7 @@ small administrative actions; fixing obvious errors (typos, formatting).
 1. Determine `hhmmss` — the current time (the step's completion moment).
 2. Create `project-vault/work/WRK-YYYY-MM-DD-hhmmss.md` from `work/_template.md`.
 3. Fill the frontmatter:
-   - `id`, `completed` (the completion moment, `YYYY-MM-DD hh:mm:ss`), `performer`, `performed_under` (the track).
+   - `id`, `completed` (the completion moment, `YYYY-MM-DD hh:mm:ss`), `performer`, `performed_under` (the container track — the fitting product track, or the service track when none fits).
    - `plan_item_ref` — the number of the item from the track's "Next moves" that was completed (optional for the thin form).
    - `enacted_method` — the applied FPF pattern(s), comma-separated.
    - `input_refs` — the incoming entities (optional for the thin form).

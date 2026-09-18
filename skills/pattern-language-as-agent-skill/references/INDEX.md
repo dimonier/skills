@@ -10,3 +10,4 @@
 | 6 | `PLAS.Naming` | Naming the skill and PatternIDs |
 | 7 | `PLAS.QualityAndRefresh` | Evaluating, improving, and refreshing a DPF-skill |
 | 8 | `PLAS.SelfSufficient` | Authoring a DPF-skill with no FPF dependency (self-sufficient variant) |
+| 9 | `PLAS.CompactedProjection` | Compacted runtime projection carrier (episteme-block bodies instead of E.8 bodies) |

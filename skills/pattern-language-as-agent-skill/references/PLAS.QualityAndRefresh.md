@@ -71,7 +71,11 @@ compares them mechanically.
    (relation functions come only from `E.4.PFR:3.3`). Regenerate
    with `python scripts/build_relations.py` after any frontmatter change
    (`E.4.PFR:3.2`: derived views cite one assertion and are never maintained
-   independently).
+   independently). The carrier must ship the **canonical** script contract
+   (`PLAS.SkillLayout:4` item 10): regenerate + `--check`, non-zero on drift,
+   `BEGIN`/`END` markers, no card edits. A copied/truncated variant that ignores
+   arguments and always rewrites defeats the check; when the Specialization graph is
+   empty, `--check` accepts the explicit stub line, not an empty graph.
 6. **Improve** with `E.23` in a loop, with a separate reviewer and a target level.
 7. **Weak-model gate** (`create-agent-skill`): a weaker model must follow every
    step without inventing steps or asking for clarification.
@@ -104,7 +108,7 @@ to silently drop rather than mark N/A, which hides the carrier-specific gap.
 | CC-QR.4 | Refresh triggers are named (`G.11`). |
 | CC-QR.5 | Publication-form checks are explicitly N/A, not silently dropped. |
 | CC-QR.6 | A machine frontmatter-parse check (incl. `description` YAML-safety) passes before reliance. |
-| CC-QR.7 | The dependency graph has one authored home (frontmatter); `:12` is a pointer; no card body repeats a `Governing FPF patterns` cue block; `scripts/build_relations.py --check` passes (generated `relations.md` matches the frontmatter); no `governs`/`applies-to` pseudo-edges. |
+| CC-QR.7 | The dependency graph has one authored home (frontmatter); `:12` is a pointer; no card body repeats a `Governing FPF patterns` cue block; `scripts/build_relations.py --check` passes (generated `relations.md` matches the frontmatter; an empty Specialization graph yields the explicit stub line, not an empty graph); the carrier ships the canonical script contract (regenerate + `--check`, non-zero on drift, markers, no card edits); no `governs`/`applies-to` pseudo-edges. |
 
 ### PLAS.QualityAndRefresh:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -115,6 +119,7 @@ to silently drop rather than mark N/A, which hides the carrier-specific gap.
 | Publication-form checks forced on a skill | Mark them N/A; there is no reader form. |
 | Frontmatter never machine-parsed | Run a cheap YAML/parse check before reliance. |
 | Graph views drift (direction flip between frontmatter / `:12` / `relations.md`) | Frontmatter is the single home; regenerate `relations.md` with `build_relations.py`; keep `:12` a pointer. |
+| `--check` never fails (a truncated script copy is shipped) | Ship the canonical contract (regenerate + `--check`, non-zero on drift); verify it fails on a deliberate drift. |
 
 ### PLAS.QualityAndRefresh:9 - Consequences
 

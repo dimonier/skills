@@ -68,8 +68,9 @@ facts stay outside, so the model brackets by how section names sound (measured
 | Default vs opt-in | Plain-prose externalization is the default; the notation is opt-in on explicit owner consent. |
 | Size vs reader cost | Minimal size trades readability and normative force; it does **not** lose the derivation layer — `[bracketed]` content stays readable (prose reconstruction is out of scope for a skill). |
 | Delete vs compress | Delete/externalize first (conditional −~90%); compress only the remainder (−~38%). |
+| Compacted runtime vs maintainer source | The compacted skill is a **runtime projection** (allow-list: method + trigger + router); the canonical PLAS carrier keeps production/provenance/derivation data for later refinement. |
 | Compression vs comprehension | The `episteme` split (`sourceClaims` vs `fpfMetadata`) must stay disciplined so the reading agent does not mistake renderer inference for a source claim; round-trip reconstruction is not a goal. |
-| In-prompt discipline vs a script | The full normative preamble (~424 tokens) works (20/20); a ~60-line marker validator costs 0 tokens and catches both LEAK and DROP. |
+| In-prompt discipline vs a script | The full normative preamble (~424 tokens) works (20/20) and is the sanctioned authoring check. No marker validator is shipped by this pattern or by `episteme-compaction`; a carrier may supply its own, but none is required here. |
 | Prose vs slots | Hybrid F3: slots for factual claims, prose for context — not a prose monolith, not full notation. |
 | Compact vs imperative | Imperative rules degrade to constatives under full notation; commands, paths, IDs never compress. |
 
@@ -108,7 +109,8 @@ Consumption model: a skill is read by an LLM agent to understand the method —
    is read-only and never re-renders. A design-time investment, not a runtime cost.
 6. **Split correctness (LEAK/DROP).** An authoring-time discipline: a leak (inference
    outside brackets) or a drop (source fact inside brackets) makes the reading agent
-   misclassify a claim. A marker validator catches both at 0 tokens.
+   misclassify a claim. Authoring-time review under `ECPF.2` catches both; this pattern
+   ships no validator (a carrier may add one).
 
 *Explicitly NOT a cost for skills:*
 - **Lossy round-trip / dropped `[fpfMetadata]`.** Reconstruction to prose is **out of
@@ -118,10 +120,41 @@ Consumption model: a skill is read by an LLM agent to understand the method —
   prose-reconstruction check (`ECPF.7`) therefore do not apply.
 
 **Move 1 — discard the unnecessary (do this first).**
+
+The target is the **runtime allow-list** — after Move 1 the compacted skill keeps only
+what the reading agent uses to apply the method: (a) the method/procedure itself and
+(b) the entry point/trigger (the `SKILL.md` `name`/`description` and the router).
+
 1. Route conditional/rarely-needed content to `references/` (load on demand), and
    never duplicate always-loaded content (`ASB.ProgressiveDisclosure`, `ASB.Atomicity`).
-2. Remove content that is neither procedure nor needed at load time. This is the
-   cheapest saving and is *not* replaced by notation — the two **stack**.
+2. Remove content that is neither procedure nor needed at load time. The compacted
+   skill is a **runtime projection, not the canonical source**: the canonical PLAS
+   DPF/LPF carrier keeps the material below (deliberately — it supports later
+   refinement, `PLAS.QualityAndRefresh`, `ASB.Evolution`), so nothing is lost; only
+   the runtime projection drops it. Explicit *delete-list*:
+   - **Production/derivation meta-description** — how the skill was produced, what was
+     or was not transferred, derivative notes in the `description`. The reading agent
+     must not read how the skill was made; one pointer to the canonical source is
+     enough, not an explanation.
+   - **Provenance/readiness metadata of cards** — inherited readiness, and `keywords`
+     the loader does not use.
+   - **Card YAML frontmatter** — `id`/`title`/`status`/`keywords`/`dependencies`. The
+     operational rule is the runtime allow-list above, **not** a "duplicates the router"
+     test: for a DPF/LPF carrier the routing `SKILL.md` table is strictly
+     `situation → file` and carries no edges, so `id`/`dependencies` duplicate nothing —
+     yet per-card frontmatter is outside the allow-list and is removed **entirely**.
+     "Duplicates the router" is only one case of applying the allow-list. In a compacted
+     projection, identity is the filename stem + body H1, local links are the
+     `Continues`/`Reopen` slots, and the graph/provenance live in the canonical source
+     (`PLAS.CompactedProjection:4` item 5, `CC-CPR.5`); there is no "nowhere to store it"
+     case, because the projection always names its canonical source (`:4` item 1 there).
+     A non-self-sufficient (FPF-grounded) carrier keeps its FPF link as a `Grounding (FPF)`
+     slot **inside** the `episteme` block, since the frontmatter home is gone.
+   - **The `:12 Relations` section** that duplicates the router graph — a case of the
+     previous item (the graph lives in the canonical source).
+
+This removal is the cheapest saving and is *not* replaced by notation — the two
+**stack**.
 
 **Move 2 — render the remainder as `episteme` blocks (hybrid F3).**
 3. **Decide formality** (`ECPF.1`). Target: present the skill materials **as
@@ -130,27 +163,29 @@ Consumption model: a skill is read by an LLM agent to understand the method —
    ordinary prose carries connective context and the load-bearing imperatives. This
    is the block presentation applied throughout the body, not a single decorative
    block.
-4. **Render** (`ECPF.2`): every block is a ```` ```episteme id="…" context="…" ````
-   fence. Non-bracketed content is `sourceClaims` (what the source asserts);
-   `[bracketed]` sections (`[reasoning]`, `[analysis]`, `[evidence]`, `[assurance]`,
-   `[aggregation]`) are `fpfMetadata` — renderer inference/derivation, kept in the
-   block as context for the reading agent.
-5. **Enforce the split — full normative preamble, not a short one.** The renderer's
-   instructions must carry: the layer names; the **litmus test** ("asserted by the
-   source, or inferred by the renderer?"); the no-fabricate rule; and the list of
-   inference markers ("похоже", "видимо", "вероятно", "рекомендую", "стоит",
-   "примерно", percentages) that **always** go into brackets. A short preamble that
-   omits the litmus test produces more errors than no preamble at all.
+4. **Render** per `episteme-compaction` (`ECPF.2`): the `episteme` fence format and
+   the `sourceClaims` / `fpfMetadata` split are defined there and **not** restated
+   here (duplication is harmful, `CC-CP.4`).
+5. **Enforce the split — apply the full normative discipline, never a short
+   paraphrase.** Render under `episteme-compaction`'s full normative rendering
+   discipline (`ECPF.2`), which is **not** restated here (duplication is harmful,
+   `CC-CP.4`). A short paraphrase is worse than none: measured 10/20, below
+   no-preamble 17/20, against full 20/20. Claim values follow `ECPF.2` /
+   `CC-ECPF2.8` — always English; exceptions: proper names, domain terms, wordplay,
+   quoted material.
 6. **Keep commands, paths, IDs, and proper names verbatim** — they do not compress.
    Keep a load-bearing **imperative** as prose or as an explicit source claim; do not
    let the notation flatten it into a constative.
-7. **Prefer the cheap validator when a deterministic check suffices.** A small script
-   over the inference markers catches LEAK/DROP at 0 tokens; keep the full preamble
-   in the renderer (loaded once per session) as the in-prompt alternative.
-8. **Verify the split** (authoring-time). Run the marker validator (or check by
-   eye) so there is no LEAK/DROP — the reading agent must be able to tell a source
-   claim from renderer inference. Prose **reconstruction is not required** (`ECPF.7`
-   is out of scope for a skill).
+7. **Check the split in-prompt — no validator is shipped.** This pattern ships no
+   marker script, and `episteme-compaction` ships none either, so no deterministic
+   check is promised here. The sanctioned check is the in-prompt discipline:
+   `ECPF.2`'s full rendering discipline, kept in the renderer (loaded once per
+   session). A carrier **may** supply its own marker validator (naming its path and
+   exit code), but it is optional and not required by this pattern.
+8. **Verify the split** (authoring-time). Check by review under `ECPF.2` so there is
+   no LEAK/DROP — the reading agent must be able to tell a source claim from renderer
+   inference. Prose **reconstruction is not required** (`ECPF.7` is out of scope for
+   a skill).
 
 **Economics (measured on the report's corpus).** On an instructional chapter (1719 B
 prose): 444 tokens prose → 274 tokens notation (−38.3%); the full preamble is 424
@@ -169,6 +204,17 @@ Move 2: the factual parts (inputs, outputs, constraints, exact paths) become an
 the inference clearly separated, so it does not mistake the recommendation for a
 method rule.
 
+**Worked F3 form for a procedural skill — reference, don't invent.** The procedure-
+shaped worked example is already sanctioned by PLAS, so this card does not invent a
+local one: `PLAS.CompactedProjection:4` item 7 + `CC-CPR.8` fix a **named procedural
+slot template** (`UseThisWhen` / `Result` / `Solution` / `Stop` / `Checks` /
+`Antipatterns` / `Continues` / `Reopen`, plus the optional `Grounding (FPF)` slot), and
+`:5` there carries the real archetype (the compacted DPF-skill `dpf-systems-engineering`).
+A procedural/CLI skill renders under that template: the `episteme` block holds the
+factual claims (inputs, outputs, constraints, exact paths), while the load-bearing
+imperative steps stay **prose** beside the block — not flattened into slots. This is
+exactly the border the "whole skill rendered as notation" anti-pattern crosses.
+
 **Counter-example (from the report).** Rendering an entire instructional skill as
 notation is not worth it: `Always use ASCII-only path names` degrades to
 `dir names: ASCII-only on VPS`, and the commands/paths stay verbatim anyway.
@@ -185,8 +231,9 @@ it or assumes "smaller is better", without owner consent (the gate exists for th
 **notation-for-everything** — compressing material that should simply be deleted, or
 rendering a whole imperative skill as notation; and **short-preamble confidence** —
 believing a one-line note ("brackets are inference") is enough, when it measured
-*worse than no preamble*. Get consent, delete before compressing, and use the full
-preamble (or the marker validator) at authoring time to keep the split correct.
+*worse than no preamble*. Get consent, delete before compressing, and apply `ECPF.2`'s
+full normative discipline at authoring time to keep the split correct (this pattern
+ships no validator; a carrier may add one).
 
 ### ASB.Compaction:7 - Conformance Checklist
 
@@ -195,12 +242,13 @@ preamble (or the marker validator) at authoring time to keep the split correct.
 | CC-CP.0 | The owner has **explicitly** confirmed (a) the minimal-size goal and (b) acceptance of the `:4` trade-offs, before any `episteme` rendering. Absent consent, only Move 1 is done. |
 | CC-CP.1 | Move 1 precedes Move 2: conditional content is externalized/deleted before any compression. |
 | CC-CP.2 | With consent, the skill materials are presented as `episteme` blocks (F3 hybrid: blocks for claims, prose for connective context and imperatives); without consent, plain prose. |
-| CC-CP.3 | Every rendered block is an ```` ```episteme id="…" context="…" ```` fence with the `sourceClaims` / `fpfMetadata` split. |
-| CC-CP.4 | The split is rendered correctly at authoring: the **full** normative preamble (layer names, litmus test, no-fabricate, marker list) or a deterministic validator — never a short preamble (it is worse than none). |
+| CC-CP.3 | Every rendered block is an ```` ```episteme id="…" context="…" ```` fence with the `sourceClaims` / `fpfMetadata` split. A **`sourceClaims`-only** block is its valid degenerate case: when Move 1 removed all `[bracketed]` material, the split holds vacuously — the check is the **absence of LEAK**, not the presence of a bracket section. |
+| CC-CP.4 | The split is rendered under `episteme-compaction`'s full normative discipline (`ECPF.2`), or a carrier-supplied deterministic validator (optional — none is shipped by this pattern or by `episteme-compaction`) — never a short paraphrase (worse than none). `ECPF.2`'s rules are referenced, not restated (no duplication). |
 | CC-CP.5 | Commands, paths, IDs, and proper names are kept verbatim; no load-bearing imperative is flattened to a constative. |
-| CC-CP.6 | The split is verified at authoring (marker validator or review) free of LEAK/DROP — the reading agent can tell source claims from inference. Prose reconstruction is **not** required (out of scope). |
+| CC-CP.6 | The split is verified at authoring by review under `ECPF.2` (a carrier-supplied validator is optional), free of LEAK/DROP — the reading agent can tell source claims from inference. Prose reconstruction is **not** required (out of scope). |
 | CC-CP.7 | Token-savings figures are cited only for the measured text class (not generalized from a different corpus). |
 | CC-CP.8 | The owner is informed of the accepted trade-offs (restricted readership, lost normative force, limited saving, dependency) — not only of the saving. |
+| CC-CP.9 | Move 1 leaves only the runtime allow-list (method + entry/trigger + router); production/derivation meta-description, provenance/readiness metadata, and **all** card frontmatter (plus the `:12 Relations` section) are removed from the compacted form (the canonical PLAS carrier retains them). |
 
 ### ASB.Compaction:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -211,10 +259,13 @@ preamble (or the marker validator) at authoring time to keep the split correct.
 | Treating the skill as reconstructable prose | Skills are read, not reconstructed — do not require a lossless round-trip or `ECPF.7`. |
 | Compress before deleting | Delete/externalize first; then compress the remainder. |
 | Whole skill rendered as notation | Use hybrid F3: slots for facts, prose for context and imperatives. |
-| Short one-line preamble for rendering | Use the full normative preamble or a marker validator. |
+| Short one-line preamble for rendering | Use `ECPF.2`'s full normative discipline (no validator is shipped; a carrier may add one). |
 | Inference left outside brackets | Apply the litmus test; move inferred content to `[reasoning]`/`[analysis]`. |
-| Source facts swept into brackets | Keep `sourceClaims` non-bracketed; verify with the validator. |
+| Source facts swept into brackets | Keep `sourceClaims` non-bracketed; verify by review under `ECPF.2`. |
 | Generalizing a measured % to "skills in general" | Cite the figure only for its measured text class. |
+| Production/provenance/frontmatter content left in the compacted skill | Apply the Move-1 delete-list; remove it from the runtime projection. |
+| Maintainer data deleted from the canonical source too | Remove only from the compacted projection; keep the canonical PLAS carrier (later refinement depends on it). |
+| Restating `ECPF.2`'s rules in this skill | Reference `ECPF.2`; duplication is harmful (`CC-CP.4`). |
 
 ### ASB.Compaction:9 - Consequences
 
@@ -225,7 +276,10 @@ combined with deletion/externalization), at the cost of restricted readership,
 lost imperative force, kept-verbatim commands/paths, and a design-time rendering
 discipline. There is **no** loss of the derivation layer: prose reconstruction is out
 of scope for a skill, so `[bracketed]` context stays available to the reading agent.
-The notation does **not** replace `references/`; it stacks on top of it.
+The notation does **not** replace `references/`; it stacks on top of it. Move 1 also
+strips production/provenance/router-duplicating data from the runtime projection; the
+canonical PLAS carrier keeps it, so a compacted skill loses nothing that later
+refinement needs.
 
 ### ASB.Compaction:10 - Rationale
 
@@ -245,6 +299,10 @@ split discipline still is.
 | Report "Отчёт: тестирование нотации episteme" (2026-09-11) | Adopt | Delete-then-compress order; full-preamble requirement at authoring; 38.3% measured; hybrid F3 | Reopen on a new experiment/additional runs (n>1) |
 | `episteme-compaction` ECPF.1–ECPF.7 (FPF `A.6.3`) | Adopt | `episteme` fence, `sourceClaims`/`fpfMetadata` split, `ECPF.2` typing; `ECPF.7` not required for a skill | Reopen on an ECPF edition change |
 | AS-DPF `AS.4` Progressive Disclosure | Adopt | Move-1 externalization to `references/`; the no-consent default | Reopen on `AS.4` revision |
+| Incoming proposal (2026-09-11, from the `sfera-standards` miniaturization) | Adopt | Move-1 runtime allow-list/delete-list; `:8` anti-patterns | Reopen if the compaction/PLAS boundary changes |
+| Owner clarification (2026-09-11): maintainer data is legitimate in a PLAS DPF/LPF and is dropped only in the compacted form; claim values always English per `ECPF.2` | Adopt | Move-1 delete-list scope (runtime projection vs canonical source); Move-2 language reference (`CC-ECPF2.8`), no ECPF duplication | Reopen if the compaction/PLAS boundary or `ECPF.2` changes |
+| Incoming proposal (2026-09-13, from `FPF` applying this pattern to `dpf-systems-engineering`) | Adopt | Move-1 "allow-list, not router-duplication" clause; `CC-CP.3` `sourceClaims`-only case; `:5` reference to the sanctioned PLAS procedural template; validator reframed (none shipped — carrier-optional) | Reopen if the compaction/PLAS boundary or a validator edition changes |
+| Incoming proposal (2026-09-14, from `pattern-language-as-agent-skill`) | Adopt | Move-1 wording (per-card frontmatter removed by the allow-list, entirely); coordination with `PLAS.CompactedProjection` (`:12`) | Reopen if the compaction/PLAS boundary changes |
 
 Best-known line: delete first, then compress the remainder — **and only on owner
 consent**. Rejected rivals: "compress a whole instructional skill as notation"
@@ -258,7 +316,8 @@ because smaller is better" (violates the opt-in gate).
 - **Coordinates with (DPF):** `AS.3` (atomicity — where shared content goes).
 - **Coordinates with (FPF):** `E.4.PFR` (record the notation edition).
 - **Coordinates with (LPF):** `ASB.ProgressiveDisclosure` (the **default** when owner consent is absent).
+- **Coordinates with (PLAS, peer):** `PLAS.CompactedProjection` — the compacted-carrier card; it depends on this pattern's Move 1/Move 2 and fixes the projection's runtime allow-list, the no-frontmatter rule, and the in-block `Grounding (FPF)` slot. This card points back to it (the projection always names its canonical source).
 - **Skill dependency:** `episteme-compaction` (ECPF.1–ECPF.7).
-- **Reference (vault):** `DEC-0001` (the decision adopting this practice; see its revision history for the opt-in gate).
+- **Reference (vault):** `DEC-0001` (the decision adopting this practice; see its revision history for the opt-in gate); `DEC-0003` (the Move-1 runtime allow-list / delete-list locus).
 
 ### ASB.Compaction:End

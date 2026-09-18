@@ -40,6 +40,8 @@ processing.
 | Mixed formats vs one process | Routing by material type: transcript → StateUpdate, research → ExternalResearch, work → Track. |
 | PDF fidelity vs direct analysis | Convert PDF to Markdown (pdf2md); analyse only the conversion. |
 | Completeness vs clutter | After full processing — clear `inbox/` (delete the channel file regardless of material type). Nothing is lost: the routed content lives in the target track/entity and a source copy is kept in `sources/`. |
+| Backup artifacts vs real material | `*.bak` files in `inbox/` are ignored — not copied to `sources/`, not routed, not counted as an unprocessed signal. |
+| Traceability of the intake act | The intake act is recorded as a WRK in the fitting target track; the service track (`PV.Track` T.5) is the fallback when no track fits. |
 
 ### PV.Inbox:4 - Solution
 
@@ -51,7 +53,9 @@ processing.
    in the target track/entity and a source copy in `sources/`. This holds for
    **every** material type — PDF, transcript, article, and an outbox-style proposal
    (a file with `addressee`/`source_project` frontmatter addressing this
-   project/skill).
+   project/skill). Files with the `*.bak` extension are ignored: they are
+   backup/edit artifacts, not material — not copied to `sources/`, not routed, and
+   removed from `inbox/` without substantive processing.
 2. **PDF preprocessing.** If there is a `.pdf` in `inbox/` — before substantive
    processing convert each PDF to Markdown with the `pdf2md` skill (script
    `scripts/extract_pdfs.py`, parameters `--source <inbox_dir> --first N`). Use the
@@ -67,7 +71,17 @@ processing.
    track or create a new one (Track). An outbox-style proposal (feedback addressed
    to this project/skill) → same routing: keep a source copy in `sources/`, file the
    proposal's gist into a new or fitting track (Track), then clear the inbox file
-   like any other material.
+   like any other material. `*.bak` files are never routed (see step 1).
+5. **Recording the intake act.** Completing an inbox-processing pass is a substantive
+   act with a result (routed material, possibly new tracks/entities). Record it as a
+   WRK:
+   - **into the fitting target track**, when the routed material landed in (or
+     created) a product track;
+   - **under the permanent service track** (`PV.Track` T.5), only when no fitting
+     track exists (e.g. the material produced only atomic entities — DEC/Q/RISK/CON —
+     with no operational line).
+   Do not open a track solely to contain the intake WRK itself; the routed material's
+   track/entity is the *target* of the pass.
 
 ### PV.Inbox:5 - Archetypal Grounding
 
@@ -90,6 +104,8 @@ accumulate.
 | CC-IB.2 | Every material is routed by type: StateUpdate / ExternalResearch / Track. |
 | CC-IB.3 | After full processing `inbox/` is cleared — the channel file is deleted for every material type (PDF, transcript, article, outbox-style proposal); nothing is lost: the content lives in the target track/entity and a source copy in `sources/`. |
 | CC-IB.4 | A conversion failure is recorded and brought to the owner. |
+| CC-IB.5 | `*.bak` files in `inbox/` are ignored: not copied to `sources/`, not routed, removed without substantive processing. |
+| CC-IB.6 | An inbox-processing pass is recorded as a WRK in the fitting target track; the service track (`PV.Track` T.5) is used only when no track fits. |
 
 ### PV.Inbox:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -98,12 +114,15 @@ accumulate.
 | Direct PDF analysis without conversion | First `pdf2md`, then process the `.md`. |
 | Material without explicit routing | Determine the type and route to the correct procedure. |
 | `inbox/` not cleared after processing (incl. an outbox-style proposal file retained after routing) | Keep the source copy in `sources/`, then delete the inbox file on completion. |
+| `*.bak` processed as standalone material | Ignore `*.bak` (backup/edit artifact, not a source). |
+| Inbox processing left without a WRK, or a track opened just for it | Record the pass as a WRK in the fitting target track; the service track only when none fits (`PV.Track` T.5). |
 
 ### PV.Inbox:9 - Consequences
 
 A reliable intake separates "capture" from "substantive processing" and does not let
-material stay an orphan. The price — mandatory PDF conversion and explicit routing
-of every incoming item.
+material stay an orphan; the intake pass is itself traceable (a WRK under the service
+track). The price — mandatory PDF conversion, explicit routing of every incoming
+item, and discipline about what to ignore (`*.bak`).
 
 ### PV.Inbox:10 - Rationale
 

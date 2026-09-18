@@ -77,11 +77,15 @@ generated.
 
 1. **`SKILL.md`** is routing-only (see `PLAS.Dispatcher`).
 2. **`references/`** holds the canonical bodies (see `PLAS.PatternBody`), plus
-   `INDEX.md` (one logical index) and `relations.md`. `SKILL.md` and `references/*.md`
-   are edited directly; `relations.md` is a **generated** projection of the frontmatter
-   graph (`scripts/build_relations.py`), never hand-edited. Its maintained part is the
-   source/edition citation; its graph block is generated. `SKILL.md` carries only a
-   one-line pointer to it.
+   `INDEX.md` (one logical index) and `relations.md`. A compacted runtime projection
+   (`PLAS.CompactedProjection`) is a legitimate second body form here: the bodies are
+   `episteme` blocks instead of `E.8` bodies, a card carries **no frontmatter**, and the
+   projection names its canonical source (which owns the graph). `SKILL.md` and
+   `references/*.md` are edited directly; for a **full** carrier `relations.md` is a
+   **generated** projection of the frontmatter graph (`scripts/build_relations.py`),
+   never hand-edited (a compacted projection does not ship it — see item 10). Its
+   maintained part is the source/edition citation; its graph block is generated.
+   `SKILL.md` carries only a one-line pointer to it.
 3. **`assets/`** is for logos/data/sample payloads, never a framework monolith.
    **Preserve source attachments:** an artifact the source embeds or references
    (dashboard JSON, sample payload, schema) must be saved under `assets/`, not
@@ -129,11 +133,20 @@ generated.
     fact written as prose; no governor/owner relation exists). `:12 Relations` carries
     only a **one-line pointer** to the frontmatter and does **not** repeat the edges
     (no duplication). `relations.md` is a **generated** readable projection of the
-    intra-LPF graph, rebuilt by `scripts/build_relations.py` (`--check` validates), and
-    is never hand-edited — one authored home, derived views (`E.4.PFR:3.2`). This
-    specialization key is a local extension of fpf-core's frontmatter (which
-    carries only `builds_on`/`coordinates_with`); the Specialization semantics still
-    trace to `E.4.PFR:3.3`.
+     intra-LPF graph, rebuilt by `scripts/build_relations.py` (`--check` validates), and
+     is never hand-edited — one authored home, derived views (`E.4.PFR:3.2`). This
+     specialization key is a local extension of fpf-core's frontmatter (which
+     carries only `builds_on`/`coordinates_with`); the Specialization semantics still
+     trace to `E.4.PFR:3.3`. The carrier ships the **canonical** `build_relations.py`
+     contract — a regenerate mode **and** a `--check` mode that exits non-zero on drift,
+     `BEGIN`/`END` markers, and no card edits (`PLAS.QualityAndRefresh:4` item 5). When
+     the intra-LPF Specialization graph is **empty** (sibling cards, none `specializes`),
+     the generator emits an explicit **stub** line ("no intra-LPF Specialization edges;
+     FPF content edges live only in card frontmatter") instead of an empty graph, so a
+     legitimate projection is never read as a generation bug. **Scope:** this item
+     governs every carrier that **ships** `relations.md`/the generator; a compacted
+     runtime projection (`PLAS.CompactedProjection`) does not ship them — it carries no
+     card frontmatter, and its graph/provenance live in the canonical source.
 11. **`scaffold/` is an optional carrier-reproduction kit.** When a skill reproduces
     a working directory at init (e.g. a vault scaffold for an init entry path,
     `E.4.DPF` layering D5), it may carry a `scaffold/` directory: the target
@@ -152,11 +165,21 @@ generated.
     the single-surface discipline extended across the deployment hop: exactly one
     editable surface, one owner of the sync, no fork/drift between repo and installed
     copy.
+13. **Consumer-normative surface (reading boundary).** Name which part of the carrier
+    a runtime **reading** agent is obliged to read, as distinct from the authoring /
+    verification surface: the runtime-normative surface is `SKILL.md` + the
+    `references/*.md` card reached through the routing table. `INDEX.md`,
+    `relations.md`, the source/edition citation, and any authoring/reconstruction
+    material are reference-only. Reverse-rendering a compacted notation back to prose
+    (`ECPF.7`) is **not** a requirement on the consumer: a skill is read to apply the
+    method, not reconstructed (`PLAS.CompactedProjection`). This boundary holds for
+    every carrier form; a consumer obligation is never inferred from an authoring or
+    reconstruction step.
 
 ### PLAS.SkillLayout:5 - Archetypal Grounding
 
 **Show.** `pattern-language-as-agent-skill/` itself follows this layout: `SKILL.md` +
-`references/` with `INDEX.md`, `relations.md`, and eight `PLAS.*` bodies; no
+`references/` with `INDEX.md`, `relations.md`, and nine `PLAS.*` bodies; no
 `assets/` monolith. The skill directory is the access-facing carrier; the `C.2.1`
 edition is recoverable from `references/`.
 
@@ -179,11 +202,14 @@ edition/carrier wording are the two counterweights.
 | CC-SL.4 | `INDEX.md` lists every pattern body exactly once. |
 | CC-SL.5 | Edition and carrier stay distinct: the skill is the access-facing carrier bearing the edition, not the edition itself. |
 | CC-SL.6 | Authoring residue (DRR, review notes, draft, ledger) is outside the skill; version history (CHANGELOG) is not authoring residue and is optional. |
-| CC-SL.7 | The dependency graph has one authored home — frontmatter `dependencies` (`builds_on`/`coordinates_with` FPF codes; `specializes` local code, child-side, `specialized_by` derived); `:12` is a one-line pointer; card bodies carry no FPF cue block; `relations.md` is generated and never hand-edited. |
+| CC-SL.7 | The dependency graph has one authored home — frontmatter `dependencies` (`builds_on`/`coordinates_with` FPF codes; `specializes` local code, child-side, `specialized_by` derived); `:12` is a one-line pointer; card bodies carry no FPF cue block; `relations.md` is generated and never hand-edited. For a compacted projection (`PLAS.CompactedProjection`) the graph home is the canonical source, so cards carry no frontmatter. |
 | CC-SL.8 | An external-standard DPF declares a pin record (URL + edition + status) and edition-tied refresh; it is stated to be a representation, not the standard. |
 | CC-SL.9 | A source attachment (dashboard JSON, sample payload, schema) is preserved under `assets/`, not dropped; an embedded draw.io `<svg>` is recovered from its `content` attribute and saved **only** as `.drawio` (wrapper not kept, SVG/PNG not regenerated). |
 | CC-SL.10 | `scaffold/` is used only for a real init/reproduction task (dir tree + templates + scripts copy), not as empty scaffolding. |
 | CC-SL.11 | The authoring agent never edits the installed copy in the user-level skills directory; the sync to it is owner-owned and stated as such. |
+| CC-SL.12 | A compacted runtime projection (`PLAS.CompactedProjection`) is declared as a projection naming its canonical source; its `E.8`-section CCs are N/A, the compacted readiness profile applies, cards carry no frontmatter, and readiness is declared only collectively. |
+| CC-SL.13 | **A carrier that ships a graph** ships the canonical `build_relations.py` contract (regenerate + `--check`, non-zero on drift, `BEGIN`/`END` markers, no card edits); `--check` passes, and an empty Specialization graph yields the explicit stub line, never an empty/misleading graph. A compacted projection does not ship the graph. |
+| CC-SL.14 | The consumer-normative surface is named (`SKILL.md` + routed `references/`); authoring/reconstruction material (`INDEX.md`, `relations.md`, `ECPF.7` reverse-render) is reference-only and not a consumer obligation. |
 
 ### PLAS.SkillLayout:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -203,6 +229,9 @@ edition/carrier wording are the two counterweights.
 | Embedded draw.io-SVG kept as-is (unreadable wrapper) | Recover the mxfile from the `content` attribute; save only `.drawio` in `assets/`; drop the wrapper; do not regenerate SVG/PNG. |
 | Empty `scaffold/` added for completeness | Add it only for a real init/reproduction task. |
 | Editing the installed copy in the user-level skills dir | Sync is owner-owned; the authoring agent works only on the repo carrier. |
+| Empty `relations.md` graph presented as generated | Emit the explicit stub line when the Specialization graph is empty. |
+| Truncated/forbidden `build_relations.py` (no `--check`, always rewrites, edits cards) | Ship the canonical contract: regenerate + `--check` (non-zero on drift), markers, no card edits. |
+| Consumer obliged to read `INDEX.md`/`relations.md` or reverse-render | Name the consumer surface; those are reference-only. |
 
 ### PLAS.SkillLayout:9 - Consequences
 

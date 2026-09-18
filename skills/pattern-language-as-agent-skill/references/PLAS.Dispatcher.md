@@ -51,7 +51,11 @@ progressive disclosure or load.
    (`create-agent-skill` description trigger). The `description` must be
    **YAML-safe**: use a block scalar (`|`/`>`) or quotes whenever the text
    contains a `:` followed by a space or other significant YAML characters, or
-   the whole frontmatter fails to parse.
+   the whole frontmatter fails to parse. A **quantitative** claim in
+   `description` (token saving, speed-up, size reduction, …) must be **measured and
+   qualified** — name the text class/corpus and the measurement source — or be stated
+   qualitatively; an unqualified figure over-promises exactly on the classes where it
+   was not reproduced.
 2. **Bounded context.** One short line naming the domain/use frame.
 3. **Routing table.** One row per pattern card: situation → `references/X.md`. No
    subject knowledge in the cells beyond enough to route. The table is strictly
@@ -80,7 +84,8 @@ The routing table is easy to bloat: one "helpful" sentence of subject knowledge
 per row silently turns the dispatcher into a teaching surface. A `description`
 tuned too short ("Runs tests") or too long (300+ chars of narrative) both break
 triggering; the bias is toward either under-specifying or over-narrating the
-trigger.
+trigger. A quantitative promise ("~65% savings") is the same bias in numeric form —
+it states an effect without a measurement or its text class.
 
 ### PLAS.Dispatcher:7 - Conformance Checklist
 
@@ -93,6 +98,7 @@ trigger.
 | CC-DS.5 | `description` is YAML-safe (block scalar or quotes when it contains `:` + space or other significant characters). |
 | CC-DS.6 | The routing table is strictly "situation → pattern"; no dependency/edition columns. |
 | CC-DS.7 | A linear navigation rule is used only for a single dominant chain; multi-use-case skills name one entry path per use-case, consistent with `description`. |
+| CC-DS.8 | A quantitative claim in `description` is measured and qualified (text class/corpus + source), or stated qualitatively; an unqualified figure is not used. |
 
 ### PLAS.Dispatcher:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -104,6 +110,7 @@ trigger.
 | Dependency/edition columns in the routing table | Keep "situation → pattern"; move dependencies to `relations.md`. |
 | One linear chain for several use-cases | Name one entry path per use-case. |
 | `description` breaking YAML (bare `:` + space) | Use a block scalar (`|`/`>`) or quotes. |
+| Unqualified quantitative claim in `description` ("~65% savings") | State corpus/class + measurement source, or make it qualitative. |
 
 ### PLAS.Dispatcher:9 - Consequences
 

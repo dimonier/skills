@@ -19,6 +19,7 @@ description: |
 |---|---|
 | Deciding whether and what to author as a DPF-skill (cold start) | `references/PLAS.EntryRoute.md` |
 | Authoring a DPF-skill with no FPF dependency (self-sufficient variant) | `references/PLAS.SelfSufficient.md` |
+| Authoring/evaluating a compacted (minified) runtime projection with episteme-block bodies | `references/PLAS.CompactedProjection.md` |
 | Setting up the skill directory layout and the single-surface decision | `references/PLAS.SkillLayout.md` |
 | Writing SKILL.md as a routing-only dispatcher | `references/PLAS.Dispatcher.md` |
 | Writing one pattern body in references/ | `references/PLAS.PatternBody.md` |
@@ -31,7 +32,9 @@ description: |
 First load `references/PLAS.EntryRoute.md` — it decides whether a DPF-skill is
 the right outcome at all and fixes the authoring scenario (FPF-grounded vs
 self-sufficient; from-scratch vs external-standard). The self-sufficient variant
-routes to `references/PLAS.SelfSufficient.md`. Then `references/PLAS.SkillLayout.md`
+routes to `references/PLAS.SelfSufficient.md`; a deliberately minified carrier routes
+to `references/PLAS.CompactedProjection.md` (episteme-block bodies, allow-list/
+delete-list, compacted readiness profile). Then `references/PLAS.SkillLayout.md`
 for the single-surface decision and directory layout. Only then the mechanics cards
 (Dispatcher → PatternBody → GoverningCues → Naming), with QualityAndRefresh
 closing the loop.
@@ -40,7 +43,11 @@ closing the loop.
 
 `references/` IS the canonical source. Both the agent and the human author read
 and edit `references/*.md` directly. There is no `assets/` monolith and no
-reader-facing publication form to rebuild. The dependency graph has one authored home
+reader-facing publication form to rebuild. A **compacted runtime projection**
+(`references/PLAS.CompactedProjection.md`) is a legitimate second body form — cards
+render as `episteme` blocks instead of `E.8` bodies — but it remains a projection
+that names its canonical source; it never becomes the source of truth. The dependency
+graph has one authored home
 — each card's frontmatter `dependencies`; `references/relations.md` is a generated
 projection of the **intra-LPF Specialization** graph (`scripts/build_relations.py`),
 never hand-edited. FPF content edges and governing cues live **only** in the
@@ -49,7 +56,7 @@ follow `create-agent-skill`.
 
 ## references/ status
 
-**First seed** — 8 pattern cards + INDEX + relations. Pattern bodies are draft
+**First seed** — 9 pattern cards + INDEX + relations. Pattern bodies are draft
 `E.8` bodies marked `seed` (level only); a card's frontmatter `status` carries the
 level (`seed`/`stable`), **not** the readiness mode. They stay `seed` until they
 pass `E.21` / `E.4.DPF.DA` (see `references/PLAS.QualityAndRefresh.md`).
@@ -60,6 +67,24 @@ faithful to FPF (`E.4.DPF`, `E.8`, `E.4.PFR`) + `create-agent-skill`; **not**
 is the pattern status (`Stable`/`Draft`), while package adequacy is a separate
 aggregate result (`E.4.DPF.DA:4.5` `DPFPackageAdequacyStatus`); no per-card
 `readiness:` key is used (`PLAS.PatternBody:4` item 6, CC-PB.5).
+
+**Exception — self-sufficient cards.** A self-sufficient DPF
+(`references/PLAS.SelfSufficient.md`) has no FPF-governed pattern-status level, so its
+card carries the explicit readiness mode in `status` (`status: source-faithful` /
+`status: case-validated`) instead — the documented exception to `CC-PB.5`.
+
+**Carrier profile — compacted projection.** A compacted runtime projection
+(`references/PLAS.CompactedProjection.md`) is a second legitimate carrier form: its
+bodies are `episteme` blocks, not `E.8` bodies. It declares the mode **only
+collectively** (the package is integral, so cards cannot diverge), but reads the
+`source-faithful` threshold against the **compacted** profile (runtime allow-list
+present + LEAK/DROP-free split + complete routing + source/edition citation, plus the
+`Grounding (FPF)` slot for a non-self-sufficient carrier) instead of the
+full-structure threshold. The `E.8`-section CCs are marked N/A for this carrier; a
+compacted card carries **no frontmatter** — identity is the filename stem + body H1,
+local links are `Continues`/`Reopen`, and the FPF link is a single in-block
+`Grounding (FPF)` slot. The dependency graph and provenance live in the canonical
+source, not in the projection.
 
 **Self-assessment (reflexive):** this framework has not yet passed its own
 `PLAS.EntryRoute` CC-ER.1–6 — no `E.4.PFAD` answer, no `E.9` DRR, no coverage map,

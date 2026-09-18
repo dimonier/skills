@@ -63,7 +63,7 @@ If a viewpoint matters, record one `U.ViewpointRef` that resolves to the `U.View
 
 When evaluation Work is claimed, recover the actual performer System through A.13 and let A.15.1 independently admit the dated Work with its enacted Method. Cite the same obtaining A.13 assignment occurrence, its declared species, and F.6 only when the receiving use consumes precise assignment-bound attribution. Name a non-performing participant by its evaluation relation and position. Keep these neighboring values separate from the QL-use fields.
 
-This pattern is not a physics claim. In FPF, `quantum-like` names a detached mathematical and representational lens, comparable in use to probability, calculus, optimization, or state-space modeling. It is cheap as a QL-lite note and expensive only when the claim becomes reusable law, assurance evidence, empirical superiority, formal reconstruction, or ontology.
+This pattern is not a physics claim. In FPF, `quantum-like` names a detached mathematical and representational lens, comparable in use to probability, calculus, optimization, or state-space modeling. A QL-lite note can supply a small recognition or conditional comparison. Choose additional mathematical or empirical support from what the receiving use needs the claim to establish, following :12b.
 
 Unifying principle: use QL to make the first correct move cheaper.
 
@@ -141,7 +141,7 @@ The team may approve a release from a dashboard whose publication and operationa
 | Force | Tension |
 | --- | --- |
 | Ordinary FPF patterns first | `C.11`, `A.6`, `F.9`, `A.15`, `C.25`, `C.16`, `A.10`, `B.3`, `C.18`, `C.19`, and `A.19` already govern the corresponding ordinary questions. QL wording must add only the remaining state, probe, or export cue. |
-| Lightweight use vs claims requiring additional evidence | A local diagnostic note should be cheap; reusable guidance, assurance, physical claims, or superiority claims need heavier evidence and explicit neighboring-pattern selection. |
+| Lightweight use vs claims requiring additional evidence | A recognition or conditional comparison can remain small. A prediction, model-adoption or comparative-performance claim may need support that the earlier use did not require; reuse adequate existing support. |
 | Useful math vs misleading vocabulary | Quantum-like formalisms help with order, contextual probability, incompatible probes, instruments, and open information systems; popular quantum words easily overclaim. |
 | Representation cost vs representation loss | A cheaper state representation may be the right engineering move, but only if the source, shortcut, loss, admissible use, and reopen condition stay visible. |
 | Recognition vs assurance | Working readers need fast entry; the assurance section needs enough typed fields to prevent the lens from taking over neighboring pattern work, impossible-copy overread, and hidden ontology. |
@@ -158,7 +158,7 @@ Application sequence:
 4. Apply the ordinary subject patterns and retain C.26 only if one named contextual-model obstruction survives and changes the admissible inference or action.
 5. Fill the QL-lite card if that cue survives; otherwise return to the ordinary subject pattern without QL wording.
 6. Emit one practical result: use the ordinary pattern only, add a QL-lite note, select one C.26 child pattern as the applicable pattern body, add evidence and assurance, or drop the QL wording.
-7. Escalate only when the claim becomes reusable, assurance-bearing, formal, empirical-superiority-bearing, or ontology-bearing.
+7. Identify what the result will be used to establish. Add the applicable account when prediction, model adoption, comparative performance, assurance or another relied-on conclusion needs it. A reusable conditional explanation within the same assumptions can remain small; apply :12b and reuse adequate existing support.
 
 C.26 ordinary output: produce one of these, then stop or select the neighboring applicable pattern body:
 
@@ -173,21 +173,22 @@ Keep the entry cost proportional to the use. A QL situation does not begin with 
 | --- | --- | --- |
 | Recognition note | The reader only needs to see that an ordinary FPF pattern plus a QL cue may prevent a representational mistake. | Five-field QL-lite note, local stop, and next action. |
 | Decision-bearing record | The QL reading changes a boundary, bridge, work, measurement, viability, or representation decision. | Typed fields for carrier, window, rival, loss, minimal admissible output, admissible use, non-admissible use, and neighboring-pattern handoff. |
-| Assurance record | The claim becomes reusable law, audit and evidence support, release-facing support, empirical-superiority claim, formal reconstruction, or ontology-bearing claim. | Evidence graph, measurement relation or assurance relation, source-support relation, rival-model comparison, and explicit escalation outside QL-lite. |
+| Assurance account | A receiving question needs a justified prediction, model-adequacy, comparative-performance or other assurance conclusion that the current explanation does not support. | The mathematical argument, observations, measurement relation, comparison or assurance result needed for that claim. Reuse adequate existing contributions; select the remaining subject work. |
 
 Do not make the decision-bearing or assurance record the ordinary entry cost. The everyday pattern move is a small recognition note plus a bounded action.
 
-Affordability by working-reader situation:
+Choose detail by the receiving question:
 
-| Working-reader situation | Use |
+| Receiving question | Useful account |
 | --- | --- |
-| Practitioner or architect | Three-to-five-field recognition note plus decision diff. |
-| FPF pattern author | Full card, examples, neighboring-pattern selection, and local anti-cases. |
-| Checking reader | Pattern-application check plus false-positive and false-negative tests. |
-| Assurance or audit reader | Full evidence record with `B.3`, `A.10`, and `C.16` integration. |
-| Research or formalization reader | M3 or M4 formal model, rival models, and empirical or theoretical support. |
+| Recognize a possible probe, frame or export mistake | A short explanation of the cue and the action it changes. |
+| Derive or reuse a conditional consequence | The assumptions, construction and comparison needed to recover that consequence. |
+| Predict behavior or adopt a model for a consequential use | The model-adequacy account required by :12b for that use, using existing validation where adequate. |
+| Claim an advantage over an alternative | A comparable baseline, result quality, cost and mathematical or empirical support for the stated advantage. |
+| Establish a mathematical property | The definitions, assumptions, argument and limits needed for the mathematical claim. Empirical premises require their own support when the use consumes them. |
+| Answer an assurance question | The applicable `B.3` and `A.10` contributions, and `C.16` when a measurement relation is needed. |
 
-Do not require a practitioner or architect to produce a researcher-level record when the claim is only recognition or local-working support condition.
+Apply the same selection when writing, checking or reusing a pattern. The role of the reader does not determine the form or amount of support. Use `C.11.DUA` when deciding whether additional work can improve the receiving decision enough to justify its cost.
 
 Checking discipline:
 
@@ -199,7 +200,7 @@ Checking discipline:
 | "No quantum-like unless mathematically formalized." | Allow QL-lite when it prevents local false reading and no formal claim is made. |
 | "Everything with feedback is QL." | Apply `C.16`, `C.25`, or `A.15` first to ordinary feedback, control, and metric-gaming cases. |
 
-Cluster maxim: quantum-like wording does not raise assurance load by default. Assurance load rises only when the claim itself is reused, contested, evidence-bearing, release-facing, high-impact, comparative, formal, or ontology-bearing.
+Cluster maxim: retain the support adequate for the receiving question. Add assurance work when a consequential unresolved premise requires it; reuse, publication or a formal notation alone does not change what has to be established.
 
 Pattern-local-note dependency rule: when an existing FPF pattern cites `C.26` or a `C.26.*` child, the pattern's ordinary action guidance and conformance text remain primary. The citation means only: if a residual QL cue remains after the ordinary FPF pattern has carried its part, use this lens for that residue. It does not make every citing-pattern case depend on the full C.26 record or on every child-pattern semantic.
 
@@ -250,10 +251,10 @@ Grounding and viewpoint: no EpistemeEmpiricalGroundingRelation is yet establishe
 Mistake prevented: dashboard result would be read as passive release-readiness evidence.
 Probe effect: publication changed team behavior during W.
 Decision diff: do not use dashboard alone for release; add independent work traces.
-Stop: not a reusable QL model, not assurance evidence, not physical quantum claim.
+Stop: this note locates how dashboard publication changed the work being assessed. Resolve the resulting readiness question with the applicable work and measurement Methods.
 ```
 
-This is enough for `QLP-0` / `QLP-1` ordinary working use unless the claim is reused, externalized, contested, assurance-facing, comparative, formal, or ontology-bearing.
+This supplies the stated `QLP-0` / `QLP-1` recognition and working use. Reuse it within those assumptions. For another conclusion, identify the additional premise or comparison it needs and apply :12b; publication of the note alone requires no new assurance account.
 
 Use the `C.11` mini-output discipline across the cluster: finish with one choice result or governed follow-up.
 
@@ -366,13 +367,13 @@ Math reveal sequence:
 | --- | --- | --- |
 | M0 - no math | Everyday FPF use. | Plain-language QL-lite note: false passive read, output, admissible use, and stop. |
 | M1 - structural sketch | A reader needs to see why ordinary comparison or export fails. | Diagram or table: probes, frames, carriers, export loss, unsupported comparison. |
-| M2 - toy formalization | Pattern example, education, or contested architecture claim. | Small finite-state, matrix, or instrument-like toy model, explicitly non-authoritative. |
-| M3 - decision-bearing formal model | Reusable guidance or high-impact decision. | Declared assumptions, rival models, validation/evidence, and failure conditions. |
-| M4 - formal assurance / research claim | `QLP-3` assurance or reusable-law claim. | Full formal reconstruction, baseline, proof/data, source constraints, and limitations. |
+| M2 - small formal construction | Work a conditional consequence or examine a disputed step on a small model. | A finite-state, matrix or instrument-like construction, with the conclusion and assumptions it actually establishes. |
+| M3 - decision-bearing formal model | A decision relies on a model's adequacy beyond the small conditional construction. | The assumptions, alternatives and validation needed by that decision, with their failure conditions. |
+| M4 - formal assurance or research claim | The requested assurance or research conclusion requires a fuller formal account. | The reconstruction, proof or data comparison needed for the named claim, including its assumptions and limitations. |
 
 Most C.26 use should stay at M0 or M1.
 
-Evidence-use class is escalation by consequence, not an admission gate. `QLP-0` or `QLP-1` is the ordinary entry class for quick QL-lite use; `QLP-2` / `QLP-3` appears only when the claim is reused, contested, decision-bearing, assurance-facing, high-impact, or made part of reusable pattern action guidance or conformance text.
+Select the evidence-use class from the question the result must answer. `QLP-0` and `QLP-1` cover recognition and working support. `QLP-2` and `QLP-3` supply the additional comparison or assurance needed by a receiving decision. The classes identify useful contributions; they do not require collecting them again when an adequate account is available. Mathematical formality and evidence use are separate choices.
 
 Evidence-use class scales by use:
 
@@ -381,7 +382,7 @@ Evidence-use class scales by use:
 | `QLP-0` recognition | Example, teaching case, or local recognition prompt. | Claim, example, ordinary FPF pattern, QL cue, and local stop. |
 | `QLP-1` local working use | Local architecture discussion, triage, or provisional design reasoning. | `QLP-0` content plus evidence carrier, time window, uncertainty/confidence statement, and stop/reroute condition. |
 | `QLP-2` decision-bearing use | Boundary decision, bridge/export use, viability move, work claim, or representation shortcut changes what the team should do. | `QLP-1` content plus rival explanations, export/loss note when live, minimal admissible output, selected applicable pattern body, admissible use, and non-admissible use. |
-| `QLP-3` assurance or reusable guidance use | The claim is used for assurance, audit, durable pattern action guidance or conformance text, reusable relation, name, or measure, or high-stakes decision support. | `QLP-2` content plus `A.10` evidence paths and a `B.3` assurance result for the named QL target claim and receiving use, `C.16` template if measured, documented bridge and loss relation when relied on, source-support relation, and explicit local stop or inherited-boundary note. |
+| `QLP-3` assurance use | A named receiving question requires an assurance conclusion about the QL claim, its empirical adequacy or comparative advantage. | Retain the applicable `QLP-2` comparison and use the `A.10` and `B.3` support needed for that conclusion. Add a `C.16` measurement relation or a Bridge/loss account where the conclusion relies on it. Existing adequate support remains usable; state the limits that affect its use. |
 
 #### C.26:4.4 - Recognition case matrix
 
@@ -499,7 +500,7 @@ The pattern may under-admit some mathematically valid QL models when the author 
 | CC-C26.6 | The text inherits `QL-NQ` and does not repeat global physical-quantum exclusions as local guidance. |
 | CC-C26.7 | If a representation shortcut is used, the coarsening card names source, shortcut, loss, admissible use, non-admissible use, and reopen trigger. |
 | CC-C26.8 | A speed, compression, linearity, or tractability claim declaration names baseline representation and cost, changed representation, mechanism, claimed gain, loss budget or error budget, ordinary alternatives, evidence source or formal source, and reopen trigger. |
-| CC-C26.9 | If the claim becomes reusable, assurance-bearing, measurement-like, relation-minting, high-stakes, or superiority-claiming, the text escalates beyond QL-lite. |
+| CC-C26.9 | The support matches the receiving claim and reliance described in :12b. A prediction, model-adoption, assurance or comparative-performance conclusion receives its needed account; a conditional explanation reused under the same assumptions retains its sufficient account. |
 | CC-C26.10 | The text does not mint `U.Probe`, generic `U.State`, `U.DistributedState`, `U.Lens`, a new boundary kind, or a social-substance kind. |
 | CC-C26.11 | A cold reader can tell what changes in practice in the first minute. |
 | CC-C26.12 | Every quality ascription or model claim carried by C.26 names the exact bearer or C.2.1 claim-bearing episteme, effective `U.ReferenceScheme`, probe/model frame, comparison frame, `U.ClaimScope`, and the separately obtaining grounding relation or its explicit absence. |
@@ -550,7 +551,7 @@ Use these as quick applicability tests. A good C.26 use leaves one practical out
 | Summary compresses an architecture decision for executives. | `A.6.3.CSC` first; no QL unless a state-representation shortcut has QL residue. | Treating the summary as full architecture state. | Use for orientation only; return to source for release or design lock. |
 | Diagram translates the same system into graph form. | `A.6.3.RT` first; no QL unless incompatible representation, probe, or export cue remains. | Calling any diagram a QL state model. | Declare representation-scheme change, reasoning-medium change, and source tether. |
 | Low-bit model approximates expensive simulation. | Modeling, approximation, compression, or implementation pattern first; QL only if the shortcut claim depends on QL state, probe, or frame admissibility. | Treating low-bit or linear form as QL activation. | Name baseline, shortcut, loss budget or error budget, ordinary alternatives, and reopen trigger. |
-| Assurance load is raised only because the word "quantum-like" appears. | Keep QL-lite unless decision, release, audit, reusable-law, comparative, formal, or ontology-bearing claim exists. | Escalating because of vocabulary alone. | Keep recognition or local-working support condition, or retire QL if ordinary patterns now carry the residue. |
+| Assurance load is raised because a QL explanation is published, reused or written formally. | Identify the receiving conclusion and what support it needs under :12b. | Making a fuller record without resolving a consequential question. | Reuse the adequate account; add only the missing mathematical, empirical or assurance contribution needed for the new use. |
 | Author claims QL is faster or better than a classical method. | Require baseline, metric, mechanism, evidence or formal argument, loss/use declaration, ordinary alternatives, and reopen trigger. | Accepting superiority rhetoric. | Either write the claim declaration or remove the speed/superiority claim. |
 
 QL findings can also inform design options to test under the ordinary subject patterns:
@@ -656,6 +657,6 @@ The following anchors support the pattern's operational modeling moves.
 
 ### C.26:12b - C.29 mathematical-lens use relation
 
-> `C.26` is a C.29-compatible specialization for quantum-like modeling. It carries a pre-filled adequacy profile for QL work: preserved structure includes order, probe, and contextual-probability effects when supported; lost structure includes physical quantum ontology; the canonical stop condition remains `QL-NQ`. A QL-lite note does not inherit a blank full `MathLensUse.FullCard`. A full C.29-compatible profile is needed only when the QL claim is decision-bearing, reusable, publication-bearing, assurance-bearing, bridge-bearing, or formal-model-bearing.
+> `C.26` is a C.29-compatible specialization for quantum-like modeling. It carries a pre-filled adequacy profile: preserved structure includes order, probe and contextual-probability effects when supported; lost structure includes physical quantum ontology; the canonical stop condition remains `QL-NQ`. A QL-lite note retains its lightweight use. Apply C.29:4.4's reliance rule when more is needed: a conditional comparison or reusable explanation within the same assumptions may stay small; reliance as an adequate phenomenon model for prediction, a consequential decision, model adoption, benchmark/assurance input, Bridge-dependent use or transfer to further cases needs the full applicable account. Reuse the supplied C.26 profile and adequate existing validation rather than filling a blank FullCard.
 
 ### C.26:End
