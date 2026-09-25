@@ -1,6 +1,6 @@
 ---
 id: A.1
-title: Holon Ontic Foundation (U.Holon and Admitted Holon Kinds)
+title: Recognize a Whole with Parts (U.Holon and Admitted Holon Kinds)
 status: Stable
 keywords: []
 dependencies:
@@ -25,7 +25,7 @@ dependencies:
     - E.10.ARCH
 ---
 
-# A.1: Holon Ontic Foundation (U.Holon and Admitted Holon Kinds)
+# A.1: Recognize a Whole with Parts (U.Holon and Admitted Holon Kinds)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -33,7 +33,7 @@ dependencies:
 
 ---
 
-## A.1 - Holon Ontic Foundation (U.Holon and Admitted Holon Kinds)
+## A.1 - Recognize a Whole with Parts (U.Holon and Admitted Holon Kinds)
 
 > **Type:** Part A architectural ontology pattern
 > **Status:** Stable

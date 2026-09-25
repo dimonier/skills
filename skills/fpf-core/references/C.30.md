@@ -4,13 +4,13 @@ title: "Grounded Architecture and Selected-Structure Adequacy"
 status: Stable
 keywords:
   - grounded architecture
+  - ArchitectureRelation
+  - ArchitectureClaim
   - "ArchitectureOf@Context"
   - selected structure
-  - architecture claim
-  - architecture question card
-  - candidate architecture use
-  - "architecture-description boundary"
-  - "artifact-as-architecture guard."
+  - actual and candidate architecture
+  - architecture question
+  - next architecture move.
 dependencies:
   builds_on:
     - A.22

@@ -1,6 +1,6 @@
 ---
 id: B.5
-title: Canonical Reasoning Cycle
+title: Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)
 status: Candidate
 keywords: []
 dependencies:
@@ -8,11 +8,12 @@ dependencies:
     - B.5.1
     - B.5.2
     - B.5.4
+    - B.5.EA
     - C.29
     - A.10
 ---
 
-# B.5: Canonical Reasoning Cycle
+# B.5: Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -20,7 +21,7 @@ dependencies:
 
 ---
 
-## B.5 - Canonical Reasoning Cycle
+## B.5 - Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)
 
 > **Type:** Method-description pattern
 > **Status:** Candidate
@@ -29,6 +30,8 @@ dependencies:
 ### B.5:1 - Problem frame
 
 Use this pattern when an engineer or researcher has a question, surprising result or promising construction, but the next useful contribution is unclear. They may need to formulate a better question, construct something, prove a claim, explain an observation, or test a consequence. Reasoning is the broader activity; this pattern governs the choice and connection of those contributions in an inquiry.
+
+When work continues without a question because its outcomes are treated as ordinary, B.5.PI provides an earlier entry. An ordinary handover or demonstration can yield a question or an early cue without an already recognized anomaly. Use that contribution here when reasoning can take it further.
 
 **First useful move.** State what you want to understand or make possible. Ask whether an available result already answers that question. If it does not, name the missing result and try one operation that could obtain it. Return what that operation established and the next question, if one remains.
 
@@ -63,6 +66,12 @@ Choose reasoning by the result the current question needs. The abductive–deduc
 Say what an answer would help someone understand, construct, explain, decide or investigate. An epistemic aim, such as exposing an obstruction or finding a more informative theory, can justify inquiry without an immediate product application. Recover an adequate existing answer before commissioning new work.
 
 Separate the subject from its description, the intended result from a convenient proxy, and established premises from assumptions. Use ordinary language, a sketch or a small mathematical example at the precision needed to expose the difficulty.
+
+If there is no current question, B.5.PI can connect one ordinary work occasion with the use of its result, including adjustments that made the work succeed. It may produce a question, preserve an early cue, or justify continuing without change. This entry does not require a monitoring duty or turn every action into an audit.
+
+If a participant senses that an account misses something but cannot yet express what, B.5.EA helps develop a correctable distinction from their experience. Use the resulting question or contrast here; a better expression does not by itself establish a claim about the world.
+
+An expressible account can still omit a consequential relation. B.5.FM:4.2.1 uses a small conceptual scheme to find a question through that relation, while distinguishing an unknown contribution from an inapplicable scheme. Use an already adequate answer directly.
 
 When the current formulation is inadequate, vary a consequential element. Useful operations include:
 
@@ -335,6 +344,6 @@ Reopen these choices when a better method at comparable effort changes the attai
 
 [fpf-b5-4-ref]: B.5.4-Recognize-a-Reusable-Concept-in-a-Concrete-Situation.md#b54---recognize-a-reusable-concept-in-a-concrete-situation
 
-[fpf-a15-9-ref]: A.15.9-Request-and-Use-a-Bounded-Result-from-Another-Practice.md#a159---request-and-use-a-bounded-result-from-another-practice
+[fpf-a15-9-ref]: A.15.9-Request-and-Use-a-Bounded-Result-from-Another-Practice.md#a159---use-or-request-a-bounded-result-from-another-practice
 
 ### B.5:End

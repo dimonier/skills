@@ -1,6 +1,6 @@
 ---
 id: E.4.DPF.DA
-title: "Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace"
+title: "Evaluate a DPF or LPF Package for Its Declared Use (Package-Adequacy CharacteristicSpace)"
 status: Stable
 keywords: []
 dependencies:
@@ -24,7 +24,7 @@ dependencies:
     - F.19
 ---
 
-# E.4.DPF.DA: Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace
+# E.4.DPF.DA: Evaluate a DPF or LPF Package for Its Declared Use (Package-Adequacy CharacteristicSpace)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -32,7 +32,7 @@ dependencies:
 
 ---
 
-## E.4.DPF.DA - Domain Principle Framework Package-Adequacy Evaluation CharacteristicSpace
+## E.4.DPF.DA - Evaluate a DPF or LPF Package for Its Declared Use (Package-Adequacy CharacteristicSpace)
 
 > **Type:** Evaluation (E)
 > **Status:** Stable
@@ -81,7 +81,7 @@ Start here with one ordinary assessment route:
 4. Constitute one aggregate C.2.1 result episteme carrying those coordinate claims, protected trade-offs, the local `DPFPackageAdequacyStatus`, and the first repair or no-proposal disposition.
 5. State the next usable action, stop or repair, and reopen condition, then name any separate receiving use such as E.19 admission or refresh, assurance, publication, F.10 status use, or E.23 repair. Add a non-use statement only when a plausible reader has an independently grounded reason to confuse those uses.
 
-The first useful result is that aggregate episteme and its local status for the declared use. Stop with `seedOnly` or `repairBeforeDPFUse` when the package or evidence does not support the declared floor; the route still produces a useful bounded result and next repair.
+The first useful result is that aggregate episteme and its local status for the declared use. Use `seedOnly` or `repairBeforeDPFUse` when the justified coordinate values support that status. If evidence has not been inspected or cannot substantiate a coordinate value, keep the account as assessment material with the exact gap and next inquiry. Assign `0` only when its defined condition is established; a complete E.4.DPF.DA result still requires all twelve justified values.
 
 For a new or substantially revised DPF, add four focused questions:
 
@@ -104,7 +104,7 @@ Keep the evaluation objects separate:
 6. an ordinary evaluator action left outside Work admission; or, when dated assessment `U.Work` is asserted, references to the exact actual evaluator System recovered through A.13 and one independently valid A.15.1 Work account; only when the result expressly represents precise assignment-bound attribution, references to the same obtaining A.13 assignment and applicable F.6 relation occurrences; and, independently, an A.6.1 application only when the assessment uses one exact operation declared by a separately admitted Mechanism and the receiving claim depends on its bindings;
 7. twelve ordinal coordinate-result claims about the same exact framework edition;
 8. one aggregate C.2.1 result episteme carrying those claims, the local package-adequacy status, protected trade-offs, first repair or no-proposal disposition, reopen condition, and any grounded non-use boundary;
-9. witnesses and A.10 evidence-use relations, plus an optional evaluation record that packages references without performing the assessment or granting authority; and
+9. witnesses, independently established direct evidence-use relations, and any A.10 account that represents their source and bounded-reliance basis, plus an optional evaluation record that packages references without performing the assessment or granting authority; and
 10. any F.10 status use, E.19 admission or refresh decision, assurance, publication, later improvement Work, and changed framework edition.
 
 Use this compact input/action/result separation:
@@ -168,7 +168,7 @@ DPFPackageAdequacyResultEpisteme:
   ReopenCondition:
   AssessmentAccountRef:
   ResultWitnessRefs:
-  ResultEvidenceUseRefs:
+  ResultEvidenceUseRefs: <independently established direct use relations; an A.10 account may represent their source and bounded-reliance basis>
 DPFPackageAdequacyEvaluationRecord: <optional packaging of configuration, assessment account,
   result, witnesses/evidence use, reopen refs, and any grounded non-use boundary>
 ```
@@ -203,7 +203,7 @@ In this pattern, `known failure modes` means beginner mistakes and experienced-p
 | `D1DomainScopeAndUseAdequacy` | Are the domain or local situation, effective ReferenceScheme, ClaimScope, reader, declared use, qualification window, stop or return, and any genuinely interpretation-changing model-use structure recoverable? | The package tells whom it is for, which domain situation and claims it covers, what to do first, when to stop or return, and which semantic qualifications constrain that use; a non-use boundary appears only for a grounded competing use a plausible reader could select. |
 | `D2DidacticEntryAndAdoptionAdequacy` | Can the intended reader or assisting agent find the first useful entry and get a first working result without FPF developer knowledge? | ToC, readme, preface, pattern-use routes, skill entries, MCP access cues, and examples make adoption cheap and non-magical, while support maps are reached from work triggers rather than front-loaded as required reading. |
 | `D3ScalableFormalityAndAssurancePathAdequacy` | Can the package move from plain local use toward stronger records, evaluation, evidence, or assurance without rewriting the package? | Plain guidance, typed records, source pins, evaluation rows, and paths to stronger evidence or assurance are staged. |
-| `D4CoreDependencyAndDomainBoundaryAdequacy` | Does the checked framework edition depend on FPF Core while keeping domain knowledge inside the DPF and keeping edition dependency distinct from package/file membership? | Core patterns are reused; local terms do not redefine Core; possible Core amendment candidates are explicit; E.4.PFR records exact dependency and edition effects; FPF Core and the main monolith do not depend on this DPF except through a deliberate Core amendment. |
+| `D4CoreDependencyAndDomainBoundaryAdequacy` | Does the checked framework edition depend on FPF Core while keeping domain knowledge inside the DPF and keeping edition dependency distinct from package/file membership? | Core patterns are reused; local terms do not redefine Core; possible Core amendment candidates are explicit; E.4.PFR records exact dependency and edition effects; FPF Core and the main monolith do not depend on this DPF. A transdisciplinary contribution enters Core through a deliberate amendment whose content no longer depends on the DPF. |
 | `D5PackageFormLayeringAndRelationAdequacy` | Are framework episteme edition, package architecture, architecture decisions, pattern set, support maps or appendices, relation records, edition dependencies, publication units and occurrences, publication forms, presentation carriers, access-facing presentation carriers, access routes, actual access or use relations, source packs, and quality records separated? | `E.4.PFAD`, `E.4.PFR`, C.2.1, E.24.PUB, source, direct access or use, quality, support-map, appendix, and refresh loci remain distinct, findable, and reached from the right work triggers; file or package layout establishes no semantic membership. |
 | `D6DomainLexiconAndKindSettlementAdequacy` | Are domain terms, local vocabulary, candidate ontics, and the applicable FPF patterns settled well enough for use? | Each local term has a stated kind, defining source, admissible use, and an applicable FPF pattern or naming route when needed; add a blocked reading only under F.19:4's full independent-ground, plausible-reader, contribution, and smallest-clear-correction test. |
 | `D7PracticeUtilityAndProblemResolutionAdequacy` | Does the package change real domain or local action, diagnosis, design, explanation, teaching, or repair? | Patterns solve recognizable domain problems with positive SoTA-informed moves, known failure modes or anti-patterns, and worked cases, not only taxonomy, ontology, commentary, or talk guidance. |
@@ -296,7 +296,7 @@ Show: A domain DPF all-in-one publication carrier contains domain patterns, a so
 
 Show: A proposed systems-management DPF promises help with service launch, cross-team coordination, incident response, and feedback-based improvement. `D12` checks whether the selected pattern sets and their actual relations serve all four problem families, whether one service-launch case needs patterns from more than one set, what remains omitted, and where later authors return to the sources. One source describes a genuine first-then incident flow; another describes monitoring, coordination, and resource provision contributing at the same time. The evaluation preserves both readings. A completed `C.32.MWA` result may supply that evidence, but the evaluator neither repeats the Method's actions nor treats use of its result as an edition dependency. The named first use must include every required pattern from this DPF. For each relied-on external result, the assessment names its actual kind and supplying product, the receiving use and discovery route, material currentness or availability, and the fact that it remains external. `PFM11` then checks whether the carrier tells readers what it exposes and omits. `PFM1` checks practitioner entry and navigation; `PFM12` checks only the remaining common-form and edition-projection agreement. A shared observation and repair are recorded once. None of these form checks substitutes for `D12`.
 
-Show: A hydroponic-cucumber DPF has excellent crop-control sources but no relation records and no first-entry carrier. `E.21` may find that individual crop patterns are good, but `D5PackageFormLayeringAndRelationAdequacy` and `D2DidacticEntryAndAdoptionAdequacy` stay below floor until relation records and first-use routes exist.
+Show: A hydroponic-cucumber DPF has excellent crop-control sources but no relation records and no first-entry carrier. `E.21` may find that individual crop patterns are good, while `D2DidacticEntryAndAdoptionAdequacy` stays below floor until a usable first-entry route exists. `D5PackageFormLayeringAndRelationAdequacy` falls only when the needed relations cannot be recovered or a named maintenance use needs the missing records; direct assertions can otherwise supply those relations.
 
 Near miss: A DPF all-in-one publication carrier has a huge map before the pattern bodies. The map is correct but cold readers do not know when to open it. `D2` and `D5` fall unless pattern relations, low-value repair actions, or first-entry text route readers into the map from a real work trigger.
 

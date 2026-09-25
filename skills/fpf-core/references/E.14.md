@@ -1,13 +1,8 @@
 ---
 id: E.14
-title: "Human-Centric Working-Model"
+title: "Human-Centric Working-Model: Readable Claims and Recoverable Assurance"
 status: Stable
-keywords:
-  - working model
-  - "human-centric"
-  - publication surface
-  - grounding
-  - assurance layers.
+keywords: []
 dependencies:
   builds_on:
     - E.7
@@ -19,7 +14,7 @@ dependencies:
     - E.10
 ---
 
-# E.14: Human-Centric Working-Model
+# E.14: Human-Centric Working-Model: Readable Claims and Recoverable Assurance
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -27,7 +22,7 @@ dependencies:
 
 ---
 
-## E.14 - Human‑Centric Working‑Model
+## E.14 - Human-Centric Working-Model: Readable Claims and Recoverable Assurance
 > **Status:** Stable
 > **Type:** Pattern
 
@@ -45,7 +40,7 @@ Use this pattern when FPF text needs to stay readable as one human working model
 
 ### E.14:1 - Intent
 
-Establish a **single, human‑centric Working‑Model** that practitioners can read, discuss, and evolve **without exposure to formal machinery**.
+Establish a **single, human-centric Working-Model** that practitioners can read, discuss, and evolve **without first reading the full assurance account**.
 A direct Working-Model statement needs no assurance field simply because it is published. When a publication elects `B.3.5` or another named current assurance requirement applies, the author declares the posture that requirement calls for and attaches only the needed assurance shoulders — **Mapping**, **Logical**, **Constructive**, or **Empirical Validation**. Under `B.3.5`, covered claims declare `validationMode`; covered structural claims also carry the profile's constructive grounding. The posture and its supports justify or challenge the published claim; they create neither the chosen model value nor a world-side relation occurrence. A `postulate` remains a pragmatic working claim within its stated scope: the author should add brief empirical cues that would help later validation. Choosing it does not say that evaluation or measurement Work occurred or that a result exists. The complete Work, result, and provenance account enters only when evaluation or measurement actually occurred and the current assurance use relies on that result; another named current requirement keeps its own obligations. Assurance shoulders sit **beneath** the Working-Model and **never define its vocabulary**.
 
 Put bluntly: *one model people work in; three assurance shoulders — plus empirical checks when the world is the judge.*
@@ -59,12 +54,12 @@ Teams need **one shared Working-Model** to make decisions at speed. Historically
 
 Both failure modes create friction between two audiences:
 (1) **working users** (engineers, programme managers, policy owners) who need a **small, stable Working-Model text**, and
-(2) **assurance authors** (ontologists, methodologists, auditors) who need **proofs that the Working-Model text is sound**.
+(2) **assurance authors** (ontologists, methodologists, auditors) who need to inspect the basis and limits of the Working-Model claims.
 
 E.14 resolves the impasse by **separating concerns**:
 
 * A **Working-Model layer**: curated kinds and relations expressed in plain terms, with simple human rules for using them.
-* An **Assurance stack** beneath it - **Mapping**, **Logical**, **Constructive** - that carries the heavy arguments and accounts (concept alignment, direct relation semantics, construction-trace epistemes) and **never leaks back** into the Working-Model narrative.
+* An **Assurance stack** beneath it — **Mapping**, **Logical**, **Constructive**, and **Empirical** when needed — that keeps arguments and accounts recoverable without crowding the Working-Model narrative.
 
 This pattern dovetails with the framework's unification stance (**small Working-Model text, rigorous foundations**) and with the constructional-mereology discipline that `sum`, `set`, and `slice` provide inspectable accounts of independently grounded assembly, collection, and aspect facts. Those forms do not create a relation occurrence or decide whole identity. The Kernel stays minimal and meta-only.
 
@@ -78,13 +73,13 @@ A reader may need to decide, design, review, or coordinate with FPF terms before
   Managers and engineers must navigate with a handful of names and relations; assurance authors must still check that each name has one intended model value, each relation claim has the required world-side basis, and identity conditions are explicit.
 
 2. **Speed of change vs. guarantees.**
-  The Working‑Model must accommodate rapid iteration; the Assurance stack must **lag just enough** to check, without blocking practical progress.
+  The Working-Model must accommodate revision; support must be updated or its limits exposed before a use that depends on it.
 
 3. **Parsimony vs. expressivity.**
   The Working‑Model should **not proliferate relation types or ad‑hoc categories**; fine‑grained distinctions live in the Assurance layers and are shown **only when they materially change a decision**.
 
 4. **Downward grounding vs. upward contamination.**
-  When grounding is attached, it flows **down** (Working-Model → Mapping, Logical, Constructive, or Empirical support). No dependence **up** is allowed: proofs and traces never dictate wording or layout in the Working-Model.
+  Present the readable claim before its needed Mapping, Logical, Constructive, or Empirical support. Assurance notation and record structure do not dictate the Working-Model's wording or layout. If support defeats or narrows the claim, revise that claim under its direct governing rule and make the change visible.
 
 5. **Trans‑disciplinary unification vs. local dialects.**
   The Working‑Model must reconcile different disciplines’ habits **without erasing them**; Mapping captures dialects, while the Working‑Model exposes a **single usable choice**.
@@ -123,10 +118,10 @@ When empirical evaluation is current, keep the same reading order. Put the ordin
 > Operate one **Working-Model** for all human-facing discussion and state the direct claim first. If neither the publication nor a named current requirement calls for assurance, the author may stop there. When assurance is current, declare only the posture and shoulder or shoulders required by the applicable pattern: **Mapping** to align a term with the chosen model value it names; **Logical** to state label meaning, scope, constraints, and limits; **Constructive** to make independently grounded construction facts inspectable; or **Empirical Validation** to support a bounded reliance on a domain result. Under `B.3.5`, covered claims declare `validationMode`. For each selected shoulder, name only the objects, scope, and qualification window the current use consumes. None creates the model value, subject relation, Work occurrence, or result it supports.
 
 > **E.14‑P.2 – Downward‑only dependency.**
-> Information **may** flow from the Working‑Model down into any Assurance layer; **no Assurance layer may impose vocabulary or shape back upward** into the Working‑Model.
+> Keep assurance apparatus subordinate to the readable Working-Model claim: its notation and record structure do not define the public vocabulary. This presentation rule does not prevent correction. If a proof, trace, or empirical result exposes a false or overbroad claim, revise the Working-Model claim and any affected wording under the direct governing pattern; do not silently leave the recognition text asserting the defeated claim.
 >
 > **E.14‑P.3 – Small working text, big proof.**
-> The Working-Model exposes a **minimal set** of names in the L-1 and L-2 registers and a compact family of relations used in everyday reasoning; the assurance text makes their meanings, basis, limits, and support inspectable below.
+> The Working-Model exposes a **small set** of names chosen through E.10's Plain and Tech registers for the intended reader, and a compact family of relations used in everyday reasoning; the assurance text makes their meanings, basis, limits, and support inspectable below.
 
 > **E.14‑P.4 – Human registers first.**
 > Terms in the Working‑Model are deliberately curated for **human legibility** (register‑badged, synonym‑aware). Synonym capture and language variance belong to Mapping; **only the chosen canonical label appears in the Working-Model text**.
@@ -139,7 +134,7 @@ When empirical evaluation is current, keep the same reading order. Put the ordin
 > No new Working‑Model relation types are introduced if the existing Logical label-meaning rules plus Constructive grounding suffice to capture the intended meaning.
 
 > **E.14‑P.7 – A postulate is not completed evaluation.**
-> When *postulate* is chosen, authors **SHALL** state the claim and its scope and **SHOULD** give brief empirical cues — where it tends to hold or what would challenge it — to ease later validation. This posture by itself requires no dated Work, result, A.13 performer core, A.15.1 Work admission, F.6 attribution, provenance path, or assurance claim. If evaluation or measurement actually occurred and the current assurance use relies on its result, authors **SHALL** name the scope and qualification window that use consumes, the domain result and result episteme, and the A.10 evidence-provenance relation; every performer keeps an A.13 core and the Work is independently admitted under A.15.1. F.6 is added only when the assurance use also consumes precise assignment-bound attribution. When an actual named assurance claim is current, the B.3 assurance claim remains separate and required for that assurance-bearing use. Another named current assurance requirement supplies its own obligations.
+> When *postulate* is chosen, authors **SHALL** state the claim and its scope and **SHOULD** give brief empirical cues — where it tends to hold or what would challenge it — to ease later validation. This posture by itself requires no dated Work, result, A.13 performer core, A.15.1 Work admission, F.6 attribution, provenance path, or assurance claim. If evaluation or measurement actually occurred and the current assurance use relies on its result, authors **SHALL** name the scope and qualification window that use consumes, the domain result and result episteme, and the A.10 descriptive evidence-provenance account of the independently established source and use relations; every performer keeps an A.13 core and the Work is independently admitted under A.15.1. F.6 is added only when the assurance use also consumes precise assignment-bound attribution. When an actual named assurance claim is current, the B.3 assurance claim remains separate and required for that assurance-bearing use. Another named current assurance requirement supplies its own obligations.
 
 > **E.14‑P.8 – Working-model-first is not explanation-thin.**
 > Human-facing parsimony does **not** license under-explained pattern prose. When a pattern claims a Working‑Model benefit, it **SHALL** still provide enough problem framing, rationale, and worked slices that readers can tell what the model clarifies, what remains on the assurance shoulders, and when a heavier review path is required.
@@ -156,18 +151,18 @@ This section defines **what each layer is for**, **what it guarantees when selec
 
 * **Kinds** — one **chosen concept** per node (no slash‑labels).
 * **Relations** — a short set of statements intelligible to non-specialists (for example, *Component-of*, a subject-specific sentence such as “this cartridge belongs to this bank under the bank's rule”, *Aspect-of*, and a small number of cross-disciplinary ties such as *Interface-of* or *Constituent-of*).
-* **Language register badges** — labels shown in the Working-Model are L-1 or L-2; L-3 and L-4 remain in Mapping as synonyms or symbols.
+* **Language registers** — choose Plain or Tech wording under E.10 for what the intended reader must identify and use. Keep background synonyms, source labels, and unused symbols in Mapping; expose a technical term in the Working-Model when the current claim or reader use needs it.
 
 **Obligations.**
 
 * A Working-Model edge or node whose use elects an assurance profile keeps that profile's required support recoverable downward. A direct claim outside such a profile can stand on its direct meaning and truth conditions; E.14 adds no assurance field or separate support account.
-* The Working‑Model **does not display** constructor jargon, proof terminology, or evidence identifiers; those live in Assurance and are **available on demand**.
+* The Working-Model omits constructor jargon, proof terminology, and evidence identifiers that its intended reader does not need. Keep the support available on demand, and include a technical term or identifier in the working statement when it changes the claim or the reader's action.
 
 #### E.14:5.2 - Assurance-1: Mapping (from words to chosen model values)
 
 **Purpose.** Consolidate human labels from varied sources and **bind them to the chosen model values** used in the Working-Model, including admitted U-kinds where kindhood is live.
 
-**Guarantee.** When Mapping assurance is selected, the Working-Model label has a **stable alignment** to one chosen model value in the current scope; synonyms, abbreviations, locales, and registers are recorded here, **not** in the displayed Working-Model. Mapping primarily raises **Concept-Bridge Assurance (CBA)** by consolidating synonyms and registers and binding tokens and labels to the chosen value; calculus-level metrics live outside Part E.
+**What to check.** When Mapping assurance is selected, verify the Working-Model label's alignment to its chosen model value in the current scope. Recover the synonyms, abbreviations, locales, and registers needed for that comparison in the Mapping account. This can contribute to **Concept-Bridge Assurance (CBA)** under B.3.3 when it establishes a claim-relevant meaning correspondence; collecting labels alone does not raise assurance.
 
 **Deliverable.** When the current use needs source-word alignment, provide a compact alignment table for that scope. It makes obvious which **one label** the Working-Model shows and which background labels remain source wording.
 
@@ -179,7 +174,7 @@ This section defines **what each layer is for**, **what it guarantees when selec
 
 **Guarantee.** When Logical assurance is selected, a Working-Model edge such as *Component-of* or *Aspect-of* carries one stated reading, including the scope and relation properties needed for the current use, so an auditor can assess whether that use is legitimate.
 
-**Deliverable.** When the current use needs an explicit label-meaning account, give a short rule such as: “When an edge is labeled *Component-of* in the Working-Model text, it intends the direct structural reading whose participants, relation occurrence, construction rule, and identity conditions must be recovered before the assertion is accepted.” The Logical shoulder ties the human label to that accepted meaning; it does not make the relation obtain. Calculus-level symbols are not used in E-patterns.
+**Deliverable.** When the current use needs an explicit label-meaning account, give a short rule such as: “When an edge is labeled *Component-of* in the Working-Model text, it intends the direct structural reading whose participants, relation occurrence, construction rule, and identity conditions must be recovered before the assertion is accepted.” The Logical shoulder ties the human label to that accepted meaning; it does not make the relation obtain. When a calculus or other expression carries a reasoning or construction step, explain its interpretation, operation and prerequisites or cite their subject guidance under E.5.2. Keep the readable claim recoverable from that expression.
 
 *(Rationale: logical label alignment protects the small Working-Model text from relation proliferation while keeping meanings crisp.)*
 
@@ -199,7 +194,7 @@ This section defines **what each layer is for**, **what it guarantees when selec
 
 **Guarantee.** A `postulate` remains a scoped working claim: state its target and scope and supply the brief empirical cues that B.3.5 calls for. It does not establish that evaluation or measurement Work occurred or that a result exists. When evaluation or measurement did occur and the current assurance use relies on its result, name the target claim, `U.ClaimScope`, qualification window, and the pattern that defines or tests the result; recover every performer `U.System`'s A.13 core and independently admit the dated Work under A.15.1 with the Method it enacted. Add F.6 only when the assurance use also needs each exact Work-assignment attribution; the assignment remains a separate A.2.1 claim. Cite a relied-on `U.MethodDescription` only when current, test any local system-role-kind classification separately, and name the participants or A.6.1 bindings, domain-local result, and C.2.1 result episteme that the claim uses. Use A.10 for the evidence-provenance path and reliance disposition, and B.3 for any assurance claim. These objects can support or qualify the Working-Model claim. Another named current assurance requirement retains its own obligations.
 
-**Deliverable.** Keep the ordinary Working-Model sentence first. For a postulate with no relied-on completed result, state the scope and brief empirical cues, then stop. When the current use relies on an actual evaluation or measurement result, expose only the exact result, Work, provenance, currentness, and assurance relations that use consumes. Intended evaluation remains in `U.WorkPlan` until dated Work occurs. If a claim that evaluation Work first constituted the result episteme is separately current, A.15.PROD alone recovers that local entity-identity inception claim; no universal work-result, evidence-result, or production relation is implied. Expiry, evidence ageing, or changed source, method, calibration, result, qualification window, provenance, or assurance basis ends only the reliance that consumes that support and requires the affected reliance claim to be re-evaluated under its applicable pattern. In B.3 terms Empirical Validation contributes on the LA shoulder; B.3 alone computes any effect on reliability R or claim scope G, and G cannot extend beyond the exact supported scope and qualification window.
+**Deliverable.** Keep the ordinary Working-Model sentence first. For a postulate with no relied-on completed result, state its scope and add the brief empirical cues called for by the selected profile, then stop. When the current use relies on an actual evaluation or measurement result, expose only the exact result, Work, provenance, currentness, and assurance relations that use consumes. Intended evaluation remains in `U.WorkPlan` until dated Work occurs. If a claim that evaluation Work first constituted the result episteme is separately current, A.15.PROD alone recovers that local entity-identity inception claim; no universal work-result, evidence-result, or production relation is implied. Re-evaluate the affected reliance when expiry or changed sources, method, calibration, result, qualification window, provenance, or assurance basis can change its support. Narrow or withdraw that reliance when its applicable condition fails; age alone does not defeat still-applicable evidence. Under B.3/B.3.3, Empirical Validation contributes only what its result establishes for the target claim and receiving use. Any reliability calculation needs its exact domain quantity and model; claim scope follows A.2.6 and the evidence that warrants that scope and window.
 
 #### E.14:5.6 - Purpose-selected support for a single Working-Model statement
 
@@ -236,7 +231,7 @@ The selected support stays below the readable claim. It makes the needed basis i
 
 The measurement domain declares `PumpVibrationMeasurementAssignment` as the assignment species for this work. `RA-ConditionMonitoring-7-E4` is its occurrence, is held by `ConditionMonitoringSystem-7`, and covers the measurement interval. That System performed the admitted Work `Pump37VibrationMeasurement-2026-07-31T0900` under the assignment, and the Work enacted `PumpVibrationMeasurementMethod-E2`. Check the Work and enacted Method with A.15.1, and the Work-assignment attribution with F.6. The applicable A.6.1 bindings identify `Pump-37`, the sensor indication, calibration coefficients, and returned measurement value. Classification of the System under `PumpVibrationMeasurementSystemRole` is a separate claim.
 
-Use C.16 to characterize the domain-local measurement result by its exact Characteristic, Scale, unit, uncertainty, time stance, and interpretation basis. C.2.1 identifies `Pump37VibrationResult-E4`, the episteme that states that result. A.10 path `Pump37MeasurementProvenancePath-E6` cites the calibration, Work, bindings, and source publications; B.3 assurance claim `Pump37MeasurementAssurance-E2` qualifies only the stated use and window. Neither provenance nor assurance is the measurement result. No A.15.PROD claim is needed merely because the result episteme exists; open that pattern only if a separately current question asks whether the exact measurement Work first constituted that episteme.
+Use C.16 to characterize the domain-local measurement result by its exact Characteristic, Scale, unit, uncertainty, time stance, and interpretation basis. C.2.1 identifies `Pump37VibrationResult-E4`, the episteme that states that result. A.10 path `Pump37MeasurementProvenancePath-E6` cites the calibration, Work, bindings, and source publications; B.3 assurance claim `Pump37MeasurementAssurance-E2` qualifies only the stated use and window. Neither provenance nor assurance is the measurement result. No A.15.PROD claim is needed merely because the result episteme exists; open it when a separately current question concerns the Work's productive treatment, the episteme's identity inception, or satisfaction of a production-completion condition. The inception branch specifically asks whether the exact measurement Work first constituted that episteme.
 
 **What changes in practice.** A reader sees the usable statement first, can inspect the exact Work, result, and support chain when reliance matters, and uses the applicable maintenance-criterion, readiness, gate, or permission pattern if the next decision asks one of those different questions.
 
@@ -252,7 +247,7 @@ The **Working-Model layer remains the canonical publication face** for authors a
 | **Canonical inversion**  | Demanding constructive grounding for epistemic links by default.  | Keep the **progressive** stance: prefer Logical/Mapping assurance for knowledge claims; raise to Constructive only when structure is at issue. | Authoring template; Working‑Model pattern family.  |
 | **Layer leakage (order and time)** | Encoding sequence or phase as part-whole to "strengthen" claims. | Keep **order** and **time** in their own relation families; do not smuggle them into structure. | Temporal and ordering patterns. |
 | **Collection and composition swap** | Using a collection's belongs-to claim as if it implied **ComponentOf**, or treating a `set` narrative as the source of belonging. | Keep collection identity and belonging separate from integrated assembly; a C.13 account reports those facts and creates none of them. | Working-Model mereology guidance in Parts B and C. |
-| **Notation lock‑in**  | Letting a diagram or syntax define meaning.  | Apply **Notational Independence**: define semantics in prose (maths if needed); treat renderings as informative.  | Notational‑Independence guard‑rail.  |
+| **Notation lock‑in**  | Letting a diagram or syntax define meaning.  | Apply **Notational Independence**: explain interpretation and any operative use; mark illustrative renderings informative, and retain reasoning or construction steps under E.5.2.  | Notational‑Independence guard‑rail.  |
 | **Backwards dependency**  | Letting an assurance publication or record redefine public terms.  | Preserve **unidirectional dependence**: Working-Model terms do not derive their meaning from assurance publications or records.  | Part E guard‑rails (dependency discipline).  |
 | **Silent assurance posture** | A claim covered by an elected assurance profile omits the posture required by that profile. | Keep the readable claim first, then declare only the posture and support required for the covered use. A direct claim outside a profile needs no E.14 mode. | Applicable assurance profile; `B.3.5` for CT2R-LOG. |
 
@@ -263,17 +258,17 @@ The **Working-Model layer remains the canonical publication face** for authors a
 | ID  | Requirement  | Purpose  |
 | --- | --- | --- |
 | **CC‑E14‑1 (Working‑Model primacy).**  | Authors **SHALL** publish claims in **Working‑Model** form (human‑oriented **ut:\*Of** relations or equivalent domain statements) as the canonical publication face for readers.  | Preserve human‑first canon and didactic clarity.  |
-|**CC-E14-2 (Downward grounding).** | When assurance is attached, grounding **SHALL** flow **downwards** from the Working-Model to the appropriate assurance shoulder (**Mapping, Logical, Constructive, or Empirical**) and **SHALL NOT** impose vocabulary back onto the Working-Model. | Maintain relation-family separation and cognitive economy. |
+| **CC-E14-2 (Grounding and correction).** | When assurance is attached, authors **SHALL** keep its basis recoverable beneath the readable Working-Model claim and **SHALL NOT** let its notation or record structure dictate the public vocabulary. If the support defeats or narrows the claim, revise the recognition text under its direct governing pattern and expose the change. | Preserve readable presentation and prevent divergence between the public claim and its warranted support. |
 | **CC-E14-3 (Assurance posture).** | For a claim covered by an elected `B.3.5` profile or another named current assurance requirement, the author **SHALL** declare the posture required there. Under `B.3.5`, covered claims declare `validationMode`; a direct claim outside such a profile needs no E.14 mode. | Make selected assurance intent explicit without taxing ordinary direct use. |
 | **CC-E14-4 (No order or time in structure).** | Authors **SHALL NOT** encode execution order, parallelism, or temporal coverage as part-whole; keep them adjacent in their own relation families. | Prevent layer leakage and category errors. |
 | **CC‑E14‑5 (Collection differs from composition).** | Authors **SHALL** keep a collection's identity rule and its own belongs-to occurrences distinct from component relations and integrated assembly. A gathering description or `set` trace creates neither belonging nor component status. | Preserve the direct relation and identity boundaries. |
-| **CC‑E14‑6 (Notational independence).**  | Core meaning **MUST NOT** hinge on a specific diagram or syntax; any rendering present **SHALL** be marked informative.  | Ensure longevity and cross‑discipline portability.  |
+| **CC‑E14‑6 (Notational independence).**  | Core meaning **MUST** remain recoverable independently of one specific notation. Illustrative expressions **SHALL** be marked informative. An expression carrying a reasoning or construction step **SHALL** explain its operation and prerequisites or cite their subject guidance; comparisons and substitutions retain the E.5.2 semantic-mapping duty.  | Ensure longevity and cross‑discipline portability.  |
 | **CC‑E14‑7 (Layer direction).**  | Authors **SHALL** avoid back-defining Working-Model terms by their assurance publications or records; dependence is one‑way (Working‑Model → Assurance).  | Preserve unidirectional dependence of layers.  |
 | **CC‑E14‑8 (Template compliance).**  | Sections **SHALL** follow the canonical pattern order; *Archetypal Grounding* is mandatory for architectural patterns.  | Keep patterns comparable and auditable by reading.  |
-| **CC‑E14‑9 (Progressive assurance).**  | Authors **SHOULD** escalate assurance deliberately (from working claim to reasoned to constructive), and use **Empirical Validation** where observation is the right currency.  | Support staged assurance without overloading early drafts.  |
+| **CC-E14-9 (Purpose-selected assurance).** | Authors **SHOULD** select the support needed by the current claim and use. The `postulate`, `inferential`, and `axiomatic` modes are permitted justification postures under their applicable profile, not an ordered ladder of confidence or rigor. Use **Empirical Validation** when observation addresses the actual assurance question. | Preserve branch-specific obligations without demanding promotion through mode labels. |
 | **CC-E14-10 (Structural grounding handshake).** | When a publication elects `B.3.5` for a structural parthood or collection-belonging assertion, the author **SHALL** keep the readable claim first, declare `validationMode=axiomatic`, and link through `tv:groundedBy` to exactly one current C.2.1 construction-trace episteme in the applicable C.13 form: `sum` or `slice` for structural parthood, or `set` for collection belonging. Another named current assurance requirement governs its own obligations. Outside those conditions, a direct structural claim has no E.14 mode, link, or trace obligation. In every case, the direct relation pattern and the candidate's identity or reidentification rule decide occurrence and continuity; a trace and mode create neither. | Makes selected construction assurance inspectable while keeping ordinary use, ontology, identity, and currentness separate. |
 | **CC‑E14‑11 (Postulate and empirical-result bindings).** | For `validationMode=postulate`, authors **SHALL** state the target claim and scope and **SHOULD** supply brief empirical cues that would ease later validation. That posture alone requires no dated Work, result, performer basis, provenance path, or assurance claim. When evaluation or measurement actually occurred and the current assurance use relies on its result, authors **SHALL** name the target claim, scope, qualification window, dated Work, every performer System, and at least one Method the Work enacted; each performer has an A.13 core and the Work is independently admitted under A.15.1. They **SHALL** use F.6 only when the assurance use also consumes exact Work-assignment attribution; the assignment species and occurrence remain separate A.2.1 claims. Any current MethodDescription or local system-role-kind classification, direct participants or A.6.1 bindings, domain-local result and result episteme, A.10 evidence-provenance path, and B.3 assurance claim remain separate. Expose only identities the bounded assurance use consumes; another named current assurance requirement keeps its own obligations. | Keeps a scoped working claim distinct from completed empirical Work while preserving replayable support when a result is actually used. |
-| **CC-E14-12 (F-declaration).**  | Normative Working-Model publications **SHALL** declare `U.Formality = Fk` per **C.2.3** (**recommended F ≥ F3** for readable publications). Assurance publications or records **MAY** carry higher F; the F of a composite episteme is bounded by its least-formal essential support on the relevant support path. | Aligns E.14 with the unified Formality characteristic; avoids obsolete “tiers/modes”. |
+| **CC-E14-12 (F-declaration).**  | Normative Working-Model epistemes **SHALL** declare U.Formality = Fk per C.2.3; F ≥ F3 is recommended for controlled expression. Readability remains a separate Working-Model duty. Any composite-F cap applies to the assessed expression and its essential content or inference under C.2.3, not automatically to external evidence. An assurance use consumes F only when its own argument needs it. | Aligns E.14 with the unified Formality characteristic; avoids obsolete “tiers/modes”. |
 | **CC‑E14‑13 (Light records, not thin prose).** | Authors **SHALL NOT** use the Working‑Model-first stance as a reason to strip problem framing, rationale, or worked slices out of the pattern text. Ordinary use may stay light, but readers **MUST** still be able to understand the pattern without nearby project notes. | Keeps human-facing economy from collapsing into under-explained prose. |
 | **CC‑E14‑14 (Recognition text before assurance text).** | When a pattern claims a Working‑Model or other human-facing benefit, authors **SHALL** keep recognition-first working text distinct from the heavier assurance text. The assurance text **MAY** refine and justify the working text, but it **SHALL NOT** silently change the recognition-text claim. If the pattern claims broad or transdisciplinary reach, the working text **SHOULD** show heterogeneous situations early, preferably through an `F.16`-style example matrix or an equally explicit alternative. | Keeps Working‑Model-first drafting from collapsing into either thin prose or late-only universality. |
 
@@ -305,7 +300,7 @@ The **Working-Model layer remains the canonical publication face** for authors a
 **What to watch**
 
 * **Discipline for structural relation kinds.** A published structural assertion is unsafe when its direct relation basis or identity test is missing, even if a trace or `axiomatic` flag exists. Conversely, forcing epistemic links to pretend they are structural over-physicalises knowledge claims; for those, a direct logical or evidence relation is the right currency.
-* **Author workload moves, not grows.** Day-to-day model authors stay with working labels; specification authors must recover the direct relation occurrence and identity test and keep one current construction account when this publication policy requires it. The account supports review; it does not repair missing world-side facts.
+* **Author workload follows the required support.** Day-to-day model authors use working labels; specification authors recover the direct relation occurrence and identity test and keep a current construction account when the publication policy requires it. That account adds authoring and maintenance work where needed. It supports review but does not repair missing world-side facts.
 
 **Invariants you must preserve**
 
@@ -342,11 +337,11 @@ The **Working-Model layer remains the canonical publication face** for authors a
 
 **Why Working-Model is canonical.** FPF privileges **human-oriented relations** as the primary language and working representation for thinking and communication. This satisfies didactic primacy while preserving conceptual integrity: formal work serves the human layer, not the other way around. The canonical template and style principles institutionalise this choice without inviting notation lock-in.
 
-**Why grounding flows downward.** The direct claim stands on the pattern that defines or tests it. When assurance is current, Mapping, Logical, Constructive, and Empirical support sits beneath that claim, and the applicable profile or requirement says what must be declared. Authors select only the support that fits purpose and risk: type and lexical alignment (**TA**), reasoned consequence (**VA**), constructive reconstruction (**VA**), or real-world confirmation (**LA**). This keeps the Kernel small, keeps different kinds of claim apart, and provides a path to higher assurance when warranted.
+**Why grounding is presented underneath the claim.** The direct claim stands on the pattern that defines or tests it. When assurance is current, Mapping, Logical, Constructive, and Empirical support sits beneath that claim, and the applicable profile or requirement says what must be declared. Authors select the contribution that addresses the current assurance question: meaning correspondence for **Concept-Bridge Assurance (CBA)**, a reasoned consequence or constructive argument for **Verification Assurance (VA)**, or empirical support for **Validation Assurance (LA)** under B.3.3. Each contributes only what its actual argument establishes for the receiving use.
 
-**Why patterns teach before they tighten.** The Tell‑Show‑Show requirement couples each universal rule with System and Episteme cases, reducing cognitive load and preventing premature formalism. It is the didactic mechanism that makes Human‑Centric Canonization practical across disciplines.
+**Why patterns teach before they tighten.** Tell-Show-Show places an architectural rule beside System and Episteme cases where it applies to both; E.7 permits a justified single-substrate boundary. The cases make application conditions and the recognition-to-assurance return inspectable. They do not by themselves establish reduced cognitive load, practical effectiveness, or universal applicability.
 
-**Why no notation talk in Core.** Guard‑rails and the style guide prohibit tool jargon and notation dependence inside normative prose; meanings are given in words and mathematics, with any renderings treated as illustrative only. This preserves longevity and cross‑disciplinary portability.
+**Why interpretation and operative use remain explicit.** E.5.2 keeps conceptual meaning portable while allowing an expression to carry reasoning or construction. An illustrative rendering stays informative; an operative expression retains its explained meaning, operation and prerequisites. A proposed substitution must preserve the claims and conditions needed by the use, and must disclose any relevant loss. Readable presentation does not remove the operation or establish equal effort across notations.
 
 ### E.14:12 - SoTA-Echoing
 
@@ -363,13 +358,13 @@ The **Working-Model layer remains the canonical publication face** for authors a
 
 * **E.8 Authoring Conventions & Style Guide** — section order, style principles, and mandatory safety subsections used here.
 * **E.7 Archetypal Grounding** — the Tell‑Show‑Show rule applied in this pattern’s own Grounding section.
-* **C.2.3 Unified Formality Characteristic (F)** — declares the **F** scale and **ΔF** moves for progressive rigor; Working-Model publications **SHALL** declare **F** and remain notation-agnostic.
+* **C.2.3 Unified Formality Characteristic (F)** — governs rigor of expression and its declaration for normative Working-Model epistemes. A declared F establishes neither readability nor assurance; unchanged formal content retains its F across notation changes.
 
 **Coordinates with.**
 
 * **CT2R-LOG — Working-Model Relations and Grounding** — supplies the optional elected profile that adds `validationMode` and, for covered structural assertions, `tv:groundedBy`; direct relations outside the profile need neither field.
 * **Compose-CAL (Constructional Mereology)** — supplies the `sum`, `set`, and `slice` trace content when construction assurance is selected; the trace does not define the Working-Model relation or its identity.
-* **E.10 Lexical Discipline & Stratification** — ensures naming discipline and register hygiene when the human layer is published.
+* **E.10 Unified Lexical Rules for FPF** — supplies naming and register rules when the human-facing Working-Model is published.
 
 **Constrains:**
 

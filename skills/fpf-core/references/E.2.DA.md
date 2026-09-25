@@ -1,6 +1,6 @@
 ---
 id: E.2.DA
-title: "FPF Pillar-Adequacy Evaluation CharacteristicSpace"
+title: "Evaluate How FPF Realizes Its Pillars (Pillar-Adequacy CharacteristicSpace)"
 status: Stable
 keywords: []
 dependencies:
@@ -18,7 +18,7 @@ dependencies:
     - F.19
 ---
 
-# E.2.DA: FPF Pillar-Adequacy Evaluation CharacteristicSpace
+# E.2.DA: Evaluate How FPF Realizes Its Pillars (Pillar-Adequacy CharacteristicSpace)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,7 +26,7 @@ dependencies:
 
 ---
 
-## E.2.DA - FPF Pillar-Adequacy Evaluation CharacteristicSpace
+## E.2.DA - Evaluate How FPF Realizes Its Pillars (Pillar-Adequacy CharacteristicSpace)
 
 Status: Core.
 
@@ -167,7 +167,7 @@ An `E.2.DA` result uses this table shape:
 
 For values `1..4`, explain why the lower adjacent value would understate the evidence and the higher adjacent value would overstate it. For `0`, explain why `1` would overstate the evidence and what would raise the value or reopen it. For `5`, explain why `4` would understate the evidence and what would lower the value or reopen it.
 
-A Pillar essay, local-quality average, two-column table, or result whose value depends on unchecked corpus, projection, or source evidence is not an `E.2.DA` result. It is only draft evaluation material. Missing or unchecked evidence lowers the Pillar coordinate that needs it; it does not make the coordinate optional.
+A Pillar essay, local-quality average, two-column table, or result whose value depends on unchecked corpus, projection or source evidence is draft evaluation material. Check the needed evidence before assigning the affected value. An observed defect lowers a value according to its coordinate meaning; absence of a check does not by itself establish that defect. A completed E.2.DA result still evaluates all eleven coordinates.
 
 Common calibration points:
 
@@ -237,7 +237,7 @@ The bias is bounded by the object-under-improvement declaration. `E.2.DA` does n
 | `CC-E2DA-6` | Keep the pattern-derived rules in projections, packets, companions, and entry rows traceable to the supplying pattern bodies. Each authored definition, constraint, test, method instruction, or publication rule stays in its pattern body. Preserve E.11's distinct locator, ordinary-entry, and Practical-Use Card functions, including the first-use guidance admitted for that form. |
 | `CC-E2DA-7` | Treat `E.21` and `E.9.DA` as evidence loci only where they change Pillar realization. |
 | `CC-E2DA-8` | State what became worse when visible coordinates improved. |
-| `CC-E2DA-9` | State the `FPFPillarAdequacyEvidenceBasis`; if host or monolith parity, projection, README, ToC, `E.11`, `I.2`, source-currentness, relation, companion, or evaluation-result evidence is missing or unchecked, lower the Pillar coordinate that needs it. |
+| `CC-E2DA-9` | State the `FPFPillarAdequacyEvidenceBasis`. For every value, check the host, publication, projection, entry, source, relation or evaluation evidence it actually needs. Keep an unsubstantiated value and its evidence gap in draft material; do not assign an E.2.DA status until all eleven values are justified. |
 | `CC-E2DA-10` | Use the value-appropriate adjacent comparison in E.2.DA:4.5a for every assigned value, including its endpoint rule for `0` or `5`. |
 | `CC-E2DA-11` | For broad wording, naming, or precision cleanup, state `FPFKindRestorationEvidence` for changed FPF-governed meanings. Preserve the pre- and post-repair object kind, relation or claim kind, admissible use, and scope; also preserve the current ontic slot, relation position, and use relation when they are part of the changed claim. When the changed position depends on cited pattern content, name its concrete contribution. An unaccepted semantic change lowers the affected Pillar coordinates and keeps the repair blocking. |
 | `CC-E2DA-11a` | When the evaluated FPF object includes ontic architecture, evaluate FPF-level effect, not ontic apparatus volume: reduced duplicate ontology or type explosion, clearer `EntityOfConcern` and SlotRelation boundaries, correct description-publication separation, thinner projections, and improved entry, authoring, review, or project use. Missing effect lowers the affected `P1`, `P2`, `P4`, `P5`, `P6`, `P7`, or `P8` coordinates. |
@@ -253,7 +253,7 @@ The bias is bounded by the object-under-improvement declaration. `E.2.DA` does n
 | **Ontic apparatus without FPF gain.** A change adds ontic names, pattern-set maps, publication-boundary prose, or evaluation proof while duplicate ontology, entry confusion, or project-use difficulty remains. | Lower the affected Pillar coordinates; repair the governed object, slot-relation boundary, publication split, and user action, or decline the ontic candidate. |
 | **Projection authority.** A ToC, packet, or companion independently defines or revises a durable pattern rule. | Place the authored definition, constraint, test, method instruction, or publication rule in its pattern body; preserve the source-linked public aid's function under E.11. |
 | **Citation shelf.** Source rows do not change FPF moves. | Lower `P11` and state the missing source contribution. |
-| **Pillar table without evidence loci.** Values are listed but not tied to corpus loci named by value. | Re-run with `Pillar coordinate \| Value \| ShortRationale \| EvidenceLocus`; lower any Pillar whose evidence cannot be named. |
+| **Pillar table without evidence loci.** Values are listed but not tied to corpus loci named by value. | Recover the needed evidence for `Pillar coordinate \| Value \| ShortRationale \| EvidenceLocus`. Keep unsupported values as draft material until checked; lower a value only for a defect established under its coordinate meaning. |
 | **Goodharted Pillar adequacy.** FPF-level values rise because more projection, source, review, or parity evidence was added, while entry recognition, layering, semantic authority, pragmatic utility, source use, or open-ended evolution becomes worse. | Reject apparatus-only improvement; apply `E.13` when Pillar values become targets replacing Pillar realization; repair the FPF-level content effect, delete or relocate proof material, and record checked no-proposal only when no non-dominated Pillar-content improvement remains. |
 
 ### E.2.DA:9 - Relations

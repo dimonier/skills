@@ -1,6 +1,6 @@
 ---
 id: A.16.2
-title: Reopen / SketchBackoff / Respecify
+title: "Reopen, SketchBackoff, Respecify, or Retire a Language-State Publication"
 status: Stable
 keywords:
   - reopen
@@ -20,7 +20,7 @@ dependencies:
     - B.4.1
 ---
 
-# A.16.2: Reopen / SketchBackoff / Respecify
+# A.16.2: Reopen, SketchBackoff, Respecify, or Retire a Language-State Publication
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -28,7 +28,7 @@ dependencies:
 
 ---
 
-## A.16.2 - Reopen / SketchBackoff / Respecify
+## A.16.2 - Reopen, SketchBackoff, Respecify, or Retire a Language-State Publication
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -121,11 +121,11 @@ This fits iterative design, incident response, scientific reframing, embodied in
 A routed evaluative note may remain within the same family but move from high closure to lower closure when a rival frame becomes a live alternative again. This is `reopen`, not `sketchBackoff`.
 
 #### A.16.2:13.2 - Sketch-backoff to cue pack
-An over-specified `A.6.A`-governed invitation may later prove premature. First select the identity case under A.16:4.3 and C.2.1, then record the publication-form change:
+An account recovered through `A.6.A` may assert more than its grounds support. For example, a supposed pulling opportunity may have only a detector cue and no established physical predicate. First select the account-identity case under A.16:4.3 and C.2.1, then express the publication-form change:
 
-`source form: actionInvitation; move: sketchBackoff; target form: U.PreArticulationCuePack`
+`source form: physical-opportunity account; move: sketchBackoff; target form: PreArticulationCuePack`
 
-with explicit withdrawal of the route selection and endpoint-use claim that no longer hold. Any actual authority relation is updated separately only if its own predicate changes.
+Withdraw the unsupported claim and any route selection or endpoint-use claim that depended on it. This changes the account; a change to the physical opportunity or an actual authority relation requires that subject's own predicate.
 
 #### A.16.2:13.3 - Respecify without repair-pattern drift
 A route-bearing publication may keep the same broad family but replace one framing scaffold or route specification with another. That is `respecify`, not silent editing, and not slot-explicit epistemic precision repair.
@@ -156,7 +156,7 @@ Retreat is an admissible move, not a rhetorical excuse to avoid publishing mista
 Older language often talks about "going backwards" or "regressing". The preferred migration is to name whether the change is reopen, sketch-backoff, respecify, or retire, and which route, endpoint, publication, current-use, or actual relation claim changes.
 
 #### A.16.2:15.2 - Integration reminder
-When retreat affects governing patterns such as `A.6.P`, `A.6.A`, `C.16.Q`, or `A.15`, update the exact endpoint result, invitation, evaluation, Work hook, or current-use claim instead of leaving a stale downstream assertion.
+When retreat affects governing patterns such as `A.6.P`, `A.6.A`, `C.16.Q`, or `A.15`, update the affected subject result, recovered action claim or question, evaluation, Work hook, or current-use claim instead of leaving a stale downstream assertion.
 
 ### A.16.2:16 - Retreat Package Discipline
 
@@ -200,7 +200,7 @@ Some retreats withdraw only one route claim or scope assumption, or remove one f
 An evaluative note may have reached a high closure state under one route, but new contrasts give the reviewer grounds to reconsider a serious rival. `reopen` is admissible when the bearer, family, and witness base remain largely intact but the closure claim must be relaxed.
 
 #### A.16.2:18.2 - Sketch-backoff from prompt to cue pack
-An abductive prompt may later prove over-committed because its open question was formulated before the cue anchors had stabilized. The admissible recovery is to sketch-backoff to `U.PreArticulationCuePack`, preserving the cue carriers while withdrawing the prompt-readiness and current-use claims.
+An abductive prompt may later prove over-committed because its open question was formulated before the cue anchors had stabilized. The admissible recovery is to sketch-backoff to `PreArticulationCuePack`, preserving the cue carriers while withdrawing the prompt-readiness and current-use claims.
 
 #### A.16.2:18.3 - Respecifying a route specification
 A route-bearing publication may keep the same general direction but replace one route specification with another when later review shows that the original framing selected the wrong governing pattern family. The point of `respecify` is to make that replacement visible without pretending the earlier route specification never existed.
@@ -223,7 +223,7 @@ The matrix is intentionally small: `A.16.2` should keep retreat legible, not sur
 ### A.16.2:20 - Required Downstream Repairs
 
 #### A.16.2:20.1 - Stale downstream publication/work-target rule
-A retreat or retirement often leaves stale downstream publications or Work targets behind: prompts, `A.6.A`-governed invitations, evaluative notes, requirement candidates, or Work hooks that were admissible only under the prior closure, route selection, or endpoint-use disposition. A conforming retreat should therefore name which downstream publications or Work targets remain valid, which must be revised, and which must be withdrawn.
+A retreat or retirement often leaves stale downstream publications or Work targets behind: prompts, claims or questions recovered through `A.6.A`, evaluative notes, requirement candidates, or Work hooks that were admissible only under the prior closure, route selection, or endpoint-use disposition. A conforming retreat should therefore name which downstream publications or Work targets remain valid, which must be revised, and which must be withdrawn.
 
 #### A.16.2:20.2 - Narrow retreat propagation
 Retreat propagation should be as narrow as truth permits. If only one framing scaffold failed, then only the downstream publications or Work targets that depend on that scaffold need revision. Over-broad rollback is wasteful; under-broad rollback leaves false route, endpoint, publication, or current-use claims in circulation.

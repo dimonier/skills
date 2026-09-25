@@ -1,11 +1,11 @@
 ---
 id: E.17.ID.CR
-title: "ComparativeReviewUnit - bounded comparison over comparative review units"
+title: Compare Sources Within a Shared Review Frame (ComparativeReviewUnit)
 status: Stable
 keywords: []
 ---
 
-# E.17.ID.CR: ComparativeReviewUnit - bounded comparison over comparative review units
+# E.17.ID.CR: Compare Sources Within a Shared Review Frame (ComparativeReviewUnit)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -13,11 +13,11 @@ keywords: []
 
 ---
 
-## E.17.ID.CR - ComparativeReviewUnit - bounded comparison over comparative review units
+## E.17.ID.CR - Compare Sources Within a Shared Review Frame (ComparativeReviewUnit)
 
 > **Status:** Stable
 
-**Plain-name.** Bounded comparison over comparative review units.
+**Plain-name.** Bounded source comparison under a shared review frame.
 
 **Use this when.** Use this pattern when a team needs one small comparison note, comparison sheet, or guided review aid over already available source epistemes or source publications. The unit should make one bounded contrast or a small set of contrast rows inspectable while the shared review frame stays visible and downstream claim or effect remains outside.
 

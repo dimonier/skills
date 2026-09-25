@@ -2,14 +2,7 @@
 id: E.5.2
 title: Notational Independence
 status: Stable
-keywords:
-  - notation
-  - syntax
-  - semantics
-  - "tool-agnostic"
-  - diagram
-  - UML
-  - BPMN.
+keywords: []
 dependencies:
   refines:
     - E.5

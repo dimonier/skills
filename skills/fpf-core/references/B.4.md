@@ -1,22 +1,15 @@
 ---
 id: B.4
-title: Canonical Evolution Loop
+title: Coordinate Repeated Adaptation (Canonical Evolution Loop)
 status: Stable
-keywords:
-  - evolution loop
-  - DesignRunTag feedback
-  - "observe-notice-stabilize-route"
-  - drift repair
-  - knowledge refinement
-  - method refinement
-  - "open-ended evolution."
+keywords: []
 dependencies:
   builds_on:
     - A.4
     - A.12
 ---
 
-# B.4: Canonical Evolution Loop
+# B.4: Coordinate Repeated Adaptation (Canonical Evolution Loop)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -24,7 +17,7 @@ dependencies:
 
 ---
 
-## B.4 - Canonical Evolution Loop
+## B.4 - Coordinate Repeated Adaptation (Canonical Evolution Loop)
 > **Status:** Stable
 > **Type:** Pattern
 
@@ -34,7 +27,7 @@ dependencies:
 
 **What this buys.** A compact, reviewable adaptation cycle whose identity rule comes from the subject pattern. It keeps observed basis, design-time change, run-time use, acting Systems, dated Work, evidence, publication, acceptance, and responsibility distinct while connecting only the facts needed by the receiving use.
 
-**Not this pattern when.** Not this pattern when one direct subject-pattern claim answers the change question without a repeated adaptation cycle. Use `B.3.5` for relation grounding, `B.4.1` for early cue stabilization and routing, `B.5.2.0` for abductive hypothesis work, `C.27` for temporal status, or `A.15` for method/work alignment without an adaptation-loop claim.
+**Not this pattern when.** Not this pattern when one direct subject-pattern claim answers the change question without a repeated adaptation cycle. Use the direct relation pattern for relation grounding, adding `B.3.5` when its working-model assurance profile is required. Use `B.4.1` to publish candidate routes from a stabilized cue, `B.5.2` for abductive hypothesis work, `C.27` for temporal status, or `A.15` for method/work alignment without an adaptation-loop claim.
 
 ### B.4:1 - **Problem Frame**
 
@@ -78,7 +71,9 @@ The subject does not observe, refine, or deploy itself by grammatical convenienc
 
 The performing System need not be external to the larger holon. For internal adaptation, apply the `A.12` reflexive split: identify the changed subsystem or part and the acting subsystem or part as exact, distinct participants, and establish their parthood in the containing holon independently. Use an external System when that is what the case actually has. For any particular dated `U.Work`, recover every performer's A.13 core and independently admit the occurrence under A.15.1; add F.6 afterward only when precise assignment-bound attribution is current. Name an assignment in the short B.4 account only when the receiving claim uses its identity. State authority, responsibility, permission, acceptance, or admission through its own direct predicate, actual participants, and applicability basis; neither a phase label nor Work supplies them.
 
-#### B.4:4.3 - Keep the four phases non-overlapping
+#### B.4:4.3 - Keep the four phase claims distinct
+
+These phases distinguish questions and results, not necessarily disjoint clock intervals. Operation and observation can overlap; state the actual Work occurrences and any result dependencies needed by the transition.
 
 | Phase | Current question | Output and boundary |
 | :--- | :--- | :--- |
@@ -122,7 +117,7 @@ The phase names can be shared, but each subject branch keeps its own identity an
   * **Loop Example:**
   1. **Operate:** The drones perform deliveries.
   2. **Observe:** The monitoring service and named operators perform observation Work and find recurring cold-weather battery strain, but the cue still has low articulation.
-  3. **Optional B.4.1 route inside Observe:** A named team performs stabilization Work. Under `A.16.1`, a `U.PreArticulationCuePack` preserves the cue nucleus, primary witness traces, and current language-state position without pretending that a final anomaly or action record exists; when the pack is made available for this use, name the separate publication occurrence under `E.24.PUB`. The same or another team performs routing Work. Under `B.4.1`, a `RoutedCueSet` keeps multiple continuations visible—for example, battery-chemistry investigation or route-planning adjustment; again, name its publication occurrence under `E.24.PUB` when availability matters.
+  3. **Optional B.4.1 route inside Observe:** A named team performs stabilization Work. Under `A.16.1`, a `PreArticulationCuePack` preserves the cue nucleus, primary witness traces, and current language-state position without pretending that a final anomaly or action record exists; when the pack is made available for this use, name the separate publication occurrence under `E.24.PUB`. The same or another team performs routing Work. Under `B.4.1`, a `RoutedCueSet` keeps multiple continuations visible—for example, battery-chemistry investigation or route-planning adjustment; again, name its publication occurrence under `E.24.PUB` when availability matters.
   4. **Continue the loop:** The selected route enters Refine or another fitting subject pattern. Only a selected and tested change proceeds to Deploy and renewed drone operation.
 
 * **Knowledge-instantiation slice (theory refinement loop):**
@@ -192,12 +187,12 @@ The result is a practical review language for repeated adaptation. It avoids bot
 ### B.4:11 - **Relations**
 
 * **Operationalizes:** `P-10 Open-Ended Evolution`.
-* **Uses:** `A.4 Temporal Duality` for design-time/run-time distinctions; `A.12` for external or reflexively split acting sides; `A.15.1` for dated Work; and the direct subject patterns named in B.4:4.1 for identity and continuity.
-* **Coordinates with:** `B.5 Canonical Reasoning Cycle`, `B.5.1` development states, and `B.3 Trust & Assurance Calculus`. B.4 does not implement the B.5.1 states one-for-one, and evidence is not a B.4 phase.
-* **Is detailed by:** `B.4.1 Observe -> Notice -> Stabilize -> Route` for optional early cue routing, together with B.4.x instantiation patterns for specific subject families.
+* **Uses:** `A.4` when Observe needs a comparison of a System's intended design with its actual operating conditions; `A.12` for external or reflexively split acting sides; `A.15.1` for dated Work; and the direct subject patterns named in B.4:4.1 for identity and continuity.
+* **Coordinates with:** `B.5 Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)`, `B.5.1` development states, and `B.3 Is This Claim Supported for This Use? — Trust and Assurance Calculus`. B.4 does not implement the B.5.1 states one-for-one, and evidence is not a B.4 phase.
+* **Is detailed by:** `B.4.1 Publish Candidate Routes for a Stabilized Cue (RoutedCueSet)` for optional early cue routing, together with B.4.x instantiation patterns for specific subject families.
 
 #### B.4:11.1 - Pre-abductive seam compatibility
 
-For early language-state routing, Observe does not have to jump directly into anomaly or hypothesis forms. Observe may publish a `U.PreArticulationCuePack` and a `RoutedCueSet` through `B.4.1`; a selected route then enters Refine or another fitting pattern. A downstream loop consumes the routed cue publication directly or a later typed publication such as `U.AbductivePrompt`, as appropriate.
+For early language-state routing, Observe does not have to jump directly into anomaly or hypothesis forms. Observe may publish a `PreArticulationCuePack` and a `RoutedCueSet` through `B.4.1`; a selected route then enters Refine or another fitting pattern. A downstream loop consumes the routed cue publication directly or a later typed publication such as `U.AbductivePrompt`, as appropriate.
 
 ### B.4:End

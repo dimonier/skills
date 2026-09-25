@@ -1,11 +1,13 @@
 ---
 id: A.19
-title: "CharacteristicSpace & Dynamics Hook (A.CHR‑SPACE)"
+title: "CharacteristicSpace: Coordinates, State Predicates and Dynamics Hook (A.CHR‑SPACE)"
 status: Stable
 keywords:
   - CharacteristicSpace
   - U.Dynamics.stateSpace
   - state trajectories
+  - CharacteristicSpacePredicate
+  - reusable state conditions
   - declared Characteristics and Scales
   - subspace
   - embedding
@@ -33,7 +35,7 @@ dependencies:
     - A.15
 ---
 
-# A.19: CharacteristicSpace & Dynamics Hook (A.CHR‑SPACE)
+# A.19: CharacteristicSpace: Coordinates, State Predicates and Dynamics Hook (A.CHR‑SPACE)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -41,7 +43,7 @@ dependencies:
 
 ---
 
-## A.19 - CharacteristicSpace & Dynamics Hook (A.CHR‑SPACE)
+## A.19 - CharacteristicSpace: Coordinates, State Predicates and Dynamics Hook (A.CHR‑SPACE)
 
 > **Type:** Kernel characteristic-space and dynamics-typing pattern
 > **Status:** Stable
@@ -180,17 +182,15 @@ A `U.Dynamics.stateSpace` **SHALL** refer to a `CharacteristicSpace` that types 
 
 ##### A.19:5.1.5 - Lexical discipline (Normative)
 
-In all **normative references, definitions, and identifiers** related to this pattern, the specification uses the canonical measurement terminology: **Characteristic**, **Scale**, **Level**, **Coordinate**, **CharacteristicSpace**, **slot**, **basis**. Legacy terms like “axis” or “dimension” are **forbidden** in Technical and Formal registers of the spec (per A.17’s lexical rules). They may appear _at most once_ in explanatory **Plain** language as mapped aliases to aid understanding (and if used, must be explicitly identified as equivalent to the official terms). In this pattern, we consistently use “slot” or “basis element” (never “axis”) to refer to a component of a space, and “Characteristic” (never “dimension”) to refer to the measured aspect. Here a point is a tuple of Coordinates, not an alias for a single Coordinate. This lexical discipline ensures clarity and consistency across the framework (see A.17 and C.16 L-rules for the formal policy on terminology).
+Use **Characteristic**, **Scale**, **Level**, **Coordinate**, **CharacteristicSpace**, **slot**, and **basis** for the objects defined here. Use “slot” or “basis element” for one component of the declared basis, and “Characteristic” for the measured or evaluated aspect. An explanatory alias must preserve that meaning. Mathematical uses of “axis” or “dimension” remain available when they denote their own declared mathematical objects rather than substitute ambiguously for a Characteristic or slot. A point is a tuple of Coordinates, not an alias for one Coordinate.
 
-##### A.19:5.1.6 - Quotients & NormalizationFix (Normative)
+##### A.19:5.1.6 - Normalized values, classes and representative choice
 
-**Subject-pattern note.** `≡_UNM` and `NormalizationFix` are defined in **A.19.UNM**. This section constrains only how they are **cited** when used in state‑space reasoning.
+**Subject-pattern note.** A.19.UNM governs the directed transformation, optional equality-of-output relation `≡_UNM` and `NormalizationFix`. Cite the selected method instance, actual domain, target, preservation/loss basis and validity conditions when state-space reasoning uses that result.
 
-**Design rule — read invariants, not labels.** Any checklist, acceptance predicate, equality check, join, or comparability claim over a `CharacteristicSpace` that depends on representation choice (chart, unit, reference plane, normalization choice, or label) **SHALL** be evaluated on **quotients by ≡_UNM** or on explicitly **Normalization‑fixed** charts, not on raw labels.
-*Minimal obligations:*
-1) **Name the quotient or fix.** If a checklist predicates over a **normalization‑variant** property, it **MUST** name the **NormalizationFix** (including the referenced **UNM** and the relevant `NormalizationMethodInstance`(s), by reference) and thus the **≡_UNM** class.
-2) **Declare NormalizationMethod class.** Every normalization used **MUST** name its method‑class token and validity window **as defined in A.19.UNM** (do not restate the class taxonomy here).
-3) **Join and equality only on invariants.** Equality checks and joins across spaces **MUST** target invariant forms (the **≡_UNM** quotient or a declared **Normalization-fixed** representation), never raw un-fixed coordinates.
+For an equality, join, acceptance predicate or comparison, state which distinctions its answer requires. A directed normalization suffices when its declared preservation basis supports that answer. A many-to-one normalization requires the receiving query to be constant on its classes; otherwise retain the original distinction, refine the normalization or return the missing basis. Forming the set of classes does not prove an operation on them well defined.
+
+If a state-space operation is inherited by classes, require compatible outputs and, for a partial operation, representative-independent availability under A.19.UNM. Cite a `NormalizationFix` only when an established class use needs a representative; choosing one does not restore the actual original state. Keep equality of labels separate from the claimed state or value equality.
 
 ##### A.19:5.1.7 - Overlay use, sensitivity, and calibration (Normative)
 
@@ -273,7 +273,7 @@ When these conditions are met, one can define a **coordinatewise preorder** over
 
 - **Dominance:** For a given set of “higher is better” slots, we say state *x* **≼<sub>coord</sub>** state *y* if and only if for *every relevant slot a*, the coordinate $a(x) \le a(y)$ (**after orienting all slots to the declared polarity for that slot**). In other words, *y* is as good or better on all enforced criteria. This defines a Pareto-like ordering (often partial, not total).
 
--  **Predicate band inclusion:** If states are defined by satisfying declared predicate bands (e.g. State _Y_ means declared coordinates stay above specific levels), then we might say _x_ **≼<sub>coord</sub>** _y_ if _x_ satisfies every predicate that defines _y_’s state. For instance, if state _y_ = “High Performance” requires speed > 100 and accuracy > 90%, then _x_ is “no less than y” if _x_ also satisfies those predicates.
+- **Predicate-region inclusion:** Predicate-defined categories denote regions of the declared space. Compare their regions by inclusion: `Region(P) subseteq Region(Q)` means every point satisfying `P` also satisfies `Q`. For example, speed > 120 and accuracy > 95% implies speed > 100 and accuracy > 90%. Two points satisfying the same category predicate need not be ordered; ordering those points requires the separately declared coordinate comparator.
 
 By default, **no comparability** is assumed unless proven. If any of the above congruence conditions fails, one must **not** fall back to ad-hoc comparisons (like matching by name or normalizing without declaration). Either switch to a **normalization-based regime** or declare the states **incomparable**.
 
@@ -281,7 +281,7 @@ By default, **no comparability** is assumed unless proven. If any of the above c
 
 When two state vectors do not meet the strict conditions for coordinatewise comparison (e.g. they come from different spaces, or the “same” Characteristics are measured on different scales or units), the only sanctioned way to compare them is: **normalize, then compare**.
 
-Concretely: if we have state _x_ in CS₁ and state _y_ in CS₂, a normalization‑based comparison is permitted only if the model can cite a set of `NormalizationMethodInstanceId`(s) under a chosen **UNM** (per **A.19.UNM**) that lands the relevant coordinates of _x_ into CS₂ (or lands both into a declared common target space). The result is understood as **NCVs** (or an `≡_UNM` quotient class) per A.19.UNM.
+Concretely: if we have state _x_ in CS₁ and state _y_ in CS₂, a normalization‑based comparison is permitted only if the model can cite a set of `NormalizationMethodInstanceId`(s) under a chosen **UNM** (per **A.19.UNM**) that lands the relevant coordinates of _x_ into CS₂ (or lands both into a declared common target space). The base results are **NCVs** with their preserved/lost distinctions. Use an `≡_UNM` class only when the receiving query is recoverable from that class; an inherited operation needs its separate compatibility and availability argument under A.19.UNM.
 
 **Comparability rule (normalize-then-compare).** We say _x_ **≼<sub>normalization</sub>** _y_ only if, after applying the cited normalization instances to produce a representation of _x_ in CS₂ (or a common target), the mapped state can be compared **coordinatewise** under `≼_coord`. In other words, we never compare raw _x_ and _y_; we compare *after mapping into a common, well-typed space*.
 
@@ -307,7 +307,7 @@ A comparison across reference schemes or planes follows the relations the case a
 
 A comparison may reuse a predicate only when its complete by-value meaning is unchanged. When a coordinate mapping is needed, it must preserve every predicate component required by this use. If the reuse also relates two exact local senses through an obtaining Bridge, a separate bounded-use claim states that semantic use and any required reliance passes. CPM separately binds comparison scope, comparator, input values, effective reference plane, and evaluation window. The Bridge alone copies neither predicate content, scope, nor time, and a common label establishes none of them.
 
-B.3 or the direct assurance pattern contains the defining content for any confidence or margin consequence. Report the values as incomparable for the use when a critical coordinate lacks an admissible normalization or coordinate mapping; a separately needed semantic Bridge, bounded-use claim, or plane relation is absent; any required reliance does not pass; or the predicate, plane, scope, or window cannot be held fixed.
+C.16 governs measurement uncertainty and calibration limits; A.3.3 governs prediction error and model applicability. Use B.3 or the direct assurance pattern when the use makes an assurance claim. Report the values as incomparable for the use when a critical coordinate lacks an admissible normalization or coordinate mapping; a separately needed semantic Bridge, bounded-use claim, or plane relation is absent; any required reliance does not pass; or the predicate, plane, scope, or window cannot be held fixed.
 
 ##### A.19:5.2.5 - Characteristic-Space Reference Chain
 
@@ -363,7 +363,7 @@ Apply a row only when its trigger is present.
 | --- | --- |
 | Subspace or product | List the carried slots and Scale meanings. Projection uses the type-correct composition law; a product performs no aggregation. |
 | Embedding or lossy mapping | An embedding is point-injective and preserves every named structure. A many-to-one normalization, binning, dropped Coordinate, or other coarse-graining is a lossy mapping or projection with preserved and lost distinctions stated. |
-| Normalization, quotient, equality, or join across spaces | Cite the admissible A.19.UNM instance, Scale conditions, domain, and validity window. Compare in one declared target space. Use a quotient or fixed chart when the claimed equality or join depends on normalization invariance; otherwise report the values as incomparable. |
+| Normalization, quotient, equality, or join across spaces | Cite the admissible A.19.UNM instance, Scale conditions, domain, and validity window. Compare in one declared target space. Check preservation of the equality/join question; a class-level use needs query constancy and any inherited operation needs compatibility. Retain lost inputs, refine the transformation or return the unsupported comparison. |
 | Same-space state comparison | Compare Coordinates directly only when both states use the same declared space, slot meanings, Scale metadata, and state definition. A.19.CPM separately binds the comparator, scope, plane, window, application, and result. |
 | Indicator use | Cite the `IndicatorChoicePolicy`; a normalized value is not automatically an indicator. |
 | Cross-reference-scheme or cross-plane use | Cite an F.9 Bridge only for two exact F.17 local senses when its predicate obtains, and state the bounded-use claim separately; `CL` is optional. Cite the applicable plane relation separately. Name matching, context/scheme/plane difference, and an expired mapping establish neither relation nor admissibility. |

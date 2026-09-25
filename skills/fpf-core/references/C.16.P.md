@@ -1,6 +1,6 @@
 ---
 id: C.16.P
-title: Characteristic and Scale Precision Restoration
+title: Restore Precision to Characteristic and Scale Wording
 status: Stable
 keywords: []
 dependencies:
@@ -21,7 +21,7 @@ dependencies:
     - A.19.ECS
 ---
 
-# C.16.P: Characteristic and Scale Precision Restoration
+# C.16.P: Restore Precision to Characteristic and Scale Wording
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -29,7 +29,7 @@ dependencies:
 
 ---
 
-## C.16.P - Characteristic and Scale Precision Restoration
+## C.16.P - Restore Precision to Characteristic and Scale Wording
 
 > **Type:** Characterization precision-restoration pattern
 > **Status:** Stable

@@ -1,19 +1,17 @@
 ---
 id: C.31.ASAP
-title: "Architecture Scale-Amenability Preference"
+title: "Which Architecture Is Preferable Under Scale? (Scale Amenability)"
 status: Stable
 keywords:
   - architecture scale preference
   - scale amenability
-  - ScaleClaimTriage
   - scale variable
   - scale window
   - architecture alternatives
-  - "source-return condition"
-  - "coarse-graining"
-  - RG
-  - platform scale claim
-  - waiver reason.
+  - exception growth
+  - waiver
+  - scale probe
+  - "coarse-graining."
 dependencies:
   builds_on:
     - C.31
@@ -41,7 +39,7 @@ dependencies:
     - C.11
 ---
 
-# C.31.ASAP: Architecture Scale-Amenability Preference
+# C.31.ASAP: Which Architecture Is Preferable Under Scale? (Scale Amenability)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -49,7 +47,7 @@ dependencies:
 
 ---
 
-## C.31.ASAP - Architecture Scale-Amenability Preference
+## C.31.ASAP - Which Architecture Is Preferable Under Scale? (Scale Amenability)
 
 > **Type:** Characterization pattern
 > **Status:** Stable

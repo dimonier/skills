@@ -1,13 +1,14 @@
 ---
 id: C.2.4
-title: "`U.ArticulationExplicitness`"
+title: "`U.ArticulationExplicitness` — How Explicit Is an Episteme's Meaning for Its Use?"
 status: Stable
 keywords:
   - articulation explicitness
-  - semantic shape
-  - "under-articulated cue"
-  - explicitness
-  - early repair readiness.
+  - AE0–AE5
+  - semantic branch
+  - stable cue
+  - "branch-appropriate expression"
+  - receiving use.
 dependencies:
   builds_on:
     - C.2.2
@@ -16,7 +17,7 @@ dependencies:
     - A.16
 ---
 
-# C.2.4: `U.ArticulationExplicitness`
+# C.2.4: `U.ArticulationExplicitness` — How Explicit Is an Episteme's Meaning for Its Use?
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -24,7 +25,7 @@ dependencies:
 
 ---
 
-## C.2.4 - `U.ArticulationExplicitness`
+## C.2.4 - `U.ArticulationExplicitness` — How Explicit Is an Episteme's Meaning for Its Use?
 
 > **Type:** Definitional (D)
 > **Status:** Stable

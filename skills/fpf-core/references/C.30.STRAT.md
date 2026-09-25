@@ -1,8 +1,22 @@
 ---
 id: C.30.STRAT
-title: Stratification Wording Precision Restoration
+title: Clarify Stratification and Architecture Source Labels
 status: Stable
-keywords: []
+keywords:
+  - stratification
+  - precision restoration
+  - source labels
+  - layer
+  - level
+  - tier
+  - stack
+  - ladder
+  - rung
+  - block
+  - expert
+  - cache
+  - router
+  - gate.
 dependencies:
   builds_on:
     - E.10
@@ -40,7 +54,7 @@ dependencies:
     - I.2
 ---
 
-# C.30.STRAT: Stratification Wording Precision Restoration
+# C.30.STRAT: Clarify Stratification and Architecture Source Labels
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -48,7 +62,7 @@ dependencies:
 
 ---
 
-## C.30.STRAT - Stratification Wording Precision Restoration
+## C.30.STRAT - Clarify Stratification and Architecture Source Labels
 
 > **Type:** Architectural precision-restoration subpattern under `C.30`
 > **Status:** Stable

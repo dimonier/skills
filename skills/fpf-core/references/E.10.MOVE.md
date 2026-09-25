@@ -1,6 +1,6 @@
 ---
 id: E.10.MOVE
-title: Move and Readiness Wording Precision Restoration
+title: "Move, Readiness and Trajectory Wording Precision Restoration"
 status: Stable
 keywords: []
 dependencies:
@@ -25,7 +25,7 @@ dependencies:
     - G.11
 ---
 
-# E.10.MOVE: Move and Readiness Wording Precision Restoration
+# E.10.MOVE: Move, Readiness and Trajectory Wording Precision Restoration
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -33,7 +33,7 @@ dependencies:
 
 ---
 
-## E.10.MOVE - Move and Readiness Wording Precision Restoration
+## E.10.MOVE - Move, Readiness and Trajectory Wording Precision Restoration
 
 > **Type:** Part E precision-restoration pattern
 > **Status:** Stable
@@ -135,7 +135,7 @@ Stay in E.10.MOVE only while `readiness`, `ready`, `full kit`, `work entry`, or 
 | A patient, system, or other subject has a value in a still-hidden state frame | `A.19.SPR`, then the subject pattern that defines or tests the recovered value. |
 | An exact system-role assignment satisfies a by-value assignment-state condition | `A.2.5`; keep its predicate, world-side relation occurrence, and assertion episteme distinct. |
 | One intended performance satisfies a work-entry criterion | `A.15.5`; its local readiness result is not a gate decision or performed target Work. |
-| A distinct `OperationalGate(profile)` consumes declared checks and publishes a decision | `A.21`; a ready label or readiness result alone is not gate passage. |
+| A named gate decides whether one bounded action or transition may proceed under an applicable profile | `A.21` combines independently established check results into a `GateDecisionResult`; publication is a separate optional use. A ready label or readiness result alone is not gate passage. |
 | A publication use, permission claim, preparation Work, or target Work is meant | `E.17`, the direct permission pattern, or `A.15.1` as applicable. Keep each claim separate. |
 
 If the direct pattern and value were already clear, bypass this table and use that pattern immediately.
@@ -154,7 +154,7 @@ Ask only the questions the receiving use needs:
 
 1. What exact bearer or represented subject is positioned or ordered?
 2. What identity, continuity, membership, lineage, or edition rule matters?
-3. Which declared position space, state space, configuration space, or possibility space and edition is relied on, if any?
+3. Which declared position, state, configuration or possibility space is relied on, if any? Name a defining episteme edition separately when the use depends on it.
 4. What is the ordering or reference domain—time, event, generation, plan order, graph order, or another index?
 5. What counts as a position, segment, branch, interval, generation, or edge for this use?
 6. What posture does the claim need—for example, actual, observed, reconstructed, predicted, simulated, proposed, recommended, or planned?
@@ -169,7 +169,7 @@ These are recovery questions, not fields of a new `Trajectory`, `TrajectoryAccou
 | Proposed, recommended, or planned route | `C.22.2`, `C.11.CRC`, `C.11`, A.15.2, and the domain Method. Recommendation, choice, WorkPlan, performed Work, and effect remain separate. |
 | Population or lineage history | `C.36` only for the cultural case; otherwise use an admitted domain owner or return the named non-cultural population or lineage architecture gap. Do not model membership turnover as one-holder continuity. |
 | NQD/OEE search history, archive or front succession, or possibility-space projection | `C.17`–`C.19`, `G.5`, `G.11`, and `C.29` as applicable. An archive is not automatically a population. |
-| Language-state move responsibility | `A.16.0` for its exact language-state bearer, position space, move lineage, branching, merging, or loss, and responsibility use. The specialized account is not a general template. |
+| Language-state history needed by a responsibility question | `A.16.0` supplies an ordinary account of the relevant source editions, position claims, moves, lineage and losses. Any actual responsibility change needs its independently governed participants, scope, time and instituting facts under §4.6; language-state movement does not supply that relation. |
 | Mathematical trajectory lens | `C.29` for the selected representation and explicit correspondence, with declared losses; keep the represented subject under its direct owner. |
 | Ordinary or quote-only wording | Preserve it and stop unless a later FPF use relies on a stronger claim. |
 
@@ -211,7 +211,7 @@ These are repair demonstrations, not a global replacement table.
 
 Source sentence: "The next mantra move is to compare the two patterns."
 
-Keep `mantra move` only when the sentence presents one E.11.PUA practice-continuation description inside a named post-qualification demonstrative slice. The description states its proposed use, expected result and kind, direct PatternID and name, current condition, and continuation disposition. That PatternID locates the applicable pattern. If the pattern choice is unresolved, the description may point to a separate nested selection question.
+For the post-qualification demonstrative case, recover one E.11.PUA practice-continuation description inside a named post-qualification demonstrative slice. The description states its proposed use, expected result and kind, direct PatternID and name, current condition, and continuation disposition. That PatternID locates the applicable pattern. If the pattern choice is unresolved, the description may point to a separate nested selection question.
 
 Selected fields of an optional note; include `BlockedOverread` only for an observed or independently grounded misreading:
 
@@ -258,7 +258,7 @@ For example, if the surrounding text identifies an admitted MethodDescription fo
 
 Source sentence: "Follow the evidence path to approval."
 
-Recover the evidence or provenance relation under A.10. Identify separately the decision meant by *approval*: an applicable gate decision is governed by A.21; any authorization or commitment uses the pattern governing that exact relation.
+Use A.10 to recover the selected claim, exact sources, independently established evidence or provenance relations, currentness and bounded reliance. Identify separately the decision meant by *approval*: A.21 governs an applicable gate result; any authorization or commitment uses the pattern governing that exact relation.
 
 #### E.10.MOVE:5.7 - Manufacturing operation
 
@@ -276,7 +276,7 @@ When `ready` hides a patient-state claim, use A.19.SPR to recover the patient as
 
 Initial sentence: "The next mantra move is: name the thing."
 
-An initial repair classified the phrase as `boundedDemonstratedContinuation`. Inspection then shows that the enclosing text is A.6.P's local RPR mantra: a short rendering of the A.6.P Solution. It has no qualifying wider `ConstraintGovernedUnfoldingStructure@Context`, no post-qualification `DemonstrativeUnfoldingSlice@Context`, and no E.11.PUA practice-continuation description with the required proposed use, expected result, pattern, condition, and disposition.
+An initial repair classified the phrase as `boundedDemonstratedContinuation`. Inspection then shows that the enclosing text is A.6.P's local RPR mantra: a short rendering of the A.6.P Solution. It has no qualifying wider `ConstraintGovernedUnfoldingStructure@Context`, no post-qualification slice of an independently qualified CGUS, and no E.11.PUA practice-continuation description with the required proposed use, expected result, pattern, condition, and disposition.
 
 That evidence overturns the initial disposition. Remove the demonstrated-continuation claim, retain the local RPR mantra as Plain didactic wording, use the A.6.P Solution and its direct relation-recovery guidance, and write: "Apply the first clause of the local RPR mantra: name the thing; then recover the relation or comparison." The `A.6.P` locator and Solution establish neither a `U.Method` nor a `U.MethodDescription`. Establish a separate `U.Method`, a qualifying `U.MethodDescription` episteme, and any Method-use relation only if A.3.1 and A.3.2 independently admit them and the receiving claim depends on those identities. Reopen the demonstrative-slice question only if a later qualified structure and slice actually show a complete E.11.PUA practice-continuation description.
 
@@ -284,7 +284,7 @@ That evidence overturns the initial disposition. Remove the demonstrated-continu
 
 Constructed wording for repair: `Our architecture follows a trajectory under changing constraints.`
 
-Read the sentence through `F.19` first. If it means only that the team expects to revise the architecture as constraints change, state that proposed action directly. When an FPF inference relies on the trajectory claim, recover the exact architecture or system subject, the changing constraints and reference window, whether the sentence concerns actual architecture editions, a proposed evolution policy, or a modelled sequence, and the direct architecture, transformation, or model owner. For a C.29 curve or ordered rendering, name its correspondence to the architecture and the losses allowed by that use; establish transformation and evidence claims under their direct owners.
+Read the sentence through `F.19` first. If it means only that the team expects to revise the architecture as constraints change, state that proposed action directly. When an FPF inference relies on the trajectory claim, recover the exact architecture or system subject, the changing constraints and reference window, whether the sentence concerns actual changes to the architecture, editions of its description, a proposed evolution policy, or a modelled sequence, and the direct architecture, transformation, or model owner. For a C.29 curve or ordered rendering, name its correspondence to the architecture and the losses allowed by that use; establish transformation and evidence claims under their direct owners.
 
 Overlap example: `The development trajectory improved.` Start with `E.10.DEV` to recover the developed subject and the basis of *improved*. Open this branch only when a separately relied-on ordered path, model, plan, or representation remains. Stop when the recovered direct claim answers the question.
 
@@ -317,9 +317,9 @@ Lower, block, or reopen the repair when the governed text span, claim being made
 | --- | --- | --- |
 | Synonym replacement | "Move" becomes "action" or "use" without recovered kind. | Recover governed text span, claim being made, object under wording repair, relation, and subject pattern first. |
 | Imported MOVE kind | TameFlow source wording becomes FPF ontology. | Recover intended work, readiness, gate, preparation work, or performed work. |
-| Readiness as gate passage | A ready label becomes `GateDecision=pass`. | Use A.21 only when gate fields are present. |
+| Readiness as gate passage | A ready label is taken to establish a `GateDecisionResult` with decision `pass`. | Recover the applicable A.21 profile, complete required check set and mapped decision. Readiness supplies only the input that the profile actually consumes. |
 | Path as work-authorization route | Evidence path or source-reference path becomes a way to authorize work by resemblance. | Recover evidence relation, source relation, graph path, gate relation, work authorization, or deontic permission separately. |
-| Local expression generalized | A bounded local phrase is generalized to unrelated project work. | Keep `mantra move` bound to one E.11.PUA practice-continuation description shown inside a post-qualification demonstrative slice; restore every other phrase through its own governed value and direct pattern. |
+| Local expression generalized | A bounded local phrase is generalized to unrelated project work. | Preserve the chosen branch: a post-qualification E.11.PUA continuation description, a Plain local mantra tied to its bounded result, or a Plain long-mantra map tied to its current answer or stop. Recover each claim through its own direct pattern. |
 | Trajectory shell generalized | Ordered points, paths, plans, histories, lineages, and archive or front succession are treated as one world-side kind or Method. | Recover the direct claim and owner, then the subject, identity or continuity, reference order, posture, and receiving-use distinctions it needs; keep only a declared C.29 representation relation when that is the actual claim. |
 
 ### E.10.MOVE:9 - Consequences

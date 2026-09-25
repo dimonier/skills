@@ -1,6 +1,6 @@
 ---
 id: F.8
-title: "Mint-or-Reuse Decision"
+title: "Mint-or-Reuse Decision for a Name"
 status: Stable
 keywords:
   - subject before name
@@ -25,7 +25,7 @@ dependencies:
     - F.8
 ---
 
-# F.8: Mint-or-Reuse Decision
+# F.8: Mint-or-Reuse Decision for a Name
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -33,7 +33,7 @@ dependencies:
 
 ---
 
-## F.8 - Mint-or-Reuse Decision
+## F.8 - Mint-or-Reuse Decision for a Name
 
 > **Type:** Architectural pattern
 > **Status:** Stable

@@ -54,7 +54,7 @@ other files. An artifact not bound to a PlanItem is not tracked in the track's p
 **AR.2 — gathering materials.**
 
 1. Read the track's ProblemCard@Context — the core of the problem.
-2. Gather the track's materials: references to DEC, Q, RISK, CON, artifacts, WRKs on the topic.
+2. Gather the track's materials: references to DEC, artifacts, WRKs on the topic.
 3. If needed — read the atomic files of the related entities.
 4. If the artifact relies on FPF patterns — load them from fpf-core.
 
@@ -63,8 +63,8 @@ other files. An artifact not bound to a PlanItem is not tracked in the track's p
 1. Create `artifacts/YYYY-MM-DD-slug.md`.
 2. Maintain self-containedness and alienability: the artifact is read without
    reaching for other project entities; references to internal codes (DEC-NNNN,
-   Q-NNNN, RISK-NNNN, CON-NNNN, INV-NN, FR-XXX-NN, etc.) are forbidden — instead
-   of the code give a brief substantive description.
+   TRK-NNNN, WRK-…, etc.) are forbidden — instead of the code give a brief
+   substantive description.
 3. Language: Russian; English insertions — only proper names, technologies, terms without an equivalent.
 
 **AR.4 — recording the work (WRK).**

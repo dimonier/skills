@@ -1,6 +1,6 @@
 ---
 id: A.6.2
-title: "Effect-free episteme morphing"
+title: "Effect-Free Episteme Morphing: Laws for Mathematical Relations Between Epistemes"
 status: Stable
 keywords: []
 dependencies:
@@ -21,7 +21,7 @@ dependencies:
     - E.18
 ---
 
-# A.6.2: Effect-free episteme morphing
+# A.6.2: Effect-Free Episteme Morphing: Laws for Mathematical Relations Between Epistemes
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -29,7 +29,7 @@ dependencies:
 
 ---
 
-## A.6.2 - Effect-free episteme morphing
+## A.6.2 - Effect-Free Episteme Morphing: Laws for Mathematical Relations Between Epistemes
 > **Status:** Stable
 > **Type:** Definitional pattern
 
@@ -314,7 +314,7 @@ The EFEM `NormalizeView : X→Y`:
 
 * has `entityOfConcernChangeMode(NormalizeView) = preserve`;
 * has a source-to-receiving ClaimGraph difference consisting only of the declared normalization. If an exact `EpistemeEditionRelation` or another neighboring relation matters, name its predicate and participants on each side and compare the endpoint facts; `NormalizeView` does not change that occurrence. An assertion such as “normalised at edition E” is part of Y's ClaimGraph and must pass P2;
-* is effect-free and separately claims idempotence on the output-closed domain of valid `EpistemeView` values under the fixed scheme and normalization rules; equality means exact normalized ClaimGraph equality plus equality of all identity-bearing episteme values, and a fixture that composes `NormalizeView` with itself supplies the repeat witness (P4);
+* is effect-free. A repeat check uses the next normalization arrow `n_Y : Y -> Z` under the fixed scheme and normalization rules. It must establish `Z = Y` under C.2.1 and `compose(n_Y, NormalizeView) ≃ NormalizeView` under the substrate's declared arrow equivalence, with a fixture or proof. In the identity fixture, the rule leaves already normalized Y unchanged and uses `n_Y = id_Y`; P3 then gives `compose(n_Y, NormalizeView) = NormalizeView`. The exact `NormalizeView : X -> Y` is self-composable only when X = Y (P3-P4);
 * is conservative (P2): no new claims, only re‑expression.
 
 MVPK can reuse the EFEM laws for these normalization arrows. Claim the relevant category and functor only when their mappings, identity laws and composition conditions are established under P3 and the selected MVPK profile.
@@ -350,9 +350,9 @@ Two typical EFEM species over this kind are:
   * satisfies P2 only when every claim in the receiving specification is recoverable from exact source ClaimGraphs or independently current facts under named relations and schemes; the unchanged EntityOfConcern is an endpoint identity condition, not a proposition or additional premise;
   * satisfies C.2.1:7.1 by declaring its endpoint-value comparison, named relation-read profile, and change mode.
 
-* `Normalize_EngView : U.View → U.View` — a view‑normalisation EFEM (again with `EntityOfConcernChangeMode = preserve`) that:
+* `Normalize_EngView` — a family of view-normalisation EFEM arrows `n_X : X -> Y` between exact `U.View` epistemes (again with `EntityOfConcernChangeMode = preserve`) that:
   * states how the formal relation uses the three C.2.1 identity values and makes the exact source-to-receiving ClaimGraph difference explicit; any difference between separately obtaining endpoint facts that it compares is named by the exact predicate and participants, and any normalization application remains separate;
-  * is effect-free and separately claims idempotence on its output-closed engineering-view domain under the fixed scheme and normalization rules; equality means exact normalized ClaimGraph equality plus equality of all identity-bearing episteme values, and a composition fixture supplies the repeat witness (P4);
+  * is effect-free. A repeat claim identifies the next arrow `n_Y : Y -> Z` under the same rules, establishes `Z = Y` under C.2.1, and witnesses `compose(n_Y, n_X) ≃ n_X` under the declared arrow equivalence, as in §5.2;
   * is conservative (P2) by construction: it never introduces new atoms about the selected system.
 
 Concrete `A.6.3/A.6.4/E.17.*` patterns for engineering description and specification-use idioms state explicitly, under C.2.1:7.1 and `CC-EFEM.*`, which of the three C.2.1 endpoint values remain the same or differ and which exact separately obtaining relation occurrences their arrow rules read or compare.
@@ -375,7 +375,7 @@ Concrete `A.6.3/A.6.4/E.17.*` patterns for engineering description and specifica
 | **CC‑EFEM.2 (Derived EntityOfConcernChangeMode).** | Each arrow family declares `entityOfConcernChangeMode : EpMorphism -> {preserve, retarget}` and derives each arrow's value from its resolved endpoint EntitiesOfConcern: `preserve` for the same exact entity, `retarget` for independently different entities. A named subtype may restrict one value but is closed under composition only when every admitted composite still meets that restriction. Any bounded-use assertion `q` remains separate, and its current-case judgement separately tests exact facts. An F.9 Bridge is additional only for a separate local-sense relation. |
 | **CC‑EFEM.3 (Purity).** | An EFEM arrow SHALL assert no Work, mechanism execution, or carrier mutation. If a system constructs or changes an episteme, identify the system, any performed Work, the affected or resulting episteme, and any obtaining production or change relation separately (C.2.1:7.1). Identify an A.6.1 application and its argument and result bindings only when that declaration is current; the arrow may then relate the exact epistemes under P2–P5. |
 | **CC‑EFEM.4 (Conservativity).** | Each arrow family states which of the three endpoint identity values and which ClaimGraph parts remain the same or differ under the declared schemes and arrow-family conditions. When a receiving-use claim is made, a separate `q` states the receiving-use invariant, visible loss, conditions, and polarity; the current-case judgement reports `satisfies`, `fails`, or `cannot decide` from exact facts. An arrow declaration does not make unsupported output commitments valid. |
-| **CC‑EFEM.5 (Category structure and repeat claims).** | Each arrow family names its exact endpoints, arrow rule or designator, declared equivalence, identity and composition conditions. Claim category `Ep` and mapping `α` only when identities and every matching composition close. The resolved endpoint EntitiesOfConcern uniquely determine the thin-base arrow `α(f)`, but they do not identify f itself. A retargeting round trip maps to the thin-base identity and is reclassified from its final endpoints. Idempotence or another repeat claim is added only for an endomorphism whose declared domain makes composition meaningful, with its equivalence and witness stated. Any evaluation operation, deterministic-execution claim, or repeat claim about an operation application is separate and follows that operation's rule. |
+| **CC‑EFEM.5 (Category structure and repeat claims).** | Each arrow family names its exact endpoints, arrow rule or designator, declared equivalence, identity and composition conditions. Claim category `Ep` and mapping `α` only when identities and every matching composition close. The resolved endpoint EntitiesOfConcern uniquely determine the thin-base arrow `α(f)`, but they do not identify f itself. A retargeting round trip maps to the thin-base identity and is reclassified from its final endpoints. Idempotence or another self-composition claim requires an endomorphism whose declared domain makes composition meaningful, with its equivalence and witness stated. The normalization repeat claim in §5.2 instead names successive composable arrows and witnesses its stated endpoint equality and composite equivalence. Any evaluation operation, deterministic-execution claim, or repeat claim about an operation application is separate and follows that operation's rule. |
 | **CC‑EFEM.6 (Formal domain and separate use conditions).** | Each arrow family SHALL state its allowed endpoint EntityOfConcern kinds, any endpoint facts or grounding relations its formal rule reads, admitted schemes and correspondences, and any ClaimScope constraint required by the arrow law. When a receiving-use claim is made, use-specific scope, operating conditions, or selected viewpoint enter `q` only when they change its invariant, visible loss, receiving use, or conditions; `q` carries polarity, and the separate current-case judgement tests exact facts. When the use also relies on an obtaining Bridge between two exact F.17 local senses, cite F.9 and its separate bounded-use claim; when it crosses a ReferencePlane, cite the applicable plane relation. No context, scheme, plane, or operating-condition difference creates either relation automatically. |
 | **CC‑EFEM.7 (Description and specification-use discipline).** | For any `...Description` or `...Spec` episteme, identify exact E and its EntityOfConcern under C.2.1; admit specification use only under E.10.D2; and state which endpoint claim content, EntityOfConcern, and effective scheme are preserved or differ. Name any grounding occurrence and describing-use viewpoint qualification separately and compare only the facts the rule actually reads. Any occurrence change follows its direct relation pattern; viewpoint selection and E.17.0 conformance require their own claims. |
 | **CC-EFEM.8 (Endpoint-value and relation-read declaration).** | Any EFEM species SHALL declare its morphism family and change mode and compare the three C.2.1 endpoint identity values. It SHALL name every empirical-grounding, representation, or conformance occurrence and every describing-use viewpoint qualification that its rule reads, together with the endpoint facts compared. Those occurrences retain their separately governed current values. Any actual relation change follows its direct pattern, and any producing activity follows its exact application and Work. |

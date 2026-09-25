@@ -1,6 +1,6 @@
 ---
 id: F.11
-title: Method Quartet Harmonisation
+title: "Distinguish Method, MethodDescription, Work and Outputs"
 status: Stable
 keywords:
   - Method
@@ -22,7 +22,7 @@ dependencies:
     - F.9
 ---
 
-# F.11: Method Quartet Harmonisation
+# F.11: Distinguish Method, MethodDescription, Work and Outputs
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -30,7 +30,7 @@ dependencies:
 
 ---
 
-## F.11 - Method Quartet Harmonisation
+## F.11 - Distinguish Method, MethodDescription, Work and Outputs
 
 **“Ask separately about the way, its description, the Work that occurred, and any control output produced during that Work.”**
 
@@ -92,7 +92,7 @@ Work may enact a Method when the exact enactment relation and evidence are state
 * **Control or transformation output** — the exact signal, command, value, output, or changed entity defined by the direct domain pattern when the case contains one.
 * **Description use** — the exact claim that a System or Work used, followed, interpreted, or departed from a MethodDescription; do not assume one universal relation.
 * **Enactment** — the exact relation between Work and Method under B.1.5 and A.15, when supported.
-* **Performed-Work attribution** — the A.15.1 and F.6 relation from actual Work to the System and obtaining system-role assignment involved in its performance.
+* **Performed-Work attribution** — F.6 `performedUnderAssignment` between already admitted Work and the same obtaining assignment recovered through A.13; the actual performer is the assignment's holder, not a third relation participant.
 * **Window** — the time or condition envelope used by an F.10 status or evaluation claim.
 
 ### F.11:6 - Solution — four questions
@@ -107,7 +107,7 @@ Name the already identified episteme and the one admitted Method that is its exa
 
 #### F.11:6.3 - Which Work actually occurred?
 
-Name the dated Work, its relevant interval or situation, and the actual System that performed it. If a system-role claim matters, separately name the local system-role kind, the obtaining assignment, and the performed-Work attribution. Do not replace them with a behavioural “mask” or a `System-in-Role` pseudo-object.
+For every claimed actual performer, recover the A.13 core: the admitted System, local agential system-role kind and classification, obtaining assignment, and the scope, situation, window and evidence needed by the claim. A.15.1 then independently admits the dated Work. Use F.6 only when this account needs precise assignment-bound attribution through that same assignment; a missing attribution leaves the admitted Work intact. Do not replace these objects with a behavioural “mask” or a `System-in-Role` pseudo-object.
 
 #### F.11:6.4 - Which output matters, if any?
 
@@ -136,11 +136,13 @@ Use F.17 only when these local meanings need stable addresses. Use F.9 only if a
 3. **No universal actuation kind.** A control or transformation output is typed and related under its direct pattern.
 4. **Explicit enactment.** Work enacts a Method only when the exact relation and basis are stated.
 5. **Explicit description use.** MethodDescription use, following, conformance, deviation, interpretation, and reliance are separate claims under their defining or testing patterns; absent such a rule, return A.6.RCD `missing-governor`.
-6. **Exact agency.** Performed Work names the actual System and, when relevant, the obtaining system-role assignment; no vague `System-in-Role` substitute.
+6. **Exact agency.** Each claimed actual performer has the A.13 core, including the obtaining assignment, before independent A.15.1 Work admission. F.6 is required only for precise assignment-bound attribution; no vague `System-in-Role` substitute.
 7. **Evidence separation.** Approval of a description does not establish Work occurrence or outcome.
 8. **Source-local wording.** Ambiguous expressions are recovered with F.0.1; F.9 is conditional on a real relation between local meanings.
 
 ### F.11:9 - Micro-examples
+
+For each dated Work named here and in §11, take independent A.13/A.15.1 admission as a case premise. Its actual performers and obtaining assignments are recovered through that basis. Add F.6 only when a case also needs precise assignment-bound attribution.
 
 1. **Data pipeline deployment.** Method: delta-load transformation. MethodDescription: `etl_delta.py@v3` plus its documented rules. Work: the nightly run on 2025-07-14. No control output is material. Approval of the description and measured rows processed are separate claims.
 2. **Valve control.** Method: PID tuning and control method. MethodDescription: tuning sheet and cited IEC program description. Work: PLC task cycles from 18:00 to 18:30. Outputs: the exact setpoints and PWM duty values produced during those cycles. Temperature observations, not the commands alone, support a settling-time verdict.
@@ -157,7 +159,7 @@ Use F.17 only when these local meanings need stable addresses. Use F.9 only if a
 | **A5** | Universal Actuation | Every case receives an `Actuation` box or kind. | Domain-specific outputs are forced into a false umbrella. | Use the direct control or transformation pattern and actual output kind. |
 | **A6** | Generic Bridge transfer | A Bridge is said to transfer facts between Method, description, Work, and output. | Different relation families collapse. | State MethodDescription membership, enactment, performed-Work, description-use, output, observation, or evidence claims under their own patterns. |
 | **A7** | Source-word collapse | *Task*, *activity*, and *process* are interchanged by label. | Source-local claims vanish. | Recover exact meanings; use F.9 only for an actual semantic relation. |
-| **A8** | Recipe as system role | A description is said to assign responsibility. | MethodDescription and system-role assignment collapse. | Use F.4 and F.6 for kind and assignment; A.3.2 only for description. |
+| **A8** | Recipe as system role | A description is said to assign responsibility. | MethodDescription and system-role assignment collapse. | Use A.2 for the local system-role kind and A.2.1 for the assignment; F.4 only for a separately needed kind description and F.6 only for precise performed-Work attribution. A.3.2 governs the MethodDescription. |
 | **A9** | `System-in-Role` shorthand | The acting participant is a mask-like pseudo-object. | System, kind, assignment, and Work attribution disappear. | Name those four claims separately where material. |
 | **A10** | Retroactive description | A new description version is assumed to change past Work. | Historical occurrence claims become unstable. | Keep past Work and its actual description-use evidence unchanged. |
 | **A11** | Signal-only compliance | Commands are treated as proof of outcome. | Intended influence replaces observed result. | Use observations under C.16 and evidence relations under A.10 and B.3. |
@@ -171,7 +173,7 @@ Use F.17 only when these local meanings need stable addresses. Use F.9 only if a
 * **MethodDescription:** the versioned canary plan with traffic slices and rollback rules.
 * **Work:** two dated canary deployment occurrences.
 * **Outputs:** traffic-shifting commands, if material to the claim.
-* **Agency:** name the deploying System, its exact local system-role kind and assignment, and performed-Work attribution only if responsibility is part of the example.
+* **Agency:** the deploying System and its A.13 core, including the exact local agential kind, classification and obtaining assignment, are part of the independent Work-admission premise. Add F.6 only for a precise attribution through that same assignment; any responsibility claim keeps its own governor.
 * **Evidence:** latency and error-rate observations about the Work; the plan’s approval is separate.
 
 The example does not infer SLO satisfaction from the plan. F.12 evaluates the promise from Work outcomes in the stated window.
@@ -192,7 +194,7 @@ The Method is ELISA; the MethodDescription is kit IFU v7; the Work is batch B217
 
 #### F.11:11.4 - Incident response
 
-The Method is triage-first incident handling; the MethodDescription is the playbook and diagram; the Work is the handling of INC-3421 from 09:10 to 10:02. MTTR is computed from observations of that Work. Command invocations are included only if a direct control or transformation claim needs them.
+The Method is triage-first incident handling; the MethodDescription is the playbook and diagram; the Work is the handling of INC-3421 from 09:10 to 10:02. The handling duration, 52 minutes, is computed from observations of that Work. Command invocations are included only if a direct control or transformation claim needs them.
 
 ### F.11:12 - Safe reasoning moves
 
@@ -202,7 +204,7 @@ The Method is triage-first incident handling; the MethodDescription is the playb
 4. **State enactment only when supported.** Name the Work, Method, and basis for the enactment claim.
 5. **State description use separately.** Say whether and how the Work or performing System used, followed, deviated from, or conformed to the versioned description, and cite the rule that defines or tests that claim; otherwise return the bounded missing-governor result.
 6. **Locate outputs.** Relate a signal or changed value to the Work through its direct pattern.
-7. **Bind agency exactly.** Use actual System, local system-role kind, obtaining assignment, and performed-Work attribution where material.
+7. **Bind agency exactly.** Recover the A.13 core for each performer before independent A.15.1 Work admission; add F.6 only for precise assignment-bound attribution through the same obtaining assignment.
 8. **Use outcome evidence.** Observations about the Work support evaluation; commands and approvals alone do not.
 9. **Preserve history.** A new description does not alter past Work or its evidence.
 10. **Recover words locally.** Use F.9 only when a genuine relation between local meanings is part of the question.
@@ -228,7 +230,7 @@ The Method is triage-first incident handling; the MethodDescription is the playb
 1. **Split conflated process.** Separate MethodDescription from actual Work; add only the exact relations the case supports.
 2. **Repair statuses.** Keep approval and validity claims about descriptions distinct from Work-outcome verdicts and their windows.
 3. **Expose actual outputs.** Replace a universal Actuation box with the precise signal, command, value, or transformation output and direct relation.
-4. **Repair agency.** Replace `System-in-Role` or behavioural-mask language with the actual System, local kind, assignment, and Work attribution where needed.
+4. **Repair agency.** Replace `System-in-Role` or behavioural-mask language with the actual System and its A.13 core before independent Work admission; add F.6 only when precise attribution through the same obtaining assignment is needed.
 5. **Version fences.** Preserve the description version actually used or referenced by past Work.
 6. **Repair hidden transfer.** Replace generic Bridge language with MethodDescription membership or the direct enactment, description-use, Work, output, observation, evidence, or source-local semantic relation. Return A.6.RCD `missing-governor` instead of inventing a relation when no defining or testing rule exists.
 
@@ -239,7 +241,7 @@ The Method is triage-first incident handling; the MethodDescription is the playb
 * **SCR-F11-S01 (four questions).** Every relevant statement identifies the Method, the MethodDescription with that one Method as exact `EntityOfConcern`, the Work, or the exact output it concerns.
 * **SCR-F11-S02 (Work actuality).** `U.Work` is an occurrence, not a record, plan, or output.
 * **SCR-F11-S03 (no universal actuation).** Outputs are typed and related by their direct patterns.
-* **SCR-F11-S04 (agency).** Any performer claim names the actual System and exact assignment and attribution basis.
+* **SCR-F11-S04 (agency).** Every claimed actual performer has the A.13 core before independent A.15.1 Work admission; any precise assignment-bound attribution has its later F.6 basis through the same obtaining assignment.
 * **SCR-F11-S05 (separate claims).** MethodDescription membership, enactment, description use, output, observation, and evidence claims use their defining or testing patterns and are not replaced by a generic Bridge or invented description relation.
 * **SCR-F11-S06 (evidence).** No approval or command alone is used as proof of Work outcome.
 
@@ -252,6 +254,6 @@ The Method is triage-first incident handling; the MethodDescription is the playb
 
 ### F.11:16 - Didactic distillation
 
-> “Ask four questions. What is the **Method**, the way of doing? Which **MethodDescription** has that one Method as its exact `EntityOfConcern`—plainly, describes it? What dated **Work** actually occurred? Which particular control or transformation output matters, if any? These are not four universal boxes. Work is the occurrence, not its record. MethodDescription membership adds no binary relation; Work may enact the Method only when that relation is supported. Name the actual performing System and assignment when agency matters. Use observations for outcome claims, and use F.9 only for a real relation between source-local meanings.”
+> “Ask four questions. What is the **Method**, the way of doing? Which **MethodDescription** has that one Method as its exact `EntityOfConcern`—plainly, describes it? What dated **Work** actually occurred? Which particular control or transformation output matters, if any? These are not four universal boxes. Work is the occurrence, not its record. MethodDescription membership adds no binary relation; Work may enact the Method only when that relation is supported. Recover each performer's A.13 core before independent Work admission; add F.6 only for precise assignment-bound attribution. Use observations for outcome claims, and use F.9 only for a real relation between source-local meanings.”
 
 ### F.11:End

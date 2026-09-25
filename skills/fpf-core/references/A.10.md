@@ -1,6 +1,6 @@
 ---
 id: A.10
-title: "Evidence Graph Referring (C-4)"
+title: "Evidence Graph Referring: Claim-Bound Evidence and Provenance Graph"
 status: Stable
 keywords:
   - "relied-on claim"
@@ -36,7 +36,7 @@ dependencies:
     - A.21
 ---
 
-# A.10: Evidence Graph Referring (C-4)
+# A.10: Evidence Graph Referring: Claim-Bound Evidence and Provenance Graph
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**

@@ -56,7 +56,15 @@ progressive disclosure or load.
    qualified** — name the text class/corpus and the measurement source — or be stated
    qualitatively; an unqualified figure over-promises exactly on the classes where it
    was not reproduced.
-2. **Bounded context.** One short line naming the domain/use frame.
+2. **Bounded context (+ optional bounded lexicon).** One short line naming the
+   domain/use frame. An **optional** size-bounded **lexicon** block may sit in
+   `SKILL.md` as **context** (not subject knowledge): a two-column terms table
+   «how not to say → how to say» (`Anti-pattern → Repair`-style, failure-first) of
+   **terms only** — no rules, no "why", no traceable pointers to `req-*`/sources
+   (those are pattern content and belong in `references/`). Hard ceiling ≈15 lines /
+   one screen; when it grows or any "why"/rule appears, the terms move to
+   `references/<DPF>.Glossary.md` (a non-pattern reference — cf. `BLG.QLReference`)
+   and `SKILL.md` keeps a one-line pointer.
 3. **Routing table.** One row per pattern card: situation → `references/X.md`. No
    subject knowledge in the cells beyond enough to route. The table is strictly
    "situation → pattern" (many-to-many, primary entry per use-case); columns for
@@ -99,12 +107,13 @@ it states an effect without a measurement or its text class.
 | CC-DS.6 | The routing table is strictly "situation → pattern"; no dependency/edition columns. |
 | CC-DS.7 | A linear navigation rule is used only for a single dominant chain; multi-use-case skills name one entry path per use-case, consistent with `description`. |
 | CC-DS.8 | A quantitative claim in `description` is measured and qualified (text class/corpus + source), or stated qualitatively; an unqualified figure is not used. |
+| CC-DS.9 | A lexicon block in `SKILL.md` (when present) is terms-only, failure-first, size-capped, and carries a move-out trigger; it is `context`, not subject knowledge. |
 
 ### PLAS.Dispatcher:8 - Common Anti-Patterns and How to Avoid Them
 
 | Anti-pattern | Repair |
 |---|---|
-| Domain knowledge in SKILL.md | Move to `references/`; keep routing. |
+| Domain knowledge in SKILL.md | Move rules/why/summary/tracing to `references/`; keep routing. A terms-only lexicon block, bounded (item 2), is `context`, not domain knowledge. |
 | "Runs tests"-style name/description | Name WHAT + WHEN + dependency. |
 | SKILL.md duplicating INDEX | Routing table points to references; INDEX lists bodies once. |
 | Dependency/edition columns in the routing table | Keep "situation → pattern"; move dependencies to `relations.md`. |

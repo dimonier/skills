@@ -94,7 +94,7 @@ forget to clear `outbox/` after transfer. Counterweights: no ID, a transient
 
 Outgoing feedback becomes traceable and two-way, but requires the
 write-then-transfer-then-clear discipline. The message is a transient object, not a
-durable vault entity (unlike DEC/Q/RISK/CON/TRK).
+durable vault entity (unlike DEC/TRK).
 
 ### PV.Outbox:10 - Rationale
 

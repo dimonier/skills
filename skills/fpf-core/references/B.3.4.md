@@ -1,6 +1,6 @@
 ---
 id: B.3.4
-title: "Evidence Decay & Epistemic Debt"
+title: "Can Earlier Evidence Still Support This Use? — Evidence Decay and Epistemic Debt"
 status: Stable
 keywords:
   - evidence currentness
@@ -20,7 +20,7 @@ dependencies:
     - G.11
 ---
 
-# B.3.4: Evidence Decay & Epistemic Debt
+# B.3.4: Can Earlier Evidence Still Support This Use? — Evidence Decay and Epistemic Debt
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -28,7 +28,7 @@ dependencies:
 
 ---
 
-## B.3.4 - Evidence Decay & Epistemic Debt
+## B.3.4 - Can Earlier Evidence Still Support This Use? — Evidence Decay and Epistemic Debt
 
 ### B.3.4:1 - Problem Frame
 

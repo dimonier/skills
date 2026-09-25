@@ -141,9 +141,11 @@ generated.
      contract — a regenerate mode **and** a `--check` mode that exits non-zero on drift,
      `BEGIN`/`END` markers, and no card edits (`PLAS.QualityAndRefresh:4` item 5). When
      the intra-LPF Specialization graph is **empty** (sibling cards, none `specializes`),
-     the generator emits an explicit **stub** line ("no intra-LPF Specialization edges;
-     FPF content edges live only in card frontmatter") instead of an empty graph, so a
-     legitimate projection is never read as a generation bug. **Scope:** this item
+     the generator emits an explicit **stub** line instead of an empty graph, so a
+     legitimate projection is never read as a generation bug. The stub has **two forms**:
+     with FPF content edges present — "FPF content edges live only in card frontmatter";
+     with none present (self-sufficient carrier, no `builds_on`/`coordinates_with`) —
+     "and no FPF content edges (self-sufficient carrier)"; `--check` accepts both. **Scope:** this item
      governs every carrier that **ships** `relations.md`/the generator; a compacted
      runtime projection (`PLAS.CompactedProjection`) does not ship them — it carries no
      card frontmatter, and its graph/provenance live in the canonical source.
@@ -196,7 +198,7 @@ edition/carrier wording are the two counterweights.
 
 | ID | Requirement |
 |---|---|
-| CC-SL.1 | `SKILL.md` contains no subject knowledge beyond the routing table and context. |
+| CC-SL.1 | `SKILL.md` contains no subject knowledge beyond the routing table and context; a bounded terms-only lexicon counts as `context` (see `PLAS.Dispatcher:4` item 2). |
 | CC-SL.2 | Each pattern body lives in its own `references/*.md`. |
 | CC-SL.3 | No `assets/` monolith or generated publication form is present. |
 | CC-SL.4 | `INDEX.md` lists every pattern body exactly once. |
@@ -208,7 +210,7 @@ edition/carrier wording are the two counterweights.
 | CC-SL.10 | `scaffold/` is used only for a real init/reproduction task (dir tree + templates + scripts copy), not as empty scaffolding. |
 | CC-SL.11 | The authoring agent never edits the installed copy in the user-level skills directory; the sync to it is owner-owned and stated as such. |
 | CC-SL.12 | A compacted runtime projection (`PLAS.CompactedProjection`) is declared as a projection naming its canonical source; its `E.8`-section CCs are N/A, the compacted readiness profile applies, cards carry no frontmatter, and readiness is declared only collectively. |
-| CC-SL.13 | **A carrier that ships a graph** ships the canonical `build_relations.py` contract (regenerate + `--check`, non-zero on drift, `BEGIN`/`END` markers, no card edits); `--check` passes, and an empty Specialization graph yields the explicit stub line, never an empty/misleading graph. A compacted projection does not ship the graph. |
+| CC-SL.13 | **A carrier that ships a graph** ships the canonical `build_relations.py` contract (regenerate + `--check`, non-zero on drift, `BEGIN`/`END` markers, no card edits); `--check` passes, and an empty Specialization graph yields the explicit stub line matching the carrier's FPF-edge presence (with FPF edges vs self-sufficient/none), never an empty/misleading graph. A compacted projection does not ship the graph. |
 | CC-SL.14 | The consumer-normative surface is named (`SKILL.md` + routed `references/`); authoring/reconstruction material (`INDEX.md`, `relations.md`, `ECPF.7` reverse-render) is reference-only and not a consumer obligation. |
 
 ### PLAS.SkillLayout:8 - Common Anti-Patterns and How to Avoid Them

@@ -1,6 +1,6 @@
 ---
 id: D.2
-title: "Multilevel Ethics For System-Holon Work"
+title: Recognize Ethical Concerns Across Levels and Scopes (Multilevel Ethics)
 status: Stable
 keywords: []
 dependencies:
@@ -18,7 +18,7 @@ dependencies:
     - C.16
 ---
 
-# D.2: Multilevel Ethics For System-Holon Work
+# D.2: Recognize Ethical Concerns Across Levels and Scopes (Multilevel Ethics)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,11 +26,11 @@ dependencies:
 
 ---
 
-## D.2 - Multilevel Ethics For Holon Work
+## D.2 - Recognize Ethical Concerns Across Levels and Scopes (Multilevel Ethics)
 
 > **Type:** D-family ethical entry pattern
 > **Status:** Stable
-> **Pattern role:** This compact MethodDescription helps a practitioner recognize multilevel ethical concern and identify the next exact subject assertion and predicate; it does not settle conflict or supply a fixed level ladder.
+> **Pattern role:** This compact pattern helps a practitioner recognize multilevel ethical concern and identify the next exact subject assertion and predicate; it does not settle conflict or supply a fixed level ladder.
 
 **Use this when.** Use this pattern when a system, holon, method, work plan, work occurrence, policy, recommendation, architecture move, or publication use may improve one declared level or scope while harming another, or when responsibility is assigned across levels.
 

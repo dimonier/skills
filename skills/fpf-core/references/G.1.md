@@ -1,6 +1,6 @@
 ---
 id: G.1
-title: "CG-Frame-Ready Generator"
+title: "Author a Reusable CG-Frame Generator and Selector Kit"
 status: Stable
 keywords:
   - generator chassis
@@ -28,7 +28,7 @@ dependencies:
     - E.19
 ---
 
-# G.1: CG-Frame-Ready Generator
+# G.1: Author a Reusable CG-Frame Generator and Selector Kit
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -36,10 +36,9 @@ dependencies:
 
 ---
 
-## G.1 - CG‑Frame‑Ready Generator
+## G.1 - Author a Reusable CG-Frame Generator and Selector Kit
 
 **Tag.** architectural pattern; *generator chassis* (design‑time kit / authoring scaffold)
-**Status.** stable (Phase‑2 universalisation)
 **Normativity.** normative, except sections explicitly marked *informative*
 **Stage.** *design‑time* authoring of a generator‑kit with a *run‑time* execution façade (policy‑governed; edition‑aware)
 **Primary output.** the **six‑card chassis** `M1…M6` published as a **complete, reusable CG‑Frame kit**, plus a versioned **kit manifest** `CGKitId` that binds the six cards as a single reusable unit (view‑friendly inventory + wiring surface)
@@ -134,8 +133,8 @@ GCoreLinkageManifest := ⟨
   // RSCR regression tests used by the chassis (if any).
   RSCRTestId[]?,
 
-  // When the chassis is bound into WorkPlanning (P2W): planned baseline refs.
-  SlotFillingsPlanItemRef[]?
+  // When a planned baseline is used: identify the WorkPlan and its local filling-row designators.
+  WorkPlanRef[]?
   },
 
   // Consumed defaults (each default cites the governing definition listed in `G.Core.DefaultGoverningDefinitionIndex`).
@@ -179,7 +178,7 @@ The chassis is *view‑friendly*: it is an inventory of “what exists and how i
 * explicit provenance anchors for the set (via `A.10`), and any published UTS stubs/rows when applicable
 
 **Governing pattern:** harvesting discipline and SoTA-pack payload are governed by `G.2`.
-In `G.1`, M2 is a *card in the chassis* and a wiring surface; it does not redefine the harvesting method.
+In `G.1`, M2 is a *card in the chassis* and a wiring surface; it does not redefine the harvesting method. A relied-on coverage result cites G.2's `CoverageJudgementRef` with its HarvestPolicy basis, counted units and receiving question. M2 supplies no alternative family count.
 
 ##### M3 — VariantPool (candidate inventory + emitter trace)
 
@@ -196,12 +195,12 @@ In `G.1`, M2 is a *card in the chassis* and a wiring surface; it does not redefi
 **Governing pattern for method payload:** method‑specific emitter semantics remain in their governing definitions, cited through `Extensions` (e.g., the relevant `C.17`, `C.18`, and `C.19` definitions).
 M3 MUST remain method‑agnostic in its core definition: it is an inventory surface, not an algorithm spec.
 
-##### M4 — Shortlist (selector/assurer output)
+##### M4 — Shortlist (selector output)
 
 **Governs (kit surface):**
 
 * `ShortlistId` bound to `CG‑FrameContext`
-* a selected set of candidates plus rationale and assurance records (`SCRId` required; `DRRId` optional; cite `PathId/PathSliceId` when applicable)
+* a selected set of candidates plus rationale and SCR-addressable audit references required by G.5 (`SCRId` required; `DRRId` optional; cite `PathId/PathSliceId` when applicable). Add assurance records only when an actual named assurance claim is current.
 * optional **front metadata or archive metadata** needed for reproducibility when used: ε‑front parameters and/or archive snapshot hooks, with governing-definition assignment through `G.5` / `C.18` / `C.19` (no local semantics in `G.1`)
 
 **Governing pattern:** selection/dispatch semantics are governed by `G.5`.
@@ -228,7 +227,7 @@ M4 MUST preserve *set‑return semantics* (as governed by `G.Core`) and MUST NOT
 * `RefreshReadinessCardId` bound to `CGFrameLibraryId` (and thus to `CG‑FrameContext`)
 * `CGKitId` (the versioned kit manifest) binding `M1…M6` into a single reusable unit; it MUST enumerate the card ids and MAY carry references to deprecations/edition bumps minted by the canonical governing definitions
 * declared telemetry hooks (what signals are observed, with what pins)
-* declared RSCR wiring: which `RSCRTriggerKindId` are relevant (canonical ids), with minimal required payload pins (including `SlotFillingsPlanItemRef[]` when the chassis is bound into WorkPlanning)
+* declared RSCR wiring: which `RSCRTriggerKindId` are relevant (canonical ids), with minimal required payload pins (including WorkPlan refs and their local planned-filling row designators when the chassis is bound into WorkPlanning)
 
 **Boundary:** orchestration semantics are governed by `G.11`.
 M6 prepares *refresh‑readiness metadata* and wiring stubs; it does not define scheduling/priority heuristics.
@@ -262,6 +261,7 @@ All method/discipline/generator specifics MUST be expressed as `GPatternExtensio
 
 * `SoTAPaletteDescriptionId`
 * `SoTA_SetId`
+* `CoverageJudgementRef` and its `HarvestPolicyRef` when coverage is consumed
 * `ClaimSheetId[]` / `BridgeMatrixId` *(as referenced by the chosen G.2 pack form)*
 * `CNSpecRef.edition`, `CGSpecRef.edition` *(already required via `GCorePinSetId.PartG.AuthoringMinimal`)*
 
@@ -280,7 +280,7 @@ All method/discipline/generator specifics MUST be expressed as `GPatternExtensio
 **RequiredPins/EditionPins/PolicyPins (minimum):**
 
 * `ShortlistId`
-* `SCRId` *(assurance and rationale record by id; semantics governed by the selector and assurance governing definitions)*
+* `SCRId` *(selector audit reference under G.5; its record carries assurance only when an actual named assurance claim is current under B.3)*
 * `DRRId?` *(when a decision‑rationale artefact is minted; otherwise omitted)*
 * `TaskSignatureRef?` *(if selection is task‑templated; otherwise omitted)*
 * `AcceptanceClauseId[]` *(as referenced from `G.4` outputs)*
@@ -376,7 +376,7 @@ All method/discipline/generator specifics MUST be expressed as `GPatternExtensio
 * `CHRPackId?`, `CALPackId?`, `SoS‑LOGBundleId?`, `ParityReportId?` *(as present in the library index)*
 * `EvidenceGraphId?`, `BridgeMatrixId?`, `BridgeCalibrationTableId?` *(when cited by the shipped artefacts)*
 * `UTSRowId[]?` *(when any public ids are minted/published)*
-* `SlotFillingsPlanItemRef[]?` *(when planned baseline is bound by id into the shipment surface)*
+* `WorkPlanRef[]?` with local planned-filling row designators *(when a planned baseline is cited by the shipment surface)*
 
 **Notes (wiring‑only):** this block does not define shipping; it only records the minimum wiring from the chassis/library index to `G.10` when shipping is performed.
 
@@ -418,9 +418,9 @@ All method/discipline/generator specifics MUST be expressed as `GPatternExtensio
 | CC‑G1‑02  | `M1` MUST bind the kit to a single `CG‑FrameContext` and MUST expose the required pins from `GCorePinSetId.PartG.AuthoringMinimal` (including `entityOfConcern` and `CNSpecRef/CGSpecRef` editions). `M1` MUST also expose (or explicitly cite) a `ReferenceMap` surface and MUST NOT restate its semantics (cite `G.0:CG‑Spec.ReferenceMap`).  |
 | CC‑G1‑03  | `M2` MUST be wired to `G.2` (or explicitly cite the `G.2` artefacts governed by cited patterns) and MUST be reconstructible as a scoped set, including `SoTAPaletteDescriptionId` + `SoTA_SetId` (not free‑floating prose). Provenance MUST be anchored via `A.10` for the emitted set.  |
 | CC‑G1‑04  | `M3` MUST record emitter provenance as a wiring surface, including `EmitterPolicyRef` (policy‑id/ref), edition pins, and provenance anchors (via `A.10`). Any method‑specific fields MUST be introduced only via `GPatternExtension` blocks.  |
-| CC‑G1‑05  | `M4` MUST be wired to `G.5` (or explicitly cite `G.5` artefacts governed by cited patterns) and MUST preserve set-result outcomes. `SCRId` MUST be present (or recoverable from an explicitly cited SCR record) so assurance is id‑addressable; `DRRId` SHOULD be present when a decision‑rationale artefact is minted.  |
+| CC‑G1‑05  | `M4` MUST be wired to `G.5` (or explicitly cite `G.5` artefacts governed by cited patterns) and MUST preserve set-result outcomes. `SCRId` MUST be present (or recoverable from an explicitly cited SCR record) so the G.5 audit references are addressable; assurance content is required only for an actual named assurance claim; `DRRId` SHOULD be present when a decision‑rationale artefact is minted.  |
 | CC‑G1‑06  | `M5` MUST publish a library/index surface that points to referenced CHR/CAL/LOG artefacts and to any minted public ids (`UTSRowId[]`, Name Cards) via the canonical governing definitions (Part F), without introducing shadow specs (delegation target: `CC‑GCORE‑CN‑CG‑1` via `CC‑G1‑CoreRef`).  |
-| CC‑G1‑07  | `M6` MUST publish `CGKitId` and expose refresh‑readiness wiring: canonical `RSCRTriggerKindId[]` applicability + minimal payload pins (including `SlotFillingsPlanItemRef[]` when applicable) and RSCR test ids; orchestration semantics MUST be cited to `G.11`.  |
+| CC‑G1‑07  | `M6` MUST publish `CGKitId` and expose refresh‑readiness wiring: canonical `RSCRTriggerKindId[]` applicability + minimal payload pins (including WorkPlan refs and their local planned-filling row designators when applicable) and RSCR test ids; orchestration semantics MUST be cited to `G.11`.  |
 | CC‑G1‑08  | Any method/discipline/generator specificity in `G.1` MUST be located in `G.1:4.4` as `GPatternExtension` blocks with `PatternScopeId`, `GPatternExtensionKind`, and `GoverningPatternId` (or `governing pattern not yet selected` only for Phase-3 seeds). If QD/illumination or Open‑Ended generator families are declared, the corresponding extension blocks MUST be present and MUST carry the edition and policy pins required by the governing pattern. |
 
 ### G.1:8 - Common Anti‑Patterns and How to Avoid Them (informative)

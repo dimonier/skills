@@ -1,6 +1,6 @@
 ---
 id: A.1.1
-title: "Bounded Model-Use Structure and DDD Bounded-Context Recovery"
+title: "Bounded Model-Use Structure: Applicability, Use and Expression Coherence (DDD Bounded Context)"
 status: Stable
 keywords: []
 dependencies:
@@ -29,7 +29,7 @@ dependencies:
     - F.18
 ---
 
-# A.1.1: Bounded Model-Use Structure and DDD Bounded-Context Recovery
+# A.1.1: Bounded Model-Use Structure: Applicability, Use and Expression Coherence (DDD Bounded Context)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -37,7 +37,7 @@ dependencies:
 
 ---
 
-## A.1.1 - Bounded Model-Use Structure and DDD Bounded-Context Recovery
+## A.1.1 - Bounded Model-Use Structure: Applicability, Use and Expression Coherence (DDD Bounded Context)
 
 > **Type:** Part A architectural ontology pattern
 > **Status:** Stable

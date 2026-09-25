@@ -19,9 +19,9 @@ project).
 Call this after every WRK creation to keep indexes in sync with sources.
 
 ID allocation (`next-id`) and duplicate detection (`check`) assume a FLAT vault:
-each entity type lives in ONE directory (`decisions/`, `open-questions/`,
-`risks/`, `contradictions/`, `tracks/`). Closed entities stay in place with
-`status` set in frontmatter — there is no separate `archive/` mirror.
+each entity type lives in ONE directory (`decisions/`, `tracks/`). Closed entities
+stay in place with `status` set in frontmatter — there is no separate `archive/`
+mirror.
 IDs are monotonic and never reused; `next-id` returns `max + 1` over the flat
 directory, which is therefore collision-free by construction.
 """
@@ -38,9 +38,6 @@ OUTPUT_ENCODING = 'utf-8'
 # Entity types that carry a sequential numeric ID (single flat directory each).
 ENTITY_TYPES = {
     'DEC': 'decisions',
-    'Q': 'open-questions',
-    'RISK': 'risks',
-    'CON': 'contradictions',
     'TRK': 'tracks',
 }
 
@@ -235,7 +232,7 @@ def _default_prefix(type_code):
 
 
 def parse_id_parts(id_str):
-    """Split an entity id like 'Q-2026-0274' / 'DEC-0057' into (prefix, number)."""
+    """Split an entity id like 'DEC-0057' / 'TRK-2026-0001' into (prefix, number)."""
     s = str(id_str).strip()
     m = re.search(r'^(.*?)(\d+)$', s)
     if not m:
@@ -317,7 +314,7 @@ def main():
     )
     parser.add_argument(
         'entity_type', nargs='?', default=None,
-        help="for 'next-id': one of DEC, Q, RISK, CON, TRK (omit to list all)",
+        help="for 'next-id': one of DEC, TRK (omit to list all)",
     )
     parser.add_argument(
         '--path', '-p', dest='project_vault', default=None,

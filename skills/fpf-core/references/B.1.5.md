@@ -235,7 +235,7 @@ An exposure decision contributes to Method identity whenever changing it changes
 
 When a named receiver must reuse the boundary account, first identify one exact claim-bearing `U.MethodDescription` episteme under A.3.2 and C.2.1. Its claim content concerns the exact composite Method and states the exposed, forwarded, and encapsulated interactions. Then keep the publication-side objects and designation content below separate.
 
-In B.1.5, *composite-Method boundary account* is the local Plain phrase for this MethodDescription claim content. A *boundary-account form* is the separately identified reusable arrangement used to present that content when publication is load-bearing. Neither phrase creates a new kind or acronym. The separate A.10 instantiation card keeps its different design-time use for Precedes, Choice, Join, guards, and exceptions.
+In B.1.5, *composite-Method boundary account* is the local Plain phrase for this MethodDescription claim content. A *boundary-account form* is the separately identified reusable arrangement used to present that content when publication is load-bearing. Neither phrase creates a new kind or acronym.
 
 1. A bounded-use-declaration episteme states the operations or decisions supported by this publication, the conditions of that use, and the excluded stronger use.
 2. An audience-declaration episteme states the audience criterion. The actual audience consists of entities admitted by that declaration; those entities are not substituted for the declaration episteme as a publication-relation participant.
@@ -279,6 +279,8 @@ The composition link is not one-to-one. A Work occurrence may enact the whole me
 - the cross-side fact: the exact `enactsMethod(workPart, submethod)` occurrence.
 
 If any side is missing, lower only that side. Do not repair a missing submethod by inventing a work part, and do not repair a missing work part by inventing a submethod. Keep a method-description node, evidence segment, mechanism material, system-component behavior, or `A.15.4` appearance-based reliance repair request under its subject pattern.
+
+For an ordinary working question—what larger work is being done through this action now—use **B.1.5.EW**. It recovers the constitutive connections at the needed grain and shows how a changed encompassing condition changes the action. An ongoing whole need not be completed, and its constituents need not all act at once. When changing a constituent for use in one or several wholes, **B.1.5.RS** follows the change through their entry conditions, interactions and required results. The qualifications above still decide the corresponding Method and Work claims.
 
 #### B.1.5:4.5.1 - Planning And Performed-Work Obligations
 
@@ -386,7 +388,7 @@ The pattern intentionally biases toward explicit construction and boundary accou
 | `CC-B1.5-9` | When the composite method needs a separate higher-level reidentification or emergence explanation, use `B.2` in addition to the explicit B.1.5 method reidentification rule. |
 | `CC-B1.5-10` | A temporal slice, episode, event-log segment, telemetry interval, engine stroke, detector component, or `U.WorkPlan` item is neither a Work part nor a Method part by appearance. Keep each with its subject pattern. A genuine Work part enacts a submethod only through a separate exact A.15.1 `enactsMethod` occurrence; whole Work may enact the whole Method without mirrored Work parts. |
 | `CC-B1.5-11` | A receiving use that needs order aggregation names B.1.4's exact ordered relation designations, `OrderSpec`, and join or independence conditions; the aggregation record or notation does not enter method identity or make relations obtain. |
-| `CC-B1.5-12` | Typed joins name the upstream intended-result meaning and downstream precondition, plus an adapter or governed correspondence when those meanings differ, and a failure route; signatures do not become `U.Capability` instances. |
+| `CC-B1.5-12` | Typed joins name the upstream intended-result meaning and downstream precondition, plus an adapter or governed correspondence when those meanings differ, and a failure route; signatures do not establish the holder's actual ability. |
 | `CC-B1.5-13` | Dated Work, performing Systems, separately declared assignment species, actual assignment occurrences, obtaining F.6 attributions, resource use and costs, yields, dissipation, telemetry, results, and production, together with separate evidence-, publication-use-, evaluation-, delivery-, and acceptance claims, use their subject patterns and do not become Method identity fields. |
 | `CC-B1.5-14` | Assurance hooks name cutsets, fragile joins, adapter points, CL-sensitive mappings, and the exact envelope or claim scope consumed by B.3; no performance or quality claim follows from composition alone. |
 | `CC-B1.5-15` | A direct method-composition claim establishes no A.14 structural-component relation, work-part relation, or selected-structure identity unless the corresponding direct predicate separately obtains. |

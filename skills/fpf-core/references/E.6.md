@@ -1,6 +1,6 @@
 ---
 id: E.6
-title: Didactic Architecture of the Spec
+title: Didactic Architecture of the FPF Specification
 status: Stable
 keywords:
   - didactic
@@ -14,7 +14,7 @@ dependencies:
     - E.2
 ---
 
-# E.6: Didactic Architecture of the Spec
+# E.6: Didactic Architecture of the FPF Specification
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,7 +22,7 @@ dependencies:
 
 ---
 
-## E.6 - Didactic Architecture of the Specification
+## E.6 - Didactic Architecture of the FPF Specification
 
 ### E.6:1 - Problem frame
 FPF addresses readers who differ in at least two respects:
@@ -48,41 +48,25 @@ document order with one universal first-practical workflow.
 | **Conceptual Integrity** | Foregoing examples risks abstraction ↔ too many examples delay axioms. |
 | **Didactic order vs practical entry** | Stable document macro-order ↔ truthful first-practical routes that may cross parts. |
 
-### E.6:4 - Solution — “On‑Ramp to Archetypes first, Authoring last” sequence
+### E.6:4 - Solution — Order the explanation and keep practical entry separate
 
 #### E.6:4.0 - Document order is distinct from first-practical entry
 
-The macro-order of the document is a didactic scaffold, not a universal practical workflow. Entry navigation publication units such as `README`, `Preface`, ToC query cues, `E.11` entry-distribution loci, and `I.2` expanded entry-disambiguation cases are informative navigation only: they may cross Parts when that is the first honest entry for the question under repair, and they do not create a second normative process history.
+The macro-order of the document is a didactic scaffold, not a universal practical workflow. Apply `E.11.PFP` to the compact opening and navigation. After the Table of Contents, the Readme offers recognizable working questions and direct entries; the Preface supplies the informal on-ramp. These informative navigation units and ToC cues may cross Parts when the reader's question requires it. Use `E.11` for practical entry and `I.2` for expanded entry-disambiguation cases.
 
-The "On-Ramp First" Macro-Structure: The specification is ordered to create a smooth cognitive ramp:
-* It begins with an informal, non-normative Preface (The On-Ramp), which uses storytelling and concrete examples (System and Episteme) to build intuition.
-* It then proceeds through the normative Parts (A-D), moving from the foundational kernel to the rich patterns of trans-disciplinary reasoning.
-* It concludes with the authoring rules (Part E) and appendices, ensuring that this "meta" content does not obstruct the primary learning path.
+Keep the main explanatory sequence recoverable:
 
-1. **Preface (On‑Ramp)**
-  Informal tour; introduces `U.System` and `U.Episteme` via concrete
-  stories before any normative language appears.
+1. **Readme and Preface.** The Readme helps a reader find a first useful result. The Preface builds intuition through concrete System and Episteme stories before the kernel exposition.
+2. **Part A — Kernel Architecture.** Introduce the holonic ontology and acting-side externalization in A.12.
+3. **Part B — Trans-disciplinary Reasoning.** Connect the general reasoning moves with applicable System and Episteme grounding under E.7.
+4. **Part C — Kernel Extension Specifications.** Develop the calculi and extension patterns whose questions use those foundations.
+5. **Part D — Multi-scale Ethics and Conflict Optimization.** Introduce the reflective ethical and conflict questions with the needed holonic distinctions available.
+6. **Part E — Constitution and Authoring Guides.** Place framework governance and contributor guidance after the principal kernel and reasoning exposition so an ordinary first use need not begin with authoring rules.
+7. **Part F — Unification Suite.** Keep concept-set, sense and system-role unification methods in their own Part; reach them directly when the question calls for them.
+8. **Part G — Discipline SoTA Patterns Kit.** Keep the discipline source-synthesis, comparison and refresh methods in their own Part.
+9. **Part H and Part I.** Part H remains reserved; Part I carries annexes and extended tutorials. Tooling guides and executable examples follow their separate family and lexical rules.
 
-2. **Part A Kernel**
-  Minimal holonic ontology and acting-side externalization (A.12) give readers
-  the essential vocabulary.
-
-3. **Part B Trans‑disciplinary Reasoning**
-  Tell‑Show‑Show pedagogy: universal rule → Sys‑CAL example →
-  KD‑CAL example.
-
-4. **Part C Extension Patterns**
-  Domain‑specific calculi expand on the examples already seen.
-
-5. **Part D Ethics & Conflict Optimisation**
-  Shows reflective patterns only after readers grasp holonic reasoning.
-
-6. **Part E Authoring**
-  Constitution, guard‑rails, and contributor rules come last; novices
-  can postpone reading.
-
-7. **Appendices (Annexes)**
-  Tutorials, tooling guides, and migration scripts live here.
+This publication order does not require readers to traverse every Part. Practical entries return to the pattern needed by the current question.
 
 ### E.6:5 - Archetypal Grounding (System / Episteme)
 
@@ -97,7 +81,7 @@ The "On-Ramp First" Macro-Structure: The specification is ordered to create a sm
 | ID | Requirement |
 |---|---|
 | **CC‑DA.1** | Each Part **SHALL** open with a one‑paragraph situational “hook” before formal text. |
-| **CC‑DA.2** | Every architectural pattern **MUST** implement Tell‑Show‑Show: universal rule plus System & Episteme illustrations. |
+| **CC‑DA.2** | Every architectural pattern **MUST** supply the grounding required by E.7: applicable System and Episteme illustrations, or the explicit single-substrate scope and justification under CC‑AG.3. |
 | **CC‑DA.3** | Governance patterns (**Part E**) **SHALL NOT** appear before the Kernel in the main document flow. |
 | **CC‑DA.4** | Navigation aids **SHALL** distinguish document order from first-practical entry guidance; first-entry pattern-comparison guidance and expanded entry-disambiguation cases are informative and MAY cross Parts without implying a universal process history. |
 
@@ -109,11 +93,7 @@ The "On-Ramp First" Macro-Structure: The specification is ordered to create a sm
 | Reduces forward‑reference clutter; each concept is primed before formal use. | Preface evolves when new archetypes added; handled via On‑Ramp revision DRR. |
 
 ### E.6:8 - Rationale
-Educational research shows retention improves when abstract rules are
-immediately paired with contrasting illustrations. By fixing the reading
-order and mandating Tell‑Show‑Show inside every architectural pattern, FPF
-embeds pedagogy into its architecture, realising Pillars **P‑2 Didactic
-Primacy** and **P‑1 Cognitive Elegance** without weakening rigour.
+Pairing an abstract rule with contrasting, applicable illustrations makes its intended application and scope inspectable. The document order and E.7 grounding rule provide those connections while leaving practical entries free to cross Parts. This implements **P‑2 Didactic Primacy** and **P‑1 Cognitive Elegance** without replacing the subject's reasoning or evidence.
 
 ### E.6:9 - Relations
 * **Depends on:** `pat:constitution/guard‑rails` (GR‑1 ensures example jargon stays outside Core).

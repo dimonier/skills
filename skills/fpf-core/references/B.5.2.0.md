@@ -1,13 +1,8 @@
 ---
 id: B.5.2.0
-title: "`U.AbductivePrompt`"
+title: "Question Form for Entering Abduction (`U.AbductivePrompt`)"
 status: Stable
-keywords:
-  - abductive prompt
-  - prompt species
-  - "rival-set discipline"
-  - threshold crossing
-  - "explanation-ready cue."
+keywords: []
 dependencies:
   builds_on:
     - B.4.1
@@ -21,7 +16,7 @@ dependencies:
     - B.5.2
 ---
 
-# B.5.2.0: `U.AbductivePrompt`
+# B.5.2.0: Question Form for Entering Abduction (`U.AbductivePrompt`)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -29,15 +24,15 @@ dependencies:
 
 ---
 
-## B.5.2.0 - `U.AbductivePrompt`
+## B.5.2.0 - Question Form for Entering Abduction (`U.AbductivePrompt`)
 
 > **Type:** Definitional (D)
 > **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
-**Plain-name.** Abductive prompt.
+**Plain-name.** Question form for entering abduction.
 
-**Use this when.** Use this pattern when a stabilized cue, opportunity, probe need, or anomaly must enter abduction as a typed question-bearing publication form rather than as an already chosen hypothesis.
+**Use this when.** Use this pattern when a stabilized cue, opportunity, probe-related observation or anomaly raises an explanatory question for B.5.2. Publish the question, its scope and motivating grounds while rival explanations remain open.
 
 **What goes wrong if missed.** A cue is forced into anomaly form, an opportunity is treated as a hypothesis, or a prompt-like sentence silently smuggles in the preferred answer before rival hypotheses can be compared.
 
@@ -80,29 +75,20 @@ If anomaly is the only admissible input, pre-anomaly opportunity cues and route-
 ##### B.5.2.0:4.1.1 - Specialization-sensitive prompt species
 These extension species are admissible only when cue provenance or trajectory account already carries the bounded-specialization evidence requirement by value; they are not the starter canonical entry set for ordinary abduction.
 
-`TaskFamilySpecializationPrompt` asks what narrower higher-fit specialist option should be acquired for the declared task family, where that option may resolve into one specialist method, portfolio, or competence bundle. `AdaptationProbePrompt` asks which bounded probe would most cheaply reveal whether threshold-reaching specialization is actually attainable. `NonHumanUtilityPrompt` asks whether a low-human-overlap approach may still satisfy the declared utility target better than the current familiar repertoire. `SubstrateDiversificationPrompt` asks whether the current substrate is too narrow and a broader or different substrate should be tested before commitment.
+`TaskFamilySpecializationPrompt` asks what explains a performance difference within the declared task family. `AdaptationProbePrompt` asks which rival explanations predict whether a proposed adaptation can reach the stated threshold. `NonHumanUtilityPrompt` asks what could explain the indicated utility advantage of a low-human-overlap approach. `SubstrateDiversificationPrompt` asks what explains the indicated limitation of the current substrate. In each species, B.5.2 returns qualified explanatory conjectures; task family, utility target, threshold, budget and motivating evidence qualify that question.
 
 #### B.5.2.0:4.2 - Core shape
-A conforming abductive prompt may publish:
-
-- `promptSpecies`
-- `motivatingCueRef?`
-- `openQuestion`
-- `contrastSet?`
-- `scope?`
-- `witnessRefs?`
-- `routeProvenance?`
-- `GammaTime?`
+A conforming abductive prompt makes `promptSpecies`, its explanatory `openQuestion`, `scope` and motivating provenance explicit. The provenance may be carried by `motivatingCueRef`, `witnessRefs` or `routeProvenance`; include the applicable basis even when no routing history exists. A rendering may additionally include `contrastSet` and `GammaTime`.
 
 A prompt is not yet a hypothesis. Prompt admission usually presupposes articulation high enough to publish a stable open question and closure low enough that rival answers remain live; those articulation and closure thresholds remain governed by `C.2.4` and `C.2.5`, typically reached through cue or route provenance from `A.16.1` and `B.4.1`. It is the initiating publication form that licenses entry into the abductive loop.
 
 #### B.5.2.0:4.3 - Boundary rule
-`U.AbductivePrompt` is an entry form, not an excuse to let arbitrary prose count as abductive input. Only declared prompt species may enter `B.5.2` through this form.
+Only a declared prompt species carrying an explanatory question enters B.5.2 through this form. For a choice among available probes, actions or specialist options, use C.11. Use C.38 to develop incomplete alternatives for the same intended result, C.11.DUA to examine an unclear evidence demand, and C.19 when the question is policy over a still-live candidate pool. C.18 records generation and comparison results; C.22.1 describes an adaptation signature. Neither performs the missing choice. An explanatory subquestion arising during planning can still enter B.5.2 on its own grounds.
 
 ### B.5.2.0:5 - Archetypal Grounding
 **Tell.** An anomaly is one prompt species, not the only one.
 
-**Show (System).** A control cue may begin probe-design abduction even before it is framed as anomaly.
+**Show (System).** A control observation may raise competing explanations of an apparent response improvement without being framed as an anomaly. The abductive result qualifies those explanations; choosing a discriminating probe is a separate C.11 decision.
 
 **Show (Episteme).** A promising mismatch can begin an opportunity-style abductive prompt rather than only a problem statement.
 
@@ -113,13 +99,13 @@ The pattern broadens the entry form to abduction, but still keeps it typed and a
 - `CC-B.5.2.0-1` Every `U.AbductivePrompt` **SHALL** declare its prompt species.
 - `CC-B.5.2.0-2` A prompt **SHALL NOT** be confused with a finished hypothesis.
 - `CC-B.5.2.0-3` Cue-derived prompts **SHOULD** preserve route provenance.
-- `CC-B.5.2.0-4` Prompt publication **SHALL** include the open question that makes abduction appropriate.
+- `CC-B.5.2.0-4` Prompt publication **SHALL** include the explanatory question, its scope and the motivating provenance that make abduction appropriate.
 - `CC-B.5.2.0-5` A publication that already fixes the answer or suppresses plausible rivals **SHALL NOT** remain in prompt status.
 - `CC-B.5.2.0-6` When a specialization-sensitive prompt species is used, the prompt package **SHALL** make explicit the declared task family or utility target, the threshold or success condition being probed, the current budget window, and the route or cue provenance that made the prompt admissible.
 
 ### B.5.2.0:8 - Common Anti-Patterns and How to Avoid Them
 - **Prompt equals hypothesis.** Keep the prompt distinct from the abductive output.
-- **Anything can begin abduction.** No: only declared prompt species can.
+- **A choice disguised as abduction.** Recover the explanatory question, if one exists; send the probe, action or acquisition choice to its actual Method.
 - **Route amnesia.** A cue-derived prompt loses the early route provenance that explains why it entered here.
 
 ### B.5.2.0:9 - Consequences
@@ -138,16 +124,16 @@ The pattern reflects real abductive practice, where opportunities, probe prompts
 ### B.5.2.0:13 - Worked Prompt Species
 
 #### B.5.2.0:13.1 - Anomaly statement as canonical prompt
-An anomaly statement remains a canonical prompt species, especially when the contrast and failure condition are already explicit.
+In a constructed service case, latency rises from 8 ms to 40 ms under the same declared workload. The prompt asks what could explain that contrast, names the service and time window, and cites the measurements. Rival explanations may concern contention or a changed cache path; neither is asserted by publishing the prompt. B.5.2 compares their plausibility and may return a qualified conjecture or defer.
 
 #### B.5.2.0:13.2 - Opportunity-style prompt
-A cue may admissibly become an opportunity prompt when the open question concerns a potentially valuable line of probe or intervention rather than a failure description.
+An opportunity cue may raise an explanatory question about an indicated advantage without a failure. For example, an unexpectedly stable response in one operating range invites rival explanations of that stability. Whether to exploit the opportunity is a separate action choice.
 
 #### B.5.2.0:13.3 - Probe-style prompt
-A routed cue may become a probe prompt when what matters is not yet explanation but the explicit need to test, contrast, instrument, or perturb.
+A probe-related observation may prompt an explanatory question: which rival explanations predict the measured contrast under the stated perturbation? If the question is instead which available probe is cheapest or most discriminating for the current purpose, use C.11. The probe choice does not require an abductive prompt merely to acquire that input form.
 
 #### B.5.2.0:13.4 - Specialization-sensitive prompt set
-A cue set may admissibly become a `TaskFamilySpecializationPrompt`, `AdaptationProbePrompt`, `NonHumanUtilityPrompt`, or `SubstrateDiversificationPrompt` when the current question is not yet a selector decision but a bounded entry into specialist acquisition, adaptation probing, nonhuman-utility discovery, or substrate widening. The point is to preserve the task family, budget window, rival candidate options, and entry evidence requirement long enough for downstream comparison rather than smuggling a commitment into prompt form.
+Use a specialization-sensitive species for its explanatory question in §4.1.1. For example, a measured performance contrast can prompt rival explanations tied to a declared task family and budget. Acquiring a specialist Method or competence bundle instead requires the applicable option or alternative-development decision. Retain task family, threshold, budget and cue provenance in whichever receiving use needs them; prompt publication does not select the acquisition.
 
 ### B.5.2.0:14 - Prompt package discipline
 
@@ -174,16 +160,16 @@ A prompt may cue one explanation, but it remains a question-bearing entry form. 
 
 #### B.5.2.0:14.3 - Prompt provenance remains load-bearing
 
-Route provenance, cue provenance, and witness provenance are part of prompt admission, not optional history.
+The motivating provenance is part of prompt admission. Preserve the route, cue or witness basis actually used; a prompt with no routing history does not need an invented route.
 
 #### B.5.2.0:14.4 - Check prompt against silent promotion
 An assurance reader should watch for the common mistake where authors silently upgrade a prompt into a hypothesis merely because the prose sounds explanatory. If the text already leans on one preferred answer as settled, either rewrite it back into a real question or explicitly apply the governing pattern that carries the asserted answer.
 
 ### B.5.2.0:15 - Species boundary reminders
 
-Use anomaly species when the key form is an explicit failure, contradiction, or surprising departure from what the current model expected. Use opportunity species when the cue comes from a promising line of development or advantageous contrast. Use probe species when what matters is the need to instrument, contrast, perturb, or ask a question that could discriminate among several candidate explanations.
+Use anomaly species for an explanatory question arising from a failure, contradiction or surprising departure from the current model. Use opportunity species for an explanatory question arising from an indicated advantage. Use probe species for rival explanations of an observation or predicted contrast associated with a stated probe.
 
-Use `TaskFamilySpecializationPrompt` when the current question is which narrower higher-fit specialist option should be acquired for one declared task family. Use `AdaptationProbePrompt` when the next honest move is a bounded probe that tests whether threshold-reaching specialization is attainable under the current budget. Use `NonHumanUtilityPrompt` when the prompt must keep a low-human-overlap approach admissible because it may satisfy the declared utility target better than the current familiar repertoire. Use `SubstrateDiversificationPrompt` when the current question is whether the present substrate is too narrow and a broader or different substrate should be tested before commitment.
+For the four specialization-sensitive species, use the explanatory questions and conditions in §4.1.1. Questions asking which option to acquire, which probe to perform or which substrate to try follow the direct choice routes in §4.3.
 
 Cue-derived prompt entries should stay prompt-headed species rather than projection-headed aliases. The load-bearing question is the prompt kind itself, not one package-local naming trick.
 
@@ -211,7 +197,7 @@ One note may legitimately contain a bundle of closely related prompts. If so, th
 
 An assurance reader can test prompt readiness with three questions:
 
-1. **Is there a real open question?** If the text already asserts the answer, it is no longer a prompt.
+1. **Is there a real open explanatory question?** An asserted answer is no longer a prompt; an action-choice question needs its own Method.
 2. **Is the prompt species plausible?** If the initiating cue shape is opportunity-shaped or probe-shaped, forcing anomaly species is a category error.
 3. **Could rival hypotheses now be compared against this prompt?** If not, the prompt candidate probably needs more stabilization before entering `B.5.2`.
 

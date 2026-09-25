@@ -1,15 +1,17 @@
 ---
 id: A.5
-title: "Open-Ended Kernel & Extension Layering"
+title: "Open-Ended FPF Kernel and Extension Layering"
 status: Stable
 keywords:
   - FPF architecture
-  - specialization vs dependancy hierarhies
-  - modularity
+  - kernel boundaries
+  - domain extensions
+  - dependency versus specialization
+  - declarative modularity
   - extensibility.
 ---
 
-# A.5: Open-Ended Kernel & Extension Layering
+# A.5: Open-Ended FPF Kernel and Extension Layering
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -17,7 +19,7 @@ keywords:
 
 ---
 
-## A.5 - Open‑Ended Kernel & Extension Layering
+## A.5 - Open-Ended FPF Kernel and Extension Layering
 
 **Status.** Informative. This section defines no dedicated “module” subsystem. Enforceable boundary discipline lives in **A.6.0 `U.Signature`** and **A.6.1 `U.Mechanism`**, with guard‑rails in **E.5.3** (Unidirectional Dependency) and **E.10** (LEX‑BUNDLE stratification).
 

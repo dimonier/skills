@@ -1,6 +1,6 @@
 ---
 id: C.25
-title: "Q-Bundle: Authoring "-ilities" as Structured Quality Bundles"
+title: "Q-Bundle: Express a Quality Claim as One Characteristic or a Structured Bundle"
 status: Stable
 keywords:
   - quality bundle
@@ -25,7 +25,7 @@ dependencies:
     - C.26.3
 ---
 
-# C.25: Q-Bundle: Authoring "-ilities" as Structured Quality Bundles
+# C.25: Q-Bundle: Express a Quality Claim as One Characteristic or a Structured Bundle
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -33,7 +33,7 @@ dependencies:
 
 ---
 
-## C.25 - Q-Bundle: Authoring "-ilities" as Structured Quality Bundles
+## C.25 - Q-Bundle: Express a Quality Claim as One Characteristic or a Structured Bundle
 
 > **Type:** Definitional (D)
 > **Status:** Stable

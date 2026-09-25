@@ -39,6 +39,7 @@ processing.
 |---|---|
 | Mixed formats vs one process | Routing by material type: transcript → StateUpdate, research → ExternalResearch, work → Track. |
 | PDF fidelity vs direct analysis | Convert PDF to Markdown (pdf2md); analyse only the conversion. |
+| Text fidelity vs console codepage | Read `.txt` with a filesystem reader (the agent's Read tool); console redirection mangles Cyrillic. |
 | Completeness vs clutter | After full processing — clear `inbox/` (delete the channel file regardless of material type). Nothing is lost: the routed content lives in the target track/entity and a source copy is kept in `sources/`. |
 | Backup artifacts vs real material | `*.bak` files in `inbox/` are ignored — not copied to `sources/`, not routed, not counted as an unprocessed signal. |
 | Traceability of the intake act | The intake act is recorded as a WRK in the fitting target track; the service track (`PV.Track` T.5) is the fallback when no track fits. |
@@ -56,16 +57,20 @@ processing.
    project/skill). Files with the `*.bak` extension are ignored: they are
    backup/edit artifacts, not material — not copied to `sources/`, not routed, and
    removed from `inbox/` without substantive processing.
-2. **PDF preprocessing.** If there is a `.pdf` in `inbox/` — before substantive
-   processing convert each PDF to Markdown with the `pdf2md` skill (script
-   `scripts/extract_pdfs.py`, parameters `--source <inbox_dir> --first N`). Use the
-   result (`.md` in `inbox/_markdown/`) as the source for the subsequent procedures
-   (StateUpdate, Track). Do not analyse the original PDF directly — only via the
-   converted Markdown. If `pdf2md` is unavailable or the conversion fails — record
-   this in the inbox-processing result and notify the owner.
+2. **Text and PDF preprocessing.** A `.txt` source (incl. Cyrillic transcripts) is read
+   directly with a filesystem reader (the agent's Read tool), which decodes a valid
+   UTF-8 file correctly. Do not route it through a shell console (`Get-Content`/
+   redirect) — the console's legacy codepage renders Cyrillic as mojibake, and
+   transcoding the file "blindly" corrupts a valid source. If there is a `.pdf` in
+   `inbox/` — before substantive processing convert each PDF to Markdown with the
+   `pdf2md` skill (script `scripts/extract_pdfs.py`, parameters `--source <inbox_dir>
+   --first N`). Use the result (`.md` in `inbox/_markdown/`) as the source for the
+   subsequent procedures (StateUpdate, Track). Do not analyse the original PDF
+   directly — only via the converted Markdown. If `pdf2md` is unavailable or the
+   conversion fails — record this in the inbox-processing result and notify the owner.
 3. **Routing external research.** Independent studies (Knowy), narrativizations,
    articles, talks, tutorials — through the ExternalResearch procedure with a
-   two-way binding to reference-bearing entities (Q, RISK, CON, DEC, TRK).
+   two-way binding to reference-bearing entities (DEC, TRK).
 4. **Routing to procedures.** A meeting transcript/protocol → StateUpdate (and the
    related entities); a material with valuable artifacts → file into a fitting
    track or create a new one (Track). An outbox-style proposal (feedback addressed
@@ -78,7 +83,7 @@ processing.
    - **into the fitting target track**, when the routed material landed in (or
      created) a product track;
    - **under the permanent service track** (`PV.Track` T.5), only when no fitting
-     track exists (e.g. the material produced only atomic entities — DEC/Q/RISK/CON —
+     track exists (e.g. the material produced only atomic entities — DEC —
      with no operational line).
    Do not open a track solely to contain the intake WRK itself; the routed material's
    track/entity is the *target* of the pass.
@@ -106,6 +111,7 @@ accumulate.
 | CC-IB.4 | A conversion failure is recorded and brought to the owner. |
 | CC-IB.5 | `*.bak` files in `inbox/` are ignored: not copied to `sources/`, not routed, removed without substantive processing. |
 | CC-IB.6 | An inbox-processing pass is recorded as a WRK in the fitting target track; the service track (`PV.Track` T.5) is used only when no track fits. |
+| CC-IB.7 | A `.txt` source is read with a filesystem reader (not a shell console); Cyrillic is not transcoded "blindly". |
 
 ### PV.Inbox:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -115,6 +121,7 @@ accumulate.
 | Material without explicit routing | Determine the type and route to the correct procedure. |
 | `inbox/` not cleared after processing (incl. an outbox-style proposal file retained after routing) | Keep the source copy in `sources/`, then delete the inbox file on completion. |
 | `*.bak` processed as standalone material | Ignore `*.bak` (backup/edit artifact, not a source). |
+| Cyrillic `.txt` read via console redirection / transcoded "blindly" | Read with a filesystem reader (the agent's Read tool); never transcode a valid UTF-8 file. |
 | Inbox processing left without a WRK, or a track opened just for it | Record the pass as a WRK in the fitting target track; the service track only when none fits (`PV.Track` T.5). |
 
 ### PV.Inbox:9 - Consequences

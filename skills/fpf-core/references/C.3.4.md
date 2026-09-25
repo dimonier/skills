@@ -1,6 +1,6 @@
 ---
 id: C.3.4
-title: KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning
+title: KindUseAdaptationDeclaration — Tailor the Use of an Existing Kind
 status: Stable
 keywords: []
 dependencies:
@@ -15,7 +15,7 @@ dependencies:
     - C.3.A
 ---
 
-# C.3.4: KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning
+# C.3.4: KindUseAdaptationDeclaration — Tailor the Use of an Existing Kind
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -23,7 +23,7 @@ dependencies:
 
 ---
 
-## C.3.4 - KindUseAdaptationDeclaration — Contextual Adaptation of Kinds without Cloning
+## C.3.4 - KindUseAdaptationDeclaration — Tailor the Use of an Existing Kind
 
 > **One-line summary.** Use a `KindUseAdaptationDeclaration` when a procedure needs a narrower or differently named use of an existing kind without defining another kind. The declaration pins the base `KindSignature` edition, local candidate constraints or vocabulary bindings, intended guard use, and applicability. Check admissibility before returning `true`, `false`, or `unknown`. A locality change first triggers kind-identity comparison: the same kind needs no `KindBridge`; distinct kinds need one only when its exact correspondence predicate obtains.
 
@@ -145,7 +145,7 @@ A stable conceptual refinement may justify another kind and an obtaining C.3.1 s
 
 - **No Scope leakage.** An adaptation declaration cannot widen or narrow Claim scope G; context conditions are enforced by A.2.6 guards.
 - **Identity preservation.** The base kind remains `k`; the declaration does not change its `EntityOfConcern`.
-- **Weakest-link unaffected.** Adaptation and correspondence declarations do not alter weakest-link rules on F or R; guards route candidate-feature predicates to the exact judgment and context predicates to Scope.
+- **Aggregation unaffected.** Adaptation and correspondence declarations do not change the applicable F rule under C.2.3 or the justified support-composition model or non-aggregate synthesis under C.2.2; guards route candidate-feature predicates to the exact judgment and context predicates to Scope.
 
 ### C.3.4:8 - Interactions
 

@@ -1,21 +1,19 @@
 ---
 id: E.20
-title: Mechanism Introduction Protocol (MIP)
+title: "Mechanism Introduction Protocol: Introduce or Revise FPF Mechanisms (MIP)"
 status: Stable
 keywords:
   - mechanism introduction
   - authoring protocol
   - "governing-definition assignment"
+  - trigger triage
   - "MIP-run manifest"
-  - "canonical card-first"
-  - "no dangling `…IntensionRef`"
-  - suite boundary hygiene
-  - P2W seam
-  - SlotKind lexicon discipline
+  - resolvable MechanismDefinitionRef
+  - suite boundary
+  - "declaration-local operation members"
   - alias docking
-  - typed RSCR triggers
-  - regression envelope
-  - PQG profiles.
+  - planned baseline
+  - wiring.
 dependencies:
   builds_on:
     - E.8
@@ -33,7 +31,7 @@ dependencies:
     - G.2
 ---
 
-# E.20: Mechanism Introduction Protocol (MIP)
+# E.20: Mechanism Introduction Protocol: Introduce or Revise FPF Mechanisms (MIP)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -41,7 +39,7 @@ dependencies:
 
 ---
 
-## E.20 - Mechanism Introduction Protocol
+## E.20 - Mechanism Introduction Protocol: Introduce or Revise FPF Mechanisms
 
 > **Type:** Architectural pattern
 > **Status:** Stable
@@ -69,13 +67,13 @@ This pattern provides a **repeatable, governing-definition assignment protocol**
 
 **Do not escalate when.** Do not create a MIP-run manifest when alias docking or local wording repair preserves denotation. Do not treat a suite, plan, wiring module, or lexical cleanup as mechanism meaning unless the changed item needs a new or revised governing definition.
 
-**Same problem, different question under repair.** For a mechanism-adjacent transformation-flow problem, use `E.18` for transformation-flow structure, graph/path, valuation, or crossing claims, `A.20` for internal step validity, `A.21` for gate-decision publication, and `E.20` for mechanism-meaning placement; do not open the other three until their own claim is present.
+**Same problem, different question under repair.** For a mechanism-adjacent transformation-flow problem, use `E.18` for transformation-flow structure, graph/path, valuation, or crossing claims, `A.20` for internal step validity, `A.21` for a gate profile application and decision, and `E.20` for mechanism-meaning placement; do not open the other three until their own claim is present.
 
 **Semantic repair return.** When E.20 blocks a misleading word, face, alias, or source label, the repair must return to the enabled authoring move: name the governing definition, canonical location, alias-docking relation, or non-trigger stop that remains available under E.20. Do not stop at a classification of vocabulary or publication faces.
 
-**Subject and relation separation.** Keep the graph object and path or crossing relation (`E.18`), MVPK publication faces (`E.17`), internal CV status and witness (`A.20`), gate decision and `DecisionLog` (`A.21`), evidence or provenance relation (`A.10`/`G.6`), work plan or work occurrence (`A.15`), and mechanism-definition assignment (`E.20`) distinct. An MVPK face, `DecisionLog`, evidence value, provenance reference, MIP manifest, or work witness does not supply another subject's project-side value unless an exact dependent-use assertion and its defining or constraining `ClaimGraph` establish that relation.
+**Subject and relation separation.** Keep the graph object and path or crossing relation (`E.18`), MVPK publication faces (`E.17`), internal CV status and witness (`A.20`), gate profile application and decision (`A.21`), evidence or provenance relation (`A.10`/`G.6`), work plan or work occurrence (`A.15`), and mechanism-definition assignment (`E.20`) distinct. An MVPK face, `DecisionLog`, evidence value, provenance reference, MIP manifest, or work witness does not supply another subject's project-side value unless an exact dependent-use assertion and its defining or constraining `ClaimGraph` establish that relation.
 
-**Smallest affected locus.** Localize the change to the smallest current locus: `PathSlice` or crossing in `E.18`, CV step in `A.20`, `GateDecision` equivalence class in `A.21`, or mechanism-governing definition in `E.20`. Do not widen to a whole flow or unrelated claim, locus, or EntityOfConcern when that locus is enough.
+**Smallest affected locus.** Localize the change to the smallest current locus: `PathSlice` or crossing in `E.18`, CV step in `A.20`, the profile application and bounded action decided in `A.21`, or mechanism-governing definition in `E.20`. Do not widen to a whole flow or unrelated claim, locus, or EntityOfConcern when that locus is enough.
 
 **Ordinary success.** For ordinary E.20 use, success is that the edit is classified, the current governing locus or alias-docking relation is named, and no MIP-run manifest is opened unless denotation, mechanism meaning, suite denotation, suite closure, suite obligations, suite pins, suite protocol semantics, planning pins, wiring semantics, or governing-definition assignment actually changes.
 
@@ -307,12 +305,12 @@ A MIP-run that changes any of:
 * terminology/alias docking that changes citeable tokens,
 * or other reference loci
 
-SHALL emit typed RSCR triggers via the RSCR subject pattern and SHALL extend the regression envelope to include, at minimum:
+SHALL emit typed RSCR triggers via the RSCR subject pattern and SHALL extend the regression envelope over the affected uses:
 
-* no dangling `MechanismDefinitionRef` enumerations,
-* suite membership set semantics + protocol closure,
-* guard/gate separation preservation,
-* P2W planning-to-work boundary preservation (planning vs enactment).
+* reference resolution for changed citeable references;
+* membership set semantics and protocol closure when a suite changes;
+* guard/gate separation when that boundary changes; and
+* the P2W planning-to-work boundary when planned-baseline content changes.
 
 **Guard (normative).** Trigger kind identifiers (e.g., `RSCRTriggerKindId`) SHALL be selected from the RSCR trigger catalogue governed by `G.Core`. A MIP-run SHALL NOT mint ad hoc trigger kinds (“reason kinds”) scattered in arbitrary patterns/modules.
 
@@ -345,7 +343,7 @@ A reviewed MIP-run SHALL be closed as one of:
 
 ### E.20:5 - Archetypal Grounding *(Tell–Show–Show)*
 
-**Show 0 (suite member, no new mechanism meaning).** A suite adds an already-introduced `U.Mechanism` episteme by its `MechanismDefinitionRef` and changes no identity component, declaration content, or neighboring relation on which the suite use relies. E.20 records the suite-governing locus and stops; no new mechanism declaration target or MIP-run manifest is opened.
+**Show 0 (optional citation, no suite or mechanism change).** A suite description adds only an optional citation of an already-introduced `U.Mechanism` episteme by its `MechanismDefinitionRef`. Its admitted membership, denotation, closure, obligations, pins, protocol semantics, and relied-on neighboring relations remain unchanged. E.20 names the suite-governing locus and stops; no new mechanism declaration target or MIP-run manifest is opened. An actual membership addition instead uses the suite-change branch.
 
 |  | Tell | Show #1 — add a mechanism to an existing suite *variant* | Show #2 — introduce a new mechanism family + suite |
 |---|---|---|---|
@@ -377,7 +375,7 @@ Lenses tested: **Governance** (governing-definition assignment, continuity), **A
 | **CC‑E20‑6 (Kernel stability handled).** | If a kernel suite would gain a new required stage, the change **SHOULD** be expressed as a suite variant; if mutation occurs, it **SHALL** include continuity measures (alias docking and explicit delta). | Minimizes E.15 impact radius of kernel edits. |
 | **CC‑E20‑7 (SoTA wiring, not kernel semantics).** | Method/comparator choices **SHALL** be represented via SoTA packs and wiring modules; if a SoTA update changes mechanism semantics, that change **SHALL** be made in the mechanism-subject pattern and not by wiring. | Prevents silent semantic shifts. |
 | **CC‑E20‑8 (Terminology continuity).** | Any rename changing citeable tokens **SHALL** use alias docking and register updates; silent rewrites are non‑conformant. | Preserves reference stability. |
-| **CC‑E20‑9 (RSCR triggers + regressions).** | Any semantic or reference-change **SHALL** emit RSCR triggers and extend the regression envelope to cover dangling refs + suite closure + guard/gate separation + P2W planning-to-work boundary. | Makes changed loci and regression obligations explicit and testable. |
+| **CC‑E20‑9 (RSCR triggers + regressions).** | A triggered MIP-run that changes semantics or citeable references **SHALL** emit RSCR triggers and extend the regression envelope over its affected reference, suite, guard/gate, or planned-baseline uses under E.20:4.10. | Makes changed loci and regression obligations explicit and testable. |
 | **CC‑E20‑10 (PQG coverage).** | Every MIP-run **SHALL** be reviewed under PQG (E.19) with PCP‑BASE and the triggered profiles implied by the change. | Normalizes review and refresh. |
 | **CC‑E20‑11 (Deprecation preserves citeability).** | Any deprecation, supersession, or retirement action **SHALL** preserve citeability of the deprecated token. Affected mechanism epistemes, reservation stubs, suite descriptions, WorkPlan editions, wiring modules, and public locators or aliases remain independently resolvable where applicable and state the direct successor relation or its absence under E.20:4.9.1. A planned-filling row has no independent resolvability, edition, or successor obligation; its local-content locator resolves only through the exact WorkPlan edition. | Prevents broken citations and orphaned semantics without reifying WorkPlan-local content. |
 

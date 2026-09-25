@@ -1,6 +1,6 @@
 ---
 id: D.3
-title: Interlevel Ethical Conflict Structure
+title: Describe an Ethical Conflict Across Levels or Scopes
 status: Stable
 keywords: []
 dependencies:
@@ -21,7 +21,7 @@ dependencies:
     - B.3
 ---
 
-# D.3: Interlevel Ethical Conflict Structure
+# D.3: Describe an Ethical Conflict Across Levels or Scopes
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -29,7 +29,7 @@ dependencies:
 
 ---
 
-## D.3 - Interlevel Ethical Conflict Structure
+## D.3 - Describe an Ethical Conflict Across Levels or Scopes
 
 > **Type:** D-family ethical conflict-description pattern
 > **Status:** Stable

@@ -1,21 +1,25 @@
 ---
 id: F.10
-title: Status Families Mapping (Evidence • Standard • Requirement)
+title: "Apply and Interpret Evidence, Standard and Requirement Statuses"
 status: Stable
 keywords:
-  - status
-  - evidence
-  - standard
-  - requirement
-  - polarity
-  - applicability windows.
+  - status families
+  - EvidenceStatus
+  - StandardStatus
+  - RequirementStatus
+  - governed target
+  - direct result
+  - status value
+  - scope
+  - window
+  - interpretation rule.
 dependencies:
   builds_on:
     - F.9
     - B.3
 ---
 
-# F.10: Status Families Mapping (Evidence • Standard • Requirement)
+# F.10: Apply and Interpret Evidence, Standard and Requirement Statuses
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -23,7 +27,7 @@ dependencies:
 
 ---
 
-## F.10 - Status Families Mapping: Evidence, Standard, and Requirement Status
+## F.10 - Apply and Interpret Evidence, Standard and Requirement Statuses
 
 > **Type:** Boundary and relation-use pattern
 > **Status:** Stable
@@ -37,7 +41,7 @@ Use it especially when evidence, standards, and requirements are being mixed: a 
 
 **Primary EntityOfConcern.** The live object is one exact status-use relation around an already governed bearer or target, one local status value, one ClaimScope/use scope, one validity window, and one intended receiving use. F.10 does not define or create the target and does not turn a display, source, list membership, approval act, evaluation rule, result, or evidence item into the status-use relation.
 
-**First useful move.** Recover the exact target and its direct domain result first. Then name the status-value SchemeSenseCell and family under the effective ReferenceScheme, status scope/window, exact source and provenance/currentness constraints, intended use, and stronger use not carried. If a rule must be applied, name the dated evaluation work, rule application, and result separately.
+**First useful move.** Recover the exact target and its direct domain result first. Then name the status-value SchemeSenseCell and family under the effective ReferenceScheme, status scope/window, exact source and provenance/currentness constraints, intended use, and stronger use not carried. Recover the rule application and result when they are used. Identify dated evaluation Work separately only when that history is current and independently admitted under A.13/A.15.1.
 
 **What goes wrong if missed.** One compact word does the work of domain result, evidence standing, standard approval, requirement satisfaction, gate passage, release readiness, permission, and assurance at once. A dashboard list or traffic-light cell is treated as actual status use. An F.9 Bridge or family edge is treated as the explanation or evaluation rule. Design approval becomes runtime satisfaction.
 
@@ -112,7 +116,7 @@ StatusUseRelation:
   IntendedStatusUse:
   SourceClaimEpistemeRef:
   SourceRelationOrRegisterRef:
-  EvaluationWorkRef:  # when a rule is applied
+  EvaluationWorkRef:  # only when actual evaluation Work is claimed
   EvaluationRuleAndApplicationRef: # when a rule is applied
   EvaluationResultClaimRef:  # when a result is produced
   ProvenancePathRef:
@@ -136,7 +140,7 @@ Use this order:
 4. identify the C.2.1 episteme that states that result;
 5. resolve the local status expression to its exact F.17 cell and F.10 family;
 6. recover the source, edition, scheme, scope, conditions, window, provenance, and currentness required by this status use;
-7. when a rule is needed, identify dated evaluation work, enacted method, exact direct/A.6.1 application, and evaluation-result claim;
+7. recover the exact rule and any direct/A.6.1 application and evaluation-result claim needed by the use; identify dated evaluation Work and its enacted Method only when that history is current and independently admitted under A.13/A.15.1;
 8. assert the status-use relation and its C.2.1 status-assertion episteme; then separately recover publication/display and any actual later premise, decision-use, status-use, gate-use, or operation-argument relation.
 
 Status never defines or constitutes the target. A changed status may change a receiving disposition without changing target identity or the earlier domain result. Conversely, a changed target or direct result requires the status application to be re-evaluated; copying the old value is not continuation proof.
@@ -193,7 +197,7 @@ These values classify evidential standing; they do not replace the observation, 
 
 #### F.10:4.6 - Bridge and interpretation discipline
 
-Status meanings do not travel by label. When two local status senses under different ReferenceSchemes must be compared, use the actual F.9 Bridge occurrence between the exact F.17 SchemeSenseCells, with direction, bridge kind, tolerance/loss, and bounded use. Its Card or description is separate and optional; optional F.9 `CL` remains evidence-strength shorthand, not a use threshold. The Bridge makes no status-use occurrence obtain and produces no target result.
+Status meanings do not travel by label. When a comparison needs semantic correspondence between different `<ReferenceScheme, LocalSenseClaim>` projections, resolve the exact F.17 cells and test the F.9 predicate. Cite an obtaining Bridge as the semantic premise alongside the separate bounded-use claim and current A.10 or B.3 reliance needed by that use. Its Card or description is separate and optional; optional F.9 `CL` remains evidence-strength shorthand, not a use threshold. The Bridge makes no status-use occurrence obtain and produces no target result.
 
 When one status-use occurrence is used to explain or evaluate a status question of another family, scheme, or modality, recover an exact `StatusInterpretationRelation`:
 
@@ -205,11 +209,11 @@ StatusInterpretationRelation:
   InterpretationRuleRef:
   EffectiveReferenceScheme:
   ClaimScopeAndWindow:
-  BridgeRef:  # only when local senses cross schemes
+  BridgeRef:  # only when the use needs an obtaining F.9 semantic relation between different local-sense projections
   IntendedUse:
 ```
 
-It obtains only when the named interpretation rule admits that source occurrence for the exact target question, direction, scope, window, and use. Its occurrence identity is the exact ordered `<SourceStatusUseOccurrenceRef, TargetStatusQuestionRef, Direction, InterpretationRuleRef, ClaimScopeAndWindow, IntendedUse>` tuple; a Bridge ref is a separate qualifying premise when local senses cross schemes. A family edge, shared word, Bridge, table row, or source order is not this relation. Applying the rule is separate dated evaluation work; its result claim is separate again. Even a positive interpretation relation does not by itself produce `RequirementStatus=Satisfied`, `StandardStatus=Approved`, a gate result, permission, assurance, or actual later reliance.
+It obtains only when the named interpretation rule admits that source occurrence for the exact target question, direction, scope, window, and use. Its occurrence identity is the exact ordered `<SourceStatusUseOccurrenceRef, TargetStatusQuestionRef, Direction, InterpretationRuleRef, ClaimScopeAndWindow, IntendedUse>` tuple; a Bridge ref is a separate qualifying premise when the use needs an obtaining F.9 semantic relation between different local-sense projections. A family edge, shared word, Bridge, table row, or source order is not this relation. The rule application and its result claim remain separate. Identify dated evaluation Work only when its history is current and independently admitted under A.13/A.15.1. Even a positive interpretation relation does not by itself produce `RequirementStatus=Satisfied`, `StandardStatus=Approved`, a gate result, permission, assurance, or actual later reliance.
 
 #### F.10:4.7 - Design-run discipline
 
@@ -217,7 +221,7 @@ Keep three questions separate:
 
 * What do exact observation, measurement, proof, causal, or other input results warrant as evidence standing for this target claim and window?
 * What does an exact governing source sanction for this method description, profile, standard edition, or configuration and use?
-* What does direct requirement-evaluation work conclude about this exact clause, target, scope, conditions, and runtime/design window?
+* What does the direct requirement-evaluation result say about this exact clause, target, scope, conditions, and runtime/design window?
 
 A standard-approved method description may be admissible for selection under that profile. It does not show that the method was enacted or that a runtime clause was satisfied. Runtime evidence may become an admitted input to requirement evaluation through an exact evidence-use and status-interpretation relation. It does not approve the method, standard, gate, or release.
 
@@ -233,7 +237,7 @@ The SLO clause and service target are independently recovered. Dated evaluation 
 
 One exact safety-controller MethodDescription is `StandardStatus=Approved` only under the named standard/profile edition, source relation, scheme, scope, window, and selection use. That status neither creates the MethodDescription nor proves an approval speech act, permission, method enactment, or response-time satisfaction.
 
-A particular controller run is separate `U.Work`. Its response-time measurement result and evidence-use relation can enter direct clause-evaluation work. A separate requirement status may follow from that evaluation; it does not inherit `Approved` by label or family edge.
+For a controller run independently admitted as `U.Work` under A.15.1, keep that occurrence separate from its response-time measurement result. That result and its evidence-use relation can enter direct clause evaluation. A separate requirement status may follow from the evaluation; it does not inherit `Approved` by label or family edge.
 
 #### F.10:5.3 - Model card and fairness requirement
 
@@ -263,13 +267,13 @@ The repair is to recover target and direct result first, then the exact local va
 | `CC-F10-02` Local value | Does the status expression resolve to an exact F.17 SchemeSenseCell under an effective ReferenceScheme and to one family/direct status pattern? |
 | `CC-F10-03` Use occurrence | Are bearer, target, value, scheme, scope, window, intended use, and direct obtaining basis explicit? |
 | `CC-F10-04` Source | Are source assertion/register, edition/order rule, provenance path, and G.11 currentness result recovered when they decide use? |
-| `CC-F10-05` Assessment | If a rule is applied, are dated evaluation work, enacted method, exact application/bindings, and evaluation-result claim separate? |
+| `CC-F10-05` Assessment | Are each consumed rule application and evaluation-result claim separate, and is any claimed dated evaluation Work independently admitted with its actual enacted Method? |
 | `CC-F10-06` Assertion/display | Is the C.2.1 status-assertion episteme distinct from publication occurrence, form, rendering, carrier, row, and dashboard cell? |
 | `CC-F10-07` Modality | Are evidence status, standard approval, requirement status, and every direct result kept distinct? |
-| `CC-F10-08` Bridge | Does cross-scheme vocabulary use cite an actual F.9 occurrence between exact cells, while Card/description remains separate? |
+| `CC-F10-08` Bridge | When the use needs semantic correspondence between different local-sense projections, are the exact F.9 occurrence, separate bounded-use claim and required reliance recoverable, while Card/description remains separate? |
 | `CC-F10-09` Interpretation | Does cross-family or cross-modality explanation name the exact `StatusInterpretationRelation`, direction, rule, scope/window, and use? |
 | `CC-F10-10` Design-run | Are standard approval, runtime evidence, requirement evaluation, and runtime satisfaction separate? |
-| `CC-F10-11` Receiving use | Is any actual premise/gate/assurance/permission/release/decision use grounded in dated work and its direct relation rather than intended use or display? |
+| `CC-F10-11` Receiving use | Is each actual premise/gate/assurance/permission/release/decision use grounded under its direct governor, with dated Work separately admitted only when that occurrence is claimed, rather than inferred from intended use or display? |
 | `CC-F10-12` No creation | Does status neither define/create its target nor turn evidence absence into target falsity? |
 | `CC-F10-13` No system-role drift | Does evidence, status, standard, or requirement use refrain from establishing System admission, a local system-role classification, or an assignment? When a receiving claim needs an assignment, does it name the occurrence and its declared species? Does the occurrence carry every required participant value and have the independently admitted System as holder? |
 | `CC-F10-14` Subject-pattern boundary | Do evidence provenance, assurance, causal use, publication, gate, permission, commitment, work, requirement evaluation, approval act, and decision remain with direct governors? |
@@ -286,7 +290,7 @@ The repair is to recover target and direct result first, then the exact local va
 | Clause-less compliance | *Compliant* is asserted without an exact clause, target, rule, scope, conditions, and window. | Recover the clause and direct evaluation result. |
 | Bridge-free roll-up | A dashboard aggregates local labels as global synonyms. | Use exact cells and F.9 occurrences, or downgrade to local explanation. |
 | Bridge/family edge as explanation | A Bridge or `EvidenceStatus -> RequirementStatus` arrow is treated as direct reason. | Name the `StatusInterpretationRelation`, exact rule, evaluation application, and result. |
-| Evidence escalation without independence | One repeated lab result is called replicated. | Keep it measured/corroborated until independent replication conditions and results are recovered. |
+| Evidence escalation without independence | One repeated lab result is called replicated. | Keep the supported status; assert `Corroborated` only after its independent-support rule passes, or `Replicated` after independent work or varied declared conditions and their results satisfy its rule. |
 | Status role for episteme | A report, standard, or requirement is said to ‘hold a role’. | Use the A.2.4 and F.10 use relations. They establish neither System admission, local system-role classification, nor an assignment. If the receiving claim needs an assignment, name the admitted System, declared assignment species and occurrence, and that System as its holder. |
 | Tool-state explosion | Every local tool state becomes a durable status kind. | Keep tool labels local; create a durable cell/family mapping only for a receiving use that needs it. |
 
@@ -311,7 +315,7 @@ The small set of three status families—`EvidenceStatus`, `StandardStatus`, and
 | How should a requirement status stay attached to an exact clause and evaluation use? | [ISO/IEC/IEEE 29148:2018](https://www.iso.org/standard/72089.html), confirmed current in 2024, is a **current standard reference** for requirements-engineering processes and information items. It does not supply F.10's status algebra. | **Adapt.** `RequirementStatus` targets one requirement or clause under explicit scope, conditions, window, and a direct evaluation result. Reject *compliant* without the clause, applicable rule, and result; neither a requirement document nor its lifecycle label proves satisfaction or waiver. | Reopen when 29148 is revised or a stronger cross-domain requirements source changes which clause, applicability, evaluation, or result distinctions must remain visible. |
 | How should a standard's edition and lifecycle standing remain distinct from approval of a method or configuration? | ISO's [international harmonized stage codes](https://www.iso.org/stage-codes.html) and [standards-development stages](https://www.iso.org/stages-and-resources-for-standards-development.html) are **current primary ISO process references** for publication, review, confirmation, revision, and withdrawal states. | **Adapt only the separation between an edition and its status.** `StandardStatus` names the exact source edition, target, scheme, window, and use. Reject the inference from a source's publication or confirmation state to enactment, runtime satisfaction, permission, compliance, or project approval. | Reopen when ISO changes the stage model or when another governing source family used by FPF needs a materially different distinction between edition and currentness. |
 | What does provenance establish, and what does it not establish about evidence standing? | W3C [PROV-O](https://www.w3.org/TR/prov-o/) (2013) is a stable Recommendation retained as **provenance lineage and reference**; it distinguishes entities, activities, agents, and qualified provenance relations. | **Adapt the separation, not a truth claim.** Recover the exact observation or result, source, provenance relation, and evidence-use relation before assigning `EvidenceStatus`. Reject provenance presence as target truth, corroboration, assurance, or sufficient evidence by itself. | Reopen if W3C supersedes PROV or a current evidence standard changes the provenance-to-evidence-use boundary consumed by F.10. |
-| How should cross-local status words remain local rather than becoming global synonyms? | [ISO 704:2022](https://www.iso.org/standard/79077.html) is a **current terminology standard** linking objects, concepts, definitions, and designations; F.9 supplies FPF's current relation between exact local senses. | **Adapt.** Recover each local value cell and use an exact F.9 Bridge plus a separate interpretation rule when cross-local use is intended. Reject shared spelling, a family edge, or a mapping card as explanation, evaluation, substitution, or global identity. | Reopen when ISO 704 or the F.9 relation model changes the distinction between designations and concepts or the cross-local mapping used here. |
+| How should cross-local status words remain local rather than becoming global synonyms? | [ISO 704:2022](https://www.iso.org/standard/79077.html) is a **current terminology standard** linking objects, concepts, definitions, and designations; F.9 supplies FPF's current relation between exact local senses. | **Adapt.** Recover each local value cell and use the separate interpretation rule for the receiving question; add an obtaining F.9 Bridge, bounded-use claim and current reliance only when that use needs semantic correspondence between different local-sense projections. Reject shared spelling, a family edge, or a mapping card as explanation, evaluation, substitution, or global identity. | Reopen when ISO 704 or the F.9 relation model changes the distinction between designations and concepts or the cross-local mapping used here. |
 | Why are a credential or dashboard view, its status, and a relying decision different objects? | W3C [Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/) (2025) is a **current W3C Recommendation** that separates issuer, subject, holder, verifier, credential, presentation, and credential-status information, and leaves authorization decisions outside the data model. | **Adapt.** A visible credential, register row, or dashboard cell is a cue or presentation. Recover the source assertion, target, status value, currentness, and actual receiving use separately. Reject display, verification, or credential status as permission, gate passage, assurance, system-role assignment, or relying decision. | Reopen when the VC Recommendation or its status standards change the boundaries among issuer, status information, presentation, and verifier that this example uses. |
 
 ### F.10:12 - Relations

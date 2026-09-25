@@ -1,6 +1,6 @@
 ---
 id: A.0
-title: "Onboarding Glossary (NQD & E/E‑LOG)"
+title: "Generative Search Onboarding Glossary (NQD & E/E‑LOG)"
 status: Stable
 keywords:
   - novelty
@@ -33,7 +33,7 @@ dependencies:
     - G.12
 ---
 
-# A.0: Onboarding Glossary (NQD & E/E‑LOG)
+# A.0: Generative Search Onboarding Glossary (NQD & E/E‑LOG)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -41,7 +41,7 @@ dependencies:
 
 ---
 
-## A.0 - Onboarding Glossary (NQD & E/E‑LOG)
+## A.0 - Generative Search Onboarding Glossary (NQD & E/E‑LOG)
 **One‑screen purpose (manager‑first).** This pattern gives newcomers a plain‑language starter kit for FPF’s *generative* engine so they can run an admissible **problem-solving or search loop** on day one. It explains the few terms you must publish when you **generate, select, and ship declared set results or typed portfolio publications** (not single “winners”), and points to the formal anchors you’ll use later. *(OEE is a Pillar; NQD/E/E‑LOG are the engine parts.)*
 
 **Builds on.** E.2 (**P‑10 Open‑Ended Evolution; P‑2 Didactic Primacy**), A.5, C.17–C.19 - **Coordinates with.** E.7, E.8, E.10; F.17 (UTS); G.5, G.9–G.12 - **Constrains.** Any pattern/UTS row that **describes a generator, selector, typed portfolio publication, or set-return publication surface**.
@@ -191,7 +191,7 @@ This pattern is an **on‑ramp**: it **does not replace** C.17–C.19. It binds 
 - Use `ShortlistId` for the stable public token of one emitted shortlist; it is not the shortlist itself.
 - Use `ChoiceSet` only when the mathematical set object underlying one shortlist must be named explicitly; do not let it replace the public shortlist head.
 - Use `Q-set` for the declared current objective tuple that may ground the current `DominanceSet`.
-- For a result or claim used by a pool policy, retain its direct pattern's reference name and kind; for example, `A.2.2` supplies `capabilityInstanceRef` and `capabilityStatementRef`. Use `C.19` for the resulting pool treatment. Citing an input does not add it to `Q` or dominance.
+- For a result or claim used by a pool policy, retain its direct pattern's reference name and kind; for example, `A.2.2` supplies `capabilityHolderRef` and `capabilityStatementRef`. Use `C.19` for the resulting pool treatment. Citing an input does not add it to `Q` or dominance.
 - Use `competenceModelRef` under `C.19` only for one exact model episteme used by the policy; identify the capability and supporting results separately.
 - When the pool treatment relies on an evidence-bearing or source-bearing claim, use `a10RelianceRef` for the exact claim and bounded pool-treatment reliance under `A.10`.
 - Use `goalSpaceExpansionPolicyRef` under `C.19` when an independently declared archive or curriculum expansion policy governs goal- or task-space growth; that policy does not place a candidate on a front or add a dominance coordinate.

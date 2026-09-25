@@ -1,6 +1,6 @@
 ---
 id: A.6.M
-title: Module Relation Repair
+title: Module and Interface Claim Repair
 status: Stable
 keywords:
   - module relation
@@ -36,7 +36,7 @@ dependencies:
     - C.11
 ---
 
-# A.6.M: Module Relation Repair
+# A.6.M: Module and Interface Claim Repair
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -44,7 +44,7 @@ dependencies:
 
 ---
 
-## A.6.M - Module Relation Repair
+## A.6.M - Module and Interface Claim Repair
 
 > **Type:** Architectural pattern
 > **Status:** Stable

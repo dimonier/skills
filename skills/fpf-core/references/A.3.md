@@ -1,17 +1,18 @@
 ---
 id: A.3
-title: Transformer Constitution (Quartet)
+title: "Transformer Quartet: Distinguish Work, Performer, Method and Method Description"
 status: Stable
 keywords: []
 dependencies:
   builds_on:
     - A.2.1
-    - A.4
     - A.7
     - A.13
     - A.15.1
+    - C.2.1
     - F.6
   coordinates_with:
+    - A.4
     - A.3.1
     - A.3.2
     - A.3.4
@@ -23,7 +24,7 @@ dependencies:
     - F.9
 ---
 
-# A.3: Transformer Constitution (Quartet)
+# A.3: Transformer Quartet: Distinguish Work, Performer, Method and Method Description
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -31,11 +32,11 @@ dependencies:
 
 ---
 
-## A.3 - Transformer Constitution (Quartet)
+## A.3 - Transformer Quartet: Distinguish Work, Performer, Method and Method Description
 
 ### A.3:1 - Intent
 
-Establish a substrate-neutral way to say which system performed one dated world-side Work occurrence by enacting which `U.Method`, under which exact `U.SystemRoleAssignment` when assignment-bound attribution is needed, and which separately governed method-description, capability, work-to-change, evidence, or aggregation claims the current use additionally relies on—without self-magic and without blurring run-independent semantics, the occurrence, and an episteme that describes or asserts it. The pattern keeps the **Transformer Quartet** object families distinct; it does not require every change claim or Work assertion to carry all four. `A.3.4` independently identifies an actual bounded change; that identification alone establishes no acting system, agency, role assignment, method, or work. A.3 builds directly on **System-Role Kinds and Assignments (A.2)** and **Temporal Duality (A.4)** and is guarded by **Strict Distinction (A.7)** and **Evidence Graph Referring (A.10)**.
+Establish a substrate-neutral way to say which system performed one dated world-side Work occurrence by enacting which `U.Method`, under which exact `U.SystemRoleAssignment` when assignment-bound attribution is needed, and which separately governed method-description, capability, work-to-change, evidence, or aggregation claims the current use additionally relies on—without self-magic and without blurring run-independent semantics, the occurrence, and an episteme that describes or asserts it. The pattern keeps the **Transformer Quartet** object families distinct; it does not require every change claim or Work assertion to carry all four. `A.3.4` independently identifies an actual bounded change; that identification alone establishes no acting system, agency, role assignment, method, or work. A.3 builds directly on **System-Role Kinds and Assignments (A.2)** and the direct Work and episteme rules in **A.15.1 and C.2.1** and is guarded by **Strict Distinction (A.7)** and **Evidence Graph Referring (A.10)**.
 
 ### A.3:2 - Context
 
@@ -53,7 +54,7 @@ Legacy phrasing (“actor / process / blueprint”) causes recurrent failures:
 3. **Capability or Method = Work:** having a capability or a Method is taken to establish that Work occurred.
 4. **Episteme as doer:** documents/models treated as actors.
 5. **Occurrence-description leak:** a method, plan, log, ticket, carrier, or evidence item is treated as the dated Work occurrence, while the assertion fails to designate the actual performer assignment, enacted Method, extent, affected referent, and direct relations.
-  A.2/A.4/A.7/A.10 collectively forbid these, but A.3 must give the **canonical quartet** that authors can apply consistently.
+  A.2, A.7, A.10 and A.15.1 supply these distinctions, but A.3 must give the **canonical quartet** that authors can apply consistently.
 
 ### A.3:4 - Forces
 
@@ -100,9 +101,9 @@ Natural, spontaneous, and formal transformations can therefore remain actual wit
 
 For work on oneself, use the A.12 reflexive split only after two distinct internal positions are grounded for the current claim. The acting and changed positions may be subholons inside one containing holon; selecting those already grounded parts is an A.14/C.13 structure move, not a Meta-Holon Transition. Use B.2 only if the whole itself is reidentified.
 
-#### A.3:5.4 - Temporal alignment (A.4 bridge)
+#### A.3:5.4 - Align the temporal claims of descriptions, Methods and Work
 
-* A `U.MethodDescription` is a separately identified episteme; cite its exact edition only when the receiving use relies on what that edition says.
+* A `U.MethodDescription` is a separately identified episteme; cite its exact edition only when the receiving use relies on what that edition says, using C.2.1 for any claimed edition relation.
 * A `U.Method` is run-independent and may be enacted by many dated Work occurrences.
 * One Work individual admitted under `U.Work` has its own governed temporal extent and performer basis under A.13/A.15.1. Use F.6 with the same obtaining assignment only when precise assignment-bound attribution is claimed; an assertion or description may designate those facts, but is not the occurrence. No universal live `StateAssertion` is a Work or Method condition.
 * When a work-to-change claim is current, identify the world-side Work under A.15.1, the actual change under A.3.4, and the exact direct relation between them. A formal ordering boundary or natural change remains under A.3.4 without a work-facing inference.
@@ -202,13 +203,13 @@ Together, these lines of work support **explicit actor-side participants and, fo
 **A.7 Strict Distinction.**
 A.3 keeps the target EntityOfConcern, MethodDescription, Method, local system-role kind, SystemRoleAssignment occurrence, dated Work occurrence, Work assertion or description, actual change, log or observation, and evidence relation distinct. A recipe or log is not part of the target merely by describing or recording work on it, and a record about Work is not the Work occurrence.
 
-**A.12 Acting-Side Externalization and Reflexive Split.**
+**A.12 Acting-Side Externalization and Reflexive Split: Identify Who Acts on What.**
 A.3's CC-A3-1 uses A.12 only when an actor-side or reflexive-work claim is current. The split keeps grounded acting and changed positions distinct for that claim; it neither invents an actor for non-separable change nor turns ordinary descent to already grounded parts into an MHT.
 
 **A.13 Agential Role.**
 When an agency claim is current, A.13 governs agenthood and the domain profile, while A.17, A.18, A.19, C.16, and A.10 govern its measurement and evidence as applicable; planned C.9 may later consolidate the profile but supplies no current governing force. A.3 keeps identity, role assignment, method, plan, work, transformation, and evidence separate. Scale-free or minimal physical agentivity, observerhood, self-evidencing, or causal participation does not by itself establish an obtaining `U.SystemRoleAssignment`, `TransformerRole@Context`, method enactment, or dated Work.
 
-**A.3.4 Bounded Change Under Conditions.**
+**A.3.4 Actual Bounded Change Under Conditions.**
 A.3.4 independently identifies one actual bounded transformation from the changed referent and subject-side occurrence facts. A.3 opens only when an actor-side enactment claim is additionally grounded. Natural, spontaneous, formal, relational, and joint-dynamics changes therefore need no fictive performer.
 
 **A.3.3, direct relation, interaction, and causality owners.**

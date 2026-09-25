@@ -38,39 +38,35 @@ entity.
 | Force | Settlement |
 |---|---|
 | Considered in decisions vs orphan | Two-way binding: a signal in the entity's file + the source in its `sources`/"Related entities". |
-| One vs many entities | Bind to ≥1 reference-bearing entity (Q/RISK/CON/DEC/TRK). |
-| New vs reference | Atomic entities — only if the material introduces a new **strategic/long-lived** decision/risk (or a new question/contradiction); a transient one — as a signal in a long-term entity, no standalone card. |
+| One vs many entities | Bind to ≥1 reference-bearing entity (DEC/TRK). |
+| New vs reference | Atomic cards — only if the material introduces a new **strategic/long-lived** position (a decision/question/risk/contradiction); a transient one — as a signal in a long-term card, no standalone card. |
 | Inside vs outside scope | If the material is outside the scope of all entities — explicitly "not bound — outside the project scope". |
+| Exported card body | In the card body — only the gist + a readable source name; the source path — in the frontmatter `sources` (CC-ER.3). |
 
 ### PV.ExternalResearch:4 - Solution
 
 1. Save the source into `project-vault/sources/`; if needed, write 2–3
    lines of summary (what the material is about) into the capture header.
 2. Discover the active entities by searching the vault: `grep` for exact matches
-   across the directories (`grep -l "^status: open" project-vault/open-questions/`,
-   `grep -l "^status: open" project-vault/risks/`, `grep -l "^status: open"
-   project-vault/contradictions/`) and `SocratiCode codebase_search` for the
-   semantic search of relevant DEC/Q/RISK/CON/TRK by topic. Determine which
-   entities accept references and are relevant to the topic.
+   across the entity directory (`grep -l "^status: open" project-vault/decisions/`,
+   `grep -l "^status: proposed" project-vault/decisions/`) and `SocratiCode
+   codebase_search` for the semantic search of relevant DEC/TRK by topic. Determine
+   which entities accept references and are relevant to the topic.
 3. **Propagate signals into the entity files themselves (mandatory, two-way
-   binding):** for each affected entity (Q, RISK, CON, DEC — with a
-   `sources`/`source` field or a "Related entities" section) append the signal to
-   the file.
+   binding):** for each affected entity (DEC — with a `sources`/`source` field or a
+   "Related entities" section) append the signal to the file.
    - **DEC:** the signal — as an item in the body's "External signals" subsection —
      only the gist + a readable source name (e.g. "Temporal AI Cookbook"), without
      paths and without vault file names. The source — in the `sources:` frontmatter
      list. In the body only DEC-IDs and web-URLs are allowed.
-   - **Q / RISK / CON:** the signal — via a `signal_YYYY-MM-DD` frontmatter field or
-     a "Signal YYYY-MM-DD" note in the body with a reference to the capture.
 4. **Bind the source to at least one reference-bearing entity:** add the capture to
    a track's "Related entities" → "Sources"/"Artifacts", or to the
-   `sources`/`source`/"Related entities" of a fitting Q/RISK/CON/DEC (by topic).
-5. Atomic entities (DEC/Q/RISK/CON) — only if the material introduces a **new**
-   decision/risk/question/contradiction. A **DEC/RISK** — additionally only for a
-   **strategic/long-lived** decision/risk (still relevant in a month/quarter); a
-   transient one → a signal in a long-term DEC/Q/RISK/CON's "Related entities"/
-   "External signals", not a standalone card. Purely reference material does not
-   require them.
+   `sources`/`source`/"Related entities" of a fitting DEC/TRK (by topic).
+5. Atomic cards (DEC) — only if the material introduces a **new**
+   decision/question/risk/contradiction, and additionally only for a
+   **strategic/long-lived** one (still relevant in a month/quarter); a transient one
+   → a signal in a long-term DEC's "Related entities"/"External signals", not a
+   standalone card. Purely reference material does not require them.
 6. If the material is genuinely outside the scope of all entities — explicitly write
    "not bound — outside the project scope" in the capture header (a deliberate decision, not an omission).
 7. On a substantial contribution — check integrity: all created entities are formed
@@ -78,9 +74,8 @@ entity.
 
 ### PV.ExternalResearch:5 - Archetypal Grounding
 
-**Show.** Binding an article in this project: signals in the files of open questions
-and risks + the source in a DEC's `sources:`, so that at the next decision the
-material is found.
+**Show.** Binding an article in this project: signals in the cards' files + the
+source in a card's `sources:`, so that at the next decision the material is found.
 
 ### PV.ExternalResearch:6 - Bias-Annotation
 
@@ -95,8 +90,8 @@ account.
 |---|---|
 | CC-ER.1 | The signal is written into the file of every affected entity (two-way binding). |
 | CC-ER.2 | The source is bound to ≥1 reference-bearing entity. |
-| CC-ER.3 | In the DEC body — only the gist + a readable source name; the source only in the frontmatter. |
-| CC-ER.4 | Atomic entities are created only for a new decision/risk/question/contradiction; DEC/RISK — additionally only for a strategic/long-lived one. |
+| CC-ER.3 | In the card body — only the gist + a readable source name; the source only in the frontmatter. |
+| CC-ER.4 | Atomic cards are created only for a new decision/question/risk/contradiction, and only for a strategic/long-lived one. |
 | CC-ER.5 | Out of scope — an explicit "not bound — outside the project scope" note. |
 
 ### PV.ExternalResearch:8 - Common Anti-Patterns and How to Avoid Them
@@ -105,8 +100,8 @@ account.
 |---|---|
 | One-way capture without writing into entities | Append the signals to the entity files. |
 | A capture orphan without a binding | Bind to an entity/track. |
-| A capture/file path in the DEC body | Only the gist + a readable name; the path in the frontmatter. |
-| A standalone DEC/RISK for a transient (one-off/weekly) matter | A signal in a long-term entity; no standalone card. |
+| A capture/file path in the card body | Only the gist + a readable name; the path in the frontmatter. |
+| A standalone card for a transient (one-off/weekly) matter | A signal in a long-term entity; no standalone card. |
 
 ### PV.ExternalResearch:9 - Consequences
 

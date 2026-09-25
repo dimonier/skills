@@ -1,6 +1,6 @@
 ---
 id: C.2.P
-title: Epistemic Precision Restoration
+title: "Clarify Episteme, Publication, and Source Wording (Epistemic Precision Restoration)"
 status: Stable
 keywords: []
 dependencies:
@@ -26,7 +26,7 @@ dependencies:
     - C.11
 ---
 
-# C.2.P: Epistemic Precision Restoration
+# C.2.P: Clarify Episteme, Publication, and Source Wording (Epistemic Precision Restoration)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -34,7 +34,7 @@ dependencies:
 
 ---
 
-## C.2.P - Epistemic Precision Restoration
+## C.2.P - Clarify Episteme, Publication, and Source Wording (Epistemic Precision Restoration)
 
 > **Type:** C.2 precision-restoration pattern for episteme, publication, source wording, and source-relation wording
 > **Status:** Stable

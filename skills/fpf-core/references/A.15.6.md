@@ -1,6 +1,6 @@
 ---
 id: A.15.6
-title: "Project, Process, and Case Recovery through Work, Method, and Transformation"
+title: "Recover What Project, Process, or Case Wording Refers To"
 status: Stable
 keywords: []
 dependencies:
@@ -31,7 +31,7 @@ dependencies:
     - E.24.PUB
 ---
 
-# A.15.6: Project, Process, and Case Recovery through Work, Method, and Transformation
+# A.15.6: Recover What Project, Process, or Case Wording Refers To
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -39,7 +39,7 @@ dependencies:
 
 ---
 
-## A.15.6 - Project, Process, and Case Recovery through Work, Method, and Transformation
+## A.15.6 - Recover What Project, Process, or Case Wording Refers To
 
 > **Type:** Architectural (A)
 > **Status:** Stable

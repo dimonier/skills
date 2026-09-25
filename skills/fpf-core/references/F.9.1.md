@@ -1,6 +1,6 @@
 ---
 id: F.9.1
-title: Bridge Stance Note
+title: Bridge Stance Note — Clarify a Bounded Use
 status: Stable
 keywords:
   - bridge stance note
@@ -26,7 +26,7 @@ dependencies:
     - F.18
 ---
 
-# F.9.1: Bridge Stance Note
+# F.9.1: Bridge Stance Note — Clarify a Bounded Use
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -34,7 +34,7 @@ dependencies:
 
 ---
 
-## F.9.1 - Bridge Stance Note
+## F.9.1 - Bridge Stance Note — Clarify a Bounded Use
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -128,7 +128,7 @@ A stance word carries no direction by itself. Direction belongs to the bounded-u
 - The bounded-use claim says whether that Bridge suits one named use.
 - A practitioner uses A.10 or B.3 to judge whether current evidence or assurance supports relying on that claim.
 - The stance note says how to read that one claim.
-- The pattern that directly constrains a proposed comparison, translation, publication, Work occurrence, or other downstream act decides its authorization; evidence about that act says whether it occurred. The stance note does neither.
+- A claim that a comparison, translation, publication, Work occurrence or other downstream act occurred uses that object's subject pattern and evidence. When authorization is needed, recover it under the pattern that defines the permission or authority claim. The stance note establishes neither.
 
 A Bridge Card is optional claim-bearing packaging. A Card may publish the Bridge description, bounded-use claim, evidence references, reliance result, and stance note together, but the Card is not a prerequisite for any of them. The Card's layout and edition, and any publication occurrence or file carrying it, remain separate from the objects it brings together.
 
@@ -219,8 +219,6 @@ The stance vocabulary is useful because practitioners already write short interp
 | Keep concepts, designations, definitions, and relations distinguishable. | ISO 704:2022; ISO 1087:2019. | A stance label remains a designation inside one claim-bearing episteme, not the Bridge or bounded-use claim. | **Adopt** the distinction; **reject** treating the label as relation or use truth. |
 | Tie reusable short names to an explicit subject and scope. | OpenTelemetry Semantic Conventions, cited predecessor edition 2025. | A small stance vocabulary aids recognition only inside one exact bounded-use claim. | **Adapt** the naming move; **reject** equivalence or use authority from common spelling. |
 | Keep validation and metadata distinct from the data or resource described. | W3C SHACL 2017; DCAT v3 2024. | A stance note and optional Card remain inspectable without becoming the Bridge, evidence, or downstream act. | **Adopt** the separation; **reject** packaging as truth or occurrence. |
-
-SysML v2 is deliberately not used here as SoTA or lineage evidence. Its predecessor citation changed no F.9.1 rule or worked case and did not answer the present relation–claim–use separation problem. No replacement source is added merely to fill the removed row; add one only when an exact current source changes a rule or example.
 
 ### F.9.1:12 - Relations
 - **Builds on and coordinates with:** F.9 for the obtaining Bridge and bounded-use claim; C.2.1 for the stance episteme and its identity; A.10 and B.3 for reliance; A.6.3.CSC for controlled coarsening and source return; E.17.ID.CR for bounded comparative review; C.16.Q for quality-term repair; E.24.PUB for publication; F.17 for local sense; and F.18 for naming when that question is live.

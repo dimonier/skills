@@ -1,6 +1,6 @@
 ---
 id: A.19.SPR
-title: "State-Family Precision Restoration"
+title: Repair State and Status Wording
 status: Stable
 keywords: []
 dependencies:
@@ -35,7 +35,7 @@ dependencies:
     - E.11
 ---
 
-# A.19.SPR: State-Family Precision Restoration
+# A.19.SPR: Repair State and Status Wording
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -43,7 +43,7 @@ dependencies:
 
 ---
 
-## A.19.SPR - State-Family Precision Restoration
+## A.19.SPR - Repair State and Status Wording
 
 > **Type:** State-family precision-restoration pattern
 > **Status:** Stable
@@ -188,7 +188,7 @@ When `readiness` or `ready` still hides which governed value is meant, use `E.10
 | work-entry use of an assignment-state claim | `A.15.5` or the direct receiving pattern; A.2.5 supplies only the exact assignment-state input |
 | language-state position for episteme or publication wording | `C.2.2a` and `A.16.*` after `C.2.P` when source-publication recovery is needed |
 | source use, source currentness, source publication, or source-use disposition | `C.2.P`, `E.17`, `E.9.DA`, or source-use field named by value |
-| evidence path state, evidence relation, or reliance disposition | `A.10` |
+| evidence path state, evidence relation, or reliance disposition | Use `A.10` to recover the exact source, independently established support relations, currentness and bounded use; use the direct defining pattern for the particular support relation or reliance decision. |
 | assurance result, assurance claim, assurance input, or engineering-justification use | `B.3` |
 | constraint or local CV | `A.20` or the direct constraint pattern |
 | ambiguous `readiness` or `ready` wording | `E.10.MOVE` until the governed value is recovered |
@@ -283,7 +283,7 @@ The dependency and distribution detail belongs here, after the working method. A
 | `A.2.5`, `A.15.5` | Distinguish assignment-state predicate, world-side relation, assertion episteme, and the separate work-entry readiness result. |
 | `A.19`, `A.3.3`, `C.16.P` | Define characteristic-space, dynamics, and characteristic or scale claims when those are the actual subject. |
 | `C.2.P`, `C.2.2a`, `A.16.*`, `E.17` | Define source, publication, and language-state claims. |
-| `A.10`, `B.3` | Define evidence-use and assurance claims. |
+| `A.10`, `B.3` | `A.10` recovers provenance and bounded reliance; `B.3` governs assurance claims. Each support relation retains its direct defining pattern. |
 | `A.20`, `A.21` | Define constraint or adjudication results and distinct gate decisions. |
 | `C.27`, `C.29` | Define temporal-claim and mathematical-lens uses, including their local fields. |
 | `E.9.DA`, `E.21`, `E.19` | Define DRR adequacy, pattern-quality results, and review or admission profiles. |

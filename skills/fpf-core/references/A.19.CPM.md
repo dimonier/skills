@@ -1,6 +1,6 @@
 ---
 id: A.19.CPM
-title: Unified Comparison Mechanism (CPM)
+title: Compare Admitted Profiles under a Declared Comparator (CPM)
 status: Stable
 keywords:
   - comparison
@@ -12,7 +12,7 @@ keywords:
   - "tri-state admissibility (`pass"
 ---
 
-# A.19.CPM: Unified Comparison Mechanism (CPM)
+# A.19.CPM: Compare Admitted Profiles under a Declared Comparator (CPM)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -20,7 +20,7 @@ keywords:
 
 ---
 
-## A.19.CPM - Unified Comparison Mechanism (CPM)
+## A.19.CPM - Compare Admitted Profiles under a Declared Comparator (CPM)
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -29,8 +29,8 @@ keywords:
 > **Source:** FPF, CHR mechanism-governing patterns
 > **Modified:** 2026‑01‑20
 >
-> **Governing-pattern note:** this pattern governs the canonical `U.Mechanism.Intension` for `CPM.IntensionRef` (CHR suite stage `compare`). Mechanism-intension semantics are governed by explicitly designated governing patterns (`E.20`).
-> `A.6.1` governs the semantic content of a `U.Mechanism` declaration. This pattern specialises that content for CPM through the exact `EntityOfConcernRef`, effective `U.ReferenceScheme`, direct signature components, SlotSpecs, `OperationAlgebra`, `LawSet`, `AdmissibilityConditions`, Applicability, and an optional `SignatureManifest`. An obtaining F.9 `Bridge`, its separate C.2.1 bounded-use claim when consumed, any applicable ReferencePlane relation and policy, dated comparison `U.Work`, actual `Compare` operation application with its `ComparisonResultSlot` binding, A.10 evidence-provenance graph relation, G.11 currentness relation, and optional G.9 `ParityPlan` and `ParityReport` remain neighboring objects and relations.
+> **Governing-pattern note:** this pattern governs the canonical `U.Mechanism` declaration for `CPM.IntensionRef` (CHR suite stage `compare`). Mechanism-intension semantics are governed by explicitly designated governing patterns (`E.20`).
+> `A.6.1` governs the semantic content of a `U.Mechanism` declaration. This pattern specialises that content for CPM through the exact `EntityOfConcernRef`, effective `U.ReferenceScheme`, operation-local argument/result declarations, `OperationAlgebra`, `LawSet`, `AdmissibilityConditions`, Applicability, and an optional `SignatureManifest`. An obtaining F.9 `Bridge`, its separate C.2.1 bounded-use claim when consumed, any applicable ReferencePlane relation and policy, dated comparison `U.Work`, actual `Compare` operation application with its `ComparisonResultSlot` binding, an A.10 account of exact sources, independently established support relations, currentness and bounded use, G.11 currentness relation, and optional G.9 `ParityPlan` and `ParityReport` remain neighboring objects and relations.
 > Other descriptions of CPM cite `A.19.CPM:4.1` rather than restating its declaration content or absorbing those named neighboring objects and relations into mechanism fields.
 
 ### A.19.CPM:0 - At a glance (didactic, informative)
@@ -54,7 +54,7 @@ CPM is the CHR comparison kernel: it compares two admitted profiles under an exp
 * **Suite stage:** `compare` (pipeline order lives in `A.19.CHR:4.5`, not in the `mechanisms[]` enumeration).
 * **Input (conceptual):** left profile, right profile, `CN-Spec`, `CG-Spec`, an explicit `ComparatorSpec`, one `U.ClaimScope` with selected A.2.6 `U.ContextSlice` members, an optional A.19 `CharacteristicSpacePredicate` when the comparison depends on one, effective reference plane, explicit evaluation window, and optional explicit `MinimalEvidence` override.
 * **Output (conceptual):** the by-value `ComparisonResultSlot` set of relation or poset tokens. It is not a score, selected set, result episteme, work-result relation, evidence record, or container for replay metadata.
-* **Planned slot fillings:** concrete `ComparatorSpecRef.edition` and policy ids are planned fillers only under the exact A.15.3 planned-filling declaration and are carried by `SlotFillingsPlanItem` rows (A.15.3 plus `A.19.CHR:4.7.2`). CPM's declaration does not fill project-specific slots. A dated comparison `U.Work` has separately governed occurrence-parameter bindings; an actual A.6.1 `Compare` operation application binds the set-valued result to `ComparisonResultSlot`; and its A.10 evidence-provenance path records the evidence and source-currentness basis used for replay.
+* **Planned use:** an A.15.2 baseline selects ComparatorSpecRef editions and policy ids. A.15.3 and SlotFillingsPlanItem apply only to independently declared receiving positions under A.19.CHR:4.7.2. The actual Compare application carries its argument and result bindings under §4.1. Any dated comparison Work and A.10 evidence-provenance account retain their independent grounds.
 * **Reproducible comparisons:** for parity and benchmark style runs that require a stable run package plus report record (editions, windows, parity pins), use `G.9` (Parity and Benchmark Harness). CPM stays kernel-only.
 * **What CPM does not do (strict distinction):**
 
@@ -65,13 +65,13 @@ CPM is the CHR comparison kernel: it compares two admitted profiles under an exp
   * does **not** select (“pick best”) — that is `SelectorMechanism`.
 * **Core safety commitments:** admissibility gate via `CG-Spec.ComparatorSet` + `CG-Spec.SCP` + CSLC; tri-state admissibility (`pass|degrade|abstain`); unknown never coerces to “pass” or to a fabricated outcome; no silent scalarization or totalization.
 * **Where method details live:** in editions of `ComparatorSpec` and their SoTA wiring (Part G packs and extensions), not inside CPM’s kernel semantics.
-* **Quick rule of thumb:** if you need **numbers**, that’s `USCM`; if you need a **selection or selected-set result**, that’s `SelectorMechanism`. CPM’s job is only: **compare → relation tokens**.
+* **Quick rule of thumb:** use `USCM` when you need scores from a declared scoring method and `SelectorMechanism` when you need a selected candidate set. Obtaining measured values follows the applicable C.16 measurement method; normalization follows UNM. CPM compares admitted profiles and returns relation tokens.
 
 ### A.19.CPM:1 - Problem frame
 
 FPF's Characterization (CHR) suite treats comparison as a **distinct** mechanism stage (`compare`) with suite‑wide obligations that forbid hidden scalarization or totalization, require tri‑state guards, and enforce admissibility declarations for numeric operations. Comparison must therefore be described as:
 
-* a **mechanism** (in the `U.Mechanism.Intension` sense, per `A.6.1` and slot discipline `A.6.5`),
+* a **mechanism** (an operation declaration under `A.6.1`),
 * that is **suite‑conformant** (per CHR obligations and protocol closure in `A.19.CHR`),
 * and **governing-spec-ref-respecting** (comparability and admission are governed by `CN-Spec` and admissibility is gated by `CG-Spec` rather than re-invented locally).
 
@@ -102,7 +102,7 @@ CPM exists to make comparison explicit, admissibility-gated, set-valued, and rep
 
 ### A.19.CPM:4 - Solution
 
-CPM is specified as a canonical `U.Mechanism.Intension` whose core commitments are:
+CPM is an exact A.6.1 U.Mechanism declaration whose core commitments are:
 
 * **Comparator admissibility is declared and gated** (`CG-Spec.ComparatorSet`, and `CG-Spec.SCP` when numeric operations are involved; scale admissibility via CSLC).
 * **Results are set‑valued relation or poset tokens**; partial orders remain partial; no silent scalarization or totalization.
@@ -113,16 +113,16 @@ This pattern defines (governing-pattern, wiring‑friendly):
 1. a **stable mechanism boundary** for admissible comparison: `Compare(...) → ComparisonResultSlot` plus a tri‑state `CompareEligibility` guard;
 2. a **stable SlotKind field set** (by suite lexicon tokens) that downstream selection and Part‑G wiring can rely on without SlotKind drift;
 3. an **admissibility and evidence responsibility split**: admissibility is gated by `CG-Spec` (and CSLC), while admission and comparability relations are cited from `CN-Spec`;
-4. a minimal **replay basis**: dated comparison work, the effective refs and editions bound in the actual `Compare` operation application, its `ComparisonResultSlot` binding, and the A.10 evidence-provenance path needed to replay the comparison;
-5. explicit **planned-filling separation**: `SlotFillingsPlanItem` rows carry planned edition and policy fillings; dated comparison `U.Work` remains the occurrence, the actual operation application carries argument and result bindings, and A.10 supplies the evidence-provenance path;
+4. a minimal **replay basis**: the identified Compare application, its actually bound arguments and returned ComparisonResultSlot value, with an A.10 evidence-provenance path when the receiving reliance requires it;
+5. **planned and actual use:** an A.15.2 plan selects editions and policies; A.15.3 typed filling applies to independently declared receiving positions. Actual arguments and results belong to the comparison application; a dated U.Work claim is independently governed;
 6. an explicit **comparison-use boundary**: claim scope, selected A.2.6 context slices, optional A.19 predicate, reference plane, and evaluation window are occurrence bindings, not generic context, comparator content, output fields, or an optional model-use structure.
 
-#### A.19.CPM:4.1 - Mechanism.Intension (canonical; normative)
+#### A.19.CPM:4.1 - Operation declaration (normative)
 
-This is the canonical `U.Mechanism.Intension` for `CPM.IntensionRef`. It is intended to be cited by CHR suite publications and by any wiring layers.
+`CPM.IntensionRef` cites the exact A.6.1 declaration episteme presented here. CHR resolves compare to its local Compare operation. A changed argument, comparator law or guard requires explicit selection of the changed declaration; another realizer of the same declaration changes no suite member.
 
 * **Declaration boundary:** this A.6.1 mechanism intension declares `Compare` and `CompareEligibility`; it does not publish telemetry or create dated work, an actual operation application, comparison scope, result episteme, evidence use, provenance path, currentness relation, or publication relation. Each neighboring object or relation uses its direct governor.
-  * **Planned slot fillings:** this intension does not fill project-specific slots for editions, policy ids, bridge ids, or similar pins. Planned fillers live in `SlotFillingsPlanItem` rows (A.15.3 plus `A.19.CHR:4.7.2`); dated comparison `U.Work` binds effective values as occurrence parameters.
+  * **Planned use:** A.15.2 selects the editions and policies for a proposed comparison. If a receiving position is independently declared, A.15.3 can specify its planned filling. Neither plan asserts an actual Compare argument or result binding.
 
 * **IntensionHeader:** `id = CPM`, `version = 1.0.0`, `status = stable`.
 
@@ -142,37 +142,49 @@ This is the canonical `U.Mechanism.Intension` for `CPM.IntensionRef`. It is inte
 
 * **Direct signature components:**
 
-  * **SubjectKind:** `Comparison`.
+  * **SubjectKind:** `U.Measure`, supplied by the measures in the left and right profiles.
   * **RangedValueKind:** CHR-typed profile values in a CG-Frame (see `CG-Spec.ComparatorSet`).
-  * **ResultKind:** `U.Set` of relation or poset tokens; the comparison result is set-valued by default.
-  * **SliceSet:** `U.ContextSliceSet`.
-  * **ExtentRule:** comparison ranges over admitted left and right profiles in one exact `U.ClaimScope`; selected `U.ContextSlice` values are members of that scope under A.2.6 and do not create a duplicate membership relation.
+  * Results are declared per operation: a set of relation/poset tokens and a separate eligibility judgment.
+  * Input qualification: comparison ranges over admitted left/right profiles in one exact U.ClaimScope. The selected U.ContextSlice values are its members under A.2.6; these qualifications do not define the calculation extent or add a duplicate membership relation.
 
   These are direct A.6.0 declaration components. They do not form an additional comparison-content container, and they do not absorb comparator admission, evaluation, evidence-use, or replay relations.
 
-* **SlotIndex** (derived projection from `SlotSpecs` and guard SlotSpecs; uses `A.19.CHR:4.2.1` SlotKind tokens; no independent semantics):
+**Operation-local argument and result declarations**
 
-  * `LeftProfileSlot : ⟨ValueKind = U.Set (of U.Measure), refMode = ByValue⟩`,
-  * `RightProfileSlot : ⟨ValueKind = U.Set (of U.Measure), refMode = ByValue⟩`,
-  * `CNSpecSlot : ⟨ValueKind = CN‑Spec, refMode = CNSpecRef⟩`,
-  * `CGSpecSlot : ⟨ValueKind = CG‑Spec, refMode = CGSpecRef⟩`,
-  * `ComparatorSpecSlot : ⟨ValueKind = ComparatorSpec, refMode = ComparatorSpecRef⟩`,
-  * `MinimalEvidenceSlot? : ⟨ValueKind = MinimalEvidence, refMode = MinimalEvidenceRef⟩` (optional override; otherwise cite `CGSpecSlot.MinimalEvidence`),
-  * `ComparisonResultSlot : ⟨ValueKind = U.Set (relation or poset tokens), refMode = ByValue⟩`.
+Each argument meaning is declared separately for Compare and CompareEligibility. ByRef means one exact governed reference to the stated value and edition; ByValue carries the value itself. Cardinality is per application. A guard can assess an incomplete proposal with 0..1 of each required argument; a missing argument has no binding and prevents pass.
 
-* **OperationAlgebra** (suite stage = `compare`, per `A.19.CHR:4.5`; canonical stage‑op = `Compare`):
+| Direction | Local designator | Meaning and ValueKind | Designation; cardinality |
+| --- | --- | --- | --- |
+| Argument | LeftProfileSlot | Left operand: set of U.Measure values with their exact basis positions, Characteristic and Scale | ByValue; 1 profile |
+| Argument | RightProfileSlot | Right operand of the same kind, matched by the comparator or a separately justified basis mapping | ByValue; 1 profile |
+| Argument | CNSpecSlot | CN-Spec governing admission and comparability of the operand pair | CNSpecRef; 1 |
+| Argument | CGSpecSlot | CG-Spec governing comparator admission, SCP and default evidence conditions | CGSpecRef; 1 |
+| Argument | ComparatorSpecSlot | ComparatorSpec supplying the comparison rule and any thresholds or tie-breakers | ComparatorSpecRef; 1 |
+| Argument | MinimalEvidenceSlot | MinimalEvidence override used instead of CGSpecSlot.MinimalEvidence | MinimalEvidenceRef; 0..1 |
+| Argument | claimScope | U.ClaimScope delimiting this profile pair and comparison claim | ByRef; 1 |
+| Argument | selectedSlices | Set of selected U.ContextSlice members of claimScope under A.2.6 | ByValue set of exact slice references; 1 set |
+| Argument | characteristicPredicate | A.19 CharacteristicSpacePredicate used to restrict this comparison, if any | ByValue; 0..1, explicitly absent when unused |
+| Argument | referenceScheme | Effective U.ReferenceScheme used to interpret the comparison | ByRef; 1 |
+| Argument | referencePlane | CHR:ReferencePlane value qualifying the comparison | ByValue; 1 |
+| Argument | evaluationTime | Evaluation point or interval in the declared time basis, qualifying what is compared | ByValue; 1 |
+| Compare result | ComparisonResultSlot | Set of relation or poset tokens returned by the declared comparator | ByValue; 1 set on completed admitted comparison, 0 without a result |
+| CompareEligibility result | GuardDecision | Judgment determined by the eligibility predicates: pass, degrade or abstain | ByValue; 1 on completed evaluation |
 
-  * `Compare(LeftProfileSlot, RightProfileSlot, CNSpecSlot, CGSpecSlot, ComparatorSpecSlot, MinimalEvidenceSlot?) → ComparisonResultSlot`.
+The **argument bindingPredicate** for each row holds when that application actually uses the resolved value for the row's meaning: operand, comparison/admission rule, evidence condition or explicit comparison-use restriction. In particular, a scope, predicate or time appearing in nearby metadata is not bound unless it qualifies this comparison/evaluation. Each indicator-derived profile retains its selected UINDM positions and exact A.19 basis; equal indices or Characteristic names alone do not establish the comparator's required position/Scale match.
 
-* **Comparison-use bindings for each actual application** (required A.6.1 occurrence arguments; not CHR SlotKinds and not another container kind):
+The **ComparisonResultSlot bindingPredicate** holds when that Compare application returns the comparator's lawful set-valued outcome for its bound operands and use restrictions. The guard's result predicate holds when that CompareEligibility application returns its evaluated judgment. Type compatibility, equal tokens or a copied audit record establish neither return. A.6.1 governs binding identity and continuous extent within the application; result binding begins at return. Evidence use and a result episteme remain separate relations or objects.
 
-  * exact `U.ClaimScope` for the admitted profile pair and comparison claim;
-  * selected `U.ContextSlice` members of that scope under A.2.6, without copying its membership relation;
-  * optional by-value A.19 `CharacteristicSpacePredicate`, explicitly absent when comparison does not depend on one;
-  * effective `U.ReferenceScheme` and reference plane; and
-  * explicit comparison-evaluation point or interval.
+**SlotIndex (derived projection).** Project the above designators, ValueKinds, designation and cardinalities; the historical Slot suffix supports CHR lookup. The comparison-use arguments are declaration-local names, not new CHR SlotKinds. A.6.5 relation SlotSpecs are not the source of these operation meanings.
 
-  Together the profile pair and these bindings delimit the comparison scope. They do not form another U-kind, generic context input, model-use-structure field, or replay record. The comparator remains the separately declared `ComparatorSpecSlot`; evidence use retains its own A.2.4 claim scope and relevance window.
+**OperationAlgebra.** The compare stage resolves to Compare with the six profile/specification arguments and the explicit comparison-use arguments above, returning ComparisonResultSlot. CompareEligibility uses those argument meanings to return GuardDecision.
+
+**ApplicationPredicate.** Compare obtains when a comparison act actually applies the bound comparator to the bound left/right profiles under the bound scope, slices, optional predicate, scheme, plane and evaluation time, with its admission conditions satisfied by pass or an explicitly permitted degrade branch. A completed act returns the comparator's token set. CompareEligibility obtains when an evaluation actually assesses that proposal under the guard predicates and returns its judgment. An unexecuted proposal, passing guard or compatible saved token set does not establish a Compare act.
+
+**ApplicationIdentityRule.** One application is one comparator invocation or guard-evaluation invocation at its calculation locus, from taking up its operands/rules through return or termination. Reidentification requires that same episode. Two independently begun invocations are distinct even if all their bindings and results agree. Law 7 also distinguishes a newly evaluated comparison after any listed binding changes; it cannot mutate a completed earlier application.
+
+**ApplicationExtentRule.** Compare extends from actual use of the chosen operand pair under the comparator to token-set return or termination; CompareEligibility extends from proposal assessment to judgment or termination. An unfinished act has an open extent and no unreturned result binding. These actual calculation intervals can occur after, and can be repeated for, the same evaluationTime. A trace identifier only designates an established episode. Ordinary comparison mathematics creates no dated U.Work claim.
+
+For example, an admitted Pareto comparison takes supplier A with cost 10 and quality 0.8, and B with cost 12 and quality 0.9, under declared lower-cost/higher-quality criteria. Neither dominates the other. Two separate invocations for the same procurement evaluation interval can return the same incomparability token set, while each has its own application and result binding. A stored compatible set does not determine which invocation returned it; the claimed binding requires that invocation's actual return. Describing the first comparison twice still identifies one application.
 
 * **LawSet** (minimum; set-valued comparison, no hidden scalarization):
 
@@ -181,14 +193,14 @@ This is the canonical `U.Mechanism.Intension` for `CPM.IntensionRef`. It is inte
   3. **CSLC+SCP admissibility:** any numeric ops implied by the comparator MUST be admissible under `CGSpecSlot.SCP` and CSLC-admissible (cite `G.0` + `A.18`).
   4. **Unknown is not coerced:** missing or unknown evidence MUST NOT be mapped to a comparison outcome; use tri‑state guards.
   5. **No hidden thresholds or tie-breakers:** any thresholds, epsilons, priority orders, or tie-break logic MUST live in the declared `ComparatorSpecSlot`, or in `CNSpecSlot.acceptance` as explicit acceptance clauses, and be edition-pinned for replay; CPM MUST NOT smuggle constants.
-  6. **No implicit UNM:** CPM does not normalize or align internally. Normalization-based comparability requires already-normalized inputs plus exact upstream normalization refs; otherwise eligibility is `degrade` or `abstain`.
+  6. **No implicit UNM:** CPM does not normalize or align internally. Normalization-based comparability requires already-normalized inputs, exact upstream refs and preservation of the distinctions used by this comparator. If it consumes classes, its query must be constant on them; an inherited operation needs its compatibility/availability argument. Missing support yields `degrade` or `abstain` under the declared rule.
   7. **No silent boundary change:** a `Compare` application does not silently change its profile pair, `U.ClaimScope`, selected context slices, optional A.19 predicate, comparator, reference scheme or plane, or evaluation window. A changed binding is a different application and requires a newly evaluated outcome.
 
 * **AdmissibilityConditions** (tri‑state guard; fail‑closed on missing admissibility and evidence):
 
   * `CompareEligibility(LeftProfileSlot, RightProfileSlot, CNSpecSlot, CGSpecSlot, ComparatorSpecSlot, MinimalEvidenceSlot?; comparison-use bindings) → GuardDecision ∈ {pass|degrade|abstain}`.
   * `pass` requires: (i) comparator admission; (ii) scale-admissible operations; (iii) admitted and comparable profiles under the exact claim scope and selected A.2.6 context slices; (iv) an explicit evaluation point or interval and reference plane; (v) the same by-value A.19 predicate when one is used; and (vi) satisfaction of the effective MinimalEvidence policy.
-  * If `CNSpecSlot.comparability` is normalization‑based (compare‑on‑invariants), `pass` additionally requires that the inputs are already in the required invariant and normalization regime; CPM MUST NOT “make them comparable” by silent normalization.
+  * If `CNSpecSlot.comparability` is normalization‑based (compare‑on‑invariants), `pass` additionally requires that the inputs are already in the required invariant and normalization regime and that the declared comparator can recover its answer from those results; CPM MUST NOT “make them comparable” by silent normalization.
   * If `MinimalEvidenceSlot` is absent, the guard MUST evaluate evidence against `CGSpecSlot.MinimalEvidence` (by explicit rule), and MUST NOT return `pass` when evidence is missing or unknown **or** fails the effective MinimalEvidence gate.
 
 * **Applicability:**
@@ -205,7 +217,7 @@ This is the canonical `U.Mechanism.Intension` for `CPM.IntensionRef`. It is inte
 
 * **Neighboring dated work, operation application, result binding, and evidence relations:**
 
-  A dated comparison run is `A.15.1 U.Work`. Its actual A.6.1 `Compare` application binds the profile pair, comparator, comparison-use arguments, policies, and set-valued `ComparisonResultSlot`. A.2.4 separately governs evidence use with its own evidence claim scope and relevance window; A.10 governs the evidence-provenance path and local `RelianceDisposition` for the same bounded use; G.11 governs source or assertion-edition currentness. A durable result episteme, when needed, is governed by C.2.1, and any current entity-identity inception claim by A.15.PROD. No universal work-result or comparison-result relation is presumed. To replay the comparison, recover:
+  The identified Compare application binds the profile pair, comparator, comparison-use arguments, policies and returned ComparisonResultSlot. If the account also asserts dated comparison U.Work, A.15.1 independently admits that performance; its identity and extent are not automatically those of one Compare application. When the account asserts them or the receiving use consumes them, A.2.4 governs evidence use with its own evidence claim scope and relevance window, A.10 governs the evidence-provenance path and local `RelianceDisposition` for the same bounded use, and G.11 governs source or assertion-edition currentness. A durable result episteme, when needed, is governed by C.2.1, and any current entity-identity inception claim by A.15.PROD. No universal work-result or comparison-result relation is presumed. To replay the comparison, recover:
 
   * the two profile values or exact upstream refs, one `U.ClaimScope`, selected A.2.6 context slices, optional A.19 predicate, effective reference scheme and plane, and evaluation point or interval;
   * `CNSpecRef.edition`, `CGSpecRef.edition`, and the effective `ComparatorSpecRef`;
@@ -270,11 +282,11 @@ Typical bias risks and mitigations:
 
 ### A.19.CPM:7 - Conformance Checklist
 
-A CPM publication or use is conformant if it satisfies the checks below together with the A.6.1 mechanism conformance checklist and the CHR suite obligations in `A.19.CHR:4.3`:
+Apply the declaration checks to a CPM publication and the application checks to an actual use, together with the applicable A.6.1 checks and, for CHR membership, `A.19.CHR:4.3`. Replay always requires the actual application and its local bindings. Neighboring Work, evidence-use, reliance, currentness and result-episteme checks apply only when the account asserts those objects or the receiving use consumes them:
 
 | Check Id | Requirement (normative) | Notes (didactic and evidence) |
 | :--- | :--- | :--- |
-| **CC-A19CPM-0** | **Mechanism declaration completeness.** One `U.Mechanism` episteme, its exact comparison-operation-family `EntityOfConcernRef`, effective `U.ReferenceScheme`, direct signature components, SlotSpecs, `OperationAlgebra`, `LawSet`, `AdmissibilityConditions`, Applicability, and optional `SignatureManifest` are recoverable. | An obtaining F.9 `Bridge`, its separate C.2.1 bounded-use claim when consumed, any applicable ReferencePlane relation and policy, dated `U.Work`, actual operation application and result binding, any result episteme, A.10 evidence-provenance, G.11 currentness, and G.9 parity objects remain separate. |
+| **CC-A19CPM-0** | **Mechanism declaration completeness.** One `U.Mechanism` episteme, its exact comparison-operation-family `EntityOfConcernRef`, effective `U.ReferenceScheme`, operation-local argument/result declarations, `OperationAlgebra`, `LawSet`, `AdmissibilityConditions`, Applicability, and optional `SignatureManifest` are recoverable. | An obtaining F.9 `Bridge`, its separate C.2.1 bounded-use claim when consumed, any applicable ReferencePlane relation and policy, dated `U.Work`, actual operation application and result binding, any result episteme, A.10 evidence-provenance, G.11 currentness, and G.9 parity objects remain separate. |
 | **CC‑A19CPM‑1** | **Single governing pattern.** The canonical CPM intension is governed here (`A.19.CPM:4.1`); other descriptions cite this section rather than restating the kernel law. | Prevents near-duplicate comparison semantics from drifting. |
 | **CC‑A19CPM‑2** | **Suite stage alignment.** `Compare` is the canonical stage‑op for CHR stage `compare`; ordering and optionality are taken only from `A.19.CHR:4.5`. | Never infer order from `mechanisms[]`. |
 | **CC‑A19CPM‑3** | **SlotKind discipline.** SlotKind tokens follow the suite lexicon (`A.19.CHR:4.2.1`). | No SlotKind drift across specializations and wiring. |
@@ -285,9 +297,9 @@ A CPM publication or use is conformant if it satisfies the checks below together
 | **CC‑A19CPM‑8** | **MinimalEvidence defaulting is explicit.** If `MinimalEvidenceSlot?` is absent, the effective evidence policy is `CGSpecSlot.MinimalEvidence` by explicit rule. | Avoid “implicit evidence policy.” |
 | **CC‑A19CPM‑9** | **Gate and guard separation + lexeme discipline.** CPM does not publish `GateDecision` nor `DecisionLog`; mechanism predicates use `…Eligibility` (not reserved gate `…Guard`). | Aligns with suite obligations (`gate_decision_separation`, `guard_lexeme_reservations`). |
 | **CC-A19CPM-10** | **Bridge and reference-plane discipline.** A comparison that relies on a semantic relation between two exact F.17 `SchemeSenseCell` values cites an obtaining F.9 `Bridge` under a satisfied `BridgePredicateProfile` and a separate C.2.1 bounded-use claim; a plane-only crossing cites the applicable ReferencePlane relation and policy; both are stated when both facts are current. | `CL` is optional. CPM supplies no default assurance penalty, fold, or `R_eff`; a local `R_eff` is admissible only for an actual named assurance claim under its declared domain model and calculation. These neighboring facts are not CPM declaration content. |
-| **CC-A19CPM-11** | **Replay basis completeness.** Dated comparison `U.Work`, the actual `Compare` application, its profile, comparator, `U.ClaimScope`, selected A.2.6 context-slice, optional A.19 predicate, reference-plane, evaluation-window, policy, and `ComparisonResultSlot` bindings, plus direct evidence-use, provenance, and currentness relations, are recoverable. | The output value does not carry this metadata. |
-| **CC-A19CPM-12** | **Planned-filling separation.** Editions and policy ids are planned fillings only in `SlotFillingsPlanItem` rows; the CPM declaration does not fill them, dated comparison `U.Work` remains the occurrence, and the actual operation application carries effective argument and result bindings. | Planned baseline = A.15.3 plus suite PlanItem; A.6.1 governs operation application; A.10 supplies evidence provenance when relied on. |
-| **CC-A19CPM-13** | **No implicit UNM.** CPM never performs silent normalization; normalization-based comparability requires explicit upstream UNM refs or returns `abstain` or `degrade`. | Keeps compare-on-invariants explicit. |
+| **CC-A19CPM-11** | **Replay basis completeness.** The actual `Compare` application and its profile, comparator, `U.ClaimScope`, selected A.2.6 context-slice, optional A.19 predicate, reference-scheme and plane, evaluation-window, policy, eligibility and returned `ComparisonResultSlot` bindings (or explicit absence) are recoverable. | If asserted or consumed, independently recover dated comparison Work under A.15.1, evidence use under A.2.4, reliance and provenance under A.10, currentness under G.11 and a result episteme under C.2.1. These facts remain outside the output value. |
+| **CC-A19CPM-12** | **Planned-filling separation.** An A.15.2 baseline selects intended editions and policies; A.15.3 typed filling applies only to independently declared positions. Actual Compare applications carry their effective argument and result bindings. | A dated comparison Work and any relied-on A.10 provenance remain separately established. |
+| **CC-A19CPM-13** | **No implicit UNM.** CPM uses the explicit upstream directed result and preservation/loss basis. A class-level comparison also passes its query/operation conditions under A.19.UNM; a reference or equal normalized numeral alone is insufficient. Unsupported comparisons follow `abstain` or the declared narrower `degrade` use. | Keeps compare-on-invariants explicit. |
 | **CC-A19CPM-14** | **Comparison-scope completeness.** Every actual application binds one exact profile pair, `U.ClaimScope`, selected A.2.6 context slices, optional A.19 predicate, effective reference scheme and plane, and explicit evaluation point or interval. | No generic context input, optional model-use structure, or label supplies these values. |
 | **CC-A19CPM-15** | **Outcome separation.** `ComparisonResultSlot` contains only the by-value set of relation or poset tokens; `GuardDecision` remains the separate eligibility value, and abstention fabricates no output token. | Comparator, scope, plane, window, evidence, provenance, currentness, result episteme, and selection remain separate. |
 | **CC-A19CPM-16** | **No generic result relation.** The actual A.6.1 operation application binds the output; C.2.1 governs a durable result episteme when needed; direct subject patterns govern any other result relation. | CPM mints no universal comparison-result or work-result link. |
@@ -316,7 +328,7 @@ A CPM publication or use is conformant if it satisfies the checks below together
 
 * **Anti‑pattern: “Smuggling plan‑binding into CPM.”**
   *Symptom:* hard‑coding comparator editions, policy ids, or “launch values” inside the CPM intension or pattern prose.
-  *Avoid:* put edition and policy fillers only in `SlotFillingsPlanItem` rows; dated comparison `U.Work` binds effective refs as occurrence parameters, and A.10 supplies the evidence-provenance path.
+  *Avoid:* select intended editions and policies in the A.15.2 baseline; use A.15.3 typed filling only for independently declared positions. Establish actual Compare bindings under §4.1 and cite Work/provenance only under their own grounds.
 
 * **Anti‑pattern: “Tie‑breakers as hidden constants.”**
   *Symptom:* forced total order via untracked thresholds, epsilons, or “if equal then compare cost” logic.
@@ -365,20 +377,20 @@ Concrete comparator-family SoTA packages are cited through their current Part G 
 
 #### A.19.CPM:11.1 - Currentness and smallest reopen rule
 
-**Qualification basis and window.** The stable kernel claim is qualified by the current editions of A.6.1/A.6.5 operation and slot discipline, A.19/A.18 space and scale semantics, A.19.CN comparability, G.0 comparator and evidence admissibility, A.2.6 scope semantics, and the exact current G.2 comparator pack or claim sheet cited by an actual use. For that use, the effective qualification window is the intersection of those bound editions' currentness and any validity interval declared by the comparator pack or claim sheet; `post-2015` is an orientation label, not an indefinite freshness claim.
+**Qualification basis and window.** The stable kernel claim is qualified by the current editions of A.6.1 operation declarations and actual binding rules, A.19/A.18 space and scale semantics, A.19.CN comparability, G.0 comparator and evidence admissibility, A.2.6 scope semantics, and the exact current G.2 comparator pack or claim sheet cited by an actual use. For that use, the effective qualification window is the intersection of those bound editions' currentness and any validity interval declared by the comparator pack or claim sheet; `post-2015` is an orientation label, not an indefinite freshness claim.
 
 **Reopen the CPM kernel only when.** Reopen the smallest affected CPM rule when a direct governor changes binary `Compare` application identity or bindings, `ComparisonResultSlot` kind, comparator admission, scale or normalization admissibility, tri-state eligibility, comparison scope, or the separation of output, evidence, provenance, and result epistemes, or when qualified evidence contradicts one of those kernel commitments. A new algorithm family, learned model, fairness constraint, uncertainty method, threshold, or robustness technique that still satisfies those commitments changes its G.2 pack, `ComparatorSpec`, `CG-Spec`, or policy binding rather than CPM.
 
-**Smallest affected locus.** A signature or result-kind change reopens only the corresponding direct-signature, SlotSpec, or `OperationAlgebra` passage in `A.19.CPM:4.1`; an admissibility or failure-semantics change reopens the matching `LawSet` or `AdmissibilityConditions` clause. Update only the nearest exercising case in `A.19.CPM:5.2` or `:5.3` and the corresponding `CC-A19CPM` row. Source-family churn that changes no kernel commitment updates the direct pack or claim sheet and, when its summary is stale, only the affected row in this SoTA map.
+**Smallest affected locus.** A signature or result-kind change reopens only the corresponding direct-signature, operation-local argument/result declaration, or `OperationAlgebra` passage in `A.19.CPM:4.1`; an admissibility or failure-semantics change reopens the matching `LawSet` or `AdmissibilityConditions` clause. Update only the nearest exercising case in `A.19.CPM:5.2` or `:5.3` and the corresponding `CC-A19CPM` row. Source-family churn that changes no kernel commitment updates the direct pack or claim sheet and, when its summary is stale, only the affected row in this SoTA map.
 
 ### A.19.CPM:12 - Relations
 
 **Builds on and cites (non‑exhaustive):**
 
-* `A.6.1` (shape of `U.Mechanism.Intension`; specialization discipline)
-* `A.6.5` (slot discipline; SlotIndex as derived projection)
+* `A.6.1` (operation declarations and actual application/binding rules)
+* `A.6.1 §4.2` (operation-local argument/result meanings and binding rules; SlotIndex projects those declarations)
 * `A.19.CHR` (suite membership + obligations + `suite_protocols`; CHR SlotKind lexicon)
-* `A.15.3` + `A.19.CHR:4.7.2` (planned slot-filling ontic and `SlotFillingsPlanItem` rows; CPM remains refs-only with respect to planned slot filling)
+* `A.15.2` for the edition/policy baseline; `A.15.3` plus `A.19.CHR:4.7.2` for typed filling of independently declared positions.
 * `A.19` for `CharacteristicSpace` and the optional by-value `CharacteristicSpacePredicate` used by one comparison
 * `A.2.6` for `U.ClaimScope` identity and exact `U.ContextSlice` membership
 * `A.19.CN` for CN-Spec comparability plus acceptance and admission declarations

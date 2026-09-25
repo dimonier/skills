@@ -1,6 +1,6 @@
 ---
 id: A.11.OP
-title: "Decision-Relevant Least Action and Operational Parsimony"
+title: "Decision-Relevant Least Action and Operational Parsimony: Test a Proposed Requirement"
 status: Stable
 keywords: []
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     - E.23
 ---
 
-# A.11.OP: Decision-Relevant Least Action and Operational Parsimony
+# A.11.OP: Decision-Relevant Least Action and Operational Parsimony: Test a Proposed Requirement
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,7 +22,7 @@ dependencies:
 
 ---
 
-## A.11.OP - Decision-Relevant Least Action and Operational Parsimony
+## A.11.OP - Decision-Relevant Least Action and Operational Parsimony: Test a Proposed Requirement
 
 > **Type:** Part A pragmatic principle pattern
 > **Class:** `Prag`

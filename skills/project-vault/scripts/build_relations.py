@@ -99,7 +99,18 @@ def build_edges(cards):
 
 
 def render(cards):
-    _, spec, derived, _ = build_edges(cards)
+    fpf, spec, derived, _ = build_edges(cards)
+    if not spec:
+        # Empty Specialization graph (all sibling cards, none `specializes`): emit
+        # an explicit stub line instead of an empty graph so a legitimate projection
+        # is never read as a generation bug (PLAS CC-SL.13 / CC-QR.7). The stub has
+        # two forms matched to the carrier's FPF-edge presence.
+        stub = (
+            "FPF content edges live only in card frontmatter"
+            if fpf
+            else "and no FPF content edges (self-sufficient carrier)"
+        )
+        return f"_No intra-LPF Specialization edges (sibling cards). {stub}._\n"
     lines = []
     lines.append("### Specialization — authored (`specializes`, child → parent)")
     lines.append("")

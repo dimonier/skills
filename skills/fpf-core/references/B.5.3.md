@@ -1,6 +1,6 @@
 ---
 id: B.5.3
-title: "Domain-Concept Bridge"
+title: "Interpret Domain Vocabulary for an FPF Claim (Domain-Concept Bridge)"
 status: Stable
 keywords:
   - domain vocabulary
@@ -27,7 +27,7 @@ dependencies:
     - F.9
 ---
 
-# B.5.3: Domain-Concept Bridge
+# B.5.3: Interpret Domain Vocabulary for an FPF Claim (Domain-Concept Bridge)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -35,7 +35,7 @@ dependencies:
 
 ---
 
-## B.5.3 - Domain-Concept Bridge
+## B.5.3 - Interpret Domain Vocabulary for an FPF Claim (Domain-Concept Bridge)
 
 ### B.5.3:1 - **Problem Frame**
 
@@ -58,7 +58,7 @@ How can FPF let project teams keep domain vocabulary while preserving the curren
 
 ### B.5.3:4 - **Solution**
 
-Use the **Domain-Concept Bridge** as a bounded reasoning move, not as a new domain container or mandatory record.
+Use this bounded interpretation move when domain vocabulary leaves the FPF claim unclear.
 
 1. Start from the exact expression, source, edition, and relevant passage. Use F.0.1 to recover the source-local claim. Recover an F.17 cell and test its basis relation when the current claim needs them, including when an F.9 Bridge is claimed. Add a durable term row only when the receiving use needs that packaging under F.17.
 2. Ask which exact FPF value or relation the current claim needs, then use the pattern that defines or constrains it. For example, the answer may concern a System, characteristic, Method, Work occurrence, episteme, system-role assignment, or evidence-use relation; the list is illustrative, not a set of new bridge kinds.

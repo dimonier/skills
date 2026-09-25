@@ -1,8 +1,15 @@
 ---
 id: C.30.P
-title: Architecture and Structure Precision Restoration
+title: Clarify Architecture and Structure Wording (Precision Restoration)
 status: Stable
-keywords: []
+keywords:
+  - architecture wording
+  - structure wording
+  - precision restoration
+  - diagram
+  - model
+  - structural view
+  - architecture description.
 dependencies:
   builds_on:
     - E.10
@@ -43,7 +50,7 @@ dependencies:
     - E.11
 ---
 
-# C.30.P: Architecture and Structure Precision Restoration
+# C.30.P: Clarify Architecture and Structure Wording (Precision Restoration)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -51,7 +58,7 @@ dependencies:
 
 ---
 
-## C.30.P - Architecture and Structure Precision Restoration
+## C.30.P - Clarify Architecture and Structure Wording (Precision Restoration)
 
 > **Type:** Architectural pattern
 > **Status:** Stable

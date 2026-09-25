@@ -1,6 +1,6 @@
 ---
 id: A.1.STM
-title: "Using the System-Thinking Long Mantra"
+title: "Find the First Unsupported Project Dependency (System-Thinking Long Mantra)"
 status: Stable
 keywords: []
 dependencies:
@@ -23,7 +23,7 @@ dependencies:
     - A.22.CGUS
 ---
 
-# A.1.STM: Using the System-Thinking Long Mantra
+# A.1.STM: Find the First Unsupported Project Dependency (System-Thinking Long Mantra)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -31,7 +31,7 @@ dependencies:
 
 ---
 
-## A.1.STM - Using the System-Thinking Long Mantra
+## A.1.STM - Find the First Unsupported Project Dependency (System-Thinking Long Mantra)
 
 > **Type:** Part A practitioner application pattern
 > **Status:** Stable

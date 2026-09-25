@@ -1,13 +1,8 @@
 ---
 id: B.1.3
-title: "Γ_epist — Knowledge-Specific Aggregation"
+title: "Knowledge Aggregation (Γ_epist): Synthesis and Target-Scheme Compilation"
 status: Stable
-keywords:
-  - knowledge aggregation
-  - epistemic
-  - provenance
-  - trust
-  - "KD-CAL."
+keywords: []
 dependencies:
   builds_on:
     - B.1
@@ -15,7 +10,7 @@ dependencies:
     - C.2
 ---
 
-# B.1.3: Γ_epist — Knowledge-Specific Aggregation
+# B.1.3: Knowledge Aggregation (Γ_epist): Synthesis and Target-Scheme Compilation
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -23,7 +18,7 @@ dependencies:
 
 ---
 
-## B.1.3 - Γ_epist - Knowledge‑Specific Aggregation
+## B.1.3 - Knowledge Aggregation (Γ_epist): Synthesis and Target-Scheme Compilation
 
 **At a glance.** Use B.1.3 to compose exact `U.Episteme` inputs into one knowledge aggregate while preserving provenance, conceptual fit, context, and the warrant each source actually contributes.
 
@@ -42,7 +37,7 @@ dependencies:
 ### B.1.3:1 - Problem frame
 
 * **Holonic foundation.** In the FPF, a `U.Episteme` is a holon whose identity is **knowledge-bearing** (A.1). It can be a **statement/claim**, a **model**, a **theory**, a **specification**, a **dataset with semantics**, or a **compiled claim-bearing synthesis**.
-* **Strict Distinction (A.15).** We separate:
+* **Strict Distinction (A.7).** We separate:
   **structure** (what the episteme comprises), **order** (argument flow), **identity and history** (C.2.1 identities and edition relations), **proper temporal restriction** (A.14), **work** (what was spent to produce/validate it), and **values** (objectives/criteria). Γ\_epist stays in the **structure/semantics** lane and calls out to Γ\_ctx/Γ\_time/Γ\_work only after their direct inputs are recovered.
 * **Mereology (A.14).** For knowledge composition we primarily use **ConstituentOf** (logical or semantic parts), **UsageOf** or **ReferenceTo** (external reliance), and each collection's own belongs-to rule for collections such as anthologies or corpora. We do **not** use **ComponentOf** (physical) in Γ\_epist.
   `PhaseOf` may restrict the **same unchanged episteme** to a proper interval when its complete C.2.1 identity triple remains fixed. Distinct labelled versions or revisions require distinct C.2.1 identities when a discriminator changes and an independently obtaining `EpistemeEditionRelation` for any claimed historical continuation. Knowledge does not act and acquires neither a work-facing local system-role kind nor an assignment. Ordinary prose may say, for example, "the researcher synthesized the sources". If the receiving use does not identify that action as one particular dated `U.Work` occurrence, stop with the ordinary sentence. If it does, recover each actual performer's A.13 core and independently admit the occurrence under A.15.1. Add F.6 only when the receiving use also needs precise assignment-bound attribution; a short local projection may omit an unused assignment identifier only when every consumed relation remains recoverable.
@@ -75,7 +70,7 @@ Naive aggregation of knowledge holons causes recurring failures:
 #### B.1.3:4.1 - Terms (didactic recap)
 
 * **U.Episteme** — a claim-bearing knowledge holon. C.2.1 identifies it through the participant-determined `EpistemeConstitutionRelation` over `<claim content, exact EntityOfConcern, effective ReferenceScheme>`. `ClaimGraphSlot`, `EntityOfConcernSlot`, and `ReferenceSchemeSlot` name participant meanings only inside that relation's reusable declaration; they are not internal slots of the episteme. Empirical grounding uses the separate `EpistemeEmpiricalGroundingRelation`, while text, code, figures, datasets, SCR/RSCR references, publication forms, and presentation carriers remain separately governed provenance, representation, publication, or carrier material.
-* **Evidence/Provenance Graph** — edges like **evidences**, **derivesFrom**, **usesMethod**, **isMeasuredBy** with anchors (A.10).
+* **Evidence/Provenance Graph** — an A.10 descriptive account whose edges cite independently established direct support, source, measurement or use relations. Display labels such as `evidences` do not create generic relation kinds.
 * **Semantic mapping** — the exact correspondence rule used by this composition. When it crosses semantic contexts, identify the source and receiving F.17 `SchemeSenseCell` values and an obtaining F.9 `Bridge`; keep the proposed use, direction, use-specific rule, permitted loss, reliance, and **CL** evidence summary separate. F.9 does not require CL for every Bridge; B.1.3 requires the summary for a mapping used in its support account. CL alone neither grants the use nor supplies a numerical penalty.
 * **SCR** — a `U.SCR` that lists all symbol carriers included in the aggregate; **never dropped**.
 * **Semantic context** — Plain shorthand for the local interpretation basis recovered from one exact F.17 `SchemeSenseCell` as `<ReferenceScheme, LocalSenseClaim>`. It is not another operation argument or entity. Crossing between two such contexts uses F.9 and the separate bounded-use and reliance steps above.
@@ -115,7 +110,7 @@ If the knowledge fold explicitly depends on **argument order** (for example, a d
 
 #### B.1.3:4.3 - Invariant Standard (how the Quintet applies)
 
-* **IDEM (Idempotence).** Folding a single episteme without a change of claim or scheme returns itself. Repeating the same source or data creates no additional evidence or accidental assurance upgrade.
+* **IDEM (singleton identity and source-repetition discipline).** Folding a single episteme without a change of claim or scheme returns itself. Repeating the same source or data creates no additional evidence or accidental assurance upgrade.
 * **COMM/LOC (Local commutativity / locality).** Reordering genuinely independent contributions does not change a result under its declared model. A derivation or other order-dependent argument uses **Γ_ctx**; source order does not establish statistical independence.
 * **WLNK (Weakest-link bound).** An unsupported indispensable premise limits the conclusion that needs it. A numerical minimum is appropriate only when the named quantity and dependency model justify a bottleneck or lower-bound interpretation. WLNK does not impose minimum over every cited source or every argument.
 * **MONO (Monotonicity).** A monotonicity claim names the support change and the model under which it holds. Duplicate data, a contrary result, a changed target population, or the failure of a necessary assumption is not simply “more support”.
@@ -162,11 +157,11 @@ When computing **Γ_epist^synth(D_know)**:
 * For an **axiomatic** input, empirical R may be N/A. Keep the proof, its conclusion under the stated axioms, and its formal validity; `line=formal` is a useful tag, not a conversion rule. **Do not set R to F.** An ordinal F-derived proxy describes only its declared ordinal meaning. Any value proposed for an R calculation needs a receiving model establishing meaning, scale, conversion, and assumptions; rescaling F into [0,1] is insufficient.
 * For a **postulative** input, retain its actual warrant and empirical or other support as applicable. Apply a B.3.4 currentness or decay policy only to the support whose use consumes that policy; changing the mode creates neither evidence nor a conversion model.
 * The aggregate declares its mode. If all its operative inputs are axiomatic, it is axiomatic; if an operative input is postulative, it is postulative. Keep any formal subclaim separately usable. A proof about a model supports a claim about a real system only with the needed model-to-world assumptions; evidence violating those assumptions remains visible.
-* **Constructive note.** Under **F-constructive**, equivalence claims use **isomorphism/equivalence** in the chosen UF library; **CL=2** means proof-reconstructed alignment, not mere model-theoretic appeal.
+* **Constructive derivations.** State the chosen proof basis and the correspondence needed by the conclusion. An induction proof may use its stated non-UF foundation. A UF-based equivalence claim supplies the required equivalence or isomorphism witness and the structure that the receiving theorem needs preserved. A lossy mapping cannot transport a theorem that depends on an erased distinction. If the required proof basis or correspondence is unavailable, leave that inference unresolved while retaining independently supported conclusions. A CL summary describes mapping evidence; it establishes neither equivalence nor theorem transport.
 
 **8. Order-aware arguments (optional).**
   If the argument requires premise ordering, embed a **Γ\_ctx** fold inside Γ\_epist; record the **OrderSpec** for reproducibility (NC‑1..3).
-  **Gating:** OrderSpec is **recommended** at **M‑1** and **required** at **M‑2/F**.  # [M‑1→F]
+  **Condition:** state the `OrderSpec` whenever the conclusion depends on premise or derivation order; use B.1.4 for the bounded aggregation of those recovered order relations. No unspecified maturity level determines this requirement.
 
 **9. No costs here.**
   Any compute/collection effort is **Γ\_work**; attach references but do not mix costs into epistemic aggregation.
@@ -291,7 +286,7 @@ For **Γ_epist^compile**, map the retained claims to the certification scheme. W
 
 ### B.1.3:11 - Relations
 
-* **Builds on:** C.2.1 (episteme identity and independently obtaining edition relations), A.6.1 (semantic operation declarations and exact application bindings), A.14 (ConstituentOf, collection belonging under each collection's own rule, and proper temporal restriction of one unchanged carrier), and A.15/A.15.1 (Strict Distinction and Work-temporal law). A.12 is used only when an acting-side distinction is current. An ordinary actor sentence needs no classification apparatus. Any particular dated synthesis or compilation `U.Work` first reuses each performer's A.13 core and is independently admitted under A.15.1; F.6 follows only when the receiving claim also needs precise assignment-bound attribution. A short local projection may omit an assignment identifier unused by the receiver only when every consumed relation remains recoverable.
+* **Builds on:** C.2.1 (episteme identity and independently obtaining edition relations), A.6.1 (semantic operation declarations and exact application bindings), A.14 (ConstituentOf, collection belonging under each collection's own rule, and proper temporal restriction of one unchanged carrier), A.7 (Strict Distinction), and A.15/A.15.1 (Method/Work alignment and Work-temporal law). A.12 is used only when an acting-side distinction is current. An ordinary actor sentence needs no classification apparatus. Any particular dated synthesis or compilation `U.Work` first reuses each performer's A.13 core and is independently admitted under A.15.1; F.6 follows only when the receiving claim also needs precise assignment-bound attribution. A short local projection may omit an assignment identifier unused by the receiver only when every consumed relation remains recoverable.
 * **Coordinates with:** B.1.1 dependency-structure and relation-grounding checks, B.1.4 (Γ\_ctx/Γ\_time inside knowledge folds), B.1.6 (Γ\_work for compute/collection spend).
 * **Coordinates with:** F.9 for exact cross-context Bridges and bounded-use claims; A.10 or B.3 for reliance; A.15.PROD when production, first existence, or completion is current; and E.17/E.24.PUB for publication, form, and carrier. B.2 is used only when exact construction facts leave a separate whole-reidentification question after the existing-whole explanation check.
 * **Used by:** B.3 assurance uses the aggregate's exact formal basis, scope, and support account, including any justified R calculation and mapping limitations; C.11 and C.19.2 govern a separately selected inquiry or action decision.

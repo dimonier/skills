@@ -1,6 +1,6 @@
 ---
 id: A.2.6
-title: "Unified Scope Mechanism (USM): Context Slices & Scopes"
+title: "Unified Scope Mechanism (USM): Test Scope Membership and Combine Scopes"
 status: Stable
 keywords: []
 dependencies:
@@ -22,7 +22,7 @@ dependencies:
     - C.29
 ---
 
-# A.2.6: Unified Scope Mechanism (USM): Context Slices & Scopes
+# A.2.6: Unified Scope Mechanism (USM): Test Scope Membership and Combine Scopes
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -30,7 +30,7 @@ dependencies:
 
 ---
 
-## A.2.6 - Unified Scope Mechanism (USM): Context Slices & Scopes
+## A.2.6 - Unified Scope Mechanism (USM): Test Scope Membership and Combine Scopes
 > **Status:** Stable
 > **Type:** Ontic pattern
 
@@ -312,14 +312,16 @@ A `BoundedModelUseStructure` may be selected over exact model-applicability and 
 
 #### A.2.6:6.4 - `U.WorkScope` — scope of doing Work (capability)
 
-**Carrier.** `U.Capability` (a system’s ability to deliver specified `U.Work`).
+**Subject and declared basis.** A qualified A.2.2 ability claim about an independently identified holder System designates its `U.WorkScope`. This is the set-valued work-condition basis of that claim, not a scope carried by a separate capability individual.
 
 **Meaning.** `U.WorkScope` is the set of `U.ContextSlice` values under which a capability's deliverability claim may be evaluated. Work-measure targets and qualification windows are checked separately at use time; they are not members or identity fields of the scope.
 
 **Expression.** The capability declaration designates an exact `U.WorkScope` expressed only as conditions over `U.ContextSlice`: environment, versioned standards or platforms, resource regimes, exact local senses when current, and `gammaTime` only when time changes membership. Quantitative deliverables and qualification windows are not part of the scope value:
 * Declare targets as **work-measure target sets** (e.g., latency <= L, throughput >= T, tolerance <= epsilon) bound in guards (WG‑2).
 * Declare inspection/recertification policies as **qualification-window policies** bound in guards (WG‑3).
-The use‑time admission requires **all** of: `WorkScope covers JobSlice` **AND** `WorkMeasures satisfied` **AND** `qualificationWindowHolds(capability, qualificationWindowPolicy, evaluationTime)`.
+The use‑time admission requires **all** of: `WorkScope covers JobSlice` **AND** `WorkMeasures satisfied` **AND** `qualificationWindowHolds(holderAbilityClaim, qualificationWindowPolicy, evaluationTime)`.
+
+Here `holderAbilityClaim` supplies the identified holder, claimed work conditions and bounds, and the declared support basis to which the qualification policy applies. The policy evaluates reliance at the stated time; its failure does not itself prove a loss of actual ability.
 
 **Method–Work gating.** A Work step’s guard MUST check that the target slice is **covered** by the capability’s Work scope **and** that required measures and qualification windows are satisfied.
 
@@ -339,8 +341,8 @@ These facets are **separate** from `U.WorkScope` and live in the **R‑lane** (a
 **Relation to other scopes (normative).**
 * If the publication is **about an episteme `E`**:
   `PublicationScope(view_E) ⊆ ClaimScope(E)`.
-* If the publication is **about a capability `C`**:
-  `PublicationScope(view_C) ⊆ WorkScope(C)`.
+* If the publication presents **a qualified holder-ability claim `C`** for work admission:
+  `PublicationScope(view_C) ⊆ WorkScope(C)`, where `WorkScope(C)` is the work-condition basis designated by that claim. Any relied-on episteme ClaimScope remains a separate constraint; stating the ability in an episteme does not turn its WorkScope into ClaimScope.
 * If the publication is **about a composition**, its scope is a subset of the intersection of the exact contributing scopes. When exact local senses require translation, use section 7.5 for each affected source scope: obtaining F.9 Bridge, separate affirmative C.2.1 use claim, and current A.10 or B.3 reliance before the returned scopes are intersected.
 
 **Expression.** Declare `U.PublicationScope` as an exact predicate over only the `U.ContextSlice` selectors that restrict publication use: for example versioned standards, environment, audience, interface availability, exact local senses, or `gammaTime` when time changes membership. It may be narrower than the underlying scope but must not be wider.
@@ -522,14 +524,14 @@ Name the exact claim-bearing episteme, exact `U.ClaimScope`, and exact target sl
 #### A.2.6:10.3 - Method–Work guard families (capabilities)
 
 **WG‑1 - WorkScopeCoverage (mandatory).**
-A capability can be used to deliver a Work step only if:
+Reliance on a holder-ability claim for a Work step requires coverage by the WorkScope that claim designates:
 
 ```
-U.WorkScope(capability) covers JobSlice
+WorkScope(holderAbilityClaim) covers JobSlice
 ```
 
 **WG‑2 - work-measure target set satisfied** (mandatory for deliverables).
-Guards MUST bind quantitative measures that the capability promises in the JobSlice:
+Guards MUST compare the claimed attained bounds with the quantitative targets required for the JobSlice:
 
 ```
 SLO and target measures satisfied (latency ≤ L, throughput ≥ T, tolerance ≤ ε, … )
@@ -539,12 +541,12 @@ SLO and target measures satisfied (latency ≤ L, throughput ≥ T, tolerance �
 Operational guards MUST assert that the exact qualification-window predicate (qualification, inspection, or recertification) holds at the receiving guard's exact evaluation time:
 
 ```
-qualificationWindowHolds(capability, qualificationWindowPolicy, evaluationTime) = true
+qualificationWindowHolds(holderAbilityClaim, qualificationWindowPolicy, evaluationTime) = true
 ```
 
 **WG-4 - Translation branch for capability use.**
 
-Translate `U.WorkScope` only when its condition predicates use exact local senses that differ from those needed by the job slice. Require the obtaining F.9 Bridge and a separate affirmative C.2.1 claim naming this Work-scope translation's direction, rule, and tolerance; establish the exact A.10 or B.3 reliance branch before the capability guard uses the result. A capability object and job slice carry no hidden `.Context` field that automatically selects this branch.
+Translate `U.WorkScope` only when its condition predicates use exact local senses that differ from those needed by the job slice. Require the obtaining F.9 Bridge and a separate affirmative C.2.1 claim naming this Work-scope translation's direction, rule, and tolerance; establish the exact A.10 or B.3 reliance branch before the capability guard uses the result. Neither the holder-ability claim nor the job slice supplies a hidden `.Context` field that automatically selects this branch.
 
 Observed mapping loss is evidence about the use claim, and permitted loss is its tolerance. If the claim's rule and tolerance permit translation only for part of the source Work scope, identify that part and return its target image.
 
@@ -564,7 +566,7 @@ The source claim-bearing episteme designates `SourceScope`. The Bridge relates e
 
 #### A.2.6:10.5 - Time selector
 
-When membership depends on time, name an exact `gammaTime` point, interval, or policy and the boundary that changes membership. Keep every selector already declared in the slice schema, even when this predicate does not inspect it. If a work qualification or evidence-freshness condition varies with time, name its exact evaluation time and interval or policy under that condition's direct governor rather than copying it into scope. For example, `qualificationWindowHolds(capability, Recertification90d, evaluationTime)` is a separate guard; it is not a scope selector.
+When membership depends on time, name an exact `gammaTime` point, interval, or policy and the boundary that changes membership. Keep every selector already declared in the slice schema, even when this predicate does not inspect it. If a work qualification or evidence-freshness condition varies with time, name its exact evaluation time and interval or policy under that condition's direct governor rather than copying it into scope. For example, `qualificationWindowHolds(holderAbilityClaim, Recertification90d, evaluationTime)` is a separate guard; it is not a scope selector.
 
 Do not write implicit “latest.” Do not invent a time selector merely to complete a new slice declaration.
 
@@ -599,13 +601,13 @@ If the receiving use merely uses another designation for the same sense under an
 #### A.2.6:11.3 - Capability: robotic weld Work scope
 
 * **Context:** `RobotCell‑Weld@2026`.
-* **Capability:** `WeldCapability` — “Weld seam W at bead width 2.5 ± 0.3 mm, cycle ≤ 12 s.”
+* **Holder and ability claim:** `WeldRobot_3`; `WeldAbilityClaim` states that this System can weld seam W at bead width 2.5 ± 0.3 mm and cycle ≤ 12 s under the conditions below.
 * **Work scope:** `{humidity<60 %, current∈[35,45]A, wire=ER70S‑6, controller=FW‑2.1}`.
 * **Job slice:** `{humidity=55 %, current=40A, wire=ER70S‑6, controller=FW‑2.1}`.
-* **Qualification policy:** in this example, `Recertification90d` considers `WeldCapability` qualified for 90 days from the certification date recorded in the controller certificate.
+* **Qualification policy:** in this example, `Recertification90d` considers reliance on `WeldAbilityClaim` qualified for 90 days from the certification date recorded in the controller certificate.
 * **Qualification evaluation time:** `2026-07-25`, outside the Work-scope tuple.
-* **Guards (WG‑1..3):** coverage **true**; measures satisfied; `qualificationWindowHolds(WeldCapability, Recertification90d, 2026-07-25)` is **true** because certification occurred on `2026-05-26`.
-* **Outcome:** capability admitted for this Work.
+* **Guards (WG‑1..3):** coverage **true**; measures satisfied; `qualificationWindowHolds(WeldAbilityClaim, Recertification90d, 2026-07-25)` is **true** because certification occurred on `2026-05-26`.
+* **Outcome:** the capability-related guards pass for this Work. Authority, assignment state and other required entry conditions remain separate.
 
 Controller certificate age does not change Work-scope membership in this case. When the 90-day qualification condition fails, WG-3 stops operational use without removing the Job slice from the scope.
 
@@ -946,7 +948,7 @@ A.2.6 needs a scope mechanism to express the set-valued condition under which a 
 
 * **G is Claim scope.** Use set algebra (∩ / SpanUnion).
 * **F** remains the expression rigor (C.2.3); **R** captures evidence currentness and bounded reliance. Observed loss may bear on the translation-use claim; its permitted-loss tolerance remains in that claim rather than in G or the Bridge profile.
-* **Weakest‑link.** On dependency paths: **F\_composite = min(F)**, **R\_composite = min(R)**; **G** follows §7.2–§7.3 (set rules).
+* **Composition.** F follows C.2.3's weakest-essential-support bound. R follows the justified support-composition model or non-aggregate synthesis under C.2.2. G follows §7.2–§7.3 (set rules).
 
 #### A.2.6:21.2 - With Formality (C.2.3)
 

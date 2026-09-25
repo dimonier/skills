@@ -1,6 +1,6 @@
 ---
 id: C.34
-title: "Structural Correspondence, Equivalence, and Morphism Adequacy"
+title: Assess Structural Correspondence for Architecture Use (Equivalence and Morphisms)
 status: Stable
 keywords:
   - structural correspondence
@@ -35,7 +35,7 @@ dependencies:
     - F.15
 ---
 
-# C.34: Structural Correspondence, Equivalence, and Morphism Adequacy
+# C.34: Assess Structural Correspondence for Architecture Use (Equivalence and Morphisms)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -43,7 +43,7 @@ dependencies:
 
 ---
 
-## C.34 - Structural Correspondence, Equivalence, and Morphism Adequacy
+## C.34 - Assess Structural Correspondence for Architecture Use (Equivalence and Morphisms)
 
 > **Type:** Architectural pattern
 > **Status:** Stable

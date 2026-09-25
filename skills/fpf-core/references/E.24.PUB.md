@@ -1,6 +1,6 @@
 ---
 id: E.24.PUB
-title: Ontic Description and Publication Discipline
+title: "Episteme Publication: Availability, Form and Carrier"
 status: Stable
 keywords: []
 dependencies:
@@ -18,7 +18,7 @@ dependencies:
     - E.9.DA
 ---
 
-# E.24.PUB: Ontic Description and Publication Discipline
+# E.24.PUB: Episteme Publication: Availability, Form and Carrier
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,7 +26,7 @@ dependencies:
 
 ---
 
-## E.24.PUB - Ontic Description and Publication Discipline
+## E.24.PUB - Episteme Publication: Availability, Form and Carrier
 
 > **Type:** Part E FPF authoring discipline pattern
 > **Status:** Stable

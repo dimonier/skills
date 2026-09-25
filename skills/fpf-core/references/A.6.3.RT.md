@@ -1,6 +1,6 @@
 ---
 id: A.6.3.RT
-title: "Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition"
+title: "Representation-Scheme Transition: Change Representation of the Same EntityOfConcern"
 status: Stable
 keywords: []
 dependencies:
@@ -31,7 +31,7 @@ dependencies:
     - A.21
 ---
 
-# A.6.3.RT: Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition
+# A.6.3.RT: Representation-Scheme Transition: Change Representation of the Same EntityOfConcern
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -39,7 +39,7 @@ dependencies:
 
 ---
 
-## A.6.3.RT - Representation-Scheme Transition: EntityOfConcern-Preserving Representation-Scheme Transition
+## A.6.3.RT - Representation-Scheme Transition: Change Representation of the Same EntityOfConcern
 
 > **Type:** Specialization pattern
 > **Status:** Stable

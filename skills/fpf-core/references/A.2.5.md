@@ -1,6 +1,6 @@
 ---
 id: A.2.5
-title: "SystemRoleAssignmentStateRelation - Assignment-State Recognition and Work Admission"
+title: "SystemRoleAssignmentStateRelation - Assignment-State Recognition for Work Admission"
 status: Stable
 keywords:
   - "assignment-state predicate"
@@ -24,7 +24,7 @@ dependencies:
     - A.21
 ---
 
-# A.2.5: SystemRoleAssignmentStateRelation - Assignment-State Recognition and Work Admission
+# A.2.5: SystemRoleAssignmentStateRelation - Assignment-State Recognition for Work Admission
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -32,7 +32,7 @@ dependencies:
 
 ---
 
-## A.2.5 - SystemRoleAssignmentStateRelation - Assignment-State Recognition and Work Admission
+## A.2.5 - SystemRoleAssignmentStateRelation - Assignment-State Recognition for Work Admission
 
 > **Type:** Definitional (D)
 > **Status:** Stable

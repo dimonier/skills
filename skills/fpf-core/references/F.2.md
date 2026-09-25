@@ -1,6 +1,6 @@
 ---
 id: F.2
-title: "Term Harvesting & Normalisation"
+title: "Source-Local Term Harvesting & Normalisation"
 status: Stable
 keywords:
   - exact source and edition
@@ -18,7 +18,7 @@ dependencies:
     - F.3
 ---
 
-# F.2: Term Harvesting & Normalisation
+# F.2: Source-Local Term Harvesting & Normalisation
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,7 +26,7 @@ dependencies:
 
 ---
 
-## F.2 — Term Harvesting & Normalisation
+## F.2 — Source-Local Term Harvesting & Normalisation
 
 **“Harvest the source’s own words, recover what they mean there, and stop before comparison.”**
 **Status.** Architectural pattern.
@@ -112,10 +112,10 @@ Refuse to infer sameness, substitution, hierarchy, or transfer across sources; r
 
 ### F.2:8 - Micro-examples
 
-> Each item is one source-local lexical note. Their proximity asserts no relation.
+> One worked note below supplies the exact source basis. The other items are recognition cues for candidate expressions; complete their source, edition, passage, effective scheme and attested use before relying on them as lexical notes. Their proximity asserts no relation.
 
 * **BPMN 2.0 (2011), effective BPMN scheme** — expression and LNF `process`; Tech **process**; Plain **workflow graph**; claim: “A graph of flow nodes and sequence flows specifying orchestration among participants.”
-* **PROV-O (2013), effective PROV scheme** — expression and LNF `activity`; Tech **activity**; Plain **time-bounded occurrence**; claim: “An occurrence that uses or generates entities and may be associated with agents.”
+* **Worked note — [W3C PROV-O Recommendation, 30 April 2013, §3.1, Starting Point Terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-starting-point-terms).** Receiving question: what does `prov:Activity` mean in this source? Effective scheme: the PROV-O vocabulary of that edition, with `prov` denoting `http://www.w3.org/ns/prov#`. Expression and LNF `prov:Activity`; Tech **activity (PROV-O)**; Plain **occurrence that acts on or with entities**; LocalSenseClaim: “Something that happens over a time interval and involves acting on or with entities.” Attested cue: “occurs over a period of time”. The note answers this local question; no durable cell or cross-source relation is needed.
 * **ITIL 4 (2020), selected service-management use** — expression and LNF `service-level objective`; Tech **SLO**; Plain **service target**; claim: “A target value or range for a service characteristic.”
 * **NIST RBAC (2004), RBAC scheme** — expression and LNF `role`; Tech **access role**; Plain **permission grouping**; claim: “A named grouping of permissions used in access-control assignment.”
 * **SOSA/SSN (2017), SOSA scheme** — expression and LNF `observation`; Tech **observation**; Plain **act of observing**; claim: “An act applying a procedure to a feature of interest to obtain a result.”
@@ -148,11 +148,13 @@ Refuse to infer sameness, substitution, hierarchy, or transfer across sources; r
 | **A13** | Alias inflation | A new technical term is invented “for clarity”. | It competes with the source and hides provenance. | Keep inventions, if needed, only as bounded Plain labels. |
 | **A14** | Role–status conflation | RBAC *role* is glossed as an acting system role. | Permission and agency claims mix. | Say **access role (RBAC)** and use E.10.ROLE and F.4 for any system-role claim. |
 
-### F.2:11 - Worked examples
+### F.2:11 - Further recognition cues
+
+The entries in this section are possible readings to inspect, not completed lexical notes. Recover each exact source basis before relying on the proposed gloss.
 
 #### F.2:11.1 - Enactment and sensing
 
-The BPMN, PROV-O, SOSA/SSN, and ITIL notes above remain four separate source-local claims. They let a writer say “compare an SOSA observation result with the ITIL service target” while withholding any claim that BPMN *process* and PROV *activity* are the same.
+Use the completed PROV-O note as one source-backed input. The BPMN, SOSA/SSN and ITIL cues still need their exact source bases before they can be used as lexical notes. After that recovery, a writer can ask how an SOSA observation result relates to an ITIL service target; the list itself establishes no sameness between BPMN *process* and PROV *activity*.
 
 #### F.2:11.2 - Control and services
 

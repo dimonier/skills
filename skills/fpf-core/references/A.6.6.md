@@ -1,6 +1,6 @@
 ---
 id: A.6.6
-title: "Base Declaration Discipline - Direct relation first; reusable declaration only when needed"
+title: "Base Declaration Discipline: Say Exactly What Something Depends On"
 status: Stable
 keywords: []
 dependencies:
@@ -20,7 +20,7 @@ dependencies:
     - F.18
 ---
 
-# A.6.6: Base Declaration Discipline - Direct relation first; reusable declaration only when needed
+# A.6.6: Base Declaration Discipline: Say Exactly What Something Depends On
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -28,7 +28,7 @@ dependencies:
 
 ---
 
-## A.6.6 - Base Declaration Discipline - Direct relation first; reusable declaration only when needed
+## A.6.6 - Base Declaration Discipline: Say Exactly What Something Depends On
 > **Status:** Stable
 > **Type:** Definitional relation-discipline pattern
 

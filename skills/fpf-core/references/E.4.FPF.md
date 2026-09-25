@@ -1,6 +1,6 @@
 ---
 id: E.4.FPF
-title: "First Principles Framework Form and Publication-or-Access Carrier Assembly"
+title: "FPF Edition Assembly: Publication Forms, Carriers and Access Routes"
 status: Stable
 keywords: []
 dependencies:
@@ -20,7 +20,7 @@ dependencies:
     - F.19
 ---
 
-# E.4.FPF: First Principles Framework Form and Publication-or-Access Carrier Assembly
+# E.4.FPF: FPF Edition Assembly: Publication Forms, Carriers and Access Routes
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -28,7 +28,7 @@ dependencies:
 
 ---
 
-## E.4.FPF - First Principles Framework Form and Publication-or-Access Carrier Assembly
+## E.4.FPF - FPF Edition Assembly: Publication Forms, Carriers and Access Routes
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -104,38 +104,41 @@ The name comparison covers `FPFEditionRebuildabilityRecord`, `FPFEditionAssembly
 | `MATHEMATICAL-MODELING` | Ordinary practical entry |
 | `LIVE-WORK-STEERING` | Ordinary practical entry |
 | `METHOD-RECOVERY` | Ordinary practical entry |
+| `WORK-OPPORTUNITY` | Ordinary practical entry |
 | `PROFESSIONAL-RESULT` | Ordinary practical entry |
 | `UNFAMILIAR-THEORY` | Practical-Use Card |
 | `PHYSICAL-RESULT` | Practical-Use Card |
 | `ARCHITECTURE` | Practical-Use Card |
 | `PRACTICE-ARCHITECTURE` | Practical-Use Card |
 | `WORKING-DOCUMENTS` | Practical-Use Card |
-| `COMMUNICATION-FOR-USE` | Practical-Use Card |
+| `COMMUNICATION-FOR-USE` | Ordinary practical entry |
 | `OPTION-COMPARISON` | Practical-Use Card |
-| `RESULT-TO-NEXT-MOVE` | Practical-Use Card |
-| `ACTUAL-TEMPORAL-STRUCTURE` | Practical-Use Card |
-| `CONSEQUENCE-BEARERS` | Practical-Use Card |
+| `RESULT-TO-NEXT-MOVE` | Ordinary practical entry |
+| `ACTUAL-TEMPORAL-STRUCTURE` | Ordinary practical entry |
+| `CONSEQUENCE-BEARERS` | Ordinary practical entry |
 | `PROBLEM-SHAPING` | Practical-Use Card |
 | `IMPROVEMENT` | Practical-Use Card |
 | `WORDING` | Practical-Use Card |
 | `SOTA-PORTFOLIO` | Practical-Use Card |
 | `SYSTEM-DELIMITATION` | Practical-Use Card |
 
-This is the one FPF declaration consumed by Readme authoring, assembly, and validation; do not maintain another ordinary-entry or card list. It declares nine ordinary examples and fifteen cross-pattern cards, not the scope or limit of FPF help. The Readme must say that FPF and the applicable DPF or LPF can answer a much wider range of questions and must return a reader whose question fits no example to the Table of Contents, another finding aid, or the direct patterns.
+This is the one FPF declaration consumed by Readme authoring, assembly, and validation; do not maintain another ordinary-entry or card list. The Readme must say that FPF and the applicable DPF or LPF can answer a much wider range of questions and must return a reader whose question fits no example to the Table of Contents, another finding aid, or the direct patterns.
 
-The selection answers the declared current reader-use questions and passes the no-mantra comparison; it does not claim observation of reader behaviour and does not reproduce the historical fifteen seminar cards or the predecessor twenty-key list. Distinct predecessor questions remain recoverable without keeping one selectable entry for each topic: `CAPABILITY-DEVELOPMENT` is carried by `PRACTICE-ARCHITECTURE` and `IMPROVEMENT`; `COSTLY-ACTION` is carried by `OPTION-COMPARISON`; `DESCRIPTION-USE` is carried by `WORKING-DOCUMENTS`; and `DPF-AUTHORING` is carried by `SOTA-PORTFOLIO`.
+Related questions remain recoverable without a separate selectable entry for each topic: `CAPABILITY-DEVELOPMENT` is carried by `PRACTICE-ARCHITECTURE` and `IMPROVEMENT`; `COSTLY-ACTION` is carried by `OPTION-COMPARISON`; `DESCRIPTION-USE` is carried by `WORKING-DOCUMENTS`; and `DPF-AUTHORING` is carried by `SOTA-PORTFOLIO`.
 
 `UNFAMILIAR-THEORY` connects recovering a construction and argument with transfer to the project's representation. `PHYSICAL-RESULT` connects physical modeling, mathematics, computation and realization, including returns when one contribution changes. Their mantras retain those dependencies while the direct patterns supply the operations.
 
+`WORK-OPPORTUNITY` starts at the first missing contribution and can end at a local result, an exact gap or continued work without advice. Its conditional returns do not prescribe a traversal through every linked pattern; its Readme explanation uses the ordinary-entry form.
+
 `TIME`, `CAUSAL-USE`, `MEASUREMENT`, and `MATHEMATICAL-MODELING` are ordinary examples because each starts with one direct pattern and can stop at its first useful result without a cross-pattern mantra; no `MODELING-FOR-ACTION` card joins them. `LIVE-WORK-STEERING` and `METHOD-RECOVERY` are ordinary examples for the same reason: each begins at one direct pattern and may stop at its first useful result or blocker. `PROFESSIONAL-RESULT` is also ordinary: it starts with `A.15.9`, tests an already-available result before any new request, and can stop at bounded reuse, the smallest missing-result request, or a blocker without a cross-pattern mantra.
 
-`COMMUNICATION-FOR-USE` is selected as a card because the same truthful five-field entry without a mantra still identifies the situation, first result, and direct patterns but reduces the cross-pattern dependency to a flat list. After interruption, that list no longer carries the sequence from receiving use through the communication that occurred, its wording or representation, use-relevant evidence, later effect, causal qualification, and repair or stop; the compact mantra restores that choice-changing sequence.
+`COMMUNICATION-FOR-USE` starts with the communication and its intended use. Its ordinary explanation distinguishes interpretation, response, later action and effect, then opens a wording, representation, evidence, causal or repair question only when that question is needed. The reader can stop at a supported use or an explicit blocker.
 
-`RESULT-TO-NEXT-MOVE` is a card because it keeps the conditional path from an obtained result through only the interpretation, reliance, characterization, comparison, or live-choice question that is current, with a stop at every other boundary; a flat locator list would not preserve those conditions.
+`RESULT-TO-NEXT-MOVE` starts with the obtained result and its direct pattern. Its ordinary explanation preserves the conditions for a later interpretation, reliance, characterization, comparison or live-choice question and stops before a question that is not current.
 
-`CONSEQUENCE-BEARERS` is a card because its compact mantra preserves the repeatable boundary challenge and return sequence needed to keep candidate Systems, obtaining relations, modal paths, holon recovery, uncertainty, and the receiving use distinct; a flat locator list would lose those choice-changing conditions.
+`CONSEQUENCE-BEARERS` starts with the bounded consequence account under `A.1.CSD`. Its ordinary explanation retains the boundary challenge, conditional systemhood check, separate obtaining and modal paths, each bearer's changes and uncertainty, and the return when the receiving use changes.
 
-`ACTUAL-TEMPORAL-STRUCTURE` is a card because its compact mantra preserves the conditional sequence from actual changing subjects and direct obtaining relations through one selected structure and grounded account to separately admitted future specifications and representations, then to a bounded coordination trial, observation, decision, or stop; a flat locator list would lose those choice-changing distinctions and cheap exits.
+`ACTUAL-TEMPORAL-STRUCTURE` starts with what the temporal claim concerns. Its ordinary explanation distinguishes actual subjects and obtaining relations, a selected structure and its account, and future specifications or representations. A coordination trial follows only when it can change the decision and warrants its burden; otherwise the reader stops at the supported answer or missing basis.
 
 `PUBLICATION-FORM` and `DPF-SUITE-REFERENCE` remain direct locators to `E.11.PFP` and `E.11.DSG`, not selected examples. Exact content stays in those direct patterns; the Readme carries only the recognition, cross-pattern dependency, and return needed for discoverability.
 
@@ -173,7 +176,7 @@ The ordinary method is:
 4. When a public presentation carrier is being assembled or checked, use `E.11.PFP` for the common publication form. Keep a product-declared compact opening and separate exact title and Readme H1 values. Represent Readme and Preface in the product's established ToC grammar before one logical pattern index. Keep one explicitly non-exhaustive practical-entry set, five-field ordinary examples, six-field selected cards, and one integrated source-hazard plus rendered-structure check. Apply `E.11`'s use test before assigning card form, and use the current FPF declaration above for every selected key and form plus the English reading-burden measure and two limits. Add another public cue only when a named reader decision or action needs it. For the established all-in-one FPF carrier, add Readme through the same non-pattern table grammar already used for Preface, preserve the compact pre-ToC shape, and keep the exact line-position and native-ToC assertions in the builder regression. Keep FPF-specific source selection, body order, and assembly here; the carrier and form remain separate from the FPF edition.
 5. Separate the objects before recording them. Readme, Preface, ToC, the public opening, cards, and the pattern collection are publication units; their selected arrangement is the publication form. Name the exact `U.PresentationCarrier`—for example, a versioned Markdown file, site snapshot, PDF volume, split-file bundle, skill-pack bundle, index file, or response document—only when it actually bears that form. Record an MCP service, retrieval route, search function, or assistant integration as an access route; name any returned carrier separately. Record these units, forms, carriers, and routes as distinct subjects and relations for the `FirstPrinciplesFrameworkEdition`.
 6. State relation, dependency, edition, deprecation, supersession, publication, and access claims directly. Open an `E.4.PFR` row only for a named maintenance consumer.
-7. Keep downstream direction clear: DPFs and local practice frameworks may depend on FPF Core; FPF Core does not depend on them except by a deliberate Core amendment decision.
+7. Keep downstream direction clear: DPFs and local practice frameworks may depend on FPF Core. Incorporate an accepted transdisciplinary contribution through a deliberate Core amendment before Core uses it; the amended Core supplies that contribution without depending on the DPF or local framework.
 8. Fill the existing `FPFEditionRebuildabilityRecord` with exact selected source, publication-unit, publication-form, presentation-carrier, access-route, relation, practical-entry declaration, currentness, and refresh references. Make the Readme assembly and its checks consume the same declaration rather than another key or card list. Do not create a rival manifest or duplicate rebuildability account.
 9. Assemble the all-in-one edition candidate from the exact predecessor, the selected edition record, the matching `FPFEditionRebuildabilityRecord`, and every selected complete pattern source. Give each replacement or insertion an explicit boundary. Derive the logical index and pattern bodies from the same selection, verify one index row per selected PatternID, report which source supplied each assembled unit, and verify that every unselected predecessor span is unchanged. A missing or duplicate record, unresolved ref, index/body mismatch, ambiguous boundary, source mismatch, or changed unselected span stops construction. The construction result reports the assembled candidate and source correspondence; acceptance and publication require their separate decisions and relations. Keep repository paths, commands, helper options, template names, and insertion syntax in maintainer documentation or the selected tool's help.
 10. When the assembled publication claims accepted-source integration or continuity with its predecessor, use `E.4.PFIP` for that comparison. For whole-FPF adequacy, use `E.2.DA` over the scoped FPF object and declared use. Use `E.21` for individual pattern bodies, `E.9.DA` for a DRR, and `E.4.DPF.DA` only for DPF or local-framework packages.
@@ -204,24 +207,36 @@ Show: A domain principle framework for any one practice depends on FPF Core and 
 
 Show: An FPF skill pack exposes pattern lookup, first-entry guidance, and short-use prompts. A versioned skill-pack bundle can be an access-facing `U.PresentationCarrier`; the service, endpoint, or assistant integration that returns it is an access route. Their descriptions name the FPF edition they expose and its refresh condition. Authority claims return to the named subject pattern and edition.
 
-Show: One FPF edition replaces two complete pattern sources and inserts a third while every other pattern body must carry forward from the predecessor. The rebuildability record names the predecessor, edition record, complete selected sources, publication units and forms, exact output carriers, and any access routes. Assembly gives each changed body an explicit replacement or insertion boundary, rebuilds the logical index from the same selection, checks source-to-body correspondence, and verifies that unselected predecessor spans are unchanged. Any mismatch stops construction. A successful construction reports the candidate and source correspondence; acceptance and publication require their separate decisions and relations.
+#### E.4.FPF:5.1 - Rebuild an edition and catch a boundary error
 
-Mini-map:
+A steward is preparing **Cedar 2**, a fictional FPF edition for engineers who start from a working question. **Cedar 1** is its frozen predecessor. The example follows three changed bodies inside the full edition; all other bodies must carry forward unchanged.
 
-| Field | Filled slice |
+The accepted complete sources are **DUA-2** for `C.11.DUA`, **PUR-2** for `E.11.PUR`, and **Ways-1** for `C.39`. DUA-2 replaces DUA-1 and includes continuing without optional advice; PUR-2 replaces PUR-1 and distinguishes applicability from recommendation. Ways-1 adds the method-development contribution between the existing `C.38` and `C.40` bodies. **Readme R2** adds their practical entry. **Preface P1** remains unchanged.
+
+The first useful result is rebuildability record **RC2**, which gives the assembler these particular inputs and boundaries:
+
+| Record content | Filled value |
 |---|---|
-| `firstPrinciplesFrameworkEditionRef` | `FPF 8`, resolved through its edition record |
-| `firstPrinciplesScopeRef` | transdisciplinary ontology, epistemology, decision, evidence, architecture, work, publication, and improvement distinctions |
-| `selectedCorePatternSetRefs` | exact complete-source refs for every Core pattern body selected for `FPF 8` |
-| `selectedFirstPrinciplesProblemSituationRefs` | cross-domain problem situations where meaning, evidence, description, architecture, work, decision, publication, or improvement claims collapse |
-| `selectedFirstPrinciplesSolutionMoveRefs` | reusable pattern-language moves that separate kinds, recover source, locate applicable patterns, compare options, publish views, and improve claims |
-| `publicationSelfRenderingRefs` | Readme and Preface statements of intended reader, selected first-principles route, deliberately coarsened, abstracted, omitted, or deferred structures, and return to subject pattern bodies |
-| `selectedPublicationUnitRefs` | public opening, Readme, Preface, ToC, logical index, and pattern-body collection for `FPF 8` |
-| `selectedPublicationFormRefs` | the selected all-in-one and split-publication arrangements used for the named reader uses |
-| `selectedPublicationCarrierRefs` | the exact versioned Markdown file, site snapshot, PDF volume, or split-file bundle that bears a selected public form |
-| `selectedAccessCarrierRefs` | an optional exact skill-pack bundle, retrieval-index file, or response document that bears an access-facing form |
-| `selectedAccessRouteRefs` | an optional MCP service, retrieval route, search function, or assistant integration, with the edition or named carrier it reaches |
-| `qualityAndImprovementRefs` | `E.2.DA` for whole-FPF adequacy, `E.21` for pattern bodies, `E.23` for improvement cycles |
+| Edition and scope | Cedar 2; transdisciplinary FPF Core for the same reader and use as Cedar 1 |
+| Predecessor | The complete Cedar 1 text, including Readme R1, Preface P1, index I1 and body collection K1 |
+| Selected complete sources | DUA-2 replaces the whole C.11.DUA body; PUR-2 replaces the whole E.11.PUR body; Ways-1 inserts the whole C.39 body after C.38 and before C.40 |
+| Publication units | Opening O2, Readme R2, unchanged Preface P1, derived index I2 and body collection K2 |
+| Publication forms | A book arrangement: compact opening, contents and index, Readme, Preface, then bodies; a standalone Readme arrangement using R2 |
+| Particular carriers | Cedar-2-book-a, one assembled Markdown file; Cedar-2-readme-a, one rendered HTML file |
+| Access carrier and route | None selected for this assembly |
+| Reader-facing scope account | O2 names engineers and their working questions; R2 offers starting examples and returns to the bodies; P1 explains the wider reasoning practice |
+| Source and adequacy results | Q-DUA-2, Q-PUR-2 and Q-Ways-1 cover the three accepted source editions. Cedar 1's whole-edition assessment A1 does not assess Cedar 2 |
+| Reconsideration condition | A selected source, predecessor span, declared form or receiving use changes |
+
+Each carrier bears a form of the named units; neither file is the edition itself. The standalone HTML carries R2 without becoming another independently authored Readme. No access service has been selected.
+
+Assembly replaces the two bounded bodies, inserts Ways-1, and derives I2 from that same membership. I2 must contain one row each for C.11.DUA, E.11.PUR and C.39, with no duplicate C.39 row. The full body inventory gains exactly C.39; all other membership and order stay as in Cedar 1.
+
+A first candidate has exact copies of DUA-2, PUR-2 and Ways-1 and the expected index. It still fails. The Readme replacement ended two sentences inside P1 instead of at its boundary. The lost predecessor text was: “Start from your working question. Stop when the answer is sufficient; the entry list is not a required sequence.” The candidate has lost useful stopping guidance although every selected body matches its source.
+
+The complete predecessor comparison exposes that unselected deletion. Stop the assembly at this failed preservation condition. Correct the Readme boundary and restore both sentences from frozen P1; do not rewrite the accepted pattern bodies. Rebuild and repeat source correspondence, the full inventory and the complete publication comparison.
+
+In the repaired candidate, DUA-2, PUR-2 and Ways-1 still match their selected sources, I2 and K2 agree, R2 appears in both selected carriers, and P1 and every other unselected predecessor span are unchanged. The remaining differences are the two declared body replacements, one insertion and index row, R2 and its opening references. That is a completed construction with a stated preservation result under `E.4.PFIP`. Acceptance, publication and whole-FPF adequacy still require their own conclusions.
 
 ### E.4.FPF:6 - Bias-Annotation
 
@@ -242,7 +257,7 @@ Mini-map:
 | CC-FPF.1 Edition named | The scoped FPF edition or selected FPF object is named by value. |
 | CC-FPF.2 First-principles scope explicit | The text states that FPF is transdisciplinary first-principles material, including cross-domain problem-situation and solution-move architecture; domain and local framework subjects use their own editions. |
 | CC-FPF.3 Core, units, forms, carriers, and routes separated | Core pattern set, publication units, publication forms, exact `U.PresentationCarrier` values, access routes, relation records, source and currentness records, and quality records remain distinct. |
-| CC-FPF.4 Dependency direction protected | DPFs and local frameworks may depend on FPF Core; reverse dependency requires a deliberate Core amendment. |
+| CC-FPF.4 Dependency direction protected | DPFs and local frameworks may depend on FPF Core. A transdisciplinary contribution enters through a deliberate Core amendment whose content no longer depends on the DPF or local framework. |
 | CC-FPF.5 Quality route correct | Whole-FPF adequacy uses `E.2.DA`; individual patterns use `E.21`; DPF packages use `E.4.DPF.DA`; DRR uses `E.9.DA`. |
 | CC-FPF.6 Publication thinness preserved | Readme, Preface, ToC, cards, and other projection units help entry and return semantic authority to subject patterns; an exact `U.PresentationCarrier` and bearing relation support each carrier claim. |
 | CC-FPF.7 Access carrier and route bounded | Each named access carrier is an exact `U.PresentationCarrier` that bears an access-facing form. MCP services, retrieval and search routes, and assistant integrations are recorded separately and expose edition identity, currentness, and refusal conditions. Framework authority, runtime dependency, work permission, and actual access claims use their own direct predicates and evidence. |
@@ -251,7 +266,7 @@ Mini-map:
 | CC-FPF.10 Common form reused | The selected public form satisfies `E.11.PFP` for the compact product-declared opening, distinct exact title and Readme H1, Readme and Preface entries in the established ToC grammar, one logical index, practical entries, and any choice-relevant cue. This pattern retains FPF-specific sources, units, body order, carrier and route selection, and builder regressions for the established compact-front line shape and native ToC grammar. |
 | CC-FPF.11 Existing rebuildability record sufficient | One `FPFEditionRebuildabilityRecord` carries the exact selected source, publication-unit, publication-form, presentation-carrier, access-route, relation, projection, and refresh references. Add another manifest, field, or record only after showing a genuinely missing FPF value. |
 | CC-FPF.12 Deterministic source assembly | The all-in-one edition candidate uses the exact predecessor, selected edition record, matching `FPFEditionRebuildabilityRecord`, selected complete pattern sources, and explicit replacement or insertion boundaries. One selection drives both index and bodies; source correspondence is reported; every unselected predecessor span is unchanged; any identity, source, index/body, boundary, or preservation mismatch stops construction before an acceptance or publication claim. Repository filenames, commands, helper options, and template syntax remain in maintainer documentation or tool help rather than this reusable rule. |
-| CC-FPF.13 One practical-entry declaration | One current FPF declaration covers all selectable Readme examples, assigns each exactly one ordinary-entry or card form, and supplies the same calibrated 80-token mantra and 220-token compact-card whitespace guard to authoring, assembly, and validation. The Readme says that its nine ordinary examples and fifteen cross-pattern cards are non-exhaustive. Every card passes `E.11`'s mnemonic-gain test, remains linked by key to its guidance and optional expansion, and returns to its direct patterns. Authoring, assembly, and validation consume this declaration as the sole source for key, card, and coverage assignments. |
+| CC-FPF.13 One practical-entry declaration | One current FPF declaration covers all selectable Readme examples, assigns each exactly one ordinary-entry or card form, and supplies the same calibrated 80-token mantra and 220-token compact-card whitespace guard to authoring, assembly, and validation. The Readme states that the ordinary entries and cross-pattern cards selected by the declaration in §4 are non-exhaustive. Every card passes `E.11`'s mnemonic-gain test, remains linked by key to its guidance and optional expansion, and returns to its direct patterns. Authoring, assembly, and validation consume this declaration as the sole source for key, card, and coverage assignments. |
 
 ### E.4.FPF:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -266,7 +281,7 @@ Mini-map:
 | Invisible FPF entry route | Readme or Preface helps adoption but never says what first-principles structures it foregrounds, what it leaves to the pattern bodies, or who it is written for. | Add a publication-unit structure account while preserving its thin projection status and keeping form and carrier claims separate. |
 | Build apparatus as FPF front door | Generated-source comments, candidate records, digests, source paths, or machine identity fields appear before the reader can find a working question, or a new profile shifts an established compact ToC merely to display them. | Preserve the compact reader opening and direct Readme-first route; keep reproducibility and exact edition evidence in maintainer or package records, and project another cue only when its possible values change a named reader action. |
 | Whole-FPF quality by local score | Good `E.21` values or successful landing are treated as whole-FPF adequacy. | Run `E.2.DA` for the scoped FPF object and declared use; use local results only as evidence loci. |
-| DPF reverse dependency | A good DPF discovery is treated as a hidden Core dependency. | Propose a Core amendment and update the affected Core patterns and edition relations before FPF depends on that result. |
+| DPF reverse dependency | A good DPF discovery is treated as a hidden Core dependency. | Propose a Core amendment that establishes the transdisciplinary contribution in Core, and update the affected Core patterns and edition relations while preserving dependency direction. |
 | Access route as authority | A skill, MCP endpoint, retrieval index, or assistant integration is read as source, decision, work, or currentness authority, or the route is silently treated as the carrier it returns. | Record an exact skill-pack, index, or response carrier only when one exists; keep the service or route separate and route generated text, tool work, evidence, assurance, and refresh claims to their subject patterns. |
 
 ### E.4.FPF:9 - Consequences

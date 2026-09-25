@@ -98,13 +98,19 @@ def build_edges(cards):
 
 
 def render(cards):
-    _, spec, derived, _ = build_edges(cards)
+    fpf, spec, derived, _ = build_edges(cards)
     if not spec:
-        return (
-            "### Specialization\n\n"
-            "_No intra-LPF Specialization edges (sibling cards, none `specializes`); "
-            "FPF content edges live only in card frontmatter._\n"
-        )
+        if fpf:
+            body = (
+                "_No intra-LPF Specialization edges (sibling cards, none `specializes`); "
+                "FPF content edges live only in card frontmatter._\n"
+            )
+        else:
+            body = (
+                "_No intra-LPF Specialization edges and no FPF content edges "
+                "(self-sufficient carrier)._\n"
+            )
+        return "### Specialization\n\n" + body
     lines = []
     lines.append("### Specialization — authored (`specializes`, child → parent)")
     lines.append("")

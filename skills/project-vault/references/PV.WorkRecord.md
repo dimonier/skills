@@ -77,7 +77,7 @@ small administrative actions; fixing obvious errors (typos, formatting).
 8. If the step closes a PlanItem — **remove** the item from "Next moves" (the WRK is
    recorded in "Completed moves"), renumbering if needed. Do not strike through and
    do not `[x]`. Partial — leave with a clarification.
-9. New entities (DEC/RISK/Q/CON/TRK) — no separate index needed (`grep`/`SocratiCode`
+9. New entities (DEC/TRK) — no separate index needed (`grep`/`SocratiCode`
    will find them). A new track — `vault.py tracks`.
 
 **W.3 — track resumption.** Reading order on return:

@@ -8,12 +8,13 @@ keywords:
   - "evidence-bound"
   - F–G–R
   - ClaimScope (G)
+  - support dependencies
+  - "non-aggregate synthesis"
   - direct relation
   - Congruence Level (CL / CL^k / CL^plane)
-  - "weakest-link"
+  - "weakest-link limits"
   - pathwise justification (PathId)
-  - TA/VA/LA lanes
-  - no implicit averaging.
+  - TA/VA/LA lanes.
 dependencies:
   builds_on:
     - C.2

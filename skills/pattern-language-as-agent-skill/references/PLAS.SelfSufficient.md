@@ -69,6 +69,14 @@ so they drift and balloon — the exact failure observed in `sfera-std-tracing`.
    (routing-only `SKILL.md`, one body per file, YAML-safe description, readiness
    modes). Only the FPF-governing layer (`PLAS.GoverningCues`, `E.8` semantics,
    `E.21` status) is replaced.
+6. **Carry no authoring-infrastructure citations.** The skill is a representation
+   of an external standard, not the author's project vault: no vault-internal
+   entity ids (`DEC-`, `TRK-`, `WRK-`, `Q-`, `CON-`, `RISK-`), no "inbox"/"outbox"
+   as a source-data notion, and no `project-vault/…`/`sources/…` path as a source
+   `location` — in the card bodies, `INDEX.md`, and any generated `relations.md`.
+   Cite sources only by bare filename or a reader-meaningful descriptor
+   (e.g. `2026-09-21_dir-workshop1-transcript.txt`); a source `location` is a bare
+   filename, never a vault path. This keeps the skill portable and self-contained.
 
 ### PLAS.SelfSufficient:5 - Archetypal Grounding
 
@@ -96,6 +104,7 @@ rebuilds what `create-agent-skill` already gives. The boundary statement and the
 | CC-SS.3 | Section semantics are inlined compactly (one line per section), not as a full `E.8` table. |
 | CC-SS.4 | `status` carries an explicit readiness mode (`source-faithful` vs `case-validated`) — the self-sufficient exception to `CC-PB.5`. |
 | CC-SS.5 | Carrier-mechanics rules (routing-only `SKILL.md`, one body per file, YAML-safe description) still hold. |
+| CC-SS.6 | No authoring-infrastructure citations leak into card bodies, `INDEX.md`, or `relations.md`: no vault-internal entity ids (`DEC-`/`TRK-`/`WRK-`/`Q-`/`CON-`/`RISK-`), no "inbox"/"outbox" source-data terms, no `project-vault/…`/`sources/…` source paths; sources are cited by bare filename or reader-meaningful descriptor. |
 
 ### PLAS.SelfSufficient:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -106,6 +115,7 @@ rebuilds what `create-agent-skill` already gives. The boundary statement and the
 | No boundary statement (dependencies drift) | Declare the single source of truth in `SKILL.md`. |
 | `status` without a mode | Name `source-faithful` vs `case-validated`. |
 | Reinventing `create-agent-skill` mechanics | Delegate layout/trigger/atomicity to `create-agent-skill`. |
+| Vault internals (entity ids, "инбокс", vault paths) leaked into a skill body | Cite sources by bare filename/descriptor; ban ids and vault paths (`CC-SS.6`). |
 
 ### PLAS.SelfSufficient:9 - Consequences
 

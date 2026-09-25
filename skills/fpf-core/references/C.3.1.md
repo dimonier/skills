@@ -1,6 +1,6 @@
 ---
 id: C.3.1
-title: U.Kind and U.SubkindOf Core
+title: Kind Identity and Subkind Relations (U.Kind and U.SubkindOf)
 status: Stable
 keywords:
   - kind identity
@@ -24,7 +24,7 @@ dependencies:
     - C.3.3
 ---
 
-# C.3.1: U.Kind and U.SubkindOf Core
+# C.3.1: Kind Identity and Subkind Relations (U.Kind and U.SubkindOf)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -32,7 +32,7 @@ dependencies:
 
 ---
 
-## C.3.1 - U.Kind and U.SubkindOf Core
+## C.3.1 - Kind Identity and Subkind Relations (U.Kind and U.SubkindOf)
 
 > **Type:** Kind identity, subkind relation, and continuity pattern
 > **Status:** Stable

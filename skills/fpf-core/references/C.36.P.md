@@ -1,6 +1,6 @@
 ---
 id: C.36.P
-title: "Cultural-Evolution Wording-Use Precision Restoration"
+title: "Clarify Cultural-Evolution Wording for a Claim or Action"
 status: Stable
 keywords: []
 dependencies:
@@ -23,7 +23,7 @@ dependencies:
     - G.11
 ---
 
-# C.36.P: Cultural-Evolution Wording-Use Precision Restoration
+# C.36.P: Clarify Cultural-Evolution Wording for a Claim or Action
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -31,7 +31,7 @@ dependencies:
 
 ---
 
-## C.36.P - Cultural-Evolution Wording-Use Precision Restoration
+## C.36.P - Clarify Cultural-Evolution Wording for a Claim or Action
 
 > **Tech-name:** `CulturalEvolutionWordingUsePrecisionRestoration`
 > **Plain-name:** cultural-evolution wording-use precision restoration
@@ -176,7 +176,7 @@ CulturalEvolutionWordingRecoveryLine:
 
 #### C.36.P:5.2 - "This Tradition Is An Attractor"
 
-If `attractor` is a loose metaphor for a stable recognizable style, use a term bridge and C.36 case. If the project claims basin structure, stable dynamics, or state-transition law, use `A.3.3`, `C.27`, and `C.29` before C.36 relies on the claim.
+If `attractor` is a loose metaphor for a stable recognizable style, state that local meaning and use C.36 for the cultural-evolution case. Use F.9 only when an actual relation between distinct source-local cells is current. If the project claims basin structure, stable dynamics, or state-transition law, use `A.3.3`, `C.27`, and `C.29` before C.36 relies on the claim.
 
 #### C.36.P:5.3 - "Technique As Developmental Machinery"
 

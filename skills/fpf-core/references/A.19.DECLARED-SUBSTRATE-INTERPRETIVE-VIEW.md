@@ -1,9 +1,9 @@
 ---
 id: "A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW"
-title: "A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Declared-Substrate Interpretive View"
+title: "A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Interpretive Views of Declared Source Sets and Search/Outcome Spaces"
 ---
 
-# A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW: A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Declared-Substrate Interpretive View
+# A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW: A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Interpretive Views of Declared Source Sets and Search/Outcome Spaces
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -11,7 +11,7 @@ title: "A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Declared-Substrate Interpret
 
 ---
 
-## A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Declared-Substrate Interpretive View
+## A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Interpretive Views of Declared Source Sets and Search/Outcome Spaces
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -113,7 +113,7 @@ Examples include:
 - one atlas-form reading that collects several typed set views, active set results, spaces, declared map refs, metrics, or distortion notes so that cross-scale structure stays readable;
 - one interpretive rendering that helps the reader inspect the declared substrate without turning that rendering into the substrate's default meaning.
 
-Current FPF already points in that direction. `A.6.3` and `E.17.0` already give the general law that views are entityOfConcern-preserving and do not mint autonomous new semantics. `G.2` already keeps `TraditionAtlasView` as optional neighboring interpretation over one palette and declared set results rather than making atlas semantics the meaning of `Tradition` itself. What is still missing is one common interpretive-view pattern that:
+Current FPF already points in that direction. `A.6.3` governs EntityOfConcern-preserving epistemic viewing; `E.17.0` separately qualifies a resulting episteme as a `U.View` through viewpoint conformance. `G.2` already keeps `TraditionAtlasView` as optional neighboring interpretation over one palette and declared set results rather than making atlas semantics the meaning of `Tradition` itself. What is still missing is one common interpretive-view pattern that:
 
 - stays explicitly under existing view law;
 - keeps thinner interpretive views admissible;
@@ -194,10 +194,10 @@ The minimum ordinary interpretive view declaration is therefore:
 #### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:4.3 - Interpretive-view declaration laws (IV-0..IV-8)
 
 **IV-0 - View-law docking is explicit.**
-Every conforming interpretive view is one domain-specific use-site under existing `A.6.3` / `E.17.0` law. It does not introduce one autonomous new theory of views.
+An ordinary interpretive reading keeps its declared substrate recoverable. An asserted epistemic viewing follows `A.6.3`; an asserted `U.View` additionally satisfies `E.17.0` viewpoint conformance, as specified in §4.8.
 
 **IV-1 - The EntityOfConcern is preserved.**
-The interpretive view preserves the EntityOfConcern already carried by the base line. If the current prose would change that EntityOfConcern, the line is no longer one interpretive view over the same substrate.
+The interpretation continues to concern the declared substrate. In an A.6.3 epistemic viewing, the source and receiving epistemes preserve the same EntityOfConcern while their ClaimGraphs or ReferenceSchemes may differ. Changing that EntityOfConcern requires a separate retargeting account.
 
 **IV-2 - The base substrate remains the semantic center.**
 The interpretive view may foreground aspects of the base line, but it does not replace or repair the base substrate declaration. Substrate repair belongs back in `A.19.SOURCE-SET-SPACE-SUBSTRATE`.
@@ -282,14 +282,9 @@ If atlas form cannot state that composite interpretation view without invention,
 
 #### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:4.8 - No autonomous local view law is introduced here
 
-Read the docking to `A.6.3` / `E.17.0` strictly:
+Start with the declared substrate and the inspection question. An ordinary interpretation can stop with a recoverable explanation. When the use claims an A.6.3 epistemic viewing, identify the source episteme `X` whose ClaimGraph describes that substrate and the receiving episteme `Y` produced by the stated projection or re-expression. Both retain the same EntityOfConcern; state the transformed ClaimGraph and any changed ReferenceScheme explicitly.
 
-- the interpretive view preserves the EntityOfConcern already carried by the base line;
-- it does not silently mint new intensional commitments about that same EntityOfConcern;
-- it does not replace one viewpoint bundle or one publication-view family with one new local invention;
-- and it does not collapse viewpoint, view, and publication face into one word.
-
-If a case would need a different EntityOfConcern, a different generic view law, or one new viewpoint family, this pattern is no longer the governing pattern.
+Qualify `Y` as an `E.17.0` `U.View` only when it independently conforms to the named `U.Viewpoint` for that concern. A return to A.6.3 alone does not establish viewpoint conformance. Keep the viewpoint, the view episteme and any E.17 publication face separate. A different EntityOfConcern requires the applicable retargeting account; changing or repairing the substrate returns to `A.19.SOURCE-SET-SPACE-SUBSTRATE`.
 
 #### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:4.9 - Qualifier refs stay substrate-side
 
@@ -433,7 +428,7 @@ Treat a line as conforming only if every gate below passes.
 | ID | Gate question | Fail when | Repair or governing pattern |
 | --- | --- | --- | --- |
 | `CC-A19IV-1` | Is one already-declared base substrate or source-set entry point or set-result entry point named explicitly? | The interpretive view floats free of the line it is supposed to help read. | Cite the base substrate or the recoverable source-set entry point or set-result entry point. |
-| `CC-A19IV-2` | Is the interpretive view explicitly docked to existing `A.6.3` / `E.17.0` law? | The text presents itself as one autonomous local theory of views. | State the docking explicitly or apply the pattern that really defines the missing view law. |
+| `CC-A19IV-2` | When formal viewing is claimed, are the A.6.3 source and receiving epistemes recoverable, and is E.17.0 viewpoint conformance established separately for a `U.View` claim? | A pattern citation is treated as sufficient to establish either relation. | Recover the exact epistemes and viewing transformation; test the named viewpoint only when `U.View` qualification is needed. |
 | `CC-A19IV-3` | Does the line preserve the same EntityOfConcern and keep the base substrate as semantic center? | The interpretive prose retargets the EntityOfConcern or repairs the substrate in place. | Reopen under `A.19.SOURCE-SET-SPACE-SUBSTRATE`, `A.6.4`, or the appropriate neighboring pattern. |
 | `CC-A19IV-4` | Are the current source set, any active set result, and any active derived view or base palette recoverable? | The interpretive reading hides the base palette, base source/result, or active derived set result behind one fuller visible overlay. | Restore the missing recoverability fields. |
 | `CC-A19IV-5` | Is the active profile chosen honestly: thin interpretation or atlas interpretation? | Atlas language is used by reflex, or the line needs atlas interpretation but never says so. | State the profile explicitly and justify why thin interpretation is or is not sufficient. |
@@ -491,7 +486,7 @@ That is why `DeclaredSubstrateAtlasView` appears here as one richer interpretive
 
 | Practice line | Primary accepted basis | Practice demand disciplined here | Practical safeguard bought | Adoption stance |
 | --- | --- | --- | --- | --- |
-| Interpretive readings should remain entityOfConcern-preserving views rather than becoming fresh semantic centers. | `A.6.3` and `E.17.0` already require views to preserve the EntityOfConcern and not silently add new intensional commitments. | `IV-0`, `IV-1`, `IV-8`, `CC-A19IV-2`, `CC-A19IV-3`. | Keeps interpretive prose from quietly turning into retargeting or new view-law invention. | **Adopt.** Reuse the existing view law directly rather than minting one local alternative. |
+| Interpretive readings should remain entityOfConcern-preserving views rather than becoming fresh semantic centers. | `A.6.3` preserves EntityOfConcern between source and receiving epistemes; `E.17.0` adds independent viewpoint conformance for `U.View`. | `IV-0`, `IV-1`, `IV-8`, `CC-A19IV-2`, `CC-A19IV-3`. | Keeps interpretive prose from quietly turning into retargeting or new view-law invention. | **Adopt.** Reuse the existing view law directly rather than minting one local alternative. |
 | Palette-first SoTA synthesis already treats atlas interpretation as optional neighboring interpretation rather than the default meaning of `Tradition` or `SoTAPaletteDescription`. | `G.2:4.7` already keeps `TraditionAtlasView` as optional neighboring interpretation and preserves palette-first recoverability. | `IV-5`, `IV-6`, `IV-7`, `CC-A19IV-5`, `CC-A19IV-8`, worked slice `5.2`. | Keeps atlas form available without letting the most salient visible interpretive layer replace the base palette or family head. | **Adopt/Adapt.** Adopt palette-first recoverability and adapt it into one reusable common interpretive family. |
 | Contemporary QD, manifold, and atlas practice uses both projection-style interpretation and richer atlas or geometry qualifiers, while heavier metrics and transition models remain case-dependent rather than universally mandatory. | Current atlas, manifold, and QD practice treats richer declared map ref, metric, and transition apparatus as optional discipline tied to the case rather than as mandatory baseline machinery. | `IV-4`, `IV-5`, `IV-6`, `CC-A19IV-5`, `CC-A19IV-6`, `CC-A19IV-7`. | Keeps thinner interpretation admissible, keeps atlas interpretation reusable but non-default, and prevents rich formal qualifier from being smuggled in by default. | **Adapt.** Keep richer formal qualifier available without pretending it is the baseline for every interpretive reading. |
 

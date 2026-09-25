@@ -1,6 +1,6 @@
 ---
 id: A.6.4
-title: EntityOfConcern retargeting
+title: "EntityOfConcern Retargeting: Judge a Bounded Use Across Different Entities"
 status: Stable
 keywords: []
 dependencies:
@@ -27,7 +27,7 @@ dependencies:
     - E.24.PUB
 ---
 
-# A.6.4: EntityOfConcern retargeting
+# A.6.4: EntityOfConcern Retargeting: Judge a Bounded Use Across Different Entities
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -35,7 +35,7 @@ dependencies:
 
 ---
 
-## A.6.4 - EntityOfConcern retargeting
+## A.6.4 - EntityOfConcern Retargeting: Judge a Bounded Use Across Different Entities
 > **Status:** Stable
 > **Type:** Definitional pattern
 

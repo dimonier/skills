@@ -1,6 +1,6 @@
 ---
 id: A.2.9
-title: "`U.SpeechAct` (Communicative Work Kind, Occurrences, and Records)"
+title: "`U.SpeechAct` — Communicative Work and Its Intended Use"
 status: Stable
 keywords:
   - named receiving use
@@ -34,7 +34,7 @@ dependencies:
     - A.6.C
 ---
 
-# A.2.9: `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records)
+# A.2.9: `U.SpeechAct` — Communicative Work and Its Intended Use
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -42,7 +42,7 @@ dependencies:
 
 ---
 
-## A.2.9 — `U.SpeechAct` (Communicative Work Kind, Occurrences, and Records)
+## A.2.9 — `U.SpeechAct` — Communicative Work and Its Intended Use
 
 > **Status:** Stable
 > **Type:** Definitional work-ontic pattern

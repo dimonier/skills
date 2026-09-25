@@ -1,6 +1,6 @@
 ---
 id: E.4.DPF
-title: "Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly"
+title: "Domain and Local Principle Frameworks: Whether and How to Author and Publish"
 status: Stable
 keywords: []
 dependencies:
@@ -26,7 +26,7 @@ dependencies:
     - F.19
 ---
 
-# E.4.DPF: Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly
+# E.4.DPF: Domain and Local Principle Frameworks: Whether and How to Author and Publish
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -34,7 +34,7 @@ dependencies:
 
 ---
 
-## E.4.DPF - Domain Principle Framework Authoring and Publication-or-Access Carrier Assembly
+## E.4.DPF - Domain and Local Principle Frameworks: Whether and How to Author and Publish
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -287,7 +287,7 @@ Starter evaluation characteristics for a principle-framework improvement loop:
 | Adoption telemetry | Are repeated reader errors, skipped records, stale sources, and local-use failures made an explicit refresh or improvement trigger? Use `G.11` and `E.23`. |
 | Didactic first use | Can a first-time domain or local author write the first useful output without prior FPF developer knowledge? Use `E.11`, `E.12`, `E.21`, and `E.23`. |
 
-These are evaluation characteristics for selecting and framing improvement Work. They are not measurement programs by themselves. If the pass needs a DPF package adequacy result, use the predicate defined in `E.4.DPF.DA`; if it needs individual pattern quality, use `E.21`; if it needs DRR adequacy, FPF-level Pillar adequacy, measurement, evidence, or architecture-characteristic evaluation, state the exact subject assertion and use `E.9.DA`, `E.2.DA`, `C.16`, `A.10`, or the relevant architecture-characteristic pattern only as the locator for its definition or constraint.
+These are evaluation characteristics for selecting and framing improvement Work. They are not measurement programs by themselves. If the pass needs a DPF package adequacy result, use the predicate defined in `E.4.DPF.DA`; if it needs individual pattern quality, use `E.21`. For DRR adequacy, FPF-level Pillar adequacy, measurement, or architecture-characteristic evaluation, state the exact subject assertion under `E.9.DA`, `E.2.DA`, `C.16`, or the relevant architecture-characteristic pattern. For evidence use, apply `A.10` to recover the relied-on claim, independently established sources and support relations, currentness, and bounded reliance; keep each asserted local result under the pattern that defines or tests it.
 
 This episteme's A.3.2 MethodDescription use and its result-and-use account are sufficient only when a reader can answer: which framework episteme edition is being authored; what problem-and-solution architecture it renders; which sources and decisions shaped it; which patterns and material direct relations were selected; which relation or edition records a current maintenance use requires; which publication occurrence, form, carrier, or access relation exposes it; how quality improves; and when it returns for refresh or repair. If the account also claims dated Work or a result relation, identify that claim through its direct pattern; E.4.DPF requires neither claim merely to describe the authoring Method.
 

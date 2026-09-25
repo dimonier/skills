@@ -3,6 +3,7 @@ id: A.2.4
 title: "Episteme Evidence-Use and Status-Use Relations"
 status: Stable
 keywords:
+  - "first-use classification"
   - "evidence-use relation"
   - "status-use relation"
   - "source-use wording"

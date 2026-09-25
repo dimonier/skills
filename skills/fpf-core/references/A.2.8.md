@@ -1,6 +1,6 @@
 ---
 id: A.2.8
-title: "`U.Commitment` (Deontic Commitment Relation)"
+title: "`U.Commitment` — Individual Duties to Act or Refrain"
 status: Stable
 keywords:
   - individual duty
@@ -27,7 +27,7 @@ dependencies:
     - A.10
 ---
 
-# A.2.8: `U.Commitment` (Deontic Commitment Relation)
+# A.2.8: `U.Commitment` — Individual Duties to Act or Refrain
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -35,7 +35,7 @@ dependencies:
 
 ---
 
-## A.2.8 - `U.Commitment` (Deontic Commitment Relation)
+## A.2.8 - `U.Commitment` — Individual Duties to Act or Refrain
 
 > **Status:** Stable
 > **Type:** Definitional ontic pattern

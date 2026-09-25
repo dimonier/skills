@@ -1,6 +1,6 @@
 ---
 id: C.32.MLAO
-title: Multilevel Architecture Residual Optimization
+title: "Architecture Candidates to Reduce Cross-Scope Residuals"
 status: Stable
 keywords:
   - multilevel architecture residual optimization
@@ -31,7 +31,7 @@ dependencies:
     - B.3
 ---
 
-# C.32.MLAO: Multilevel Architecture Residual Optimization
+# C.32.MLAO: Architecture Candidates to Reduce Cross-Scope Residuals
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -39,7 +39,7 @@ dependencies:
 
 ---
 
-## C.32.MLAO - Multilevel Architecture Residual Optimization
+## C.32.MLAO - Architecture Candidates to Reduce Cross-Scope Residuals
 
 > **Type:** Architectural subpattern under C.32
 > **Status:** Stable
@@ -150,7 +150,7 @@ The tempting shortcut is to call the local improvement optimized. C.32.MLAO bloc
 | Optimization language | Objective, residual, front, and matrix language sounds decisive before the claim is typed. |
 | Declared-level recognition | Level and scope words are useful only after they are declared as holon-level refs or scope refs, or restored as stratification terms through `C.30.STRAT` before selected-structure use. |
 | Candidate action | When performing repair work, the practitioner must use the residual triage to prepare candidate changes. |
-| New burden | Every residual-reducing candidate change creates another cost or loss. |
+| New burden | A residual-reducing candidate can create another cost or loss; inspect the affected scopes rather than presuming either losslessness or a positive new burden. |
 
 ### C.32.MLAO:4 - Solution
 
@@ -163,11 +163,11 @@ Work in eight steps:
 3. Name the architecture-characteristic criteria rows and any Q-Bundle slots that make the residual worth reducing.
 4. Create or reference a C.32 candidate palette.
 5. For each candidate, state the residual it reduces, the selected structure changed, and the criteria rows affected.
-6. State the new burden, loss, exception, or source-return load created by that candidate.
+6. Assess the new burden, loss, exception, or source-return load that the candidate could create within the declared evolution window. State what is expected and unresolved; if none is identified, say which affected structures, scopes, and criteria were inspected.
 7. Record the evolution window and any support that only keeps candidate plurality or directionality alive, such as NQD, OEE, an archive or front, stepping-stone retention, ideality, or BLP.
 8. Stop at the frame, or name the pattern for the next question when a later claim is current: use `A.19.CPM` for explicit comparison, `A.19.SelectorMechanism` for set-returning selection, `G.5` for selected-set result declaration, `C.11` for local choice, `C.32.PAD` for an architecture decision, `C.30.AD` for architecture-description work, and `C.29` for mathematical-lens use. For publication, use `E.17` for a source-backed face and return to source, then `E.24.PUB` for the actual occurrence, form, carrier, audience, bounded use, and availability.
 
-Admit a residual-reducing candidate only when it answers the working questions: which declared holon-level ref or declared scope ref is affected, which selected structure changes, which architecture-characteristic row or Q-Bundle slot is at stake, what residual is reduced, what structure is preserved or lost, and what new burden appears.
+Admit a residual-reducing candidate only when it answers the working questions: which declared holon-level ref or declared scope ref is affected, which selected structure changes, which architecture-characteristic row or Q-Bundle slot is at stake, what residual is reduced, what structure is preserved or lost, and what new burden is expected or why none is currently identified.
 
 | Candidate change family | Use when | Repair it provides |
 |---|---|---|
@@ -177,7 +177,7 @@ Admit a residual-reducing candidate only when it answers the working questions: 
 | `addControlStructure` | Rate, feedback, policy, or supervisor conflict persists. | Adds or changes control relations, states timing burden, and names any direct control-responsibility predicate with actual participants; if none is admitted, records the exact missing governor instead of inferring responsibility from the control structure. |
 | `addInterfaceGrammar` | Variation grows through unmanaged interface variants. | Names allowed variation, conformance expectation, and exception risk. |
 | `repairFunctionBearerGap` | A residual-reducing functional change has no feasible bearer at the affected declared holon-level ref or scope ref. | Adds or changes an admitted bearer, splits the function, changes placement, resource access, or control relations, or rejects the candidate. Any responsibility change uses its direct domain predicate or exact missing governor. |
-| `addEvidenceScope` | Reusable candidate bearer lacks reusable evidence scope. | Makes evidence maintenance part of the candidate; claims about the validity or sufficiency of the evidence use belong to `A.10` when they are current. |
+| `addEvidenceScope` | Reusable candidate bearer lacks reusable evidence scope. | Makes evidence maintenance part of the candidate. For a current evidence use, apply `A.10` for source recovery and bounded reliance, and the applicable subject rule to judge whether the evidence supports the named claim or meets the named requirement. |
 | `addWorkMethodScope` | Repeated work remains bespoke because method structure is missing. | Proposes reusable method structure for the repeated work and names review or training burden. |
 | `repairArchitectureInfluenceCorrespondence` | The residual is carried by mismatch between one exact typed influence-side architecture source and transformed-side architecture content for the changed referent. | Open `C.32.CONWAY`; keep the changed referent and any actual A.3.4 `U.Transformation` separate, then prepare candidate alternatives that change the influence-source side, change the transformed side, change both, or keep a bounded mismatch. |
 | `acceptBoundedException` | Eliminating the residual costs too much now. | Records exception, source-return condition, and reopen trigger. |
@@ -228,7 +228,7 @@ If the current claim is explicit comparison, use `A.19.CPM` with admitted profil
 | **Proxy result substitutes for comparison or choice claim** | When a score, vector, graph partition, front, DSM, or C.29 lens output is used to prefer a candidate, name the selected structures, preserved structure, lost structure, architecture characteristic, and pattern for the next question. |
 | **Level or scale word is not typed** | Recover level, layer, tier, scope, and scale wording through `E.10.ARCH`, `C.30.STRAT`, and `C.16.P` as applicable; recover BOSC, MHT, MET, MFT, and emergence-family wording through `E.10` and `B.2.P` before declaring holon-level refs, scope refs, scale windows, B.2 whole reidentification, or C.32.MLAO residual claims. |
 | **Software-source overfit** | Treat software examples as domain lineage; admit other holons only after selected structures and affected scopes are recoverable. |
-| **Lossless repair is assumed** | Every residual-reducing candidate names the new burden it creates. |
+| **Lossless repair is assumed** | Inspect possible new burdens in the affected scopes. Name any expected burden or loss; if none is identified, state the inspected structures, criteria, and evolution window without claiming universal losslessness. |
 | **Front member is treated as durable optimum** | A front member has archive or front membership under an evolution window; membership does not establish a durable architecture optimum. |
 | **Stepping stone is erased too early** | Keep retained stepping stones visible through `C.18` or `C.19` when they preserve future residual-reduction reach. |
 | **Architecture-influence residual is hidden** | A residual between one typed influence-side architecture source and transformed-side architecture content must open `C.32.CONWAY`; keep the changed referent and any actual transformation separate, and prepare influence-source-side, transformed-side, joint, and bounded-mismatch candidates as comparison inputs or downstream candidate alternatives. |
@@ -259,7 +259,7 @@ If the current claim is explicit comparison, use `A.19.CPM` with admitted profil
 | `StaticOptimumClaim` | A current residual-reducing candidate is called optimal without an evolution window. | Add evolution window, source-return condition, reopen trigger, and the result stating the preference under its applicable pattern. |
 | `ArchitectureInfluencePairCollapse` | The influence-source and transformed-side architecture content, changed referent, or actual transformation are treated as one object. | Open `C.32.CONWAY`; recover each exact C.30 architecture side, the typed influence relation, the changed referent, any actual A.3.4 transformation, the residual-bearing locus, candidate alternatives, and any C.29 structural-similarity claim before residual framing. |
 | `LevelWordsNoLevels` | Text says level or scope without declared refs. | Use `C.30.STRAT` for stratification-term recovery or `B.2.P` for whole-reidentification wording, then return to residual triage before candidate framing. |
-| `OptimizationNoLoss` | Candidates show only gains. | Add new burden, known loss, or bounded exception. |
+| `OptimizationNoLoss` | Candidates show only gains without inspecting possible burdens. | Assess new burden, known loss, and bounded exception; record either the identified burden or the inspected basis for finding none in the declared window. |
 | `IdealityNoBurden` | A candidate removes a bearer or support function but does not name lost function, coupling, evidence, control, or source-return burden. | Use C.32 and C.31; name function-bearing transfer, characteristic changes, and BLP scale window or waiver if scale advantage is claimed. |
 | `FunctionNoBearerAtScope` | A functional change reduces one residual but no admitted bearer can carry it at the affected scope under resource, placement, control, or evidence constraints. | Add or change the bearer, split the function, change placement, resource access, or control relations, reduce the demand, or reject the candidate. Any responsibility claim uses its direct predicate or exact missing governor. |
 

@@ -1,6 +1,6 @@
 ---
 id: C.3.3
-title: "`KindBridge` and `CL^k` — Cross-local Correspondence between Distinct Kinds"
+title: "`KindBridge` and `CL^k` — Correspondence between Distinct Kinds"
 status: Stable
 keywords: []
 dependencies:
@@ -15,7 +15,7 @@ dependencies:
     - F.9
 ---
 
-# C.3.3: `KindBridge` and `CL^k` — Cross-local Correspondence between Distinct Kinds
+# C.3.3: `KindBridge` and `CL^k` — Correspondence between Distinct Kinds
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -23,7 +23,7 @@ dependencies:
 
 ---
 
-## C.3.3 - KindBridge and CL^k — Cross-local Correspondence between Distinct Kinds
+## C.3.3 - KindBridge and CL^k — Correspondence between Distinct Kinds
 
 > **One-line summary.** A changed practice, source, team, or scheme first triggers a comparison of kind definitions. If the same kind continues, reuse it and evaluate the receiving candidate afresh; no `KindBridge` is needed. When two independently identified kinds are distinct and a directional correspondence predicate holds, one `KindBridge` direct relation may obtain. A separate bridge-assertion episteme states direction, paired declaration editions, preservation or loss, `CL^k`, evidence, and admitted use. It never transfers source classification truth.
 

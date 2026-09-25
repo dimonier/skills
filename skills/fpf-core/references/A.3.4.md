@@ -1,6 +1,6 @@
 ---
 id: A.3.4
-title: "`U.Transformation`: Bounded Change Under Conditions"
+title: "U.Transformation: Actual Bounded Change Under Conditions"
 status: Stable
 keywords:
   - actual bounded change
@@ -37,7 +37,7 @@ dependencies:
     - C.29
 ---
 
-# A.3.4: `U.Transformation`: Bounded Change Under Conditions
+# A.3.4: U.Transformation: Actual Bounded Change Under Conditions
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -45,7 +45,7 @@ dependencies:
 
 ---
 
-## A.3.4 - U.Transformation: Bounded Change Under Conditions
+## A.3.4 - U.Transformation: Actual Bounded Change Under Conditions
 
 > **Type:** Definitional pattern
 > **Status:** Stable

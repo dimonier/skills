@@ -1,6 +1,6 @@
 ---
 id: A.6.3.CSC
-title: Controlled Semantic Coarsening
+title: "Controlled Semantic Coarsening: Shorten an Account for a Bounded Use"
 status: Stable
 keywords: []
 dependencies:
@@ -22,7 +22,7 @@ dependencies:
     - A.21
 ---
 
-# A.6.3.CSC: Controlled Semantic Coarsening
+# A.6.3.CSC: Controlled Semantic Coarsening: Shorten an Account for a Bounded Use
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -30,7 +30,7 @@ dependencies:
 
 ---
 
-## A.6.3.CSC - Controlled Semantic Coarsening
+## A.6.3.CSC - Controlled Semantic Coarsening: Shorten an Account for a Bounded Use
 
 > **Type:** Architectural (A)
 > **Status:** Stable

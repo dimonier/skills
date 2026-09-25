@@ -1,6 +1,6 @@
 ---
 id: A.6
-title: "Signature Stack & Boundary Discipline"
+title: "Signature Stack: Classify and Place Boundary Claims"
 status: Stable
 keywords:
   - signature and mechanism declarations
@@ -36,7 +36,7 @@ dependencies:
     - E.19
 ---
 
-# A.6: Signature Stack & Boundary Discipline
+# A.6: Signature Stack: Classify and Place Boundary Claims
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -44,7 +44,7 @@ dependencies:
 
 ---
 
-## A.6 - Signature Stack & Boundary Discipline
+## A.6 - Signature Stack: Classify and Place Boundary Claims
 
 > **Type:** Architectural (A)
 > **Status:** Stable

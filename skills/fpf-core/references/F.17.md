@@ -1,6 +1,6 @@
 ---
 id: F.17
-title: Unified Term Sheet
+title: Make a Settled Naming Decision Recoverable for Reuse (Unified Term Sheet)
 status: Stable
 keywords: []
 dependencies:
@@ -24,7 +24,7 @@ dependencies:
     - E.24.PUB
 ---
 
-# F.17: Unified Term Sheet
+# F.17: Make a Settled Naming Decision Recoverable for Reuse (Unified Term Sheet)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -32,7 +32,7 @@ dependencies:
 
 ---
 
-## F.17 - Unified Term Sheet
+## F.17 - Make a Settled Naming Decision Recoverable for Reuse (Unified Term Sheet)
 > **Type:** Lexical row pattern (F)
 > **Status:** Stable
 
@@ -329,11 +329,11 @@ An architecture pattern needs public names for `interfaceSlot`, `providedPort`, 
 
 #### F.17:12.4 - Misleading evidence-role row
 
-A sheet has a row labelled `Evidence role`. F.17 treats that wording as a trigger and recovers the governed object instead of admitting a U-kind. If an episteme is used as evidence for another claim, use `A.10`, `B.3`, or `A.2.4` for the evidence relation. If an admitted System performs evidence-producing Work, recover the exact actual performer through A.13 and admit the Work independently through A.15.1. Add a local system-role kind with A.2, an obtaining assignment with A.2.1, and Work attribution with F.6 only when the sheet or receiving use expressly represents those separate claims. The UTS may record selected names for those distinct values; a generic evidence-role row that fuses them is not admitted.
+A sheet has a row labelled `Evidence role`. Recover the governed object before choosing a name. For an episteme's evidence use, establish the direct relation under A.2.4 or its other subject rule; A.10 describes the evidence-provenance path and classifies the bounded reliance, and B.3 enters only for an actual named assurance claim. For dated evidence-producing Work, recover each precise performer's A.13 core, including the same obtaining assignment, and independently admit the Work under A.15.1. Add F.6 only when the row or receiving use needs precise assignment-bound attribution. A separately needed local-kind claim uses A.2 with C.3. The UTS may expose selected names for these distinct values; it does not admit a generic evidence-role row that fuses them.
 
 #### F.17:12.4a - Manufacturing batch across material and planning contexts
 
-A furnace team uses `batch` for one physically handled set of shafts that shares a heat-treatment run and traceability basis. A planning dashboard uses `batch` for a grouping of intended PlanItems. Spelling does not make these one governed value. Recover the physical batch under the material or production DPF pattern that supplies its identity and part-whole rules when the proposed comparison relies on either; recover the planning grouping and its relation to intended PlanItems under A.15.2. Record separate rows unless an obtaining F.9 Bridge states the exact semantic relation and a separate affirmative C.2.1 claim names the proposed comparison direction, correspondence rule, and tolerated loss with current A.10 or B.3 reliance. If either selected row edition must be made available, apply E.24.PUB separately. A `batch` row cannot turn a PlanItem grouping into a physical holon or make the physical batch a WorkPlan.
+A furnace team uses `batch` for one physically handled set of shafts that shares a heat-treatment run and traceability basis. A planning dashboard uses `batch` for a grouping of intended PlanItems. Spelling does not make these one governed value. Recover the physical batch under the material or production DPF pattern that supplies its identity and part-whole rules when the proposed comparison relies on either; recover the planning grouping and its relation to intended PlanItems under A.15.2. When the row gate is met, record separate rows for the distinct governed values. A needed semantic comparison may cite an obtaining F.9 Bridge and a separate affirmative C.2.1 claim stating direction, correspondence rule and tolerated loss with current reliance; those facts do not combine the values into one row. If either selected row edition must be made available, apply E.24.PUB separately. A `batch` row cannot turn a PlanItem grouping into a physical holon or make the physical batch a WorkPlan.
 
 #### F.17:12.4b - Clinical discharge wording
 
@@ -781,7 +781,7 @@ UnifiedPlainName: declaration of a local use of a kind
 NameCardRef: NC-KIND-USE-ADAPTATION-DECLARATION
 SenseCellRefs: SenseCell.KindUseAdaptationDeclaration.FPFCore.2026-08-09
 BridgeRefs: none
-RowRationale: both designations name the declaration episteme that pins one exact base kind and signature edition, one receiving use, its constraints or vocabulary bindings, definedness, and intended guard use
+RowRationale: both designations name the C.3.4 declaration-episteme family; each member pins one exact base kind and signature edition, one receiving use, its constraints or vocabulary bindings, definedness, and intended guard use
 AdmissibleUse: Core-facing citation of the C.3.4 declaration family
 BlockedUse: no kind, assignment, scope, profile, system role, guard decision, or judgment follows from this row
 RowEditionId: 2026-08-09
@@ -799,7 +799,7 @@ UnifiedPlainName: declaration of how two local ways of using kinds correspond an
 NameCardRef: NC-KIND-USE-ADAPTATION-CORRESPONDENCE-DECLARATION
 SenseCellRefs: SenseCell.KindUseAdaptationCorrespondenceDeclaration.FPFCore.2026-08-09
 BridgeRefs: none
-RowRationale: both designations name one declaration episteme stating deterministic correspondence and loss between two exact adaptation declarations
+RowRationale: both designations name the C.3.4 correspondence-declaration family; each member states deterministic correspondence and loss between two exact adaptation declarations
 AdmissibleUse: Core-facing citation of the C.3.4 correspondence-declaration family
 BlockedUse: no F.9 Bridge, executable adapter, mapping Method, representation correspondence, assignment, or target truth follows from this row
 RowEditionId: 2026-08-09
@@ -817,7 +817,7 @@ UnifiedPlainName: judgment of whether a candidate fits a local use of a kind
 NameCardRef: NC-KIND-USE-ADAPTATION-JUDGMENT
 SenseCellRefs: SenseCell.KindUseAdaptationJudgment.FPFCore.2026-08-09
 BridgeRefs: none
-RowRationale: both designations name the true, false, or unknown result for one candidate under pinned base-kind, signature, declaration-edition, and slice inputs
+RowRationale: both designations name the C.3.4 judgment family; each member is the true, false, or unknown result for one candidate under pinned base-kind, signature, declaration-edition, and slice inputs
 AdmissibleUse: Core-facing citation of the C.3.4 judgment family
 BlockedUse: no declaration, candidate, guard disposition, evidence result, or kind membership follows from this row
 RowEditionId: 2026-08-09
@@ -836,7 +836,7 @@ UnifiedPlainName: description of a system-role kind
 NameCardRef: NC-SYSTEM-ROLE-KIND-DESCRIPTION
 SenseCellRefs: SenseCell.SystemRoleKindDescription.FPFCore.2026-08-09
 BridgeRefs: none
-RowRationale: both designations name one F.4 description episteme whose exact EntityOfConcern is one local system-role kind
+RowRationale: both designations name the F.4 description-episteme construction; each member has one exact local system-role kind as its EntityOfConcern
 AdmissibleUse: Core-facing citation of the F.4 description-episteme construction
 BlockedUse: no described kind, assignment, NameCard, row, publication form, or carrier follows from this row
 RowEditionId: 2026-08-09
@@ -854,7 +854,7 @@ UnifiedPlainName: this assignment to a system role satisfies this state conditio
 NameCardRef: NC-SYSTEM-ROLE-ASSIGNMENT-STATE-RELATION
 SenseCellRefs: SenseCell.SystemRoleAssignmentStateRelation.FPFCore.2026-08-09
 BridgeRefs: none
-RowRationale: both designations name the direct relation between one exact U.SystemRoleAssignment occurrence and one by-value SystemRoleAssignmentStatePredicate
+RowRationale: both designations name the A.2.5 direct relation kind; each obtaining occurrence relates one exact U.SystemRoleAssignment occurrence and one by-value SystemRoleAssignmentStatePredicate
 AdmissibleUse: Core-facing citation of the A.2.5 direct relation kind
 BlockedUse: no state assertion, displayed status, predicate value, assignment, or obtaining occurrence follows from this row
 RowEditionId: 2026-08-09

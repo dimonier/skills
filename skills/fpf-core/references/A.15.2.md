@@ -1,6 +1,6 @@
 ---
 id: A.15.2
-title: "`U.WorkPlan`: The Schedule of Intent"
+title: "`U.WorkPlan`: Plan Content for Coordinating Future Work"
 status: Stable
 keywords:
   - "intended-work episteme"
@@ -36,7 +36,7 @@ dependencies:
     - A.15
 ---
 
-# A.15.2: `U.WorkPlan`: The Schedule of Intent
+# A.15.2: `U.WorkPlan`: Plan Content for Coordinating Future Work
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -44,7 +44,7 @@ dependencies:
 
 ---
 
-## A.15.2 - U.WorkPlan
+## A.15.2 - `U.WorkPlan`: Plan Content for Coordinating Future Work
 
 > **Type:** Architectural (A)
 > **Status:** Stable
@@ -148,7 +148,7 @@ Choose only the claims the team will use to coordinate the intended work. The li
 1. **Target method and description use** — the `U.Method` intended for enactment and, only when one plan claim relies on a particular `U.MethodDescription` episteme, that episteme and the relying instruction, constraint, or justification claim. Call the description an edition only when the C.2.1 `EpistemeEditionRelation` predicate obtains. The description neither identifies the method, constrains or justifies it by itself, nor becomes the enacted object.
 2. **Planned window or entry condition** — earliest start, latest finish, timebox, recurrence, blackout period, or another exact intended temporal condition.
 3. **Intended performer and system-role-kind conditions** — an intended performer `U.System` designator, the local system-role kind under which that performer is expected to qualify, its admission conditions, and, only when it already obtains, an assignment occurrence whose species is declared under `U.SystemRoleAssignment` and that is expected to cover later Work. A proposed holder-and-kind pair is not an actual assignment.
-4. **Capability requirement** — an exact A.2.2 threshold or `CapabilityFitCondition` needed for planned work entry. Cite an existing capability claim only when the plan relies on it. The plan neither creates `U.Capability` nor evaluates fit for the later work interval.
+4. **Capability requirement** — an exact A.2.2 threshold or `CapabilityFitCondition` needed for planned work entry. Cite an existing capability claim only when the plan relies on it. The plan establishes neither the holder's actual ability nor fit for the later work interval.
 5. **Resource budgets and reservations** — intended energy, materials, machine windows, money, and exact reservation claims. A planned budget is neither a performed resource-use fact nor a B.1.6 aggregate ledger result.
 6. **Dependencies and commitments** — state the source item or commitment, the affected target item, and the condition that blocks, orders, overlaps, or excludes the planned work. A cited gate, approval, source-currentness, or promise claim keeps its own predicate; the citation establishes neither gate passage, approval, promise fulfilment, nor world-side ordering.
 7. **Acceptance targets** — name the criterion and target value or window that a later evaluation will test. The target is not the evaluation or acceptance verdict.
@@ -293,7 +293,7 @@ Use this as a human-facing recognition palette, not a rigid schema or a definiti
 - **Future-work-as-entity.** Do not use a possible future performance or PlanItem designator as C.2.1's already identified EntityOfConcern or as a dated Work occurrence; keep it in plan claim content until an exact direct entity or occurrence exists.
 - **Plan-as-actual.** Do not treat a Gantt bar, Kanban ticket, shift rota, or calendar booking as performed work; identify or cite an exact Work occurrence admitted under `U.Work` only when A.15.1's occurrence basis is present.
 - **Workflow-as-schedule.** Do not infer a plan from a MethodDescription or flowchart; recognize a `U.WorkPlan` only when the claims state a present subject, intended-performance designator, horizon, window, constraints, the System intended to perform the Work or its local system-role-kind conditions, and any baseline needed for the current coordination decision.
-- **Assignment-or-capability-by-plan.** Do not treat an intended performer System, local system-role kind, proposed holder-and-kind pair, threshold, or capability reference as an obtaining `U.SystemRoleAssignment`, capability instance, or fit result for later Work; apply A.2.1/A.2.2 at the exact interval and use.
+- **Assignment-or-capability-by-plan.** Do not treat an intended performer System, local system-role kind, proposed holder-and-kind pair, threshold, or capability reference as an obtaining `U.SystemRoleAssignment`, actual holder ability, or fit result for later Work; apply A.2.1/A.2.2 at the exact interval and use.
 - **Budget-as-cost.** Do not book planned budgets as performed resource use; establish performed facts on exact A.15.1 Work and any aggregate ledger or allocation under B.1.6.
 - **Plan-shape overreach.** Do not force performed Work to match plan decomposition, infer non-fulfilment from a missing link or unavailable facts, or mint a fulfilment relation from a local comparison. Stop at a positive or governed-negative local compound assertion when it suffices; use a predicate-definition episteme for repeated semantics without occurrence identity; open relation-kind admission only for a named occurrence-facing need.
 - **Context-bridge overreach.** Do not bridge contexts as wholes or use F.9 to convert planned values, commitments, criteria, or verdicts. F.9 relates exact `SchemeSenseCell` values; apply checklist item 7 for the separate use claim and reliance result before any cross-context plan use.
@@ -324,7 +324,7 @@ Use this as a human-facing recognition palette, not a rigid schema or a definiti
 
 ### A.15.2:7e - Relations
 
-* **Builds on:** C.2.1 for episteme identity and local assertion identity; `A.15` for System-Role-Method-Work alignment; `A.15.1` for independently identified performed Work occurrences admitted under `U.Work`; A.2.1 for direct `U.SystemRoleAssignment` species; A.2.2 for capability instances, thresholds, and fit conditions; A.3.1 for `U.Method`; and A.3.2 for `U.MethodDescription`.
+* **Builds on:** C.2.1 for episteme identity and local assertion identity; `A.15` for System-Role-Method-Work alignment; `A.15.1` for independently identified performed Work occurrences admitted under `U.Work`; A.2.1 for direct `U.SystemRoleAssignment` species; A.2.2 for qualified holder-ability claims, thresholds and fit conditions; A.3.1 for `U.Method`; and A.3.2 for `U.MethodDescription`.
 * **Coordinates with:** A.15.3 for planned filling against exact governed declarations; A.6.1 for operation argument and result declarations; A.6.5 for RelationSignature participant declarations; A.6.RCD for the existing-direct/local-compound/reusable-predicate/relation-kind economy; E.24/E.24.UK for any later kind admission; A.6.REL only after an admitted direct or derived relation needs occurrence discipline; A.15.4 for work-relevant appearance-based reliance repair; A.15.5 for work-entry readiness; C.27.TA for direct temporal-aspect claims; B.1.4 for temporal aggregation; B.1.6 for performed-resource aggregation; A.10 for accounts of independently established evidence-provenance relations; B.3 for assurance; A.20 for internal constraint results and A.21 for gate decisions; C.32.P2S for architecturing-flow references to intended work; E.17 for publication-use questions; and F.9 only for exact cross-context `SchemeSenseCell` correspondence, with any proposed use and reliance routed through checklist item 7.
 * **Used by:** P2W carry-through when principle-to-work reasoning reaches WorkPlanning, and P2S carry-through when architecture-selected structures require intended-work epistemes. Both uses keep present plan subject, possible future performance, readiness, performed Work, actual use, evidence, gate, comparison, result, and downstream effect separately governed.
 

@@ -1,20 +1,33 @@
 ---
 id: F.15
-title: Static and Regression Conformance Harness for Unification
+title: Static and Regression Conformance Harness for Naming and Semantic Unification
 status: Stable
 keywords:
-  - static checks
-  - regression tests
-  - acceptance tests
-  - validation
-  - SenseCell testing.
+  - finite naming slice
+  - SCR
+  - RSCR
+  - static conformance
+  - regression
+  - exact versions
+  - SchemeSenseCell
+  - NameCard
+  - UnifiedTermRow
+  - Bridge
+  - result reuse.
 dependencies:
   builds_on:
-    - F.1
+    - F.4
+    - F.8
+    - F.9
+    - F.10
+    - F.13
     - F.14
+    - F.17
+    - F.18
+    - C.2.1
 ---
 
-# F.15: Static and Regression Conformance Harness for Unification
+# F.15: Static and Regression Conformance Harness for Naming and Semantic Unification
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,7 +35,7 @@ dependencies:
 
 ---
 
-## F.15 - Static and Regression Conformance Harness for Unification
+## F.15 - Static and Regression Conformance Harness for Naming and Semantic Unification
 > **Type:** Pattern
 > **Status:** Stable
 
@@ -326,7 +339,7 @@ changedMemberResult(priorRef, laterRef, rscrRef, continuityOrChangeClaim, losses
   = one exact C.2.1 result claim after the rule application and its evidence are recoverable.
 ```
 
-`changedSliceOK(...)` may summarize only the exact changed-member results. Unchanged members reuse prior results after a direct contradiction check; one changed member does not trigger a full-slice rerun unless its dependencies invalidate the other results.
+`changedSliceOK(...)` may summarize only exact current changed-member results that pass for the named receiving use; `fail` or `undetermined` leaves the affected use unadmitted. Unchanged members reuse prior results after a direct contradiction check; one changed member does not trigger a full-slice rerun unless its dependencies invalidate the other results.
 
 ```text
 failedRule(ruleRef, subjectClaimRef)
@@ -370,7 +383,7 @@ F.15 result:
 * SCR-F15-S14 requires F.10 for the status family/value, target, scope, window, source condition, and intended use, or the exact defining or testing rule for the current status claim.
 * A named cross-local comparison must pass SCR-F15-S12 and S13; the row or shared `availability` label does not create the Bridge.
 * Observation evidence and A.10 reliance are not the status value, comparison result, assurance claim, or F.15 result.
-* Use B.3 only when its assurance claim or material-reliance threshold is current; the slice establishes no assurance by inclusion.
+* Use B.3 only when an actual named assurance claim is current. If a direct rule requires that claim for this use, recover it first; materiality or slice membership alone establishes no assurance claim.
 
 #### F.15:13.3 - Rename a SystemRoleKindDescription without changing the described kind
 
@@ -446,9 +459,9 @@ F.15 blocks unification bias: shared spelling, table membership, a stable id, an
 A finite slice is locally admissible for its named receiving use only when:
 
 1. every scope member and exact version resolves under its identity rule and PatternID locator;
-2. every triggered static rule has one exact current C.2.1 result claim;
-3. every changed member has an exact prior/later pair and RSCR result naming continuity/change, losses, evidence, and use;
-4. every failed subject claim is re-evaluated under its defining or testing rule before reuse;
+2. every triggered static rule has an exact current C.2.1 `pass` result for the named receiving use; a `fail` or `undetermined` result leaves the affected use unadmitted;
+3. every changed member has an exact prior/later pair and a current passing RSCR result supporting the stated continuity/change, admitted losses and receiving use;
+4. every failed subject claim needed by the use is repaired and re-evaluated under its defining or testing rule, and the affected F.15 rule then passes before reuse;
 5. witness refs and any relied-on A.10/B.3 path are current for the exact result and use, without becoming the result;
 6. the optional record cites, but does not replace, applications/work, result claims, evidence, Bridge occurrences, descriptions, publication, or currentness;
 7. tempting non-admitted uses—system-role assignment, performed work, source or publication authority, status transfer, evidence use, equivalence, assurance, gate passage, and authorization—are explicit; and

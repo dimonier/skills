@@ -2,7 +2,14 @@
 id: C.30.ASV
 title: Architecture Structural View Adequacy (ASV)
 status: Stable
-keywords: []
+keywords:
+  - architecture structural view
+  - ASV
+  - structure kind
+  - viewpoint conformance
+  - hidden and lost structure
+  - correspondence
+  - source return.
 dependencies:
   builds_on:
     - C.30.P
@@ -497,7 +504,7 @@ FunctionalStructureViewUse ::= {
   selectedTransformationFlowStructureRefs?: FinSet(U.StructureRef constrained to TransformationFlowStructure),
   transformerSideFillerRefs?: FinSet(U.SystemRef),
   candidateBearerRefs?: candidate system refs; explicit gap refs,
-  capabilityRefs?,
+  holderAbilityClaimRefs?: qualified A.2.2 claims about identified holder Systems,
   inputConditionRefs?,
   outputConditionRefs?,
   functionalPortRefs?,

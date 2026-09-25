@@ -1,6 +1,6 @@
 ---
 id: B.2.4
-title: Capability and Functioning Whole Reidentification
+title: "Do Capability or Functioning Changes Require Whole Reidentification?"
 status: Stable
 keywords: []
 dependencies:
@@ -18,7 +18,7 @@ dependencies:
     - C.29
 ---
 
-# B.2.4: Capability and Functioning Whole Reidentification
+# B.2.4: Do Capability or Functioning Changes Require Whole Reidentification?
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,7 +26,7 @@ dependencies:
 
 ---
 
-## B.2.4 - Capability and Functioning Whole Reidentification
+## B.2.4 - Do Capability or Functioning Changes Require Whole Reidentification?
 
 > **Type:** Part B holonic construction pattern
 > **Status:** Stable
@@ -48,7 +48,7 @@ The first useful question is whether those facts can still be explained by the e
 - If function-like wording hides the exact claim, use `A.6.F` to recover its direct subject pattern; an already precise functioning claim returns directly to that pattern.
 - If the claim is transformation or transformation-flow structure, use `A.3.4` or `E.18` respectively; use `C.30.TFS-REL` for the selected structure's bounded architecture use.
 - If the claim is method, method relation, method description, work plan, or work occurrence, use `A.15`, `A.3.1`, `A.3.2`, `A.15.2`, and `A.15.1`.
-- If the claim is module allocation or bearer allocation, use `A.6.M`, `C.30`, `A.22`, and `C.30.ASV` according to whether the live claim concerns the module, architecture, selected structure, or architectural structural view.
+- If bearer allocation is the question, use the direct allocation or parthood pattern. Use `A.6.M` only for unresolved module/interface wording, and `C.30`, `A.22` or `C.30.ASV` only for the current architecture, selected-structure or architectural-view claim.
 - If the claim is measurement, threshold, score, robustness, quality, or a whole-level characteristic, use `C.16` and `A.19` for that claim and `A.10` only when evidence use is current.
 - If the wording is ambiguous emergence, synergy, or title-mnemonic language, use `B.2.P` before selecting B.2.4.
 
@@ -105,7 +105,7 @@ Before applying B.2, test whether the exact facts are already explained under a 
 | Method relation or method family | `A.3.1` for Method identity, `B.1.5` for composition, `A.15` for role–Method–Work alignment, and `G.5` for registry or selector-facing use; use the direct pattern for any separately claimed family relation and `C.29` only when a lens is used | the exact method facts change the whole, not merely the way of doing |
 | Method description or procedure text | `A.3.2` and `C.2.1` distinguish the MethodDescription and its episteme identity; use `E.17` or `E.24.PUB` for a current publication occurrence, form, or carrier, `C.2.P` for unresolved source-expression or source-to-use wording, and `A.10` or `G.6` only when evidence provenance is relied on | an in-life whole-reidentification question remains after the description is separated |
 | Work plan or work occurrence | `A.15.2`, `A.15.1` | exact planned or performed work facts leave a new-whole question; the plan or occurrence is not the whole by label |
-| Module, component, or bearer allocation | `A.6.M`, `C.30`, `A.22`, `C.30.ASV` | exact allocation and architecture facts defeat the existing-whole explanation |
+| Module, component, or bearer allocation | The direct allocation or parthood pattern; `A.6.M` for unresolved module/interface wording; `C.30`, `A.22` or `C.30.ASV` only for the corresponding claim | exact allocation and architecture facts defeat the existing-whole explanation |
 | Metric, score, threshold, robustness, or quality claim | `C.16`, `A.19`; `A.10` only for evidence use | the underlying characteristic facts, not the score or support record alone, defeat that explanation |
 
 #### B.2.4:4.3 - Existing-Whole Explanation
@@ -124,7 +124,7 @@ Subject-pattern explanations that often stop B.2.4 include:
 - architecture-view or transformation-flow-structure repair;
 - better evidence, measurement, or source currentness for an unchanged world-side claim.
 
-If one of these explanations is sufficient, do not use B.2.4. Use the subject pattern.
+If one of these explanations is sufficient, finish B.2.4 by retaining the existing whole and continue with the subject pattern.
 
 #### B.2.4:4.4 - When B.2.4 Requires B.2
 

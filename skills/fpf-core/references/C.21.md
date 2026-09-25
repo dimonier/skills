@@ -1,14 +1,18 @@
 ---
 id: C.21
-title: "Discipline‑CHR - Field Health & Structure"
+title: "Field Health & Structure (Discipline-CHR)"
 status: Stable
 keywords:
   - discipline
   - field health
   - reproducibility
   - standardisation
+  - formal recognition
+  - practice adoption
   - alignment
-  - disruption.
+  - disruption
+  - evidence resolution
+  - diversity.
 dependencies:
   builds_on:
     - C.16
@@ -20,7 +24,7 @@ dependencies:
     - G.2
 ---
 
-# C.21: Discipline‑CHR - Field Health & Structure
+# C.21: Field Health & Structure (Discipline-CHR)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**

@@ -4,6 +4,9 @@ title: Architecture Characteristic Eval Programs
 status: Stable
 keywords:
   - "architecture-characteristic eval program"
+  - "architecture fitness-function source wording"
+  - "current-architecture evaluation"
+  - monitoring
   - eval result
   - measurement boundary
   - parity frame

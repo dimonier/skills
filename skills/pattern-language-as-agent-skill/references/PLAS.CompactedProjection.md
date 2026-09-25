@@ -229,7 +229,7 @@ without inventing a mode.
 |---|---|---|---|
 | `agent-skill-builder` `ASB.Compaction` (Move 1 runtime allow-list = method + trigger + router; Move 2 render; opt-in Gate 0) | Adopt | Card frontmatter/`relations.md` dropped as outside the allow-list; the FPF link moves to a body slot | Reopen if the compaction/PLAS boundary changes |
 | `episteme-compaction` `ECPF.1`/`ECPF.2` (F3 hybrid, `sourceClaims`/`fpfMetadata`, named template) | Adopt | Notation and split referenced, not restated; procedural template sanctioned | Reopen on an ECPF edition change |
-| PLAS `DEC-0019`/`DEC-0020` (single authored graph home) + `DEC-0016` (collective readiness) | Adapt | In the projection the graph home is the canonical source; readiness is collective; FPF link is the in-block slot | Reopen on PLAS graph/status revision |
+| PLAS `PLAS.SkillLayout` (single authored graph home) + `PLAS.PatternBody` (collective readiness) | Adapt | In the projection the graph home is the canonical source; readiness is collective; FPF link is the in-block slot | Reopen on PLAS graph/status revision |
 | FPF `E.4.DPF`/`C.33` (carrier vs edition) + `E.4.PFR:3.2` (one assertion, derived views) | Adopt | Projection → canonical source; per-carrier threshold | Reopen on FPF revision |
 | Feedback `feedback-plas-compacted-projection.md` + `-frontmatter.md` (2026-09-13) | Adapt | The carrier card, the no-frontmatter norm, and the FPF-slot for non-self-sufficient carriers | Reopen on new compacted-carrier signals |
 

@@ -27,8 +27,8 @@
   skill's own `references/*.md`; no externally published projection document exists).
 - **Field / field boundary:** the practice "managing project state in a
   markdown-vault": capturing state from sources (transcripts/dialogues), binding
-  external research, track lifecycle, work records, artifact creation, report
-  creation, schema and ID integrity.
+  external research, track lifecycle, work records, artifact creation, schema and
+  ID integrity.
 - **Dependency chain (unidirectional, `E.5.3`):** `project-vault` → `FPF` → (nothing).
   `create-agent-skill` — a skill dependency on carrier mechanics, not an FPF pattern.
   `pdf2md` — a skill dependency of `PV.Inbox` (PDF conversion).
@@ -41,13 +41,14 @@
 
 Revisit this skill (reopen → refresh per `G.11`) on any of the following:
 
-1. **Source change** (`E.4.PFR`, G.11 `EditionPinChange`): a revision of the FPF Core
-   patterns that the cards' frontmatter `dependencies` build on (`A.7`, `A.10`,
-   `A.15.1`, `A.15.2`, `C.2.1`, `C.32.ADR`, `C.33`, `E.9`, `F.14`, `F.18`,
-   `G.11`).
+1. **Source change** (`E.4.PFR`, G.11 `EditionPinChange`): a revision of any FPF Core
+   pattern present in the cards' frontmatter `dependencies` (`builds_on` /
+   `coordinates_with`) — the single authored home of the content edges; the pattern
+   list is not repeated here.
 2. **Vault schema change** (the field boundary of the practice): a new entity kind,
-   a new directory, a new carrier or search tool → edit `PV.VaultSchema` and the
-   affected neighbouring bodies.
+   a new directory, a new carrier or search tool, or the retirement/migration of
+   entity kinds (`PV.Migration`) → edit `PV.VaultSchema` and the affected
+   neighbouring bodies.
 3. **PLAS change** (`E.4.PFAD` revision): the `pattern-language-as-agent-skill` skill
    changes conformance requirements (E.8 sections, EntryRoute, carrier mechanics).
 4. **Local-use telemetry** (G.11 `TelemetryDelta`): the owner reports that the skill
@@ -64,13 +65,5 @@ full "tsar-track" rebuild.
 ## Relation graph
 
 <!-- BEGIN GENERATED GRAPH -->
-### Specialization — authored (`specializes`, child → parent)
-
-| From (child) | Relation | To (parent) |
-|---|---|---|
-
-### Specialization — derived inverse (`specialized_by`, parent → child)
-
-| From (parent) | Relation | To (child) |
-|---|---|---|
+_No intra-LPF Specialization edges (sibling cards). FPF content edges live only in card frontmatter._
 <!-- END GENERATED GRAPH -->

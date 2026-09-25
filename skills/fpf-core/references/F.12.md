@@ -1,6 +1,6 @@
 ---
 id: F.12
-title: Service Acceptance–Work Evidence Link
+title: Evaluate Promise Fulfilment from Work Evidence (Service Acceptance)
 status: Stable
 keywords:
   - PromiseContent
@@ -30,7 +30,7 @@ dependencies:
     - F.9
 ---
 
-# F.12: Service Acceptance–Work Evidence Link
+# F.12: Evaluate Promise Fulfilment from Work Evidence (Service Acceptance)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -38,12 +38,12 @@ dependencies:
 
 ---
 
-## F.12 — Service Acceptance–Work Evidence Link
+## F.12 — Evaluate Promise Fulfilment from Work Evidence (Service Acceptance)
 
 **“Judge a promise from what happened, in a stated window, with evidence that actually bears on the promised outcome.”**
 **Status.** Architectural pattern.
 **Builds on:** F.1 **Question-Relative Source Selection**; F.0.1, F.2, F.3, and F.17 for exact source-local meaning and optional addresses; F.5 for naming; F.9 only for actual relations between local meanings; F.10 for status families and windows; F.11 for the Method, MethodDescription, and Work distinctions; A.2.3 for `U.PromiseContent`; A.15.1 for evaluation Work; and A.6.1 for the applied evaluation operation and its result binding.
-**Coordinates with.** C.2 and C.16 for observation, characteristic, scale, unit, and measured-value claims; A.3.2 when a selected evaluation MethodDescription edition changes the result; A.10 for evidence use; B.3 only when assurance is claimed or reliance is material; C.16.P and A.6.RCD when indicator or proxy wording hides an unsupported relation; E.13 only when a proxy is optimized or used as a target, incentive, gate, release argument, reputation signal, repair target, or decision driver; and direct transformation or control patterns when outputs are material.
+**Coordinates with.** C.2 and C.16 for observation, characteristic, scale, unit, and measured-value claims; A.3.2 when a selected evaluation MethodDescription edition changes the result; A.10 for evidence use; B.3 only when an actual named assurance claim is current; C.16.P and A.6.RCD when indicator or proxy wording hides an unsupported relation; E.13 only when a proxy is optimized or used as a target, incentive, gate, release argument, reputation signal, repair target, or decision driver; and direct transformation or control patterns when outputs are material.
 **Non-goals.** No team workflow, tool, record format, or universal acceptance object. F.12 explains the minimum claims needed for a defensible judgement.
 
 ### F.12:1 - Intent & applicability
@@ -101,7 +101,7 @@ The operation's result value comes first. A RequirementStatus assertion of `Sati
 * **Status use** — a separate F.10 application of an exact EvidenceStatus or RequirementStatus value to its exact target, scope, window, and use after the direct result is recovered.
 * **Verdict episteme** — an optional C.2.1 episteme that states the evaluation result or status when another use needs a durable assertion; it is not the operation result or the fulfilment relation.
 * **Indicator or proxy relation** — only a separately defined or tested relation in which one observed characteristic or result stands in for another subject or outcome for this use, with exact participants, coverage, and loss. The word *proxy* does not create it.
-* **Evidence use and reliance** — an A.10 evidence-use relation and, only for assurance or material reliance, the B.3 branch. Neither creates an indicator relation or the acceptance result.
+* **Evidence use and reliance** — the independently established direct relations supporting the acceptance claim, represented in A.10's descriptive evidence-provenance path, with a local reliance disposition for the bounded use. B.3 enters only for an actual named assurance claim. Neither the path nor the disposition creates an indicator relation or the acceptance result.
 
 ### F.12:6 - The binding, as eight practical rules
 
@@ -115,7 +115,7 @@ Ask whether the observation and measurement model directly concern the promised 
 If a distinct observed indicator stands in for the promised characteristic or outcome, name both participants and cite the pattern that defines or tests that exact relation. Use C.16.P to recover the construction and distortion risk. If no current rule supplies the relation, stop with A.6.RCD `missing-governor`; do not treat the word *proxy*, A.10 evidence use, or B.3 reliance as its substitute. Use E.13 only when the indicator is optimized or used as a target, incentive, gate, release argument, reputation signal, repair target, or decision driver.
 
 **R4 — Perform the evaluation.**
-Name the System that performs dated evaluation Work and the evaluation Method it enacts. Identify the A.6.1 operation application, its selected facts and state references, the applied acceptance rule, and the result binding. Surface a particular MethodDescription edition only when selecting that edition changes the result or its replay.
+Recover each evaluator's A.13 core and let A.15.1 independently admit the dated evaluation Work, including the actual evaluation Method it enacts, as required by A.2.3:4.3. Add F.6 only when the account needs precise attribution through that same obtaining assignment. Identify the A.6.1 operation application, its selected facts and state references, the applied acceptance rule, and the result binding. Surface a particular MethodDescription edition only when selecting that edition changes the result or its replay.
 
 **R5 — Use the declared result scale.**
 Name the characteristic, scale, unit, aggregation, comparison, and admissible result values through the acceptance specification's `verdictScaleDescriptionRef`. Typical calculation shapes include:
@@ -129,7 +129,7 @@ Name the characteristic, scale, unit, aggregation, comparison, and admissible re
 The calculation shape does not select a verdict scale. Use the exact scale declared by the acceptance specification.
 
 **R6 — State every needed relation directly.**
-Use A.2.3 for promise use, delivery, and fulfilment; C.16 for observation and measurement; the defining or testing pattern for any indicator relation; A.10 for evidence use; B.3 only for assurance or material reliance; and F.9 only when distinct local meanings themselves require a semantic relation. One generic Bridge cannot establish clause–Work fit, measurement, indicator validity, evidence, evaluation, status, or fulfilment.
+Use A.2.3 for promise use, delivery, and fulfilment; C.16 for observation and measurement; the defining or testing pattern for any indicator relation; A.10 for the descriptive evidence-provenance path and bounded reliance on independently established direct relations; B.3 only for an actual named assurance claim; and F.9 only when distinct local meanings themselves require a semantic relation. One generic Bridge cannot establish clause–Work fit, measurement, indicator validity, evidence, evaluation, status, or fulfilment. A passing reliance disposition requires the evidence demanded by the acceptance claim and its direct rule; a descriptive path alone is insufficient.
 
 **R7 — Keep the window and population explicit.**
 A monthly verdict, a batch verdict, and an incident verdict are different claims. A new promise, monitor, or window does not rewrite an earlier verdict.
@@ -138,6 +138,8 @@ A monthly verdict, a batch verdict, and an incident verdict are different claims
 Keep the operation result on its declared acceptance scale. Map it to `RequirementStatus=Satisfied` or `RequirementStatus=Violated` only through the exact F.10 rule. If evidence coverage, indicator adequacy, scale conversion, or relation support is insufficient, use `EvidenceStatus=Inconclusive`, leave `RequirementStatus=Pending`, or return the exact local result declared by the acceptance scale. Create a C.2.1 verdict episteme only when another use needs that durable assertion.
 
 ### F.12:7 - Evaluation shapes
+
+The calculation shapes and examples below take independently admitted delivery and evaluation Work as inputs under A.2.3:4.3. Their population, measurement and acceptance claims still need the stated local basis.
 
 #### F.12:7.1 - Availability share
 
@@ -166,7 +168,7 @@ Promise: restoration occurs within 60 minutes for each in-scope incident. Delive
 7. **Declared result scale.** Characteristic, scale, unit, aggregation, threshold, exclusions, and admissible result values are stated as applicable. Boolean, trichotomous, graded, `N/A`, and `Inconclusive`-including scales are examples, not defaults.
 8. **Status separation.** `Satisfied` and `Violated` are RequirementStatus values reached only through a direct acceptance result. `Inconclusive` is an EvidenceStatus value unless the declared local result scale independently admits that label; insufficient evidence otherwise leaves RequirementStatus pending.
 9. **Optional verdict episteme.** A durable C.2.1 assertion is created only for a named later use and never replaces the application result, status-use occurrence, evidence relation, or fulfilment relation.
-10. **Bounded reliance.** A.10 governs evidence use; B.3 is used only for assurance or material reliance; E.13 is used only for an optimized or decision-driving proxy.
+10. **Bounded reliance.** A.10 supplies the descriptive evidence-provenance path and local bounded-reliance disposition; B.3 is used only for an actual named assurance claim; E.13 is used only for an optimized or decision-driving proxy.
 11. **Non-retroactivity.** Later promise, monitor, MethodDescription edition, or interpretation changes do not silently alter past evaluations or assertions.
 12. **Cells are addresses only.** An F.17 cell may identify local meaning but establishes none of the substantive claims above.
 
@@ -184,7 +186,7 @@ Promise: restoration occurs within 60 minutes for each in-scope incident. Delive
 
 The promise content states `[720,740] °C` during the soak phase. The delivery Work is the actual batch soak occurrence. Calibrated thermocouple observations either measure the product characteristic directly or use a separately defined sensor-location indicator relation. Evaluation Work applies the band rule and binds its result. An out-of-band result can support `RequirementStatus=Violated`; insufficient spatial evidence supports `EvidenceStatus=Inconclusive` and leaves the requirement pending unless the declared acceptance scale specifies another local result.
 
-#### F.12:9.3 - Incident MTTR
+#### F.12:9.3 - Incident restoration duration
 
 The promise content states restoration within 60 minutes per in-scope incident. Each incident-handling Work has observed start and restoration events. A separate evaluation Work occurrence applies the declared event and subtraction rule; its application binds those timestamps and returns the result. A playbook may be the selected evaluation MethodDescription when its edition changes that rule, but it is not the Work or proof of the duration.
 
@@ -220,9 +222,9 @@ Promise content: at least 90% of in-scope ischemic-stroke episodes achieve door-
 
 Promise content: product temperature remains in `[2,8] °C` for at least 99.5% of each day. Delivery Work: the daily storage occurrence or defined population. Evidence: calibrated thermistor observations. First ask whether the measurement model directly concerns product exposure. If sensor position indicates another characteristic, name the exact indicator relation and its stratification loss or stop at `missing-governor`. Evaluation Work returns in-band covered time divided by in-scope time on the declared scale. Any result assertion, RequirementStatus, evidence use, and material reliance statement retain the indicator limit separately.
 
-#### F.12:11.4 - SaaS incident MTTR
+#### F.12:11.4 - SaaS incident restoration duration
 
-Promise content: MTTR ≤ 60 minutes for each in-scope incident. Delivery Work: each incident-handling occurrence. Evidence: observed start-fix and restoration events. Evaluation Work applies the declared duration operation and binds one result per incident. Quarterly reporting explicitly aggregates those results or their separately warranted statuses.
+Promise content: restoration within 60 minutes for each in-scope incident. Delivery Work: each incident-handling occurrence. Evidence: observed start-fix and restoration events. Evaluation Work applies the declared duration operation and binds one result per incident. Quarterly reporting explicitly aggregates those results or their separately warranted statuses.
 
 ### F.12:12 - Safe reasoning moves
 
@@ -232,7 +234,7 @@ Promise content: MTTR ≤ 60 minutes for each in-scope incident. Delivery Work: 
 4. **Recover an indicator only when needed.** When another characteristic stands in, name both participants, the defining or testing pattern, coverage, and loss. Use C.16.P for recovery and A.6.RCD `missing-governor` when the relation is absent.
 5. **Check values.** Name characteristic, scale, unit, aggregation, and uncertainty.
 6. **Perform the evaluation.** Name the performing System, evaluation Work, enacted Method, exact A.6.1 application, input bindings, and result binding. Cite a particular MethodDescription edition only when it changes the result or replay.
-7. **Use evidence directly.** Record the A.10 evidence-use claim. Enter B.3 only for assurance or material reliance, and E.13 only when a proxy is optimized or drives a decision, gate, incentive, release argument, reputation signal, or repair.
+7. **Use evidence directly.** Recover the direct evidence-use claims, the descriptive A.10 path and its bounded-reliance disposition. Enter B.3 only for an actual named assurance claim, and E.13 only when a proxy is optimized or drives a decision, gate, incentive, release argument, reputation signal, or repair.
 8. **Keep the result on its declared scale.** Boolean, trichotomous, graded, `N/A`, and `Inconclusive`-including scales are examples, not defaults.
 9. **Map status separately.** Use `RequirementStatus=Satisfied` or `RequirementStatus=Violated` only through the direct acceptance result. Evidence insufficiency can support `EvidenceStatus=Inconclusive` and leave the requirement pending, or produce an exact locally declared result.
 10. **Create a verdict episteme only on demand.** Use C.2.1 only when another use needs a durable assertion about the result or status.
@@ -247,7 +249,7 @@ Promise content: MTTR ≤ 60 minutes for each in-scope incident. Delivery Work: 
 - Use **F.5** for clear designations, **F.9** only for an actual relation between distinct local meanings, **F.10** for separate EvidenceStatus and RequirementStatus uses and windows, and **F.11** to keep Method, MethodDescription, Work, and output distinct.
 - Use **A.2.3** for exact promise content, PromiseContentUse, delivered outcome, and fulfilment; **A.15.1** for delivery and evaluation Work; and **A.6.1** for the exact evaluation-operation application and result binding.
 
-**Uses direct subject patterns.** Use C.2 and C.16 for observations, characteristics, scales, units, and measured values. When the measurement does not directly concern the promised characteristic, use C.16.P to recover the distinct indicator relation and cite the pattern that defines or tests it; use A.6.RCD `missing-governor` when no such rule exists. Use A.10 for evidence use, B.3 only for assurance or material reliance, E.13 only for optimized or decision-driving proxies, and the appropriate direct pattern for kind, control, or transformation claims.
+**Uses direct subject patterns.** Use C.2 and C.16 for observations, characteristics, scales, units, and measured values. When the measurement does not directly concern the promised characteristic, use C.16.P to recover the distinct indicator relation and cite the pattern that defines or tests it; use A.6.RCD `missing-governor` when no such rule exists. Use A.10 for descriptive provenance and bounded reliance, B.3 only for an actual named assurance claim, E.13 only for optimized or decision-driving proxies, and the appropriate direct pattern for kind, control, or transformation claims.
 
 **Constrains:** Reporting and assurance keep promise content, delivery Work, observation, measured value, window, evaluation Method and Work, operation application, result binding, declared result scale, optional verdict episteme, EvidenceStatus, RequirementStatus, evidence use, material reliance, any defined indicator relation, and any F.9 relation distinct. A relation-specific CL or loss is reported with that relation, not folded into the result or status.
 

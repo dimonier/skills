@@ -4,14 +4,13 @@ title: Architecture Description Adequacy
 status: Stable
 keywords:
   - architecture description
-  - "ArchitectureDescription@Context"
-  - architecture description use card
-  - architecture structural view
-  - viewpoint
-  - correspondence
+  - ArchitectureDescription
+  - "multi-view description"
+  - viewpoint conformance
+  - "cross-view correspondence"
   - source return
-  - "specification-use boundary"
-  - "candidate-description boundary."
+  - freshness
+  - specification use.
 dependencies:
   builds_on:
     - C.30

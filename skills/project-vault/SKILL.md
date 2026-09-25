@@ -1,10 +1,10 @@
 ---
 name: project-vault
 description: >-
-  Maintains project state in a markdown vault (decisions, open questions, risks,
-  contradictions) from transcripts, notes, PDFs, or owner chat.
-  Governs working tracks as the mandatory container for productive work. Use
-  after meetings, briefings, decisions; inbox/outbox; vault init.
+  Maintains project state in a markdown vault: a single decision card carrying
+  decisions, questions, risks, contradictions as status-based positions
+  (open/proposed/accepted). Governs working tracks as the mandatory container for
+  work. Use after meetings, decisions; inbox/outbox; vault init, migration.
 ---
 
 # Project Vault — Local Practices Framework (LPF)
@@ -18,13 +18,13 @@ the owner (name — in the repo root `AGENTS.md`) + an AI assistant.
 |---|---|
 | Understand the vault schema: entities, directories, ID allocation, discovery | `references/PV.VaultSchema.md` |
 | Process the inbox (transcripts, PDFs, articles, research) | `references/PV.Inbox.md` |
-| Update state from a meeting transcript / dialog news (DEC/Q/RISK/CON) | `references/PV.StateUpdate.md` |
+| Update state from a meeting transcript / dialog news (DEC card, open/proposed/accepted) | `references/PV.StateUpdate.md` |
 | Bind an external study/article/report two-way | `references/PV.ExternalResearch.md` |
 | Manage tracks / continue work in a track | `references/PV.Track.md` |
 | Create a track-bound artifact | `references/PV.Artifact.md` |
 | Record a substantive step (WRK) | `references/PV.WorkRecord.md` |
-| Create a report / assemble the meeting agenda | `references/PV.Report.md` |
 | Initialize a new vault (scaffold copy, inbox/outbox creation) | `references/PV.Init.md` |
+| Migrate an old vault (retire legacy kinds / directories into DEC card + artifacts) | `references/PV.Migration.md` |
 | Send outgoing feedback/a proposal to another system or skill | `references/PV.Outbox.md` |
 
 ## Navigation rule
@@ -38,6 +38,7 @@ Several usage scenarios — enter per use-case (there is no single linear chain)
 - **Productive work in a track** → start with `PV.Track`; record steps via
   `PV.WorkRecord`, artifacts via `PV.Artifact`.
 - **Initialize a vault** → `PV.Init`.
+- **Migrate an old vault** → `PV.Migration`.
 - **Send feedback to another system/skill** → `PV.Outbox`; the recipient processes
   it as a normal `PV.Inbox` arrival.
 

@@ -10,6 +10,10 @@ keywords:
   - environment
   - mereology
   - completeness
+  - turnkey
+  - "end-to-end"
+  - coverage
+  - completion
   - order/time
   - "publication-carrier and EntityOfConcern/Description distinction"
   - "system-role–Method–Work distinctions."

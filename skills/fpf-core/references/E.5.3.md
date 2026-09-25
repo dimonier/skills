@@ -1,16 +1,8 @@
 ---
 id: E.5.3
-title: Unidirectional Dependency
+title: Unidirectional Dependency between FPF Families
 status: Stable
-keywords:
-  - dependency
-  - layers
-  - architecture
-  - modularity
-  - acyclic
-  - Core
-  - Tooling
-  - Pedagogy.
+keywords: []
 dependencies:
   constrains:
     - E.4
@@ -18,7 +10,7 @@ dependencies:
     - E.5
 ---
 
-# E.5.3: Unidirectional Dependency
+# E.5.3: Unidirectional Dependency between FPF Families
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -26,12 +18,12 @@ dependencies:
 
 ---
 
-## E.5.3 - Unidirectional Dependency
+## E.5.3 - Unidirectional Dependency between FPF Families
 
 ### E.5.3:1 - Problem frame
 FPF separates artefacts into stable **Conceptual Core**, executable
 **Tooling Reference**, and fast‑evolving **Pedagogical Companion** (see
-E.4 FPF Ecosystem Family Architecture).  If dependencies can point *both* ways,
+E.4 FPF Ecosystem Architecture: Framework Families, Products and DPF Suites).  If dependencies can point *both* ways,
 volatile layers will eventually drag the Core into rapid revision
 cycles or introduce domain‑specific bias.
 

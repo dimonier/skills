@@ -1,6 +1,6 @@
 ---
 id: A.22.CGUS
-title: "Constraint-Governed Unfolding Structure"
+title: "Which Continuations Are Available? — Constraint-Governed Unfolding Structure (CGUS)"
 status: Stable
 keywords: []
 dependencies:
@@ -16,7 +16,7 @@ dependencies:
     - C.35
 ---
 
-# A.22.CGUS: Constraint-Governed Unfolding Structure
+# A.22.CGUS: Which Continuations Are Available? — Constraint-Governed Unfolding Structure (CGUS)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -24,7 +24,7 @@ dependencies:
 
 ---
 
-## A.22.CGUS - Constraint-Governed Unfolding Structure
+## A.22.CGUS - Which Continuations Are Available? — Constraint-Governed Unfolding Structure (CGUS)
 
 > **Type:** A.22 specialization of `U.Structure`
 > **Status:** Stable
@@ -38,7 +38,7 @@ Use this pattern when a diagram or explanation shows several possible next actio
 
 Name the decision or question, the visible alternatives, the condition for each alternative, and the facts available now. If a needed fact or rule is missing, mark that alternative `unknown` and stop when this answers the practical question. A useful explanation need not first become a formal record or an admitted structure.
 
-Open the formal branch only when the team must qualify, persist, compare, publish, or rely more strongly on the structure. A `ConstraintGovernedUnfoldingStructure` (CGUS) is one A.22 `U.Structure` whose locally named loci, constituents, obtaining relations, and constraints define at least two potential continuations across the cases allowed by those constraints. A separate result says which alternatives are enabled, disabled, or unknown for one case and time window.
+Open the formal branch only when the team must qualify, persist, compare, publish, or rely more strongly on the structure. A `ConstraintGovernedUnfoldingStructure` (CGUS) is one A.22 `U.Structure` whose locally named loci, constituents, obtaining relations, and constraints define at least two potential continuations across the cases allowed by those constraints. A separate result says which alternatives are enabled, disabled, unknown, or error for one case and time window.
 
 Do not use CGUS merely because a card, graph, table, narrative, prompt path, or README line looks route-shaped. A single recommendation or displayed sequence is not enough. The structure may branch, join, cycle through subject relations, remain partially ordered, or leave several alternatives live at once. A result with zero or one enabled alternative can still concern that same branching structure.
 
@@ -86,6 +86,22 @@ For example, a design review has two alternatives: accept the design or repair i
 | Repair the design | A check failed and a repair proposal exists, but the proposal-to-design relation has not been established. | `unknown — proposal target not established` |
 
 That corrected card is already useful. It keeps both potential alternatives visible and refuses to invent the missing relation. Continue only if a named later use needs formal structure identity or replayable results.
+
+##### A.22.CGUS:4.1.1 - Conditions through constituent and encompassing work
+
+When a continuation is a way of performing work, recover the part of its Method/Work vertical that can change availability. Ask what constituent actions must be performable and what encompassing work is being done through them. B.1.5.EW supplies that recovery; knowing a Method's description does not supply the capability or resources to perform it.
+
+Distinguish conditions needed at entry, conditions that must remain satisfied during combined performance, and the result required by the encompassing use. In particular:
+
+- a constituent may be individually performable but fail in the needed coordination;
+- adequate local resources may be insufficient when constituents share them;
+- a constituent result may satisfy its own postcondition while leaving the whole's result unresolved.
+
+For each relevant condition, state what it concerns and how it affects this continuation. Reuse an understood connection or adequate existing basis. A missing condition blocks or leaves unknown the dependent alternative; it need not block an independent way to learn, obtain support or change the arrangement. Capability belongs to its performer and conditions under A.2.2; prospective resources and support remain prospective until available.
+
+In the formal branch, express these dependencies with the existing constituents, selected relations, applied constraints and continuation judgements. A temporal edge alone cannot express that one action constitutes part of another ongoing work. Nor does a nested flow position establish Method or Work parthood. A diagram may show the relations together when their meanings remain recoverable.
+
+A constituent's postcondition supports the encompassing conclusion only through the relevant composition and result-use conditions. An expected postcondition is not an observed result. If the displayed account omits conditions needed to perform the whole, state the narrower question it answers. A constituent hierarchy without potential alternatives does not require CGUS qualification.
 
 #### A.22.CGUS:4.2 - Formal qualification branch
 
@@ -221,22 +237,12 @@ selectedCGUSRef: DesignReviewAlternatives@DR-27
 A22IdentityBasis:
   selectedConstituentRefs[]:
   DesignCandidate-A
-  ThermalCheckResult-A
-  ServiceCheckResult-A
   RepairProposal-A
   AcceptCandidate-Continuation
   RepairCandidate-Continuation
   selectedObtainingRelationOccurrenceRefs[]:
-  ThermalCheckAboutCandidate@DR-27
-  ServiceCheckAboutCandidate@DR-27
   RepairProposalTargetsCandidate@DR-27
   relationOccurrenceRecoveryRows[]:
-  - relationOccurrenceRef: ThermalCheckAboutCandidate@DR-27
-  predicateDefinitionRef: CheckResultAboutDesignCandidatePredicate
-  participantRefsInPredicateOrder[]: [ThermalCheckResult-A, DesignCandidate-A]
-  - relationOccurrenceRef: ServiceCheckAboutCandidate@DR-27
-  predicateDefinitionRef: CheckResultAboutDesignCandidatePredicate
-  participantRefsInPredicateOrder[]: [ServiceCheckResult-A, DesignCandidate-A]
   - relationOccurrenceRef: RepairProposalTargetsCandidate@DR-27
   predicateDefinitionRef: RepairProposalTargetsDesignCandidatePredicate
   participantRefsInPredicateOrder[]: [RepairProposal-A, DesignCandidate-A]
@@ -244,21 +250,24 @@ A22IdentityBasis:
   AcceptIfBothChecksSatisfied
   RepairIfAnyCheckViolatedAndProposalTargetsCandidate
   namedSelectionUseFrame:
-  questionOrAction: which review continuation is available now?
-  admissibleAction: show the enabled, disabled, and unknown alternatives for this review
-  stopOrReturnCondition: return to an unresolved test or relation; recheck when either result, the proposal relation, or the window changes
+  questionOrAction: which review continuations satisfy the two-check rule for DesignCandidate-A?
+  admissibleAction: show enabled, disabled, unknown or error results for the current case
+  stopOrReturnCondition: recheck a case when its result inputs or window change; reidentify the structure when its selected basis changes
 forbiddenOverread?: displayed order as performed Work, or an available branch as authorization
 constraintGovernedProfileBasis:
   locusBindingRows[]:
   - <DesignReviewAlternatives@DR-27, candidate, design under review, DesignCandidate-A>
-  - <DesignReviewAlternatives@DR-27, thermal-result, thermal finding, ThermalCheckResult-A>
-  - <DesignReviewAlternatives@DR-27, service-result, service finding, ServiceCheckResult-A>
   - <DesignReviewAlternatives@DR-27, repair-proposal, proposed repair, RepairProposal-A>
   - <DesignReviewAlternatives@DR-27, accept, accept continuation, AcceptCandidate-Continuation>
   - <DesignReviewAlternatives@DR-27, repair, repair continuation, RepairCandidate-Continuation>
   potentialContinuationRows[]:
   - AcceptCandidate-Continuation, constrained by AcceptIfBothChecksSatisfied
   - RepairCandidate-Continuation, constrained by RepairIfAnyCheckViolatedAndProposalTargetsCandidate
+caseBasis:
+  checkResultRefs: [ThermalCheckResult-A, ServiceCheckResult-A]
+  resultAboutCandidateOccurrences:
+  - <ThermalCheckAboutCandidate@DR-27, CheckResultAboutDesignCandidatePredicate, [ThermalCheckResult-A, DesignCandidate-A]>
+  - <ServiceCheckAboutCandidate@DR-27, CheckResultAboutDesignCandidatePredicate, [ServiceCheckResult-A, DesignCandidate-A]>
 continuationJudgements[]:
   - candidate: AcceptCandidate-Continuation
   basisKind: conditionEvaluation
@@ -284,15 +293,28 @@ continuationJudgements[]:
   window: ReviewWindow-DR-27
   result: enabled
   reason: one check is violated and the repair proposal concerns this design
-currentContinuationSet: enabled [RepairCandidate-Continuation]; disabled [AcceptCandidate-Continuation]; unknown []
-stopOrNextAction: show repair as available; recheck when either result, the proposal relation, or the window changes
+currentContinuationSet: enabled [RepairCandidate-Continuation]; disabled [AcceptCandidate-Continuation]; unknown []; error []
+stopOrNextAction: show repair as available; recheck when the case results or window change
 ```
 
-The structure has two potential continuations although this case enables only repair. The relation rows state their predicates and ordered participants; the judgement rows state the tests, applicability, inputs, facts, polarity, dependent occurrences, window, outcomes, and reasons.
+The structure has two potential continuations although this case enables only repair. The selected proposal-to-design relation belongs to its identity basis. Thermal and service result epistemes, and their about-candidate relations, belong to the current case basis; they are not constituents or selected relation occurrences of this structure.
 
-If `RepairProposalTargetsCandidate@DR-27` or its participant binding is missing, the repair result becomes `unknown — proposal target not established`. If the structure's identity was established on another sufficient basis, only this case result is incomplete. If that occurrence belongs to the claimed identity basis, this structure claim also remains provisional.
+If the proposal-to-design relation cannot be established, this exact formal structure claim remains provisional. The ordinary explanation can still report repair as unknown. Do not treat an unknown identity-bearing relation as an established constituent of a qualified CGUS.
 
-If a later thermal check passes while the service check still passes, acceptance becomes enabled and repair becomes disabled. If the constituents, selected occurrences, constraints, use frame, locus bindings, and potential topology have not changed, the CGUS keeps its identity and membership. A replacement result episteme or relation occurrence must first be compared under the A.22 discriminators.
+A later passing thermal check is a different result episteme and supplies a new case input. With service still satisfied, acceptance becomes enabled and repair becomes disabled. The selected design, proposal, continuation candidates, proposal-to-design relation, constraints, use frame, loci and potential topology are unchanged, so the same CGUS remains available for that new case.
+
+#### A.22.CGUS:5.1 - A missing intermediate capability changes the continuation
+
+In this constructed learning case, a dancer has the strength and static axis control needed by a figure and can recall its sequence. The known limitation is maintaining balance during its required rotation. The figure's continuation depends on that coordinated performance, not just on adequate strength and memory.
+
+| Alternative | Relevant conditions in this case | Present result |
+| --- | --- | --- |
+| Perform the complete figure under its intended conditions. | The required balance during rotation cannot yet be sustained. | Unavailable for the intended performance; naming the figure or its steps does not remove the gap. |
+| Practise the rotational coordination under a suitable reduced demand. | A domain-appropriate exercise, suitable space and the needed support are available in the stipulated case. | Available as practice of the intermediate performance. It does not establish ability to perform the full figure. |
+
+During the rotation, balance coordination would constitute part of turning; that turn would constitute part of the figure. These are connections through current performance, not three successive tasks. The practice alternative can exercise the first connection without already performing the intended figure.
+
+When the coordination can be sustained, return to the encompassing figure and vary the relevant conditions before drawing a broader capability conclusion. The case condition and its continuation judgement can change without changing the potential alternatives. The subject's training Method supplies the exercise and assessment; CGUS makes their effect on the available continuation explicit.
 
 ### A.22.CGUS:6 - Bias-Annotation
 

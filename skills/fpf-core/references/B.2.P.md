@@ -1,6 +1,6 @@
 ---
 id: B.2.P
-title: Emergence and MHT Precision Restoration
+title: "Clarify Emergence and Meta-Holon Transition (MHT) Claims"
 status: Stable
 keywords: []
 dependencies:
@@ -22,7 +22,7 @@ dependencies:
     - C.30.ILC
 ---
 
-# B.2.P: Emergence and MHT Precision Restoration
+# B.2.P: Clarify Emergence and Meta-Holon Transition (MHT) Claims
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -30,7 +30,7 @@ dependencies:
 
 ---
 
-## B.2.P - Emergence and MHT Precision Restoration
+## B.2.P - Clarify Emergence and Meta-Holon Transition (MHT) Claims
 
 > **Type:** Part B precision-restoration pattern
 > **Status:** Stable
@@ -186,7 +186,7 @@ Recover:
 - Is the result a benchmark artifact?
 - Is there an in-life holon whole-reidentification question?
 
-For those direct claims, use `C.29`, `C.16`, `A.10`, and source-use patterns as applicable. Use B.2 only if the in-life whole has to be reidentified.
+For those direct claims, use `C.29`, `C.16`, `A.10`, and source-use patterns as applicable. Use B.2 when the identity of the in-life whole remains the question.
 
 #### B.2.P:5.3 - "A Meta-Functional Transition Happened"
 
@@ -242,7 +242,7 @@ Identify each actual change independently under A.3.4. A shared work occurrence,
 | --- | --- | --- |
 | Emergence as root kind | The sentence needs a new named thing called emergence. | Recover claim kind; use B.2, C.16, C.29, C.30, A.2.2, A.6.F, A.10, or source-use pattern. |
 | Collection receives agency by wording | A community, pool, fleet, or base acts because the noun is collective. | Recover membership, collection-as-whole, acting collective system, whole-level characteristic, or MHT separately. |
-| Metric jump as new whole | Benchmark improvement is declared as emergence. | Use C.16, A.10, C.29, and source-use patterns; use B.2 only if the whole must be reidentified. |
+| Metric jump as new whole | Benchmark improvement is declared as emergence. | Use C.16, A.10, C.29, and source-use patterns; use B.2 when whole identity remains the question. |
 | Title mnemonic as authority | MET or MFT is used as if the acronym named the thing or claim under discussion. | Recover an episteme-whole reidentification claim, capability or functioning facts, their direct episteme or function pattern, or source-only wording. |
 | Description as in-life whole | A model, dashboard, report, or twin is treated as the system because it depicts the system. | Use episteme, publication, architecture-description, source-use, or digital-twin description patterns for the description; independently recover any in-life holon under its direct pattern. |
 | Evidence decides ontology | Missing or stale evidence is taken to end a whole, while a current record is taken to create one. | Keep construction and reidentification world-side; evaluate support, currentness, and reliance separately. |

@@ -1,12 +1,14 @@
 ---
 id: C.2.5
-title: "`U.LanguageStateClosureDegree`"
+title: "`U.LanguageStateClosureDegree` — How Fixed Is the Current Candidate Space?"
 status: Stable
 keywords:
   - closure degree
+  - CD0–CD5
   - "candidate-space closure"
+  - route space
+  - frame space
   - reopen
-  - rival routes
   - settledness.
 dependencies:
   builds_on:
@@ -16,7 +18,7 @@ dependencies:
     - A.16
 ---
 
-# C.2.5: `U.LanguageStateClosureDegree`
+# C.2.5: `U.LanguageStateClosureDegree` — How Fixed Is the Current Candidate Space?
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -24,7 +26,7 @@ dependencies:
 
 ---
 
-## C.2.5 - `U.LanguageStateClosureDegree`
+## C.2.5 - `U.LanguageStateClosureDegree` — How Fixed Is the Current Candidate Space?
 
 > **Type:** Definitional (D)
 > **Status:** Stable

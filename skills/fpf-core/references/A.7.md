@@ -1,6 +1,6 @@
 ---
 id: A.7
-title: Strict Distinction (Clarity Lattice)
+title: "Strict Distinction: Repair Conflations of FPF Objects (Clarity Lattice)"
 status: Stable
 keywords:
   - category error
@@ -14,7 +14,7 @@ dependencies:
     - A.3
 ---
 
-# A.7: Strict Distinction (Clarity Lattice)
+# A.7: Strict Distinction: Repair Conflations of FPF Objects (Clarity Lattice)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,7 +22,7 @@ dependencies:
 
 ---
 
-## A.7 - Strict Distinction (Clarity Lattice)
+## A.7 - Strict Distinction: Repair Conflations of FPF Objects (Clarity Lattice)
 > **Status:** Stable
 
 ### A.7:0 - Use this when

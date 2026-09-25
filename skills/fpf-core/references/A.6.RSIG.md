@@ -1,11 +1,11 @@
 ---
 id: A.6.RSIG
-title: Recognition Signatures for Descriptions
+title: "Recognition Signatures: Find the Defining Episteme for a Description"
 status: Stable
 keywords: []
 ---
 
-# A.6.RSIG: Recognition Signatures for Descriptions
+# A.6.RSIG: Recognition Signatures: Find the Defining Episteme for a Description
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -13,7 +13,7 @@ keywords: []
 
 ---
 
-## A.6.RSIG - Recognition Signatures for Descriptions
+## A.6.RSIG - Recognition Signatures: Find the Defining Episteme for a Description
 
 > **Type:** Architectural pattern
 > **Status:** Stable

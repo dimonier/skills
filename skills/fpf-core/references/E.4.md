@@ -1,6 +1,6 @@
 ---
 id: E.4
-title: FPF Ecosystem Family Architecture
+title: "FPF Ecosystem Architecture: Framework Families, Products and DPF Suites"
 status: Stable
 keywords: []
 dependencies:
@@ -28,7 +28,7 @@ dependencies:
     - E.19
 ---
 
-# E.4: FPF Ecosystem Family Architecture
+# E.4: FPF Ecosystem Architecture: Framework Families, Products and DPF Suites
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -36,7 +36,7 @@ dependencies:
 
 ---
 
-## E.4 - FPF Ecosystem Family Architecture
+## E.4 - FPF Ecosystem Architecture: Framework Families, Products and DPF Suites
 
 > **Type:** Architectural (A)
 > **Status:** Stable

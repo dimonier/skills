@@ -1,6 +1,6 @@
 ---
 id: C.16.IR
-title: Determine What an Indication Can Resolve
+title: Determine What a Measurement Indication Can Resolve
 status: Draft
 keywords: []
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     - C.11.DUA
 ---
 
-# C.16.IR: Determine What an Indication Can Resolve
+# C.16.IR: Determine What a Measurement Indication Can Resolve
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,7 +22,7 @@ dependencies:
 
 ---
 
-## C.16.IR - Determine What an Indication Can Resolve
+## C.16.IR - Determine What a Measurement Indication Can Resolve
 
 > **Type:** Method pattern
 > **Status:** Draft

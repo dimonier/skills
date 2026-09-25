@@ -1,6 +1,6 @@
 ---
 id: C.2.8
-title: "`U.ExtractableStructuralInformation`"
+title: "`U.ExtractableStructuralInformation` — Structure This Reader Can Recover"
 status: Draft
 keywords:
   - extractable structure
@@ -24,7 +24,7 @@ dependencies:
     - E.17.EFP
 ---
 
-# C.2.8: `U.ExtractableStructuralInformation`
+# C.2.8: `U.ExtractableStructuralInformation` — Structure This Reader Can Recover
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -32,7 +32,7 @@ dependencies:
 
 ---
 
-## C.2.8 - `U.ExtractableStructuralInformation`
+## C.2.8 - `U.ExtractableStructuralInformation` — Structure This Reader Can Recover
 
 > **Type:** Definitional (D)
 > **Status:** Draft

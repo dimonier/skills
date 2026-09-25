@@ -1,15 +1,14 @@
 ---
 id: C.35
-title: Structural Synthesis and Discovery Adequacy
+title: Assess Generated or Discovered Results for Architecture Use
 status: Stable
 keywords:
   - structural synthesis
   - structural discovery
-  - generated carrier
-  - produced carrier
-  - described structure
-  - candidate admission
-  - source return
+  - generated result
+  - discovered result
+  - modal architecture proposal
+  - candidate input
   - DSM
   - NAS
   - LLM.
@@ -42,7 +41,7 @@ dependencies:
     - C.32.ADR
 ---
 
-# C.35: Structural Synthesis and Discovery Adequacy
+# C.35: Assess Generated or Discovered Results for Architecture Use
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -50,7 +49,7 @@ dependencies:
 
 ---
 
-## C.35 - Structural Synthesis and Discovery Adequacy
+## C.35 - Assess Generated or Discovered Results for Architecture Use
 
 > **Type:** Architectural pattern
 > **Status:** Stable

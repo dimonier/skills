@@ -1,6 +1,6 @@
 ---
 id: B.3.5
-title: "Working-Model Relations & Grounding (CT2R-LOG)"
+title: "Assurance Grounding for Working-Model Relation Claims (CT2R-LOG)"
 status: Stable
 keywords: []
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     - C.13
 ---
 
-# B.3.5: Working-Model Relations & Grounding (CT2R-LOG)
+# B.3.5: Assurance Grounding for Working-Model Relation Claims (CT2R-LOG)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -18,7 +18,7 @@ dependencies:
 
 ---
 
-## B.3.5 - Working-Model Relations & Grounding (CT2R-LOG)
+## B.3.5 - Assurance Grounding for Working-Model Relation Claims (CT2R-LOG)
 > **Status:** Stable
 > **Type:** Pattern
 
@@ -99,24 +99,24 @@ When a constructive trace, working-model relation, and target kind or logical re
 
 ```text
 StructuralCT2RTypingGroundingUnfoldingStructureBlock:
-  unfoldingStructureRef: current StructuralCT2RTypingGroundingUnfoldingStructure record
+  unfoldingStructureRef: exact independently selected A.22 structure, when needed
   workingModelOrConstructiveRepresentationRef:
   targetKindOrLogicalRepresentationRef:
   bridgeRef?:
   constructiveTraceRef?:
   preservedStructure:
   lostOrCollapsedStructure:
-  CL_or_CLk:
+  CL_or_CLk?:
   admissibleReuse:
   blockedSubstitution:
   evidenceOrProofLinkageRef?:
 ```
 
-`unfoldingStructureRef` names the current local structure record. `StructuralCT2RTypingGroundingUnfoldingStructure` is a local `A.22.CGUS` `U.Structure` specialization whose block is governed by B.3.5 only for structural construction-to-typed/logical projection; the A.22-level relation to that narrower specialization, when needed, is `specializedStructureRef?` on the generic CGUS record. It is not a root U-kind, proof, empirical evidence, work plan, decision, or general ontology-return structure. `C.13` contributes constructive-trace loci; `C.3` contributes kind intent, extent, subkind, and bridge loci; neither creates separate authority for this block.
+`unfoldingStructureRef` names an independently selected A.22 structure; this block is a record describing its use. Recover the exact constituents, obtaining relations, applied constraints and named selection/use frame. `StructuralCT2RTypingGroundingUnfoldingStructure` is a local designator for the selected structure used to inspect this construction-to-typed/logical projection. Any A.22.CGUS qualification is tested separately under its potential-continuation rule; a local name or record does not establish it. C.13 supplies constructive-trace content and C.3 the kind intent, extent and subkind content actually used. The record creates no proof, empirical evidence, Work plan or decision.
 
 When an inadequate working account requires general diagnostic recovery of the exact subject construction, use `A.7.1`. That return may stop at a direct relation, system-role assignment, state or capability, Work occurrence, holon recognition, or the pattern for another subject without opening this structural CT2R specialization.
 
-`workingModelOrConstructiveRepresentationRef` names the relation, trace, model, or representation being carried. `targetKindOrLogicalRepresentationRef` names the typed or logical target. `bridgeRef` and `CL_or_CLk` are mandatory when cross-context or kind-level movement is current. `preservedStructure` and `lostOrCollapsedStructure` state what survives the passage and what the published relation no longer carries. Evidence linkage remains with B.3 evidence and assurance subject patterns; proof linkage remains with the proof or mathematical subject pattern that is current. The unfolding block only makes the structure of the passage inspectable.
+`workingModelOrConstructiveRepresentationRef` names the relation, trace, model, or representation being carried. `targetKindOrLogicalRepresentationRef` names the typed or logical target. `bridgeRef` is required when this use actually claims or consumes an obtaining semantic Bridge under F.9 or a kind correspondence under C.3.3. `CL_or_CLk` is required when the consumed assurance/calibration account requires that value. Entity, scheme, plane or notation changes alone establish no crossing; a same-sense unit conversion requires neither invented endpoints nor a Bridge. CL does not by itself authorize use. `preservedStructure` and `lostOrCollapsedStructure` state what survives the passage and what the published relation no longer carries. Evidence linkage remains with B.3 evidence and assurance subject patterns; proof linkage remains with the proof or mathematical subject pattern that is current. The unfolding block only makes the structure of the passage inspectable.
 
 ### B.3.5:5 - Vocabulary & notation (normative)
 
@@ -176,7 +176,7 @@ When you add or import a relation edge:
 
 ### B.3.5:8 - Compatibility & cross‑references
 
-* **B.3.2 (LOG‑use).** CT2R‑LOG supplies the **places to hang proofs/evidence** that B.3.2 formalizes.
+* **B.3 and the direct proof or mathematical pattern.** CT2R-LOG makes the relied-on construction or support account inspectable; B.3 judges its contribution to the current assurance claim. State the actual logic and proof basis when a formal conclusion is used.
 * **B.3.3 (Assurance subtypes and levels).** The declared `validationMode` and actual `tv:groundedBy` account contribute only what they establish for the receiving assurance claim. They do not compute a universal L0–L2 progression; a published level requires an applicable justified profile.
 * **B.3.4 (Evidence ageing and currentness).** A relation assertion, its construction-trace episteme, and the warrants or evidence used for it retain their own editions and currentness. `validationMode=axiomatic` does not freeze a trace or make described world-side facts timeless; changed participants, relations, rules, or identity conditions require direct reinspection.
 
@@ -238,8 +238,8 @@ For every relation instance covered by an elected B.3.5 profile, the author **MU
 
 * For other epistemic or constitutive links, constructive grounding remains optional and the branch may prefer inferential or postulate reasoning with empirical cues.
 
-**S‑5 (Order and time are not mereology).**
-Authors **SHALL NOT** encode execution order, parallelism, or temporal slicing as part‑whole. Such concerns belong to `Γ_method` and `Γ_time` families and **SHOULD** appear as method/time statements adjacent to, not inside, Working‑Model structure. (This prevents conceptual leakage between planes.)
+**S‑5 (Order and time do not establish parthood).**
+Execution order, parallelism or interval inclusion alone **SHALL NOT** establish a part-whole relation. State Method composition under B.1.5 and temporal facts under C.27; use B.1.4 when those recovered relations must be aggregated. Independently established A.15.1 Work-part relations and A.14 proper-phase relations for unchanged non-Work carriers remain admissible under their own rules.
 
 **S‑6 (Unidirectional dependence).**
 CT2R‑LOG may *consume* Compose‑CAL and KD‑CAL conceptually; it **SHALL NOT** redefine them. Meaning flows **downward only** (Kernel → Extension → Context → Instance).
@@ -272,7 +272,7 @@ Core prose **MUST NOT** introduce CI/CD terms, file formats, APIs, or machine‑
 * For collection belonging covered by the profile, choose **axiomatic** and link one current `C.13 set` trace that reports the already established relation under the collection's own rule.
 
 **M‑3.** Add `tv:AliasOf` only when a named direct relation principle helps reviewers recognize the intended reading; do not alias the relation to a constructor result.
-**M‑4.** Keep *order/time* adjacent, not embedded: if you need “assembled in two parallel lines”, write that as a **method/time** statement next to the structure, not as a part‑of edge.
+**M‑4.** If assembly uses two parallel lines, state the actual Method/Work and temporal facts. Add any independently obtaining part relation under its own rule; parallelism alone does not establish it.
 **M‑5.** Stop when the selected readable relation and remaining non-use boundary are clear and, if this profile is elected, its validation mode and required current support are recoverable without guessing.
 
 ### B.3.5:10 - Bias-Annotation (auditable, human-first)
@@ -283,9 +283,9 @@ The purpose of this section is to make **typical cognitive slips** visible and n
 | --- | --- | --- | --- |
 | **Formalism capture** | A trace, constructor expression, or `validationMode` is treated as the source of the direct relation or whole identity. | Recover the exact participants, direct relation occurrences, construction rule, and identity or reidentification rule first. Treat the trace as a current C.2.1 account and the mode as the author's assurance posture. | CC‑CT2R‑1, CC‑CT2R‑2, CC‑CT2R‑3; C.13 trace separation. |
 | **Canonical inversion** | B.3.5 fields are demanded before direct use, or one assurance branch is imposed on every relation. | Use the direct claim first. After election, use the applicable branch: structural parthood or collection belonging takes its required axiomatic trace; other permitted claims may use inferential or postulate support. | CC-CT2R-2, CC-CT2R-3, CC-CT2R-5. |
-| **Order/time leakage**  | Encoding sequence or phase as part‑whole edges.  | Apply **Strict Distinction**: order/time belong to Γ\_method and Γ\_time, not to mereology or CT2R relations.  | B.1.5 for Method composition; B.1.4 for ordered and temporal aggregation. |
+| **Order/time leakage** | Inferring parthood from sequence, parallelism or interval inclusion alone. | Recover the independent part relation under A.15.1 or A.14 when it obtains, and keep Method/order/time claims separate. | B.1.5, C.27 and B.1.4; A.15.1 or A.14 for the exact part/phase claim. |
 | **Notation lock‑in**  | Letting a diagram or syntax define the meaning (“it’s true because the diagram says so”).  | Enforce **Notational Independence**: meaning is defined in prose/maths; renderings are illustrative only.  | Part E guard‑rail on notational independence.  |
-| **Congruence blindness**  | Composing strong parts through weak mappings without acknowledging the fit penalty.  | Make **edge‑fit first‑class**: reason about Congruence Level (CL) on connections; penalise low fit conceptually.  | B.3 universal aggregation skeleton (Φ(CL)); anti‑patterns list.  |
+| **Unexamined mapping fit** | A composed claim relies on a mapping without inspecting preserved and lost distinctions. | State the exact mapping, its applicability and loss. Use a numeric reliability consequence only when the receiving model establishes its meaning and calculation; ordinal CL alone is insufficient. | B.3 and the direct mapping or representation pattern. |
 | **Collection/composition swap** | A belongs-to predicate is used as `PartOf`, or a part claim is used as collection belonging, and reliability is carried over as if both were one construction. | State collection belonging and constructive parthood separately under A.14. When both obtain, keep both claims and their different `set` and `sum` accounts. | A.14 and C.13. |
 | **DesignRunTag chimera**  | Mixing design‑time and run‑time evidence into one “assurance” line.  | Split the **scope** of the claim: `S ∈ {design, run}`; compare side‑by‑side rather than merging.  | B.3:4.8 and its “Design/run chimera” anti-pattern. |
 
@@ -300,10 +300,10 @@ The following obligations regulate **how to think and write** CT2R content. They
 | **CC-CT2R-1 (Canonical-first).**  | A relation published for readers **SHALL** be stated in Working-Model terms (`ut:*Of`) as the canonical form; any constructive or logical justification is recorded as **grounding** (not as the definition).  | Preserve human-first canon and didactic primacy.  |
 | **CC‑CT2R‑2 (Mode declaration).**  | For every relation or rule covered by an elected B.3.5 profile, the author **SHALL** declare `tv:validationMode ∈ {postulate, inferential, axiomatic}` in prose. A direct relation outside the profile needs no B.3.5 mode. | Make elected assurance intent explicit without taxing ordinary direct use. |
 | **CC‑CT2R‑3 (Structural axiomatic grounding).** | A covered structural parthood assertion uses `validationMode=axiomatic` and links to its applicable current C.2.1 `sum` or `slice` construction trace. The account reports independently grounded participants, occurrences, rule, and identity conditions; it creates none. | Make elected structural assurance inspectable without turning it into a truth-maker. |
-| **CC‑CT2R‑4 (No order/time in parts).**  | Authors **SHALL NOT** encode order (`Serial/Parallel`) or phase/time as part‑whole relations; handle them via `Γ_method` / `Γ_time` when relevant to the claim.  | Maintain the structure/order/time firewall.  |
+| **CC‑CT2R‑4 (No parthood from order/time alone).** | Authors **SHALL NOT** infer parthood from sequence, parallelism or temporal slicing alone. Any Work-part or proper-phase claim satisfies A.15.1 or A.14 independently; Method order and temporal relations use their direct patterns. | Preserve distinct relation meanings while allowing independently established temporal parts. |
 | **CC‑CT2R‑5 (Collection vs part).** | Authors keep collection belonging under the collection's own rule distinct from every `PartOf` branch. A direct claim needs no profile fields; after B.3.5 election it uses `validationMode=axiomatic` and one current `C.13 set` trace. If constructive parthood also obtains, state and support that claim separately. | Prevent category errors without taxing ordinary belongs-to prose or prohibiting a stronger independently grounded claim. |
 | **CC‑CT2R‑5a (Set trace reports).** | The elected set trace names the collection, the entity said to belong, the already established occurrence, the collection's own belongs-to rule, and the identity conditions. It creates none of them and supplies no structural-composition reliability. | Keeps optional assurance from becoming ontology. |
-| **CC‑CT2R‑6 (Fit is explicit).** | Where mappings or alignments matter, the author **SHALL** reason about fit explicitly and acknowledge that weak fit reduces the effective reliability of a composed claim. | Keep integration quality first-class. |
+| **CC‑CT2R‑6 (Fit is explicit).** | Where a claim relies on a mapping or alignment, the author **SHALL** state its actual applicability, preserved/lost distinctions and consequence for this claim. Any quantitative reliability adjustment needs a justified receiving model, compatible Scale and calculation; a CL label alone supplies none. | Keep integration limits inspectable without invented reliability arithmetic. |
 | **CC‑CT2R‑7 (Notational independence).**  | Core meaning **MUST NOT** hinge on any specific diagram or syntax; illustrative renderings, if present, are labelled *informative*.  | Ensure longevity and cross‑discipline portability.  |
 | **CC‑CT2R‑8 (Layer direction).**  | Grounding flows **downwards** from Working‑Model to Assurance layers (Mapping/Logical/Constructive). Authors **SHALL** avoid back‑defining the canonical relation by its Mapping, Logical, Constructive, or Empirical grounding.  | Preserve unidirectional dependence of layers.  |
 | **CC‑CT2R‑9 (Scope split).**  | When assurance is discussed, authors **SHALL** state the **typed claim** and **scope** `S ∈ {design, run}` and keep them distinct in reasoning.  | Prevent DesignRunTag chimeras.  |
@@ -314,7 +314,7 @@ The following obligations regulate **how to think and write** CT2R content. They
 | --- | --- | --- |
 | Trace as relation or truth-maker | A `Gamma_m` trace is treated as the public relation, as proof that the relation obtains, or as the source of whole identity. | Keep the Working-Model relation canonical; recover the direct relation facts and reidentification rule independently; attach the trace only as their inspectable C.2.1 account. |
 | Unchecked relation label or mode | A familiar relation label or `axiomatic` flag is published as though either settled relation obtaining or identity. | State and test the direct relation first. When B.3.5 is elected, add the branch-specific mode and support account. Stop when a fact required by the direct pattern is missing. |
-| Order/time leakage | Assembly sequence, phase, or parallel work is encoded as a part-whole edge. | Keep order, method, and temporal claims adjacent to the structural edge; do not turn them into mereology. |
+| Order/time leakage | Sequence, phase labels or parallel timing are treated as sufficient evidence of parthood. | Recover each direct relation separately: A.15.1 for Work parts, A.14 for a proper phase of an unchanged non-Work carrier, and B.1.4 for aggregation of recovered order or temporal relations. |
 | Assurance by notation | A diagram, graph display, or data format is treated as if it made the relation true. | Use the diagram, graph display, or data format to present the relation claim; keep the grounding relation and validation mode explicit. |
 
 ### B.3.5:13 - Consequences (benefits, trade-offs, mitigations)
@@ -323,14 +323,14 @@ The following obligations regulate **how to think and write** CT2R content. They
 
 * **Cognitive clarity for authors and readers.** Working-Model relations remain canonical while assurance accounts stay beneath them. Every claim covered by the elected profile carries only its branch-specific support account; ordinary direct claims remain lightweight. CT2R preserves a path to higher assurance while keeping collection belonging distinct from constructive parthood and order and time outside structure.
 * **Use-specific assurance without tooling commitments.** Teams choose the grounding that the relation's elected branch and receiving claim require. The declared modes distinguish justification postures; they are not an ascending scale of empirical confidence.
-* **Explicit fit management.** Treating edge‑fit (CL) as a first‑class concern prevents silent over‑confidence: weak mappings visibly cap reliability of composed claims.
-* **Cleaner separation of concerns.** Distinguishing collections from compositions and keeping sequence/time in Γ\_method and Γ\_time prevents recurrent category errors and preserves Γ‑algebra reviewability.
+* **Explicit fit management.** Inspect the mapping and its losses before relying on a composed claim. Its actual limitations can qualify, narrow or block that conclusion; a quantitative effect requires the declared receiving model.
+* **Cleaner separation of concerns.** Distinguish collection belonging, parthood, Method composition and temporal relations by their direct rules. Their separate meanings can coexist in one inspected account without inferring one relation from another.
 
 **Trade‑offs & mitigations**
 
 * **Extra prose discipline.** Declaring `validationMode` and writing a short grounding narrative (when *axiomatic*) adds authoring effort. *Mitigation:* reuse local templates; keep narratives concise and Γ\_m‑oriented by idea rather than notation.
 * **Insufficient grounding for the receiving use.** An empirical or logical account can omit a premise or fail to satisfy the elected branch. Use B.3.3 to identify that gap and the worthwhile repair; retain sufficient support without demanding a more formal mode merely for its label.
-* **Perceived conservatism.** Acknowledging weak fit (CL) may lower effective reliability of otherwise strong parts. *Mitigation:* treat CL as a guide to improvement (reconcile terms, align units, verify declared links) rather than a punishment.
+* **Inspecting mapping limits costs effort.** Recover the correspondence, align units where lawful, and verify the links needed by the claim. Retain a qualitative limitation when no justified numerical reliability model is available.
 
 > **One‑line takeaway for managers.**
 > CT2R lets you **talk in natural, domain‑meaningful relations** while preserving a clear, optional path to formal grounding and empirical checking—so confidence can grow deliberately without dragging your model into tooling or syntax.
@@ -346,8 +346,8 @@ CT2R-LOG treats the **human-readable, task-appropriate relation** (e.g., `ut:Com
 **14.3 Why a triad of `validationMode`?**
 The triad **{postulate, inferential, axiomatic}** distinguishes permitted justification postures, not stages of formality or increasing confidence. The direct relation kind and elected profile determine which posture and support are appropriate for the receiving claim and use. A sufficient calibration account in a branch permitting `postulate` needs no mode promotion; an elected structural-parthood or collection-belonging claim still requires its respective current construction trace. Where a load-bearing claim needs stronger proof or an empirical check, select that contribution for the assurance gap it can resolve, not to advance through the three labels. The mode declaration changes neither the canonical relation nor the strength of its support.
 
-**14.4 Why keep order/time out of mereology?**
-CT2R‑LOG aligns with A.14’s **firewall**: structure (parthood) is distinct from **order** and **temporal coverage**. The former is published as `ut:StructPartOf` sub‑relations; the latter live in `Γ_method` / `Γ_time` and must **not** be smuggled into part‑trees. This separation avoids classic modelling failures (temporal smearing, pseudo‑components for quantities) and keeps reasoning crisp across the Γ‑family.
+**14.4 Why recover parthood independently of order and time?**
+Order and temporal coverage answer different questions from parthood. A chronology or diagram supplies no part relation by itself. A.15.1 can independently establish a Work temporal part, and A.14 a proper temporal phase of an unchanged non-Work carrier. Preserve those relations alongside the applicable Method and temporal claims; B.1.4 aggregates only the relations already recovered.
 
 **14.5 Why point to `Γ_m.sum | set | slice` (Compose‑CAL) for constructive grounding?**
 The three C.13 forms—**sum, set, slice**—are sufficient to report the recurring construction accounts for integrated assemblies, collections, and aspects without expanding the kernel. They are not identity functions. A truthful account carries exact participants, direct relation occurrences, the applicable rule, and identity or reidentification conditions: the same inputs under another assembly can form another whole, while a permitted replacement can preserve one whole.
@@ -387,7 +387,7 @@ Reopen only the affected source row and rule if A.14 changes the construction/be
 - **Notational Independence (E.5.2)** — CT2R‑LOG refuses to prescribe formats, keeping all obligations conceptual.
 
 **Specialises / feeds**
-- **B.3.1–B.3.4** — supplies the publication discipline (Working-Model relations, declared **relation kind** and **validationMode**; **F** per C.2.3 where relevant) that B.3’s trust calculus expects; interacts with ageing and assurance-level assessments without changing the relations themselves.
+- **B.3, B.3.3 and B.3.4** — supplies the publication discipline (Working-Model relations, declared **relation kind** and **validationMode**; **F** per C.2.3 where relevant) that B.3’s trust calculus expects; interacts with ageing and assurance-level assessments without changing the relations themselves.
 
 **Non‑relations**
 **No introduction of order/time** — CT2R‑LOG does **not** define `SerialStepOf` / `ParallelFactorOf` / temporal **phases**; use `B.1.5` for Method-order claims, `A.14` and `B.1.4` for same-carrier temporal phases and their aggregation, and `A.15.1` for Work parts and occurrences.

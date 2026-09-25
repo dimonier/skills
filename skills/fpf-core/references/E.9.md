@@ -1,11 +1,11 @@
 ---
 id: E.9
-title: "Design-Rationale Record (DRR) Method"
+title: "Design-Rationale Record (DRR) for FPF Content Decisions"
 status: Stable
 keywords: []
 ---
 
-# E.9: Design-Rationale Record (DRR) Method
+# E.9: Design-Rationale Record (DRR) for FPF Content Decisions
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -13,7 +13,7 @@ keywords: []
 
 ---
 
-## E.9 - Design‑Rationale Record (DRR) Method
+## E.9 - Design-Rationale Record (DRR) for FPF Content Decisions
 
 > **Type:** Governance and authoring pattern
 > **Status:** Stable
@@ -366,7 +366,7 @@ When an identified source shapes the answer—for example a prior decision, stan
 * **Instantiates:** P‑10 Open‑Ended Evolution, P‑2 Didactic Primacy
 * **Pattern publication form governed by:** `pat:authoring/pattern‑template` (E.8)
 * **Interacts with:** `pat:guard/bias‑audit` (E.5.4) via lens check
-* **Complemented by:** `E.9.DA` when one exact DRR must be checked for a declared downstream authoring use. An ordinary bounded review judges the decision and returns precise findings or repaired text; a complete coordinate result and its exact assessment identities are added only when explicitly requested or consumed by a named later reliance. E.9.DA is not a second DRR form, review gate, acceptance status, or mandatory editorial step. E.12 separately governs debate etiquette.
+* **Complemented by:** `E.9.DA` when one exact DRR must be checked for a declared downstream authoring use. An ordinary bounded review judges the decision and returns precise findings or repaired text; a complete coordinate result and its exact assessment identities are added only when explicitly requested or consumed by a named later reliance. E.9.DA is not a second DRR form, review gate, acceptance status, or mandatory editorial step. E.12 separately governs didactic clarity, rationale and review of cognitive workload.
 
 * **Coordinates with:** `E.23` for repeated improvement work on a DRR; C.2.1 for DRR and evaluation-result episteme identity; C.2.P/A.10/G.6 for exact source use and provenance; A.15.1 for performed decision, assessment, and realization Work; A.6.1 when a claim depends on an independently identified application of a declared mechanism operation; F.10/G.11 for status and currentness; E.24.PUB for publication; and C.29 for a mathematical-lens use when such a lens is used. None of these neighboring records or results changes the E.9 selected answer by implication.
 

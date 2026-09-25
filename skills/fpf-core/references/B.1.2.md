@@ -1,6 +1,6 @@
 ---
 id: B.1.2
-title: System Aggregation and Holon Delimitation
+title: Coordinate Decisions About System Aggregation and Delimitation
 status: Stable
 keywords: []
 dependencies:
@@ -28,7 +28,7 @@ dependencies:
     - B.2
 ---
 
-# B.1.2: System Aggregation and Holon Delimitation
+# B.1.2: Coordinate Decisions About System Aggregation and Delimitation
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -36,7 +36,7 @@ dependencies:
 
 ---
 
-## B.1.2 - System Aggregation and Holon Delimitation
+## B.1.2 - Coordinate Decisions About System Aggregation and Delimitation
 
 > **Type:** Part B holonic construction pattern
 > **Status:** Stable
@@ -65,8 +65,8 @@ Typical moments:
 - If the exact entity has not yet been evaluated under the already admitted `U.System` kind, use `A.1`; do not promote the proposal into a durable kind-like label.
 - If one exact part-whole relation is the question, use `A.14` and its direct specialization.
 - If constructive assembly grounding is the question, use `C.13`.
-- If functional behavior or a functional element is the question, use `A.6.F` and the exact architecture structural-view pattern.
-- If module or bearer allocation is the question, use `A.6.M` and the exact architecture or part-relation pattern.
+- If the question is a functional claim, use its direct behavior or realization predicate; use `A.6.F` when the function wording is unresolved and `C.30.ASV` when architecture-view conformance is needed.
+- If bearer allocation or parthood is the question, use the direct allocation or part-relation pattern; use `A.6.M` only when module or interface wording needs repair.
 - If a mathematical aggregation lens is the question, use `C.29`.
 - If the question is project system-of-interest designation, system-role assignment, Work, transformation, service or access, evidence, description, or publication, use that subject pattern; B.1.2 neither identifies nor defines those relations.
 
@@ -118,7 +118,7 @@ Use B.1.2 to coordinate one named system-aggregation or delimitation decision ac
 | Which constituents are parts, portions, phases, or members, and how do they assemble? | `A.14`, the exact part-relation specialization, and `C.13` for constructive assembly grounding | Exact obtaining part-relation occurrences and the assembly they support; otherwise the missing direct governor, participant identity, obtaining fact, or assembly basis. |
 | Which facts and selected boundary-use claim delimit the system for this decision? | `A.1` for system identity; `A.14`, the exact part-relation specialization, and `C.13` for parthood and assembly; every exact crossing-relation pattern for external participants; `C.11` for a local choice among already available boundary readings; `C.32.PAD` for a post-synthesis architecture decision concerning exact project Work; `C.2.1` only for a separately persistent claim | First return exact identity, obtaining parthood and assembly, and crossing facts. If those facts answer the question, stop. If the named use additionally selects a boundary reading, return the C.11 `ChoiceResult` or C.32.PAD `ArchitectureDecisionRelation@Project` that makes its inclusion, exclusion, identity-preservation, and use claim current. Another choice branch passes only after its admitted direct decision predicate, source, and result are named; otherwise return the exact missing predicate or defining pattern, participant, obtaining fact, decision governor, or information blocker. When durable reliance is needed, one separate C.2.1 episteme states that claim and cites its basis; it creates none of the world facts. A selected `U.Structure` remains a separate B.1.2:4.2 branch. |
 | Which relation crosses the selected boundary? | The direct source, supply, flow, coupling, control, measurement, evidence, publication, transformation, commitment, or other relation pattern; `F.9` only for a needed semantic correspondence or difference between two exact F.17 local senses from different semantic contexts | One exact obtaining relation occurrence with its participant bindings and direct predicate; otherwise the missing governor, endpoint, binding, or obtaining fact. |
-| Which function is realized by which bearer? | `A.6.F`, `A.6.M`, and the exact architecture, allocation, or parthood pattern | Separate exact function, bearer, allocation or correspondence, and any obtaining parthood claims; otherwise the missing bearer, allocation, predicate, or defining source. |
+| Which function is realized by which bearer? | The direct behavior, realization, allocation or parthood pattern; `A.6.F` or `A.6.M` only for unresolved wording; `C.30.ASV` only for architecture-view qualification | Recover the functional claim, admitted bearer and independently obtaining realization/allocation and parthood relations; otherwise identify the missing predicate, participant or defining source. |
 | Which whole-level characteristic is claimed? | `C.16`, `A.19`, and `C.29` when a mathematical lens is used | Exact bearer, characteristic, assignment or value, scale, threshold or aggregation relation, and lens-use boundary; otherwise the missing bearer, scale, relation, or evidence. |
 | Which evidence, description, representation, or publication supports inspection? | `A.10`, `B.3`, `C.2.1`, `C.29`, `E.17`, and the exact source or architecture-description pattern | The exact episteme and exact evidence, assurance, description, representation, source-use, or publication relation; otherwise the missing identity, relation, applicability, or reliance basis. |
 
@@ -151,16 +151,9 @@ Use `C.16`, `A.19`, and `C.29` when characteristic space, scale, threshold, or m
 
 #### B.1.2:4.5 - Functional Elements And Bearers
 
-A functional element in a functional view is not automatically a system part.
+A functional element in a functional view is not automatically a system part. Recover the functional claim and its intended behavior, the exact bearer under its own kind and identity rule, the independently established realization or allocation relation, and any obtaining parthood relation. C.2.1 identifies a claim episteme when one must be cited; C.30.ASV qualifies an architecture structural view when that is the use.
 
-Recover separately:
-
-- functional behavior or functional element under `A.6.F`;
-- physical, organizational, software, or operational bearer under `A.6.M`, A.14, C.13, and architecture patterns;
-- allocation or correspondence between function and bearer;
-- system aggregation only when bearer parthood is independently admitted.
-
-One bearer may realize several functions. One function may require several bearers. This is allocation and correspondence before it is part-whole.
+Use A.6.F only to resolve an unclear function expression and A.6.M only to resolve module or interface wording. Neither pattern admits the bearer or establishes allocation or parthood. One bearer can realize several functions and one function can require several bearers when the direct domain relations support those claims.
 
 ### B.1.2:5 - Archetypal Grounding (Worked Cases)
 
@@ -250,7 +243,7 @@ B.1.2 preserves the engineering payoff by coordinating exact subject-pattern res
 ### B.1.2:11 - Relations
 
 - **Builds on:** `B.1`, `A.1`, `A.14`, `C.13`, `A.22`, and the direct relation patterns selected for the current decision.
-- **Coordinates with:** `A.6.F` for functional elements, `A.6.M` for module and bearer allocation, `A.22` and `C.30` for selected structure and architecture, `C.16` and `A.19` for characteristics, `C.29` for mathematical lenses, `A.3.4` and `A.12` for transformation and acting-side externalization, and `C.30.AD` or `C.30.AD.BA` for architecture-description cases.
+- **Coordinates with:** `A.6.F` for function wording, `A.6.M` for module/interface wording, direct subject patterns for bearer identity and allocation, `A.22` and `C.30` for selected structure and architecture, `C.16` and `A.19` for characteristics, `C.29` for mathematical lenses, `A.3.4` and `A.12` for transformation and acting-side externalization, and `C.30.AD` or `C.30.AD.BA` for architecture-description cases.
 - **Can contribute evidence to:** `B.2` when system aggregation no longer explains the whole-level claim and whole reidentification is needed.
 
 ### B.1.2:End

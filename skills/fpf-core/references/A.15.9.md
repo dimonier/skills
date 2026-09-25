@@ -1,6 +1,6 @@
 ---
 id: A.15.9
-title: Request and Use a Bounded Result from Another Practice
+title: Use or Request a Bounded Result from Another Practice
 status: Stable
 keywords: []
 dependencies:
@@ -20,7 +20,7 @@ dependencies:
     - C.38
 ---
 
-# A.15.9: Request and Use a Bounded Result from Another Practice
+# A.15.9: Use or Request a Bounded Result from Another Practice
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -28,7 +28,7 @@ dependencies:
 
 ---
 
-## A.15.9 - Request and Use a Bounded Result from Another Practice
+## A.15.9 - Use or Request a Bounded Result from Another Practice
 
 > **Type:** Method pattern
 > **Status:** Stable

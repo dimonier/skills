@@ -1,6 +1,6 @@
 ---
 id: B.3
-title: Trust and Assurance Calculus
+title: "Is This Claim Supported for This Use? — Trust and Assurance Calculus"
 status: Stable
 keywords: []
 dependencies:
@@ -25,7 +25,7 @@ dependencies:
     - C.29
 ---
 
-# B.3: Trust and Assurance Calculus
+# B.3: Is This Claim Supported for This Use? — Trust and Assurance Calculus
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -33,7 +33,7 @@ dependencies:
 
 ---
 
-## B.3 - Trust and Assurance Calculus
+## B.3 - Is This Claim Supported for This Use? — Trust and Assurance Calculus
 
 > **Type:** Foundational (B)
 > **Status:** Stable
@@ -204,7 +204,7 @@ Design evidence and run evidence may support different claims. Produce separate 
 
 When an assurance argument depends on a causal-use claim, consume the exact `C.28` result and its stated supported and unsupported uses. B.3 does not re-run causal identification. An unsupported causal-use result narrows, blocks, or leaves the assurance claim unresolved; it does not become a low universal reliability coordinate.
 
-When composition, fallback, selection, or family organization among Methods matters to the assurance argument, use `A.22` to select the exact structure for that question and use the local designator `MethodRelationStructure` only for that selected structure. Do not introduce a universal method-relation kind or infer structure from a list of Methods.
+When Method composition, fallback, selection or family organization matters to the assurance argument, first use B.1.5, G.5 or the direct predicate for the relied-on fact. Use A.22 only when a separately selected organization itself changes the assurance question; then recover its selection basis and all four identity discriminators. MethodRelationStructure is a local designator for that selected structure, not a universal kind or a required record for every composition claim.
 
 #### B.3:4.10 - Use Working-Model declarations only for what they state
 
@@ -260,11 +260,11 @@ Use A.21 and the release or permission pattern that consumes the gate decision. 
 
 Target claim: “Model edition M predicts response Y within the declared operating region.” Assurance use: whether an engineer may use that prediction as one input to a reversible design comparison.
 
-The engineer cites the exact model claim, its empirical-validation result, the A.2.4 evidence-use relation, the A.10 provenance path, the operating region, and the expiry condition. No combination of unlike characteristics is needed. The compact disposition is `supported-for-use`, limited to the reversible comparison; release, safety, and operation are expressly not carried. No dated assessment Work or reusable record is added because the use does not depend on who performed the already cited validation.
+The engineer cites the exact model claim, its empirical-validation result, A.2.4 first-use classification and the direct support relation actually used, the A.10 provenance path, the operating region, and the expiry condition. No combination of unlike characteristics is needed. The compact disposition is `supported-for-use`, limited to the reversible comparison; release, safety, and operation are expressly not carried. No dated assessment Work or reusable record is added because the use does not depend on who performed the already cited validation.
 
 #### B.3:6.4 - Order-sensitive Method case
 
-An assurance argument relies on a manufacturing sequence whose result changes when two steps are reversed. The practitioner uses the direct Method and Work patterns for the sequence and, only because organization among several Methods affects the argument, uses A.22 to select a `MethodRelationStructure` for that exact question. The assurance result cites the sequence result and selected structure.
+An assurance argument relies on a manufacturing sequence whose result changes when two steps are reversed. Recover the B.1.5 composition, order and join conditions and any actual A.15.1 Work the argument consumes. Those direct results may answer the assurance question. Use A.22 only if a separately selected organization contributes another needed premise; then identify its constituents, obtaining relations, applied constraints and use frame. The assurance result cites only the results and structure it actually relies on.
 
 ### B.3:6.5 - Bias annotation
 
@@ -289,7 +289,7 @@ An assurance argument relies on a manufacturing sequence whose result changes wh
 | `CC-B3-7` | Target fact, target claim, evidence use, assessment Work, input results, assurance result, witness, note, publication, and later reliance or decision remain recoverable separately. |
 | `CC-B3-8` | A label, dashboard, card, provenance mark, attestation, or publication contributes only the exact property established through a cited relation. |
 | `CC-B3-9` | Safety, rights, access, responsibility, contest, redress, status, permission, release, and controlled action remain with their direct patterns. |
-| `CC-B3-10` | A causal-use premise cites the exact C.28 result; a Method-organization premise cites an A.22-selected structure only when that structure matters. |
+| `CC-B3-10` | A causal-use premise cites the exact C.28 result. A Method premise cites its direct composition, selection or other result; add an A.22 structure only when independently selected organization changes the assurance question, with all four identity discriminators recoverable. |
 | `CC-B3-11` | Work, performer, Method, bindings, witnesses, reusable notes, and an optional F.6 assignment check are added only for an actual replay, competence, independence, timing, contest, or redress need. Every Work follows the §4.5 A.13 then independent A.15.1 route. |
 | `CC-B3-12` | A positive result states the unsupported stronger use and exact reopen condition. |
 
@@ -341,7 +341,7 @@ Older assurance-case editions and generic weakest-link slogans are lineage, not 
 
 - **Builds on:** `C.2.1` for target and assurance-result epistemes; `A.2.4` for exact evidence-use classification; `A.10` and `G.6` for source-provenance paths and bounded reliance; `A.2.6` for ClaimScope; `C.16` and `C.16.Q` for characteristic and scale discipline; and the direct domain patterns for every input result.
 - **Coordinates with:** `A.15.1` and `A.6.1` only when assessment Work and applications matter; `G.11` for currentness; `F.10` for status; `A.21` for gates; permission, commitment, release, access, responsibility, contest, redress, safety, and controlled-action patterns for their own results; and `E.17`, `E.24.PUB`, and `C.29` for publication and representation.
-- **Coordinates with:** `C.28` for causal-use results and `A.22` for a selected `MethodRelationStructure` when Method organization is part of the assurance argument.
+- **Coordinates with:** `C.28` for causal-use results; `B.1.5`, `G.5` or the direct pattern for the relied-on Method fact; `A.22` only for an independently selected organization needed by the assurance argument.
 - **Used by:** a pattern or project decision that consumes one exact assurance result. The consumer still applies its own decision, permission, gate, status, or work rule.
 
 ### B.3:11a - Quantum-like claims

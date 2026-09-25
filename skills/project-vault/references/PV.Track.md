@@ -31,7 +31,7 @@ elaboration lifecycle, and continue/retire them without skipping statuses.
 Productive activity without a container sprawls: work is done outside a track,
 statuses are skipped, signals are not recorded, "let's continue" has nothing to
 lean on. A track must be the mandatory container, but must not proliferate for
-every trifle (not for every DEC/RISK/Q).
+every trifle (not for every card position).
 
 ### PV.Track:3 - Forces
 
@@ -70,14 +70,19 @@ every trifle (not for every DEC/RISK/Q).
 **T.2 — track creation.**
 
 1. A new track always starts with `status: cue`.
-2. Advancement — strictly per FPF-core: `cue` → problem-card formulation
+2. A draft plan (in "Next moves") may be held while the track is still `cue`, marked
+   "draft" (intended, not committed). It is `U.WorkPlan` intended-work content
+   (A.15.2): it states what is intended and asserts no Work occurrence, so it neither
+   advances nor skips the status ladder. The status advances only on owner confirmation,
+   never by the mere presence of the draft.
+3. Advancement — strictly per FPF-core: `cue` → problem-card formulation
    (C.22.2 ProblemCard@Context) → `problem-framed` → method choice (G.5/A.15) →
    `method-selected` → work plan (A.15.2) → `work-planned` → execution (A.15.1)
    → `performed` → result evaluation → `evaluated`.
-3. On each transition: announce in chat the intent to move the track to the next
+4. On each transition: announce in chat the intent to move the track to the next
    status with a brief justification (what exactly changed), await confirmation,
    then update the track. After a status change — `vault.py tracks`.
-4. Creation: the file `TRK-NNNN.md` from the template `tracks/_template.md`; then `vault.py tracks`.
+5. Creation: the file `TRK-NNNN.md` from the template `tracks/_template.md`; then `vault.py tracks`.
 
 **T.3 — track continuation.**
 
@@ -88,14 +93,17 @@ every trifle (not for every DEC/RISK/Q).
 3. New artifacts (`artifacts/`) — list them in the track's "Related entities".
 4. A substantive step with a result — create a WRK (the WorkRecord procedure) and a
    line in "Completed moves".
-5. A blocker found → `blocked`, the blocker into the status fields. On unblocking —
+5. When a step closes a PlanItem — remove the item from "Next moves" (do not strike it
+   through and do not `[x]`); its trace is the WRK line in "Completed moves" (see
+   `PV.WorkRecord` W.2 step 8). "Next moves" always holds only the remaining PlanItems.
+6. A blocker found → `blocked`, the blocker into the status fields. On unblocking —
    return the previous active status.
 
 **T.4 — inbox processing and tracks.**
 - A material with research/valuable artifacts → into an existing track or create a
   new one (T.1–T.2).
-- A transcript/protocol → per StateUpdate, update the related entities (DEC, Q,
-  RISK, CON). If the meeting affects an existing track — update the
+- A transcript/protocol → per StateUpdate, update the related entities (the state
+  cards — DEC). If the meeting affects an existing track — update the
   status/blockers/next moves.
 
 **T.5 — service track (fallback maintenance container).** A run of a repeating
@@ -103,7 +111,7 @@ maintenance procedure (ingestion `PV.Inbox`, vault maintenance) is recorded as a
 - **into a fitting product track**, when the run's material/result belongs to one (the
   routed material landed in or created a track);
 - **under the permanent service track**, only when no fitting product track exists
-  (e.g. the ingestion produced only atomic entities — DEC/Q/RISK/CON — with no
+  (e.g. the ingestion produced only atomic entities — DEC — with no
   operational line).
 
 The service track itself:
@@ -147,6 +155,7 @@ advancement.
 | CC-TR.4 | A track has at least one blocker (exception: a service track — T.5). |
 | CC-TR.5 | Tracks are not deleted; retired ones stay in `tracks/` with `status: retired`. |
 | CC-TR.6 | Every status transition is announced and confirmed; then — `vault.py tracks`. |
+| CC-TR.7 | "Next moves" holds only uncompleted PlanItems; a completed one is removed (its trace is the WRK in "Completed moves"), never struck through on the spot. |
 
 ### PV.Track:8 - Common Anti-Patterns and How to Avoid Them
 

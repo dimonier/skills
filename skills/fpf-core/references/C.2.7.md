@@ -1,6 +1,6 @@
 ---
 id: C.2.7
-title: "`U.LanguageStateRepresentationFactorBundle`"
+title: "`U.LanguageStateRepresentationFactorBundle` — How Is the Representation Organized?"
 status: Stable
 keywords:
   - representation factors
@@ -17,7 +17,7 @@ dependencies:
     - C.2.6
 ---
 
-# C.2.7: `U.LanguageStateRepresentationFactorBundle`
+# C.2.7: `U.LanguageStateRepresentationFactorBundle` — How Is the Representation Organized?
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -25,7 +25,7 @@ dependencies:
 
 ---
 
-## C.2.7 - `U.LanguageStateRepresentationFactorBundle`
+## C.2.7 - `U.LanguageStateRepresentationFactorBundle` — How Is the Representation Organized?
 
 > **Type:** Definitional (D)
 > **Status:** Stable

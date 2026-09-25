@@ -1,6 +1,6 @@
 ---
 id: A.16.1
-title: "`U.PreArticulationCuePack`"
+title: "`PreArticulationCuePack`: Preserve an Early Cue Before Choosing Its Use"
 status: Stable
 keywords:
   - cue pack
@@ -19,7 +19,7 @@ dependencies:
     - A.16.2
 ---
 
-# A.16.1: `U.PreArticulationCuePack`
+# A.16.1: `PreArticulationCuePack`: Preserve an Early Cue Before Choosing Its Use
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -27,7 +27,7 @@ dependencies:
 
 ---
 
-## A.16.1 - `U.PreArticulationCuePack`
+## A.16.1 - `PreArticulationCuePack`: Preserve an Early Cue Before Choosing Its Use
 
 > **Type:** Definitional (D)
 > **Status:** Stable
@@ -43,14 +43,14 @@ dependencies:
 
 **Start here when.** Your first honest content is a preserve-worthy cue nucleus that should not yet be forced into a claim, route decision, method, or work record.
 
-**First output.** One `U.PreArticulationCuePack` with an explicit cue nucleus, preservation rationale, primary witness or anchor when one is load-bearing, and any early lane candidates or route-candidate hints that are already visible.
+**First output.** One `PreArticulationCuePack` with an explicit cue nucleus, preservation rationale, primary witness or anchor when one is load-bearing, and any early lane candidates or route-candidate hints that are already visible.
 
 **Typical next patterns.** Use `B.4.1` when route plurality or route selection becomes publishable; `B.5.2.0` for cue-derived abductive prompting; `A.6.P` when a relation-bearing claim needs repair for a named receiving use and you can name at least one grounded candidate relation, its participants, and a discriminating check; `A.6.A` or `C.16.Q` under their own entry conditions; and `A.16.2` when reopening or retirement becomes the truthful move. Use `C.2.4` for any additional local articulation threshold declared for a receiving branch.
 
 **Common neighboring-pattern mistakes.** Do not publish a cue pack as a selected-route decision, anomaly statement, evaluative ascription, `A.6.A` invitation, or Work record; if route selection is already explicit, use `B.4.1`; if endpoint semantics are already stable, use the applicable endpoint pattern to test them and publish the corresponding form; if backoff or retirement is the active problem, use `A.16.2`.
 
 ### A.16.1:1 - Problem frame
-Some `U.Episteme` content is worth preserving before it is ready for route or prompt publication, relation or evaluative repair, an `A.6.A` invitation, method or work use, or endpoint admission. `U.PreArticulationCuePack` therefore exists as the earliest durable seam publication form for such pre-threshold cue content.
+Some `U.Episteme` content is worth preserving before it is ready for route or prompt publication, relation or evaluative repair, an `A.6.A` invitation, method or work use, or endpoint admission. `PreArticulationCuePack` therefore exists as the earliest durable seam publication form for such pre-threshold cue content.
 
 The cue pack is deliberately earlier than `RoutedCueSet`. It may carry early directional hints, but it does not yet contain a selected route, route-selection status, or route rationale.
 
@@ -66,13 +66,13 @@ Without an explicit cue-pack publication form, such epistemes either disappear, 
 | **Plurality vs auditability** | Allow several plausible continuations without collapsing the cue pack into a route record. |
 
 ### A.16.1:4 - Solution
-`U.PreArticulationCuePack` is a typed publishable episteme form that serves as the earliest durable seam publication form inside the language-state cluster. It is not a claim, not a characteristic, not a method, not work, and not a route record. When rendered, it appears on an ordinary MVPK face; cue-pack status is a property of the publication form, not a rival face kind.
+`PreArticulationCuePack` is a typed publishable episteme form that serves as the earliest durable seam publication form inside the language-state cluster. It is not a claim, not a characteristic, not a method, not work, and not a route record. When rendered, it appears on an ordinary MVPK face; cue-pack status is a property of the publication form, not a rival face kind.
 
 A cue pack may exist before any route is selected and even before route-candidate hints can yet be named clearly. When route plurality or selection becomes explicit enough to publish, use `B.4.1` to state it and publish the next form as a `RoutedCueSet`.
 
-#### A.16.1:4.0a - E.24.UK settlement
+#### A.16.1:4.0a - Publication form and filled account
 
-`U.PreArticulationCuePack` is retained as a dependent durable publication-form value under the `U.Episteme` and language-state publication settlement, not as a root U-kind. Its identity is the preservable cue-pack form for pre-threshold episteme content. A cue, trace, witness, anchor, route hint, carrier, or local note does not become this value merely because it appears inside a pack.
+PreArticulationCuePack names the publication form defined here; it is not an admitted U-kind. A filled claim-bearing preservation account is an episteme only when its claim content, exact EntityOfConcern and effective ReferenceScheme satisfy C.2.1. The form, that episteme, its cue and witnesses, its carrier and any E.24.PUB publication occurrence remain distinct.
 
 #### A.16.1:4.1 - Core shape
 A conforming cue pack may publish:
@@ -159,13 +159,13 @@ This pattern biases authors toward preserving low-articulation meaningful cues i
 - **Cue as route record.** Do not let `selectedRoute`, route rationale, or route-selection status hide inside cue-pack prose.
 - **Cue without nucleus.** Do not publish only refs and carriers while leaving the preserved core unnamed.
 - **Cue without triage.** Do not pretend all witnesses or anchors are equally load-bearing when one clearly carries the preservation need.
-- **Cue as carrier zoo.** Do not make `U.PreArticulationCuePack` a replacement for `A.7` carrier discipline.
+- **Cue as carrier zoo.** Do not make `PreArticulationCuePack` a replacement for `A.7` carrier discipline.
 
 ### A.16.1:9 - Consequences
 The benefit is an admissible preservation form for early cues and a cleaner seam into `B.4.1` route publication and the later patterns that define, constrain, or test endpoint claims. The trade-off is one more explicit publication form that must be named and maintained.
 
 ### A.16.1:10 - Rationale
-`U.PreArticulationCuePack` is the earliest durable seam publication in the cluster. It keeps pre-threshold cues visible before route selection and without overloading `A.6.P`, `B.4.1`, or `B.5.2`.
+`PreArticulationCuePack` is the earliest durable seam publication in the cluster. It keeps pre-threshold cues visible before route selection and without overloading `A.6.P`, `B.4.1`, or `B.5.2`.
 
 ### A.16.1:11 - SoTA-Echoing
 The pattern fits early cue capture in design, embodied cognition, incident triage, model interpretation, and focusing-like practice, where low-articulation but real cues need preservation before route or endpoint choice.

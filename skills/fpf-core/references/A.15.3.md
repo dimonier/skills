@@ -1,6 +1,6 @@
 ---
 id: A.15.3
-title: "`SlotFillingsPlanItem` — Declaration-Local Planned Designation"
+title: "`SlotFillingsPlanItem`: Plan a Value for an Existing Declaration Member"
 status: Stable
 keywords:
   - WorkPlan claim content
@@ -30,7 +30,7 @@ dependencies:
     - E.24.PUB
 ---
 
-# A.15.3: `SlotFillingsPlanItem` — Declaration-Local Planned Designation
+# A.15.3: `SlotFillingsPlanItem`: Plan a Value for an Existing Declaration Member
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -38,7 +38,7 @@ dependencies:
 
 ---
 
-## A.15.3 - SlotFillingsPlanItem
+## A.15.3 - `SlotFillingsPlanItem`: Plan a Value for an Existing Declaration Member
 
 > **Tech-name:** `SlotFillingsPlanItem`
 > **Plain-name:** planned-filling plan item

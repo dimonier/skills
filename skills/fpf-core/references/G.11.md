@@ -1,6 +1,6 @@
 ---
 id: G.11
-title: "Telemetry-Driven Refresh & Decay Orchestrator"
+title: Decide Whether and How to Refresh SoTA Packs and Related Results (Telemetry and Decay)
 status: Stable
 keywords:
   - telemetry
@@ -32,7 +32,7 @@ dependencies:
     - F.15
 ---
 
-# G.11: Telemetry-Driven Refresh & Decay Orchestrator
+# G.11: Decide Whether and How to Refresh SoTA Packs and Related Results (Telemetry and Decay)
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -40,7 +40,7 @@ dependencies:
 
 ---
 
-## G.11 - Telemetry-Driven Refresh and Decay Orchestrator
+## G.11 - Decide Whether and How to Refresh SoTA Packs and Related Results (Telemetry and Decay)
 
 **Tag.** Architectural pattern (architectural; notation-independent)
 > **Status:** Stable
@@ -173,7 +173,7 @@ By the `G.Core` **Expansion rule**, the **effective** conformance ids, trigger k
   * `TargetScope := PathSliceId[] | PatternScopeId[]`
   * `PlannedTriggers := RSCRTrigger[]` (canonical trigger kind ids, scope, and payload pins)
   * `PlannedActions := RefreshAction[]` (each action delegates to a subject pattern)
-  * `RequiredPins := {EditionPins, PolicyPins, UTS pins, Path pins}` for replayability
+  * `RequiredPins`: exact affected source and result editions, policy pins and scope for replayability; UTS pins for public identities actually used; graph Path pins when the selected scope is graph-expressed or an independently applicable receiving contract requires them.
   * `PlannedFillingRows[]?` as ClaimGraph content kept inside the WorkPlan under A.15.3 when a value must be pinned against a declaration member defined by its own pattern. A row is addressed only through the WorkPlan and has no separate reference or identity.
 3. **`RefreshReport@Context` (record of refresh Work or its audit).**
   An execution or audit report that records:
@@ -231,19 +231,19 @@ Consume RSCR triggers from:
 
 Every ingested signal is normalized into an `RSCRTrigger` (canonical id, scope, payload pins), with optional alias labels.
 
-**4.3.2 Scope closure (EvidenceGraph-first).**
+**4.3.2 Scope closure over the actual dependencies.**
 Compute the minimal dependency closure over:
 
 * cited evidence and source relations, with `G.6` `PathId` and `PathSliceId` refs when a graph path slice is the current math-lens expression,
 * declared crossings (`G.7` sentinels; `CrossingBundle` visibility),
 * and pinned references (editions and policies).
 
-The closure is a planning-time claim about affected slices, distinct from execution of the planned refresh actions. Interpret a B.3.4 trigger for the receiving claim and use: available information may establish continued applicability, a narrower use, an obtainable refresh need or a necessary suspension. An age-only signal does not determine that disposition. If support remains sufficient, stop with the usable result; retain only the limitation or reason a later recipient needs.
+G.6 supplies graph expression and citation when used; a graph does not establish the source or dependency relation. For a nongraph result, name the exact source, receiving result/use and dependency under `PatternScopeId`; use `PathSliceId` when that dependency scope is actually graph-expressed or independently required by the receiving contract. The closure is a planning-time claim about affected slices, distinct from execution of the planned refresh actions. Interpret a B.3.4 trigger for the receiving claim and use: available information may establish continued applicability, a narrower use, an obtainable refresh need or a necessary suspension. An age-only signal does not determine that disposition. If support remains sufficient, stop with the usable result; retain only the limitation or reason a later recipient needs.
 
 **4.3.3 Planning (P2W boundary).**
 When the selected response requires planned refresh, use C.11 and C.19.2 for its marginal contribution, cost, delay and displaced work. Produce `RefreshPlan@Context` for the actions actually selected; possible action forms include:
 
-* `RerunHarvest` (delegates to the selected harvest, source-currentness, or SoTA governing definition named by value, such as `G.1` or `G.2`, when that definition is current)
+* `RerunHarvest` (delegates to the selected harvesting or SoTA method, such as `G.2`; use `G.1` additionally only when its generator-kit cards or wiring must change)
 * `RerunParity` (delegates to `G.9`)
 * `RecomputeSelectionOrSetResult` (delegates to `G.5`)
 * `RebindBridgeOrCrossing` (delegates changes to the obtaining Bridge to `F.9`, calibration-record changes to `G.7`, and crossing visibility to `E.18` and the applicable visibility harnesses)
@@ -309,7 +309,7 @@ Discipline-specific refresh strategies and generator-specific wiring live as `GP
 
 * The receiving claim/use and the changed premise or applicable review condition, with source references where published.
 * `FreshnessWindowDeclRef?`, `DecayPolicyIdRef?` or `EpistemicDebtBudgetRef?` only when the adopted window, deterioration model or planning measure is used. Their source supplies the meaning; no default expiry or debt budget is required.
-* `PathSliceId[]` for the dependent claims and uses actually affected, not every use of an old carrier.
+* Exact dependent claims and uses actually affected, expressed as `PatternScopeId` for nongraph scope or `PathSliceId[]` for graph scope. Retain graph pins when an independently applicable profile requires them; carrier age alone does not select every use of that carrier.
 
 **RSCRTriggerKindIds:** `{RSCRTriggerKindId.FreshnessOrDecayEvent, RSCRTriggerKindId.EvidenceSurfaceEdit, RSCRTriggerKindId.BaselineBindingEdit}`
 **Notes (wiring-only):** B.3.4 determines what the trigger means for the use. Continue, narrow, refresh, suspend or an authorized exception remain available where warranted; no Refresh/Deprecate/Waive triad or automatic downgrade is introduced here. Currentness is not assurance of the underlying claim. Budget and priority logic apply only when their interpreted policies are used.
@@ -327,7 +327,7 @@ Discipline-specific refresh strategies and generator-specific wiring live as `GP
 * `DescriptorMapRef.edition`, `DistanceDefRef.edition`
 * `CharacteristicSpaceRef.edition?` (required when a domain-family coordinate is declared by the QD governing definition)
 * `InsertionPolicyRef`, `EmitterPolicyRef` (policy-bound)
-* `PathSliceId` (archive or illumination scope) and `policy-id` for emitted telemetry triggers
+* Exact archive or illumination scope and `policy-id` for emitted telemetry triggers: `PatternScopeId` for nongraph scope; `PathSliceId` when graph-expressed or required by an independently applicable parity, evidence or shipping contract.
 
 **RSCRTriggerKindIds:** `{RSCRTriggerKindId.TelemetryDelta, RSCRTriggerKindId.EditionPinChange, RSCRTriggerKindId.PolicyPinChange}`
 **Notes (wiring-only):** `G.11` does not restate QD semantics; it ensures pins are present so reruns are comparable.
@@ -343,8 +343,8 @@ Discipline-specific refresh strategies and generator-specific wiring live as `GP
 **Required pins, edition pins, and policy pins (minimum):**
 
 * `TransferRulesRef.edition`, `EnvironmentValidityRegion` (when OEE is declared by the subject patterns)
-* `GeneratorFamilyId` and `TransferRulesRef` wiring pins (as published by the governing definitions)
-* telemetry scope pins (`PathSliceId`, `policy-id`)
+* `GeneratorFamilyRowRef = <GeneratorFamilyId, rowEdition>` and `TransferRulesRef` wiring pins (as published by G.5 and the governing definitions); resolve the exact row edition used by the affected result
+* exact telemetry scope and `policy-id`: `PatternScopeId` for nongraph scope; `PathSliceId` when graph-expressed or required by an independently applicable parity, evidence or shipping contract.
 
 **RSCRTriggerKindIds:** `{RSCRTriggerKindId.EditionPinChange, RSCRTriggerKindId.TelemetryDelta, RSCRTriggerKindId.PolicyPinChange}`
 **Notes (wiring-only):** Any OEE method semantics live with the governing definition; this module only wires refresh triggers to comparable reruns.
@@ -368,9 +368,15 @@ If no priority or budget policy is declared, no scheduling heuristic is admissib
 A centrifugal pump is serviced under a documented procedure (method description). Sensors report vibration drift (telemetry), and a calibration standard is updated (edition bump). The maintenance team uses `G.11` to produce a refresh plan scoped to the affected inspection slices and publishes a refresh report of the executed actions with pins to the updated standard edition and the evidence or source relations. Deprecation notices are issued for obsolete thresholds in the procedure’s acceptance clauses (by subject pattern), preserving ID continuity.
 
 **`U.Episteme` illustration — Living review and benchmark pack (claims and parity).**
-A claim sheet behind a shipped SoTA pack changes (new evidence, retraction, or revised measurement definition). Bridges are recalibrated, affecting CL or plane penalties. The maintainers use `G.11` to ingest canonical trigger kinds, compute the minimal closure over affected `PathSliceId`s, schedule targeted parity reruns, then re-ship the pack through the pattern governing shipping semantics while publishing an edition bump log that makes the evolution replayable.
+A claim sheet behind a shipped SoTA pack changes (new evidence, retraction, or revised measurement definition). Calibration evidence changes, potentially affecting a bounded-use claim or a justified loss consequence. The maintainers identify which receiving uses depend on the changed row, retain matching results that remain supported, and use the canonical triggers to plan any needed targeted parity rerun. Re-shipping follows only when the publication needs the resulting change; a CL revision alone grants or withdraws no use.
 
 **Paired currentness case.** A pack's export-date label changes, but its relied-on claims, source editions, qualification conditions and receiving use remain unchanged and adequately supported by available information. Retain the result; no refresh plan, waiver or no-refresh notice is needed. In the paired case, a dependency changes so that the shipped benchmark comparison no longer supports use beyond its stated window. Restrict that comparison and retain the warning with the shipped result so a later receiver cannot infer continued comparability. Plan the targeted check or update when it is justified and obtainable; currentness reporting alone does not repair the comparison.
+
+**Three bounded currentness cases.** These are constructed applications of the same rule.
+
+* A pump shortlist still consumes the same two immutable method rows, eligibility conditions and source edition. An age alert supplies no changed premise or expired use condition, and the available support remains sufficient for the same triage use. Retain the shortlist; no plan or omission certificate is needed.
+* A local selected-set result consumes `PumpReviewBudget-E1`. Its replacement `PumpReviewBudget-E2` changes the allowed review time from 30 to 20 minutes. The existing result explicitly cites that budget; no evidence graph is in use. Scope `PumpTriageSelection` names that exact result, changed budget and dependent eligibility comparison. If re-selection is chosen, plan only that comparison through G.5 under `PatternScopeId=PumpTriageSelection`, carrying both budget editions and the current task/row refs. Record performed refresh and any required targeted check in the resulting report before republication.
+* A shipped QD archive expresses its affected dependencies in `PathSliceId=ArchiveCell-Q7`. A distance-definition change reopens the comparison using that definition. Retain the slice, old/new `DistanceDefRef.edition`, descriptor, insertion/emitter and policy pins, and the applicable G.9/G.10 evidence and shipping requirements. An OEE change to `TransferRulesRef.edition` similarly retains its affected graph slice, exact generator row edition and environment-validity scope. Nongraph support elsewhere does not relax these contracts.
 
 ### G.11:6 - Bias-Annotation (informative)
 
@@ -391,7 +397,7 @@ Bias lenses: **Gov**, **Arch**, **Onto and Epist**, **Prag**, **Did**.
 | **CC‑G11.2 (Edition discipline; QD and OEE wiring).**  | When QD, OEE, or both are active, a conforming `RefreshPlan@Context` and `RefreshReport@Context` **SHALL** satisfy the required pin, edition, and policy wiring of the applicable extension blocks: `G.11:Ext.QDRefreshWiring`, `G.11:Ext.OEERefreshWiring`, or both. **`.edition` SHALL apply only on `…Ref`.** Missing required pins **SHALL** block publication. | Keeps replayability strict while keeping method-specific pin lists inside the applicable extension blocks.  |
 | **CC‑G11.3 (Telemetry-metric admissibility).**  | If a refresh publishes Illumination, QD, or OEE outcomes, it **SHALL** publish **Q, D, and QD‑score** and any coverage or regret as **telemetry metrics** and **IlluminationSummary** as a **telemetry summary**; these values **SHALL be excluded from dominance** unless a CAL policy explicitly promotes them, and the promoting **policy id SHALL be recorded** in SCR-visible evidence bindings through the cited subject patterns.  | Prevents covert scalarisation and keeps “telemetry vs order” separation explicit.  |
 | **CC‑G11.4 (Bridge penalties).**  | Any refresh reacting to Bridge or plane changes **SHALL** satisfy `CC‑GCORE‑PEN‑1` (delegation), and **SHALL** publish `CL`, `CL^k`, `CL^plane`, and the relevant `Φ`, `Ψ`, and `Φ_plane` policy ids with loss notes so penalties are assigned to `R_eff` only (F and G invariant).  | Keeps penalty assignment auditable during refresh.  |
-| **CC‑G11.5 (Selector invariants).**  | Any orchestrated re‑selection or selected-set or archive update **SHALL** (i) satisfy `CC‑GCORE‑SET‑1` (delegation), and (ii) cite the selector governing definition (`G.5`) under an unchanged admissible `ComparatorSet` (edition‑pinned where applicable), returning **sets** (`Pareto` or `Archive`) and introducing **no scalarisation** inside `G.11`.  | Prevents refresh from changing order semantics.  |
+| **CC‑G11.5 (Selector invariants).**  | Any orchestrated re‑selection or selected-set or archive update **SHALL** (i) satisfy `CC‑GCORE‑SET‑1` (delegation), and (ii) cite the selector governing definition (`G.5`) with the comparator admitted for that use at its applicable edition, and preserve the actual declared outcome: the relevant selected-set kind, narrowed handoff, abstention, or escalation. A changed comparator basis must be explicit under its own governor; G.11 introduces no scalarisation or replacement result semantics.  | Prevents refresh from changing order semantics.  |
 | **CC‑G11.6 (Crossing visibility).**  | All refresh actions that touch cross-context reuse **SHALL** satisfy `CC‑GCORE‑CROSS‑1` (delegation) and the GateCrossing visibility harness (e.g., `E.18`): `CrossingRef`, BridgeCard, UTS, and `CL` or `Φ_plane` policy ids. Missing or non-conformant crossings **SHALL** block publication.  | Prevents “silent crossings” under refresh.  |
 | **CC‑G11.7 (Use-qualified currentness).** | A freshness or decay trigger SHALL be interpreted under B.3.4 for the relied-on claim/use and affected dependencies. Continue on sufficient applicable support without mandatory refresh, deprecation, waiver, WorkPlan or omission certificate. A later receiver SHALL receive the minimum action-changing limitation or reason with the existing result/publication. Publish `DeprecationNotice@Context` only for actual deprecation; an exception requires actual authority and scope. | Preserves useful currentness warnings without treating age as lost assurance or manufacturing a completion artefact. |
 | **CC‑G11.8 (No default smuggling).**  | A conforming `G.11` refresh artefact **SHALL NOT** introduce new defaults for `PortfolioMode`, dominance, Γ-fold, or guard behavior. If orchestrated steps rely on defaults, the artefact **SHALL** cite each default's governing definition through `G.Core.DefaultGoverningDefinitionIndex` and the applicable subject patterns rather than restating defaults inside `G.11`.  | Protects default definition-citation discipline under orchestration pressure.  |

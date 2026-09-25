@@ -1,6 +1,6 @@
 ---
 id: A.6.REL
-title: Relation Obtaining and Individuated Relation Occurrences
+title: "Relation Obtaining and Individuation: Distinguish Occurrences When Needed"
 status: Stable
 keywords: []
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     - C.29
 ---
 
-# A.6.REL: Relation Obtaining and Individuated Relation Occurrences
+# A.6.REL: Relation Obtaining and Individuation: Distinguish Occurrences When Needed
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,7 +22,7 @@ dependencies:
 
 ---
 
-## A.6.REL - Relation Obtaining and Individuated Relation Occurrences
+## A.6.REL - Relation Obtaining and Individuation: Distinguish Occurrences When Needed
 
 > **Type:** Architectural (A)
 > **Status:** Stable

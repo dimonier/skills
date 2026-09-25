@@ -1,8 +1,20 @@
 ---
 id: A.3.4.P
-title: Transformation Ontic Precision Restoration
+title: "Transformation Wording Repair: Recover Objects and Claims"
 status: Stable
-keywords: []
+keywords:
+  - "transformation ontic precision restoration. Repairs change-situation wording by grounding any actual `U.Transformation` in its changed referent"
+  - boundary
+  - actual subject facts
+  - and continuity rule
+  - "distinguishing performed-work or other direct actor-side claims from differently typed influence sources"
+  - and routing flow structure
+  - method
+  - work
+  - representation
+  - evidence
+  - publication
+  - and other neighboring claims through exact governors.
 dependencies:
   builds_on:
     - A.3.4
@@ -35,7 +47,7 @@ dependencies:
     - E.10.MOVE
 ---
 
-# A.3.4.P: Transformation Ontic Precision Restoration
+# A.3.4.P: Transformation Wording Repair: Recover Objects and Claims
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -43,7 +55,7 @@ dependencies:
 
 ---
 
-## A.3.4.P - Transformation Ontic Precision Restoration
+## A.3.4.P - Transformation Wording Repair: Recover Objects and Claims
 
 > **Type:** A.3.4 precision-restoration child pattern
 > **Status:** Stable

@@ -1,6 +1,6 @@
 ---
 id: A.8
-title: Universal Core Principle
+title: "Universal Core Principle: Test a U-Kind Across Domains"
 status: Stable
 keywords:
   - universality
@@ -16,7 +16,7 @@ dependencies:
     - F.18
 ---
 
-# A.8: Universal Core Principle
+# A.8: Universal Core Principle: Test a U-Kind Across Domains
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -24,7 +24,7 @@ dependencies:
 
 ---
 
-## A.8 - Universal Core Principle
+## A.8 - Universal Core Principle: Test a U-Kind Across Domains
 
 > **Type:** Kernel admission discipline pattern
 > **Status:** Stable

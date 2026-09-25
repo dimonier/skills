@@ -1,16 +1,17 @@
 ---
 id: C.33
-title: "Structural Information Adequacy for Architecture Capture and Missing-Structure Return"
+title: Assess Structural Information for Architecture Use
 status: Stable
 keywords:
   - structural information adequacy
-  - captured selected structure
+  - captured structure
   - missing structure
-  - lost structure
-  - "missing-structure return"
-  - carrier
+  - partial description
+  - diagram
+  - ADR
+  - relation graph
   - observer boundary
-  - selected structure.
+  - source return.
 dependencies:
   builds_on:
     - A.22
@@ -39,7 +40,7 @@ dependencies:
     - F.15
 ---
 
-# C.33: Structural Information Adequacy for Architecture Capture and Missing-Structure Return
+# C.33: Assess Structural Information for Architecture Use
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -47,7 +48,7 @@ dependencies:
 
 ---
 
-## C.33 - Structural Information Adequacy for Architecture Capture and Missing-Structure Return
+## C.33 - Assess Structural Information for Architecture Use
 
 > **Type:** Architectural pattern
 > **Status:** Stable

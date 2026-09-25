@@ -1,6 +1,6 @@
 ---
 id: C.2.6
-title: "`U.LanguageStateAnchoringMode`"
+title: "`U.LanguageStateAnchoringMode` — How Is the Episteme Anchored?"
 status: Stable
 keywords:
   - anchoring mode
@@ -8,7 +8,10 @@ keywords:
   - trace
   - model state
   - document
-  - operator loop.
+  - operator loop
+  - source anchoring
+  - "publication-face anchoring"
+  - mixed modes.
 dependencies:
   builds_on:
     - C.2.2
@@ -17,7 +20,7 @@ dependencies:
     - F.9.1
 ---
 
-# C.2.6: `U.LanguageStateAnchoringMode`
+# C.2.6: `U.LanguageStateAnchoringMode` — How Is the Episteme Anchored?
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -25,7 +28,7 @@ dependencies:
 
 ---
 
-## C.2.6 - `U.LanguageStateAnchoringMode`
+## C.2.6 - `U.LanguageStateAnchoringMode` — How Is the Episteme Anchored?
 
 > **Type:** Definitional (D)
 > **Status:** Stable

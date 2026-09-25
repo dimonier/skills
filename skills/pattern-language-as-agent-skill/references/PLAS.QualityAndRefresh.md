@@ -57,10 +57,19 @@ compares them mechanically.
    checks N/A; do not drop a D-coordinate.
 3. **Pattern quality** with `E.21`; mark bodies `seed` until they pass.
 4. **Machine frontmatter check (cheap, before any "rely on").** Parse every card's
-   YAML frontmatter — and the `SKILL.md` `description` — with a validator (e.g.
-   `skill-creator/scripts/quick_validate.py`) and fail on any parse error before
-   relying on the skill. A `description` with a bare `:` + space breaks the whole
-   frontmatter (`ScannerError`); the check catches it mechanically, not by eye.
+   YAML frontmatter — and the `SKILL.md` `description` — and fail on any parse error
+   before relying on the skill. A `description` with a bare `:` + space breaks the
+   whole frontmatter (`ScannerError`); the check catches it mechanically, not by eye.
+   The check is **parametrized by carrier** (a documented contract, not a shipped PLAS
+   script): the `id`-prefix/template and the **valid status set** are arguments — an
+   FPF-grounded carrier checks `seed`/`stable`; a self-sufficient carrier checks
+   `source-faithful`/`case-validated`; a compacted projection expects **no card
+   frontmatter** (identity = filename stem + body H1). The check also validates
+   `SKILL.md` `description` YAML-safety, `INDEX.md ↔ references/` consistency, and
+   rejects a `readiness:` key or a body cue block. `CC-QR.6` names this contract so the
+   check is executable uniformly for every carrier form; a carrier may host its own
+   implementation (e.g. `project-vault/scripts/check_frontmatter.py`), but the contract —
+   not the file location — is normative.
 5. **Graph check (cheap, alongside item 4).** The dependency graph has one authored
    home — frontmatter `dependencies` (`PLAS.GoverningCues:4`). Run
    `python scripts/build_relations.py --check`: it fails if the generated
@@ -68,7 +77,10 @@ compares them mechanically.
    referenced child-side only. Verify that every card's `:12 Relations` is a one-line
    pointer (no repeated edges), that no card body carries a `Governing FPF patterns`
    cue block, and that no `governs`/`applies-to`/`*all cards*` pseudo-edge appears
-   (relation functions come only from `E.4.PFR:3.3`). Regenerate
+   (relation functions come only from `E.4.PFR:3.3`). For a **self-sufficient**
+   carrier, also grep `references/` + `SKILL.md` for authoring-infrastructure leaks —
+   `DEC-|TRK-|WRK-|Q-|CON-|RISK-`, `инбокс|inbox|outbox`, `project-vault/` — and fail
+   on a hit (bare source filenames allowed; `PLAS.SelfSufficient` `CC-SS.6`). Regenerate
    with `python scripts/build_relations.py` after any frontmatter change
    (`E.4.PFR:3.2`: derived views cite one assertion and are never maintained
    independently). The carrier must ship the **canonical** script contract
@@ -107,8 +119,8 @@ to silently drop rather than mark N/A, which hides the carrier-specific gap.
 | CC-QR.3 | Improvement uses a separate reviewer and a target level (`E.23`). |
 | CC-QR.4 | Refresh triggers are named (`G.11`). |
 | CC-QR.5 | Publication-form checks are explicitly N/A, not silently dropped. |
-| CC-QR.6 | A machine frontmatter-parse check (incl. `description` YAML-safety) passes before reliance. |
-| CC-QR.7 | The dependency graph has one authored home (frontmatter); `:12` is a pointer; no card body repeats a `Governing FPF patterns` cue block; `scripts/build_relations.py --check` passes (generated `relations.md` matches the frontmatter; an empty Specialization graph yields the explicit stub line, not an empty graph); the carrier ships the canonical script contract (regenerate + `--check`, non-zero on drift, markers, no card edits); no `governs`/`applies-to` pseudo-edges. |
+| CC-QR.6 | A machine frontmatter-parse check (incl. `description` YAML-safety) passes before reliance — parametrized by carrier: id-prefix/template + valid status set (`seed`/`stable`, or `source-faithful`/`case-validated`, or no-frontmatter for a compacted projection), plus `INDEX.md ↔ references/` consistency and no `readiness:` key / body cue block. |
+| CC-QR.7 | The dependency graph has one authored home (frontmatter); `:12` is a pointer; no card body repeats a `Governing FPF patterns` cue block; `scripts/build_relations.py --check` passes (generated `relations.md` matches the frontmatter; an empty Specialization graph yields the explicit stub line matching FPF-edge presence (with FPF edges vs self-sufficient/none), not an empty graph); the carrier ships the canonical script contract (regenerate + `--check`, non-zero on drift, markers, no card edits); no `governs`/`applies-to` pseudo-edges. |
 
 ### PLAS.QualityAndRefresh:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -118,6 +130,7 @@ to silently drop rather than mark N/A, which hides the carrier-specific gap.
 | Improvement without characteristics | Frame with `E.22`; pick a measured aspect. |
 | Publication-form checks forced on a skill | Mark them N/A; there is no reader form. |
 | Frontmatter never machine-parsed | Run a cheap YAML/parse check before reliance. |
+| A frontmatter checker hardened to one carrier (e.g. `PV.`-prefix, `seed`/`stable`) applied to another (self-sufficient) | Parametrize by carrier (id-prefix/template + status set); see `CC-QR.6`. |
 | Graph views drift (direction flip between frontmatter / `:12` / `relations.md`) | Frontmatter is the single home; regenerate `relations.md` with `build_relations.py`; keep `:12` a pointer. |
 | `--check` never fails (a truncated script copy is shipped) | Ship the canonical contract (regenerate + `--check`, non-zero on drift); verify it fails on a deliberate drift. |
 

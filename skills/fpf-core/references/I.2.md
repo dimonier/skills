@@ -1,6 +1,6 @@
 ---
 id: I.2
-title: Expanded Entry Disambiguation Cases
+title: "Choose a First Pattern: Expanded Entry Disambiguation Cases"
 status: Stable
 keywords:
   - first entry
@@ -15,7 +15,7 @@ dependencies:
     - F.17
 ---
 
-# I.2: Expanded Entry Disambiguation Cases
+# I.2: Choose a First Pattern: Expanded Entry Disambiguation Cases
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -23,7 +23,7 @@ dependencies:
 
 ---
 
-## I.2 - Expanded Entry Disambiguation Cases
+## I.2 - Choose a First Pattern: Expanded Entry Disambiguation Cases
 
 `I.2` is the canonical publication unit for `ExpandedEntryDisambiguationCase`
 entries in this architecture. An `I.2` item expands one compact `E.11`-distributed
@@ -215,7 +215,7 @@ Each expanded entry-disambiguation case keeps recoverable:
 - **Tempting wrong pattern:** treat every speed or rhythm word as C.27, or treat every C.27 card as benchmark proof, causal proof, service promise, quality claim, viability claim, reusable transition law, or QL activation.
 - **Disambiguating fact:** the phrase changes admissible use only when effort, window, resistance or cost, basis, and reopen condition matter for action.
 - **Recognition repair or question reclassification:** keep a snapshot as Dyn0; keep a measured trend or rate as Dyn1 and inspect `C.16` when measurement construction or comparability is live; use `Dyn2TemporalClaimAdequacyCard` when the intervention-sensitive temporal claim itself changes admissible use; move the other question to the named FPF pattern that governs it.
-- **Actual governing FPF pattern or projection role:** `C.27` carries authored temporal-claim adequacy; `C.16` carries measurement construction and comparability; `A.3.3` carries reusable transition law or formal dynamics model; `G.9` carries benchmark parity; `C.25` carries a quality-family claim only when differently typed contributors jointly determine it; `C.26.3` carries viability-envelope regulation; `C.26` carries residual QL reading only after ordinary temporal, measurement, work, benchmark, proxy, and dynamics readings are exhausted.
+- **Actual governing FPF pattern or projection role:** `C.27` carries authored temporal-claim adequacy; `C.16` carries measurement construction and comparability; `A.3.3` carries reusable transition law or formal dynamics model; `G.9` carries benchmark parity; `C.25` first checks whether one Characteristic and Scale suffice for the quality claim and uses a bundle only when differently typed contributors jointly determine it; `C.26.3` carries viability diagnosis and, when selected, boundary regulation; `C.26` carries a QL reading only when an exact contextual-model obstruction remains after the applicable ordinary subject assertion and predicate are in place.
 - **Admissible entry stop:** ordinary prose, Dyn0, Dyn1 with `C.16` when measurement construction or comparability is live, a local `Dyn2TemporalClaimAdequacyCard`, a boundary-crossing `Dyn2TemporalClaimProfile`, or a named neighboring FPF pattern relation.
 - **What not to infer:** faster is not automatically better, a velocity target is not proof of improvement, a dynamic benchmark is not benchmark superiority, and a rhythm or inertia word does not by itself mint a new dynamics object.
 
@@ -226,7 +226,7 @@ Each expanded entry-disambiguation case keeps recoverable:
 - **Plausible candidate patterns:** `C.28`, `A.10`, `B.3`, `C.11`, `C.19`, `C.24`, `C.26`, `C.27`, `D.5`, `G.5`, `G.9`, `A.15`, `A.3.2`, `A.6`, `C.16`.
 - **Tempting wrong pattern:** use `D.5` to treat metric fairness as causal fairness; use `G.9` to compare methods across different causal rungs; use `C.26` to hide a causal-support question under quantum-like wording; use `C.27` to treat rate change as causal effect; use `A.15` or `A.3.2` to treat a sampling method, intervention procedure, or target-trial recipe as causal support by itself; use `A.6` to turn causal evidence into a duty or release gate.
 - **Disambiguating fact:** the decisive question is not whether a causal-looking word appears. It is whether publication, choice, deployment, assurance, audit, benchmarking, or method dispatch relies on causal support governed by `C.28`: effect, intervention success, counterfactual comparison, causal fairness, policy optimality, causal evidence support, off-policy/causal-RL evaluation, or causal method superiority.
-- **Recognition repair or question reclassification:** if only a measured value is live, repair in `C.16`; if only rate, trend, or temporal adequacy is live, repair in `C.27`; if only method, work, or work-plan structure is live, repair in `A.15` and `A.3.2`; if only boundary duty or agreement language is live, split with `A.6`; if only residual QL modeling language is live, use `C.26` only after ordinary measurement, temporal, work, benchmark, proxy, and dynamics readings are exhausted.
+- **Recognition repair or question reclassification:** if only a measured value is live, repair in `C.16`; if only rate, trend, or temporal adequacy is live, repair in `C.27`; if only method, work, or work-plan structure is live, repair in `A.15` and `A.3.2`; if only boundary duty or agreement language is live, split with `A.6`; if residual QL modeling is the live question, use `C.26` only when an exact contextual-model obstruction still changes inference or action after the applicable ordinary subject assertion and predicate are in place.
 - **Actual governing FPF pattern body or projection role:** `C.28` carries causal-use question, causality-ladder rung, claim kind, causal estimand, identification, counterfactual sampling realizability, causal support components, one causal-use support result, supported use, and unsupported use. `A.10` governs the relied-on evidence/provenance paths; `B.3`, `D.5`, `G.5`, and `G.9` use the `C.28` support result when the current downstream question is respectively assurance, ethical/fairness audit, method dispatch, or benchmark parity.
 - **Admissible entry stop:** a cheap downgrade sentence, a local `CausalUseTriageRecord`, a local or durable `CausalUseEvidenceDesignRecord`, a `CausalUseSupportResult`, or a named neighbor-pattern use that cites `C.28` without claiming broader authority.
 - **What not to infer:** a randomized procedure is not automatically counterfactual support; a simulation is not realized counterfactual data; a target-trial phrase is not proof of identification; a fairness metric is not causal fairness; a method benchmark is not comparable if methods sit on different causal rungs or estimands; and a causal-use support result does not by itself create a duty, promise, commitment, release gate, or admissibility predicate.
