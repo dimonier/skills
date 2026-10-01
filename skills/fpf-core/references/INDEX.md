@@ -203,6 +203,7 @@
 | C.27 | Temporal Claim Adequacy: State Readings, Temporal Trends, and Intervention-Sensitive Change | temporal claim adequacy, temporal claim, state reading, rate reading, temporal trend |
 | C.27.TA | Temporal Aspect: Time Windows, Rhythm, Cadence, and Currentness | temporal aspect, time window, freshness, currentness, rhythm |
 | C.28 | CausalUse-CAL: Causal-Use Questions, Identification, and Realizability | causal-use question, causality ladder, association, intervention, counterfactual |
+| C.28.CM | Construct and Challenge a Causal Model | — |
 | C.28.MR | Derive an Intervention Consequence by Mechanism Replacement | — |
 | C.29 | Mathematical Lens Use | — |
 | C.29.1 | Mathematical Result Transfer | — |
@@ -223,12 +224,12 @@
 | C.31.ASAP | Which Architecture Is Preferable Under Scale? (Scale Amenability) | architecture scale preference, scale amenability, scale variable, scale window, architecture alternatives |
 | C.32 | Architecture Candidate Synthesis | architecture candidate synthesis, CandidateArchitecturePalette@Project, selected structures, architecture characteristics, selected-structure contribution rows |
 | C.32.P2S | Problem-to-Structure Architecturing Unfolding | — |
-| C.32.HCS | Architecture-Bearing Family Characteristic Starter Packs | architecture-bearing family characteristic starter pack, architecture characteristic heads, source catalogue narrowing, first criteria questions, characteristic transfer. |
-| C.32.ACS | Architecture Characteristic Criteria Set | architecture characteristic criteria set, criteria row, Q-Bundle, improvement cycle, proxy risk |
+| C.32.HCS | Architecture-Bearing Family Characteristic Starter Packs | architecture-bearing family, Method, Work, System, starter characteristics |
+| C.32.ACS | Architecture Characteristic Criteria Set | architecture criteria, required result, structural alternatives, attainable observation, Q-Bundle |
 | C.32.ACE | Architecture Characteristic Eval Programs | architecture-characteristic eval program, architecture fitness-function source wording, current-architecture evaluation, monitoring, eval result |
 | C.32.CONWAY | Architecture-Influence and Transformed-Architecture Correspondence | — |
 | C.32.MLAO | Architecture Candidates to Reduce Cross-Scope Residuals | multilevel architecture residual optimization, residual-reducing candidate frame, declared level, declared scope, Pareto front |
-| C.32.MWA | Practice Architecture Synthesis from Several Structures | — |
+| C.32.MWA | Synthesize an Architecture Account of Methods and Their Use | — |
 | C.32.FAIL | Architecture Failure Recognition and Repair | architecture failure cue, architecture repair cue, stressed architecture object, selected-structure relation, candidate repair |
 | C.32.PAD | Project Architecture Decision After Candidate Synthesis | project architecture decision, ArchitectureDecisionRelation@Project, selected architecture option, affected selected structure, architecture-characteristic trade-off |
 | C.32.ADR | Architecture Decision Record Projection | architecture decision record, ADR projection, ArchitectureDecisionDescription@Project, ArchitectureDecisionRecordProjection@Project, section function |
@@ -243,6 +244,7 @@
 | C.39.RO | Turn a Construction into a Reusable Operation | — |
 | C.40 | Develop Branching Search from Reusable Material | — |
 | C.40.CD | Develop Problems and Ways of Solving Them Together | — |
+| C.40.CU | Develop a Useful and Reproducible Use of a Construct | — |
 | C.36.P | Clarify Cultural-Evolution Wording for a Claim or Action | — |
 | C.36.RP | Sustain and Renew Shared Ways of Working | — |
 | D.1 | Clarify an Ethical Claim's Value Basis (Value Plurality) | — |
@@ -250,11 +252,12 @@
 | D.3 | Describe an Ethical Conflict Across Levels or Scopes | — |
 | D.4 | Ethical Mediation and Decision Use | — |
 | D.5 | Bias Audit and Ethical Assurance | — |
-| E.1 | Vision & Mission | vision, mission, operating system for thought, purpose, scope |
+| E.1 | Vision & Mission | vision, mission, first principles, shared grounds, reusable methods |
 | E.2 | FPF's Eleven Pillars and Bitter-Lesson Preference (BLP) | principles, constitution, eleven pillars, invariants, P-1 to P-11 |
 | E.2.DA | Evaluate How FPF Realizes Its Pillars (Pillar-Adequacy CharacteristicSpace) | — |
 | E.3 | Principle Taxonomy, Precedence and Agent Autonomy Profiles (ABL) | principle taxonomy, precedence, conflict resolution, Gov, Arch |
 | E.4 | FPF Ecosystem Architecture: Framework Families, Products and DPF Suites | — |
+| E.4.CM | Develop Connected Methods as Framework Contributions | — |
 | E.4.FPF | FPF Edition Assembly: Publication Forms, Carriers and Access Routes | — |
 | E.4.PFAD | Principle-Framework Architecture Decision | — |
 | E.4.DPF | Domain and Local Principle Frameworks: Whether and How to Author and Publish | — |
@@ -296,7 +299,7 @@
 | E.17.1 | Viewpoint Bundle Library — Reusable Viewpoint Reference Bundles | — |
 | E.17.2 | TEVB — Project-local Typical Engineering Viewpoint Bundle Template for Holons | — |
 | E.17 | Multi‑View Publication Kit | — |
-| E.17.EFP | ExplanationFaithfulnessProfile — bounded explanation-use discipline | — |
+| E.17.EFP | ExplanationFaithfulnessProfile — explanation-use discipline over existing MVPK faces | — |
 | E.17.ID.CR | Compare Sources Within a Shared Review Frame (ComparativeReviewUnit) | — |
 | E.17.AUD | PublicationUnit Stability Discipline | — |
 | E.17.AUD.LHR | PublicationUnit Stability Discipline and Local Head Restoration | — |
@@ -318,7 +321,7 @@
 | E.24.PUB | Episteme Publication: Availability, Form and Carrier | — |
 | E.24.UK | U-kind Admission and Ontic Settlement | — |
 | F.0.1 | Source-Local Meaning Recovery | troubling word use, exact source and edition, source-local meaning, local expression, optional durable address |
-| F.0.2 | Conceptual Synthesis across Source Ontologies | — |
+| F.0.2 | Semantic Synthesis across Source Ontologies | — |
 | F.1 | Question-Relative Source Selection | receiving question, intended use, exact source and edition, answer-changing source role, finite source cut |
 | F.2 | Source-Local Term Harvesting & Normalisation | exact source and edition, effective ReferenceScheme, LocalExpression, LocalSenseClaim, LNF |
 | F.3 | Source-Local Sense Clustering | source expression, LocalSenseClaim, effective ReferenceScheme, alias consolidation, counterexample |
@@ -346,7 +349,7 @@
 | G.3 | CHR Authoring: Characteristics - Scales - Levels - Coordinates | CHR authoring, characteristics, scales, levels, coordinates |
 | G.4 | CAL Authoring: Calculi - Acceptance - Evidence | CAL Pack@CG-Frame, Context charter, typed operator card, acceptance clause, legal flow |
 | G.5 | Method-Family Registry, Dispatch and Selected-Set Result Declaration | method-family registry, generator-family registry, dispatcher, SelectorOutcomeKind, selected-set result declaration |
-| G.6 | Evidence Graph & Provenance Ledger | `EvidenceGraph`, `PathId`, `PathSliceId`, `PathCitationRecord`, provenance ledger |
+| G.6 | Evidence Graph and Provenance Ledger: Citable Evidence-Provenance Paths | `EvidenceGraph`, `PathId`, `PathSliceId`, `PathCitationRecord`, provenance ledger |
 | G.7 | Cross-Tradition Bridge Calibration Kit (BridgeMatrix → BridgeCards + BCT/Sentinels) | bridge calibration, BridgeCard, BridgeCalibrationTable (BCT), RegressionSet, SentinelSet |
 | G.8 | Package Method-Family Admissibility Rules and Maturity Ladders (SoS-LOG) | SoS-LOG, rule ids, admissibility ledger, tri-state `{pass |
 | G.9 | Parity / Benchmark Harness | parity harness, benchmark plan, adaptation parity, freshness windows, comparator pins |

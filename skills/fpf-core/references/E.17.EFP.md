@@ -1,6 +1,6 @@
 ---
 id: E.17.EFP
-title: "ExplanationFaithfulnessProfile — bounded explanation-use discipline"
+title: "ExplanationFaithfulnessProfile — explanation-use discipline over existing MVPK faces"
 status: Stable
 keywords: []
 dependencies:
@@ -26,7 +26,7 @@ dependencies:
     - A.21
 ---
 
-# E.17.EFP: ExplanationFaithfulnessProfile — bounded explanation-use discipline
+# E.17.EFP: ExplanationFaithfulnessProfile — explanation-use discipline over existing MVPK faces
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**

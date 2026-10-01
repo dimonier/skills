@@ -1,6 +1,6 @@
 ---
 id: G.6
-title: "Evidence Graph & Provenance Ledger"
+title: "Evidence Graph and Provenance Ledger: Citable Evidence-Provenance Paths"
 status: Stable
 keywords:
   - "`EvidenceGraph`"
@@ -48,7 +48,7 @@ dependencies:
     - G.11
 ---
 
-# G.6: Evidence Graph & Provenance Ledger
+# G.6: Evidence Graph and Provenance Ledger: Citable Evidence-Provenance Paths
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**

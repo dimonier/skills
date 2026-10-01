@@ -13,7 +13,7 @@ title: Practical entries
 
 ## Practical entries
 
-The entries below are examples, not a catalogue or a boundary around FPF, a DPF, or an LPF. Bring the actual difficulty from your project. If no example fits, search the Table of Contents or ask an assisting agent to compare a small plausible set of direct patterns. These pattern languages can help with many more questions than a short Readme can show.
+The entries below illustrate questions that FPF can help answer; they do not exhaust its uses. Bring the actual difficulty from your project and use the search guidance in USING-FPF.md to find an individual method or a connected application. Search the Table of Contents for relevant entries, or ask an assisting agent to compare plausible candidates.
 
 The ordinary examples start with one direct pattern and retain any conditions for a later use. They can stop at the first useful result without a mantra. The Practical-Use Cards show another use: a difficult question whose answer normally draws on several pattern contributions. Their mantras show in compact form how that answer unfolds through those contributions, without turning the unfolding into a fixed workflow.
 
@@ -90,6 +90,16 @@ The ordinary examples start with one direct pattern and retain any conditions fo
 - **Stop or return:** Stop when the consequence answers the present use. Return when a changed assumption, lost distinction or execution condition changes that consequence. Validate correspondence to a phenomenon when the intended reliance requires it under `C.29:4.5a`.
 
 When the direct pattern is already known, open it rather than forcing the question into an example: `E.11.PFP` for framework publication, `E.11.DSG` for the DPF Suite Reference when a question spans several DPFs, `A.15.6` when *project*, *process*, or *case* hides the subject, `A.1.1` for model-use organization, `C.22.PFR` for an actual-problem claim, and `A.6.REL` for an obtaining relation. These are locators, not more selectable examples.
+
+### METHOD-CONSTRUCTION — Construct, connect and change methods for practical use
+
+- **Situation:** Relevant methods or operations exist, but their joining, explanation or adaptation is still missing for the work you need to do.
+- **Question:** How can I obtain the result, make the way usable by another practitioner, and change it without losing independently useful parts?
+- **First useful result or blocker:** One explained candidate way or connected account, its supported conditions and selective return after change; alternatively, the precise missing operation or basis.
+- **Start with:** [C.39:4](#fpf-pattern-C.39) supplies the general construction. Use a sufficient existing Method directly and stop. No framework authorship or pattern format is required.
+- **Stop or return:** Stop when the intended use has its adequate explanation. Reopen the connection whose condition fails; retain independent uses whose conditions still hold.
+
+For example, recording preparation can meet analysis at 3 ms and viewing at 8 ms under a qualified 2.5 ms timing bound. Tightening analysis to 2 ms reopens that branch without invalidating viewing. [C.39:5.3](#fpf-pattern-C.39) develops the preparation, its independent professional premises and that return. If the result must become a framework explanation, [E.4.CM:5.4](#fpf-pattern-E.4.CM) shows the additional public-content and pattern-form decisions.
 
 ### WORK-OPPORTUNITY — Find a useful continuation before proposing change
 
@@ -177,14 +187,14 @@ Use `A.3.3` to construct a missing state account and `C.16` for a needed measure
 - **Start with:** `C.32.P2S`, then the pattern for the current question in `C.30`, `C.32`, `C.32.PAD`, or `C.30.AD`.
 - **Stop or return:** Stop when the first result makes the architecture work reviewable. The card is not a compulsory lifecycle.
 
-#### PRACTICE-ARCHITECTURE — Develop a practice without collapsing its structures
+#### PRACTICE-ARCHITECTURE — Connect methods with their use, support and development
 
-- **Situation:** Methods, Work, capabilities, providers, descriptions, tools, and cultural change do not align one-for-one in a practice.
-- **Question:** Which relations must be reconciled for the practice to become usable or improve in representative Work?
+- **Situation:** A decision about methods depends on performed or planned Work, capabilities, providers, descriptions, tools or cultural change whose structures do not align one-for-one.
+- **Question:** Which relations change how the methods can be used or improved?
 - **First useful result or blocker:** One readable synthesis, one bounded development action, or the exact missing Work case, relation, or transfer evidence.
-- **Mantra:** Start from representative Work and its needed result. Keep Methods, Work, capabilities, providers, descriptions, tools, and cultural processes distinct; compare the structures that conflict; develop the limiting capability; test transfer in real Work; return when practice, provider, evidence, or style changes.
+- **Mantra:** Start from representative Work and its needed result, or a proposed use with a later-test condition. Keep Methods, Work, capabilities, providers, descriptions, tools and cultural processes distinct; compare the structures that conflict; develop a limiting capability when needed; test transfer in real Work; return when the method, provider, evidence or style changes.
 - **Start with:** `C.32.MWA`; use `E.23.CDI`, `E.23`, or `C.36` only for the question actually opened.
-- **Stop or return:** Stop when the synthesis or transfer result answers the decision. A practice description is not the practice or performed Work.
+- **Stop or return:** Stop when the synthesis or transfer result answers the decision. A method description is distinct from the method and from performed Work.
 
 #### WORKING-DOCUMENTS — Make a document answer one use
 
@@ -240,9 +250,9 @@ Use `A.3.3` to construct a missing state account and `C.16` for a needed measure
 - **Situation:** A project needs the modern field of approaches rather than one popular answer and may later need maintained domain guidance.
 - **Question:** What plural view is adequate now, and does the remaining problem call for reuse, a contribution, another product, a DPF or LPF, or no maintained result?
 - **First useful result or blocker:** One source-linked SoTA view, live option set, reuse route, framework decision, or exact missing scope or maintenance basis.
-- **Mantra:** Name the practical question, scope, freshness need, and rival traditions. Build a source-linked plural view; preserve disagreement and source-use limits; compare useful approaches; try cheaper reuse or contribution first; open a framework decision only for a recurring unmet problem; author and test the needed patterns; refresh when the field or use changes.
+- **Mantra:** Name the practical question, scope, freshness need, and rival traditions. Build a source-linked plural view; preserve disagreement, source-use limits and constructions; compare useful approaches; try cheaper reuse or contribution first; open a framework decision only for a recurring unmet problem; author and test the needed patterns; refresh when the field or use changes.
 - **Start with:** `G.2`; add `C.18`, `C.19`, or `G.5` for the set and the E.4/E.9 authoring route only if a framework is selected.
-- **Stop or return:** Stop at the first adequate maintained or one-off result. A source pack or proposal is not a framework by appearance.
+- **Stop or return:** Stop at the first adequate maintained or one-off result. If allocation to familiar patterns loses a source’s construction, use `FPF.Preface:16.5` to identify the missing result, obtain it through the appropriate subject method and return to the original use. A source pack or proposal is not a framework by appearance.
 
 #### SYSTEM-DELIMITATION — Separate parts, selected boundary, and crossings
 

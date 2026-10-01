@@ -1,7 +1,7 @@
 ---
 id: F.0.2
-title: Conceptual Synthesis across Source Ontologies
-status: Draft
+title: Semantic Synthesis across Source Ontologies
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -12,9 +12,11 @@ dependencies:
     - G.2
     - E.10.ARCH
     - E.4.DPF
+    - C.39
+    - E.4.CM
 ---
 
-# F.0.2: Conceptual Synthesis across Source Ontologies
+# F.0.2: Semantic Synthesis across Source Ontologies
 
 > **Trigger:** [TODO: trigger condition — human review required]
 > **Governing patterns:**
@@ -22,17 +24,17 @@ dependencies:
 
 ---
 
-## F.0.2 - Conceptual Synthesis across Source Ontologies
+## F.0.2 - Semantic Synthesis across Source Ontologies
 
 > **Type:** Architectural (A)
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### F.0.2:1 - Problem frame
 
 Use this pattern when several sources describe the same working question through materially different concepts, relations, explanations, or boundaries, and those differences can change a named authoring decision or a contribution to one subject pattern.
 
-The primary concern is one bounded conceptual-synthesis question for one declared receiving use. The first useful move is to state that question and the difference that could change the next decision. Keep each source claim local through `F.0.1`, choose the source cut through `F.1`, then compare the claims here.
+Here semantic synthesis means comparing and developing claims through the concepts, relations and boundaries used by their sources. Conceptual synthesis names this semantic work; it can concern theories of action as well as other subject matters. The primary concern is one bounded semantic-synthesis question for one declared receiving use. The first useful move is to state that question and the difference that could change the next decision. Keep each source claim local through `F.0.1`, choose the source cut through `F.1`, then compare the claims here.
 
 **What goes wrong if missed.** An author either leaves a crosswalk or literature narrative where a positive contribution is needed, or merges similar words before checking whether the sources describe the same entity, relation, explanation, and use. A large research package may also be demanded for a question that one bounded comparison can settle.
 
@@ -50,7 +52,7 @@ Three failures follow:
 2. a source difference that changes action is hidden as terminology variation; or
 3. missing or weak source material is reported as if the disputed domain claim were false.
 
-Conceptual synthesis must preserve source-local meanings while returning a positive next move or an honest bounded stop.
+Semantic synthesis must preserve source-local meanings while returning a positive next move or an honest bounded stop.
 
 ### F.0.2:3 - Forces
 
@@ -108,11 +110,17 @@ The methods combine in one direction. An author may use identified claims and pr
 
 #### F.0.2:4.5 - Boundary to wording-use precision restoration
 
-Conceptual synthesis and wording restoration both pass through ontology, but they answer different questions. Conceptual synthesis forms or revises a cross-source claim. Wording restoration starts from an already current subject claim and repairs a consequential wording use so that the intended entity, relation, claim kind, and admissible action can again be recovered.
+Semantic synthesis and wording restoration both pass through ontology, but they answer different questions. Semantic synthesis forms or revises a cross-source claim. Wording restoration starts from an already current subject claim and repairs a consequential wording use so that the intended entity, relation, claim kind, and admissible action can again be recovered.
 
 A recurring wording failure may supply evidence that a subject distinction is missing or unstable. The system maintaining the affected FPF or DPF edition then uses that evidence in a named content decision. The findings do not themselves revise the synthesis claim. A DPF keeps its domain wording entries beside the domain patterns that use them; `E.10.ARCH` supplies the shared restoration method.
 
 A DPF may need a reliable current domain ontology so practitioners can recognize situations, distinguish Methods and results, and use its solution moves. An author can use F.0.2 to synthesize or revise that ontology as a proposed contribution. Ontology alone is not a DPF: use `E.4` and `E.4.DPF` to connect it to recurring problems, constructive Methods, a usable first cut, evidence practice, access, and maintenance.
+
+#### F.0.2:4.6 - Semantic and methodological results
+
+A semantic result explains what may be claimed, which distinctions matter and where source accounts agree or differ. It can include claims about actions and Methods. Methodological synthesis constructs ways of acting: selecting, adapting and connecting operations, their conditions, intermediate results and returns for a needed use. The difference concerns the question and what is constructed, not nouns versus verbs or the document in which the result is written.
+
+Use C.39 to construct, connect, explain or change ways of obtaining the needed results. E.4.CM applies that general methodological work to a framework author's public account of one composite Method or several independent Methods. Those constructions can use the semantic result returned here; trying a proposed way can expose a missing distinction or reopen source comparison. Neither operation requires completing a universal ontology before acting. A sufficient existing Method can be used directly.
 
 ### F.0.2:5 - Archetypal Grounding
 
@@ -150,7 +158,7 @@ A cross-disciplinary data framework proposes one shared classification relation 
 
 #### F.0.2:5.4 - Cheap anti-case
 
-An engineer consults a handbook and its later edition only to recover the current pump tolerance. The later edition gives the needed claim, and no ontological difference changes the authoring decision. The engineer records direct source reliance and stops without conceptual synthesis.
+An engineer consults a handbook and its later edition only to recover the current pump tolerance. The later edition gives the needed claim, and no ontological difference changes the authoring decision. The engineer records direct source reliance and stops without semantic synthesis.
 
 #### F.0.2:5.5 - Compare causal accounts on one sensor case
 
@@ -220,7 +228,7 @@ Costs and trade-offs:
 
 ### F.0.2:10 - Rationale
 
-Conceptual synthesis is the middle move between preserving local meaning and publishing a unified term or subject-pattern contribution. It cannot be reduced to lexical alignment because a correspondence does not decide what the receiving framework should claim. It cannot be reduced to literature review because a source inventory does not state the practitioner action. It should not require a full `G.2` pack because many authoring decisions need only one bounded comparison.
+Semantic synthesis is the middle move between preserving local meaning and publishing a unified term or subject-pattern contribution. It cannot be reduced to lexical alignment because a correspondence does not decide what the receiving framework should claim. It cannot be reduced to literature review because a source inventory does not state the practitioner action. It should not require a full `G.2` pack because many authoring decisions need only one bounded comparison.
 
 The three result branches keep the method constructive without forcing agreement. A provisional synthesis opens a positive contribution, a contrast preserves a decision-relevant difference, and an unresolved inquiry turns a real source limitation into a defined next action. Ordinary `C.2.1` claim identity keeps those results separately revisable.
 
@@ -245,6 +253,7 @@ Jaakkola's question and source-role discipline, Okoli's extraction and iterative
 - **Coordinates with:** `F.2`-`F.8`, `F.14`, `F.17`, and `F.18` when the next authoring question requires harvesting, clustering, Concept-Set, naming, or UTS work.
 - **Coordinates with:** `G.2` as the optional broad harvesting method. Identified claims and provenance from a `G.2` pack may supply inputs here; the pack does not replace the receiving comparison.
 - **Coordinates with:** `E.4.DPF` for DPF entry and result placement, `E.10.ARCH` for DPF-local wording entries under the shared restoration method, and `G.11` for source-currentness and refresh work.
+- **Coordinates with:** C.39 for general Method construction, connected explanation and change, and E.4.CM for their application to framework authoring. Their methodological results and this semantic comparison remain distinct and can revise each other.
 - **Boundary:** Domain claims produced through this method remain in the subject FPF pattern or named DPF selected by the later content decision.
 
 [fpf-c28-4-4-ref]: C.28-CausalUse-CAL-Causal-Use-Questions-Causality-Ladder-Rungs-Identification-and-Realizability.md#c2844---identification-result
