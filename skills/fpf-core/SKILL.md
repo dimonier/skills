@@ -7,7 +7,7 @@ license: CC-BY-4.0
 # FPF Core Pattern Library
 
 **Depends on:** nothing (root of dependency chain)
-**Source of truth:** `assets/FPF-Spec.md` — canonical specification (119K+ lines)
+**Source of truth:** `assets/FPF-Spec.md` — canonical specification (120K+ lines)
 
 ## License / Attribution
 
