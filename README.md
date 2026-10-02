@@ -8,8 +8,8 @@ These skills are designed to be automatically used by an **AI agent** when a use
 
 ### Installation
 
-1. Clone or download `skills` folder and its contents.
-2. Add skills from the `skills` folder
+1. Clone or download `skills` folder and its contents. Optionally also grab `skills-compact/` — compact (minified) variants of some skills for token-economical use.
+2. Add skills from the `skills` folder (or, for a compact skill, from `skills-compact/` instead)
    - globally to `~/.agents/skills`
    - or to your IDE / CLI Code tool:
      - Cursor: `~/.cursor/skills`
@@ -56,6 +56,8 @@ The skills transform the AI into a specialized assistant that follows proven met
     - [🔧 Agent Skill Builder](#-agent-skill-builder)
   - [Project Management](#project-management)
     - [🗂️ Project Vault](#️-project-vault)
+  - [Compact Skills](#compact-skills)
+    - [🗜️ Project Vault (compacted)](#️-project-vault-compacted)
   - [Space Planning \& Organization](#space-planning--organization)
     - [🚿 Bathroom Planner](#-bathroom-planner)
     - [🧥 Wardrobe Planner](#-wardrobe-planner)
@@ -232,6 +234,22 @@ Local Practices Framework (LPF) for managing project state in a structured markd
 - Reconciling new information against the open question registry and archiving closed entities
 
 **Location:** `skills/project-vault/`
+
+**Compact variant:** `skills-compact/project-vault/` (see [Compact Skills](#compact-skills)).
+
+## Compact Skills
+
+Compact (minified) runtime projections of some skills — smaller, token-economical variants for agents that need the method without the full provenance, derivation, and readiness metadata. A compact skill keeps only the runtime allow-list (method + trigger + routing); its `references/*.md` bodies are `episteme` blocks with no per-card frontmatter, and it names its canonical source. The full `skills/` carrier remains the editable source of truth.
+
+### 🗜️ Project Vault (compacted)
+
+Compacted runtime projection of `project-vault`: the same vault schema, inbox → state-update → external-research → track/work-record lifecycle, and outbox as 10 episteme-block patterns, plus the unchanged vault scaffold. Readiness (collective): `source-faithful`.
+
+**Depends on:** `fpf-core`
+
+**Canonical source:** `skills/project-vault/` (the full, editable LPF carrier).
+
+**Location:** `skills-compact/project-vault/`
 
 ## Space Planning & Organization
 
