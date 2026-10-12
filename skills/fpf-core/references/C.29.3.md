@@ -14,9 +14,10 @@ dependencies:
 
 # C.29.3: Computational Realization
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** a computation is available, but the proposed executing arrangement has not yet been connected to its inputs, operations and interpretable results. A motor interface may accept a different number from the one calculated.
+> **First move:** Build and compare two routes from an input to the result required by the use:
+>
+> **Governing patterns:** `references/C.29.2.md` `references/A.6.1.md` `references/A.3.3.md` `references/C.16.md` `references/B.5.MPC.md`
 
 ---
 

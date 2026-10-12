@@ -10,7 +10,7 @@ dependencies:
   coordinates_with:
     - A.15.9
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - C.18
     - C.19
     - C.11
@@ -19,9 +19,10 @@ dependencies:
 
 # C.38: Construct Comparable Ways to Obtain One Result
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Plain name.** Turn labels such as *build*, *buy*, *reuse*, *provider*, *internal team*, *outsource*, or *AI* into comparable complete ways of getting the same result.
+> **First move:** Fix one result, receiving use, situation, horizon, and acceptance basis. Construct at least two materially different complete ways by resolving labels into the Agents, Work, Methods, Systems, values, relations, conditions, and enabling bran …
+>
+> **Governing patterns:** `references/A.10.md` `references/C.2.1.md` `references/A.15.9.md` `references/A.19.CPM.md` `references/A.19.SelectorMechanism.md` `references/C.18.md` `references/C.19.md` `references/C.11.md`
 
 ---
 

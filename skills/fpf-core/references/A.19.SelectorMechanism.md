@@ -5,9 +5,9 @@ title: "A.19.SelectorMechanism - Unified Selection Kernel, SelectorMechanism"
 
 # A.19.SelectorMechanism: A.19.SelectorMechanism - Unified Selection Kernel, SelectorMechanism
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** * **What it is:** a universal **set-returning** selection kernel: it takes candidates, admissible comparison outcomes, and explicit criteria, and returns a **selected set**, not a forced single winner.
+> **Problem frame:** FPF’s Characterization (CHR) suite treats selection as a **distinct mechanism boundary** within the suite (authoritative membership: `A.19.CHR:4.2`). Suite membership is a **set**; order has no semantics.
+> **First move:** `SelectorMechanism` is the canonical **selection kernel** for CHR and for selector specializations. It provides:
 
 ---
 

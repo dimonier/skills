@@ -7,9 +7,9 @@ keywords: []
 
 # C.3.2: Kind Intent, Membership Judgment, and Extension
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when repeated typed reasoning needs one explicit kind criterion, when one exact entity or non-entity value must first be checked as applicable and then judged against that criterion in one context slice, or when a named use …
+> **Problem frame:** A kind can support useful typed reasoning without acquiring its own public `U.*` label. Its intent may need a reusable declaration, one candidate may need a current judgment, and a query may need a set representation.
+> **First move:** | Object | Meaning | Identity and governor | | --- | --- | --- | | `U.Kind` individual and order | The intensional kind and any obtaining `U.SubkindOf` facts used by typed reasoning.
 
 ---
 

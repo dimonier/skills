@@ -29,9 +29,10 @@ dependencies:
 
 # E.10.D1: Recovering What “Context” Means in Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when the word *context* can change a statement or the next practical move, but the statement does not yet say what supplies the relevant boundary, interpretation, or situation.
+> **First move:** Start with the sentence and the practical use that makes it matter.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/A.1.1.md` `references/A.2.6.md` `references/C.30.md` `references/E.17.0.md` `references/F.0.1.md` `references/F.17.md`
 
 ---
 

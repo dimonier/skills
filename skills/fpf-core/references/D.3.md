@@ -23,9 +23,10 @@ dependencies:
 
 # D.3: Describe an Ethical Conflict Across Levels or Scopes
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Interlevel ethical conflict is not just disagreement between people. It may involve a system part and a whole, a person and an organization, one organization and a community, a project and a society, a collection and its members, an epistem …
+> **First move:** | Do this in D.3 | Do not do this in D.3 | | --- | --- | | Derive the declared levels and scopes from the case. | Invent `U.Level`, `U.Frustration`, `U.Emergence`, or a fixed moral ladder.
+>
+> **Governing patterns:** `references/D.1.md` `references/D.2.md` `references/A.1.md` `references/A.14.md` `references/C.13.md` `references/E.10.ROLE.md` `references/D.4.md` `references/C.2.1.md`
 
 ---
 

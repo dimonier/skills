@@ -79,12 +79,20 @@ progressive disclosure or load.
    paths.
 5. **Single-surface note.** State that `references/` is canonical and no monolith
    exists (`PLAS.SkillLayout`).
+6. **Lookup rules.** Two cheap directives that bound expensive reads, stated in
+   `SKILL.md`:
+   - **Index-first ("no"):** before looking for a pattern, check `INDEX.md`; an
+     id absent from the index means the pattern does not exist — answer "no", do
+     not open files in search of it.
+   - **Read-once:** a file once read is not reopened; refer to what was already
+     read.
 
 ### PLAS.Dispatcher:5 - Archetypal Grounding
 
-**Show.** `pattern-language-as-agent-skill/SKILL.md`: the routing table maps eight situations to eight
-references, the navigation rule starts at `PLAS.EntryRoute`, and no pattern body
-content appears in `SKILL.md`.
+**Show.** `pattern-language-as-agent-skill/SKILL.md`: the routing table maps nine situations to nine
+references, the navigation rule starts at `PLAS.EntryRoute`, the lookup rules
+(index-first "no", read-once) close the routing, and no pattern body content
+appears in `SKILL.md`.
 
 ### PLAS.Dispatcher:6 - Bias-Annotation
 
@@ -108,6 +116,8 @@ it states an effect without a measurement or its text class.
 | CC-DS.7 | A linear navigation rule is used only for a single dominant chain; multi-use-case skills name one entry path per use-case, consistent with `description`. |
 | CC-DS.8 | A quantitative claim in `description` is measured and qualified (text class/corpus + source), or stated qualitatively; an unqualified figure is not used. |
 | CC-DS.9 | A lexicon block in `SKILL.md` (when present) is terms-only, failure-first, size-capped, and carries a move-out trigger; it is `context`, not subject knowledge. |
+| CC-DS.10 | `SKILL.md` states the index-first rule: before looking for a pattern, check `INDEX.md`; an id absent from the index means the pattern does not exist — answer "no", do not open files. |
+| CC-DS.11 | `SKILL.md` states the read-once rule: a file once read is not reopened; refer to what was already read. |
 
 ### PLAS.Dispatcher:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -120,6 +130,7 @@ it states an effect without a measurement or its text class.
 | One linear chain for several use-cases | Name one entry path per use-case. |
 | `description` breaking YAML (bare `:` + space) | Use a block scalar (`|`/`>`) or quotes. |
 | Unqualified quantitative claim in `description` ("~65% savings") | State corpus/class + measurement source, or make it qualitative. |
+| Repeated reads of the same file / grepping the whole catalogue for a non-existent id | State the two lookup rules in `SKILL.md` (index-first "no", read-once); keep the routing table and `INDEX.md` in sync. |
 
 ### PLAS.Dispatcher:9 - Consequences
 
@@ -127,7 +138,9 @@ A routing-only `SKILL.md` gives cheap, one-hop loading and keeps the `descriptio
 a cheap trigger, but it moves all subject knowledge into `references/` and
 requires the routing table and `INDEX.md` to stay in sync when bodies are added or
 renamed. A YAML-unsafe `description` breaks the load entirely, and a single linear
-navigation rule breaks for multi-use-case skills.
+navigation rule breaks for multi-use-case skills. The lookup rules (index-first
+"no", read-once) bound re-read and nonexistent-id search cost, but the index-first
+"no" is only as correct as `INDEX.md`'s sync with the bodies.
 
 ### PLAS.Dispatcher:10 - Rationale
 

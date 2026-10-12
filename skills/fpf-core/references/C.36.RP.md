@@ -1,15 +1,14 @@
 ---
 id: C.36.RP
 title: Sustain and Renew Shared Ways of Working
-status: Draft
+status: Stable
 keywords: []
 ---
 
 # C.36.RP: Sustain and Renew Shared Ways of Working
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** changing participants, tools or questions puts a shared way of working out of reach, or when a useful discovery needs to become available to other participants.
+> **First move:** Make the required methods obtainable through an arrangement that participants can use and, where needed, develop.
 
 ---
 
@@ -17,7 +16,7 @@ keywords: []
 
 > **Type:** Method pattern
 >
-> **Status:** Draft
+> **Status:** Stable
 >
 > **Normativity:** Normative unless marked informative
 

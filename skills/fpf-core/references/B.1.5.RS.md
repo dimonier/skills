@@ -15,9 +15,10 @@ dependencies:
 
 # B.1.5.RS: Evaluate a Constituent Method Replacement in Its Encompassing Uses
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a constituent Method could be replaced, simplified or implemented differently and you need to know which encompassing uses remain possible.
+> **First move:** Compare the candidate against what the encompassing work needs, then carry the changed contribution through that work. State the direction and conditions of the result.
+>
+> **Governing patterns:** `references/A.3.1.md` `references/B.1.5.md` `references/B.1.5.EW.md` `references/C.11.DUA.md` `references/C.29.md`
 
 ---
 

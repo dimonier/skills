@@ -42,9 +42,11 @@ dependencies:
 
 # C.27: Temporal Claim Adequacy: State Readings, Temporal Trends, and Intervention-Sensitive Change
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a claim about speed, rhythm, throughput, recovery, convergence, rollout, adoption, braking, coasting, redirection, or stabilization is being used to change action.
+> **Problem frame:** The recurring failure is:
+> **First move:** The cases come before the rare trigger reference because they show where ordinary work should stop.
+>
+> **Governing patterns:** `references/C.16.md` `references/A.3.3.md` `references/B.1.4.md` `references/B.1.6.md` `references/C.27.TA.md` `references/A.3.4.md` `references/C.18.1.md` `references/C.19.md`
 
 ---
 

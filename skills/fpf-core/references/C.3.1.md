@@ -26,9 +26,11 @@ dependencies:
 
 # C.3.1: Kind Identity and Subkind Relations (U.Kind and U.SubkindOf)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when work must recover one reusable kind, decide whether one kind is a subkind of another, or decide whether the same kind continues across a changed `KindSignature` edition.
+> **Problem frame:** A practice/source boundary is provenance and a comparison cue. It affects the continuity decision only when comparison exposes a real difference in the candidate domain or membership distinction.
+> **First move:** | Object | Meaning | Boundary | | --- | --- | --- | | `U.Kind` | The admitted meta-kind whose individuals are reusable intensional classification distinctions.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.2.6.md` `references/A.6.REL.md` `references/C.2.1.md` `references/E.24.UK.md` `references/C.3.2.md` `references/C.3.3.md`
 
 ---
 

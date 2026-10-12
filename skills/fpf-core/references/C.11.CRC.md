@@ -31,9 +31,11 @@ dependencies:
 
 # C.11.CRC: Configuration-Relative Contribution Comparison
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a bounded addition, replacement, removal, intervention, experiment, information/computation acquisition, capability-development element, project, or component is being justified by “what it adds,” but the current confi …
+> **Problem frame:** Candidates are often described by an isolated score, average benefit, frequency, local gradient, shadow price, or expected information gain.
+> **First move:** Construct the smallest finite counterfactual comparison that can change one named decision.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.10.md` `references/A.19.md` `references/C.16.md` `references/C.27.md` `references/C.28.md` `references/C.29.md` `references/C.18.md`
 
 ---
 

@@ -29,9 +29,10 @@ dependencies:
 
 # C.32.HCS: Architecture-Bearing Family Characteristic Starter Packs
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner must choose a few architecture-characteristic starter heads for a described holon or for method, system-role-assignment, work, evidence, or cultural-evolution structures recovered from a source label, an …
+> **First move:** Choose a starter pack by the admitted holon family or recovered architecture-bearing family. Use the pack only to start narrowing starter heads into project criteria rows; then hand the result to `C.32.ACS` for the project criteria set.
+>
+> **Governing patterns:** `references/C.32.md` `references/C.25.md` `references/C.16.md` `references/E.13.md` `references/E.10.ROLE.md` `references/C.32.ACS.md` `references/C.32.ACE.md` `references/C.30.md`
 
 ---
 
@@ -165,7 +166,7 @@ HCS stops with starter heads and first project questions. The next `C.32.ACS` us
 - whether the project uses it as an optimization indicator, monitored guardrail, or context-only row;
 - which scale, reading, and pattern for the next question apply.
 
-Before ACS criteria-row use, ask one proxy-resistance question for each carried starter head: what architecture concern would worsen or disappear if the visible catalogue entry, domain term, benchmark row, or dashboard value looked better? Such visible material is not yet an architecture-characteristic starter head. Carry it forward only when the architecture-bearing family, likely bearer, likely scale, Q-Bundle boundary, first project question, source catalogue entry, benchmark row, dashboard row, or publication row, source-to-use path, and reopen condition remain recoverable. Also name the selected source `U.Episteme` and an `EpistemePublicationRelation` occurrence when availability matters. If the architecture concern cannot be recovered, keep the wording as source catalogue wording or remove it from the starter pack. When the concern and the required starter-head bindings are recoverable but no plausible worsening or loss is found, carry the head forward, name the concerns inspected, and leave any unresolved proxy risk explicit.
+Before ACS criteria-row use, ask one proxy-resistance question for each carried starter head: what architecture concern would worsen or disappear if the visible catalogue entry, domain term, benchmark row, or dashboard value looked better? Such visible material is not yet an architecture-characteristic starter head. Carry the head forward only when the architecture-bearing family, likely bearer, likely scale, Q-Bundle boundary, first project question, and reopen condition remain recoverable. When the head relies on a catalogue, benchmark, dashboard, or publication cue, retain that exact source item and its source-to-use path. A head obtained from direct inspection retains that inspection basis instead. Also name the selected source `U.Episteme` and an `EpistemePublicationRelation` occurrence when availability matters. If the architecture concern cannot be recovered, keep the wording as source catalogue wording or remove it from the starter pack. When the concern and the required starter-head bindings are recoverable but no plausible worsening or loss is found, carry the head forward, name the concerns inspected, and leave any unresolved proxy risk explicit.
 
 **Stop condition.** Stop C.32.HCS when the starter pack names the admitted holon family or recovered architecture-bearing family, starter heads, likely bearers or selected structures, likely composite-quality boundaries, first ACS questions, and any blocked overread. The next project criteria-row work belongs to `C.32.ACS`.
 

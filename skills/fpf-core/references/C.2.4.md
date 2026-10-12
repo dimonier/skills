@@ -11,7 +11,7 @@ keywords:
   - receiving use.
 dependencies:
   builds_on:
-    - C.2.2
+    - C.2.2a
   coordinates_with:
     - C.2.LS
     - A.16
@@ -19,9 +19,10 @@ dependencies:
 
 # C.2.4: `U.ArticulationExplicitness` — How Explicit Is an Episteme's Meaning for Its Use?
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** A governed `U.Episteme` can matter while its semantic shape is only partly explicit. The declared language-state chart over `U.CharacteristicSpace` therefore needs one basis-slot pattern for the degree to which that shape is explicitly arti …
+> **First move:** `U.ArticulationExplicitness` is an ordinal characteristic of the degree to which a governed episteme's semantic structure is explicitly articulated for its branch and receiving use.
+>
+> **Governing patterns:** `references/C.2.2a.md` `references/C.2.LS.md` `references/A.16.md`
 
 ---
 
@@ -207,8 +208,8 @@ If the branch or threshold is unresolved, keep the episteme in `B.4.1` or `A.16.
 #### C.2.4:17.2 - High-articulation, low-closure cases
 A note may reach `AE4+` while remaining low or mid in `CD`. In such cases state that articulation is sufficient for precise handling while closure still leaves rival routes or frames live.
 
-#### C.2.4:17.3 - Split-publication rule
-If one note contains a high-`AE` fragment and a low-`AE` remainder, split the publication rather than assigning one averaged level that hides the actual route structure.
+#### C.2.4:17.3 - Articulation claims for separate fragments
+Scope each fragment's articulation claim to its receiving use; do not assign one averaged level that hides the actual route structure. The fragments may remain in the same note or publication when their scopes are clear.
 
 ### C.2.4:18 - Review Matrix and Endpoint Boundary Tests
 

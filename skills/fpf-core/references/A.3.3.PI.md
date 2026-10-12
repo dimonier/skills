@@ -17,9 +17,10 @@ dependencies:
 
 # A.3.3.PI: Retain the Information Needed for Prediction
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a description of the present leaves a future result unresolved, or when you want to simplify a predictive account without losing an answer that matters. A total can hide components that change at different rates.
+> **First move:** Begin with the future distinction needed in the work. Compare the situations merged by the proposed description, construct a description or uncertainty account that retains the consequential differences, and use it at the required horizon.
+>
+> **Governing patterns:** `references/A.3.3.md` `references/A.3.3.CC.md` `references/A.3.3.TR.md` `references/C.16.md` `references/C.29.1.md` `references/B.5.FM.md` `references/B.5.MPC.R.md` `references/C.11.DUA.md`
 
 ---
 

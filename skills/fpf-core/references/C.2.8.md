@@ -1,7 +1,7 @@
 ---
 id: C.2.8
 title: "`U.ExtractableStructuralInformation` — Structure This Reader Can Recover"
-status: Draft
+status: Stable
 keywords:
   - extractable structure
   - reader preparation
@@ -22,20 +22,23 @@ dependencies:
     - C.33
     - A.6.3.NAR
     - E.17.EFP
+    - A.2.2
+    - E.23.CDI
 ---
 
 # C.2.8: `U.ExtractableStructuralInformation` — Structure This Reader Can Recover
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an explanation, pattern text, architecture account or another expressed description must make selected structure recoverable by a particular reader or computational observer.
+> **First move:** Begin with the reader's needed understanding or action. Select the structure that matters to it: for example, a distinction between two alternatives, the dependency that orders two actions, or the reason a design choice changes under a new …
+>
+> **Governing patterns:** `references/A.17.md` `references/A.18.md` `references/C.2.1.md` `references/C.16.md` `references/C.2.4.md` `references/C.29.md` `references/C.33.md` `references/A.6.3.NAR.md`
 
 ---
 
 ## C.2.8 - `U.ExtractableStructuralInformation` — Structure This Reader Can Recover
 
 > **Type:** Definitional (D)
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative.
 
 ### C.2.8:1 - Problem frame
@@ -158,6 +161,8 @@ Measure or compare extraction effort separately. Two expressions may expose the 
 
 Use the method appropriate to the proposed change: C.37 for selecting representations, A.6.3.NAR for narrative ordering and source carry-through, or the applicable domain description or instructional method. ESI states the aspect being compared; it does not prescribe adding a diagram, example or lesson.
 
+When the account describes a Method, carry the recovered operations and relations into A.2.2:2.1 if the next question is which of them the holder can use. Keep the extraction result about the episteme, form and observer: correctly explaining a rule supplies different evidence from performing it with specified support. E.23.CDI:4.2.1 uses the Method-relative profile to choose learning or provision and to revise an acquisition arrangement when its feedback and receiving result disagree. Stop at the ESI result when structural recovery alone answers the question.
+
 ### C.2.8:5 - Archetypal Grounding
 
 #### C.2.8:5.1 - Architecture account in prose and a diagram
@@ -269,6 +274,7 @@ At comparable effort, ordinary source-based reconstruction often answers which n
 - **C.2.1 and E.24.PUB:** identity of the expressed episteme, publication form and presentation carrier.
 - **C.2.4:** degree of explicit articulation and its receiving-use thresholds.
 - **C.29:** mathematical-lens correspondence for a formal structural-information estimate.
+- **A.2.2:2.1 and E.23.CDI:4.2.1:** Method-relative capability and the acquisition or provision choice that can consume a recovered Method structure.
 - **C.33:** captured and missing structure, sufficiency and source return for an architecture use.
 - **A.6.3.NAR and E.17.EFP:** narrative construction and explanation-faithfulness uses that consume structural recovery.
 - **C.11.CRC/C.11 and C.37:** marginal comparison and choice, and selection of useful representations.

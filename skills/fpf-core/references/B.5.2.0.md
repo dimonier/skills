@@ -7,7 +7,7 @@ dependencies:
   builds_on:
     - B.4.1
     - A.16
-    - C.2.2
+    - C.2.2a
   coordinates_with:
     - A.6.P
     - A.6.A
@@ -18,9 +18,11 @@ dependencies:
 
 # B.5.2.0: Question Form for Entering Abduction (`U.AbductivePrompt`)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** `U.AbductivePrompt` is a dependent durable publication-form value under episteme publication and abductive entry, not a root U-kind.
+> **Problem frame:** `B.5.2` needs an entry form that can accept admissible language-state trajectories after cue preservation and routing, without pretending that anomaly is the only admissible starting form.
+> **First move:** `U.AbductivePrompt` is a narrow family head for the prompt forms that may admissibly seed `B.5.2` after admissible cue preservation and governing-pattern selection under `A.16`, `A.16.1`, and `B.4.1`.
+>
+> **Governing patterns:** `references/B.4.1.md` `references/A.16.md` `references/C.2.2a.md` `references/A.6.P.md` `references/A.6.A.md` `references/C.16.Q.md` `references/B.5.2.md`
 
 ---
 

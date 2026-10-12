@@ -18,9 +18,10 @@ dependencies:
 
 # E.23.CAE: Capability Access and Expression Differential Probe
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when one exact holder previously produced a result, passed a qualified reference test, or has a current capability claim for a named Work family, but performance now fails, transfers poorly, or changes wi …
+> **First move:** Name only the values that can change the probe or its later use:
+>
+> **Governing patterns:** `references/A.2.2.md` `references/A.15.8.md` `references/E.23.md` `references/E.23.CDI.md` `references/A.15.7.md` `references/C.11.md` `references/E.10.LRN.md` `references/C.36.md`
 
 ---
 
@@ -169,7 +170,7 @@ A cheap reversible probe can support a narrow disposition. A high-stakes capabil
 
 #### E.23.CAE:4.5 - Route without choosing
 
-The first result should fit in six lines:
+Keep the first result compact; one useful shape is:
 
 > **Claim tested:** [holder, Work family, envelope, window].
 > **Controlled contrast:** [reference, changed condition, and what was held fixed].
@@ -252,7 +253,10 @@ The cost is a qualified reference basis, controlled contrast, explicit claim bou
 
 What changes in practice is not the adoption of one memory theory. It is the refusal to move directly from failed expression to capability loss or development Work without first asking which observable contrast could change that conclusion.
 
-#### Reopen condition
+
+
+#### E.23.CAE:9.1 - Reopen condition
+
 
 Revisit this pattern when a current FPF neighbor supplies the whole differential with less burden; actual human, organizational, and AI or robotic uses cannot share the observation-only action; a direct source correction removes a load-bearing contrast; a new direct consumer requires a different disposition; or repeated uses show that one observation position is an independent Method with its own result and boundary.
 

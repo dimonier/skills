@@ -38,9 +38,11 @@ dependencies:
 
 # E.10: Unified Lexical Rules for FPF
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use `E.10` when a word, head, or short phrase in FPF-governed text still hides its kind, register, morphology, reusable name, or exact FPF relation after the surrounding sentence has been read in ordinary language.
+> **Problem frame:** **Current name set.** `F.19` owns the common semantic and pragmatic reading of the natural span. `E.10` supplies the compact cue surface and detailed lexical, register, naming, and morphology rules for one unresolved FPF wording use.
+> **First move:** Apply the connected `F.19` reading to the complete natural span. If ordinary meaning settles the issue, repair the text and stop. Only a surviving FPF lexical question opens the subordinate `LEX-BUNDLE` or `ULR` material.
+>
+> **Governing patterns:** `references/A.7.md` `references/E.5.md` `references/F.5.md` `references/F.18.md` `references/E.10.ARCH.md` `references/E.10.LRN.md` `references/E.10.DEV.md` `references/E.10.MOVE.md`
 
 ---
 
@@ -612,12 +614,12 @@ If evidence is being read as engineering justification, gate passage, deontic pe
 
 ##### E.10:0.2c.27 - `authority`, `permission`, `approval`, `commitment`, `obligation`
 
-These are deontic claims or claims carrying an authority-reference relation, not visual or rhetorical properties.
+Use this entry when the recovered claim concerns a duty, permission, approval, or authority relation. The word alone does not establish that claim. For `commit`, `committed`, or `commitment` used for a decision, model choice, or version-control operation, recover that operation under its own rule. Use `E.10.MOVE` only while a route or work-entry transition remains unclear.
 
-Recover:
+Recover the values required by that claim:
 - the beneficiary System or reference required by the selected predicate; if source wording says *role*, apply `E.10.ROLE` and cite a local system-role kind and classification or an obtaining `U.SystemRoleAssignment` occurrence only when that permission or authority predicate actually uses it;
 - speech act or issuing act;
-- commitment record under `A.2.8` for obligation, recommendation-as-duty, or prohibition;
+- individual duty under `A.2.8` for obligation, recommendation-as-duty, or prohibition: its actual bearer, duty content, modality, scope and time, constitutive rule, and required instituting facts; keep any assertion or record about the duty separate from that relation;
 - exact `A.2.8.PER` strong grant, weak non-prohibition/non-violation finding, exercise relation, or permission-conflict finding;
 - policy claim and policy/currentness frame;
 - authority relation;
@@ -1244,13 +1246,13 @@ Aliases are permitted only in one named local source or practice glossary under 
 
 #### E.10:8.5a - Entry lexeme support and lexical-query discipline
 
-Public first-entry scenario text, ToC query rows, local Problem-frame recognition text, or expanded `I.2` entry-disambiguation cases may use one compact **entry lexeme cue** block when the lexical issue changes the first useful FPF entry.
+Public first-entry scenario text, ToC query rows, local Problem-frame recognition text, or worked entry comparisons in `E.11` may use one compact **entry lexeme cue** block when the lexical issue changes the first useful FPF entry.
 That cue block should not be copied into every pattern body by default.
 Keep it instead in:
 
 * FPF `readme` section,
 * `E.11` public-entry positions,
-* `I.2` expanded entry-disambiguation cases,
+* worked entry comparisons in `E.11`,
 * `Table of Contents` query rows,
 * or one bounded lexical-query record governed by `F.17`, `UTS`, or `F.18`.
 
@@ -1622,7 +1624,7 @@ The conformance prompts are bounded so lexical governance does not become a corp
 | [ISO 704:2022, *Terminology work — Principles and methods*](https://www.iso.org/standard/79077.html), edition 4, 2022-07. | Current external terminology-work source for links among objects, concepts, definitions, and designations and for term formation after those distinctions are recovered. | Mutates the object-first scan and durable-name boundary: recover the governed object, relation, or claim before forming or preferring a designation. | Do not treat terminology work as proof that a project relation obtains, as a substitute for the direct FPF rule, or as a central word list that assigns FPF kinds. |
 | Zhu, Reinecke, and Mitra, `Language Scent: Exploring Cross-Language Information Navigation`, arXiv:2604.03604, 2026. | Current preprint extending information-scent work to cross-language navigation; its formative and laboratory evidence is promising but small and does not establish universal label equivalence. | Mutates `E.10:0.2b`, `E.10:8.5a`, and F.17 coordination: admit compact in-situ entry cues when they preserve the named value and help a reader choose the right local interpretation; when a claim relates two local senses, identify them and use F.9 only if its direct Bridge predicate actually obtains. | Do not infer global synonyms, a universal multilingual term registry, or cross-local equivalence from similar labels or a small study. |
 | W3C SKOS Reference for controlled structured vocabularies and lexical labels, with heavier OWL and RDF ontology practice used only by ontology-bearing patterns named by value. | Current reference source for controlled-vocabulary publication and label relations; not current-best source for every FPF wording repair. | Mutates `E.10:0.2b`, `E.10:0.2c.18`, and `E.10:0.2c.28`: keep vocabulary labels, concept-like heads, registries, maps, and reusable names recoverable as publication or naming objects named by value before reuse; F.18 defines durable naming, while relation, source, or domain ontology remains with the pattern that defines or constrains that claim. | Do not make OWL-style term-to-class modeling the default answer to every vague term. Do not let a controlled vocabulary become a second FPF ontology or replacement wording-recognition table. |
-| W3C WCAG 2.2 headings and labels guidance plus consistent-identification guidance, with FPF-internal `E.11`, README, ToC, and `I.2` entry-distribution practice. | Current reference source for discoverability and label consistency; FPF entry projection remains the governing local architecture. | Mutates `E.10:0.2b`, `E.10:0.2c.29`, `E.10:19`, and `E.11` coordination: keep trigger wording discoverable enough for first repair, but make final wording, appropriate pattern use, and entry projection govern the result. | Do not turn wording-recognition lists into local lexical registries, front-door taxonomies, or accepted replacement vocabulary. Do not let search convenience select ontology. |
+| W3C WCAG 2.2 headings and labels guidance plus consistent-identification guidance, with FPF-internal `E.11`, README, ToC entry-distribution practice. | Current reference source for discoverability and label consistency; FPF entry projection remains the governing local architecture. | Mutates `E.10:0.2b`, `E.10:0.2c.29`, `E.10:19`, and `E.11` coordination: keep trigger wording discoverable enough for first repair, but make final wording, appropriate pattern use, and entry projection govern the result. | Do not turn wording-recognition lists into local lexical registries, front-door taxonomies, or accepted replacement vocabulary. Do not let search convenience select ontology. |
 
 The practical result is lexical governance that improves action guidance and semantic composability. Reopen only the internal rows whose defining pattern changes its kind, authority boundary, or recovery result; reopen the in-situ-cue choice only if stronger language-scent evidence changes cue usefulness for the intended readers; reopen the terminology, vocabulary-publication, or discoverability rows only if the cited standard changes the object, designation, label, publication, or navigation contribution used here. A source locator, publication-status, popularity, or unused-example change alone does not reopen E.10.
 

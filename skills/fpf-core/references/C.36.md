@@ -35,9 +35,10 @@ dependencies:
 
 # C.36: Cultural Evolution and Cultural-Evolution Engineering
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when the current project question is about how a culture, style, tradition, discipline practice, method family, work family, canon, recognition regime, selection regime, or mediating system changes and can be deliberately i …
+> **First move:** First state the cultural-evolution case in ordinary language: which practice and variants are in play, which relations transmit, recognize, select, retain, or mediate them, what the available basis supports, and whether to continue, change …
+>
+> **Governing patterns:** `references/A.1.md` `references/A.2.1.md` `references/A.3.1.md` `references/A.15.md` `references/C.18.md` `references/C.19.md` `references/C.20.md` `references/C.23.md`
 
 ---
 

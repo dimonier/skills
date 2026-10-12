@@ -30,9 +30,10 @@ dependencies:
 
 # F.14: Anti-Explosion Control for System-Role and Status Name Families
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use F.14 when proposed names, aliases, cards, local-sense cells, or rows begin to multiply faster than the independently governed distinctions.
+> **First move:** Use this sequence before minting a durable name or any supporting naming object:
+>
+> **Governing patterns:** `references/A.2.md` `references/A.2.1.md` `references/A.2.5.md` `references/A.2.7.md` `references/F.6.md` `references/A.15.1.md` `references/F.8.md` `references/F.10.md`
 
 ---
 

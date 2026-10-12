@@ -28,9 +28,10 @@ dependencies:
 
 # A.18: A.CSLC-KERNEL — Minimal CSLC in Kernel (Characteristic/Scale/Level/Coordinate)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** We often need to **characterize some aspect** of a subject, whether the subject is one entity or a relationship between entities.
+> **First move:** **Bind each measurement template to one Characteristic and one Scale.** A Coordinate is one value on that Scale; a named Level is optional when the Scale supplies discrete categories or tiers.
+>
+> **Governing patterns:** `references/A.17.md` `references/C.16.md` `references/A.19.md` `references/A.19.CN.md` `references/G.0.md` `references/B.3.md`
 
 ---
 

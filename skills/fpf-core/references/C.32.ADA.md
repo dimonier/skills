@@ -37,9 +37,10 @@ dependencies:
 
 # C.32.ADA: Architecture Decision Adequacy Scales
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a project architecture decision, its method docking, or its ADR-like publication projection must be evaluated for adequacy before use, review, handoff, governance, or improvement.
+> **First move:** Create `ArchitectureDecisionAdequacyEvaluation@Project` for one declared use. Evaluate the complete coordinate set. Do not average coordinate values. Use the weakest live coordinate to choose the next repair.
+>
+> **Governing patterns:** `references/C.32.PAD.md` `references/C.32.ADR.md` `references/E.21.md` `references/E.22.md` `references/C.32.md` `references/C.32.ACS.md` `references/C.32.ACE.md` `references/C.30.AD.md`
 
 ---
 

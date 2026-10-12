@@ -25,9 +25,10 @@ dependencies:
 
 # E.4.PFAD: Principle-Framework Architecture Decision
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an author is choosing among a new or revised principle framework, a contribution to an existing framework, another product that is not a framework, a thinner publication or access route, and no new maintained product n …
+> **First move:** Ask whether choosing a framework, a non-framework product, a thinner route, an existing-framework contribution, or stop will settle at least one decision used by later authoring or review:
+>
+> **Governing patterns:** `references/E.4.md` `references/E.9.md` `references/E.4.DPF.md` `references/E.4.PFR.md` `references/C.32.MWA.md` `references/C.32.PAD.md` `references/C.32.ADR.md` `references/E.17.md`
 
 ---
 
@@ -101,7 +102,7 @@ If none of these decisions and no receiving use are present, take the explorator
 For every product alternative, use *product* only as the first management cue. Then compare the direct subjects at the same grain: the exact framework or package episteme, System, service arrangement, Method, programme description, carrier, or other admitted result, and the relations that later work will rely on. Use a quality-management, service-management, publication, or content-management scheme as a probe; use the FPF direct-subject patterns to settle the kind. If an unresolved kind can change the selected answer, keep the product proposed and make that kind the next decision question.
 
 
-#### E.4.PFAD:4.1.1 - Choose a contribution through attainable use and its whole cost
+##### E.4.PFAD:4.1.1 - Choose a contribution through attainable use and its whole cost
 
 Use this construction when the architecture choice turns on who can benefit from the proposed content, how that benefit becomes available, or which uses must change together. It supplies grounds for the compact answer in :4.2; it is not another record or an obligatory study before a small repair. If one adequate route already answers the question without a consequential boundary choice, keep the :4.1 cheap exit.
 
@@ -145,7 +146,7 @@ When the architecture question is open, the framework-specific part of the DRR s
 
 1. the intended practitioner, public field name and promise, recurring problem, and bounded architecture question;
 2. the selected outcome: a new or revised framework edition, a contribution to an existing framework, a non-framework product, a thinner publication or access route, or no new maintained product now; for a non-framework product, also the direct subject kind and the identity, current-state, provision, publication, availability, or maintenance relations actually used by the decision;
-3. its field boundary: who can first use it without unpublished authoring context and for what; the connected problem families and useful results; what the current FPF and admitted DPFs already provide and what remains uncovered; serious alternatives, such as splitting or merging the proposed framework, using existing sources directly, contributing to one existing framework, composing exact contributions across several admitted DPFs and FPF, selecting a programme or service, selecting a separate evidence-package episteme, or selecting no new maintained product now; the limits of evidence; and what change will require a refresh;
+3. its field boundary: who can first use it without unpublished authoring context and for what; the connected problem families and useful results; what the current FPF and admitted DPFs already provide and what remains uncovered; serious alternatives, including retaining, splitting or merging existing and proposed frameworks, moving or extracting existing Methods into a new or revised DPF, constituting a Suite when several fields serve the ecosystem use, using existing sources directly, contributing to one framework, composing exact contributions across several DPFs and FPF, selecting a programme, service or separate evidence-package episteme, or selecting no new maintained product now; the limits of evidence; and what change will require a refresh;
 
 4. the selected problem-family pattern sets, first patterns and their material relations, representative cross-problem application, and important omissions;
 5. which structures of Methods, their use, support and development change the answer, and how the identified Methods, descriptions, patterns, direct subjects and managed result boundaries fit together. When those structures do not line up one-for-one, use a completed `C.32.MWA` synthesis; use `E.23.CDI` only when capability development for a named Work family changes the answer;
@@ -154,6 +155,10 @@ When the architecture question is open, the framework-specific part of the DRR s
 8. material alternatives, accepted costs or losses, practical consequences, the first authoring action or stop, and the reopen condition. For each framework-edition dependency, distinguish a change of the relied-on edition from a material change to a relied-on claim, and identify the dependent use that each reopens.
 
 For any opened question, record only candidate contributions that can change the outcome. For each, state whether an exact current FPF or admitted-DPF owner carries its action, first result, return, and source or refresh duty; an exact external result supplies it; an action-bearing remainder survives; or ownership remains unresolved. A shared topic or broad framework name can locate candidates; assign a disposition only after exact contribution comparison.
+
+Then settle any field or organization question that the comparison exposed. Finding a Method in an existing DPF establishes its availability, not that its present placement is the best boundary for the receiving practice. Reconstruct the candidate field from its characteristic problems, Methods and knowledge, material relations, intended practitioners and source/change responsibilities. C.20 supplies discipline-composition conditions when a discipline claim matters; a job title or conference is evidence about a field, not a substitute for its constructive account. Compare the present distribution with plausible regrouping, including the already described Methods. Explain what each choice changes in obtaining, learning, adapting and maintaining the whole. Retention needs the same substantive grounds as a split or new framework; migration costs count, but avoiding a new name or file does not establish adequacy.
+
+A residual comparison can therefore return one missing operation, a new composition, a whole field or several fields. Conversely, an available field framework may already supply the required language, including its relations, so that a bounded extension or better entry is enough. Keep these outcomes open until the comparison settles them. A pattern whose internal sections actually address several separately usable problem/result families is a candidate for repartition, even if its old identifier is stable. Length alone establishes neither that defect nor the right split.
 
 When professional Method coverage can change point 5, the same compact framework answer projects five connected claim groups from points 1, 3, 4, 5, 7, and 8. The projection remains content of that one answer and its one ordinary `E.9` DRR. Fill each group to the grain that changes first use, using a representation suited to the case, before DPF authoring:
 
@@ -216,38 +221,59 @@ Use `C.32.PAD` only when the question is an exact project architecture decision 
 
 ### E.4.PFAD:5 - Archetypal Grounding
 
-#### Positive DPF
+
+
+#### E.4.PFAD:5.1 - Positive DPF
+
 
 A systems-management group considers a public DPF for recurring problems in service launch, cross-team coordination, incident response, and feedback-based improvement. A broad FPF route covers several shared distinctions, and an admitted neighboring DPF covers one specialist branch, but neither gives this practitioner group a coherent first use across the four problem families. The field-boundary assessment compares a new DPF with direct FPF-and-source use, a guide, contribution to the neighboring DPF, two existing DPF edition series, and no new maintained product now. It favors one DPF because a representative service-launch case needs patterns from several problem-family sets together and has an independent edition, change, and refresh boundary, including its later-review rule.
 
 
 The source accounts organize Methods, dated Work, service and equipment subjects, descriptions, provider capabilities, and cultural change differently. A completed `C.32.MWA` result makes those correspondences and conflicts readable; the selected problem families and relations supply the DPF structure. The `E.9` DRR records the public promise, selected problem-family sets and material relations, representative case, omitted procurement and certification questions, the sources to revisit, which claims the evidence supports, suggests, or only motivates, the publication consequence, first authoring action, and reopen condition. It also identifies the selected FPF edition and any other relied-on framework editions, their required claims and receiving uses. Capability development does not change this case, so `E.23.CDI` is absent. PFR rows and proposal locators serve their conditional representation and discovery uses.
 
-#### Exploratory access result
+
+
+#### E.4.PFAD:5.2 - Exploratory access result
+
 
 Existing FPF and source material answer the immediate need through a curated route. The inquiry closes with that route because no later author or reviewer needs a settled framework boundary.
 
-#### Decision-level access result
+
+
+#### E.4.PFAD:5.3 - Decision-level access result
+
 
 A team needs a settled choice among a DPF, an access route, and stop because later work depends on the rationale. The architecture question is therefore open. The team selects the access route and no new framework edition. One `E.9` DRR records the selected access consequence, stop, and condition for reconsidering the answer.
 
-#### Non-framework programme product
+
+
+#### E.4.PFAD:5.4 - Non-framework programme product
+
 
 A cross-domain inquiry need recurs, but practitioners do not need another pattern language. The decision compares a DPF, an inquiry-programme product, a separate inquiry evidence-package episteme, a curated route, and no new maintained product now. It selects the programme because named users need continuing access to inquiry Methods, bounded-project intake, and result return. The answer records the programme's admitted direct subject and relations under their owning patterns. Any maintenance relation is a separate claim.
 
 
 Its first usable version is a current programme-description episteme that names the users and questions, inquiry Methods, project intake, result return, access, change, and retirement rules. Name any provider System, maintenance relation, accepted commitment, or admitted service state when it independently obtains and changes the answer. Each bounded inquiry project requires independent A.15.1 admission as a separate Work occurrence, and each returned result is a separate episteme. A subject pattern may instead admit the programme itself as a System or another exact arrangement, in which case the answer names it. A bounded project may end while the managed programme continues and evolves. The inquiry evidence package remains its own editioned episteme.
 
-#### DPF Suite and Reference
+
+
+#### E.4.PFAD:5.5 - DPF Suite and Reference
+
 
 Three separately constituted DPF product series already cover one recurring practitioner use. The live architecture question is Suite constitution and membership for their shared ecosystem use. When one architecture decision takes effect, it constitutes the continuing Suite collection, states its ecosystem use, defines which product series may belong, selects inclusion and removal rules and identity through change, and chooses source return and exposure. Its `E.9` DRR records that answer and the initial inclusion decisions. Each DPF edition still belongs to its own product series under that series rule. The answer separately decides whether a DPF Suite Reference product series is constituted and included and states its edition-admission, source-return, later-review, and retirement rules. Publication and availability are separate occurrences. A maintenance relation, maintaining System, or commitment is recorded only when it separately obtains. A Reference edition may then give a problem-led cross-DPF answer; Suite constitution and membership remain with the Suite decision. Record a proposed cross-DPF result use as such, then apply the edition-level dependency or compatibility predicates when their case facts exist. A later author returns an inclusion or removal proposal to the Suite decision, which settles that membership.
 
 
-#### Existing framework
+
+
+#### E.4.PFAD:5.6 - Existing framework
+
 
 A local practice framework already has an accepted architecture answer and a source record. Reopen that answer when its selected edition boundary, dependencies, initial pattern architecture, or publication or access consequence changes. A change of a relied-on edition or a material change to a relied-on claim first reopens the affected use; reconsider the architecture answer when that affects one of those architectural choices. An example or publication-carrier edit that leaves those choices intact follows the existing answer.
 
-#### Candidate recognition before product form
+
+
+#### E.4.PFAD:5.7 - Candidate recognition before product form
+
 
 These cases apply the same contribution comparison at a carrier- or count-shaped entry.
 
@@ -255,10 +281,14 @@ These cases apply the same contribution comparison at a carrier- or count-shaped
 | --- | --- | --- |
 | A MethodDescription for composing recommendations covers a receiving question and authority, qualified supplier results, alternative formation, a declared comparison, a bounded recommendation, later-choice separation, and affected-premise refresh. | Compare those contributions with current framework content. Use the file, MethodDescription, and broad title to locate candidate contributions; planned or unavailable pattern content leaves the corresponding contribution unresolved. | Keep the architecture comparison open until exact current contributions support an outcome; select an owner from those contributions. |
 | One long-mantra Card keeps several recurring problem–move–result contributions, material relations, representative cross-use, a plausible field, and a refresh boundary in attention. | Treat the Card and mantra as evidence and run the same exact subtraction as for a larger carrier set. | Apply the unchanged field-scale test; the Card is one carrier for its evidence. |
+| A large application links learning design, shared-practice stewardship, work redesign and ongoing development, using many already described Methods. | Recover the different problem families and the whole joining them before treating the application as one Method. Compare their knowledge and change boundaries with the current DPF distribution; test whether moving existing patterns improves the field account without losing their other uses. | A revised DPF, a new DPF with inherited contributions, or a Suite remains possible. Keep the current distribution only when it supplies the required field account and useful independence; neither known constituents nor application form settles the answer. |
 | A practitioner working in one professional role combines contributions from several current DPFs and FPF. | Recover the role meaning and the exact contributions. Every action, result, return, and refresh duty is carried, and no coherent independent remainder or distinct field promise survives. | Reuse the cross-DPF composition, with a role-centred view when needed; no new DPF is warranted. |
 | One composite Method or local procedure has several ordered steps for one recurring problem/result family. | Keep the Method, MethodDescription, carrier, Work, and listed steps distinct. The contribution remains one recurring problem/result family at Method scale. | Return the smallest exact non-framework result or stop; use the cheap exit when no later-used architecture consequence remains. |
 
-#### Same useful Method, different costs of access and learning
+
+
+#### E.4.PFAD:5.8 - Same useful Method, different costs of access and learning
+
 
 A framework author must make a method for recurring case reviews available to a group. Participants must identify the case question, obtain reasons for proposed changes, and let the case author accept or reject those changes with reasons. The method's operative distinctions and conditions are already settled. The architecture question is how participants with different preparation can learn and keep using it.
 

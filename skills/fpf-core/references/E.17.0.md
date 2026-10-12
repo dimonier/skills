@@ -22,9 +22,10 @@ dependencies:
 
 # E.17.0: Viewpoint and View Recognition for Multi-View Describing
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** An engineer may have several claim-bearing epistemes about one system, method, structure, work occurrence, or another exact entity.
+> **First move:** **Local mantra.** Identify the candidate episteme. Resolve the exact existing viewpoint episteme. Test their fixed conformance predicate.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/C.13.md` `references/A.22.md` `references/A.6.5.md` `references/A.6.3.md` `references/E.10.D2.md` `references/E.24.PUB.md` `references/C.29.md`
 
 ---
 

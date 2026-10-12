@@ -1,7 +1,7 @@
 ---
 id: B.5.QD
 title: Develop a New Question from a Result or Construction
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -16,16 +16,17 @@ dependencies:
 
 # B.5.QD: Develop a New Question from a Result or Construction
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** a result, counterexample or newly available construction changes what you could usefully investigate, but the next question is still unclear. A failed conjecture may reveal a missing condition.
+> **First move:** **Recover what changed → locate the dependency or new operation → construct a consequential question → work a revealing case → choose the next inquiry and keep what remains useful.**
+>
+> **Governing patterns:** `references/B.5.RA.md` `references/B.5.RR.md` `references/B.5.MPC.md` `references/C.39.md` `references/C.40.md` `references/E.10.INT.md` `references/C.11.DUA.md`
 
 ---
 
 ## B.5.QD - Develop a New Question from a Result or Construction
 
 > **Type:** Method-description pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.QD:1 - Problem frame

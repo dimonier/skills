@@ -14,7 +14,7 @@ dependencies:
   builds_on:
     - A.16
     - A.16.0
-    - C.2.2
+    - C.2.2a
   coordinates_with:
     - A.6.P
     - B.4.1
@@ -22,9 +22,10 @@ dependencies:
 
 # A.16.2: Reopen, SketchBackoff, Respecify, or Retire a Language-State Publication
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** A governed history across the language-state chart must support admissible retreat as well as tightening. When a route, publication form, or framing scaffold over-commits, teams need a first-class way to reopen, back off, respecify, or reti …
+> **First move:** This pattern defines the retreat, reframing, and retirement side of the `A.16` move family.
+>
+> **Governing patterns:** `references/A.16.md` `references/A.16.0.md` `references/C.2.2a.md` `references/A.6.P.md` `references/B.4.1.md`
 
 ---
 

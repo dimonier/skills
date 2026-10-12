@@ -23,9 +23,10 @@ dependencies:
 
 # C.2.1: `U.Episteme`: Constitution, Empirical Grounding, and Edition Relations
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF treats an episteme as a holon, not as a document class or a filled record. It is a claim-bearing whole about an exact EntityOfConcern under an effective reference scheme.
+> **First move:** Identify each `U.Episteme` through `EpistemeConstitutionRelation`: first state what it says, what exact entity it concerns, and the scheme under which those claims are read. Then name what the reader will do with that episteme.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.6.REL.md` `references/A.6.0.md` `references/A.6.5.md` `references/A.7.md` `references/C.29.md` `references/C.3.2.md` `references/E.17.0.md`
 
 ---
 

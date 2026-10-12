@@ -28,9 +28,11 @@ dependencies:
 
 # C.2.P: Clarify Episteme, Publication, and Source Wording (Epistemic Precision Restoration)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use C.2.P only when one unresolved distinction still prevents the reader from selecting or safely using the direct pattern.
+> **Problem frame:** FPF already has episteme, publication, view, carrier, presentation, relation, naming, and pattern-application concepts. FPF-governed project, review, draft, pattern, and architecture prose, plus source prose being unpacked for possible FPF …
+> **First move:** Repair episteme-publication-heavy wording by epistemic precision restoration, not by dictionary replacement.
+>
+> **Governing patterns:** `references/E.10.md` `references/C.2.1.md` `references/A.7.md` `references/E.17.0.md` `references/E.17.md` `references/A.6.P.md` `references/F.18.md` `references/E.8.md`
 
 ---
 
@@ -71,12 +73,12 @@ Changing an FPF pattern is not by itself a reason to use the full check. Use the
 
 **What this buys.** The practitioner recovers the one distinction that matters without building a second ontology or a second review procedure. The final wording still tells a cold reader what to do and where to stop.
 
-### C.2.P:0.1 - What goes wrong if missed
+#### C.2.P:0.1 - What goes wrong if missed
 Episteme-publication-heavy text starts to build a parallel ontology. A generic publication face becomes a `U.View`, a file becomes an episteme, a dashboard tile becomes evidence, a pattern name becomes a procedure, or a slash list becomes a group kind. A broad word such as `source` is especially dangerous because it can hide several different recovery fields: an FPF pattern or `DRR`; a publication field; a document named for source, evidence, architecture, or review use; a reviewed publication, review packet, review record, or review state; a project-side FPF kind and reference named by value; or a relation.
 
 The immediate cost is not only ugly terminology. Engineers and FPF authors start making action, evidence, gate, decision, or engineering-justification claims from the wrong entity, publication, record, relation, or carrier.
 
-### C.2.P:0.2 - What this buys
+#### C.2.P:0.2 - What this buys
 
 `C.2.P` gives one small epistemic precision-restoration move: recover the FPF kind and relation set first, then write wording that preserves the needed distinction without adding another claim. It prevents string-replacement cleanup, keeps FPF-side and project-side episteme and publication work separate, and blocks unclear wording from having FPF-governed use by guesswork.
 

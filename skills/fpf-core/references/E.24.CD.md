@@ -45,9 +45,11 @@ dependencies:
 
 # E.24.CD: Ontic Candidate Detection and First-Use Disposition
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a recurring word, card, table, schema, diagram, record, draft pattern row, or field bundle looks like a new FPF subject and the author must decide what to do next.
+> **Problem frame:** An apparent ontology candidate usually arrives inside something visible: a label, form, record, diagram, source passage, or repeated field list.
+> **First move:** Start from the work that is blocked, not from the shape of the source material.
+>
+> **Governing patterns:** `references/E.24.md` `references/E.24.UK.md` `references/C.2.1.md` `references/C.3.md` `references/C.3.1.md` `references/C.3.2.md` `references/E.24.PUB.md` `references/C.29.md`
 
 ---
 

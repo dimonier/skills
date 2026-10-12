@@ -31,9 +31,10 @@ dependencies:
 
 # C.32.ACS: Architecture Characteristic Criteria Set
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a project must turn architecture-characteristic pressure into a small project criteria set for architecture improvement, candidate synthesis, residual optimization, and later eval work.
+> **First move:** Build an `ArchitectureCharacteristicCriteriaSet@Project` from starter heads, source catalogues, architecture constraints, and the project improvement question.
+>
+> **Governing patterns:** `references/C.32.HCS.md` `references/C.25.md` `references/C.16.md` `references/E.13.md` `references/C.32.md` `references/C.32.ACE.md` `references/C.32.PAD.md` `references/E.22.md`
 
 ---
 

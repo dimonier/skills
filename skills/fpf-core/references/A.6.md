@@ -38,9 +38,10 @@ dependencies:
 
 # A.6: Signature Stack: Classify and Place Boundary Claims
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Boundaries are where architecture lives: at the edge of a theory, an API, a protocol, a hardware connector, an organisational interface, or a published model. FPF already has the core building blocks to describe such edges:
+> **First move:** This pattern uses **stack** in the same pragmatic sense as other FPF stacks (e.g., the holonic import stack and other layered disciplines): an ordered set of layers where **higher layers are more stable commitments**, and **lower layers are …
+>
+> **Governing patterns:** `references/E.8.md` `references/A.6.0.md` `references/A.6.1.md` `references/A.6.3.md` `references/E.17.0.md` `references/E.17.md` `references/A.7.md` `references/F.18.md`
 
 ---
 
@@ -442,11 +443,17 @@ These are *writing diagnostics*, not tool requirements.
 
 > **Informative.** Worked examples for learning the L/A/D/E claim-classification discipline; they do not add requirements beyond A.6:7.
 
-#### Tell (universal rule)
+
+
+#### A.6:5.1 - Tell (universal rule)
+
 
 To support boundary evolvability, separate claims across the signature stack and classify each statement as Law, Admissibility, Deontic duty/commitment/grant, or the boundary's observable-effect/evidence family. An E claim names the exact actual occurrence under its subject predicate and retains the pattern only as a locator: dated Work only when the A.15.1 predicate is satisfied, or A.3/A.3.4 plus the exact interaction or causal predicate for non-Work change. EntityOfConcern, description, and publication carrier remain separate.
 
-#### Show #1 (`U.System`): effectful API boundary (algebraic effects intuition)
+
+
+#### A.6:5.2 - Show #1 (`U.System`): effectful API boundary (algebraic effects intuition)
+
 
 **System:** A “Payment Authorize” service.
 
@@ -482,7 +489,10 @@ To support boundary evolvability, separate claims across the signature stack and
 * “Clients MUST include Idempotency-Key” belongs in Quadrant D as a normative prescription and should reference the same gate semantics to avoid divergence. It becomes a claim about one obtaining individual `U.Commitment` only after A.2.8 identifies the actual bearer, constitutive rule, required instituting basis, and direct predicate.
 * “System emits AuthorizationRecord” belongs in Quadrant E (an actual event-emission claim).
 
-#### Show #2 (`U.Episteme`): published evaluation protocol boundary (multi‑view + evidence)
+
+
+#### A.6:5.3 - Show #2 (`U.Episteme`): published evaluation protocol boundary (multi‑view + evidence)
+
 
 **Episteme:** A published “Model Evaluation Protocol” for a safety‑critical classifier.
 

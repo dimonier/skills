@@ -39,6 +39,14 @@ for the single-surface decision and directory layout. Only then the mechanics ca
 (Dispatcher → PatternBody → GoverningCues → Naming), with QualityAndRefresh
 closing the loop.
 
+## Lookup rules
+
+- **Index first, then "no".** Before looking for a pattern, check
+  `references/INDEX.md`. If the id is not listed there, the pattern does not
+  exist — answer "no"; do not open files searching for it.
+- **Read once.** Once a file has been read, do not open it again; refer to what
+  was already read.
+
 ## Source (single surface)
 
 `references/` IS the canonical source. Both the agent and the human author read

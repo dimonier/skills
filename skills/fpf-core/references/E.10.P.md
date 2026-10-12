@@ -27,9 +27,7 @@ dependencies:
 
 # E.10.P: Conceptual Prefixes (policy & registry)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Governing patterns:** `references/E.10.md` `references/E.24.UK.md` `references/B.1.3.md` `references/B.1.4.md` `references/B.1.2.md` `references/E.5.1.md` `references/E.5.2.md`
 
 ---
 

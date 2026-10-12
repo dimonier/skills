@@ -30,9 +30,11 @@ dependencies:
 
 # B.1.2: Coordinate Decisions About System Aggregation and Delimitation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when one exact entity recognized under the already admitted `U.System` kind, or one exact entity still being evaluated under A.1 for that kind, is being considered as a whole and an engineering decision depends on coordinat …
+> **Problem frame:** B.1.2 specializes B.1 for system holons, but it is a coordination method rather than the source of one omnibus system-aggregation relation.
+> **First move:** Use B.1.2 to coordinate one named system-aggregation or delimitation decision across independently governed results. Do not introduce `SystemAggregationRelation@Context`, `HolonDelimitationRelation@Context`, `HolonBoundaryCrossingRelation@C …
+>
+> **Governing patterns:** `references/B.1.md` `references/A.1.md` `references/A.14.md` `references/C.13.md` `references/A.22.md` `references/C.11.md` `references/C.32.PAD.md` `references/C.2.1.md`
 
 ---
 

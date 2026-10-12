@@ -11,7 +11,7 @@ description: |
   rendering what remains as episteme blocks).
 ---
 
-# Agent Skill Builder (LPF)
+# Agent Skill Builder (DPF)
 
 **Bounded context:** authoring, reviewing, and evolving **agent skills** — the
 procedural guidance layer an LLM agent loads on demand. The skill is one of four
@@ -26,18 +26,21 @@ see the `skill-creator` skill; for FPF-grounded DPF/LPF-as-skill authoring see
 
 ## When to load which pattern
 
-| Situation | Load | Governing cues |
-|---|---|---|
-| Is a skill even the right layer (vs `AGENTS.md`, MCP, Memory)? Should I create one at all? | `references/ASB.LayerRouting.md` | `AS.1`, `E.4`, `E.5.3`, `E.11` |
-| The skill never triggers, or triggers on the wrong prompts (drafting the `description`) | `references/ASB.TriggerDesign.md` | `AS.2`, `E.11` |
-| Keeping `SKILL.md` small yet complete; where heavy content goes | `references/ASB.ProgressiveDisclosure.md` | `AS.4`, `E.11`, `C.33` |
-| Which files a skill folder must/may contain; frontmatter; bundled resources | `references/ASB.SkillAnatomy.md` | `AS.5`, `C.33`, `F.18`, `E.10` |
-| Whether to split one fat skill into several; the mega-skill anti-pattern | `references/ASB.Atomicity.md` | `AS.3`, `E.4`, `E.5.3` |
-| Whether the skill actually works before relying on it (weak-model test) | `references/ASB.QualityGate.md` | `AS.8`, `E.21`, `E.19` |
-| Where the skill should live (global / project-local / symlink) | `references/ASB.Placement.md` | `AS.9`, `E.4`, `E.5.3`, `C.33` |
-| Keeping the skill current; the "offer to update" rule; deprecation | `references/ASB.Evolution.md` | `AS.10`, `E.23`, `G.11`, `E.4.PFR` |
-| Trust, scripts as attack surface, third-party / awesome-list skills | `references/ASB.SecurityAndTrust.md` | `AS.11`, `E.5.3`, `C.33` |
-| Compacting a skill's materials to minimal size (**opt-in**; only on explicit owner request + accepted trade-offs) | `references/ASB.Compaction.md` | `AS.4`, `A.6.3`, `C.2.3` |
+| Situation | Load |
+|---|---|
+| Is a skill even the right layer (vs `AGENTS.md`, MCP, Memory)? Should I create one at all? | `references/ASB.LayerRouting.md` |
+| The skill never triggers, or triggers on the wrong prompts (drafting the `description`) | `references/ASB.TriggerDesign.md` |
+| The skill triggers only sometimes; tuning the `description` empirically (near-miss negatives, held-out test) | `references/ASB.DescriptionOptimization.md` |
+| Keeping `SKILL.md` small yet complete; where heavy content goes | `references/ASB.ProgressiveDisclosure.md` |
+| Which files a skill folder must/may contain; frontmatter; bundled resources | `references/ASB.SkillAnatomy.md` |
+| Whether to split one fat skill into several; the mega-skill anti-pattern | `references/ASB.Atomicity.md` |
+| Several skills must cooperate; chaining vs orchestrating (pointer-not-call, acyclicity) | `references/ASB.InterSkillComposition.md` |
+| Evaluating a skill end-to-end before relying on it (baselines, assertions, iteration, self-eval) | `references/ASB.EvaluationLoop.md` |
+| Whether the skill works on a weaker model (the weak-model admission test) | `references/ASB.QualityGate.md` |
+| Where the skill should live (global / project-local / symlink) | `references/ASB.Placement.md` |
+| Keeping the skill current; the "offer to update" rule; deprecation | `references/ASB.Evolution.md` |
+| Trust, scripts as attack surface, third-party / awesome-list skills | `references/ASB.SecurityAndTrust.md` |
+| Compacting a skill's materials to minimal size (**opt-in**; only on explicit owner request + accepted trade-offs) | `references/ASB.Compaction.md` |
 
 ## Navigation rule
 
@@ -62,15 +65,15 @@ There is no single linear chain; enter per use-case:
 and edit those files directly. `SKILL.md` (this file) is routing-only: no pattern
 body content lives here. `references/INDEX.md` lists every card once;
 `references/relations.md` is the canonical home for the source/edition citation,
-the dependency graph, and refresh triggers. Frontmatter `dependencies`
-(`builds_on` / `coordinates_with`) carries FPF codes only; each card names its
-parent AS-DPF pattern in `:12 "Builds on (DPF)"`, and `relations.md` holds the
-intra-LPF graph and the DPF-specialization edges.
+refresh triggers, provenance, and the intra-DPF dependency graph. Frontmatter
+`dependencies` (`builds_on` / `coordinates_with`) carries FPF codes only — and
+they appear nowhere else (no body cue block, no `:12` edge list, no routing-table
+cues column). Each card's `:12 Relations` is a one-line pointer, not an edge list.
 
 ## references/ status
 
-**First seed** — 10 pattern cards + INDEX + relations, all `status: seed`, readiness
-mode `source-faithful` (faithful to the AS-DPF `AS.1`–`AS.11` and the
+**First seed** — 13 pattern cards + INDEX + relations, all `status: seed`, readiness
+mode `source-faithful` (faithful to the merged AS-DPF `AS.1`–`AS.12` and the
 `agent-skill-builder` skill payload), not `case-validated`. Before reliance, run the
 `ASB.QualityGate` weak-model test.
 
@@ -85,5 +88,5 @@ owner-owned; edit only the repo carrier.
 
 If the owner is dissatisfied or refines the process, offer to update this skill —
 its `description`, the routing table, or a `references/*.md` body (see
-`ASB.Evolution`). The evolution of the LPF content itself follows
+`ASB.Evolution`). The evolution of the DPF content itself follows
 `pattern-language-as-agent-skill` (`PLAS.QualityAndRefresh`).

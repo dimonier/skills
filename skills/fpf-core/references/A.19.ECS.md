@@ -5,8 +5,7 @@ status: Stable
 keywords: []
 dependencies:
   builds_on:
-    - A.17
-    - A.19
+    - "A.17-A.19"
     - C.16
     - F.18
   coordinates_with:
@@ -22,9 +21,10 @@ dependencies:
 
 # A.19.ECS: Evaluation CharacteristicSpace Construction: Define What Counts as Better
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use `A.19.ECS` when an object version is to be improved or judged, but the evaluation that says what "better" means is not yet available, not yet explicit, or not yet adequate for the object.
+> **First move:** Construct an evaluation `CharacteristicSpace` by declaring the evaluated object kind, use scope, contrast cases, characteristic slots, scale bindings, value meanings, evidence-basis and missingness rules, result-row shape, calibration point …
+>
+> **Governing patterns:** `references/A.17-A.19.md` `references/C.16.md` `references/F.18.md` `references/E.22.md` `references/E.23.md` `references/C.25.md` `references/E.21.md` `references/E.9.DA.md`
 
 ---
 

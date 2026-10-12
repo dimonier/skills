@@ -27,9 +27,11 @@ dependencies:
 
 # E.10.LRN: Recovering What “Learning” Means in the Current Claim
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when claim-bearing wording says *learn*, *learning*, *learned*, *taught*, or *trained*, and the sentence does not yet reveal which participant, changed subject, Work, Method, result, evidence, or receiving use is meant.
+> **Problem frame:** The same word family is used for importantly different situations:
+> **First move:** Recover the current claim from its participants, subject, operation, result, and use rather than from the word *learning*.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/F.17.md` `references/F.18.md`
 
 ---
 
@@ -98,7 +100,7 @@ Recover the current claim from its participants, subject, operation, result, and
 3. **Name the changed subject.** State whether the current claim concerns a person's capability, an episteme, a model and parameters, a probability distribution, a representation relation, an organization or population, a product, a Work occurrence, or another exact subject.
 4. **Separate Work, Method, and result.** Name inquiry, teaching, practice, training, optimization, inference, experiment, data acquisition, assessment, publication, or cultural-continuation Work only when it is current. Keep its performer, Method, inputs, and dated occurrence separate from the result attributed to another subject.
 5. **State the evidence and any material transfer boundary.** Name what was observed or assessed, for which task, population, configuration, window, support arrangement, and use. State an unsupported stronger claim only when independent local grounds make that reading plausible and the distinction changes use.
-6. **Select one direct branch.** Use the branch table below. When one sentence contains several branches, split it into several ordinary sentences and route each one separately.
+6. **Select one direct branch.** Use the branch table below. When one sentence contains several branches, keep the claims distinguishable and route each separately.
 7. **Stop after recovery.** Return the repaired claim and direct pattern, or an exact missing-information, missing-governor, quote-only, ordinary-use, or blocker result. Do not create a generic learning record, role kind, process, progress scale, or causal relation.
 
 #### E.10.LRN:4.1 - Direct branches

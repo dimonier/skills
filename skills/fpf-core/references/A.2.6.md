@@ -24,9 +24,10 @@ dependencies:
 
 # A.2.6: Unified Scope Mechanism (USM): Test Scope Membership and Combine Scopes
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** This pattern gives practitioners one exact question: *does this slice belong to the scope needed by this use?* It applies first to claim scope and reuses the same value algebra for work and publication scopes.
+> **First move:** | Force | Tension to resolve | | ------------------------------------------------- | …
+>
+> **Governing patterns:** `references/C.3.md` `references/A.6.0.md` `references/A.6.1.md` `references/C.2.1.md` `references/A.7.md` `references/C.2.2.md` `references/C.2.3.md` `references/A.2.2.md`
 
 ---
 

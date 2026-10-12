@@ -14,10 +14,6 @@ dependencies:
 ## ASB.Compaction - Skill-material compaction: discard the unnecessary first, render the remainder as episteme blocks
 
 > **Trigger:** **Opt-in only.** When the owner has **explicitly** asked for a minimal-size skill and accepted the trade-offs below, and the materials (the `SKILL.md` body and `references/*.md`) must be compacted — discard the unnecessary and render the rest in the compact `episteme` notation. Without that explicit confirmation, do not use this pattern; use `ASB.ProgressiveDisclosure` (prose externalization) instead.
-> **Governing patterns:**
->   → `AS.4` (Progressive Disclosure — the deletion/externalization half; conditional → `references/`)
->   → `A.6.3` (Epistemic Viewing — the rendering/compaction operation)
->   → `C.2.3` (Unified Formality Characteristic F — F0…F9; the hybrid F3 target)
 > **Skill dependencies:**
 >   → `episteme-compaction` (ECPF.1–ECPF.7 — the notation and the forward/reverse render)
 
@@ -284,7 +280,8 @@ refinement needs.
 ### ASB.Compaction:10 - Rationale
 
 `A.6.3` (Epistemic Viewing) governs the prose→notation render; `C.2.3` supplies the
-F-levels and motivates the F3 hybrid; `AS.4` supplies the delete/externalize half.
+F-levels and motivates the F3 hybrid; `ASB.ProgressiveDisclosure` supplies the
+delete/externalize half.
 The report supplies the empirical split: reading needs no preamble, correct rendering
 needs the full one, and the split discipline keeps inference from being read as a
 source claim. For a skill the consumer is an agent reading for comprehension, **not**
@@ -298,7 +295,7 @@ split discipline still is.
 | Owner clarification (2026-09-11): compaction only on explicit consent; a **skill is for agent comprehension, not reconstruction**, so round-trip losses do not apply | Adopt | Gate 0 (opt-in consent) + the reclassified `:4` trade-offs | Reopen if the consent requirement or the no-reconstruction premise changes |
 | Report "Отчёт: тестирование нотации episteme" (2026-09-11) | Adopt | Delete-then-compress order; full-preamble requirement at authoring; 38.3% measured; hybrid F3 | Reopen on a new experiment/additional runs (n>1) |
 | `episteme-compaction` ECPF.1–ECPF.7 (FPF `A.6.3`) | Adopt | `episteme` fence, `sourceClaims`/`fpfMetadata` split, `ECPF.2` typing; `ECPF.7` not required for a skill | Reopen on an ECPF edition change |
-| AS-DPF `AS.4` Progressive Disclosure | Adopt | Move-1 externalization to `references/`; the no-consent default | Reopen on `AS.4` revision |
+| AS-DPF `AS.4` Progressive Disclosure (merged 2026-10-04) | Adopt | Move-1 externalization to `references/`; the no-consent default | — merged into this DPF |
 | Incoming proposal (2026-09-11, from the `sfera-standards` miniaturization) | Adopt | Move-1 runtime allow-list/delete-list; `:8` anti-patterns | Reopen if the compaction/PLAS boundary changes |
 | Owner clarification (2026-09-11): maintainer data is legitimate in a PLAS DPF/LPF and is dropped only in the compacted form; claim values always English per `ECPF.2` | Adopt | Move-1 delete-list scope (runtime projection vs canonical source); Move-2 language reference (`CC-ECPF2.8`), no ECPF duplication | Reopen if the compaction/PLAS boundary or `ECPF.2` changes |
 | Incoming proposal (2026-09-13, from `FPF` applying this pattern to `dpf-systems-engineering`) | Adopt | Move-1 "allow-list, not router-duplication" clause; `CC-CP.3` `sourceClaims`-only case; `:5` reference to the sanctioned PLAS procedural template; validator reframed (none shipped — carrier-optional) | Reopen if the compaction/PLAS boundary or a validator edition changes |
@@ -311,13 +308,7 @@ because smaller is better" (violates the opt-in gate).
 
 ### ASB.Compaction:12 - Relations
 
-- **Builds on (DPF):** `AS.4` (progressive disclosure — Move 1).
-- **Builds on (FPF):** `A.6.3` (epistemic viewing), `C.2.3` (formality).
-- **Coordinates with (DPF):** `AS.3` (atomicity — where shared content goes).
-- **Coordinates with (FPF):** `E.4.PFR` (record the notation edition).
-- **Coordinates with (LPF):** `ASB.ProgressiveDisclosure` (the **default** when owner consent is absent).
-- **Coordinates with (PLAS, peer):** `PLAS.CompactedProjection` — the compacted-carrier card; it depends on this pattern's Move 1/Move 2 and fixes the projection's runtime allow-list, the no-frontmatter rule, and the in-block `Grounding (FPF)` slot. This card points back to it (the projection always names its canonical source).
-- **Skill dependency:** `episteme-compaction` (ECPF.1–ECPF.7).
-- **Reference (vault):** `DEC-0001` (the decision adopting this practice; see its revision history for the opt-in gate); `DEC-0003` (the Move-1 runtime allow-list / delete-list locus).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md` (including the `episteme-compaction` skill dependency, the `PLAS.CompactedProjection` coordination, and vault refs `DEC-0001`/`DEC-0003`).
+**Provenance:** former AS-DPF `AS.4` (extension: material compaction, F3 hybrid).
 
 ### ASB.Compaction:End

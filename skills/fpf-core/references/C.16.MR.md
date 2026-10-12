@@ -16,9 +16,10 @@ dependencies:
 
 # C.16.MR: Construct a Measurement Relation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you have an indication or a proposed measurement procedure, but the relation between that indication and the property you want to determine is missing or unsuitable. A connected voltmeter can change the voltage.
+> **First move:** Fix the property and conditions of interest. Follow the production of the indication, combine the relations that connect it to the sought value, and retain the influences that can change its interpretation.
+>
+> **Governing patterns:** `references/C.16.md` `references/A.3.3.md` `references/B.5.RC.md` `references/B.5.FM.md` `references/B.5.MPC.R.md` `references/C.29.2.md` `references/C.11.DUA.md`
 
 ---
 

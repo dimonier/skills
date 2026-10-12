@@ -25,9 +25,10 @@ dependencies:
 
 # F.16: Worked-Example Template (Cross-Domain)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Provide a one-page worked-example shape that starts with a recognizable question and practical gain, names the actual values and obtaining relations, exposes exact sources and evidence, and leaves a clear boundary.
+> **First move:** * **Worked claim** — the exact proposition demonstrated by the page. * **Actual subject** — the value or entity to which a substantive claim applies.
+>
+> **Governing patterns:** `references/F.1.md` `references/F.15.md` `references/E.10.D1.md` `references/F.7.md` `references/F.9.md` `references/F.17.md`
 
 ---
 

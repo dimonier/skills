@@ -27,7 +27,7 @@ dependencies:
     - A.6.RCD
     - A.6.REL
     - A.15.1
-    - A.19.DECLARED
+    - "A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW"
     - G.2
     - G.6
     - G.10
@@ -35,9 +35,11 @@ dependencies:
 
 # F.18: Local-First Unification Naming Protocol
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use `F.18` when a name must become stable, public, Core-facing, reusable under more than one named source, practice, or reference scheme, or durable enough that later work can cite it without guessing. Typical cases:
+> **Problem frame:** Names are handles for use, not creators of ontology. A good name lets people talk about a governed value without smuggling in an extra system-role kind, assignment, capability, method, work, status, evidence, interface, or cross-context cla …
+> **First move:** Use a local-first naming protocol:
+>
+> **Governing patterns:** `references/F.0.1.md` `references/F.2.md` `references/F.3.md` `references/F.5.md` `references/F.8.md` `references/F.9.md` `references/F.13.md` `references/F.14.md`
 
 ---
 
@@ -536,7 +538,7 @@ The F.17 entry must be able to recover:
 
 If the row use relates different `<ReferenceScheme, LocalSenseClaim>` projections, its rationale or notes must cite the separate affirmative C.2.1 claim for the exact action, direction, rule, and tolerance, plus that claim's current A.10 or B.3 reliance. The result must contain one row for one naming decision and show both supported and blocked citation uses. If the entry cannot do this, keep the durable name and NameCard local and mark the public row pending. Do not repair or emulate the missing row inside F.18.
 
-#### F.18:4.4.1 - Cross-Projection Use and Reliance
+##### F.18:4.4.1 - Cross-Projection Use and Reliance
 
 Open this branch only when one named reuse must relate different `<ReferenceScheme, LocalSenseClaim>` projections. Compare the exact F.17 cells. Another expression under the same projection is a designation question and gets no Bridge. Different projections open the F.9 question; a different scheme is only one way projections can differ and proves no relation. Test the F.9 predicate and cite a Bridge only when it actually obtains. With no current correspondence use, create no Bridge or use claim regardless of scheme count.
 

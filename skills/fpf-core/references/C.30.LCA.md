@@ -31,9 +31,10 @@ dependencies:
 
 # C.30.LCA: Control Structure View Adequacy (LCA)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a control diagram, control-language source, or selected control structure changes the next architecture move.
+> **First move:** Treat LCA-like source descriptions as possible inputs to a control-structure description under C.30. Recover one described holon, any actual architecture relation, one selected control structure, the controlled holon, independently obtainin …
+>
+> **Governing patterns:** `references/C.30.md` `references/C.30.ASV.md` `references/B.2.5.md` `references/A.22.md` `references/A.3.3.md` `references/C.27.md` `references/C.28.md` `references/A.10.md`
 
 ---
 

@@ -13,14 +13,15 @@ dependencies:
     - A.3.2
     - A.15.6
     - C.32.MWA
-    - E.18
+    - ME.18
 ---
 
 # A.3.1.MR: Candidate-Method Recovery from Work Evidence
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when you have observations or records from several performances and want to understand what reusable way they may show, but no Method has yet been established.
+> **First move:** For every materially different reusable way that still fits the evidence, write a separate candidate account. Treat each account as one `U.Episteme`, keep it provisional until `A.3.1` admits the candidate as a Method, and keep MethodDescrip …
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.3.1.md` `references/A.15.1.md` `references/A.10.md` `references/A.3.2.md` `references/A.15.6.md` `references/C.32.MWA.md` `references/ME.18.md`
 
 ---
 
@@ -143,7 +144,7 @@ Four independently grounded pump-inspection Work occurrences have video, sensor 
 
 An analyst applying the recovery Method distinguishes two possible reusable ways under the plant's current inspection vocabulary: a fixed order with an undocumented exception, and a cue-responsive order. Each candidate gets its own account episteme, candidate subject, interpretation scheme, and source-to-claim support. The account notes that the video misses a tactile check named in interviews and that successful outcomes alone do not distinguish the candidates.
 
-A fifth occurrence is held out. Whether the technician changes order when the vibration cue is present can separate the accounts. Until then, both remain candidates; neither trace nor account is a MethodDescription.
+A fifth occurrence is held out. A reversal when the vibration cue is present still fits both accounts while the fixed-order account's exception condition is unknown. If the cue-responsive account requires reversal under those conditions, keeping the fixed order would challenge it. Before using a reversal to reject the fixed-order account, recover its proposed exception condition and whether it obtained. Until a supported comparison separates them, both remain candidates; neither trace nor account is a MethodDescription.
 
 If that held-out occurrence and the remaining evidence support the cue-responsive account while the fixed-order rival no longer fits, recovery can return one candidate account ready for the `A.3.1` identity test.
 

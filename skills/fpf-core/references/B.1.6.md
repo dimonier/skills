@@ -43,9 +43,10 @@ dependencies:
 
 # B.1.6: Work-Resource Aggregation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Practitioners need to roll up work-resource claims across runs, exact A.15.1 Work temporal parts or episodes, teams, devices, stations, model-training epochs, non-Work carrier phases with an established identity and `PhaseOf` relation, or e …
+> **First move:** The ledger is a replay surface, not the source of the aggregation claim. For every resource component it records:
+>
+> **Governing patterns:** `references/A.15.1.md` `references/A.6.1.md` `references/C.2.1.md` `references/C.16.md` `references/A.3.1.md` `references/A.3.2.md` `references/A.15.2.md` `references/A.15.5.md`
 
 ---
 

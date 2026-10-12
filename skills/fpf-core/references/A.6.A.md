@@ -13,7 +13,7 @@ dependencies:
   builds_on:
     - A.6.P
     - A.15
-    - C.2.2
+    - C.2.2a
     - A.16
     - B.4.1
     - F.9
@@ -24,9 +24,10 @@ dependencies:
 
 # A.6.A: Affordance and Action-Invitation Precision Restoration (ACT-INV)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF repeatedly encounters a predictable precision failure mode around **affordance-like and action-first** language.
+> **First move:** Use A.6.A when the intended claim or question remains unclear for the receiving use. The following cues help locate that ambiguity:
+>
+> **Governing patterns:** `references/A.6.P.md` `references/A.15.md` `references/C.2.2a.md` `references/A.16.md` `references/B.4.1.md` `references/F.9.md` `references/C.16.Q.md` `references/B.5.2.0.md`
 
 ---
 

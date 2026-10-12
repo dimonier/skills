@@ -24,9 +24,10 @@ dependencies:
 
 # A.2.4: Episteme Evidence-Use and Status-Use Relations
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an episteme, such as a report's content, is being used as evidence, source, status bearer, assurance input, or causal-use input for a claim.
+> **First move:** Do not create or use source spelling `U.EvidenceRole` as a durable FPF kind. Do not place an episteme in `U.SystemRoleAssignment` merely because it is used as evidence, source, standard, requirement, definition, explanation, publication, st …
+>
+> **Governing patterns:** `references/A.2.md` `references/E.10.ROLE.md` `references/A.6.RSIR.md` `references/A.10.md` `references/B.3.md`
 
 ---
 

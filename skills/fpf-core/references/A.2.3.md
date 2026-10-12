@@ -25,9 +25,11 @@ dependencies:
 
 # A.2.3: `U.PromiseContent` — Promised Outcomes and Acceptance Criteria
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a project needs to state what is promised to a consumer before asking who is obligated, what work occurred, which system exposes access, or which evaluation method and A.10 evidence relations support a fulfilment asser …
+> **Problem frame:** Across domains the word **service** is used for many different things: a server or **provider**, an **API**, a **procedure**, a **run**, a **department**, even a **product bundle**. Such polysemy is productive in everyday speech.
+> **First move:** **Definition (normative).** A **`U.PromiseContent`** is an externally oriented promise-content episteme. Its claim content states a promised consumer-side outcome, any eligibility predicate, and acceptance criteria by which fulfilment is ev …
+>
+> **Governing patterns:** `references/A.2.2.md` `references/F.12.md` `references/A.2.8.md` `references/A.6.C.md` `references/A.6.P.md`
 
 ---
 
@@ -150,7 +152,7 @@ U.PromiseContent : U.Episteme {
 * There is no generic `modelUseStructureRef` field. When an independently selected `BoundedModelUseStructure` changes one actually model-local receiving interpretation, the receiving assertion or use designates that structure separately; the structure neither identifies the promise content nor becomes an optional participant of `PromiseContentUse`. A genuinely structure-dependent relation species would require its own direct pattern, mandatory structure participant, stronger predicate, and occurrence-identity rule.
 * An internal delivery method remains `U.Method`. An already identified episteme is a `U.MethodDescription` only when its exact `EntityOfConcern` resolves to that Method and at least one claim says how that Method is done. A promise-content or acceptance claim may cite that episteme for one named use; Method-selection work, performed work, and `PromiseContentUse` remain separately governed.
 
-#### A.2.3:4.1.1 - OutcomeSpec - promised Work, post-work result, or both
+##### A.2.3:4.1.1 - OutcomeSpec - promised Work, post-work result, or both
 
 This section is the authoritative FPF locus for the promise-facing `OutcomeSpec` shape. A.7 supplies the strict distinction among the specification episteme, Work occurrence, affected referent, post-work state, counting rule, and evidence; it does not define another schema.
 
@@ -188,7 +190,7 @@ In ordinary agreement wording, *outcome* may mean Work, achieved state, or both.
 
 The head noun *outcome* is intentionally broad. When the passage means Work, affected entity, or required post-work state, name that object directly. Counting is not part of OutcomeSpec; A.2.3:4.1.2 governs `unitOfDelivery`.
 
-#### A.2.3:4.1.2 - Unit-of-delivery counting
+##### A.2.3:4.1.2 - Unit-of-delivery counting
 
 Use `unitOfDelivery` only when a receiving use counts accepted delivery. It is a specification-use episteme carried in the promise content.
 
@@ -214,7 +216,7 @@ The selector admits only Work occurrences for which the promise's delivery and a
 
 If `unitOfDelivery` is absent, the local default is one unit per obtaining `PromiseContentFulfilmentRelation` occurrence. A separately governed charging relation may consume the resulting quantity but does not define this counting rule.
 
-#### A.2.3:4.1.3 - Recommended `acceptanceSpec` mini-schema *(informative, non-kernel)*
+##### A.2.3:4.1.3 - Recommended `acceptanceSpec` mini-schema *(informative, non-kernel)*
 
 Projects may express `acceptanceSpec` with the following small schema when downstream evaluation work requires replayable criteria and verdict semantics. Here `SC` denotes the promise-content episteme containing that acceptance specification:
 

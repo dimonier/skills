@@ -28,9 +28,11 @@ dependencies:
 
 # B.2: Meta-Holon Transition — Whole Reidentification
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when changed facts raise the question whether the existing whole still carries the current claim or a new whole must be identified.
+> **Problem frame:** A Meta-Holon Transition is not a new root ontology, generic emergence label, or mathematical graph result. It is a whole-reidentification claim about an exact holon already recognized through A.1 construction, identity, part relations, whol …
+> **First move:** Use B.2 as a world-side whole-reidentification pattern. Start with the actual wholes and the facts governed by their direct patterns; add records only when a receiving use needs them.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.14.md` `references/B.1.md` `references/C.13.md` `references/B.1.2.md` `references/B.2.P.md` `references/B.2.2.md` `references/B.2.3.md`
 
 ---
 

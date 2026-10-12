@@ -18,9 +18,10 @@ dependencies:
 
 # C.28.CM: Construct and Challenge a Causal Model
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an explanation names a possible cause but leaves you unable to work out what follows, compare another mechanism, or say what observation could change the explanation.
+> **First move:** Construct the account around the question, then challenge the relations on which its useful consequence depends. The following moves can return to one another.
+>
+> **Governing patterns:** `references/B.5.FM.md` `references/B.5.2.md` `references/C.16.md` `references/C.27.md` `references/C.28.md` `references/C.28.MR.md` `references/C.29.md` `references/C.11.DUA.md`
 
 ---
 

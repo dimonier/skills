@@ -21,7 +21,7 @@ dependencies:
     - C.18
     - C.16
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - B.3
   coordinates_with:
     - E.10.LRN
@@ -39,9 +39,11 @@ dependencies:
 
 # C.19: Explore-Exploit Live-Pool Governor
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** - several candidate lines, family regions, or frontier segments remain live under one declared exploration and exploitation policy and the question is now policy over that pool rather than one more local choice result - the next result shou …
+> **Problem frame:** C.19 describes named, versioned policies and lenses for treating a still-live pool after C.18 generation, archive, or front records exist.
+> **First move:** Decide which lines remain worth exploring, which remain worth retaining without new probing, and which no longer warrant a place in the live pool.
+>
+> **Governing patterns:** `references/C.18.md` `references/C.16.md` `references/A.19.CPM.md` `references/A.19.SelectorMechanism.md` `references/B.3.md` `references/E.10.LRN.md` `references/A.10.md` `references/C.11.CRC.md`
 
 ---
 
@@ -70,19 +72,19 @@ dependencies:
 
 If a proposed pool-policy premise is expressed as *learning progress*, information gain, novelty, or an articulated former cue, recover its exact result owner first. Use `E.10.LRN` only while learning wording hides that result, `A.10` only when an evidence-bearing or source-bearing claim is actually relied on, `C.17` or `C.18` only when characterization or possibility-space change is current, `C.11.CRC` only when a finite configuration-relative comparison is missing, and `C.11` for local option or probe choice. Stop before C.19 unless the remaining question is policy over a still-live pool.
 
-### C.19:0.1 - What goes wrong if missed
+#### C.19:0.1 - What goes wrong if missed
 
 - scalarized top-1 picks are mislabeled as "the frontier", so it becomes unclear whether the result names one lens-ranked winner or the admissible live set
 - exploration continues without one named pool, one named governing lens, or one explicit next treatment
 - local option choice, pool policy, enactment planning, selector-result declaration, and publication availability collapse into one blurred result
 
-### C.19:0.2 - What this buys
+#### C.19:0.2 - What this buys
 
 - one explicit pool-governance result for exploration, graduation, narrowing, and sunset treatment
 - one explicit link from lens or policy state to the next pool-side treatment
 - one repeatable way to preserve heterogeneity and frontier discipline without forcing inadmissible totalization
 
-### C.19:0.3 - First-minute questions
+#### C.19:0.3 - First-minute questions
 
 - Which still-live pool, frontier segment, or family region is actually under governance now?
 - Which lens or policy state is governing it?
@@ -90,7 +92,7 @@ If a proposed pool-policy premise is expressed as *learning progress*, informati
 - If none of those treatments is current, which subject pattern now applies, and why is the question no longer pool policy?
 - What justifies active exploration or cheaper retention now, and what change would end that justification? Readiness for exploitation is a separate question.
 
-### C.19:0.4 - First output
+#### C.19:0.4 - First output
 
 For loop-engineering practice, use this first output only when the live question is pool policy over still-live candidates such as loops, harnesses, workflows, method families, or framework seeds. A `C.19` record may say that the pool should widen, keep its frontier, narrow to an internal subset, or sunset a line under a declared lens. If the question leaves pool policy, finish this record and use the handoff in `C.19:4.4`.
 
@@ -171,7 +173,7 @@ Use the ordinary default tokens defined in `G.Core` and `G.5`. The rules below e
   The words *Novelty*, *Surprise*, and *diversity* alone are not executable policy inputs.
 - **Archive:** `K=1`, `ε=0`, deduplication in `CharacteristicSpace`.
 - **Policy family:** one uncertainty-aware explore policy family with one declared regime key and explicit change triggers; `UCB`-class with moderate temperature and `explore_share ≈ 0.3–0.5` is one didactic starter profile, not the semantic default family.
-- **Provenance (minimum):** record `DescriptorMapRef.edition`, `DistanceDefRef.edition`, `DHCMethodRef.edition`, `emitterPolicyRef`, `insertionPolicyRef`, scalar `dedupThreshold`, `deduplicationBasisRef`, `deduplicationUnit`, `timeWindow`, and `seeds`.
+- **Provenance (minimum for the current use):** record `DescriptorMapRef.edition` and `DistanceDefRef.edition` when their definitions are used. A consumed DHC coordinate carries the active fields of C.21's `DHCReplayBasis`, including `DHCMethodRef.edition`. Cite `emitterPolicyRef` and `insertionPolicyRef` for the policies used. An applied deduplication threshold keeps scalar `dedupThreshold`, `deduplicationBasisRef`, and `deduplicationUnit`, whether supplied by a cited policy or stated here. Retain `timeWindow` and `seeds` when they affect replay.
 
 **Use-value and declared-Q boundary.** `C.16.Q` is the pattern for the selector-context meaning of use-value and its `Objective` form. When use-value participates in the current `Q`, declare `QS.UseValue` as an objective head in that exact `Q` and cite the current Q/comparator basis. When it does not participate in the current `Q`, keep the use-value criterion explicitly outside `Q` as a declared side condition or tie-breaker. A pool-policy record may use either declared position but cannot silently promote use-value into `Q` or construct the Q model.
 
@@ -201,7 +203,8 @@ The following **lens profiles** are **illustrative heuristics**. Practitioners M
 - **Platform‑option** — maximize **Option‑Value** under probe cost bounds.
 - **Pilot-then-scale** — optimize **Use-Value** on the declared pilot scope. Set `currentTreatment = widen` only when `assuranceResultRef` cites the exact B.3 assurance result whose supported scope includes the proposed wider pool, and `changeTrigger` names the satisfied assurance condition and that newly supported scope; otherwise keep the pilot scope.
 - **Heterogeneity-first (illustrative profile).** Use only when the applicable policy already admits a heterogeneity constraint or sampler policy. The applicable policy may declare a `FamilyCoverage` or `MinInterFamilyDistance` gate, a family or subfamily quota, or a diversity-promoting sampler; no universal `k`, `δ_family`, quota vector, sampler class, DPP rule, or max-min rule is supplied here. Record only the admitted policy values and ids actually used.
-**Conformance (lens recording).** A pool-policy record that uses a lens **MUST** record its **lens id** alongside `emitterPolicyRef`. (This restates and localizes C19-3.)
+
+**Conformance (lens recording).** A pool-policy record that uses a lens **MUST** record its **lens id**. Include `emitterPolicyRef` when the current treatment uses that profile.
 
 #### C.19:4.1 - Explicit pool-policy result
 
@@ -374,7 +377,9 @@ When the live question becomes which option to choose, finish the pool-policy re
 
 The practical handoff is therefore small: preserve the exact C.18 archive or front reference, the C.19 live-pool treatment and change trigger, and the evidence needed by the named next pattern. Do not duplicate selector-result declaration, publication availability, choice, work, or refresh semantics inside C.19.
 
-### C.19:5.1 - System grounding
+### C.19:5 - Archetypal Grounding
+
+#### C.19:5.1 - System grounding
 
 A product-search or architecture-search team can keep several family regions alive even after one line looks best locally. `keep_frontier` under `frontier_sweeper_v3` is warranted while those regions' prospective contribution and commitments fit the pool policy. Graduation is reconsidered when `graduation_condition_v3` is satisfied; continued exploration or retention is reconsidered when its own basis changes. The team need not choose between premature exploitation and indefinite funded search.
 
@@ -396,7 +401,7 @@ No global scalarisation of partial orders; ordinal scales excluded from arithmet
 - **C19-3** If a lens is used, its id MUST be recorded; do not label scalarized top-1 as "frontier".
 - **C19-4** Promotion of `Surprise` or `Illumination` into dominance MUST be explicit in policy.
 - **C19-5** A pool-policy record creates no `SystemRoleAssignmentStateRelation`, system-role assignment, permission, plan, budget, or Work occurrence. When implementation follows, cite the independently obtaining context and scope, exact system-role-kind classification, assignment or assignment-state condition, and direct planning or Work pattern; none of those facts follows from the pool-policy record.
-- **C19-6** Each pool-treatment lens **MUST** document the pipeline `Eligibility (ConstraintFit=pass) → Dominance (declared set) → Tie-breakers (declared)`. For every tie-breaker actually used, cite a constituted result with the compatible basis required above; unused optional tie-breakers need no result. Any promotion of Surprise or Illumination into the dominance set **MUST** be named by lens or policy id and recorded in provenance.
+- **C19-6** When a pool-treatment lens uses dominance or tie-breakers, it **MUST** document or cite the applicable `Eligibility → Dominance → Tie-breakers` comparison. Eligibility is for the affected use. Continuation and retention without that comparison follow §4's contribution, commitment, and opportunity-cost basis; exploitation readiness is separate. For every tie-breaker actually used, cite a constituted result with the compatible basis required above; unused optional tie-breakers need no result. Any promotion of Surprise or Illumination into the dominance set **MUST** be named by lens or policy id and recorded in provenance.
 - **C19-7 (pattern-change boundary).** A project-local choice or revision of an `EmitterPolicy`, `DescriptorMap`, `DistanceDef`, sampler, quota, or `δ_family` threshold stays under C.19 and the decision or result that consumes it; it does not invoke E.15 merely because a profile changed. When the definition is changed in an existing FPF pattern edition, use E.15 to compare the exact predecessor and candidate, classify the actual effect, and repair dependent consumers. Use C.18/C.19 candidate generation only when several materially plausible definitions remain. No default heterogeneity quota or sampler is defined here. Keep the policy and card ids in the existing decision, change, or SCR result that actually needs them; create no separate authoring trace.
 
 - **C19-8** When a heterogeneity-first profile is used, provenance **MUST** name each admitted heterogeneity constraint and its governing policy id. If a family or subfamily quota applies, record the exact quota vector and family-definition id; if sampling applies, record the sampler class, seed when relevant, and sampler-policy id. Do not fabricate a default triad, quota, or sampler.

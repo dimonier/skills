@@ -21,9 +21,8 @@ keywords:
   - no semantic respecification.
 dependencies:
   builds_on:
-    - G.C
-    - F.17
-    - F.18
+    - G.Core
+    - "F.17-F.18"
     - E.5.2
     - E.18
     - A.10
@@ -35,9 +34,10 @@ dependencies:
 
 # G.10: SoTA Pack Shipping (pack-boundary governing definition; `SoTA-Pack(Core)`)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Part G produces many **kit-governed** and **suite-governed** publications or records (harvest packs, CHR/CAL packs, evidence graphs, bridge calibration records, log bundles, parity reports).
+> **First move:** `G.10` defines a **pack-governed** shipping surface: a notation‑independent object that **cites** all upstream artefacts by stable ids/refs and exposes the minimum pins required to (a) consume the result via selection, (b) audit it via path …
+>
+> **Governing patterns:** `references/G.Core.md` `references/F.17-F.18.md` `references/E.5.2.md` `references/E.18.md` `references/A.10.md` `references/A.15.3.md` `references/G.5.md` `references/G.11.md`
 
 ---
 
@@ -191,7 +191,7 @@ SoTA‑Pack(Core) :=
 
 `PlanItemRefs`, when present, resolve the exact U.WorkPlan episteme and locate the baseline content inside it. For A.15.3 content, the locator uses that WorkPlan's `planItemDesignator` and any needed `rowDesignator`; it gives the item or row no independent identity or edition. An ordinary A.15.2 baseline stays ordinary plan content when it reuses no declaration member. A changed plan must not silently replace the earlier reference carried by the shipped pack.
 
-#### G.10:4.2.1 - Portfolio roster (normative; pack-governed; governing-definition delegating)
+##### G.10:4.2.1 - Portfolio roster (normative; pack-governed; governing-definition delegating)
 
 `PortfolioRosterId` identifies the **selector‑facing** pack roster token. The corresponding `PortfolioRoster@Context` is one citation-and-binding roster record inside the shipped publication form, not a publication face kind, publication form kind, interop publication form kind, or carrier kind:
 it MUST NOT redefine selection / selected-set semantics (governed by `G.5`) or parity semantics (governed by `G.9`).
@@ -283,7 +283,10 @@ Other `G.x` patterns may produce artefacts that are shipped, but they must not e
 
 All method‑/generator‑/interop‑specific shipping extension declarations live here as `GPatternExtension` blocks.
 
-##### GPatternExtension — `G.10:Ext.QDArchiveShippingPins`
+
+
+##### G.10:4.6.1 - GPatternExtension — `G.10:Ext.QDArchiveShippingPins`
+
 
 **PatternScopeId:** `G.10:Ext.QDArchiveShippingPins`
 **GPatternExtensionId:** `QDArchiveShippingPins`
@@ -305,7 +308,10 @@ All method‑/generator‑/interop‑specific shipping extension declarations li
 **Notes (shipping-pin discipline):**
 * This block never redefines archive semantics; it only states which pins must be present in the shipped pack when QD archive fields are present.
 
-##### GPatternExtension — `G.10:Ext.OEEShippingPins`
+
+
+##### G.10:4.6.2 - GPatternExtension — `G.10:Ext.OEEShippingPins`
+
 
 **PatternScopeId:** `G.10:Ext.OEEShippingPins`
 **GPatternExtensionId:** `OEEShippingPins`
@@ -323,7 +329,10 @@ All method‑/generator‑/interop‑specific shipping extension declarations li
 **Notes (shipping-pin discipline):**
 * “Open‑endedness” semantics remain defined by the governing pattern; the pack only carries the pins required to make the shipped claim replayable/auditable.
 
-##### GPatternExtension — `G.10:Ext.InteropCitation`
+
+
+##### G.10:4.6.3 - GPatternExtension — `G.10:Ext.InteropCitation`
+
 
 **PatternScopeId:** `G.10:Ext.InteropCitation`
 **GPatternExtensionId:** `InteropCitation`
@@ -356,7 +365,7 @@ All method‑/generator‑/interop‑specific shipping extension declarations li
 - It should not redefine that semantics locally.
 - When one shipped surface still needs a plain-language label, use the declared set-result kind and source set rather than falling back to `portfolioMode`.
 
-#### G.10:4.7.1 - Worked publication slice
+##### G.10:4.7.1 - Worked publication slice
 
 - If the visible surface is one tradition front under the declared `Q`, publish `sourceSetFamily=Front`, `derivedViewKind=TraditionFront`, and keep `basePaletteRef=SoTAPaletteDescriptionId` recoverable instead of pretending that the palette itself already was that front. Publish `selectorOutcomeKind` only when a G.5 selector outcome is also shipped, and `setResultFamily` only for its `SetResultOutcome` branch.
 - If one shortlist is emitted from that derived tradition front, publish `selectorOutcomeKind=SetResultOutcome`, `setResultFamily=Shortlist`, `sourceSetFamily=Front`, `derivedViewKind=TraditionFront`, `basePaletteRef=SoTAPaletteDescriptionId`, and the named `lensId` together.

@@ -26,9 +26,11 @@ dependencies:
 
 # C.24: Plan Tool or Service Calls for a Fixed Action (C.Agent-Tools-CAL)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use `A.15.7` first when ongoing Work still needs the next action to be chosen from current facts within a domain Method. Enter `C.24` only after that action is fixed and tool or service calls must be planned.
+> **Problem frame:** Tool-using Systems may plan across web services, local programs, instruments, robots, or human-operated routes. The implementation may be an LLM agent, a search system, a conventional planner, or a fixed program.
+> **First move:** - `ATC.CallRouteDescription` is a `U.MethodDescription` whose EntityOfConcern is the selected admitted Method and whose claims explain how that Method is carried out through the route, under A.3.2.
+>
+> **Governing patterns:** `references/A.15.md` `references/A.15.1.md` `references/A.15.2.md` `references/B.1.6.md` `references/C.16.md` `references/A.10.md` `references/B.3.md` `references/C.18.md`
 
 ---
 
@@ -62,19 +64,19 @@ Use `C.24` when an applicable domain prescription or a completed decision has fi
 
 Do not use it to generate candidates, keep a live pool, choose among unresolved options, execute calls, or score completed Work.
 
-### C.24:0.1 - What goes wrong if missed
+#### C.24:0.1 - What goes wrong if missed
 
 - a route is scheduled by an opaque heuristic, so nobody can see which budget is being burned or what should stop it;
 - unresolved choice or pool-policy work is smuggled into a plan;
-- a route description is mistaken for a Method, a plan for performed Work, or a successful probe for committed rollout; and
+- a route description is mistaken for a Method, a plan for performed Work, or a successful probe for a decision to adopt and execute the route; and
 - replanning loses the basis that fixed the action and its conditions.
 
-### C.24:0.2 - What this buys
+#### C.24:0.2 - What this buys
 
 - one small, tool-neutral plan that cites the accepted action basis;
 - visible budgets, stop conditions, and replan triggers before calls are made;
 - one replayable call-trace reference after Work occurs; and
-- one bounded checkpoint when more route probing is justified but commitment is not.
+- one bounded checkpoint stating whether to probe again or seek a decision to adopt the proposed route.
 
 **Primary working object.** One `ATC.CallPlan : U.WorkPlan`. Each step selects a `U.Method`. A route description may help locate or constrain that Method, but remains a separate `U.MethodDescription`. Actual calls are dated `U.Work` and remain outside this planning result.
 
@@ -82,7 +84,7 @@ Do not use it to generate candidates, keep a live pool, choose among unresolved 
 
 **Not this pattern when.** Use `C.11` while fixed-option choice is unresolved, `C.19` while treatment of a live pool is unresolved, `G.5` when the current task is selector-facing result declaration, `A.15.5` for work-entry readiness, and `A.15.1` when the question is what Work actually occurred or which Method it enacted.
 
-### C.24:0.3 - First-minute questions
+#### C.24:0.3 - First-minute questions
 
 1. Which applicable domain prescription, A.15.7 decision or C.11 choose-now result fixes the action or option now being planned?
 2. Does every planned step name an admitted Method, rather than only a vendor route or endpoint label?
@@ -90,7 +92,7 @@ Do not use it to generate candidates, keep a live pool, choose among unresolved 
 4. What event stops or replans the route?
 5. Is the useful output a plan, a checkpoint, or a return to a neighbouring pattern?
 
-### C.24:0.4 - First output
+#### C.24:0.4 - First output
 
 The first useful output is one of these:
 
@@ -157,7 +159,7 @@ We need a tool-neutral way to produce or revise one call plan under explicit bud
 | Force | Tension |
 | --- | --- |
 | General method vs local shortcut | A scalable approach may improve with data or compute, while a narrow route may be safer or cheaper in the present task. |
-| Exploration vs delivery | A bounded probe may reduce uncertainty, while service and cost limits require commitment or stop. |
+| Exploration vs delivery | A bounded probe may reduce uncertainty, while service and cost limits require a decision to adopt a route or stop. |
 | Assurance vs autonomy | A named high-consequence use may need a bounded assurance result, while ordinary planning should not inherit assurance apparatus. |
 | Description vs enactment | A callable route description helps planning, but it is not the Method, plan, call, or evidence of performance. |
 
@@ -203,7 +205,9 @@ When the grounded action basis fixes the intended action but its usable route is
 
 If another probe could still change which option survives the `OptionSet`, the budget remains a C.11 probe budget and planning returns there. If changed live facts or domain-Method limits could change an A.15.7 action, return there instead. If a prescribed action loses its applicable prescription, return to the domain Method before further route planning. If the action or option remains fixed and only route shape or rollout order is uncertain, the probe uses enactment budget and its checkpoint belongs here.
 
-A successful probe is not a commitment. Commitment needs the named `commitTrigger`, enough residual budget, and any separately required safety or assurance condition.
+`commitTrigger` states the condition for considering a checkpoint decision to end route probing and adopt an identified `CallPlan` for the fixed action. Name the proposed plan and the work it schedules in `recommendedNextAction` or in the accompanying explanation. When the trigger holds, the responsible planner considers that transition using the probe evidence, residual budget, and any required safety or assurance result; the planner may adopt the plan, require a further bounded probe, or stop. Satisfying the trigger alone does not make that decision.
+
+Adopting the plan settles which route to use. Permission to perform its calls remains subject to the applicable work-entry conditions, and actual performance is separate `U.Work`. Where an autonomy budget governs the route, use the checkpoint decision and guard or override path in `E.16-S1.A`; the trigger grants no wider budget or scope.
 
 #### C.24:4.3 - Planning laws
 
@@ -280,7 +284,7 @@ This is enough for an ordinary plan. Do not fill the heavier branches merely to 
 
 #### C.24:4.7 - Closure and worked cases
 
-Close as a `CallPlan` when route order and budgeted enactment are the current question. Close as a `CheckpointReturn` after a bounded route probe, when one further route probe remains justified. Return to the domain prescription, A.15.7 or C.11 when the corresponding action basis reopens; return to the applicable neighboring pattern when pool treatment, selector declaration, readiness, execution, or publication becomes the current question.
+Close as a `CallPlan` when route order and budgeted enactment are the current question. Close as a `CheckpointReturn` after a bounded route probe, stating whether to probe again, seek the checkpoint decision to adopt the proposed plan, or stop. Return to the domain prescription, A.15.7 or C.11 when the corresponding action basis reopens; return to the applicable neighboring pattern when pool treatment, selector declaration, readiness, execution, or publication becomes the current question.
 
 **Domain-prescribed action before Work.**
 
@@ -329,6 +333,8 @@ The plan claims no call occurred. If the first call is performed, recover its da
 
 **Unfamiliar route.**
 
+In this constructed repair case, `ci_route_choice_09` fixes the action: produce a candidate patch and run the targeted tests. The proposed `ci_patch_plan_09` orders `EditCandidateMethod_2` and `TargetedTestMethod_7`, needs at most 25 minutes, and stops for replanning if the reproduction changes or the tests fail twice. Before adopting that plan, the maintainer probes whether the failure can be reproduced reliably enough to guide the patch. For this case, `MinimalReproductionMethod_5` requires the same failure in two consecutive runs on the fixed repository revision, with the trace and reproduction evidence collected on that revision. One such run has completed. The enactment budget covers both this route probing and the planned repair.
+
 ```text
 CheckpointReturn:
   actionBasis:
@@ -336,17 +342,19 @@ CheckpointReturn:
   objectiveOrTaskFamily = unfamiliar_ci_failure
   testedMethodRefs = [LogTraceMethod_2, MinimalReproductionMethod_5]
   evidenceRefs = [trace_result_1, reproduction_result_1]
-  burnedBudget = 1_probe_cycle
-  residualBudget = 2_probe_cycles
-  recommendedNextAction = run_minimal_reproduction_once_more
+  burnedBudget = 15_minutes
+  residualBudget = 30_minutes
+  recommendedNextAction = repeat_minimal_reproduction_then_return_for_checkpoint_decision_on_ci_patch_plan_09
   commitTrigger = reproduction_is_stable_and_required_evidence_is_current
 ```
+
+If the repeat establishes the trigger, the maintainer decides whether to end route probing and adopt `ci_patch_plan_09`: produce the patch, then run its targeted tests. The maintainer checks the time remaining after that repeat against the plan's 25-minute need and the applicable safety or assurance conditions. If the plan is adopted, the repair agent may start its first call only with the required work-entry permission. The checkpoint itself records neither that permission nor a performed call.
 
 **Two vendor routes with one token.** Vendor A and Vendor B both publish a route called `search`. `vendor_a_search_v2` states scheme `VendorA API`, edition `2026-07`, intended use `repository text search`, and selected Method `RepositoryTextSearchMethod_3`. `vendor_b_search_v5` states scheme `VendorB agent tools`, edition `2026-08`, intended use `web source retrieval`, and selected Method `WebSourceRetrievalMethod_8`. The shared token identifies neither binding; the description fields do. An executable adapter, if used, remains distinct from the Method it implements, and its execution remains separate Work.
 
 **Scale comparison, when current.** The cheap C.19.1 probe for `BatchSearchMethod_3` and `IndexedSearchMethod_6` returns `bounded scale comparison` for the same repository-search task and `10k–100k files` window. The comparison then uses elapsed time and missed-match rate from `repo_search_benchmark_12`, including uncertainty and cost limits, and warrants a preference for `IndexedSearchMethod_6` only inside that window. If one Method is evidenced only on small text files and the other only on large mixed repositories, the comparison returns `no scale-based preference`. A project may separately cite a local policy or `BLP-waiver`; neither changes the empirical result.
 
-**Near misses.** A route label with no recovered Method remains probe material. A plan with no Work is still intent. A trace row does not prove performer, assignment, Method, or service acceptance. A successful probe without a commit trigger is not rollout.
+**Near misses.** A route label with no recovered Method remains probe material. A plan with no Work is still intent. A trace row does not prove performer, assignment, Method, or service acceptance. A satisfied `commitTrigger` with no checkpoint decision leaves the proposed route unadopted.
 
 **Transfer examples.** The same result shape works for research assistance, program repair, and lab automation. The Methods and safety conditions differ; the plan/checkpoint boundary does not.
 

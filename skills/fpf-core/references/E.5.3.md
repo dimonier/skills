@@ -12,9 +12,10 @@ dependencies:
 
 # E.5.3: Unidirectional Dependency between FPF Families
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF separates artefacts into stable **Conceptual Core**, executable **Tooling Reference**, and fast‑evolving **Pedagogical Companion** (see E.4 FPF Ecosystem Architecture: Framework Families, Products and DPF Suites).
+> **First move:** Define a strict **partial order** over FPF ecosystem families **and guard meaning flow** (see **E.10 V-1**): imports between families point only **upward** in stability, and **no Core semantics** may derive from Tooling/Pedagogy.
+>
+> **Governing patterns:** `references/E.4.md` `references/E.5.md`
 
 ---
 

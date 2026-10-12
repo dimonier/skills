@@ -30,9 +30,11 @@ dependencies:
 
 # F.6: SystemRoleAssignment and Performed-Work Attribution Check
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain name.** Check whether this already admitted Work was performed under this exact system-role assignment.
+> **Problem frame:** `U.SystemRoleAssignment` and `U.Work` classify different world-side occurrences. An assignment occurrence belongs to a declared species, relates fixed participant values, and lasts for one maximal uninterrupted interval in which its predica …
+> **First move:** Treat performed-Work attribution as one direct relation species under `U.Relation`.
+>
+> **Governing patterns:** `references/A.6.REL.md` `references/A.2.md` `references/A.2.1.md` `references/A.13.md` `references/A.15.1.md` `references/A.2.5.md` `references/A.10.md` `references/E.10.ROLE.md`
 
 ---
 

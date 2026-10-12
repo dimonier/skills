@@ -25,9 +25,11 @@ dependencies:
 
 # F.4: SystemRoleKindDescription — Describing an Exact System-Role Kind
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain name.** Description of a system-role kind.
+> **Problem frame:** A local system-role kind often needs a recognizable description before people can classify a candidate, assign a system, compare kinds, or use the kind in a Method condition. A name such as `InspectorSystemRole` is not self-explanatory.
+> **First move:** Constitute one `SystemRoleKindDescription` through C.2.1. Its ClaimGraph describes one exact local system-role kind, and that kind is its EntityOfConcern.
+>
+> **Governing patterns:** `references/A.2.md` `references/C.3.md` `references/C.3.2.md` `references/C.2.1.md` `references/E.10.ROLE.md` `references/A.2.1.md` `references/F.5.md` `references/F.14.md`
 
 ---
 

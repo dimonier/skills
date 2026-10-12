@@ -21,9 +21,10 @@ dependencies:
 
 # A.15.10: Resume Interrupted Work
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when work has been interrupted or handed to another performer and the next step depends on recovering what was being attempted, how it was being done, or which result can already be used.
+> **First move:** Recover the question, the method and the useful state of the work together. Reconstruct only what the next operation needs; then perform that operation. Prepare for an interruption only when doing so is likely to be worthwhile.
+>
+> **Governing patterns:** `references/A.15.md` `references/A.15.5.md` `references/A.15.7.md` `references/A.15.8.md` `references/A.15.9.md` `references/B.5.RA.md` `references/B.5.RC.md` `references/B.5.RR.md`
 
 ---
 

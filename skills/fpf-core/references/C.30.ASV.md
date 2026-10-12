@@ -25,7 +25,7 @@ dependencies:
   coordinates_with:
     - A.6.F
     - A.6.M
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.LCA
     - C.30.ILC
     - E.18
@@ -37,9 +37,10 @@ dependencies:
 
 # C.30.ASV: Architecture Structural View Adequacy (ASV)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you have a structural description of one selected architecture-relevant `U.Structure` and need to decide whether that same description is also a `U.View` under one exact viewpoint.
+> **First move:** For an architecture structural view, first identify one candidate description episteme, its exact selected `U.Structure` EntityOfConcern, effective `U.ReferenceScheme`, structure kind, exact viewpoint episteme, and the direct conformance oc …
+>
+> **Governing patterns:** `references/C.30.P.md` `references/C.30.md` `references/A.1.md` `references/A.22.md` `references/C.2.1.md` `references/E.24.PUB.md` `references/A.6.3.md` `references/E.17.0.md`
 
 ---
 

@@ -13,8 +13,7 @@ dependencies:
     - A.7
     - A.6
     - A.6.0
-    - A.6.2
-    - A.6.6
+    - "A.6.2-A.6.6"
     - C.2.1
     - A.2
     - A.2.1
@@ -29,9 +28,11 @@ dependencies:
 
 # A.6.S: TargetSignature and optional ConstructorSignature - demand-driven signature engineering
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** This pattern reserves the following tokens in Tech (normative) register:
+> **Problem frame:** Boundary descriptions often arrive as “half-signatures”: an n-ary relation in ordinary prose, overloaded markers such as *binding*, *anchoring*, or *contract*, and unstated assumptions about participants, applicability, and publication.
+> **First move:** The smallest account names the actual object and move. Describe a signature revision through its source and receiving signature epistemes.
+>
+> **Governing patterns:** `references/A.3.1.md` `references/A.3.2.md` `references/A.15.md` `references/A.15.1.md` `references/A.15.2.md` `references/A.7.md` `references/A.6.md` `references/A.6.0.md`
 
 ---
 

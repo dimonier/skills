@@ -32,9 +32,11 @@ dependencies:
 
 # C.27.TA: Temporal Aspect: Time Windows, Rhythm, Cadence, and Currentness
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a project needs to state a positive temporal-aspect claim about one exact object or exact claim—for example, its time window, cadence, freshness, recovery timing, or currentness.
+> **Problem frame:** Distinguish two concerns. One concern is temporal-claim adequacy: whether an authored claim about speed, rhythm, rate-change, recovery, or stabilization can carry a named use.
+> **First move:** A temporal-aspect claim says that one exact object or exact claim has a time-bearing or order-bearing property under a stated temporal reference and interval.
+>
+> **Governing patterns:** `references/A.3.4.md` `references/A.3.3.md` `references/C.27.md` `references/E.24.md` `references/A.10.md` `references/B.3.md` `references/A.15.1.md` `references/A.15.2.md`
 
 ---
 

@@ -10,9 +10,10 @@ dependencies:
 
 # B.5.1: Coordinate Development States: Explore → Shape → Evidence → Operate
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this state model when a development project needs a shared account of whether a `U.Episteme` or `U.System` is being explored, shaped, evaluated or operated.
+> **First move:** * **CC-B5.1.1 (State Explicitness):** A state-bearing `U.Episteme` or `U.System` coordinated through this development model **MUST** be tagged with its current state from {Exploration, Shaping, Evidence, Operation}.
+>
+> **Governing patterns:** `references/B.5.md`
 
 ---
 

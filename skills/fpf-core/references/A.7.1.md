@@ -19,9 +19,11 @@ dependencies:
 
 # A.7.1: Consequence-Guided Ontological Problem Solving
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a clear or apparently clear engineering claim produces the wrong action, identity, dependence, obtaining, responsibility, or projection consequence, and a typed or constructive distinction may repair it.
+> **Problem frame:** A maintenance sentence can be lexically clear and still merge two relation occurrences across removal and reinstallation. A responsibility claim can use a plausible system-role word or assignment while omitting the direct responsibility pre …
+> **First move:** This A.7.1 `U.MethodDescription` episteme narrows the method claims stated by `C.19.2` for consequence-guided ontology analysis.
+>
+> **Governing patterns:** `references/A.7.2.md` `references/A.7.md` `references/E.24.md` `references/E.24.UK.md`
 
 ---
 

@@ -24,9 +24,11 @@ dependencies:
 
 # B.2.P: Clarify Emergence and Meta-Holon Transition (MHT) Claims
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when wording such as `emergence`, `emergent`, `synergy`, `higher-level property`, `meta-system`, `meta-epistemic`, `meta-functional`, `MHT`, `MET`, `MFT`, `promotion`, `post*`, or collection words mixed with those terms cou …
+> **Problem frame:** Emergence-family wording is overloaded. It can point to a new system whole, an episteme whole, a capability envelope, a characteristic crossing, an architecture residual, a mathematical scale expression, a benchmark artifact, a publication …
+> **First move:** Recover the claim kind and subject pattern before any wording replacement.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/B.2.md` `references/A.14.md` `references/C.13.md` `references/B.3.5.md` `references/B.2.2.md` `references/B.2.3.md`
 
 ---
 

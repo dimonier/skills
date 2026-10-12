@@ -16,9 +16,11 @@ dependencies:
 
 # A.11: Ontological Parsimony
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when FPF work proposes a new U-kind, core relation, dependent durable value, or public structural name and the current question is whether existing ontology can express the claim without the proposed durable ontology additi …
+> **Problem frame:** FPF needs enough primitives to be useful, but every new primitive creates learning cost, bridge cost, and future repair cost. Ontological parsimony is not anti-growth.
+> **First move:** A.11 corrects kind-inflation bias. A useful word, field name, record label, or diagram element can start behaving like a universal kind because it appears often, feels important, or has prestige in a source tradition.
+>
+> **Governing patterns:** `references/E.24.UK.md` `references/A.6.P.md` `references/A.6.RCD.md` `references/A.8.md` `references/C.3.md` `references/F.8.md` `references/F.18.md`
 
 ---
 

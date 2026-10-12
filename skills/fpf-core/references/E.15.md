@@ -24,9 +24,10 @@ dependencies:
 
 # E.15: Pattern Change, Edition Continuity, and Impact Analysis
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an existing FPF pattern is being corrected, clarified, reorganized, refreshed from current sources, split, merged, renamed, or changed semantically, and someone needs to know what may continue and what must be reconsid …
+> **First move:** 1. **Name the predecessor, candidate, question, and receiving use.** Use exact editions or recoverable source values. Add a ClaimScope, ReferenceScheme, model-use structure, or other qualifier only when the receiving use depends on it. 2.
+>
+> **Governing patterns:** `references/E.8.md` `references/E.9.md` `references/E.10.md` `references/F.0.1.md` `references/F.1.md` `references/E.19.md` `references/E.21.md` `references/E.22.md`
 
 ---
 

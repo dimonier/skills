@@ -29,9 +29,10 @@ dependencies:
 
 # F.15: Static and Regression Conformance Harness for Naming and Semantic Unification
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Give one compact harness for checking whether a finite naming and unification slice is locally sound now and remains sound across exact changes.
+> **First move:** The harness has two rule families:
+>
+> **Governing patterns:** `references/F.4.md` `references/F.8.md` `references/F.9.md` `references/F.10.md` `references/F.13.md` `references/F.14.md` `references/F.17.md` `references/F.18.md`
 
 ---
 

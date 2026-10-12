@@ -39,9 +39,10 @@ dependencies:
 
 # A.3.3: U.Dynamics: State-Space and Transition-Law Episteme
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you need a reusable account of how a particular subject's state can change: which differences the state must retain, the law relating earlier and later state, and the conditions in which that law applies.
+> **First move:** `U.Dynamics` is a same-individual dependent kind of `U.Episteme`. Membership holds when one already identified episteme has the changing subject as its exact C.2.1 `EntityOfConcern` and its ClaimGraph, interpreted under the effective `U.Ref …
+>
+> **Governing patterns:** `references/A.1.1.md` `references/A.19.md` `references/A.3.1.md` `references/A.3.2.md` `references/A.3.4.md` `references/A.15.1.md` `references/A.15.2.md` `references/A.6.1.md`
 
 ---
 

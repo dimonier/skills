@@ -10,9 +10,10 @@ dependencies:
 
 # E.7: Archetypal Grounding: Explain Rules of FPF Architectural Patterns through Cases
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Universal rules are powerful only when readers can grasp them. In FPF the Conceptual Core speaks in substrate‑agnostic language: `U.Holon`, Γ‑aggregation, MHT emergence.
+> **First move:** Every architectural pattern **SHALL** include a dedicated section titled **“Archetypal Grounding”** that shows the rule and its applicability through concrete cases. Use FPF's two canonical archetypes where the rule applies:
+>
+> **Governing patterns:** `references/E.6.md`
 
 ---
 

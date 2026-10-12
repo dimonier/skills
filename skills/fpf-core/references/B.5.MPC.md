@@ -19,9 +19,10 @@ dependencies:
 
 # B.5.MPC: Connect Physical, Mathematical and Computational Reasoning
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** a physical question needs contributions from mathematics and computation, and their results do not yet form an interpretable answer together.
+> **First move:** Construct the answer by connecting the contributions it actually needs. For each connection, identify the supplied result, the receiving operation and the condition that makes the result usable there.
+>
+> **Governing patterns:** `references/B.5.md` `references/A.3.3.md` `references/C.16.md` `references/A.6.3.RT.md` `references/C.29.md` `references/C.29.1.md` `references/C.29.2.md` `references/C.29.3.md`
 
 ---
 

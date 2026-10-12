@@ -18,9 +18,11 @@ dependencies:
 
 # A.22.CGUS: Which Continuations Are Available? — Constraint-Governed Unfolding Structure (CGUS)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a diagram or explanation shows several possible next actions, but readers may mistake one displayed path for the required work sequence. Start with one ordinary question:
+> **Problem frame:** FPF often needs to explain how several identified things and relations constrain what may follow without turning that explanation into a workflow. The shared object is one A.22 structure.
+> **First move:** Write the smallest useful answer in domain language:
+>
+> **Governing patterns:** `references/E.18.NET.md` `references/E.18.3.md` `references/E.18.1.md` `references/E.23.md` `references/C.32.P2S.md` `references/E.11.md` `references/F.17.md` `references/C.33.md`
 
 ---
 
@@ -86,6 +88,8 @@ For example, a design review has two alternatives: accept the design or repair i
 | Repair the design | A check failed and a repair proposal exists, but the proposal-to-design relation has not been established. | `unknown — proposal target not established` |
 
 That corrected card is already useful. It keeps both potential alternatives visible and refuses to invent the missing relation. Continue only if a named later use needs formal structure identity or replayable results.
+
+When retaining or handing over this card separately, include the two rules above or a usable return to them so the recipient can reconsider availability after the facts change.
 
 ##### A.22.CGUS:4.1.1 - Conditions through constituent and encompassing work
 

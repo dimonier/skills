@@ -1,90 +1,128 @@
-# BAR.RequirementChangeManagement: Управление изменениями требований
+---
+id: BAR.RequirementChangeManagement
+title: Управление изменениями требований
+status: seed
+keywords: [change-management, change-request, impact-analysis, baseline, scope-creep]
+dependencies:
+  builds_on: [C.22.2, A.21]
+  coordinates_with: [A.10, C.32.ADR, G.5, G.11, G.9, C.28, C.27]
+---
 
-> **Trigger:** Новые требования добавляются «по звонку» без оценки влияния; scope creep не отслеживается — проект делает в 2x больше, но ключевая функциональность не готова
-> **Governing patterns:** 
->   → `../fpf-core/references/C.22.2-problem-card.md`
->   → `../fpf-core/references/A.21-gate-decision.md`
->   → `../fpf-core/references/A.10-evidence.md`
->   → `../fpf-core/references/C.32.ADR-arch-decision-record.md`
->   → `../fpf-core/references/G.5-selector.md`
->   → `../fpf-core/references/G.11-currentness.md`
->   → `../fpf-core/references/G.9-selector.md`
->   → `../fpf-core/references/C.28-causal-claim.md`
->   → `../fpf-core/references/C.27-temporal.md`
+## BAR.RequirementChangeManagement - Управление изменениями требований
+
+> **Trigger:** Новые требования добавляются «по звонку» без оценки влияния; scope creep не отслеживается — проект делает в 2× больше, а ключевая функциональность не готова.
 
 ---
 
-## Always‑Core Fields
+### BAR.RequirementChangeManagement:1 - Problem frame
 
-| Поле | Содержание |
+Use this pattern when a project is in active development (>3 months) with ≥2
+stakeholders supplying new and changed requirements: route every change through an
+explicit change-control gate rather than ad-hoc mutation.
+
+**ScopeCut** — управление изменениями отдельного требования или группы связанных
+требований; **не** охватывает управление контрактом и бюджетирование.
+
+### BAR.RequirementChangeManagement:2 - Problem
+
+**ProblemSignal** — требования добавляются «по звонку» без оценки влияния; scope
+creep не отслеживается; изменение не сопровождается change impact analysis.
+
+**SymptomDetection** — заказчик просит «небольшое изменение» — затронуты 5 модулей и
+20 тестов; baseline требований отсутствует; объём незавершённых изменений растёт
+быстрее, чем закрываются.
+
+**ProblemHypothesis** — отсутствует formal change control process: изменения
+принимаются ad-hoc, без impact analysis, traceability update и пересмотра приоритетов.
+
+### BAR.RequirementChangeManagement:3 - Forces
+
+| Force | Settlement |
 |---|---|
-| **ProblemSignal** | Новые требования добавляются «по звонку» без оценки влияния на реализованные; scope creep не отслеживается — через полгода проект делает в 2x больше, чем планировалось, но ключевая функциональность не готова; изменение требования не сопровождается change impact analysis |
-| **ContextGrounding** | Проект/продукт в активной разработке `> 3` месяцев, с `≥2` активными стейкхолдерами, поставляющими новые и изменяющие существующие требования |
-| **ScopeCut** | Управление изменениями отдельного требования или группы связанных требований; не охватывает управление контрактом и бюджетирование |
-| **NotWishReason** | «Мы agile — изменения приветствуются» без оценки стоимости изменения (cost-of-change) и без проверки, не ломает ли изменение уже работающую функциональность |
+| «Мы agile — изменения приветствуются» vs cost-of-change | Изменение принимается, но с оценкой стоимости и влияния |
+| Принять всё vs gate decision | Explicit decision (accept/defer/reject) с rationale |
+| Изменить baseline vs синхронизировать артефакты | Нельзя обновлять baseline без обновления design/test |
 
-## Conditional Fields
+### BAR.RequirementChangeManagement:4 - Solution
 
-| Поле | Содержание |
-|---|---|
-| **SourceSignalRef** | Wiegers: «Scope creep is the leading cause of software project failure». Boehm curve: cost-of-change растёт экспоненциально по фазам жизненного цикла. BABOK v3: Knowledge Area «Requirements Life Cycle Management» |
-| **EntityOfConcern** | Change request как problem card особого типа — сигнал о необходимости изменения существующего требования, проходящий через gate decision до принятия в работу |
-| **SymptomDetection** | Заказчик просит «небольшое изменение» — через спринт обнаруживается, что затронуты 5 модулей и 20 тестов; baseline требований отсутствует — невозможно сравнить, что изменилось; объём незавершённых изменений растёт быстрее, чем закрываются |
-| **ProblemHypothesis** | Отсутствует formal change control process — изменения принимаются ad-hoc, без impact analysis, без traceability update, без пересмотра приоритетов ранее принятых требований |
-| **ImprovementCheck** | Каждое изменение требования проходит: (1) change request capture (источник, причина), (2) impact analysis (затронутые требования, архитектура, код, тесты), (3) cost/benefit оценки, (4) gate decision (accept/defer/reject), (5) baseline update и traceability refresh |
-| **AcceptanceCriterion** | Для каждого change request зафиксированы: идентификатор, источник, описание изменения, причина изменения, impacted artifacts (требования, design, code, tests), оценка усилий, решение (accepted/deferred/rejected) с rationale, статус реализации; baseline требований обновлён; traceability links актуализированы; стейкхолдер, инициировавший изменение, проинформирован о решении |
-| **MandatoryConstraints** | Запрещено вносить изменение в requirement baseline без change request; запрещено принимать change request без impact analysis; запрещено отказывать в change request без rationale (почему rejected или deferred); запрещено обновлять baseline без обновления связанных артефактов (design, test) |
-| **CharacterizationRelation** | Change request throughput (входящие/закрытые за период), impact analysis accuracy (попадание оценки vs фактические усилия), baseline stability (частота изменений критичных требований), scope creep rate (прирост scope без изменения ресурсов) |
-| **ComparabilityRelation** | Сравнение change requests по `impact × value × urgency` (`G.9`) |
-| **ValidationBoundary** | Проверка на `≥3` change requests: impact analysis соответствует фактическим усилиям с точностью `±30%`; refresh при каждом изменении baseline |
-| **FreshnessOrExpiry** | `stale` если change request реализован и baseline обновлён; `stale` если change request rejected/deferred и истёк срок актуальности |
-| **ProblemFormulationFollowUpReason** | Остановить неконтролируемый scope creep до того, как он сделает проект неуправляемым по срокам и стоимости |
-| **ReadinessDisposition** | `P2W-ready` для внедрения change control в процесс работы с требованиями |
-| **SolvabilityBand** | `feasible` при наличии baseline требований и traceability; `blocked` без baseline и traceability |
-| **UnknownHandling** | `safe-probe-needed` если impact analysis не может быть выполнен с приемлемой точностью — architecture spike или feasibility prototype |
+**EntityOfConcern** — change request как problem card особого типа: сигнал о
+необходимости изменения, проходящий gate decision до принятия в работу.
 
-## Worked Examples
+**AcceptanceCriterion** — для каждого CR: идентификатор, источник, описание, причина,
+impacted artifacts, оценка усилий, решение (accepted/deferred/rejected) с rationale,
+статус; baseline обновлён; traceability links актуализированы; инициатор
+проинформирован.
 
-**Positive Worked Slice:** Телеком-оператор мигрирует биллинговую систему под регуляторный дедлайн. За 30 дней до запуска директор по маркетингу требует «real-time уведомления о расходах» — оценка: 4 недели дополнительной разработки. Процесс change control срабатывает: change request `CR-77` зафиксирован, impact analysis выявляет 3 затронутых модуля и конфликт с фичей регуляторной отчётности, gate decision: deferred до post-launch релиза с документированным rationale, направленным директору маркетинга и копией регулятору. Миграция биллинга укладывается в регуляторный дедлайн; post-launch релиз доставляет уведомления без срыва compliance.
+**MandatoryConstraints** — запрещено вносить изменение в baseline без change request;
+запрещён CR без impact analysis; запрещено отказывать без rationale; запрещено
+обновлять baseline без обновления связанных артефактов.
 
-**Near-Miss Example:** Стейкхолдер просит «экспорт в PDF». Команда оформляет change request, impact analysis (1 модуль, 3 теста), оценка 3 дня. Через спринт: библиотека PDF конфликтует с лицензией продукта — изменение rejected. Change control процесс сработал корректно. Проблема не в change management, а в неполноте стейкхолдеров — юрдепартамент не был идентифицирован как holder constraint.
+**CharacterizationRelation** — change request throughput, impact analysis accuracy,
+baseline stability, scope creep rate.
 
-**Local Anti-Patterns:**
+### BAR.RequirementChangeManagement:5 - Archetypal Grounding
 
-| Anti-pattern | Symptom | Why misuse |
-|---|---|---|
-| **Изменение по звонку** | Стейкхолдер звонит разработчику: «добавь поле X, срочно». Change request не оформлен, impact не оценён; через месяц никто не помнит, почему поле существует | Нарушает MandatoryConstraint о запрете изменений baseline без change request — uncontrolled mutation требований |
-| **Все изменения принимаются** | Change control board автоматически approves все запросы без trade-off с текущим scope; backlog разбухает, ключевая функциональность откладывается | Gate decision без reject/defer — backlog inflation, а не управление. Паттерн требует explicit decision с rationale |
+**Show.** Телеком мигрирует биллинг под регуляторный дедлайн. За 30 дней до запуска
+директор требует «real-time уведомления о расходах» (оценка: 4 недели). Change
+control: `CR-77` зафиксирован, impact analysis выявляет 3 модуля и конфликт с
+регуляторной отчётностью, gate decision: deferred с rationale. Миграция укладывается
+в дедлайн; уведомления доставлены пост-релизом без срыва compliance.
 
-## Conformance Checklist
+### BAR.RequirementChangeManagement:6 - Bias-Annotation
+
+**NotWishReason** — «Мы agile — изменения приветствуются»: без оценки cost-of-change и
+проверки, не ломает ли изменение работающую функциональность.
+
+**Near-Miss (boundary, not this pattern).** CR оформлен, impact analysis (1 модуль, 3
+теста), но библиотека PDF конфликтует с лицензией продукта — изменение rejected.
+Change control сработал; проблема — неполнота стейкхолдеров (юрдепартамент не
+идентифицирован как holder constraint) → `BAR.StakeholderIdentification`.
+
+### BAR.RequirementChangeManagement:7 - Conformance Checklist
 
 | ID | Requirement | Purpose |
 |---|---|---|
-| `CC-BAR.CHM-1` | Каждое изменение baseline оформлено как change request с идентификатором, источником и описанием изменения | Предотвращает «изменения по звонку» |
-| `CC-BAR.CHM-2` | Каждый change request содержит impact analysis (требования, design, код, тесты) — подписан разработчиком | Предотвращает слепые изменения без понимания последствий |
-| `CC-BAR.CHM-3` | Каждый change request имеет explicit решение (accepted/deferred/rejected) с documented rationale | Предотвращает «все изменения принимаются» |
-| `CC-BAR.CHM-4` | После реализации baseline требований обновлён — зафиксирована новая версия с датой и списком изменений | Предотвращает расхождение baseline и реальности |
+| `CC-BAR.CHM-1` | Изменение baseline оформлено как CR с идентификатором | Предотвращает «изменения по звонку» |
+| `CC-BAR.CHM-2` | CR содержит impact analysis, подписанный разработчиком | Предотвращает слепые изменения |
+| `CC-BAR.CHM-3` | Explicit решение с documented rationale | Предотвращает «все изменения принимаются» |
+| `CC-BAR.CHM-4` | Baseline обновлён: версия, дата, список изменений | Предотвращает расхождение baseline и реальности |
 
-## Mature Comparator Parity
+### BAR.RequirementChangeManagement:8 - Common Anti-Patterns and How to Avoid Them
 
-| Comparator (BABOK/IREB) | What comparator prescribes | How BAPF pattern relates | Value delta |
+| Anti-pattern | Why misuse | Repair |
+|---|---|---|
+| **Изменение по звонку** | «Добавь поле X», CR не оформлен; через месяц никто не помнит почему | Запрет mutation baseline без CR |
+| **Все изменения принимаются** | Automatic approve; backlog разбухает | Gate decision с reject/defer и rationale |
+
+### BAR.RequirementChangeManagement:9 - Consequences
+
+**ImprovementCheck** — каждое изменение проходит: capture → impact analysis →
+cost/benefit → gate decision → baseline update + traceability refresh.
+
+**ValidationBoundary** — impact analysis соответствует фактическим усилиям с точностью
+`±30%`; refresh при каждом изменении baseline.
+
+**FreshnessOrExpiry** — `stale` если CR реализован и baseline обновлён; `stale` если
+CR rejected/deferred и истёк срок актуальности. **ReadinessDisposition** — `P2W-ready`
+для внедрения change control.
+
+### BAR.RequirementChangeManagement:10 - Rationale
+
+Остановить неконтролируемый scope creep до того, как он сделает проект
+неуправляемым по срокам и стоимости.
+
+### BAR.RequirementChangeManagement:11 - SoTA-Echoing
+
+| Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| BABOK v3, ch. 5 (Requirements Life Cycle Management) — Manage Changes | Процесс управления изменениями: capture → impact analysis → gate decision → baseline update; governance stakeholders участвуют в decision | **Adopted** — AcceptanceCriterion воспроизводит полный process flow; change request → impact analysis → gate decision → baseline update | **Extended:** BABOK описывает процесс как activity description; BAPF формулирует MandatoryConstraints как prohibitions (запрещено менять baseline без CR, запрещён CR без impact analysis). BABOK — descriptive, BAPF — prescriptive через запреты |
-| BABOK v3, ch. 6 (Strategy Analysis) — Scope Management | Предотвращение scope creep через explicit decision criteria: change request оценивается относительно зафиксированного scope baseline | **Adopted** — SolvabilityBand: feasible при наличии baseline; blocked без baseline | Добавлены CharacterizationRelation метрики: scope creep rate, baseline stability, change request throughput. BABOK концептуально предупреждает о scope creep, BAPF даёт количественные индикаторы. Anti-pattern «Все изменения принимаются» |
-| IREB CPRE FL, ch. 9 (Requirements Management) | Управление изменениями: жизненный цикл change request, approval workflow, синхронизация связанных артефактов | **Adopted** — traceability refresh при каждом изменении baseline как часть change control | Добавлен anti-pattern «Изменение по звонку» и explicit gate decision с rationale (accept/defer/reject). IREB описывает workflow, BAPF называет violation mode и даёт detection rule |
+| BABOK v3, ch. 5 (Manage Changes) — capture → impact → gate → baseline | Adopt | AcceptanceCriterion воспроизводит flow | Reopen on BABOK v4 |
+| BABOK v3, ch. 6 (Scope Management) — baseline как анти-scope-creep | Adopt | SolvabilityBand: feasible при baseline | Reopen on BABOK v4 |
+| IREB CPRE FL, ch. 9 (Management) — lifecycle CR, синхронизация артефактов | Adopt | Traceability refresh при изменении baseline | Reopen on CPRE FL update |
 
-## Governing‑Pattern Cues
+### BAR.RequirementChangeManagement:12 - Relations
 
-| Cue | Governing Pattern |
-|---|---|
-| Change request как ProblemCard особого типа | `C.22.2` |
-| Change control как gate decision | `A.21` |
-| Impact analysis как blast radius (affected artifacts) | `A.10`, `C.32.ADR` |
-| Baseline как версионированный selected set требований | `G.5`, `G.11` |
-| Сравнение change requests по impact/value/urgency | `G.9` |
-| Cost-of-change кривая как evidence | `C.28` (causal claim), `C.27` (temporal) |
-| Refresh при обновлении baseline | `G.11` |
+The dependency graph (FPF content edges) has its single authored home in this card's
+frontmatter `dependencies`; it is not repeated here. The readable intra-LPF map is
+generated in `references/relations.md`.
 
----
-
-> **Source:** `assets/BABusinessAnalysis-dpf.md` lines L667-L740
+### BAR.RequirementChangeManagement:End

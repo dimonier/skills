@@ -1,22 +1,21 @@
 ---
 id: B.5.MPC.R
 title: "Repair a Physical-Mathematical-Computational Connection"
-status: Draft
+status: Stable
 keywords: []
 ---
 
 # B.5.MPC.R: Repair a Physical-Mathematical-Computational Connection
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a physical question has an attempted answer, but the physical account, mathematical reasoning, computation or observed execution no longer fit together.
+> **First move:** Keep the receiving physical question in view while tracing the failed connection:
 
 ---
 
 ## B.5.MPC.R - Repair a Physical-Mathematical-Computational Connection
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.MPC.R:1 - Problem frame

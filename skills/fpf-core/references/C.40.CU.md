@@ -15,9 +15,10 @@ dependencies:
 
 # C.40.CU: Develop a Useful and Reproducible Use of a Construct
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a material, device, living construct or supported way of working produces an unfamiliar response, or seems able to do more than its assigned function, and you want to turn that possibility into a useful repeatable appl …
+> **First move:** Connect an examined response to a useful application, construct an arrangement that can supply its result, and preserve or develop what a later enactment needs.
+>
+> **Governing patterns:** `references/C.40.md` `references/C.40.CD.md` `references/C.39.RO.md` `references/B.1.5.EW.md` `references/C.32.md`
 
 ---
 

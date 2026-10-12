@@ -1,7 +1,7 @@
 ---
 id: A.1.RI
 title: Reidentifying an Object across Observations
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -20,16 +20,17 @@ dependencies:
 
 # A.1.RI: Reidentifying an Object across Observations
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when the next calculation or action depends on whether observations concern the same continuing object, and the available identification does not yet settle that question.
+> **First move:** Recover the continuation question, construct the relevant associations under the subject rules, test their joint compatibility and use the distinctions they actually support.
+>
+> **Governing patterns:** `references/A.1.md` `references/C.2.1.md` `references/A.3.3.TR.md` `references/A.3.3.PI.md` `references/C.16.MR.md` `references/C.16.IR.md` `references/B.5.TU.md` `references/B.5.TC.md`
 
 ---
 
 ## A.1.RI - Reidentifying an Object across Observations
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative
 
 ### A.1.RI:1 - Problem frame

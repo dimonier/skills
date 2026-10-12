@@ -17,9 +17,10 @@ dependencies:
 
 # E.17.2: TEVB — Project-local Typical Engineering Viewpoint Bundle Template for Holons
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Engineering descriptions repeatedly ask four different questions about one holon:
+> **First move:** **Local mantra.** To materialize a local instance, constitute L and bind `f_eng`, four exact references, and four exact P targets. To use an admitted instance, resolve L, its declaration, and only the needed reference.
+>
+> **Governing patterns:** `references/E.17.0.md` `references/E.17.1.md` `references/C.2.1.md` `references/C.13.md` `references/A.22.md` `references/A.6.6.md` `references/A.6.3.md` `references/E.24.PUB.md`
 
 ---
 

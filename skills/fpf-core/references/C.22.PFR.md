@@ -22,9 +22,10 @@ dependencies:
 
 # C.22.PFR: Problematic-For Relation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when an actual condition may be adverse for one exact entity and use, and a receiving claim needs to distinguish the actual Problem from a signal, criterion description, evaluation, assessment claim, Prob …
+> **First move:** Model an actual Problem as one obtaining `ProblematicForRelation`, a dependent evaluative `U.Relation` between exactly two relation occurrences: the actual condition and the applicability of a characteristic-space predicate.
+>
+> **Governing patterns:** `references/A.6.REL.md` `references/A.6.5.md` `references/A.19.md` `references/C.22.md` `references/C.22.2.md` `references/A.15.1.md` `references/A.3.4.md` `references/E.18.1.md`
 
 ---
 

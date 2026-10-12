@@ -18,9 +18,11 @@ dependencies:
 
 # C.22: Task Typing and TaskSignature Assignment (Problem-CHR)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when one stabilized problem-side episteme must be related to a selector-facing `TaskSignature` for eligibility, acceptance, or policy-governed selection.
+> **Problem frame:** Operationalise No-Free-Lunch discipline in selection by making each selector decision use a typed `TaskSignature`, not a paragraph.
+> **First move:** | Force | Tension | | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | | **Parsimony vs sufficiency** | Fewer fields to avoid …
+>
+> **Governing patterns:** `references/A.6.0.md` `references/C.16.md` `references/G.0.md` `references/C.22.1.md` `references/C.22.2.md` `references/C.23.md` `references/G.4.md` `references/G.5.md`
 
 ---
 
@@ -238,7 +240,7 @@ Values are CHR-typed and tied to the exact measurement, evidence-use, source-use
 5. A non-current optional extension is absent; absence and unknown are not interchangeable.
 6. Eligibility verdicts, acceptance results, selected methods, selector outcomes, WorkPlans, and Work occurrences are absent from the TaskSignature and remain with their direct patterns.
 
-#### C.22:5.2a - Lowering and withdrawal conditions
+##### C.22:5.2a - Lowering and withdrawal conditions
 
 Withdraw the assignment for the current receiving use when its problem-side episteme, TaskSignature, receiving-use episteme, scheme, scope, or qualification conditions cannot be recovered. The TaskSignature may remain a valid declaration for another assignment. Use C.22.2 only when the problem-side representation itself is no longer stable enough.
 
@@ -246,7 +248,7 @@ Identify the resulting episteme and apply C.22:5.2's signature-membership and ed
 
 A changed or invalid signature position reopens an earlier downstream result only when that result relied on the changed position. The downstream pattern repairs or supersedes its own result. A revised signature does not imply that the actual Problem disappeared or that prior Work did not occur.
 
-#### C.22:5.2b - Evolution and currentness boundaries
+##### C.22:5.2b - Evolution and currentness boundaries
 
 Use C.22 to revise the smallest affected identity or declaration-content component; identify the resulting episteme and claim a new TaskSignature edition only under the identity, membership, and continuity conditions in C.22:5.2. A changed problem formulation requires C.22.2 before a replacement assignment is made. `G.11` governs relied-on source edition, freshness, decay, telemetry, and currentness relations; its result may trigger signature review but does not rewrite the signature by itself. `C.18` and `C.19` govern archive, front, lineage, and live-pool evolution. `G.5` governs selected-set and method-family selector results. `E.23` governs repeated object-version improvement. C.22 introduces no local refresh object and does not rewrite earlier selector results or dated Work without an explicit dependency.
 

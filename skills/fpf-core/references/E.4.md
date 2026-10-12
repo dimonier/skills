@@ -32,9 +32,10 @@ dependencies:
 
 # E.4: FPF Ecosystem Architecture: Framework Families, Products and DPF Suites
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an FPF user, framework author, or steward needs to create, extend, or use an FPF-grounded pattern ecosystem and must know what belongs to FPF itself, what belongs to the FPF Core, what belongs to a domain or local fram …
+> **First move:** Describe an FPF-grounded pattern ecosystem as a family of framework editions and publication and access-facing presentation carriers, plus access routes, over selected structures.
+>
+> **Governing patterns:** `references/E.1.md` `references/E.2.md` `references/E.5.3.md` `references/C.39.md` `references/E.4.CM.md` `references/E.4.FPF.md` `references/E.4.PFAD.md` `references/E.4.DPF.md`
 
 ---
 

@@ -16,9 +16,10 @@ dependencies:
 
 # E.12: Didactic Primacy & Cognitive Ergonomics
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern in either of two working situations:
+> **First move:** FPF elevates **Didactic Primacy (Pillar P-2)** to a normative architectural principle, operationalized through two conceptual mechanisms designed to act as a permanent counterbalance to excessive formalism.
+>
+> **Governing patterns:** `references/E.2.md`
 
 ---
 

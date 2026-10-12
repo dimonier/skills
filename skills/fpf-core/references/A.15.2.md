@@ -38,9 +38,10 @@ dependencies:
 
 # A.15.2: `U.WorkPlan`: Plan Content for Coordinating Future Work
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Before and during Work.** Before Work begins, keep intended-work content in this WorkPlan. Use `A.15.5` when the question is whether that Work is ready to start, and use `C.11` only when a known chooser must compare an already formed `Opt …
+> **First move:** `U.WorkPlan` is a same-individual dependent kind under `U.Episteme`. C.2.1 first identifies exact episteme P by:
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.2.1.md` `references/A.2.2.md` `references/A.3.1.md` `references/A.3.2.md` `references/A.15.1.md` `references/A.15.3.md` `references/A.6.1.md`
 
 ---
 

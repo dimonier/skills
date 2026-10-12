@@ -49,9 +49,11 @@ dependencies:
 
 # A.6.RSIR: Relation, Signature, Interface, Role, and Slot Precision Restoration
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain name.** Relation-signature-interface-role-slot recovery.
+> **Problem frame:** The RSIR cluster sits at a common failure point in FPF texts. A project team sees one word and treats it as if it already selected the ontology:
+> **First move:** Use `A.6.RSIR` as a first-level recovery move. `RSIRRepairNote` is optional working support, not a required record, schema, or publication layout. Omit every branch that is not current.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/E.10.ROLE.md` `references/A.6.P.md` `references/A.6.REL.md` `references/A.6.0.md` `references/A.6.1.md` `references/A.6.5.md`
 
 ---
 
@@ -179,7 +181,7 @@ Use Tech `position` only for a place in a selected representation, such as a tup
 | concern, interest, viewpoint, problem, or characteristic-space selection | `A.7` for EntityOfConcern and description distinction; `C.22` or `C.22.2` for problem-card claims; `E.17.0` or `E.17.2` for viewpoint or view claims; `F.4` or `F.18` for system-role-kind-description or naming cases; `A.19` or `E.21` for characteristic-space cases | Do not mint generic `U.Concern` or `U.Interest` by wording alone. |
 | publication, description, declarative representation, source wording | `C.2.1`, `E.17`, `C.2.P.DR`, `E.10`, `E.10.ARCH` | Do not let description or publication use displace the EntityOfConcern selected by the project concern. |
 
-#### A.6.RSIR:4.2.1 - Relation-defined wording dispatch
+##### A.6.RSIR:4.2.1 - Relation-defined wording dispatch
 
 When wording derives a qualification, status, or category from participation in a relation, recover the object needed by the next use before naming it:
 

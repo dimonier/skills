@@ -24,9 +24,10 @@ dependencies:
 
 # A.6.3.CSC: Controlled Semantic Coarsening: Shorten an Account for a Bounded Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Practical entry; exact identity when material.** For ordinary shortening, begin with the source passage or account, its present reader and use, and the distinctions that use still needs.
+> **First move:** Begin with direct semantic compression. Name the present reader or use, point to the source passage or account, list the distinctions that use needs, write the shorter candidate, and compare candidate with source.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.6.3.md` `references/A.6.3.CR.md` `references/A.6.3.RT.md` `references/A.6.3.NAR.md` `references/E.17.EFP.md` `references/E.24.PUB.md` `references/E.17.ID.CR.md`
 
 ---
 

@@ -1,13 +1,13 @@
 ---
 id: C.40.CD
 title: Develop Problems and Ways of Solving Them Together
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
     - C.40
     - B.5.MPC
-    - C.R
+    - MPC.R
     - C.18
     - C.19
     - C.11.DUA
@@ -15,16 +15,17 @@ dependencies:
 
 # C.40.CD: Develop Problems and Ways of Solving Them Together
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when developing a problem changes the way worth trying, and trying that way can change the next useful problem. A construction fails after a condition changes.
+> **First move:** Recover the problem and an available way, construct a consequential change, perform a revealing target use, and let its result determine the next question or use.
+>
+> **Governing patterns:** `references/C.40.md` `references/B.5.MPC.md` `references/MPC.R.md` `references/C.18.md` `references/C.19.md` `references/C.11.DUA.md`
 
 ---
 
 ## C.40.CD - Develop Problems and Ways of Solving Them Together
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative
 
 ### C.40.CD:1 - Problem frame

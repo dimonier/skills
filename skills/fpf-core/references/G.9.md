@@ -11,7 +11,7 @@ keywords:
   - "selected-set outcomes."
 dependencies:
   builds_on:
-    - G.C
+    - G.Core
     - G.5
     - G.6
     - G.4
@@ -22,9 +22,11 @@ dependencies:
 
 # G.9: Parity / Benchmark Harness
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** - rival method families, method sets, or adaptation paths must be compared under one declared baseline set and freshness window - you need parity to publish one reproducible report rather than one opaque benchmark score - downstream selecti …
+> **Problem frame:** Provide a **notation‑independent** harness that:
+> **First move:** This pattern binds to **G.Core** through the following manifest.
+>
+> **Governing patterns:** `references/G.Core.md` `references/G.5.md` `references/G.6.md` `references/G.4.md` `references/F.15.md` `references/C.27.md`
 
 ---
 
@@ -38,13 +40,13 @@ dependencies:
 - you need parity to publish one reproducible report rather than one opaque benchmark score
 - downstream selection must recover comparator, normalization, bridge, and evidence pins without relying on one hidden scoring sheet
 
-### G.9:0.1 — What goes wrong if missed
+#### G.9:0.1 — What goes wrong if missed
 
 - benchmark reports present numbers from different windows, baselines, or comparator editions as comparable
 - reuse across distinct source-local meanings, a reference-plane crossing, or a normalization mapping stays hidden until a disagreement appears downstream
 - parity flattens a partial order into one scalar winner and silently changes what the comparison means
 
-### G.9:0.2 — What this buys
+#### G.9:0.2 — What this buys
 
 - one exact `ParityPlanRef` that fixes the plan edition, baseline, freshness, comparator, and bridge discipline up front
 - one `ParityReport` that cites that exact plan and echoes its active baseline binding, pins, outcomes, and evidence trace by value

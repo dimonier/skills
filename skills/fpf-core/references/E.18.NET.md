@@ -16,7 +16,7 @@ dependencies:
     - E.18.2
     - A.22.CGUS
     - E.18.3
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.32.CONWAY
     - A.3.4
     - A.12
@@ -29,9 +29,10 @@ dependencies:
 
 # E.18.NET: Network of Transformation-Flow Structures
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when one engineering question depends on two or more independently identified transformation-flow structures, or on nested networks of them, and at least one exact relation connects positions across their boundaries.
+> **First move:** `TransformationFlowStructureNetwork@Context` is a dependent, non-agentive specialization of `U.Structure` defined by E.18.NET and selected through the A.22 identity law.
+>
+> **Governing patterns:** `references/A.22.md` `references/E.18.md` `references/A.6.REL.md` `references/A.6.RCD.md` `references/C.2.1.md` `references/A.15.6.md` `references/A.1.STM.md` `references/E.18.2.md`
 
 ---
 
@@ -256,7 +257,7 @@ Use E.18.2 for a graph, hypergraph, network expression, wiring diagram, category
 
 Use A.22.CGUS and E.18.3 for an admitted network-aware `DemonstrativeUnfoldingSlice@Context`. Its finite paths must map to already admitted included positions, its cross-flow relations must cite admitted exact relation-reference epistemes, and its tags remain in leaf-local bindings. The slice demonstrates one traversal; it is neither the network nor an actual trajectory, WorkPlan, or Work occurrence.
 
-Use C.30.TFS-REL when architecture uses the selected network. Name one exact containing holon whose `ArchitectureOf@Context` selects the network, or explicitly state the inter-holon use and its participating architecture claims without inventing a bearer. Use C.32.CONWAY only for its one-pair architecture-influence reading; the pair does not become the network.
+Use C.30.TFS-REL when architecture uses the independently selected network. Distinguish one named containing holon with an obtaining architecture relation whose selected structure is that exact network, a bounded C.30 claim about one named holon, and an explicit inter-holon use with its participating architecture claims. For the single-holon claim, retain its negative, unresolved or candidate/expected disposition, supporting or missing basis, and return before stronger reliance; the architecture claim does not relax network selection. Use C.32.CONWAY only for its one-pair architecture-influence reading; the pair does not become the network.
 
 Only admitted Systems perform Work. Selecting a network, writing its record, or drawing its graph may be Work when A.15.1 independently admits the occurrence after each precise performer has an A.13 core; none is performance by the network, and no Work claim is needed merely to select or discuss the network. When selection Work is material, cite those already established A.13 and A.15.1 results. Cite F.6 only when the current network account also needs precise assignment-bound attribution, and leave its proof with F.6. Keep the Method, performer, dated Work, result episteme, selection or decision relation, and any C.11 choice result separate. A result episteme is not a decision or accountability relation by form; state accountability, duty, responsibility, or authority only through the exact direct relation that obtains.
 
@@ -346,7 +347,7 @@ Later, an exact use-observation relation connects a position in a TFS selected f
 
 #### E.18.NET:5.4 - Architecture and two demonstrative boundaries
 
-For one containing holon, a current `ArchitectureOf@Context` claim may select the network among its structures. If the selected members belong to separately named holons and no containing bearer is grounded, record the use as inter-holon and name the participating architecture claims. Do not invent one system merely to fill the architecture field.
+For one containing holon, an independently obtaining C.30 `ArchitectureRelation` may have the exact network as its selected structure. A bounded C.30 claim Q about one named holon H and the independently selected network N may instead remain negative, unresolved or candidate/expected under C.30.TFS-REL's single-holon claim branch; retain Q's basis and next return. If the selected members belong to separately named holons and no containing bearer is grounded, use the inter-holon branch and name the participating architecture claims. None of these architecture uses supplies a missing network discriminator.
 
 A Plain A.1.STM long-mantra map may display proposed members and a missing cross-member link before network admission. It names the intended final result and the absent member, relation kind or predicate, predicate result, occurrence, or endpoint binding; it asserts neither an E.18.NET structure nor a CGUS.
 
@@ -359,7 +360,7 @@ Bias risks considered: **Gov**, **Arch**, **Onto/Epist**, **Prag**, **Did**. Sco
 | Bias risk | Mitigation in this pattern |
 | --- | --- |
 | **Gov:** demanding a fully reusable relation occurrence can hide the cheaper local decision. | The first result permits a proposed description and one exact result from the pattern governing the relation claim, or one separate missing-discriminator blocker; it invents no common status kind or generic relation. |
-| **Arch:** a network-shaped case can tempt the reader to invent one containing holon. | C.30.TFS-REL keeps named-containing-holon and explicit inter-holon uses separate. |
+| **Arch:** a network-shaped case can tempt the reader to invent a containing holon or an obtaining architecture relation. | C.30.TFS-REL distinguishes actual containing-holon, bounded single-holon claim, and explicit inter-holon uses while retaining independent network selection. |
 | **Onto/Epist:** a graph, record, or demonstrative slice can be mistaken for the selected network. | The four A.22 identity discriminators precede every description, record, rendering, architecture reading, and demonstration. |
 | **Prag:** exact member, relation, endpoint, and constraint apparatus can crowd out first use. | The practitioner first produces one small network result or one exact stop; the durable record remains optional. |
 | **Did:** the coffee and build-the-builder cases can be over-read as a closed domain ontology or a universal edge vocabulary. | The cases demonstrate boundary choices only; each cross-flow relation still needs an admitted kind, its applicable predicate, and exact participants. |

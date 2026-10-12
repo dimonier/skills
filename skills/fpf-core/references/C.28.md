@@ -43,9 +43,11 @@ dependencies:
 
 # C.28: CausalUse-CAL: Causal-Use Questions, Identification, and Realizability
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use `C.28` when a result is offered as support for a causal effect, intervention, counterfactual comparison, causal fairness claim, causal policy, causal benchmark, or causal explanation. Common cues include:
+> **Problem frame:** The practical question is “what does this evidence support us to say about this causal question, and what would overturn that conclusion?”
+> **First move:** Use the smallest result that answers the current question:
+>
+> **Governing patterns:** `references/A.10.md` `references/B.3.md` `references/C.11.md` `references/C.19.md` `references/C.24.md` `references/C.26.md` `references/C.27.md` `references/D.5.md`
 
 ---
 
@@ -807,6 +809,6 @@ These are bounded selections for the illustrated questions. They preserve cheap 
 
 `C.29` may describe a mapping as abstraction-like, quotient-like, coarse-graining-like, simulation-like, or macro-model-like. It does not decide causal support. When intervention, policy, counterfactual, causal explanation, or causal decision use is current, apply C.28; otherwise record no causal-use claim or the exact blocker.
 
-[fpf-f0-2-5-5-ref]: F.0.2-Conceptual-Synthesis-across-Source-Ontologies.md#f0255---compare-causal-accounts-on-one-sensor-case
+[fpf-f0-2-5-5-ref]: https://github.com/ailev/FPF/blob/main/FPF-Spec.md#f0255---compare-causal-accounts-on-one-sensor-case
 
 ### C.28:End

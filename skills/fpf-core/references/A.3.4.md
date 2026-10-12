@@ -39,9 +39,11 @@ dependencies:
 
 # A.3.4: U.Transformation: Actual Bounded Change Under Conditions
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a project must decide whether an actual change occurred and identify that one change. Ask: what continuing subject changed, where the change begins and ends, which facts differ before, during, and after it, and what ru …
+> **Problem frame:** FPF often needs to talk about change in physical systems, engineered artifacts, organizations, presentation carriers, constituent organizations, architectures, programs, regulatory situations, and research objects.
+> **First move:** `U.Transformation` is the FPF ontic for one actual bounded change. Use the five checks below and keep only the facts needed to distinguish this occurrence:
+>
+> **Governing patterns:** `references/A.1.md` `references/A.6.RCD.md` `references/C.2.1.md` `references/A.7.md` `references/A.3.md` `references/A.6.REL.md` `references/E.24.md` `references/E.24.UK.md`
 
 ---
 

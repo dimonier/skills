@@ -16,9 +16,11 @@ dependencies:
 
 # E.13: Pragmatic Utility and Proxy-to-Value Alignment
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a project treats a visible measure, score, proxy, benchmark, dashboard, quality value, review result, release posture, or evidence volume as if it were the practical value or objective itself.
+> **Problem frame:** Practical work often needs visible measures. Teams use scores, dashboards, quality coordinates, tests, evidence counts, source freshness rows, release checks, and worked examples because invisible value is hard to steer directly.
+> **First move:** Use `ProxyToValueAlignment` to recover the intended value, the proxy's current use, the value at risk, and the justified repair or stop. A short answer or local repair is enough when it settles the case.
+>
+> **Governing patterns:** `references/E.2.md`
 
 ---
 

@@ -32,9 +32,11 @@ dependencies:
 
 # C.16.Q: Quality-Term Precision Restoration
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when wording such as `quality`, `good`, `fit`, `high-quality`, `quality characteristic`, `quality improved`, or an evaluative `-ility` claim hides which quality or evaluative-characterization use is live.
+> **Problem frame:** FPF repeatedly encounters a predictable precision failure mode around the token **quality**:
+> **First move:** **Stable repair frame > Sense Family > Slots > Normal Form > Change Lexicon > Guardrails**
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/C.16.P.md` `references/C.16.md` `references/C.25.md` `references/E.21.md` `references/A.17.md` `references/A.18.md`
 
 ---
 

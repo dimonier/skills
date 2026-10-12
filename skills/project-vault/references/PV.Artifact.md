@@ -28,14 +28,14 @@ a WRK.
 
 An artifact written detached from the track, or with internal references to project
 entities, is not alienable: the reader cannot understand it without reaching for
-other files. An artifact not bound to a PlanItem is not tracked in the track's plan.
+other files. An artifact not bound to a PlanItem is not tracked in the track's plan — with one exception: a retrospective artifact documenting an already-performed result, bound to the track only.
 
 ### PV.Artifact:3 - Forces
 
 | Force | Settlement |
 |---|---|
 | Self-containedness vs references | The artifact is read without reaching for other entities; references to internal codes are forbidden — instead a brief substantive description. |
-| Binding vs free text | The artifact is bound to a track and to its PlanItem ("Next moves"). |
+| Binding vs free text | The artifact is bound to a track; to its PlanItem ("Next moves") — except a retrospective artifact, which is bound to the track only. |
 | Language | Narrative in Russian; English insertions — only proper names, technology names, and terms without an established Russian equivalent. |
 
 ### PV.Artifact:4 - Solution
@@ -48,6 +48,9 @@ other files. An artifact not bound to a PlanItem is not tracked in the track's p
    - **An explicit item exists** → use it as the future WRK's `plan_item_ref`.
    - **No item, but the topic matches** → add an item to "Next moves" before creating, announce in chat.
    - **No fitting track** → create a track (Track) with `status: cue`, then add an item to "Next moves".
+   - **A retrospective artifact** (documents an already-performed result, so no planned
+     move is pending) → create without a plan item; the WRK notes the retrospective
+     binding (`plan_item_ref` omitted).
 3. Report: "The artifact [gist] belongs to track TRK-NNNN, plan item — [N or
    'new item added']. Proceeding". Await confirmation.
 
@@ -70,7 +73,8 @@ other files. An artifact not bound to a PlanItem is not tracked in the track's p
 **AR.4 — recording the work (WRK).**
 
 1. Immediately after writing — create a WRK (`PV.WorkRecord`).
-2. In `plan_item_ref` — the item from "Next moves" (from AR.1).
+2. In `plan_item_ref` — the item from "Next moves" (from AR.1); a retrospective
+   artifact omits `plan_item_ref` and notes the retrospective binding in the WRK body.
 3. In `output_refs` — the created artifact.
 4. Update the track's "Completed moves"; then — `python scripts/vault.py work`.
 5. If the artifact closes a PlanItem — **remove** the item from "Next moves" (the
@@ -86,14 +90,15 @@ no internal codes, are bound to a track, and are recorded by a WRK.
 
 The temptation is to reference entity codes "for precision", assuming the reader
 will figure it out; this breaks alienability. The symmetric temptation is to write
-an artifact without a binding to the track's plan, "just a result". Both are about
+an artifact without a track binding, "just a result"; a retrospective artifact still
+needs the track binding and a WRK that notes the retrospective case. Both are about
 losing self-containedness and traceability.
 
 ### PV.Artifact:7 - Conformance Checklist
 
 | ID | Requirement |
 |---|---|
-| CC-AR.1 | The artifact is bound to a track and to a PlanItem ("Next moves"). |
+| CC-AR.1 | The artifact is bound to a track and to a PlanItem ("Next moves") — except a retrospective artifact, bound to the track only, whose WRK notes the retrospective binding. |
 | CC-AR.2 | The artifact is self-contained; no internal entity codes in the text. |
 | CC-AR.3 | Narrative in Russian; English — only proper names/technologies/terms. |
 | CC-AR.4 | The work is recorded by a WRK with `plan_item_ref` and `output_refs`. |

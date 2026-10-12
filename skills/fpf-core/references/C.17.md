@@ -42,9 +42,10 @@ dependencies:
 
 # C.17: Characterising Generative Novelty and Value
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use C.17 when someone must say whether a design, code change, theory, policy proposal, dated Work occurrence, or finite candidate set—the bearer being discussed—is new relative to a named comparison basis and useful for a stated objective o …
+> **First move:** Each selected characteristic has a declared Scale, polarity, admissible operations, missingness rule, and evidence route. An ordinal value is not averaged unless a declared model justifies an interval interpretation.
+>
+> **Governing patterns:** `references/A.17.md` `references/A.18.md` `references/A.19.md` `references/A.19.ECS.md` `references/C.16.md` `references/C.2.1.md` `references/A.1.1.md` `references/A.10.md`
 
 ---
 

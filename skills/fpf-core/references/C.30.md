@@ -25,7 +25,7 @@ dependencies:
     - C.30.AD
     - C.30.ASV
     - A.6.F
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.LCA
     - C.30.ILC
     - C.32
@@ -39,7 +39,7 @@ dependencies:
     - C.25
     - C.28
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - C.18
     - C.19
     - G.5
@@ -53,9 +53,10 @@ dependencies:
 
 # C.30: Grounded Architecture and Selected-Structure Adequacy
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you need to decide what the architecture of one exact holon (`U.Holon`) is and what to do next. First distinguish actual relations and a selected structure from a candidate or expected structure, a claim about either …
+> **First move:** C.30 starts from one architecture move over one exact `U.Holon`. Recover separately: any actual subject-relation occurrences; the exact A.22 structures selected from them; any obtaining `ArchitectureRelation`; the claim episteme that states …
+>
+> **Governing patterns:** `references/A.22.md` `references/C.2.1.md` `references/A.6.3.md` `references/A.7.md` `references/E.17.0.md` `references/E.17.md` `references/E.10.D2.md` `references/F.18.md`
 
 ---
 

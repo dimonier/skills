@@ -26,9 +26,10 @@ dependencies:
 
 # F.17: Make a Settled Naming Decision Recoverable for Reuse (Unified Term Sheet)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** `UnifiedTermSheet` is a reader-facing collection of independently identified term-row epistemes for one useful naming thread.
+> **First move:** Constitute a row through the smallest path that reaches the named reuse:
+>
+> **Governing patterns:** `references/F.2.md` `references/F.3.md` `references/C.2.1.md` `references/F.5.md` `references/F.7.md` `references/F.8.md` `references/F.9.md` `references/F.15.md`
 
 ---
 

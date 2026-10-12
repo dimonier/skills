@@ -21,9 +21,10 @@ dependencies:
 
 # D.1: Clarify an Ethical Claim's Value Basis (Value Plurality)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF cannot prescribe one final ethics doctrine and still remain usable across engineering, research, organizational, public, and AI-enabled work. But FPF also cannot treat ethical neutrality as permission to omit ethics.
+> **First move:** A team says that a triage model is "ethical because it maximizes total benefit." Asked which ethical question this leaves open, the practitioner can answer: the claim values aggregate benefit, while equal access and avoidable subgroup harm …
+>
+> **Governing patterns:** `references/E.2.md` `references/A.1.md` `references/A.7.md` `references/D.2.md` `references/D.3.md` `references/D.4.md` `references/D.5.md` `references/A.10.md`
 
 ---
 

@@ -26,9 +26,11 @@ dependencies:
 
 # C.21: Field Health & Structure (Discipline-CHR)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a team must say something practical about the health, maturity, or structure of an already identified discipline.
+> **Problem frame:** A discipline can persist as its constituents and associated epistemes, practices, standards, institutions, and Work change.
+> **First move:** “DHC” names this vocabulary and method of use. It does not admit `U.DHCPack`, `U.DHCMethodSpec`, or `U.DHCSeries` as public kinds.
+>
+> **Governing patterns:** `references/C.16.md` `references/C.2.md` `references/A.2.6.md` `references/B.3.md` `references/C.20.md` `references/G.2.md`
 
 ---
 

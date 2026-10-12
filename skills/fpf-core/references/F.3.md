@@ -21,9 +21,10 @@ dependencies:
 
 # F.3: Source-Local Sense Clustering
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Consolidate the expressions recovered by F.2 into a small set of source-local meaning claims under an explicit source and edition and an effective reference scheme.
+> **First move:** **Cluster by source use, not by spelling.** Under one explicit interpretation basis:
+>
+> **Governing patterns:** `references/F.2.md` `references/F.17.md` `references/F.4.md` `references/F.7.md` `references/F.9.md`
 
 ---
 

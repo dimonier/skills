@@ -1,7 +1,7 @@
 ---
 id: B.5.RA
 title: Recover an Argument for Its Next Use
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -15,16 +15,17 @@ dependencies:
 
 # B.5.RA: Recover an Argument for Its Next Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you have an argument or a reported result but cannot yet understand why it supports the conclusion you want to use.
+> **First move:** Recover the reasoning at both the level of its main contributions and the transitions needed for the next use. Move between these levels when a local step changes your understanding of the whole argument.
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.RC.md` `references/B.5.RR.md` `references/B.5.MPC.md` `references/C.2.8.md` `references/C.37.md`
 
 ---
 
 ## B.5.RA - Recover an Argument for Its Next Use
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.RA:1 - Problem frame

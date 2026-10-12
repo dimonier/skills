@@ -12,9 +12,10 @@ dependencies:
 
 # B.5.QD.CF: Reformulate a Problem by Examining Its Conflicting Assumptions
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** an account makes needed outcomes appear incompatible and you need to find what could change without losing the purpose of the work.
+> **First move:** **Recover the need and the conflict → expose the premises producing it → examine an assumed necessity or shared condition → construct another question or way → return to the retained requirements.**
+>
+> **Governing patterns:** `references/C.40.CD.md` `references/C.11.DUA.md` `references/B.1.5.EW.md`
 
 ---
 

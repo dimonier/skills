@@ -1,6 +1,6 @@
 ---
 id: PV.StateUpdate
-title: "State update from a source: DEC card (open/proposed/accepted) from a transcript or dialogue"
+title: "State update from a source: DEC card (open/proposed/accepted) from a transcript, dialogue, or repository working document"
 status: seed
 keywords: [state-update, transcript, dialogue, decision, DEC, ADR, status, open, proposed, accepted, question, risk, contradiction]
 dependencies:
@@ -11,9 +11,9 @@ dependencies:
     - E.9
 ---
 
-## PV.StateUpdate - State update from a source: DEC card from a transcript or dialogue
+## PV.StateUpdate - State update from a source: DEC card from a transcript, dialogue, or repository working document
 
-> **Trigger:** When a new state source appears — a meeting transcript (Input 1) or dialog news without a transcript (Input 2) — and the vault must be brought in line.
+> **Trigger:** When a new state source appears — a meeting transcript (Input 1), dialog news without a transcript (Input 2), or a repository working document already reflected in the vault (Input 3) — and the vault must be brought in line.
 > **Skill dependencies:**
 >   → none
 
@@ -21,10 +21,11 @@ dependencies:
 
 ### PV.StateUpdate:1 - Problem frame
 
-Use this pattern to turn a meeting transcript or a dialogue briefing into a
-verifiable vault update: capture the source, create/close decision cards (the single
-state entity), and reconcile against the registry of open cards without inventing
-facts absent from the source.
+Use this pattern to turn a meeting transcript, a dialogue briefing, or a repository
+working document already reflected in the vault into a verifiable vault update:
+capture the source, create/close decision cards (the single state entity), reconcile
+against the registry of open cards without inventing facts absent from the source, or
+retire the working document instead of re-creating its entities.
 
 ### PV.StateUpdate:2 - Problem
 
@@ -101,6 +102,21 @@ complementary risk is over-creating cards for transient observations.
    separate reconciliation record).
 4. Run the common steps (below).
 
+**Input 3 — repository working document already reflected in the vault.**
+
+A working document at the repo root (e.g. `PLAN.md`) whose decisions are already
+codenified in the vault is not re-captured as new entities — it is retired:
+
+1. Save the raw text as a capture into `project-vault/sources/` (with the 2–3 line
+   summary header).
+2. Point the entities' `sources` / references that cite the working document to the
+   capture instead.
+3. Move the still-live operational parts (procedures/commands) to `AGENTS.md` or a
+   fitting artifact; do not create duplicate DEC/TRK.
+4. Remove the duplicate from the repo root (the capture in `sources/` is now the
+   canonical copy).
+5. Run the common steps (below).
+
 **Insufficient input.**
 
 - The transcript is not enough for a meaningful update → a minimal capture header and stop.
@@ -109,7 +125,7 @@ complementary risk is over-creating cards for transient observations.
 - An opinion/preference, not a position → no card; if needed — as context in the capture header.
 - The dialog contradicts an existing `accepted` → a note on the card + a `revisit_by` flag.
 
-**Common steps (after Input 1 or 2).**
+**Common steps (after Input 1, 2, or 3).**
 
 1. Creation/closure of cards — the file is created; closed ones (`superseded`,
    `retired`) stay in place with a `status` (no `archive/`).
@@ -164,10 +180,11 @@ filter ("strategic vs transient") are the two counterweights.
 | CC-SU.2 | `accepted` — only on explicit approval in the source; a formed but unapproved position — `proposed`; an unformed open position — `open`. |
 | CC-SU.3 | Two incompatible formulations — one card with `status: open`/`proposed` (the two positions under "Considered options"), not a separate kind. |
 | CC-SU.4 | A card is created for any bounded state position (decision/question/risk/contradiction); there is no "architectural choice only" gate. |
-| CC-SU.5 | The card body carries only the card-ID and a web-URL; other references (source paths, entity IDs) — in the frontmatter. This applies to every body section, including "External signals" and "Revision history": in a signal's text only a verbal source name is allowed (e.g. "owner review 2026-09-08"); a path/ID goes to the frontmatter (`sources` for a path, `references` / `related_decisions` for entity IDs). |
+| CC-SU.5 | The card body carries only the card-ID and a web-URL; any other reference — a source path, an entity ID (DEC/TRK/WRK), or a pattern/framework ID (FPF/DPF, e.g. `C.*`, `A.*`, `ME.*`, `PV.*`) — goes to the frontmatter, not the body. A pattern/framework is described verbally in the body, never by its ID. This applies to every body section, including "External signals" and "Revision history": in a signal's text only a verbal source name is allowed (e.g. "owner review 2026-09-08"); a path/ID goes to the frontmatter (`sources` for a path, `references` / `related_decisions` for entity IDs). |
 | CC-SU.6 | A decision change = edit the card + "Revision history", not a duplicate. |
 | CC-SU.7 | A card is created only for a strategic/long-lived position; a weekly/one-off one is filed as capture context or a signal in a long-term card, not as a standalone card. |
 | CC-SU.8 | The card body contains no personal names/surnames and no "owner"-style attribution; attribution is by role/situation, and a specific person is recorded only in the frontmatter field `decision_owner`. |
+| CC-SU.9 | A repository working document already reflected in the vault is retired via Input 3 (capture → repoint references → move operational parts → remove the duplicate), not re-captured as new entities. |
 
 ### PV.StateUpdate:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -178,6 +195,7 @@ filter ("strategic vs transient") are the two counterweights.
 | Duplicate card on a decision change | Edit the same card + "Revision history". |
 | A capture/artifact reference in the card body | Only card-ID and URL; the rest in the frontmatter. |
 | An inline source path or entity ID in the card body (incl. "External signals"/"Revision history") | Verbal source name in the text; path/ID to the frontmatter (`sources`/`references`). |
+| An inline pattern/framework ID in the card body (e.g. `ME.3`, `C.*`) | Describe the pattern verbally; never by its ID. |
 | A standalone card for a one-off/weekly event | Context in the capture header or a signal in a long-term card; no standalone card. |
 | A personal name or an "owner"-style attribution in the card body | Attribute by role/situation; the person goes to the frontmatter `decision_owner`. |
 

@@ -29,7 +29,7 @@ dependencies:
   coordinates_with:
     - C.30.ASV
     - C.30.LCA
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.ILC
     - A.6.M
     - A.6.F
@@ -51,14 +51,15 @@ dependencies:
     - G.5
     - C.11
     - E.11
-    - I.2
 ---
 
 # C.30.STRAT: Clarify Stratification and Architecture Source Labels
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a source uses a compact architecture or stratification label and that word alone does not tell you what technical claim is being made.
+> **Problem frame:** Architecture and engineering sources use compact labels because they work in local practice. Neural-network prose says `block`, `expert`, `cache`, or `router`; control architecture says `layer`; organizations say `level` or `tier`; document …
+> **First move:** Write the direct local repair first. For example: `Here “gate” names the neural-network path selector; use E.18 to describe the selected path.` That sentence can be the complete result.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/E.8.md` `references/F.18.md` `references/C.30.P.md` `references/A.22.md` `references/C.30.md` `references/C.30.ASV.md`
 
 ---
 

@@ -24,9 +24,11 @@ dependencies:
 
 # A.2: System-Role Kinds and Assignments
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain name.** Work-facing system classification and assignment.
+> **Problem frame:** One system can contribute in several ways while remaining the same system. `PumpUnit-3` remains the same pump when it counts under `CoolingCirculatorSystemRole` for plant operation and under `TestArticleSystemRole` for qualification.
+> **First move:** Use an exact local `U.Kind` when `U.System` candidates need one stable, assignable, work-facing membership distinction. Recover the kind through the candidate domain, operative condition, useful member/non-member boundary, and continuity ru …
+>
+> **Governing patterns:** `references/A.1.md` `references/C.3.md` `references/C.3.1.md` `references/C.3.2.md` `references/A.6.REL.md` `references/E.10.ROLE.md` `references/A.6.RSIR.md`
 
 ---
 

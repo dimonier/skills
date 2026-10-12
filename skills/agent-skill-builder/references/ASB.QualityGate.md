@@ -14,10 +14,6 @@ dependencies:
 ## ASB.QualityGate - Quality gate: the weak-model test
 
 > **Trigger:** Before relying on a skill — when deciding whether it is written well enough that a weaker model will follow it without extra questions or invented steps.
-> **Governing patterns:**
->   → `AS.8` (Quality Gate / Weak-Model Test — the AS-DPF pattern this card specializes)
->   → `E.21` (pattern quality)
->   → `E.19` (admission)
 > **Skill dependencies:**
 >   → `create-agent-skill` (weak-model gate)
 
@@ -100,16 +96,16 @@ commands/templates in the body.
 
 ### ASB.QualityGate:10 - Rationale
 
-`AS.8` makes the weak-model test the admission criterion; `E.21` evaluates pattern
-quality; `E.19` gates admission. A skill that works on weak models is strictly better
-on strong ones, so the gate is both a quality and a cost criterion.
+`E.21` evaluates pattern quality; `E.19` gates admission. A skill that works on weak
+models is strictly better on strong ones, so the gate is both a quality and a cost
+criterion.
 
 ### ASB.QualityGate:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "Quality Gate" + Anti-Patterns ("blind skill-creator trust", "Opus-only dependence") | Adopt | Weak-model test, iterate loop, the two related anti-patterns | Reopen on a skill-payload edition change |
-| AS-DPF `AS.8` Quality Gate (Weak-Model Test) | Adopt | Admission rule and "why it matters" | Reopen on `AS.8` revision |
+| AS-DPF `AS.8` Quality Gate (Weak-Model Test) (merged 2026-10-04) | Adopt | Admission rule and "why it matters" | — merged into this DPF |
 | `create-agent-skill` quality gate | Adopt | Weak-model gate as a skill-carrier contract | Reopen when the gate changes |
 
 Best-known line: a weak model must follow every step. Rejected rival: "works in the
@@ -117,9 +113,7 @@ demo" / Opus-only skill — rejected.
 
 ### ASB.QualityGate:12 - Relations
 
-- **Builds on (DPF):** `AS.8` (quality gate).
-- **Builds on (FPF):** `E.21` (pattern quality), `E.19` (admission).
-- **Coordinates with (DPF):** `AS.6` (evaluation loop), `AS.7` (description optimization).
-- **Specialized by (LPF):** `ASB.Evolution` (the weak-model gate re-runs on every revision).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.8` (quality gate).
 
 ### ASB.QualityGate:End

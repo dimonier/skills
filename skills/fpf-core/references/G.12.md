@@ -15,7 +15,7 @@ keywords:
   - selective refresh.
 dependencies:
   builds_on:
-    - G.C
+    - G.Core
     - C.21
     - G.6
     - G.11
@@ -37,9 +37,11 @@ dependencies:
 
 # G.12: DHC Dashboards (Discipline-Health Time Series and Views)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use G.12 when a team needs several recorded C.21 coordinate results arranged across windows, a dashboard view over them, or refresh wiring for that view.
+> **Problem frame:** Produce a reproducible discipline-health series and view while keeping these objects separate:
+> **First move:** This pattern consumes G.Core obligations only for the branches actually opened.
+>
+> **Governing patterns:** `references/G.Core.md` `references/C.21.md` `references/G.6.md` `references/G.11.md` `references/A.19.md` `references/G.0.md` `references/F.17.md` `references/F.18.md`
 
 ---
 
@@ -191,7 +193,10 @@ DashboardSlice := <
 
 > An extension adds only the panel-specific fields, pins, and triggers consumed by that view. It does not redefine C.21, C.16, comparison, evidence, publication, selection, or refresh semantics.
 
-##### `G.12:Ext.SoTAPalette` — SoTA palette alignment
+
+
+##### G.12:4.9.1 - `G.12:Ext.SoTAPalette` — SoTA palette alignment
+
 
 * `PatternScopeId`: `G.12:Ext.SoTAPalette`
 * `GPatternExtensionKind`: `InteropSpecific`
@@ -199,7 +204,10 @@ DashboardSlice := <
 * Optional pins: `SoTA_PackRef.edition?`, exact F.17 cell refs, and obtaining F.9 relation refs when alignment is actually displayed.
 * No additional trigger kind by default.
 
-##### `G.12:Ext.PortfolioTelemetry` — selector result panel
+
+
+##### G.12:4.9.2 - `G.12:Ext.PortfolioTelemetry` — selector result panel
+
 
 * `PatternScopeId`: `G.12:Ext.PortfolioTelemetry`
 * `GPatternExtensionKind`: `MethodSpecific`
@@ -207,7 +215,10 @@ DashboardSlice := <
 * Conditional values: `TaskSignatureRef?`, resolved `DominanceRegime`, resolved `PortfolioMode`, and exact selector result and basis refs.
 * Set-returning semantics remain visible. A scalar headline is only a view annotation unless a separate policy lawfully constructs it.
 
-##### `G.12:Ext.QDTelemetry` — illumination or archive panel
+
+
+##### G.12:4.9.3 - `G.12:Ext.QDTelemetry` — illumination or archive panel
+
 
 * `PatternScopeId`: `G.12:Ext.QDTelemetry`
 * `GPatternExtensionKind`: `MethodSpecific`
@@ -215,7 +226,10 @@ DashboardSlice := <
 * Conditional pins: `DescriptorMapRef.edition`, `DistanceDefRef.edition`, `CharacteristicSpaceSpecRef.edition?`, `InsertionPolicyRef`, `EmitterPolicyRef?`, `ArchiveSnapshotRef?`, and `PathSliceId[]` when refresh uses them.
 * Illumination and coverage stay telemetry unless a separate accepted policy promotes them into the comparator, dominance set, or selected-set criteria under C.18's trade-off and authority conditions.
 
-##### `G.12:Ext.OpenEndedTelemetry` — open-ended or transfer panel
+
+
+##### G.12:4.9.4 - `G.12:Ext.OpenEndedTelemetry` — open-ended or transfer panel
+
 
 * `PatternScopeId`: `G.12:Ext.OpenEndedTelemetry`
 * `GPatternExtensionKind`: `GeneratorSpecific`
@@ -223,7 +237,10 @@ DashboardSlice := <
 * Conditional pins: `TransferRulesRef.edition`, `EnvironmentValidityRegionId?`, `ProbeBudgetPolicyId?`, and `PathSliceId[]`.
 * Open-ended signals do not become dominance objectives by display.
 
-##### `G.12:Ext.MaturityLadderPanel` — maturity view
+
+
+##### G.12:4.9.5 - `G.12:Ext.MaturityLadderPanel` — maturity view
+
 
 * `PatternScopeId`: `G.12:Ext.MaturityLadderPanel`
 * `GPatternExtensionKind`: `DisciplineSpecific`
@@ -231,7 +248,10 @@ DashboardSlice := <
 * Conditional values: `MaturityCardRef`, `MaturityRungId?`, and evidence-path refs when the displayed rung relies on them.
 * Adds `RSCRTriggerKindId.MaturityRungChange` only for a refresh-wired view.
 
-##### `G.12:Ext.PackInclusion` — shipping stub
+
+
+##### G.12:4.9.6 - `G.12:Ext.PackInclusion` — shipping stub
+
 
 * `PatternScopeId`: `G.12:Ext.PackInclusion`
 * `GPatternExtensionKind`: `InteropSpecific`
@@ -239,7 +259,10 @@ DashboardSlice := <
 * Conditional values: exact pack ref, selected `DHCSeriesRef.edition` or `DashboardSliceRef`, and the replay or shipping pins the included claims actually require.
 * G.10 governs shipping; this extension only identifies what is included.
 
-##### `G.12:Ext.ViewFamilySeed` — advanced view seed
+
+
+##### G.12:4.9.7 - `G.12:Ext.ViewFamilySeed` — advanced view seed
+
 
 This non-normative seed reserves no semantics. An embedding, prediction, change-point, or drift panel needs its own selected governor, inputs, limitations, and policy before it can affect a claim or decision.
 

@@ -31,9 +31,11 @@ dependencies:
 
 # A.1.1: Bounded Model-Use Structure: Applicability, Use and Expression Coherence (DDD Bounded Context)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Working reader and current decision.** This pattern is for a domain architect, systems engineer, or service owner deciding whether several facts about one model must be treated together for the next engineering move.
+> **Problem frame:** **Use this when.** Use this pattern when a current decision depends on the organization of three distinguishable facts about one exact model edition: where it applies, how it is actually used in assigned Work, and whether maintained express …
+> **First move:** Recover the Plain **bounded context** as one `BoundedModelUseStructure`, governed as a `U.Structure`. Identify it from one exact model episteme, exact already-admitted model-use holons, the selected organization of obtaining model-applicabi …
+>
+> **Governing patterns:** `references/A.1.md` `references/A.22.md` `references/C.2.1.md` `references/A.2.6.md` `references/A.6.REL.md` `references/A.2.md` `references/A.2.1.md` `references/A.3.1.md`
 
 ---
 

@@ -18,9 +18,10 @@ dependencies:
 
 # B.5.TC: Compare Theoretical Accounts for a Working Question
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** two theoretical accounts appear to give different answers, explanations or instructions for the work you are doing, and you need to decide how to use them.
+> **First move:** **Fix the working question → construct each account's application → align the case and the meaning of its answer → locate the consequential difference → use what the comparison establishes, or pursue the difference that matters.**
+>
+> **Governing patterns:** `references/B.5.TU.md` `references/B.5.RA.md` `references/B.5.RR.md` `references/C.29.1.md` `references/C.29.2.md` `references/C.29.3.md` `references/C.28.md` `references/F.0.2.md`
 
 ---
 

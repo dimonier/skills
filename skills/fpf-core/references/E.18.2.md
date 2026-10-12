@@ -17,16 +17,17 @@ dependencies:
     - B.3
     - A.20
     - A.21
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - E.18.1
     - E.18.3
 ---
 
 # E.18.2: Transformation Flow Mathematical Description
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when the current EntityOfConcern is a mathematical description of exactly one selected transformation-flow structure, one selected network of such structures, or one independently identified part of that subject.
+> **First move:** Write a `TransformationFlowMathematicalDescription@Context` only when the mathematical expression changes the current transformation-flow description move. Name exactly one described ontic subject: one E.18 TFS or one E.18.NET network.
+>
+> **Governing patterns:** `references/E.18.md` `references/E.18.NET.md` `references/C.29.md` `references/C.2.1.md` `references/A.3.4.md` `references/E.17.md` `references/A.6.0.md` `references/A.10.md`
 
 ---
 

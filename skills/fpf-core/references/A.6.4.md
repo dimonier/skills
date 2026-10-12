@@ -29,9 +29,10 @@ dependencies:
 
 # A.6.4: EntityOfConcern Retargeting: Judge a Bounded Use Across Different Entities
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Several familiar moves can hide a real change of EntityOfConcern, but none proves that change merely by its name or notation:
+> **First move:** > **Definition.** An **EntityOfConcern-retargeting morphism** is a local `EpMorphism r : X -> Y` whose exact endpoint epistemes concern different exact entities.
+>
+> **Governing patterns:** `references/A.6.0.md` `references/A.6.2.md` `references/A.6.3.md` `references/C.2.1.md` `references/C.29.md` `references/A.6.3.RT.md` `references/A.6.5.md` `references/A.7.md`
 
 ---
 

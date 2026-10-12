@@ -49,9 +49,10 @@ dependencies:
 
 # A.3.4.P: Transformation Wording Repair: Recover Objects and Claims
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** People talk about change with familiar labels—for example, a manufacturing process, refrigeration cycle, or team workflow. To use such wording in FPF, recover the object and claim it names.
+> **First move:** Restore the change situation in this order.
+>
+> **Governing patterns:** `references/A.3.4.md` `references/E.10.md` `references/E.10.ARCH.md` `references/E.24.md` `references/A.6.5.md` `references/E.8.md` `references/E.18.md` `references/E.18.2.md`
 
 ---
 

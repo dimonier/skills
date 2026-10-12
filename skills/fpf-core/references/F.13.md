@@ -17,9 +17,10 @@ dependencies:
 
 # F.13: Lexical Continuity & Deprecation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Preserve historical reading when source-local expressions, Concept-Set row labels, or names of governed values and their descriptions change:
+> **First move:** **Keep the named value, its meaning and its expression distinct.** Recover the old and proposed expression, effective ReferenceScheme, local-sense claim, intended use and any independently governed value being named.
+>
+> **Governing patterns:** `references/F.5.md`
 
 ---
 
@@ -228,7 +229,10 @@ Let `meaningOf(ℓ)` recover the exact `<ReferenceScheme, LocalSenseClaim>` proj
 
 Two expressions with the same `meaningOf`, intended use and independently governed value where applicable may receive a rename. A changed `LocalExpression` still changes the exact F.17 cell. An external label change preserves a cell only when the target coordinate itself is unchanged.
 
-#### F.13:12.2 -Local alias
+
+
+#### F.13:12.2 - Local alias
+
 
 Under the same conditions, a legacy expression may remain a read-path to `pref(t)`. Retain its own exact coordinate and any source basis; aliasing is not cell identity.
 

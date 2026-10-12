@@ -33,9 +33,10 @@ dependencies:
 
 # C.2.2: Reliability R in the F–G–R triad
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** KD‑CAL asks a simple operational question: *“Where can I safely use this claim?”* FPF answers with a minimal “epistemic location” built from three coordinates. Any relations traversed by a justification path are named separately:
+> **First move:** **Definition DEF‑C2.2‑1 (Epistemic location).** An epistemic location for a claim `c` is the tuple:
+>
+> **Governing patterns:** `references/C.2.md` `references/A.2.6.md` `references/C.2.3.md` `references/B.3.md` `references/B.1.3.md` `references/C.3.md` `references/F.9.md` `references/G.6.md`
 
 ---
 
@@ -338,7 +339,7 @@ No universal fold is conservative for every support model. Minimum can overstate
 
 Normative.
 
-**SoTA pack binding note.** If a G.2 SoTA Synthesis Pack has sources that bear on reliability under the exact changed claim scope, kind, reference plane, notation, source-local meaning, model use, or evidence basis in this case, cite the relevant ClaimSheet IDs and CorpusLedger entries. Cite a `BridgeMatrix` row only when the current path actually uses an F.9 cross-local semantic Bridge represented by that row. Otherwise record `SoTA-Pack: TBD/none` and treat this section as the seed; neither a generic Context nor a generic transport package is required.
+**SoTA pack binding note.** If a G.2 SoTA Synthesis Pack has sources that bear on reliability under the exact changed claim scope, kind, reference plane, notation, source-local meaning, model use, or evidence basis in this case, cite the relevant ClaimSheet IDs and CorpusLedger entries. Cite a `BridgeMatrix` row only when the current path actually uses an F.9 cross-local semantic Bridge represented by that row. Where no such pack supplies a relied-on result, retain the directly identified sources and support as applicable; no empty pack record is required. Neither a generic Context nor a generic transport package is required.
 
 | Practice claim  | Post‑2015 source anchor  | Alignment to this pattern  | Adoption status  |
 | --- | --- | --- | --- |

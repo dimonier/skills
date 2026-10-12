@@ -19,9 +19,10 @@ dependencies:
 
 # D.4: Ethical Mediation and Decision Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Once an interlevel ethical conflict is visible, the next risk is premature closure. A team may declare a compromise before evidence is sufficient, turn an assurance input into ethical permission, use one level's value as a trump card, or hi …
+> **First move:** **Fair-share case.** A service outage plan can protect hospitals, households, or industrial customers, but not all at once. The `D.3` conflict description connects each affected scope and value concern to its consequence and horizon.
+>
+> **Governing patterns:** `references/D.3.md` `references/C.11.md` `references/D.5.md` `references/A.10.md` `references/B.3.md` `references/C.28.md` `references/C.30.ILC.md` `references/A.20.md`
 
 ---
 

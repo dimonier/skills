@@ -7,7 +7,7 @@ dependencies:
   builds_on:
     - A.16
     - A.16.1
-    - C.2.2
+    - C.2.2a
   coordinates_with:
     - B.5.2.0
     - C.16.Q
@@ -17,9 +17,10 @@ dependencies:
 
 # B.4.1: Publish Candidate Routes for a Stabilized Cue (RoutedCueSet)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Observation rarely yields a ready anomaly, articulated action claim or question, or hypothesis in one step. Between low-articulation cue preservation and endpoint assertions under exact subject predicates, the cluster needs one explicit rou …
+> **First move:** Use this seam to make the candidate continuations and any selected route explicit after cue stabilization. The pre-abductive route-bearing seam sits inside the language-state cluster, between observation/cue preservation and endpoint subjec …
+>
+> **Governing patterns:** `references/A.16.md` `references/A.16.1.md` `references/C.2.2a.md` `references/B.5.2.0.md` `references/C.16.Q.md` `references/A.6.A.md` `references/C.22.1.md`
 
 ---
 

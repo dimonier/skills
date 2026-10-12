@@ -34,9 +34,10 @@ dependencies:
 
 # A.6.C: Contract Unpacking for Boundaries
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Boundary descriptions frequently use “contract” as shorthand for “the thing that governs the interaction”. That shorthand collapses four practical questions and the separately governed objects needed to answer them:
+> **First move:** A.6.C introduces a four-question boundary-language lens. It interprets and rewrites contract-like source wording under A.6.B without admitting a `Contract` object or another ontology branch.
+>
+> **Governing patterns:** `references/A.6.md` `references/A.6.B.md` `references/A.6.P.md` `references/A.7.md` `references/A.2.3.md` `references/A.2.8.md` `references/A.2.8.PER.md` `references/A.2.9.md`
 
 ---
 

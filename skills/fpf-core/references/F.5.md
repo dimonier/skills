@@ -26,9 +26,11 @@ dependencies:
 
 # F.5: Name U-kinds, Local System-Role Kinds and SystemRoleKindDescriptions
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain name.** Meaning-first naming discipline.
+> **Problem frame:** FPF needs names that humans can use without dragging the wrong ontology behind them. A good name is short enough for documents and conversation, but it belongs to a recovered meaning.
+> **First move:** Name after meaning. Recover the value, its kind, direct meaning source, and intended use. Then choose designations that preserve them.
+>
+> **Governing patterns:** `references/A.2.md` `references/C.3.md` `references/F.4.md` `references/F.18.md` `references/E.10.md` `references/E.10.ROLE.md` `references/E.24.UK.md` `references/F.8.md`
 
 ---
 

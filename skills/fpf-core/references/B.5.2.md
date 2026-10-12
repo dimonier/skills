@@ -17,9 +17,10 @@ dependencies:
 
 # B.5.2: Generate and Compare Candidate Explanations (Abductive Loop)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** An anomaly, opportunity or probe question needs candidate explanations that can be compared on their present plausibility. State the question and generate its serious rivals.
+> **First move:** `B.5.2` begins from an admissible `U.AbductivePrompt`, expands a candidate set, compares it under explicit plausibility criteria, and publishes the selected conjecture as a hypothesis-bearing `U.Episteme`.
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.2.0.md` `references/A.10.md` `references/B.3.3.md` `references/B.4.1.md` `references/A.16.md` `references/A.6.P.md`
 
 ---
 
@@ -190,7 +191,7 @@ Older wording that makes `AnomalyStatement` the exclusive entry form is supersed
 
 ### B.5.2:13 - Prompt, Candidate, and Hypothesis Package Discipline
 
-The abductive loop stays auditable only if the three main publication forms remain distinct: the **prompt**, the **candidate set**, and the **selected prime hypothesis**. Collapsing them into one paragraph is one of the main reasons later review cannot reconstruct what actually happened.
+Keep the **prompt**, the **candidate set**, and the **selected prime hypothesis** distinguishable in the publication. One paragraph can suffice when the question, rivals, selection grounds and outcome remain recoverable. Separate or link their expressions when independent revision or a receiving use needs that separation.
 
 #### B.5.2:13.1 - Prompt package
 

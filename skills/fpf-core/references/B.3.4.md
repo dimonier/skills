@@ -22,9 +22,10 @@ dependencies:
 
 # B.3.4: Can Earlier Evidence Still Support This Use? — Evidence Decay and Epistemic Debt
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** An earlier result is being relied on now, and a changed condition or a due review may change whether it still supports the receiving claim. Begin with the relied-on use and the premise that may have changed.
+> **First move:** Qualify currentness at the claim and receiving use. Reconsider only the dependency reach for which a changed premise or an applicable review rule can alter the conclusion.
+>
+> **Governing patterns:** `references/B.3.md` `references/A.10.md` `references/C.11.md` `references/C.19.2.md` `references/C.27.TA.md` `references/G.11.md`
 
 ---
 

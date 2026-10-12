@@ -20,9 +20,11 @@ dependencies:
 
 # E.24.PUB: Episteme Publication: Availability, Form and Carrier
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when an ontic or another entity is encountered through a card, table, diagram, file, pattern host, dashboard, or similar published expression and the current work depends on knowing what was described, what was made availab …
+> **Problem frame:** Ontics and other entities are usually encountered through epistemes and physical or digital carriers. One completed inspection card can carry claims and therefore be a `U.Episteme`; its reusable arrangement can be used as a publication form …
+> **First move:** Start with this readable publication statement:
+>
+> **Governing patterns:** `references/E.24.md` `references/C.2.1.md` `references/E.17.md` `references/E.8.md` `references/E.10.md` `references/F.19.md` `references/E.24.CD.md` `references/C.30.AD.md`
 
 ---
 

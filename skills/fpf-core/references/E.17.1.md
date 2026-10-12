@@ -9,8 +9,7 @@ dependencies:
     - E.17.0
     - C.13
     - A.22
-    - A.6.2
-    - A.6.4
+    - "A.6.2-A.6.4"
     - A.7
     - E.7
     - E.10
@@ -23,9 +22,10 @@ dependencies:
 
 # E.17.1: Viewpoint Bundle Library — Reusable Viewpoint Reference Bundles
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Selected-family discipline.** A local declaration states the exact target-kind compatibility condition it uses: either a by-value criterion or a reference that resolves to the exact ClaimGraph defining or constraining the admitted target …
+> **First move:** `E.17.1` defines a reusable form for one ordinary C.2.1 catalogue episteme L whose local bundle declarations package exact `U.ViewpointRef` values resolving to exact E.17.0 viewpoint episteme editions.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/E.17.0.md` `references/C.13.md` `references/A.22.md` `references/A.6.2-A.6.4.md` `references/A.7.md` `references/E.7.md` `references/E.10.md`
 
 ---
 

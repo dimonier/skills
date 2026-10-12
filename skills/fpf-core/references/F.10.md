@@ -21,9 +21,10 @@ dependencies:
 
 # F.10: Apply and Interpret Evidence, Standard and Requirement Statuses
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use F.10 when a receiving use depends on a word such as *observed*, *measured*, *validated*, *approved*, *deprecated*, *satisfied*, *violated*, *waived*, *pending*, *current*, or *ready*, and the exact status value, gover …
+> **First move:** Recover the governed target and direct result before applying a local status. Treat status value, status-use occurrence, status assertion, source, evaluation, display, and receiving use as distinct.
+>
+> **Governing patterns:** `references/F.9.md` `references/B.3.md`
 
 ---
 

@@ -10,7 +10,7 @@ dependencies:
     - A.6.F
     - A.3.4
     - E.18
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - A.15
     - A.15.1
     - A.6.M
@@ -20,9 +20,11 @@ dependencies:
 
 # B.2.4: Do Capability or Functioning Changes Require Whole Reidentification?
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when exact capability, functioning, or transformation-flow facts, already established under their subject patterns, make a B.2 whole-reidentification question live.
+> **Problem frame:** A new capability is not automatically a new whole. A function-like relation is not automatically a part-whole relation. A transformation-flow structure is not automatically MHT.
+> **First move:** Use B.2.4 as a decision bridge from direct capability and functioning facts to B.2 whole reidentification. Add no generic slice, context placeholder, candidate-bearer list, or second B.2 record.
+>
+> **Governing patterns:** `references/A.2.2.md` `references/C.16.md` `references/A.6.F.md` `references/A.3.4.md` `references/E.18.md` `references/C.30.TFS-REL.md` `references/A.15.md` `references/A.15.1.md`
 
 ---
 

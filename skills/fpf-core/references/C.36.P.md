@@ -25,9 +25,11 @@ dependencies:
 
 # C.36.P: Clarify Cultural-Evolution Wording for a Claim or Action
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when source or project prose uses cultural-evolution wording and a current claim or action depends on what that wording means here.
+> **Problem frame:** Cultural-evolution sources and project documents use compact labels because ordinary language has to move quickly. A word such as style, genre, practice, platform, or technique may be a useful local sign.
+> **First move:** Use the intended claim, not the trigger word, to select the result. Write the short ordinary statement, then open only the branch whose distinction changes the next action.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/E.10.DEV.md` `references/C.36.md` `references/F.17.md` `references/F.18.md` `references/F.9.md` `references/E.10.MOVE.md`
 
 ---
 

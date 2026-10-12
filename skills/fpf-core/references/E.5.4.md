@@ -10,9 +10,10 @@ dependencies:
 
 # E.5.4: Cross-Disciplinary Bias Audit
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF calls itself trans‑disciplinary, but every author carries implicit metaphors from a source domain. If those metaphors leak into “universal” patterns, practitioners from other fields disengage or mis‑interpret the rules.
+> **First move:** 1. **Bias‑Lens set** Every normative pattern is assessed through **five lenses** that match the Principle classes from **E.3**: `Gov`, `Arch`, `Epist` (epistemological and ontological), `Prag`, `Did`.
+>
+> **Governing patterns:** `references/E.5.md`
 
 ---
 
@@ -76,7 +77,7 @@ Cross‑Scale Consistency**.
 |---|---|---|
 | **CC‑BA.1** | Each Core pattern **SHALL** include a *Bias‑Annotation* listing the five lenses and any declared scope limitation. | Ensures explicit reflection on bias. |
 | **CC‑BA.2** | A pattern labelled “universal” **MUST NOT** privilege a single lens without justification or scoping note. | Preserves trans‑disciplinary integrity. |
-| **CC‑BA.3** | If scope is declared, the pattern **SHALL** reference the mapping or rationale that enables cross‑domain translation. | Keeps pathways open for other calculi. |
+| **CC‑BA.3** | If scope is declared, the pattern **SHALL** state its rationale. When cross-domain translation is claimed or required, it **SHALL** reference the mapping or rationale supporting that translation and state its limits. | Keeps pathways open for other calculi. |
 | **CC‑BA.4 Universality claim and applicable evidence** | A pattern labelled **“universal”** states the exact ClaimScope, population or bearer, qualification window, and intended use of that claim. When the claim is universal-core placement for a durable U-kind candidate admitted through **E.24.UK**, apply **A.8:3**'s complete cross-domain projection test. `Diversity_P` or `IlluminationSummary` supports that test only through its governing C.17, C.19, or direct pattern; it is not a standalone gate. | Keeps the claimed scope and its applicable evidence explicit. |
 
 ### E.5.4:7 - Consequences

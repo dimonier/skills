@@ -30,9 +30,11 @@ dependencies:
 
 # A.1.CSD: Discovering Systems That May Bear Consequences
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Use this when.** Use this pattern when proposed or observed Work, realization, operation, use, maintenance, misuse, failure, recovery, retirement, policy, or change may alter Systems omitted from the current decision or investigation, and …
+> **Problem frame:** A change rarely ends at the boundary drawn for its proposer. For example, material, energy, chemical, biological, information, access, exposure, load, resource, capability, institutional, and dependency paths can reach other physical or ope …
+> **First move:** Discover outward from concrete possibilities, preserve the status of every relation and bearer claim, and stop at the smallest account that changes one receiver.
+>
+> **Governing patterns:** `references/A.1.md` `references/C.2.1.md` `references/A.14.md` `references/B.1.md` `references/B.1.2.md` `references/C.13.md` `references/A.1.SCR.md` `references/B.2.md`
 
 ---
 
@@ -72,7 +74,7 @@ Ask: **Which other Systems may undergo a relevant change, through what supported
 - If the current question is comparison or choice among configurations, use `C.11.CRC` and `C.11` after the needed bearer claims exist.
 - If the domain already has a qualified discovery Method with its own quantities, thresholds, evidence rules, and authority, use that Method; use A.1.CSD only for the shared early discovery result.
 
-### A.1.CSD:0.1 - Precision Restoration
+#### A.1.CSD:0.1 - Precision Restoration
 
 | Expression | Working meaning here |
 | --- | --- |

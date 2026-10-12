@@ -35,9 +35,10 @@ dependencies:
 
 # C.31: Modularity and Reusable Structure Characteristics
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when modularity or reusable-structure language is doing work in an architecture discussion and the practitioner needs to know which few characteristics matter, what repair follows, and whether any measurement or comparison …
+> **First move:** C.31 defines and constrains modularity and reusable-structure characteristic assertions as C.16-compatible characteristic heads, composite descriptions, lens-backed characteristic interpretations, temporal or scale-sensitive characteristic …
+>
+> **Governing patterns:** `references/C.16.md` `references/A.17.md` `references/A.18.md` `references/A.19.md` `references/C.25.md` `references/C.30.md` `references/C.30.ASV.md` `references/A.6.M.md`
 
 ---
 

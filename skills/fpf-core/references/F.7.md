@@ -22,9 +22,10 @@ dependencies:
 
 # F.7: Display Source-Local Comparisons in a Concept-Set Table
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Give a reader one compact surface for comparing exact source-local claims, optional F.17 cells, and any relations that already obtain between them.
+> **First move:** A **Concept-Set row** is a didactic grouping for one stated comparison or use. It contains:
+>
+> **Governing patterns:** `references/F.3.md` `references/F.9.md` `references/F.17.md` `references/A.6.9.md`
 
 ---
 
@@ -130,19 +131,28 @@ The nickname **Giants’ table** recalls that comparison relies on prior source 
 
 > The examples show table shapes. Every positive relation still requires its own evidence in an actual use.
 
-#### (a) Class-order comparison
+
+
+#### F.7:9.1 - (a) Class-order comparison
+
 
 | Comparison or use | Exact source-local entries | Obtaining relations | Loss and boundary | Basis | Conclusion |
 | --- | --- | --- | --- | --- | --- |
 | Explain two class-order notations | OWL 2 `SubClassOf`; FPF `U.SubtypeRelation` claim | An explicit representation or semantic relation, if established for the selected expressions | OWL profile semantics and FPF kind criteria may differ | C.3, C.29, A.6.3.RT, and cited sources | Use one didactic gloss only within the stated notation comparison; do not include FCA order by resemblance. |
 
-#### (b) Measurement comparison
+
+
+#### F.7:9.2 - (b) Measurement comparison
+
 
 | Comparison or use | Exact source-local entries | Obtaining relations | Loss and boundary | Basis | Conclusion |
 | --- | --- | --- | --- | --- | --- |
 | Compare values against a service target | SOSA result claim; ISO 80000 quantity value; ITIL metric value | Exact measurement, scale and unit, and any source-local semantic relations that actually obtain | Composite ITIL indices may lack unit fidelity | C.16, F.9 when needed, cited observations | Comparable only for the named characteristic, scale conversion, population, and window. |
 
-#### (c) Contrast: *process*
+
+
+#### F.7:9.3 - (c) Contrast: *process*
+
 
 | Comparison or use | Exact source-local entries | Obtaining relations | Loss and boundary | Basis | Conclusion |
 | --- | --- | --- | --- | --- | --- |

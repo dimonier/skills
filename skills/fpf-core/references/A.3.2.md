@@ -29,9 +29,10 @@ dependencies:
 
 # A.3.2: `U.MethodDescription`: Description Episteme for a Way of Doing
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **When the reusable way is still only a candidate.** A candidate account or mined behavioural model is not a `U.MethodDescription` merely because it is coherent, executable, process-shaped, or traceable to sources.
+> **First move:** `U.MethodDescription` is a same-individual dependent kind of `U.Episteme`. Membership holds when the already identified episteme has one admitted `U.Method` as its exact `EntityOfConcern` and its claims, interpreted under the effective `U.R …
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.3.1.md` `references/E.24.UK.md` `references/A.1.1.md` `references/A.6.1.md` `references/A.6.5.md` `references/A.15.1.md` `references/A.15.2.md`
 
 ---
 

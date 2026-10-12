@@ -19,7 +19,7 @@ keywords:
   - RSCRTriggerKindId.
 dependencies:
   builds_on:
-    - G.C
+    - G.Core
     - A.19.CN
     - A.10
     - A.17
@@ -36,9 +36,10 @@ dependencies:
 
 # G.0: Define Admissible Comparison and Aggregation for a Frame (CG-Spec)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** A team defines or evolves a `CG‑Frame` (e.g., a frame for creativity measurement, decision quality, architecture trade‑offs, or selected-set publication).
+> **First move:** `CG‑Spec` is a **notation-independent** UTS-published object that, for a given `CG‑Frame`, defines:
+>
+> **Governing patterns:** `references/G.Core.md` `references/A.19.CN.md` `references/A.10.md` `references/A.17.md` `references/A.19.md` `references/C.16.md` `references/A.18.md` `references/B.3.md`
 
 ---
 

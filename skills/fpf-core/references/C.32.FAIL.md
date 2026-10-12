@@ -25,7 +25,7 @@ dependencies:
     - C.32.PAD
     - C.30
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - C.18
     - C.19
     - G.5
@@ -40,9 +40,10 @@ dependencies:
 
 # C.32.FAIL: Architecture Failure Recognition and Repair
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner sees a recurring architecture-synthesis failure and needs to turn that warning into the smallest repair action over a named architecture object before evidence, assurance, selection, or decision claims a …
+> **First move:** Convert the warning cue into an `ArchitectureRepairCue@Project`. Work in six steps:
+>
+> **Governing patterns:** `references/C.32.md` `references/C.30.P.md` `references/A.6.F.md` `references/A.6.M.md` `references/C.31.md` `references/C.29.md` `references/E.10.md` `references/C.32.MLAO.md`
 
 ---
 

@@ -20,9 +20,10 @@ dependencies:
 
 # A.6.5: Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Plain name.** Relation-declaration slot discipline.
+> **First move:** Apply relation-declaration slot discipline only after the direct relation and its relation-participant meanings have been recovered.
+>
+> **Governing patterns:** `references/A.6.0.md` `references/A.6.REL.md` `references/A.6.P.md` `references/A.6.RSIR.md` `references/A.6.1.md` `references/A.15.3.md` `references/C.2.1.md` `references/C.3.md`
 
 ---
 

@@ -12,7 +12,7 @@ dependencies:
   coordinates_with:
     - E.18.1
     - C.32.P2S
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - E.23
     - C.18
     - C.19
@@ -23,9 +23,11 @@ dependencies:
 
 # E.18.3: Constraint-Governed Transformation-Flow Unfolding Structure
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a team is planning, reviewing, or explaining a transformation and a route-like flow card is useful, but branches, joins, guards, or connections to independently identified neighboring values or neighboring claims alrea …
+> **Problem frame:** `E.18` already gives FPF a rich language for transformation-flow structure: transfers, dependencies, paths, crossings, guards, valuations, publication faces, comparability, slice-local refresh, and structure-position bindings.
+> **First move:** E.18.3 is a membership-and-use profile for one exact selected A.22.CGUS `U.Structure`. The selected structure keeps the four A.22 identity discriminators.
+>
+> **Governing patterns:** `references/E.18.md` `references/E.18.NET.md` `references/A.22.CGUS.md` `references/A.3.4.md` `references/E.18.1.md` `references/C.32.P2S.md` `references/C.30.TFS-REL.md` `references/E.23.md`
 
 ---
 

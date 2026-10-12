@@ -1,7 +1,7 @@
 ---
 id: C.29.2
 title: Computational Formulation
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -15,16 +15,17 @@ dependencies:
 
 # C.29.2: Computational Formulation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** You know what a mathematical answer would mean, but the available expression, data and operations do not yet explain how to obtain it.
+> **First move:** Establish how the computation obtains the requested result and why that result has the required meaning. Read the following steps as connected work with returns: an unaffordable state, an unavailable operation or a failed argument can chang …
+>
+> **Governing patterns:** `references/C.29.1.md` `references/C.29.3.md` `references/A.3.3.md` `references/A.6.3.RT.md` `references/C.39.md` `references/C.40.md`
 
 ---
 
 ## C.29.2 - Computational Formulation
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative when this Method is selected; worked cases retain their stated assumptions.
 
 ### C.29.2:1 - Problem frame

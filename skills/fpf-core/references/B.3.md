@@ -27,9 +27,10 @@ dependencies:
 
 # B.3: Is This Claim Supported for This Use? — Trust and Assurance Calculus
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Assurance concerns a claim, not the world-side subject in isolation. Begin with one exact target claim, identified by its C.2.1 episteme or `ClaimAddress` as specified in §4.2, and one named use of an assurance conclusion.
+> **First move:** State these three things before choosing measures or a record:
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.2.4.md` `references/A.10.md` `references/G.6.md` `references/A.2.6.md` `references/C.16.md` `references/C.16.Q.md` `references/A.15.1.md`
 
 ---
 

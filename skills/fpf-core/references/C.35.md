@@ -25,7 +25,7 @@ dependencies:
     - C.34
     - C.29
     - C.30.STRAT
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - A.6.M
     - C.31
     - C.31.ASAP
@@ -43,9 +43,10 @@ dependencies:
 
 # C.35: Assess Generated or Discovered Results for Architecture Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a generated, searched, clustered, queried, learned, transformed, simulated, or discovered result may seed or inform architecturing, and the practitioner must decide what that exact result is and whether it can enter ar …
+> **First move:** Start with the readable admission statement. Name the exact result, the organization it concerns, the one condition still required for the intended next use, and the forbidden overread or return.
+>
+> **Governing patterns:** `references/C.30.md` `references/C.30.AD.md` `references/C.30.ASV.md` `references/A.22.md` `references/C.32.P2S.md` `references/C.32.md` `references/C.33.md` `references/C.34.md`
 
 ---
 

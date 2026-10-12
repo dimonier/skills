@@ -1,7 +1,7 @@
 ---
 id: C.29.1
 title: Mathematical Result Transfer
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -13,16 +13,17 @@ dependencies:
 
 # C.29.1: Mathematical Result Transfer
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** you have two mathematical accounts of a working situation, or a proposed change of representation, and want to carry a result from one to the other.
+> **First move:** **Recover the intended conclusion and its source → construct the correspondence → compare the relevant operations and their conditions → determine what merged cases can still answer → derive the exact or bounded consequence → return it, or …
+>
+> **Governing patterns:** `references/C.29.md` `references/B.5.md` `references/A.3.3.md` `references/A.6.3.RT.md`
 
 ---
 
 ## C.29.1 - Mathematical Result Transfer
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### C.29.1:1 - Problem frame

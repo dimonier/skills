@@ -1,7 +1,7 @@
 ---
 id: C.39.RO
 title: Turn a Construction into a Reusable Operation
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -15,16 +15,17 @@ dependencies:
 
 # C.39.RO: Turn a Construction into a Reusable Operation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a worked way of obtaining a result should become available for changed inputs, another case or combination with other operations, and its reusable part is still unclear.
+> **First move:** Recover the working construction, choose the intended variation, expose an operation under retained conditions, and examine what it returns in a changed use.
+>
+> **Governing patterns:** `references/C.39.md` `references/B.5.RR.md` `references/B.5.QD.md` `references/A.3.1.md` `references/A.3.2.md` `references/C.40.md`
 
 ---
 
 ## C.39.RO - Turn a Construction into a Reusable Operation
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative
 
 ### C.39.RO:1 - Problem frame

@@ -13,11 +13,6 @@ dependencies:
 ## ASB.SkillAnatomy - Skill anatomy & bundled resources: folder layout and frontmatter
 
 > **Trigger:** When scaffolding a new skill folder, or deciding which files it must/may contain and how to name them.
-> **Governing patterns:**
->   → `AS.5` (Skill Anatomy & Bundled Resources — the AS-DPF pattern this card specializes)
->   → `C.33` (carrier admission)
->   → `F.18` (naming)
->   → `E.10` (kind discipline)
 > **Skill dependencies:**
 >   → `create-agent-skill` (skill anatomy)
 
@@ -126,16 +121,16 @@ and carrier discipline (`F.18`, `C.33`) keep the artifact addressable.
 
 ### ASB.SkillAnatomy:10 - Rationale
 
-`AS.5` fixes the folder anatomy and frontmatter schema; `C.33` treats the folder as
-the access-facing carrier; `F.18` fixes kebab-case naming; `E.10` keeps resource
-kinds distinct. Proportionality (`E.4.DPF:4`) forbids empty scaffolding.
+`C.33` treats the folder as the access-facing carrier; `F.18` fixes kebab-case
+naming; `E.10` keeps resource kinds distinct. Proportionality (`E.4.DPF:4`) forbids
+empty scaffolding.
 
 ### ASB.SkillAnatomy:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "Anatomy of a Skill" + frontmatter | Adopt | Folder tree and `name`/`description` frontmatter | Reopen on a skill-payload edition change |
-| AS-DPF `AS.5` Skill Anatomy & Bundled Resources | Adopt | Frontmatter schema, bundled-resource roles | Reopen on `AS.5` revision |
+| AS-DPF `AS.5` Skill Anatomy & Bundled Resources (merged 2026-10-04) | Adopt | Frontmatter schema, bundled-resource roles | — merged into this DPF |
 | Anthropic `quick_validate.py` schema (`ALLOWED_PROPERTIES`) | Adopt | Allowed frontmatter fields | Reopen on a schema-rule release |
 
 Best-known line: mandatory `SKILL.md` + role-distinct optional resources. Rejected
@@ -143,9 +138,7 @@ rival: "empty scaffolding for completeness" — rejected as premature apparatus.
 
 ### ASB.SkillAnatomy:12 - Relations
 
-- **Builds on (DPF):** `AS.5` (skill anatomy).
-- **Builds on (FPF):** `C.33` (carrier admission), `F.18` (naming), `E.10` (kind discipline).
-- **Coordinates with (DPF):** `AS.2` (frontmatter description), `AS.4` (resource load).
-- **Specialized by (LPF):** `ASB.ProgressiveDisclosure` (resource roles implement the three levels), `ASB.Placement` (the folder is the thing placed).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.5` (skill anatomy).
 
 ### ASB.SkillAnatomy:End

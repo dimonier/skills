@@ -25,9 +25,11 @@ dependencies:
 
 # A.2.8.PER: Granted Permission, Exercise, and Non-Prohibition
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a policy, approval, permit, system-role rule, boundary claim, readiness check, or later work use needs to distinguish five questions:
+> **Problem frame:** Permission-looking language often compresses unlike values. “No rule forbids it” may be an incomplete search result. “The permit allows it” may refer to a document, an issuing act, or an enduring relation.
+> **First move:** Use exactly the object warranted by the current claim:
+>
+> **Governing patterns:** `references/A.2.8.md` `references/A.2.9.md` `references/A.13.md` `references/F.6.md` `references/A.6.md` `references/A.6.B.md` `references/A.6.C.md` `references/A.15.1.md`
 
 ---
 
@@ -234,7 +236,7 @@ PermissionNormConflictFinding@Context <: U.Episteme
   conflictingNormClaimAddress: ClaimAddress
   overlapScope: U.ClaimScope
   overlapWindow: QualificationWindowPolicy
-  governingPrecedencePolicyRef: U.EpistemeRef
+  governingPrecedencePolicyRef?: U.EpistemeRef
   applicablePrecedenceRuleAddress?: ClaimAddress
   decisionAuthorityRelationOccurrenceRef?: U.RelationRef constrained to the direct decision-authority relation kind
   resolutionWorkRef?: WorkRef
@@ -245,6 +247,8 @@ PermissionNormConflictFinding@Context <: U.Episteme
 ```
 
 Create the finding only when the grant and current prohibition or commitment concern the same beneficiary/action content, overlapping scope/window, and incompatible practical conclusions. Check that match directly from the two claims and their participants. Permission and an obligation to perform the same action are not automatically in conflict.
+
+An unresolved finding may omit `governingPrecedencePolicyRef` when no governing precedence policy has been identified. Keep the disposition unresolved and retain the missing input and what would reopen the question. A settled finding identifies the governing policy and the applicable rule or independently grounded decision result.
 
 Resolve the conflict through exactly one of two branches:
 

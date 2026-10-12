@@ -32,7 +32,7 @@ dependencies:
     - C.32.FAIL
     - C.32.PAD
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - C.18
     - C.19
     - G.5
@@ -43,9 +43,10 @@ dependencies:
 
 # C.32: Architecture Candidate Synthesis
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner has a C.30-grounded architecture question for one exact described holon and needs to synthesize several candidate architecture configurations across selected structures before comparison, archive or fron …
+> **First move:** Create an `ArchitectureSynthesisFrame@Project` when the selected structures and characteristics are not yet visible enough. The frame is a temporary visibility aid for C.32 use; the palette remains the first useful output.
+>
+> **Governing patterns:** `references/C.30.md` `references/A.22.md` `references/A.6.F.md` `references/A.6.M.md` `references/C.16.md` `references/C.25.md` `references/C.31.md` `references/C.30.ILC.md`
 
 ---
 

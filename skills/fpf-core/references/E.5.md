@@ -16,9 +16,10 @@ dependencies:
 
 # E.5: Four Guard-Rails of FPF
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF positions itself as a **timeless, universal “operating system for thought.”** Collaborative projects of this scope face four predictable entropic pulls:
+> **First move:** FPF establishes **four architecturally enforced guard‑rails** that every Core, Tooling, and Pedagogy artefact must obey. They function as an “immune system” resisting each entropic pull.
+>
+> **Governing patterns:** `references/E.2.md` `references/E.3.md` `references/E.5.1.md` `references/E.5.2.md` `references/E.5.3.md` `references/E.5.4.md`
 
 ---
 
@@ -74,7 +75,7 @@ Concrete rules for each rail live in patterns **E.5.1 – E.5.4**.
 |---|---|---|
 | GR‑1 | Definition of `U.System` never cites file formats or build scripts. | Definition of `U.Episteme` avoids naming specific proof engines. |
 | GR‑2 | Pump boundary invariant is true in plain text or any diagram. | F‑G‑R semantics hold in algebraic or graph notation alike. |
-| GR‑3 | A sizing helper imports Core invariants; Core never imports helper tutorials. | Learning guide cites R‑score; Core never cites guide. |
+| GR‑3 | A sizing helper imports Core invariants; Core never imports helper tutorials. | Learning guide cites R‑score; Core does not derive its semantics from the guide. |
 | GR‑4 | Bias audit removes thermo‑mechanical jargon from a “universal” pattern. | Audit replaces physics‑centric metaphors in a trust pattern. |
 
 ### E.5:6 - Conformance Checklist

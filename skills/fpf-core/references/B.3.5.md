@@ -12,9 +12,10 @@ dependencies:
 
 # B.3.5: Assurance Grounding for Working-Model Relation Claims (CT2R-LOG)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** *Provide a single, human-facing family of **Working-Model** relations as the **public relation layer**, with explicit hooks for (G) grounding and (R) reliability, without exposing constructor jargon or overloading day-to-day authors.*
+> **First move:** CT2R‑LOG introduces a **two‑link discipline** and a **validation flag** around each canonical edge:
+>
+> **Governing patterns:** `references/B.3.md` `references/E.14.md` `references/C.13.md`
 
 ---
 

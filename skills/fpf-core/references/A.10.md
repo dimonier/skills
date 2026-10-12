@@ -38,9 +38,10 @@ dependencies:
 
 # A.10: Evidence Graph Referring: Claim-Bound Evidence and Provenance Graph
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a source, carrier, result episteme, credential, dashboard, provenance label, generated explanation, model card, or review note is being relied on for a named claim or bounded action and the source-to-use account is sti …
+> **First move:** Name the C.2.1 episteme and select the claim or proposition being relied on from its ClaimGraph. Recover that claim's subject, interpretation basis, polarity or status when current, and uncertainty or qualification when relevant.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/E.17.md` `references/A.15.1.md` `references/A.6.1.md` `references/A.15.PROD.md` `references/A.2.4.md` `references/G.11.md` `references/C.29.md`
 
 ---
 

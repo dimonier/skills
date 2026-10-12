@@ -20,9 +20,10 @@ dependencies:
 
 # F.2: Source-Local Term Harvesting & Normalisation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Turn usage in an exact source and edition into a small, auditable set of source-local expressions and one-sentence meaning claims. Keep the source’s idiom, help a cold reader, and withhold every cross-source conclusion.
+> **First move:** For each needed use, name the **exact source and edition**, the relevant passage, and the **effective `U.ReferenceScheme`** under which the passage is being read.
+>
+> **Governing patterns:** `references/F.1.md` `references/F.0.1.md` `references/E.10.D1.md` `references/F.3.md`
 
 ---
 

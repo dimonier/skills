@@ -38,9 +38,10 @@ dependencies:
 
 # A.22: Structure and Structural Views (STRUCT-CAL)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner needs to select `U.Structure` as the `EntityOfConcern`: an organization among exact constituents and obtaining relations, selected to expose a relation class, applied constraint, invariant, variation cla …
+> **First move:** Select `U.Structure` as the A.22 ontic head: a dependent, non-agentive organization selected from independently identified constituents and exact obtaining relation occurrences under applied constraints for one named use frame.
+>
+> **Governing patterns:** `references/A.1.md` `references/C.13.md` `references/C.2.1.md` `references/A.6.REL.md` `references/A.6.0.md` `references/A.6.5.md` `references/A.3.1.md` `references/A.6.1.md`
 
 ---
 

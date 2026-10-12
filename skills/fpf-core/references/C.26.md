@@ -29,15 +29,15 @@ dependencies:
     - C.18
     - C.19
   constrains:
-    - C.26.1
-    - C.26.3
+    - "C.26.1-C.26.3"
 ---
 
 # C.26: Quantum-Like Modeling Lens
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF already has local patterns for decisions, boundaries, bridges, work, measurement, search, and quality bundles. Some real architecture cases still break when those patterns are applied as if every read, question, dashboard, workshop, bri …
+> **First move:** Start with the ordinary FPF pattern. Recover the exact claim, bearer or EntityOfConcern, effective reference scheme, scope, probe or model frame, and comparison frame before asking whether a quantum-like lens remains useful.
+>
+> **Governing patterns:** `references/C.11.md` `references/C.16.md` `references/A.6.md` `references/A.10.md` `references/B.3.md` `references/F.9.md` `references/A.6.3.CSC.md` `references/A.6.3.RT.md`
 
 ---
 

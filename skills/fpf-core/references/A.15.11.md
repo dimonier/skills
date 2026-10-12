@@ -20,9 +20,10 @@ dependencies:
 
 # A.15.11: Make Applicable Methods Noticeable in Work
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a useful way of working repeatedly goes unused because the practitioner or agent does not recognize an occasion for it.
+> **First move:** Connect a possible contribution with an occasion already present in the work. Make the relation understandable and the operation reachable; then see whether that arrangement helps enough to keep it.
+>
+> **Governing patterns:** `references/A.15.md` `references/A.15.7.md` `references/B.1.5.EW.md` `references/C.40.md` `references/C.40.CD.md` `references/C.11.CRC.md` `references/C.11.DUA.md` `references/E.11.md`
 
 ---
 

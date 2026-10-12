@@ -13,9 +13,8 @@ keywords:
 
 # G.4: CAL Authoring: Calculi - Acceptance - Evidence
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** CAL authoring starts from:
+> **First move:** Complete these actions in order; widen a step only when its stated input is needed by the current task.
 
 ---
 

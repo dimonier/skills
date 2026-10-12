@@ -19,9 +19,10 @@ dependencies:
 
 # E.4.CM: Develop Connected Methods as Framework Contributions
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this when you author or maintain FPF or a domain principle framework and its readers can find relevant patterns but still have to invent how to use their methods, rules or results together in a recurring situation.
+> **First move:** Apply C.39's general construction and explanation to the framework reader's recurring difficulty, then give the resulting content its appropriate public owner and form.
+>
+> **Governing patterns:** `references/E.4.md` `references/E.8.md` `references/C.32.MWA.md` `references/E.11.md` `references/E.11.PFP.md` `references/E.19.md` `references/E.21.md` `references/F.0.2.md`
 
 ---
 

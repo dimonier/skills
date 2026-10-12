@@ -11,7 +11,7 @@ dependencies:
     - F.18
     - E.14
     - E.19
-    - C.2.2
+    - C.2.2a
     - A.16.0
   coordinates_with:
     - E.17.AUD.LHR
@@ -27,9 +27,10 @@ dependencies:
 
 # E.17.AUD.OOTD: PublicationUnit Primary-Subject Discipline
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use the examples as alternatives.** The quick checks, ordinary declaration, optional diagnostic, heavier extension, and worked slices are alternative aids for one publication unit, not a required sequence.
+> **First move:** > `PublicationUnit Primary-Subject Discipline` keeps one publication unit explicit about what it is mainly about, what claim or communicative move it carries, and what wider work remains outside.
+>
+> **Governing patterns:** `references/A.6.P.md` `references/A.7.md` `references/E.10.md` `references/F.18.md` `references/E.14.md` `references/E.19.md` `references/C.2.2a.md` `references/A.16.0.md`
 
 ---
 

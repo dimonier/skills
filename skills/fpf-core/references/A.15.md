@@ -36,9 +36,10 @@ dependencies:
 
 # A.15: System-Role–Method–Work Alignment
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** When the alignment is already clear and ongoing Work still needs one next action chosen from current facts within an applicable domain Method, use `A.15.7`.
+> **First move:** Recover the actual values first, then state only the relations needed by the receiving use. A.15 aligns system-role kind, assignment, Method, MethodDescription, capability, WorkPlan, Work, and separate records; it does not create a universa …
+>
+> **Governing patterns:** `references/A.2.md` `references/C.3.md` `references/A.2.1.md` `references/A.3.md` `references/A.13.md` `references/A.15.1.md` `references/A.15.2.md` `references/F.6.md`
 
 ---
 

@@ -30,9 +30,10 @@ dependencies:
 
 # C.26.1: Probe-Coupled Boundary Interaction
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a boundary read, meeting, metric, API read, dashboard, workshop, survey, split, bridge, or message is being used as if it merely revealed or transferred state, but the probe or interaction changes the represented state …
+> **First move:** Before accepting a passive read or unjustified lossless-transfer reading, ask whether the probe or interaction changed what the output may admissibly mean.
+>
+> **Governing patterns:** `references/C.26.md` `references/A.6.md` `references/A.6.B.md` `references/A.6.P.md` `references/A.10.md` `references/B.3.md` `references/C.16.md` `references/F.9.md`
 
 ---
 

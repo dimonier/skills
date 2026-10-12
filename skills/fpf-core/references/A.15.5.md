@@ -34,9 +34,10 @@ dependencies:
 
 # A.15.5: Work-Entry Readiness and Full-Kit Preparation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Teams often say that work is "ready", "full-kitted", "committed", "green", "released", or "good to start." Those words can point to different FPF values: an intended WorkPlan, a PlanItem baseline, a performed preparation activity, a gate de …
+> **First move:** Represent readiness as one domain-local result claim about exact plan content, not as a root U-kind, imported management object, generic container, or default relation occurrence.
+>
+> **Governing patterns:** `references/A.15.md` `references/A.15.2.md` `references/A.15.3.md` `references/B.1.6.md` `references/A.21.md` `references/A.2.8.PER.md` `references/A.15.1.md` `references/A.15.4.md`
 
 ---
 

@@ -33,9 +33,10 @@ dependencies:
 
 # C.32.MLAO: Architecture Candidates to Reduce Cross-Scope Residuals
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner has a recoverable cross-scope or interlevel architecture residual and needs candidate architecture changes that reduce that residual under a declared evolution window.
+> **First move:** Build a residual-reducing frame around one recoverable residual.
+>
+> **Governing patterns:** `references/C.30.ILC.md` `references/C.32.md` `references/C.32.ACS.md` `references/C.32.ACE.md` `references/C.29.md` `references/C.31.ASAP.md` `references/C.32.CONWAY.md` `references/C.32.FAIL.md`
 
 ---
 

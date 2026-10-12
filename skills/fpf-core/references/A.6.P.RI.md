@@ -15,9 +15,10 @@ dependencies:
 
 # A.6.P.RI: Recover Agent-Relative References for Action
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an instruction or account depends on who says, reads or acts on it, and copying its words could change the intended object or action.
+> **First move:** Recover the source reference, establish the receiving purpose, then derive only the interpretation or instruction that those conditions support.
+>
+> **Governing patterns:** `references/A.6.P.md` `references/C.2.1.md` `references/A.6.3.RT.md` `references/A.6.4.md` `references/B.5.EA.md`
 
 ---
 

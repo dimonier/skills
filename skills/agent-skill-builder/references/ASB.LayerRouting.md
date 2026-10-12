@@ -13,11 +13,6 @@ dependencies:
 ## ASB.LayerRouting - Layer routing: is a skill the right guidance layer (vs AGENTS.md, MCP, Memory)?
 
 > **Trigger:** When a "tell the agent something" need arises and it is unclear whether to write a skill, add a line to `AGENTS.md`, install an MCP server, or store a memory entry — or whether to create a skill at all.
-> **Governing patterns:**
->   → `AS.1` (Layer Routing — the AS-DPF pattern this card specializes)
->   → `E.4` (family architecture)
->   → `E.5.3` (unidirectional dependency)
->   → `E.11` (first-practical entry)
 > **Skill dependencies:**
 >   → none
 
@@ -130,17 +125,17 @@ requires discipline to resist the "just make a skill" default.
 
 ### ASB.LayerRouting:10 - Rationale
 
-`AS.1` routes by role not content; `E.4`/`E.5.3` keep the layers as sibling
-artifacts with a unidirectional dependency; `E.11` makes the routing decision the
-first practical entry. A skill is a procedure carrier (`C.33` kind discipline), not
-a fact store and not a tool endpoint.
+`E.4`/`E.5.3` keep the layers as sibling artifacts with a unidirectional
+dependency; `E.11` makes the routing decision the first practical entry. A skill is
+a procedure carrier (`C.33` kind discipline), not a fact store and not a tool
+endpoint.
 
 ### ASB.LayerRouting:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "The Four Layers" + "When to Create" + "When NOT" | Adopt | The four-layer table, decision order, create/not-create tests | Reopen on a skill-payload edition change |
-| AS-DPF `AS.1` Layer Routing | Adopt | Role-based routing test and stop conditions | Reopen on `AS.1` revision |
+| AS-DPF `AS.1` Layer Routing (merged 2026-10-04) | Adopt | Role-based routing test and stop conditions | — merged into this DPF |
 | FPF `E.4`/`E.5.3`/`E.11` | Adopt | Family architecture, unidirectional dependency, practical entry | Reopen on FPF revision |
 
 Best-known line: route by role, not content. Rejected rival: "a skill for every
@@ -148,9 +143,7 @@ need" — rejected as skill bloat.
 
 ### ASB.LayerRouting:12 - Relations
 
-- **Builds on (DPF):** `AS.1` (layer routing).
-- **Builds on (FPF):** `E.4` (family architecture), `E.5.3` (unidirectional dependency), `E.11` (practical entry).
-- **Coordinates with (DPF):** `AS.3` (atomicity), `AS.9` (placement).
-- **Specialized by (LPF):** `ASB.Atomicity` (routing decides whether to split), `ASB.Placement` (routing decides global vs project-local).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.1` (layer routing).
 
 ### ASB.LayerRouting:End

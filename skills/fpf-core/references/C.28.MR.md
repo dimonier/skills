@@ -1,7 +1,7 @@
 ---
 id: C.28.MR
 title: Derive an Intervention Consequence by Mechanism Replacement
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -14,16 +14,17 @@ dependencies:
 
 # C.28.MR: Derive an Intervention Consequence by Mechanism Replacement
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a causal model is available and the working question asks what follows if a mechanism is replaced: a controller uses a different rule, a variable is held at a chosen value, or an action occurs at a specified event.
+> **First move:** **Choose the intervention and question → recover the mechanisms and input law → replace the selected mechanisms → solve the affected relations → obtain the requested consequence → return its interpretation and useful limit.**
+>
+> **Governing patterns:** `references/C.28.md` `references/A.3.3.TR.md` `references/B.5.MPC.md` `references/B.5.RR.md` `references/C.29.1.md`
 
 ---
 
 ## C.28.MR - Derive an Intervention Consequence by Mechanism Replacement
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative
 
 ### C.28.MR:1 - Problem frame

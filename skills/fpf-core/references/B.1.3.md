@@ -12,9 +12,10 @@ dependencies:
 
 # B.1.3: Knowledge Aggregation (Γ_epist): Synthesis and Target-Scheme Compilation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** * **Holonic foundation.** In the FPF, a `U.Episteme` is a holon whose identity is **knowledge-bearing** (A.1). It can be a **statement/claim**, a **model**, a **theory**, a **specification**, a **dataset with semantics**, or a **compiled cl …
+> **First move:** * **U.Episteme** — a claim-bearing knowledge holon. C.2.1 identifies it through the participant-determined `EpistemeConstitutionRelation` over `<claim content, exact EntityOfConcern, effective ReferenceScheme>`.
+>
+> **Governing patterns:** `references/B.1.md` `references/A.1.md` `references/C.2.md`
 
 ---
 

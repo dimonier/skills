@@ -13,7 +13,7 @@ dependencies:
   coordinates_with:
     - A.6.F
     - A.6.M
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.LCA
     - C.30.ILC
     - A.10
@@ -26,9 +26,10 @@ dependencies:
 
 # C.30.AD.BA: Built-Asset Architecture Description and Reference Designation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Built-asset work joins descriptions made for design, fabrication, construction, commissioning, operation, maintenance, adaptation, and decommissioning.
+> **First move:** | ID | Check | Repair when absent | | --- | --- | --- | | `BA-1` | The exact built asset is recoverable, and every used architecture description has one exact ClaimGraph, one EntityOfConcern—built asset, obtaining `ArchitectureRelation`, or …
+>
+> **Governing patterns:** `references/C.30.md` `references/C.30.AD.md` `references/C.30.ASV.md` `references/A.22.md` `references/E.17.md` `references/A.6.F.md` `references/A.6.M.md` `references/C.30.TFS-REL.md`
 
 ---
 

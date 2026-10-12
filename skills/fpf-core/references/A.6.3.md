@@ -25,9 +25,10 @@ dependencies:
 
 # A.6.3: Episteme viewing - EntityOfConcern-preserving episteme construction
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Engineering work often needs a different body of claims about the same thing. Examples include a safety-focused slice of a system description, a normalized technical card, a conservative translation between notations, or a coverage view bui …
+> **First move:** **Local mantra.** Identify X and Y. Hold their EntityOfConcern fixed. State the conservative construction and admitted loss. Add exact correspondence dependencies when used.
+>
+> **Governing patterns:** `references/A.6.0.md` `references/A.6.2.md` `references/C.2.1.md` `references/A.6.3.CR.md` `references/A.6.3.RT.md` `references/A.6.4.md` `references/C.29.md` `references/E.17.0.md`
 
 ---
 

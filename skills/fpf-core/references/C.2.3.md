@@ -17,9 +17,10 @@ dependencies:
 
 # C.2.3: Unified Formality Characteristic F
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Transdisciplinary work needs one shared way to speak about rigor of expression. A research hypothesis in constrained natural language, a software interface specification with explicit invariants, a controller model checked against hybrid ob …
+> **First move:** `C.2.3` defines `U.Formality` as the single governing characteristic for rigor of expression in FPF.
+>
+> **Governing patterns:** `references/C.2.md`
 
 ---
 

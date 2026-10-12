@@ -23,9 +23,11 @@ dependencies:
 
 # E.10.ROLE: Recovering What “Role” Means in the Current Claim
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when claim-bearing wording uses *role* and the current sentence does not yet reveal which object or relation it means.
+> **Problem frame:** Readers meet *role* in organizational, engineering, mathematical, software, documentary, and ordinary language. The same spelling may point to a local classification of systems, one assignment occurrence, participation in a relation, a decl …
+> **First move:** Use the sentence's intended claim, not the trigger word, to select the result.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/F.18.md` `references/F.19.md`
 
 ---
 

@@ -10,9 +10,10 @@ dependencies:
 
 # E.5.2: Notational Independence
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when expressing FPF content or using another expression to carry that content. Keep the conceptual meaning recoverable while choosing an expression that supports the intended work.
+> **First move:** 1. **Explain the meaning and operative use.** Normative content **SHALL** state the concepts, claims and conditions needed for its use, using prose and mathematics as appropriate.
+>
+> **Governing patterns:** `references/E.5.md`
 
 ---
 

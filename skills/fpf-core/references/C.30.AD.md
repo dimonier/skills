@@ -27,13 +27,13 @@ dependencies:
     - E.10.ARCH
   coordinates_with:
     - C.30.P
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.LCA
     - C.30.ILC
     - C.32
     - C.32.MLAO
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - C.18
     - C.19
     - G.5
@@ -55,9 +55,11 @@ dependencies:
 
 # C.30.AD: Architecture Description Adequacy
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when work must create, inspect, compare, reuse, or rely on an architecture description, a set of such descriptions, a generated view of architecture relations, or a description used as a specification.
+> **Problem frame:** Architecture practice needs descriptions that remain useful over time: multi-view documents, view models, generated relation graphs, transformation-flow views, control sketches, module or interface diagrams, deployment views, model cards, s …
+> **First move:** An `ArchitectureDescription` is the local name for a C.2.1 `U.Episteme` that describes one architecture-side EntityOfConcern: a holon, an obtaining `ArchitectureRelation` occurrence, or a selected `U.Structure`.
+>
+> **Governing patterns:** `references/C.30.md` `references/C.30.ASV.md` `references/A.22.md` `references/A.7.md` `references/A.6.3.md` `references/E.17.0.md` `references/E.17.1.md` `references/E.17.2.md`
 
 ---
 

@@ -23,9 +23,10 @@ dependencies:
 
 # F.0.1: Source-Local Meaning Recovery
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** > **One-sentence summary.** Recover what one expression means in one exact source passage before comparing, translating, or reusing it elsewhere.
+> **First move:** 1. **Name the question.** State what answer or action can change if the expression is read differently. 2. **Identify the source.** Give the exact source and edition. A discipline or shelf label is not enough. 3.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.D1.md` `references/F.17.md` `references/F.1.md` `references/F.0.2.md` `references/F.9.md` `references/F.18.md`
 
 ---
 

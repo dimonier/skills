@@ -31,9 +31,10 @@ dependencies:
 
 # A.6.H: Wholeness Language Unpacking (RPR-WHOLE)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Natural language compresses several different engineering questions into the same small vocabulary:
+> **First move:** Enter with:
+>
+> **Governing patterns:** `references/A.6.P.md` `references/A.6.5.md` `references/A.7.md` `references/A.14.md` `references/B.1.1.md` `references/B.1.4.md` `references/A.15.md`
 
 ---
 

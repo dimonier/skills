@@ -21,9 +21,10 @@ dependencies:
 
 # E.2: FPF's Eleven Pillars and Bitter-Lesson Preference (BLP)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use the Eleven Pillars in §4 to assess whether an FPF rule or artifact meets its constitutional obligations. Use the separate BLP policy in §6 when a computational choice claims a scale/generalization advantage or invokes a declared local g …
+> **First move:** FPF rests on **eleven binding pillars**. Every artefact, pattern, and design-rationale record (DRR) must honour the applicable constraints and explain material conflicts.
+>
+> **Governing patterns:** `references/E.1.md` `references/E.3.md`
 
 ---
 

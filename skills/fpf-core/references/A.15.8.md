@@ -22,9 +22,10 @@ dependencies:
 
 # A.15.8: Work-Performance Configuration and Recovery Testing
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when a result succeeds in one configuration but may fail after interruption, handoff, delay, support loss, replacement, or changed conditions, and the decision needs to know which exact relation to repair …
+> **First move:** Choose one branch, keep every System and value separately identified, recover only relations that can change the named result or decision, and run the weakest representative probe that can expose an unsupported dependency.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.15.1.md` `references/A.15.2.md` `references/A.6.RCD.md` `references/F.6.md` `references/C.2.1.md` `references/A.15.5.md` `references/A.15.7.md`
 
 ---
 

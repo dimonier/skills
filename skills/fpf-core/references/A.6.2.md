@@ -23,9 +23,10 @@ dependencies:
 
 # A.6.2: Effect-Free Episteme Morphing: Laws for Mathematical Relations Between Epistemes
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF repeatedly needs to relate one exact episteme to another, often alongside a separately described operation that produced the receiving episteme:
+> **First move:** > **Definition.** An **effect-free episteme morphism** is a local mathematical arrow `f : X -> Y` between two exact epistemes.
+>
+> **Governing patterns:** `references/A.6.0.md` `references/A.6.1.md` `references/A.6.5.md` `references/C.2.1.md` `references/C.29.md` `references/E.10.D2.md` `references/C.3.md` `references/F.9.md`
 
 ---
 

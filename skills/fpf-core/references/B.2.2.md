@@ -32,9 +32,11 @@ dependencies:
 
 # B.2.2: Meta-System Transition: Test the Proposed New Whole as a System
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when B.2 has identified one exact candidate new whole and that same individual must be recognized under the already admitted `U.System` kind: a swarm, production cell, cloud platform, regulated control system, organizationa …
+> **Problem frame:** `B.2` is holon-general. `B.2.2` is its `U.System` specialization.
+> **First move:** After B.2 leaves a whole-reidentification question open, continue with the same exact candidate new whole and direct facts. Add no system-specific result species or context-shaped slice.
+>
+> **Governing patterns:** `references/B.2.md` `references/A.1.md` `references/B.1.2.md` `references/A.14.md` `references/C.13.md` `references/A.12.md` `references/A.3.4.md` `references/A.15.md`
 
 ---
 

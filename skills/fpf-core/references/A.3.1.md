@@ -29,9 +29,10 @@ dependencies:
 
 # A.3.1: `U.Method`: Reusable Way of Doing with Explicit Applicability
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** When several observed Work occurrences or named sources may show a reusable way but Method identity is still only a candidate, use `A.3.1.MR` first.
+> **First move:** `U.Method` is the **reusable semantic way of doing under stated applicability**.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.1.1.md` `references/A.3.md` `references/A.3.2.md` `references/A.6.RCD.md` `references/A.6.1.md` `references/A.6.5.md` `references/A.6.REL.md`
 
 ---
 

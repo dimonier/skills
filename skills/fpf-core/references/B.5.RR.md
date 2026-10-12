@@ -1,7 +1,7 @@
 ---
 id: B.5.RR
 title: Revise Reasoning After a Premise or Question Changes
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -14,16 +14,17 @@ dependencies:
 
 # B.5.RR: Revise Reasoning After a Premise or Question Changes
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when reasoning that you could previously use needs to answer a changed question, or when a premise, observation or application condition changes.
+> **First move:** Start with the receiving question, follow the affected reasoning and derive the result that can now be used. A useful reminder is:
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.RA.md` `references/B.5.RC.md` `references/B.5.MPC.R.md` `references/C.11.DUA.md`
 
 ---
 
 ## B.5.RR - Revise Reasoning After a Premise or Question Changes
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.RR:1 - Problem frame

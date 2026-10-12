@@ -27,9 +27,10 @@ dependencies:
 
 # E.10.DEV: Recovering What Development or Evolution Means in the Current Claim
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** The same umbrella wording is used for unlike subjects. For example, a person develops a capability; an organization changes its working arrangement; an organism matures; a population evolves through membership and lineage relations; a model …
+> **First move:** Recover the current claim from the subject and use rather than from the umbrella word.
+>
+> **Governing patterns:** `references/F.19.md` `references/E.10.md` `references/E.10.ARCH.md` `references/A.3.4.P.md` `references/A.2.2.md` `references/E.23.CAE.md` `references/A.3.3.md` `references/B.4.md`
 
 ---
 

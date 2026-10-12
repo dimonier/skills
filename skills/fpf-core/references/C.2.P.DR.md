@@ -30,9 +30,11 @@ dependencies:
 
 # C.2.P.DR: Repair Claims Based on Declarative Form Alone (Declarative Representation Precision Restoration)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a declarative representation is about to guide action, reliance, gate, release, evidence, method, mechanism, work, or pattern-application claims by its shape alone.
+> **Problem frame:** FPF work meets many declarative-looking expressions and many direct objects or relations: graph and table artifacts; paths and selected structures; state predicates and values; dashboard and publication faces; evidence, provenance, source …
+> **First move:** Repair declarative-representation overread by separating the visible expression, the direct object or relation, and any representation use before naming the subject pattern for the current claim.
+>
+> **Governing patterns:** `references/C.2.P.md` `references/E.10.md` `references/E.10.ARCH.md` `references/F.19.md` `references/C.29.md` `references/C.2.1.md` `references/A.3.1.md` `references/A.3.2.md`
 
 ---
 

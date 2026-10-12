@@ -18,9 +18,10 @@ dependencies:
 
 # F.0.2: Semantic Synthesis across Source Ontologies
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when several sources describe the same working question through materially different concepts, relations, explanations, or boundaries, and those differences can change a named authoring decision or a contribution to one sub …
+> **First move:** 1. **Name the receiving question and use.** State the authoring decision or subject-pattern contribution that may change. Name the practical action and first result under consideration when a pattern contribution is being proposed. 2.
+>
+> **Governing patterns:** `references/F.0.1.md` `references/F.1.md` `references/F.9.md` `references/G.2.md` `references/E.10.ARCH.md` `references/E.4.DPF.md` `references/C.39.md` `references/E.4.CM.md`
 
 ---
 
@@ -256,6 +257,6 @@ Jaakkola's question and source-role discipline, Okoli's extraction and iterative
 - **Coordinates with:** C.39 for general Method construction, connected explanation and change, and E.4.CM for their application to framework authoring. Their methodological results and this semantic comparison remain distinct and can revise each other.
 - **Boundary:** Domain claims produced through this method remain in the subject FPF pattern or named DPF selected by the later content decision.
 
-[fpf-c28-4-4-ref]: C.28-CausalUse-CAL-Causal-Use-Questions-Causality-Ladder-Rungs-Identification-and-Realizability.md#c2844---identification-result
+[fpf-c28-4-4-ref]: https://github.com/ailev/FPF/blob/main/FPF-Spec.md#c2844---identification-result
 
 ### F.0.2:End

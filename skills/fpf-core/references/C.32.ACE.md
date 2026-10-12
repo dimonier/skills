@@ -32,9 +32,10 @@ dependencies:
 
 # C.32.ACE: Architecture Characteristic Eval Programs
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an architecture team already has project architecture-characteristic rows and must evaluate the current architecture, compare candidate architectures, monitor evolution, or prepare a selection input.
+> **First move:** Create an architecture-characteristic eval program only after the evaluated criteria rows exist in `C.32.ACS` or a declared C.25 Q-Bundle slot.
+>
+> **Governing patterns:** `references/C.32.ACS.md` `references/C.16.md` `references/C.25.md` `references/E.13.md` `references/C.32.md` `references/C.32.MLAO.md` `references/C.32.PAD.md` `references/A.19.CPM.md`
 
 ---
 

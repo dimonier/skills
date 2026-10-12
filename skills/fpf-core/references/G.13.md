@@ -19,7 +19,7 @@ keywords:
   - telemetry pin.
 dependencies:
   builds_on:
-    - G.C
+    - G.Core
     - G.2
     - G.7
     - G.9
@@ -34,9 +34,10 @@ dependencies:
 
 # G.13: External Interop Hooks for SoTA Discipline Packs (conceptual; normative when used)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF already supports lawful characterization, evidence wiring, selector‑side set returns, parity, shipping, dashboards, and refresh.
+> **First move:** **Builds on:** `G.Core`.
+>
+> **Governing patterns:** `references/G.Core.md` `references/G.2.md` `references/G.7.md` `references/G.9.md` `references/G.12.md` `references/A.19.md` `references/A.18.md` `references/G.0.md`
 
 ---
 

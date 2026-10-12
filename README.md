@@ -57,6 +57,7 @@ The skills transform the AI into a specialized assistant that follows proven met
   - [Project Management](#project-management)
     - [🗂️ Project Vault](#️-project-vault)
   - [Compact Skills](#compact-skills)
+    - [🗜️ Business Analysis & Requirements Engineering (compacted)](#️-business-analysis--requirements-engineering-compacted)
     - [🗜️ Project Vault (compacted)](#️-project-vault-compacted)
   - [Space Planning \& Organization](#space-planning--organization)
     - [🚿 Bathroom Planner](#-bathroom-planner)
@@ -69,7 +70,7 @@ Structured reasoning frameworks and domain-specific methodologies for systematic
 
 ### 🧠 First Principles Framework (FPF Core)
 
-Root framework and pattern library providing auditable thinking, evidence chains, and systematic problem-solving patterns. Serves as the governing foundation for all DPF and LPF skills. Patterns are loaded individually from `references/` (pattern reference files + INDEX + context sections) via a fast index — never the full spec.
+Root framework and pattern library providing auditable thinking, evidence chains, and systematic problem-solving patterns. Serves as the governing foundation for all DPF and LPF skills. Patterns are loaded individually via a fast index — never the full spec: pattern reference files + `INDEX.md` from `references/`, plus orienting context sections in `context/`.
 
 **Use when:**
 - Guiding reasoning on engineering, research, and management tasks
@@ -200,7 +201,7 @@ Keeps the `fpf-core` skill in sync with the canonical FPF monolith (`FPF-Spec.md
 
 ### 🔧 Agent Skill Builder
 
-Local Practices Framework (LPF) for authoring, reviewing, and evolving agent skills: whether a skill is even the right guidance layer (vs `AGENTS.md` / MCP / Memory), trigger design (`description`), progressive disclosure, skill anatomy & frontmatter, atomicity, the weak-model quality gate, placement & portability, evolution, security & trust, and opt-in material compaction. 10 `ASB.*` patterns — routing `SKILL.md` + `references/`.
+Local Practices Framework (LPF) for authoring, reviewing, and evolving agent skills: whether a skill is even the right guidance layer (vs `AGENTS.md` / MCP / Memory), trigger design (`description`) and its empirical optimization, progressive disclosure, skill anatomy & frontmatter, atomicity, inter-skill composition, the end-to-end evaluation loop, the weak-model quality gate, placement & portability, evolution, security & trust, and opt-in material compaction. 13 `ASB.*` patterns — routing `SKILL.md` + `references/`.
 
 **Depends on:** `fpf-core`, `skill-creator`, `episteme-compaction` (some cases)
 
@@ -240,6 +241,16 @@ Local Practices Framework (LPF) for managing project state in a structured markd
 ## Compact Skills
 
 Compact (minified) runtime projections of some skills — smaller, token-economical variants for agents that need the method without the full provenance, derivation, and readiness metadata. A compact skill keeps only the runtime allow-list (method + trigger + routing); its `references/*.md` bodies are `episteme` blocks with no per-card frontmatter, and it names its canonical source. The full `skills/` carrier remains the editable source of truth.
+
+### 🗜️ Business Analysis & Requirements Engineering (compacted)
+
+Compacted runtime projection of `dpf-business-analysis`: the same requirements-lifecycle patterns (stakeholder identification, elicitation, specification, prioritization, validation, traceability, change management) plus business-process / use-case / data / security modeling as 12 episteme-block patterns with an FPF grounding slot per card. Readiness (collective): `source-faithful`.
+
+**Depends on:** `fpf-core`
+
+**Canonical source:** `skills/dpf-business-analysis/` (the full, editable DPF carrier).
+
+**Location:** `skills-compact/business-analysis/`
 
 ### 🗜️ Project Vault (compacted)
 

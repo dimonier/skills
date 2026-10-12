@@ -26,7 +26,7 @@ dependencies:
     - C.32
     - C.32.PAD
     - C.32.ADR
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.STRAT
     - A.6.M
     - C.31
@@ -37,9 +37,10 @@ dependencies:
 
 # C.34: Assess Structural Correspondence for Architecture Use (Equivalence and Morphisms)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when two descriptions, views, models, generated outputs, or realized observations that carry or describe selected structure are being treated as the same enough for architecture work and the practitioner must say what selec …
+> **First move:** Create one `StructuralPreservationAdequacyNote@Context` before relying on the same-enough claim.
+>
+> **Governing patterns:** `references/A.22.md` `references/C.30.md` `references/C.30.ASV.md` `references/C.30.AD.md` `references/C.29.md` `references/F.9.md` `references/C.16.md` `references/C.25.md`
 
 ---
 

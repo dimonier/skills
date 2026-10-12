@@ -14,9 +14,9 @@ keywords:
 
 # A.19.USCM: Unified Scoring Mechanism (USCM)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** * **Suite stage:** `score` (ordering lives only in `A.19.CHR:4.5` / `suite_protocols`; suite membership is a set in `A.19.CHR:4.2`).
+> **Problem frame:** FPF’s Characterization (CHR) suite treats scoring as a **distinct mechanism boundary** within the CHR suite (authoritative membership: `A.19.CHR:4.2`).
+> **First move:** USCM is the **canonical scoring mechanism** in the CHR suite. It defines:
 
 ---
 

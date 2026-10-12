@@ -1,7 +1,7 @@
 ---
 id: B.5.RC
 title: Recover a Construction from Its Description
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -15,16 +15,17 @@ dependencies:
 
 # B.5.RC: Recover a Construction from Its Description
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a description points to a result you need, but you cannot yet recover how to obtain it from what is available. You may be reading a mathematical construction, an assembly method or a way to transform data.
+> **First move:** Recover the construction in two connected directions: from the required result toward its prerequisites, then from the available inputs toward a result. Keep the needed property in view throughout.
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.RA.md` `references/A.6.3.RT.md` `references/C.29.1.md` `references/C.29.2.md` `references/C.39.md`
 
 ---
 
 ## B.5.RC - Recover a Construction from Its Description
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.RC:1 - Problem frame

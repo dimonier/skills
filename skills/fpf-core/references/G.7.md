@@ -20,7 +20,7 @@ keywords:
   - RSCRTriggerKindId.
 dependencies:
   builds_on:
-    - G.C
+    - G.Core
     - G.2
     - F.9
     - F.3
@@ -42,9 +42,10 @@ dependencies:
 
 # G.7: Cross-Tradition Bridge Calibration Kit (BridgeMatrix → BridgeCards + BCT/Sentinels)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** SoTA synthesis (**G.2**) can legitimately preserve pluralism by exporting a **BridgeMatrix**: a Tradition×Tradition inventory of “comparable constructs” with preliminary notes (candidate correspondences, likely losses, tentative levels).
+> **First move:** **Builds on:** `G.Core` (Part‑G core invariants; citation/delegation hub)
+>
+> **Governing patterns:** `references/G.Core.md` `references/G.2.md` `references/F.9.md` `references/F.3.md` `references/F.7.md` `references/B.3.md` `references/G.6.md` `references/E.18.md`
 
 ---
 

@@ -23,9 +23,11 @@ dependencies:
 
 # C.16.P: Restore Precision to Characteristic and Scale Wording
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when wording such as `axis`, `dimension`, `feature`, `property`, `metric`, `indicator`, `score`, `strong`, `weak`, `robust`, `level`, `coordinate`, `threshold`, `rating`, `benchmark`, `quality coordinate`, or `architecture …
+> **Problem frame:** Working texts often need compact characterization words. The problem starts when compact words begin to carry comparison, proof, selection, gate, readiness, release, quality, or decision claim without recoverable characteristic and scale co …
+> **First move:** Repair compressed characterization wording by producing a `characteristic-scale repair note` or equivalent local rewrite.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/A.17.md` `references/A.18.md` `references/C.16.md` `references/A.19.md` `references/C.25.md` `references/C.29.md`
 
 ---
 
@@ -127,7 +129,7 @@ CharacteristicScaleRepairNote:
   unit?:
   scoringMethod?:
   indicatorRelationRef?: U.RelationRef for the selected indicated-characteristic, proxy, measurement-use, evidence-use, or other direct relation
-  indicatorRelationDisposition: direct-relation | ordinary-indicator-wording | missing-governor
+  indicatorRelationDisposition?: direct-relation | ordinary-indicator-wording | missing-governor
   comparisonReferenceOrComparatorSet?:
   thresholdRuleOrReference?:
   proxyDistortionRisk?:
@@ -139,7 +141,7 @@ CharacteristicScaleRepairNote:
   disposition:
 ```
 
-Use the full note only when the repair must remain inspectable. Use a local rewrite when one sentence clearly states the characteristic and scale construction and subject pattern. Keep necessary subject applicability or stop conditions in the repaired wording or `admissibleUse`. Include `nonAdmissibleUse` as an explanatory guard only under F.19:4's full independent-ground, plausible-reader, contribution, and smallest-clear-correction test; an unused guard needs no absence entry.
+Use the full note only when the repair must remain inspectable. Use a local rewrite when one sentence clearly states the characteristic and scale construction and subject pattern. In a note, include `indicatorRelationDisposition` when indicator wording or an indicator/proxy claim is under repair, following §4.1; otherwise omit it. Keep necessary subject applicability or stop conditions in the repaired wording or `admissibleUse`. Include `nonAdmissibleUse` as an explanatory guard only under F.19:4's full independent-ground, plausible-reader, contribution, and smallest-clear-correction test; an unused guard needs no absence entry.
 
 #### C.16.P:4.1 - Recovery sequence
 

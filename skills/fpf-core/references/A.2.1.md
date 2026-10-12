@@ -26,9 +26,11 @@ dependencies:
 
 # A.2.1: `U.SystemRoleAssignment` - Contextual System-Role Assignment
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain name.** Assignment to a system role.
+> **Problem frame:** `InspectorSystemRole` can classify Robot-7 for one maintenance slice without any assignment occurrence. Conversely, an assignment can obtain while no Work occurs, and a local `KindSignature` can use or ignore that assignment when classifyin …
+> **First move:** Declare each assignment relation species directly under `U.SystemRoleAssignment`. Do not give the family one universal participant signature. Every admitted species declares:
+>
+> **Governing patterns:** `references/A.2.md` `references/A.6.REL.md` `references/A.6.5.md` `references/C.2.1.md` `references/A.2.2.md` `references/A.2.5.md` `references/A.2.7.md` `references/A.15.1.md`
 
 ---
 

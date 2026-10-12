@@ -12,10 +12,6 @@ dependencies:
 ## ASB.SecurityAndTrust - Security & trust: scripts as attack surface, third-party skills
 
 > **Trigger:** When installing a third-party skill, adding `scripts/` to a skill, or deciding how much to trust a downloaded skill bundle.
-> **Governing patterns:**
->   → `AS.11` (Security & Trust — the AS-DPF pattern this card specializes)
->   → `E.5.3` (guard-rails)
->   → `C.33` (carrier admission — third-party carriers)
 > **Skill dependencies:**
 >   → none
 
@@ -101,16 +97,16 @@ trades convenience for control.
 
 ### ASB.SecurityAndTrust:10 - Rationale
 
-`AS.11` fixes scripts-as-attack-surface and third-party trust; `E.5.3` frames this as
-a guard-rail; `C.33` treats a third-party bundle as a carrier whose structure is
-captured, not adopted. The framework issues no legal/security verdict.
+`E.5.3` frames this as a guard-rail; `C.33` treats a third-party bundle as a carrier
+whose structure is captured, not adopted. The framework issues no legal/security
+verdict.
 
 ### ASB.SecurityAndTrust:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` Anti-Pattern "Downloading Awesome Lists" + security note | Adopt | Study-don't-install, selective global install, attack surface | Reopen on a skill-payload edition change |
-| AS-DPF `AS.11` Security & Trust | Adopt | Permission gating, carrier provenance, no verdict | Reopen on `AS.11` revision |
+| AS-DPF `AS.11` Security & Trust (merged 2026-10-04) | Adopt | Permission gating, carrier provenance, no verdict | — merged into this DPF |
 | cool-repo "awesome-agent-skills" as install-and-go | Reject as architecture | Studied as patterns; not installed wholesale | Reopen if provenance/quality guarantees emerge |
 
 Best-known line: study third-party skills, install selectively. Rejected rival:
@@ -118,9 +114,7 @@ Best-known line: study third-party skills, install selectively. Rejected rival:
 
 ### ASB.SecurityAndTrust:12 - Relations
 
-- **Builds on (DPF):** `AS.11` (security & trust).
-- **Builds on (FPF):** `E.5.3` (guard-rails), `C.33` (carrier admission).
-- **Coordinates with (DPF):** `AS.9` (global placement security surface).
-- **Coordinates with (LPF):** `ASB.Placement` (selective global install is stated in both).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.11` (security & trust).
 
 ### ASB.SecurityAndTrust:End

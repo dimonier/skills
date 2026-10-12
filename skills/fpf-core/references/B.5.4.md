@@ -13,9 +13,10 @@ dependencies:
 
 # B.5.4: Recognize a Reusable Concept in a Concrete Situation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** you understand a concept's explanation but cannot yet connect it to an unfamiliar situation. You need to interpret what is happening before you can explain it, construct a model or choose the next observation.
+> **First move:** 1. **Name the question.** Say what the interpretation should enable: reducing glare, explaining a changed reading, arranging compatible activities or choosing an observation. This determines which distinctions matter. 2.
+>
+> **Governing patterns:** `references/B.5.md` `references/C.3.md` `references/C.29.md` `references/A.7.1.md`
 
 ---
 
@@ -135,7 +136,7 @@ Reconsider this choice if an intended reader cannot fill a decisive relation fro
 - B.5 connects the interpreted question to construction, inference, observation and a useful continuation.
 - A.7.1 supplies consequence-guided ontological repair when a working claim gives a defeated engineering result.
 
-[fpf-b5-5-1-ref]: B.5-Canonical-Reasoning-Cycle.md#b551---a-counterexample-becomes-a-constructive-mathematical-question
-[fpf-b5-4-1-1-ref]: B.5-Canonical-Reasoning-Cycle.md#b5411---propose-a-first-model
+[fpf-b5-5-1-ref]: https://github.com/ailev/FPF/blob/main/FPF-Spec.md#b551---a-counterexample-becomes-a-constructive-mathematical-question
+[fpf-b5-4-1-1-ref]: https://github.com/ailev/FPF/blob/main/FPF-Spec.md#b5411---propose-a-first-model
 
 ### B.5.4:End

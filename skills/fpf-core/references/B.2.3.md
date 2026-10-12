@@ -20,9 +20,11 @@ dependencies:
 
 # B.2.3: Meta-Holon Transition With Episteme Result
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when B.2 has identified one exact candidate new whole and that same individual must be recognized under the already admitted `U.Episteme` kind: a theory, model family, standard, doctrine, specification body, research progra …
+> **Problem frame:** A library is not a theory, and a theory is not its publication.
+> **First move:** Use B.2.3 as the `U.Episteme` specialization of B.2. Reuse B.2's exact existing whole, exact candidate new whole, direct construction facts, and optional C.2.1 records; add no context-shaped slice or episteme-result schema.
+>
+> **Governing patterns:** `references/A.1.md` `references/C.2.1.md` `references/E.24.UK.md` `references/C.2.P.md` `references/C.2.P.DR.md` `references/E.17.md` `references/A.10.md` `references/B.3.md`
 
 ---
 

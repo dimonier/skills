@@ -33,9 +33,10 @@ dependencies:
 
 # A.15.6: Recover What Project, Process, or Case Wording Refers To
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when project, process, case, program, initiative, or situation wording is about Work and change, but the claim does not yet reveal whether it concerns one performed Work whole, a reusable way, a selected …
+> **First move:** Recover the direct subject selected by the working concern. Use the pattern whose `Solution` answers that subject question, then relate plans, Systems, Transformations, results, descriptions, and publications through their own obtaining rel …
+>
+> **Governing patterns:** `references/C.2.1.md` `references/C.11.md` `references/A.15.1.md` `references/A.3.1.md` `references/A.22.md` `references/A.3.4.md` `references/C.18.md` `references/A.1.md`
 
 ---
 

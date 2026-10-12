@@ -16,9 +16,10 @@ dependencies:
 
 # A.11.OP: Decision-Relevant Least Action and Operational Parsimony: Test a Proposed Requirement
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when someone proposes making an action or apparatus mandatory and a plausible question remains: does this requirement change the subject work, or does it only make the route look controlled?
+> **First move:** Apply one bounded admission question before making the proposed action or apparatus mandatory.
+>
+> **Governing patterns:** `references/C.11.DUA.md` `references/C.11.md` `references/E.11.PUA.md` `references/E.11.PUR.md` `references/C.19.2.md` `references/E.13.md` `references/E.23.md`
 
 ---
 

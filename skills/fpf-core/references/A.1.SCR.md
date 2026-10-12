@@ -16,9 +16,11 @@ dependencies:
 
 # A.1.SCR: Finding the Acting or Changed System
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Use this when.** Use this pattern when a decision depends on which exact system acts, is intended to change, carries a capability, persists through a lifecycle, or is being considered or designated as the project system-of-interest—and th …
+> **Problem frame:** Familiar nouns can pull attention toward the wrong system or erase a supported proposed-system reading. *Mastery* may name a capability or the exact physical/operational whole `SutureControl-M17`.
+> **First move:** Start with four plain statements:
+>
+> **Governing patterns:** `references/A.1.md` `references/A.15.6.md` `references/A.1.STM.md` `references/A.6.RCD.md` `references/E.10.md` `references/F.18.md`
 
 ---
 

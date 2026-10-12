@@ -14,7 +14,7 @@ keywords:
   - mixed modes.
 dependencies:
   builds_on:
-    - C.2.2
+    - C.2.2a
   coordinates_with:
     - C.2.LS
     - F.9.1
@@ -22,9 +22,10 @@ dependencies:
 
 # C.2.6: `U.LanguageStateAnchoringMode` — How Is the Episteme Anchored?
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Published position claims in the declared language-state chart over `U.CharacteristicSpace` differ not only by articulation and closure, but by how the `U.Episteme` named in that claim is anchored to bodies, traces, model states, documents …
+> **First move:** `U.LanguageStateAnchoringMode` is a nominal characteristic that states the primary anchoring regime of the `U.Episteme` named by the current position claim: bodily enactment, trace, model state, document, operator loop, or an explicit mixed …
+>
+> **Governing patterns:** `references/C.2.2a.md` `references/C.2.LS.md` `references/F.9.1.md`
 
 ---
 

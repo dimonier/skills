@@ -33,9 +33,10 @@ dependencies:
 
 # A.6.3.RT: Representation-Scheme Transition: Change Representation of the Same EntityOfConcern
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when practical content must survive a change of representation scheme or reasoning medium: prose to table, table to diagram, diagram to structured notation, a model to a different inspectable rendering, or another declared …
+> **First move:** Produce the useful target first:
+>
+> **Governing patterns:** `references/A.6.3.md` `references/A.6.2.md` `references/C.2.1.md` `references/A.1.1.md` `references/A.15.1.md` `references/A.6.3.CR.md` `references/A.6.3.NAR.md` `references/A.6.3.CSC.md`
 
 ---
 

@@ -17,9 +17,11 @@ dependencies:
 
 # C.3.4: KindUseAdaptationDeclaration — Tailor the Use of an Existing Kind
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use C.3.4 when a procedure needs a named local way of using an existing kind without claiming another kind. Typical cases include accepting `Vehicle` candidates only when they have ABS, using local spelling `X-Auth` for `AuthHeader`, or com …
+> **Problem frame:** Teams often need a local projection of a widely used kind: `Vehicle` with ABS for one procedure, or local spelling `X-Auth` for `AuthHeader`. Cloning a kind for every use fragments catalogs and creates false bridge pressure.
+> **First move:** | Force | Tension to resolve | | --- | --- | | Local specialization vs common core | A use needs tailoring without forking the base kind. | | Expressivity vs determinism | Real constraints must remain reproducibly checkable.
+>
+> **Governing patterns:** `references/C.3.1.md` `references/C.3.2.md` `references/C.2.1.md` `references/C.3.3.md` `references/A.2.6.md` `references/F.9.md` `references/C.3.A.md`
 
 ---
 

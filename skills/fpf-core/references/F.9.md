@@ -39,9 +39,10 @@ dependencies:
 
 # F.9: Relate Local Meanings across Contexts (Alignment and Bridge)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Govern one actual semantic `Bridge` relation between two exact F.17 `SchemeSenseCell` values from different semantic contexts.
+> **First move:** Start with the two exact local senses, not with a context object, mapping table, or card. Resolve each endpoint as an F.17 `SchemeSenseCell` coordinate:
+>
+> **Governing patterns:** `references/F.17.md` `references/F.18.md` `references/C.2.1.md` `references/F.0.1.md` `references/F.7.md` `references/F.8.md` `references/A.10.md` `references/B.3.md`
 
 ---
 

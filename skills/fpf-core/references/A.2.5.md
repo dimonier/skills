@@ -26,9 +26,11 @@ dependencies:
 
 # A.2.5: SystemRoleAssignmentStateRelation - Assignment-State Recognition for Work Admission
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain designations.** Say “this assignment to a system role satisfies this state condition” for the relation and “state condition for an assignment to a system role” for the predicate.
+> **Problem frame:** An occurrence of a declared `U.SystemRoleAssignment` species assigns an admitted System to one local system-role kind and supplies any other values required by that species.
+> **First move:** Start from a readable assertion:
+>
+> **Governing patterns:** `references/A.2.1.md` `references/A.2.md` `references/C.3.md` `references/A.6.REL.md` `references/A.6.5.md` `references/A.2.2.md` `references/A.2.7.md` `references/A.15.md`
 
 ---
 

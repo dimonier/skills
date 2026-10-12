@@ -16,9 +16,11 @@ dependencies:
 
 # E.14: Human-Centric Working-Model: Readable Claims and Recoverable Assurance
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when FPF text needs to stay readable as one human working model while heavier mapping, logical, constructive, or empirical assurance remains recoverable underneath it.
+> **Problem frame:** Establish a **single, human-centric Working-Model** that practitioners can read, discuss, and evolve **without first reading the full assurance account**.
+> **First move:** Human-facing patterns also need EntityOfConcern stability across the two reading-order text blocks. The working reader should not meet one object in the recognition text and a different ontological kind in the assurance text.
+>
+> **Governing patterns:** `references/E.7.md` `references/E.8.md` `references/C.2.3.md` `references/B.3.5.md` `references/C.13.md` `references/E.10.md`
 
 ---
 
@@ -164,7 +166,7 @@ This section defines **what each layer is for**, **what it guarantees when selec
 
 **What to check.** When Mapping assurance is selected, verify the Working-Model label's alignment to its chosen model value in the current scope. Recover the synonyms, abbreviations, locales, and registers needed for that comparison in the Mapping account. This can contribute to **Concept-Bridge Assurance (CBA)** under B.3.3 when it establishes a claim-relevant meaning correspondence; collecting labels alone does not raise assurance.
 
-**Deliverable.** When the current use needs source-word alignment, provide a compact alignment table for that scope. It makes obvious which **one label** the Working-Model shows and which background labels remain source wording.
+**Deliverable.** When the current use needs source-word alignment, provide a compact alignment account for that scope. It makes obvious which **one label** the Working-Model shows and which background labels remain source wording.
 
 *(Rationale: Working teams speak many dialects; the Working‑Model speaks one. Mapping is the interpreter.)*
 

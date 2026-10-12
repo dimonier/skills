@@ -17,9 +17,10 @@ dependencies:
 
 # C.3.3: `KindBridge` and `CL^k` — Correspondence between Distinct Kinds
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Typed reuse can fail because a claim's scope changed, because the receiving use employs another kind, or because wording changed meaning. These are separate questions.
+> **First move:** | Force | Tension to resolve | | --- | --- | | Same-kind reuse vs bridge discipline | Do not invent a bridge for provenance, but make real distinct-kind correspondence explicit.
+>
+> **Governing patterns:** `references/C.3.1.md` `references/C.3.2.md` `references/C.2.1.md` `references/A.2.6.md` `references/C.2.2.md` `references/A.6.REL.md` `references/F.9.md`
 
 ---
 

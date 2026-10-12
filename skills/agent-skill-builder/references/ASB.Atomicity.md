@@ -12,10 +12,6 @@ dependencies:
 ## ASB.Atomicity - Atomicity & decomposition: one skill, one responsibility
 
 > **Trigger:** When a draft skill is growing past ~500 lines, accumulating exceptions, or covering what is clearly more than one profession.
-> **Governing patterns:**
->   → `AS.3` (Atomicity & Decomposition — the AS-DPF pattern this card specializes)
->   → `E.4` (family architecture — sibling artifacts)
->   → `E.5.3` (acyclicity across chained skills)
 > **Skill dependencies:**
 >   → `create-agent-skill` (atomicity)
 
@@ -109,25 +105,24 @@ must stay acyclic (`E.5.3`).
 
 ### ASB.Atomicity:10 - Rationale
 
-`AS.3` fixes the action-split and the mega-skill anti-pattern; `E.4` treats sibling
-skills as family artifacts; `E.5.3` keeps chained skills acyclic. Routing shared
-content by role preserves both `AGENTS.md` leanness and skill portability.
+`E.4` treats sibling skills as family artifacts; `E.5.3` keeps chained skills acyclic.
+Routing shared content by role preserves both `AGENTS.md` leanness and skill
+portability.
 
 ### ASB.Atomicity:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "The Atomicity Principle" (split by action, not domain) | Adopt | The atomicity test and the atomic sibling examples | Reopen on a skill-payload edition change |
-| AS-DPF `AS.3` Atomicity & Decomposition | Adopt | Mega-skill repair, shared-content routing | Reopen on `AS.3` revision |
-| AS-DPF `AS.12` Inter-Skill Composition | Adopt (referenced) | Chaining via natural triggering | Reopen on `AS.12` revision |
+| AS-DPF `AS.3` Atomicity & Decomposition (merged 2026-10-04) | Adopt | Mega-skill repair, shared-content routing | — merged into this DPF |
+| AS-DPF `AS.12` Inter-Skill Composition (merged 2026-10-04) | Adopt (referenced) | Chaining via natural triggering | — merged into this DPF |
 
 Best-known line: one skill, one responsibility; chain via triggering. Rejected rival:
 the mega-skill — rejected as `AGENTS.md` bloat in a different directory.
 
 ### ASB.Atomicity:12 - Relations
 
-- **Builds on (DPF):** `AS.3` (atomicity).
-- **Builds on (FPF):** `E.4` (family architecture), `E.5.3` (acyclicity).
-- **Coordinates with (DPF):** `AS.4` (externalize shared content), `AS.12` (composition via chaining), `AS.7` (atomicity improves trigger accuracy).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.3` (atomicity).
 
 ### ASB.Atomicity:End

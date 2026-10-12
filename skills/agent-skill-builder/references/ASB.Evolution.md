@@ -13,11 +13,6 @@ dependencies:
 ## ASB.Evolution - Skill evolution & currentness: the 'offer to update' rule and refresh triggers
 
 > **Trigger:** When a skill produces a result the owner is dissatisfied with, when the process is clarified, or when the tools/agents/sources the skill depends on change.
-> **Governing patterns:**
->   → `AS.10` (Skill Evolution & Currentness — the AS-DPF pattern this card specializes)
->   → `E.23` (improvement loop)
->   → `G.11` (currentness, edition pins, decay)
->   → `E.4.PFR` (edition/deprecation records)
 > **Skill dependencies:**
 >   → `create-agent-skill` (evolution rule)
 
@@ -111,16 +106,16 @@ structural problem, not a maintenance burden.
 
 ### ASB.Evolution:10 - Rationale
 
-`AS.10` fixes the offer rule and refresh triggers; `E.23` requires improvement with a
-target level; `G.11` governs currentness and edition pins; `E.4.PFR` records
-edition/deprecation. Together they make the skill's currency auditable.
+`E.23` requires improvement with a target level; `G.11` governs currentness and
+edition pins; `E.4.PFR` records edition/deprecation. Together they make the skill's
+currency auditable.
 
 ### ASB.Evolution:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "Making Skills Evolve" (offer-to-update rule, `CHANGELOG`) | Adopt | The hardcoded rule and the three agent steps | Reopen on a skill-payload edition change |
-| AS-DPF `AS.10` Skill Evolution & Currentness | Adopt | Refresh triggers (tool/agent/source/model/supersession) | Reopen on `AS.10` revision |
+| AS-DPF `AS.10` Skill Evolution & Currentness (merged 2026-10-04) | Adopt | Refresh triggers (tool/agent/source/model/supersession) | — merged into this DPF |
 | FPF `E.23`/`G.11`/`E.4.PFR` | Adopt | Improvement loop, currentness, deprecation records | Reopen on FPF revision |
 
 Best-known line: hardcode the offer-to-update rule. Rejected rival: "a skill is
@@ -128,8 +123,7 @@ finished once written" — rejected as silent decay.
 
 ### ASB.Evolution:12 - Relations
 
-- **Builds on (DPF):** `AS.10` (evolution & currentness).
-- **Builds on (FPF):** `E.23` (improvement loop), `G.11` (currentness), `E.4.PFR` (edition/deprecation).
-- **Coordinates with (DPF):** `AS.8` (re-run the weak-model gate on revision).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.10` (evolution & currentness).
 
 ### ASB.Evolution:End

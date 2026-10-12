@@ -15,7 +15,7 @@ dependencies:
     - C.25
   coordinates_with:
     - E.18.NET
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.32.MLAO
     - C.32.FAIL
     - C.32.PAD
@@ -28,9 +28,10 @@ dependencies:
 
 # C.32.CONWAY: Architecture-Influence and Transformed-Architecture Correspondence
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when one architecture-side source — recovered as an exact described holon, selected `U.Structure`, and either an obtaining C.30 `ArchitectureRelation` or truthful modal `ArchitectureClaim` — or another independently typed W …
+> **First move:** Build the local synthesis frame first. Admit a relation kind only through the applicable E.24-family admission pattern and direct settlement. Use that pattern's predicate and applicability to test the current pair.
+>
+> **Governing patterns:** `references/C.32.md` `references/A.3.4.md` `references/A.12.md` `references/A.15.1.md` `references/A.22.md` `references/C.30.md` `references/C.32.ACS.md` `references/C.25.md`
 
 ---
 

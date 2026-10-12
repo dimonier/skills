@@ -26,9 +26,11 @@ dependencies:
 
 # C.3: Kinds, Intent and Extent, and Typed Reasoning
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a claim needs a reusable kind, a subkind comparison, a judgment about whether one exact candidate satisfies one kind, or an optional representation of the candidates that satisfy it in one exact context slice.
+> **Problem frame:** `U.Kind` is the admitted meta-kind whose individuals are reusable intensional classification distinctions. One kind individual is recovered by its declared candidate domain, the membership condition that distinguishes intended members from …
+> **First move:** Keep these four objects separately recoverable:
+>
+> **Governing patterns:** `references/A.1.md` `references/A.2.6.md` `references/C.2.1.md` `references/E.24.UK.md` `references/C.3.1.md` `references/C.3.2.md` `references/C.3.3.md` `references/F.9.md`
 
 ---
 

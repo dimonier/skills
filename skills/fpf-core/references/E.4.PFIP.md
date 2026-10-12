@@ -1,7 +1,7 @@
 ---
 id: E.4.PFIP
 title: "Principle-Framework Publication Integration and Preservation"
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -21,16 +21,17 @@ dependencies:
 
 # E.4.PFIP: Principle-Framework Publication Integration and Preservation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when accepted changes are being assembled into a candidate FPF, DPF, or LPF publication and the maintainer must answer either of two questions:
+> **First move:** For a candidate framework publication with a predecessor, run two independent comparisons:
+>
+> **Governing patterns:** `references/C.2.1.md` `references/E.24.PUB.md` `references/E.17.md` `references/E.11.md` `references/C.33.md` `references/C.34.md` `references/E.8.md` `references/E.4.FPF.md`
 
 ---
 
 ## E.4.PFIP - Principle-Framework Publication Integration and Preservation
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless explicitly marked informative
 
 ### E.4.PFIP:1 - Problem frame

@@ -19,9 +19,11 @@ dependencies:
 
 # B.2.5: Supervisor-Subholon Feedback Relation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a holon is supervised, regulated, steered, corrected, constrained, or coordinated through a two-sided feedback relation between one supervising acting system and one or more supervised holons.
+> **Problem frame:** A supervisor-subholon feedback claim states observation or reporting, returned influence and their coupling for named participants in one use. It is a conjunction under A.6.RCD, expressed in a C.2.1 assertion.
+> **First move:** State the feedback claim in one C.2.1 episteme about the named controller and supervised holons. A sufficient ordinary reading is: “For every drone in this set during the stated interval, controller C receives the stated observations and re …
+>
+> **Governing patterns:** `references/B.2.md` `references/A.1.md` `references/A.12.md` `references/A.2.1.md` `references/A.3.4.md` `references/C.30.LCA.md` `references/C.29.md` `references/A.10.md`
 
 ---
 

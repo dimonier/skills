@@ -16,9 +16,10 @@ dependencies:
 
 # B.1.5.EW: Recover How Constituent Actions Enact Encompassing Work
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you need to understand, perform, teach, divide or change a way of working and cannot yet explain how its constituent actions perform the encompassing work. A person knows each movement but loses the partnered dance.
+> **First move:** Recover the connection in both directions: **what larger work is being performed through this action, and what constituent actions make it performable?** Keep genuine before-and-after dependencies alongside these connections.
+>
+> **Governing patterns:** `references/B.1.5.md` `references/A.15.1.md` `references/B.1.5.RS.md` `references/A.22.CGUS.md` `references/C.30.LCA.md` `references/C.32.MWA.md`
 
 ---
 

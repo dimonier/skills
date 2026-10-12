@@ -7,9 +7,8 @@ keywords: []
 
 # E.17.AUD.LHR: PublicationUnit Stability Discipline and Local Head Restoration
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Anti-single-sequence note.** The quick checks, ordinary card, worked slices, and governing-pattern and project-side-reference boundary rules in this section are local aids for one publication unit under review.
+> **First move:** If you need one ordinary entry sentence fast, start from one of these:
 
 ---
 

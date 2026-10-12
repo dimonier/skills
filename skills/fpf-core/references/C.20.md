@@ -35,9 +35,11 @@ dependencies:
 
 # C.20: Composition of `U.Discipline` (Discipline-CAL)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a team needs to decide whether an apparent field is one durable practice-and-knowledge whole rather than a convenient label or collection. Typical moments include:
+> **Problem frame:** Disciplines can persist while theories, standards, methods, organizations, publications, and vocabulary change. In practice that persistence is carried and refreshed through knowledge canons, codified practices and standards, and institutio …
+> **First move:** Recover six constructive components for the same exact candidate:
+>
+> **Governing patterns:** `references/A.1.md` `references/A.6.REL.md` `references/A.14.md` `references/C.13.md` `references/A.17.md` `references/A.18.md` `references/E.24.UK.md` `references/C.2.1.md`
 
 ---
 
@@ -45,7 +47,10 @@ dependencies:
 > **Status:** Stable
 > **Type:** Pattern
 
-### E.24.UK settlement
+
+
+### C.20:11 - E.24.UK settlement
+
 
 `U.Discipline` is the admitted durable holon kind for one exact field-level practice-and-knowledge whole. C.20 supplies the kind-specific construction criterion; A.1 recognizes one exact candidate under that admitted kind only after the candidate, constituents, obtaining constructive relations, assembly, identity or reidentification rule, composition-grounded whole characteristic, and larger-assembly compatibility are recoverable.
 

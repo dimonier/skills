@@ -15,9 +15,10 @@ dependencies:
 
 # E.11.PFP: Framework Publication Form Profile for Markdown
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when one FPF, DPF, or LPF edition needs a public Markdown form that a cold reader can enter and a small deterministic checker can recognize.
+> **First move:** Apply one common reader-facing publication form to one FPF, DPF, or LPF edition. The profile is the reusable rule for that form.
+>
+> **Governing patterns:** `references/E.11.md` `references/E.17.md` `references/E.24.PUB.md` `references/E.4.FPF.md` `references/E.4.DPF.md`
 
 ---
 
@@ -179,6 +180,7 @@ DRRs, build manifests, quality runs, digests, logs, and campaign state are proce
 
 The deterministic part of the form check handles recoverable syntax and projection agreement:
 
+- absence of raw HTML from the complete Markdown publication under E.8:4.1.1, while retaining literal code, mathematical notation and Markdown autolinks;
 - the product-declared title and Readme H1, the compact opening, and absence of prohibited development or machine material from reader front matter;
 - the required H1 sequence plus the product-declared body and reference tail;
 - product-declared Readme and Preface entries in the established ToC grammar, before the logical pattern index, with no generic rival mini-menu;
@@ -254,7 +256,7 @@ Number sibling sections in reading order, starting at 1, and carry the complete 
 
 The prefix lets a reader distinguish a whole-language Problem frame from the Problem frame of one pattern before choosing what to read or cite. Visible names and numbers also survive copying and printing, where a hidden anchor cannot help.
 
-The visible address and title use the ASCII ` - ` separator. Build each clickable fragment from the complete rendered heading according to the target Markdown carrier's rules, including punctuation removal and duplicate handling. When a heading changes, update its direct links in the publication, source templates and public consumers together. Check that the link resolves to the intended heading, then read that target for the answer the link promises. Keep the visible address usable for search and non-clickable copies. HTML anchors are optional carrier facilities, not a substitute for a self-identifying visible heading.
+The visible address and title use the ASCII ` - ` separator. Build each clickable fragment from the complete rendered heading according to the target Markdown carrier's rules, including punctuation removal and duplicate handling. When a heading changes, update its direct links in the publication, source templates and public consumers together. Check that the link resolves to the intended heading, then read that target for the answer the link promises. Keep the visible address usable for search and non-clickable copies. E.8:4.1.1 excludes raw HTML from this form, including compatibility anchors.
 
 ### E.11.PFP:5 - Archetypal Grounding
 

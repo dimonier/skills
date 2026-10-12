@@ -22,9 +22,10 @@ dependencies:
 
 # A.15.9: Use or Request a Bounded Result from Another Practice
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Plain name.** Use the outside-practice result this decision can rely on; obtain a new contribution when it is worth the work.
+> **First move:** Begin with one receiving decision or piece of Work and one result that could change its next action. Inspect an available result before commissioning anything new. Return what it supports now, including a real stop where required.
+>
+> **Governing patterns:** `references/A.15.md` `references/A.10.md` `references/A.13.md` `references/A.15.1.md` `references/C.2.1.md` `references/C.11.DUA.md` `references/A.2.2.md` `references/A.2.1.md`
 
 ---
 

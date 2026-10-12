@@ -26,9 +26,10 @@ dependencies:
 
 # A.6.7: `MechSuiteDescription` — Shared Conditions for Joint Use of Distinct Mechanisms
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** In FPF, a **mechanism** is a node-level `U.Mechanism` with explicit argument and result declarations for each operation and a declared LawSet/guards/transport/audit (A.6.1).
+> **First move:** Declare the members and their shared conditions in a `MechSuiteDescription`:
+>
+> **Governing patterns:** `references/E.8.md` `references/A.6.1.md` `references/A.6.5.md` `references/E.10.md` `references/E.19.md` `references/E.18.md` `references/A.21.md`
 
 ---
 
@@ -116,7 +117,10 @@ The suite user needs one description that can:
 
 Declare the members and their shared conditions in a `MechSuiteDescription`:
 
-#### A.6.7:4.1 `MechSuiteDescription` (data model)
+
+
+#### A.6.7:4.1 - `MechSuiteDescription` (data model)
+
 
 `MechSuiteDescription` declares:
 
@@ -194,7 +198,10 @@ Changing declaration content, EntityOfConcern or effective reference scheme foll
 * **No mechanism semantics in the suite.**
   A suite is a **Description**, not a mechanism: it does not define `OperationAlgebra` and does not absorb gate logic.
 
-#### A.6.7:4.2 SuiteObligations (canonical obligation vocabulary)
+
+
+#### A.6.7:4.2 - SuiteObligations (canonical obligation vocabulary)
+
 
 `MechSuiteDescription` MAY declare any obligations. The canonical names in §4.1 support reuse across Part G and admissibility-gated characterization stacks; they are not an exhaustive inventory.
 
@@ -244,7 +251,10 @@ Changing declaration content, EntityOfConcern or effective reference scheme foll
 11. **`finalize_launch_values_in_work_enactment_only`.**
   Well-formedness constraint: `FinalizeLaunchValues` (and any witness of actual launch values) occurs only in `U.WorkEnactment`; neither the suite nor any planned-baseline WorkPlanning plan item is a place for launch values.
 
-#### A.6.7:4.3 SuiteSpecPins
+
+
+#### A.6.7:4.3 - SuiteSpecPins
+
 
 A `MechSuiteDescription` MUST be able to declare required spec pins as references, not as duplicated content. Canonically:
 
@@ -264,7 +274,10 @@ SuiteSpecPins := ⟨
 * A suite may require an edition/reference baseline in ordinary A.15.2 WorkPlan content. Address it through the exact plan and its local content locator; it supplies no launch value or gate decision.
 * Use A.15.3 typed planned filling only when an existing declaration member independently supplies the position meaning, designation, cardinality and actual-use predicate. A suite Description field is not a SlotSpec or operation argument merely because a plan names it. Missing planned information can remain unknown in the plan; a missing governor requires recovery or definition of that member before typed filling. Actual launch bindings and any FinalizeLaunchValues witness remain with actual enactment.
 
-#### A.6.7:4.4 SuiteProtocols
+
+
+#### A.6.7:4.4 - SuiteProtocols
+
 
 A suite MAY describe allowed protocols (pipelines) as descriptive constraints on how suite members are intended to be composed. A `SuiteProtocol` describes the member-operation sequence. Its description:
 
@@ -290,7 +303,10 @@ ProtocolStep := ⟨
 ⟩
 ```
 
-#### A.6.7:4.5 SuiteAuditObligations
+
+
+#### A.6.7:4.5 - SuiteAuditObligations
+
 
 A suite MAY require that downstream use provide certain audit anchors. These are **requirements**, not run-time values. A suite audit obligation MAY include:
 
@@ -304,7 +320,10 @@ A suite MAY require that downstream use provide certain audit anchors. These are
 
 **Norm.** A suite must never publish a `DecisionLog` or `GateDecision`. If the suite requires guard pins, it requires their **presence** as anchors so that the gate-level owner can aggregate `GuardFail`s and decide `degrade|block` per gate profile.
 
-#### A.6.7:4.6 Examples
+
+
+#### A.6.7:4.6 - Examples
+
 
 **Example 1 — compare two offers and retain the nondominated set.** The question is whether either offer can be discarded without accepting a worse cost or quality. This is a stipulated mathematical use; the following specifications and applications are case facts, not empirical measurements or dated Work claims.
 

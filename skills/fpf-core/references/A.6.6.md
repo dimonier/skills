@@ -22,9 +22,10 @@ dependencies:
 
 # A.6.6: Base Declaration Discipline: Say Exactly What Something Depends On
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF repeatedly needs to express a family of situations of the form:
+> **First move:** Start with a readable sentence:
+>
+> **Governing patterns:** `references/A.6.REL.md` `references/A.6.0.md` `references/A.6.5.md` `references/A.2.4.md` `references/A.10.md` `references/A.14.md` `references/C.2.1.md` `references/A.6.3.md`
 
 ---
 
@@ -290,7 +291,7 @@ If the sentence is not basedness, use the matching ontology:
 | a causal, intervention, counterfactual, or simulation-only use is admissible | C.28 |
 | a mathematical lens exposes preserved or lost structure | C.29 for that lens; C.26 only for its applicable quantum-like/contextual-model case; F.9 only for a separately obtaining correspondence between exact local sense cells; the direct mathematical pattern for the actual mathematical object or rule |
 | one thing helps or enables work | the applicable work, resource, capability, or action relation, or ordinary Plain help |
-| a file, section, packet, or companion helps a reader | E.17, E.11, I.2, or ordinary orientation |
+| a file, section, packet, or companion helps a reader | E.17, E.11, or ordinary orientation |
 | a source, model, diagram, or view describes something | A.7, C.2.1, E.17, and the direct describing or source-use relation |
 
 Do not create `SupportRelation`, `SupportBasis`, `SupportRecord`, `validatedBy`, or `verifiedBy` as a fallback. Work, a result episteme, its carrier, provenance, evidence use, and later reliance remain separate.

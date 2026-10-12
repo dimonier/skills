@@ -11,9 +11,6 @@ dependencies:
 ## ASB.TriggerDesign - Trigger design: the `description` as the primary load trigger
 
 > **Trigger:** When drafting or revising the `description` frontmatter field — the only text an agent sees before deciding whether to load the skill body.
-> **Governing patterns:**
->   → `AS.2` (Trigger Design — the AS-DPF pattern this card specializes)
->   → `E.11` (first-practical entry — the `description` *is* the first-practical entry to the skill)
 > **Skill dependencies:**
 >   → `create-agent-skill` / `skill-creator` (description-trigger guidance, validation)
 
@@ -114,15 +111,15 @@ save tokens at the cost of ever firing. Pushy-and-specific is the counterweight.
 ### ASB.TriggerDesign:9 - Consequences
 
 A pushy, specific, valid trigger makes loading cheap and accurate, but it must be
-maintained as neighbouring skills shift (see `ASB.Evolution` and `AS.7`). A
+maintained as neighbouring skills shift (see `ASB.Evolution` and `ASB.DescriptionOptimization`). A
 YAML-unsafe description breaks loading entirely; an over-long one taxes every session
 that includes the skill metadata.
 
 ### ASB.TriggerDesign:10 - Rationale
 
-`AS.2` makes the `description` the first-practical entry (`E.11`): the agent reads
-only metadata until the trigger fires, so the trigger carries the whole routing cost.
-The pushiness rule compensates a known under-triggering bias; the YAML-safety rule
+`E.11` makes the `description` the first-practical entry: the agent reads only
+metadata until the trigger fires, so the trigger carries the whole routing cost. The
+pushiness rule compensates a known under-triggering bias; the YAML-safety rule
 protects the load itself.
 
 ### ASB.TriggerDesign:11 - SoTA-Echoing
@@ -130,7 +127,7 @@ protects the load itself.
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "Description — the trigger" (too short / too long / just right) | Adopt | WHAT + WHEN + near-miss, with the good/bad examples | Reopen on a skill-payload edition change |
-| AS-DPF `AS.2` Trigger Design | Adopt | Pushy-and-specific, multilingual triggers, length limits | Reopen on `AS.2` revision |
+| AS-DPF `AS.2` Trigger Design (merged 2026-10-04) | Adopt | Pushy-and-specific, multilingual triggers, length limits | — merged into this DPF |
 | Anthropic `quick_validate.py` schema (`name` ≤64, `description` ≤1024) | Adopt | Length/schema constraints | Reopen on a schema-rule release |
 
 Best-known line: the `description` is a trigger, not a summary. Rejected rival:
@@ -138,9 +135,7 @@ Best-known line: the `description` is a trigger, not a summary. Rejected rival:
 
 ### ASB.TriggerDesign:12 - Relations
 
-- **Builds on (DPF):** `AS.2` (trigger design).
-- **Builds on (FPF):** `E.11` (practical entry).
-- **Coordinates with (DPF):** `AS.7` (description optimization — eval-driven tuning of this card), `AS.4` (level-1 of progressive disclosure).
-- **Specialized by (LPF):** `ASB.ProgressiveDisclosure` (the `description` is level 1).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.2` (trigger design).
 
 ### ASB.TriggerDesign:End

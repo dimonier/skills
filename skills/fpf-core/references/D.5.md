@@ -18,9 +18,10 @@ dependencies:
 
 # D.5: Bias Audit and Ethical Assurance
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Bias and fairness failures often survive ordinary verification. A metric may be accurate while hiding subgroup harm. A model may be predictive while reproducing past exclusion.
+> **First move:** A fairness claim may be associative, interventional, or counterfactual. C.28 supplies the causal-use question, rung, estimand, separate support components, common-threat result, and `CausalUseSupportResultRef`.
+>
+> **Governing patterns:** `references/D.1.md` `references/D.4.md` `references/E.5.4.md` `references/A.10.md` `references/B.3.md` `references/C.16.md` `references/C.28.md` `references/E.13.md`
 
 ---
 

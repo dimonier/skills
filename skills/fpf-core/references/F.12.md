@@ -32,9 +32,10 @@ dependencies:
 
 # F.12: Evaluate Promise Fulfilment from Work Evidence (Service Acceptance)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Relate an exact promise-content claim to the delivery Work and outcome being judged, the observations and measured values used as evidence, an explicit window and population, and the separate evaluation Work that applies the dec …
+> **First move:** Before reporting the result, name nine things:
+>
+> **Governing patterns:** `references/A.2.3.md` `references/A.15.1.md` `references/A.6.1.md` `references/C.16.md` `references/F.10.md` `references/F.11.md` `references/A.10.md` `references/B.3.md`
 
 ---
 

@@ -22,9 +22,10 @@ dependencies:
 
 # A.17: Canonical “Characteristic” (A.CHR-NORM): Name What Is Measured
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** To have reproducibility and explainability there is a need to **measure** various aspects of systems or knowledge epistemes or publications.
+> **First move:** **Establish “Characteristic” as the one canonical construct for “what is measured.”** In every FPF context, the _aspect or trait_ being measured MUST be referred to as a **Characteristic**.
+>
+> **Governing patterns:** `references/A.18.md` `references/A.19.md` `references/C.16.md`
 
 ---
 

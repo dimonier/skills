@@ -24,9 +24,10 @@ dependencies:
 
 # C.3.5: `KindAT` — Intentional Abstraction Facet for Kinds (K0…K3)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Teams need a quick answer to a planning question: is this local kind intended as a curated instance-like cohort, a behavioral pattern, a formal invariant-bearing kind, or a kind considered up to structural equivalence?
+> **First move:** | Decision area | K0 | K1 | K2 | K3 | | --- | --- | --- | --- | --- | | declaration work | identity/cohort criterion when reuse needs it | behavioral acceptance criterion | explicit invariant-bearing signature | equivalence-invariant signat …
+>
+> **Governing patterns:** `references/C.3.md` `references/C.3.1.md` `references/C.3.2.md` `references/C.3.3.md` `references/C.3.4.md` `references/A.2.6.md` `references/C.2.2.md` `references/C.2.3.md`
 
 ---
 

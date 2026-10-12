@@ -13,7 +13,7 @@ keywords:
 dependencies:
   builds_on:
     - C.2.1
-    - C.2.2
+    - C.2.2a
     - A.16
     - E.24.PUB
   coordinates_with:
@@ -25,9 +25,10 @@ dependencies:
 
 # A.16.0: Keep an Episteme's Language-State and Publication History Recoverable
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** In engineering, inquiry, operator, and management practice, teams sometimes need more than a local move note. When branch structure, supersession, retirement, bridge-sensitive loss, a multi-step change in the applicable rule, or an actual r …
+> **First move:** `LanguageStateMoveTrajectory` is an **optional account form** for history across positions in the language-state `U.CharacteristicSpace` named in `C.2.2a`.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/C.2.2a.md` `references/A.16.md` `references/E.24.PUB.md` `references/A.16.1.md` `references/B.4.1.md` `references/B.5.2.0.md` `references/E.17.1.md`
 
 ---
 

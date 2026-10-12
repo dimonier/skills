@@ -19,9 +19,11 @@ dependencies:
 
 # C.19.1: Bitter‑Lesson Preference (BLP)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use `C.19.1` when a current choice or policy makes a scale claim or invokes a declared generality preference: a narrower special-purpose approach is preferred over a general alternative, or a general approach is preferred because its measur …
+> **Problem frame:** Bespoke computational heuristics can win locally while failing to exploit larger compute, data, or search budgets. General methods can improve across a declared scale window, but the empirical record is strongest for computational search, l …
+> **First move:** - **Slogan as evidence.** `General`, `agentic`, or `Bitter Lesson` is treated as proof. Repair with the cheap probe and an actual comparison basis.
+>
+> **Governing patterns:** `references/C.19.md` `references/C.24.md` `references/B.3.md` `references/E.23.md` `references/G.5.md` `references/G.8.md` `references/G.9.md` `references/G.11.md`
 
 ---
 
@@ -33,7 +35,7 @@ State the empirical Bitter Lesson narrowly: in search, learning, planning, and r
 **Coordinates with.** G.5 (Selector), G.8 (SoS‑LOG Bundles), G.9 (Parity), G.11 (Refresh‑Telemetry), A.0 (On‑Ramp).
 **Keywords.** general-solution preference; scale‑amenability; **BLP‑waiver**; iso‑scale parity; **Scale‑Audit**; slope vector; **alpha and delta tolerances**.
 
-**Use this when.**
+### C.19.1:0 - Use This When
 Use `C.19.1` when a current choice or policy makes a scale claim or invokes a declared generality preference: a narrower special-purpose approach is preferred over a general alternative, or a general approach is preferred because its measured performance is expected to improve across a declared scale window. For search, learning, planning, and agent substrates, the empirical Bitter Lesson can supply the motivating line. For a module relation, platform, organization design, evidence-bearing episteme or work arrangement, or selected structure, state explicitly that the move is a local analogy or policy rather than an empirical Bitter-Lesson result.
 
 The pattern governs only that scale-based comparison, preference, or waiver. It neither proves architecture adequacy nor turns a bearer label into a holon kind. If the project is merely using a bounded specialization and makes no scale advantage or durable generality claim, keep the use local under the bearer's direct pattern and stop here.

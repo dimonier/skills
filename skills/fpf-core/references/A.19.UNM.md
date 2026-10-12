@@ -16,9 +16,9 @@ keywords:
 
 # A.19.UNM: Normalize Coordinate Values under Declared Invariants (UNM)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Intent.** Provide a single, explicit normalization mechanism for **coordinate values** in a `U.CharacteristicSpace`, so that **comparability** and downstream characterization steps can be stated as “**normalize-then-compare**” (governance …
+> **Problem frame:** FPF needs a disciplined way to talk about **measurable slots** (coordinates/scales) such that engineers can reason about: - **What it means** to compare values across charts, slices, bearers, or reference bases, and - **Where the “meaning-p …
+> **First move:** UNM declares directed normalization operations. For an admitted input in the selected transformation's domain, return its NCV and the preserved/lost distinctions needed by the receiving use. An undefined input has no normalization result.
 
 ---
 

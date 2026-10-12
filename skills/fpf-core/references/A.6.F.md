@@ -36,7 +36,7 @@ dependencies:
     - A.6.B
     - A.6.C
     - E.18
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - A.10
     - G.6
     - E.24.PUB
@@ -44,9 +44,10 @@ dependencies:
 
 # A.6.F: Function and Functional Precision Restoration (RPR-FUNCTION)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when `function`, `functional`, `functionality`, `effect`, or a similar function-like phrase carries an FPF claim beyond ordinary prose.
+> **First move:** A.6.F is an A.6.P RPR specialization for function-like wording. It does not mint `U.Function`. It assigns the use under repair to an exact entity, value, claim, or claim-bearing episteme and its subject pattern, then stops unless another cl …
+>
+> **Governing patterns:** `references/A.6.P.md` `references/A.6.5.md` `references/A.7.md` `references/C.30.md` `references/C.30.ASV.md` `references/C.29.md` `references/A.3.1.md` `references/A.3.2.md`
 
 ---
 

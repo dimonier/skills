@@ -7,9 +7,8 @@ keywords: []
 
 # A.6.RSIG: Recognition Signatures: Find the Defining Episteme for a Description
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** A reader often meets one description before they know whether it is the right description to inspect. The reader may see a boundary clause, method note, interface excerpt, pattern opening, or public projection.
+> **First move:** `A.6.RSIG` governs description-recognition signatures in general: the first-contact cue structure by which one reader can recover what encountered description is live, what carrier or projection exposed it, what it applies to, what excludes …
 
 ---
 
@@ -160,7 +159,7 @@ This shape is a review aid, not a mandatory form for every encountered
 description. It exists to keep description, carrier, projection, and definitionEpistemeRef from
 collapsing into one overloaded publication label or projection label.
 
-#### A.6.RSIG:4.2.1 - Minimal local repair and review sequence
+##### A.6.RSIG:4.2.1 - Minimal local repair and review sequence
 
 Use this sequence when authoring or reviewing one recognition-signature repair:
 
@@ -222,7 +221,7 @@ The four-part split for pattern-local recognition is:
 | Generic first-contact description recognition | `A.6.RSIG` | The neutral cue shape: description, carrier or projection, definitionEpistemeRef, exclusions, and a false neighbor when §4.1's grounded-guard condition holds. |
 | Local placement and form | `E.8` | How the pattern's `Problem frame` carries the first-reading role. |
 | Actual local semantics | The pattern itself | The pattern's governed object, solution, consequences, and conformance law. |
-| Cross-pattern comparison | `E.11` and `I.2` | Candidate patterns, tempting wrong patterns, reclassification of the reader's question, and expanded entry-disambiguation cases. |
+| Cross-pattern comparison | `E.11` | Candidate patterns, tempting wrong patterns, reclassification of the reader's question, and expanded entry-disambiguation cases. |
 
 #### A.6.RSIG:4.5 - When a neighboring pattern is needed
 
@@ -249,6 +248,8 @@ Why the cue is not enough yet:
   description to inspect.
 
 Recognition repair:
+
+First recover the defining description; the cue alone leaves its boundary claim unresolved. For the worked branch below, suppose inspection of that defining episteme establishes a request-admissibility condition. If the source instead prescribes a duty or states another boundary claim, recognize that content and apply its corresponding entry.
 
 1. `description_seen` = one boundary-presented admissibility description.
 2. `encountered_carrier_or_projection` = one clause or excerpt where the
@@ -309,6 +310,8 @@ Why the cue is not enough yet:
   pairwise comparison is to determine.
 
 Recognition repair:
+
+With only the cue, first ask what the pairwise comparison is intended to determine. For the worked branch below, suppose the defining episteme supplies comparison under a declared comparator but no selection or publication rule. If the source also defines selection, recover and use that contribution.
 
 1. `description_seen` = one method-description applicability note.
 2. `encountered_carrier_or_projection` = one method-description note, pattern excerpt,

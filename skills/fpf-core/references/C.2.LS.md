@@ -11,18 +11,18 @@ keywords:
   - threshold package.
 dependencies:
   builds_on:
-    - C.2.2
-    - C.2.4
-    - C.2.7
+    - C.2.2a
+    - "C.2.4-C.2.7"
   coordinates_with:
     - A.16
 ---
 
 # C.2.LS: `U.LanguageStateFacetProfile` - Thin profile bundle for language-state facets
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Once position claims in the declared language-state chart over `U.CharacteristicSpace` must be published and compared, teams need one thin profile bundle that keeps the relevant facets visible as one explicit facet profile without turning t …
+> **First move:** `U.LanguageStateFacetProfile` is a typed profile bundle that names the facets by which position claims in the declared language-state chart over `U.CharacteristicSpace` are published and interpreted:
+>
+> **Governing patterns:** `references/C.2.2a.md` `references/C.2.4-C.2.7.md` `references/A.16.md`
 
 ---
 
@@ -164,7 +164,7 @@ SysML v2 is deliberately excluded from the positive SoTA basis and from useful l
 A console alert note may be published with a language-state facet profile such as:
 
 - `F = F2/F3` because the note is structurally controlled but still lightweight;
-- `AE = AE2` because candidate anchors are visible but not yet fully relation-shaped;
+- `AE = AE2` because candidate anchors are visible but the direct semantic branch or its required structure remains partial;
 - `CD = CD1` because several routes remain live;
 - `LanguageStateAnchoringMode = AM.OperatorLoop` because the note is directly anchored to operator intervention/work;
 - `RepresentationFactorBundle = {local, sparse, mixed-symbolic}` because alert text and compact codes coexist.

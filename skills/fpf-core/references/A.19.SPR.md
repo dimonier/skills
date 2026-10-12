@@ -9,7 +9,7 @@ dependencies:
     - E.10.ARCH
     - A.19
     - A.3.3
-    - C.2.2
+    - C.2.2a
     - A.16
     - A.10
     - B.3
@@ -37,9 +37,11 @@ dependencies:
 
 # A.19.SPR: Repair State and Status Wording
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a phrase such as “the system is ready”, “the source is current”, or “the evidence status is incomplete” matters to an FPF claim but does not yet say which item the sentence is about, what is true of it, or which rule m …
+> **Problem frame:** FPF needs compact state words. Engineers reasonably say that a pump is stable, a source is current, an evidence path is incomplete, an assurance claim has expired, or an intended performance is ready for work entry.
+> **First move:** Start with the direct sentence:
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/A.19.md` `references/A.3.3.md` `references/C.2.2a.md` `references/A.16.md` `references/A.10.md` `references/B.3.md`
 
 ---
 

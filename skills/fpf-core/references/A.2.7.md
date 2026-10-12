@@ -24,9 +24,11 @@ dependencies:
 
 # A.2.7: SystemRoleKindRelationStructure - Relations among System-Role Kinds
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Plain designation.** Say “structure of relations among system-role kinds” for `SystemRoleKindRelationStructure`.
+> **Problem frame:** A system applying a maintenance-admission Method may admit a current assignment to `SeniorHydraulicsTechnicianSystemRole` where the MethodDescription names `HydraulicsTechnicianSystemRole`.
+> **First move:** Start with the one relation family needed by the receiving use. Use exact local system-role kinds as its participants and put the rule, applicability, and only meaning-changing semantic-basis editions in its by-value predicate.
+>
+> **Governing patterns:** `references/A.2.md` `references/C.3.md` `references/C.3.1.md` `references/A.2.1.md` `references/A.22.md` `references/A.2.5.md` `references/A.6.REL.md` `references/E.10.ROLE.md`
 
 ---
 

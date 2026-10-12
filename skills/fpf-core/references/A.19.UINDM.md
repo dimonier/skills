@@ -13,9 +13,9 @@ keywords:
 
 # A.19.UINDM: Indicatorization (UINDM): Select Indicators Under a Declared Policy
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** * **Suite stage:** `indicatorize` (ordering lives only in `A.19.CHR:suite_protocols`). * **Inputs (conceptual):** exact `U.CharacteristicSpaceRef`, `CNSpecRef`, and `IndicatorChoicePolicyRef`, with the bearer, claim scope and selected slice …
+> **Problem frame:** FPF’s Characterization (CHR) suite treats indicatorization as a **distinct mechanism boundary** within the CHR suite (authoritative membership: `A.19.CHR:4.2`).
+> **First move:** Resolve the indicator policy against the exact characteristic-space basis and return the selected positions with their Characteristic, Scale and original relative order. Keep their values unchanged.
 
 ---
 
@@ -277,10 +277,10 @@ For example, an extended Indicatorize may add an optional justification result w
 
 ### A.19.UINDM:10 - Rationale
 
-Indicatorization is separated because it is a different kind of commitment than scoring or comparison:
+Indicatorization is separated because it answers a different question from scoring or comparison:
 
-* Indicatorization commits to **which coordinates are allowed to matter** under policy.
-* Scoring/aggregation/comparison commit to **how** allowed coordinates are transformed, folded, or ordered under admissibility gates.
+* Indicatorization determines **which coordinates may be used** under the indicator-selection policy.
+* Scoring, aggregation, and comparison determine **how** those coordinates are transformed, combined, or ordered under their admissibility conditions.
 
 By making indicatorization selection‑only, UINDM avoids “semantic alchemy” (changing meanings while claiming to merely “pick indicators”) and supports the CHR suite’s broader discipline: explicit spec refs, explicit crossings, and explicit handling of uncertainty via tri‑state guards.
 

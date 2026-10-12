@@ -29,9 +29,10 @@ dependencies:
 
 # B.5.3: Interpret Domain Vocabulary for an FPF Claim (Domain-Concept Bridge)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF keeps a small set of admitted U-kinds, ontics, slot relations, mechanisms, characteristics, methods, work values, epistemes, and publication-use relations. Working domains use their own words.
+> **First move:** Use this bounded interpretation move when domain vocabulary leaves the FPF claim unclear.
+>
+> **Governing patterns:** `references/A.2.md` `references/A.6.5.md` `references/C.3.md` `references/E.24.UK.md` `references/F.0.1.md` `references/F.1.md` `references/F.2.md` `references/F.3.md`
 
 ---
 

@@ -15,9 +15,9 @@ keywords:
 
 # A.19.ULSAM: Unified Lawful Scale Aggregation Mechanism (ULSAM)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** * **Suite stage:** `fold_Γ?` (ordering lives only in `A.19.CHR:suite_protocols`; `mechanisms[]` membership is a set, not an order).
+> **Problem frame:** Within CHR, teams frequently need an **explicit aggregation step** (Γ‑fold) to produce an aggregated measure that is later consumed by comparison and/or selection.
+> **First move:** ULSAM is the **canonical scale‑aggregation mechanism** in the CHR suite. It defines: * a stable **mechanism boundary** (`fold_Γ?` is a stage with its own operation and eligibility predicate), * a stable **SlotKind surface** (via the suite l …
 
 ---
 

@@ -14,9 +14,10 @@ dependencies:
 
 # B.5.EA: Articulate a Working Distinction from Experience
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a participant recognizes something consequential in their experience but cannot yet express what it is. A familiar phrase keeps replacing the point they are trying to make.
+> **First move:** Alternate between returning to the experience and trying a formulation. Let the person with access to the experience correct the formulation. Continue into modeling or inquiry once the distinction is sufficiently expressed for that use.
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.FM.md` `references/B.5.4.md` `references/B.5.RR.md` `references/C.11.DUA.md`
 
 ---
 

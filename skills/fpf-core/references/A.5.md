@@ -13,9 +13,8 @@ keywords:
 
 # A.5: Open-Ended FPF Kernel and Extension Layering
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** FPF helps practitioners combine shared conceptual grounds and reusable methods with suitable domain methods. FPF can support that use across changing disciplines only if it:
+> **First move:** FPF’s modularity is **declarative**, not “callable”: pattern texts publish **law‑governed declarations** (vocabulary + laws + applicability) that can be reused and specialised.
 
 ---
 

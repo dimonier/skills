@@ -26,7 +26,7 @@ dependencies:
     - C.25
     - C.32.ACE
     - C.30.STRAT
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - A.6.M
     - C.31
     - C.31.ASAP
@@ -42,9 +42,10 @@ dependencies:
 
 # C.33: Assess Structural Information for Architecture Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an architect has a description, view, decision record, ADR-like projection, eval report, method handoff, generated relation graph, source model, or realized holon observation that carries or describes selected architec …
+> **First move:** Create one `StructuralInformationAdequacyNote@Context` for the declared architecture use.
+>
+> **Governing patterns:** `references/A.22.md` `references/C.30.md` `references/C.30.AD.md` `references/C.30.ASV.md` `references/C.32.P2S.md` `references/C.32.md` `references/C.29.md` `references/C.16.md`
 
 ---
 

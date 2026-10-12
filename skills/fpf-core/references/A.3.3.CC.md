@@ -1,7 +1,7 @@
 ---
 id: A.3.3.CC
 title: Construct a Configuration Description under Constraints
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -18,16 +18,17 @@ dependencies:
 
 # A.3.3.CC: Construct a Configuration Description under Constraints
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you need to describe how participants can be arranged, but choosing values for them separately admits combinations that the modeled situation excludes.
+> **First move:** Construct the description from the working question, then choose a representation in which the needed combinations can be expressed and used. If the calculation becomes inconvenient, reconsider the representation.
+>
+> **Governing patterns:** `references/A.3.3.md` `references/A.17.md` `references/A.18.md` `references/A.19.md` `references/B.5.FM.md` `references/C.29.1.md` `references/C.29.2.md` `references/A.6.3.RT.md`
 
 ---
 
 ## A.3.3.CC - Construct a Configuration Description under Constraints
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative
 
 ### A.3.3.CC:1 - Problem frame

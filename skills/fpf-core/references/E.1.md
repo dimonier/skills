@@ -19,9 +19,10 @@ dependencies:
 
 # E.1: Vision & Mission
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this charter when proposing an FPF rule or artifact and deciding whether it serves the framework's purpose. Name the reader's task, show which core invariant the rule supports, and state a measurable stakeholder benefit or justify its o …
+> **First move:** FPF helps practitioners construct and revise ways of doing from explicit shared grounds. Its first principles are cross-domain starting commitments that govern the framework's architecture, use, evaluation and development, including the dis …
+>
+> **Governing patterns:** `references/E.2.md`
 
 ---
 

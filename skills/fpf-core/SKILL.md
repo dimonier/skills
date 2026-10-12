@@ -7,7 +7,7 @@ license: CC-BY-4.0
 # FPF Core Pattern Library
 
 **Depends on:** nothing (root of dependency chain)
-**Source of truth:** `assets/FPF-Spec.md` — canonical specification (120K+ lines)
+**Source of truth:** `assets/FPF-Spec.md` — canonical specification (121K+ lines)
 
 ## License / Attribution
 
@@ -21,13 +21,13 @@ added a routing INDEX, and abridged the context sections. The bundled
 
 ## How to Use
 
-Do NOT read `assets/FPF-Spec.md` in full. Identify the situation and load the relevant reference:
+Do NOT read `assets/FPF-Spec.md` in full. Identify the situation and load the relevant reference. Follow the search/read discipline in `context/USING-FPF.md` before choosing a pattern.
 
 The table below is a fast index mirroring FPF's 15 canonical practical-use cards (`E.11`). When the situation is ambiguous, start from the entry-point row: load the cards, compare the plausible ones by their first-result difference, then open the direct pattern.
 
 | You are doing... | Load |
 |---|---|
-| Unsure where to start / picking a pattern for a situation | `_ctx.Practical-Use-Cards.md`, `E.11.md`, `E.11.PUR.md`, `E.11.PUA.md` |
+| Unsure where to start / picking a pattern for a situation | `context/_ctx.Practical-entries.md`, `context/_ctx.Start-here.md`, `E.11.md`, `E.11.PUR.md`, `E.11.PUA.md` |
 | Developing or reviewing architecture | `C.32.P2S.md`, `C.30.md`, `A.22.md`, `A.22.CGUS.md`, `C.32.md`, `C.32.PAD.md`, `C.32.ADR.md`, `C.33.md`, `C.34.md`, `C.35.md`, `C.30.ASV.md`, `C.30.AD.md`, `C.31.md`, `C.32.CONWAY.md`, `B.2.md`, `B.2.P.md` |
 | Writing rules, methods, work-process documents | `A.6.md`, `A.6.B.md`, `A.6.C.md`, `A.15.md`, `A.15.1.md`, `A.15.2.md`, `A.15.3.md`, `A.15.4.md`, `E.18.md`, `E.18.1.md`, `E.18.2.md`, `E.18.3.md`, `E.8.md`, `E.19.md` |
 | Comparing alternatives, making a local choice | `A.19.md`, `A.19.ECS.md`, `C.11.md`, `C.18.md`, `C.19.md`, `G.0.md`, `G.5.md` |
@@ -49,6 +49,19 @@ The table below is a fast index mirroring FPF's 15 canonical practical-use cards
 | Looking up a pattern by name | `INDEX.md` |
 | Audit, deep reference, refactoring | `assets/FPF-Spec.md` (last resort only) |
 
+## Reading Discipline
+
+1. **Read by section, not by file.** Load the pattern reference, then read only the
+   `### <id>:N` section that answers the current question. Each reference opens with a
+   Trigger / Problem frame / First move / Governing patterns block — decide from that
+   header alone whether to read a section, and never read a whole file cover-to-cover.
+2. **Do not re-read.** Once you have read a file, do not open it again — keep referring
+   to what you already have. Pull a not-yet-read `:N` section only when the question
+   actually changes.
+3. **Stop on a missing id.** Before hunting for a pattern, check `INDEX.md`. If the id
+   is not listed there, the pattern does not exist: return "no such pattern" and do not
+   open further files.
+
 ## Dependency Rule
 
 If a loaded reference links to other FPF patterns (governing-pattern cues),
@@ -56,9 +69,9 @@ load those too from `references/`. Each reference lists its own dependencies.
 
 ## Source for Agent vs Human
 
-- **Agent**: always use `references/` — the primary source of patterns. Do NOT read `assets/FPF-Spec.md`.
-- **Human**: read and edit the canonical monolith `assets/FPF-Spec.md` (source of truth). After edits, run `spec-decomposer` to rebuild `references/`.
+- **Agent**: always use `references/` (patterns) and `context/` (entry cards + `context/USING-FPF.md` operating instruction). Do NOT read `assets/FPF-Spec.md`.
+- **Human**: read and edit the canonical monolith `assets/FPF-Spec.md` (source of truth). After edits, run `spec-decomposer` to rebuild `references/` and `context/`.
 
 ## References Status
 
-**Ready** — 358 pattern reference files + INDEX + 43 context sections.
+**Ready** — 357 pattern reference files + INDEX + 16 context sections.

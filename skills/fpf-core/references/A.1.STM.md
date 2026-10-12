@@ -25,9 +25,11 @@ dependencies:
 
 # A.1.STM: Find the First Unsupported Project Dependency (System-Thinking Long Mantra)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** **Use this when.** Use this pattern when a project team has, or is choosing, one common project system-of-interest but cannot tell which answer is missing on the map from the change expected outside that system to the work and systems that …
+> **Problem frame:** A project can get every nearby statement locally right and still lose the long dependency. One team improves a component, another produces a builder, and another measures operation, yet nobody can show which supported relation carries those …
+> **First move:** 1. **Choose by the final result.** Name the release, runtime use, or specific change expected outside the project system-of-interest.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.1.SCR.md` `references/A.15.6.md` `references/C.32.P2S.md` `references/C.30.md` `references/A.2.md` `references/A.2.1.md` `references/A.3.md`
 
 ---
 

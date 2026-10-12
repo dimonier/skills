@@ -22,9 +22,11 @@ dependencies:
 
 # B.1: Holon Aggregation and Part-Whole Construction
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a project needs to say how several admitted objects are considered as a whole, or when a whole-level claim depends on parts, collection belonging under the collection's own rule, component structure, constructional gro …
+> **Problem frame:** B.1 is not a universal algebra pattern. It is the holonic construction doorway for part-whole and collection-as-whole claims.
+> **First move:** Use B.1 as a discriminator and construction frame.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.14.md` `references/C.13.md` `references/E.10.ROLE.md` `references/A.2.7.md` `references/A.15.md` `references/A.15.1.md` `references/A.22.md`
 
 ---
 

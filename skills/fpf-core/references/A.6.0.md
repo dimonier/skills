@@ -22,9 +22,10 @@ dependencies:
 
 # A.6.0: U.Signature - Reusable Law-Governed Declaration Episteme
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** An engineer has a vocabulary and a set of laws that need to remain stable across several dependent epistemes, such as model epistemes, method descriptions, and patterns.
+> **First move:** Use `U.Signature` as the dependent durable U-kind for a reusable law-governed declaration episteme. Identify the episteme through its content, exact `EntityOfConcernRef`, and effective `U.ReferenceScheme`.
+>
+> **Governing patterns:** `references/A.7.md` `references/C.2.1.md` `references/C.3.md` `references/A.2.6.md` `references/A.6.5.md` `references/A.6.REL.md` `references/A.6.1.md` `references/A.3.1.md`
 
 ---
 

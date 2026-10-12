@@ -11,9 +11,8 @@ keywords:
 
 # G.8: Package Method-Family Admissibility Rules and Maturity Ladders (SoS-LOG)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Method families compete within a `CG‑Frame`, but dispatch is only lawful if (i) admissibility decisions remain **tri‑state** and auditable, (ii) evidence and crossings are **explicitly citable** (by ids, not prose), and (iii) selection pres …
+> **First move:** **Builds on:** `G.Core` (Part‑G core invariants; citation/delegation hub)
 
 ---
 

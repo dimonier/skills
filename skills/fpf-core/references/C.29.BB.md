@@ -14,9 +14,10 @@ dependencies:
 
 # C.29.BB: Construct a Balance across a Boundary
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a total changes and you need to construct the relation between that change, transfers across a chosen boundary, and creation or removal within it.
+> **First move:** Choose the quantity and boundary, account for changes in each included part, and combine only matching transfers. Use the resulting balance to answer the question at the needed resolution.
+>
+> **Governing patterns:** `references/A.3.3.TR.md` `references/C.29.1.md` `references/C.29.2.md` `references/E.18.2.md` `references/C.11.DUA.md`
 
 ---
 

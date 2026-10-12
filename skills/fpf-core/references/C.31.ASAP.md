@@ -41,9 +41,10 @@ dependencies:
 
 # C.31.ASAP: Which Architecture Is Preferable Under Scale? (Scale Amenability)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner compares architecture alternatives under a declared scale variable or scale window and needs to avoid treating a modularity label, platform label, product-line label, reusable-structure share, or coarse …
+> **First move:** C.31.ASAP specializes scale-amenability preference for architecture alternatives. It applies when an architecture alternative set, scale variable or scale window, and claimed preference under scale are named.
+>
+> **Governing patterns:** `references/C.31.md` `references/C.31.RSA.md` `references/C.16.md` `references/A.17.md` `references/A.18.md` `references/A.19.md` `references/C.18.1.md` `references/C.19.1.md`
 
 ---
 
@@ -297,7 +298,7 @@ Lowering replay:
 - The RG-like phrase stays with C.29 unless the mathematical-lens fields, preserved structure, lost structure, payoff, admissible use, and stop condition are recoverable.
 - The "bespoke debt" label is lowered to waiver review when safety, law-domain, mission, assurance, or scale-probe overturn reasons may justify the local variant.
 
-Stop C.31.ASAP use when the scale window, probe evidence or no-probe reason, comparator admission, or source-return condition is absent. Reopen it only after those fields are recoverable and the platform-label, share, lens, and waiver claims have their governing patterns.
+Stop C.31.ASAP use when the scale window, probe evidence or no-probe reason, comparator admission required by the receiving use, or source-return condition is absent. Reopen it only after the fields required by that use are recoverable and the platform-label, share, lens, and waiver claims have their governing patterns.
 
 ### C.31.ASAP:6 - Bias-Annotation
 

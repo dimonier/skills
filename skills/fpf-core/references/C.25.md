@@ -27,9 +27,10 @@ dependencies:
 
 # C.25: Q-Bundle: Express a Quality Claim as One Characteristic or a Structured Bundle
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Engineering quality language repeatedly drifts into one of two invalid simplifications: either every `-ility` is treated as one scalar characteristic, or every engineering-quality statement is left as loose evaluative prose.
+> **First move:** `C.25` defines a lightweight normal form for the claim content of engineering quality families. A publisher facing a quality term first decides whether one claim episteme should state:
+>
+> **Governing patterns:** `references/A.2.6.md` `references/A.6.1.md` `references/C.16.md` `references/B.3.md` `references/C.16.Q.md` `references/A.15.md` `references/C.26.3.md`
 
 ---
 

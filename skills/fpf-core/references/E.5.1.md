@@ -10,9 +10,10 @@ dependencies:
 
 # E.5.1: DevOps Lexical Firewall
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** The FPF Core is meant to remain valid across decades and technology generations. Implementation details—file formats, build pipelines, runtime flags—evolve rapidly and differ between domains.
+> **First move:** Establish a **Lexical Firewall** around the **Conceptual Core** *(conceptual constraint; not a build‑time linter)*:
+>
+> **Governing patterns:** `references/E.5.md`
 
 ---
 

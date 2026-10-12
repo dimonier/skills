@@ -28,9 +28,10 @@ dependencies:
 
 # E.4.DPF: Domain and Local Principle Frameworks: Whether and How to Author and Publish
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a group needs to create a domain principle framework or local practice framework grounded in FPF: for example a hydroponic-cucumber framework, a neural-network architecture framework, or a Codex-process framework.
+> **First move:** Start here with the cold-reader route. It answers whether framework authoring should begin before it asks for proposal, dependency, naming, quality, or publication apparatus.
+>
+> **Governing patterns:** `references/E.4.md` `references/G.2.md` `references/E.8.md` `references/E.10.md` `references/F.18.md` `references/E.4.PFAD.md` `references/E.4.PFR.md` `references/E.4.DPF.DA.md`
 
 ---
 
@@ -71,18 +72,17 @@ A DPF gives an intended practitioner or assisting agent a source-grounded patter
 
 Start here with the cold-reader route. It answers whether framework authoring should begin before it asks for proposal, dependency, naming, quality, or publication apparatus.
 
-1. Name the intended reader and recurring working problem.
-2. State the useful move a domain or local principle framework might add.
+1. Name the intended reader, recurring working problem and useful result.
+2. Recover candidate contributions from that problem and its sources before fitting them to the current Library: recurring practitioner problems, reusable moves or Methods, first useful results, ordinary stops or wrong-turn returns, and source or refresh boundaries. When the use spans several problem families, recover their consequential connections and the practice field or fields they serve. A field can include known Methods as well as missing ones; novelty of elementary operations is not its identity test.
 3. Inspect what FPF Core, existing domain or local frameworks, and current sources already provide.
-4. Test a cheaper search, curated reading route, or access-only result.
-5. Before classifying the material by its carrier or a broad existing owner, recover candidate contributions as recurring practitioner problems, reusable moves or Methods, first useful results, ordinary stops or wrong-turn returns, and source or refresh boundaries.
   - Treat a role or competence account, several independently reusable contributions, a Card or mantra spanning material relations, a plausible field and refresh boundary, a representative use across contributions, or visible action or result loss under one broad owner as a cue to compare, not as proof of a DPF.
   - In one recognizable situation, compare each contribution with the exact current FPF or admitted-DPF action, first useful result, stop or wrong-turn return, and source or refresh obligation. Include a non-use boundary only when `F.19`'s grounded-contribution test admits it. Preserve whether it is carried by an exact current owner, supplied by an exact external result, an action-bearing remainder, or unresolved. A shared topic, role label, carrier form, missing product name, or missing PatternIDs cannot close the question.
-  - When the receiving use depends on connected Methods, establish what the intended reader receives as a whole under E.4.CM:4.4 before treating the constituent suppliers as a complete answer. If this exact comparison closes every contribution and no later-used field, edition, relation, direct-subject, publication, or access consequence remains, take the smallest useful result or stop. If exact ownership is unresolved, a coherent connected remainder survives, or closure would erase a material relation or field or refresh responsibility, keep the framework question open through the following steps.
-6. If a reusable problem-solution language still looks useful, sketch one to four provisional pattern candidates with recognizable problems and solution moves. These candidates are seeds or contributions; their number does not make a framework edition.
-7. State what field of practice the proposed framework promises to cover. Test whether its recurring problem families, pattern relations, and one representative first use need a new framework. If the current material is too narrow, retain it as, for example, a seed, a contribution to an existing framework, a guide, direct use of FPF and the sources, or another result whose direct kind fits its use.
+  - When the receiving use depends on connected Methods, establish what the intended reader receives as a whole under E.4.CM:4.4 before treating the constituent suppliers as a complete answer. A remainder can be a connection, a Method, a whole field or several fields. Keep the framework question open when exact ownership is unresolved or closure would erase a material relation, field or refresh responsibility.
+4. Distinguish content reuse from the architecture answer. Existing coverage establishes what can be retained; it does not freeze the boundaries of the frameworks carrying it. When the recovered families or changed uses put those boundaries in question, compare their current organization with a revised distribution of existing and new contributions under E.4.PFAD:4.2. A new or revised DPF can inherit or receive existing Methods. Several fields can warrant a Suite; one large pattern, an application or an umbrella title does not settle their organization.
+5. Test a cheaper search, curated reading route, access-only result or stop against the same receiving use. Take it when the exact comparison closes every contribution and no later-used field, edition, relation, direct-subject, publication or access decision remains. A sufficient narrow result needs no survey of unrelated fields.
+6. If a reusable problem-solution language still looks useful, state its field promise, connected problem families, material relations and representative first use. Compare new and revised frameworks with contribution to an existing one; use the field-scale test in :4.0. Retain a narrow useful result as a seed, contribution, guide, direct source use or another result whose kind fits its use when that test does not support a framework.
+7. Sketch provisional pattern candidates at the scale of the recovered problems. One to four can be enough to test a small proposal; neither that range nor the size of one carrier limits the number of Methods or fields to recognize. Keep independently reusable problem–move–result contributions and their whole-use relations visible before choosing their publication grouping.
 8. Ask whether choosing among five outcomes—a new or revised framework, a contribution to an existing framework, a non-framework product, a thinner publication or access route, or no new maintained product now—will settle a later-used edition, dependency, initial pattern placement or relation, direct-subject identity or change rule, or publication or access decision whose rationale another author or reviewer needs.
-
 9. If no, take the useful contribution, thinner route, other result, or stop without a DRR. If yes, use `E.4.PFAD` to state which of the same five outcomes was selected and its framework-specific consequences in one `E.9` DRR.
 
 These are alternative entry outcomes, not serial stages. A separate organization-design proposal is useful only when a named review use needs candidate organization claims. A separate dependency description is useful only when a named next authoring use needs a stable account of dependency availability and relevance. Neither is a prerequisite for recognizing or answering the architecture question.
@@ -295,7 +295,7 @@ These are evaluation characteristics for selecting and framing improvement Work.
 
 This episteme's A.3.2 MethodDescription use and its result-and-use account are sufficient only when a reader can answer: which framework episteme edition is being authored; what problem-and-solution architecture it renders; which sources and decisions shaped it; which patterns and material direct relations were selected; which relation or edition records a current maintenance use requires; which publication occurrence, form, carrier, or access relation exposes it; how quality improves; and when it returns for refresh or repair. If the account also claims dated Work or a result relation, identify that claim through its direct pattern; E.4.DPF requires neither claim merely to describe the authoring Method.
 
-#### E.4.DPF:4.0.1 - Return suite and guide proposals to their own decisions
+##### E.4.DPF:4.0.1 - Return suite and guide proposals to their own decisions
 
 Suite constitution and each inclusion or removal are separate decisions under `E.4:4.2` and `E.4.PFAD`. Belonging states collection membership between one DPF product series and the Suite. State field coverage, edition adequacy, dependency or compatibility, maintenance, publication or access, recommendation, and Guide use through their own direct predicates and grounds. A shared carrier, Guide entry, author, or locator may report membership but does not establish it.
 
@@ -303,7 +303,7 @@ An author may propose that a DPF product series join or leave a Suite, or that a
 
 For a dependency, name the dependent and relied-on editions, relied-on content, receiving use, and invalidation or reopen fact. For compatibility, name the edition pair, overlapping use, difference or interface, impact, and reopen condition. Until those facts satisfy `E.4.PFR`, keep the proposed use, constraint, or question. Suite belonging and Guide navigation report their own collection and navigation claims. The current FPF treats product series and the Suite as continuing collections; the complete `A.1` test remains the route for any holon or constructive-part claim.
 
-#### E.4.DPF:4.0.2 - Select practical examples for the product
+##### E.4.DPF:4.0.2 - Select practical examples for the product
 
 Before shaping a DPF or LPF Readme, distinguish three jobs. A compact locator points to a direct pattern when retrieval is enough. An ordinary practical entry shows how one direct pattern or one bounded direct route can answer a comparatively simple difficulty without a mantra. A Practical-Use Card is selected only for a recurring complex difficulty when a repeatable formula materially helps the reader retain a useful path through several direct pattern contributions, checks, and returns.
 
@@ -313,7 +313,7 @@ Keep one declaration for the product. It assigns every selectable example key ex
 
 Use examples selected for that product's readers and recurring questions. Say plainly that they are not a catalogue or coverage boundary and return unmatched questions to the product's index, guide, search, or direct patterns. When both simple direct use and extended cross-pattern use matter to adoption, show representative examples of both without turning every useful topic or pattern set into an entry. Do not copy the FPF key inventory, card count, whitespace-token limits, or optional `@FPFReadme` records, and do not create a rival local card grammar or second key registry. Keep a pattern-local mantra used to recall one pattern's `Solution`, a Readme card mantra used to retain a longer cross-pattern path, and an independently admitted CGUS demonstration distinct. Claims about a Method, performed Work, project result, or stronger relation use their direct patterns and evidence.
 
-#### E.4.DPF:4.0.3 - Keep pattern addresses stable while publication order changes
+##### E.4.DPF:4.0.3 - Keep pattern addresses stable while publication order changes
 
 Before public references accumulate, declare a short, stable code for the DPF and assign one local locator to each pattern. Together the DPF code and local locator form the PatternID. Within that DPF, each PatternID is unique. The code is only a short reference to that named DPF; it need not be globally unique and does not identify an edition. Settle a new durable public abbreviation through `F.18`. If the public DPF code later changes while the same DPF continues, preserve old references through an explicit `F.13`/`F.18` rename or alias relation and a reader return; otherwise say where old-code use stops. Do not silently rewrite old citations. Do not assign the old code to another framework where readers may encounter both sets of citations without the full framework name.
 
@@ -513,33 +513,54 @@ Replayable authoring slice:
 | Local publication or access | one exact form-bearing publication or access-facing carrier exposes the framework after source-return notes are present; any access route is named separately |
 | Refresh route | `G.11` refresh when the source pack, selected `FPF@C1` edition, either relied-on Core claim, or greenhouse-control practice changes; reopen the explanations and uses affected by the change. |
 
-#### Pattern-address and reorder slice
+
+
+#### E.4.DPF:5.1 - Pattern-address and reorder slice
+
 
 A Systems Engineering DPF edition gives `SYSE.22` a stable address and places it after `SYSE.2` because that order helps its readers. A later edition may move `SYSE.22` without renaming it when its recurring problem and working answer continue; the ToC and body order change together, while old citations still resolve through the same PatternID. If a later repair splits that working answer, only the continuing answer keeps `SYSE.22`; the other answer receives a new unused PatternID, and readers of the old reference get a short migration assertion or an explicit stop.
 
-#### Local-mantra authoring slice
+
+
+#### E.4.DPF:5.2 - Local-mantra authoring slice
+
 
 After the `HC.NutrientMonitoring` Solution is stable, its authors use the local mantra: *Name the crop stage and root-zone condition; establish that the measurement is usable in its current calibration range; compare it with the stage-specific range; change the control setting only within the declared operating boundary; return when crop stage, sensor validity, or operating boundary changes.* The formula helps a grower or crop-system architect keep the pattern's operative distinctions and return condition in attention. It remains Plain wording inside `HC.NutrientMonitoring`; it is not another nutrient-control method, work order, U-kind, or F.17 publication obligation.
 
 If a seminar instead needs to show alternative continuations for invalid measurement, out-of-range nutrient condition, control saturation, and crop-stage transition through one named wider unfolding structure, the authors open `A.22.CGUS` and build a demonstrative walkthrough. They do not obtain that structure merely by extending or repeating the local mantra.
 
-#### Optional organization-proposal slice
+
+
+#### E.4.DPF:5.3 - Optional organization-proposal slice
+
 
 A team intends a new clinical-method DPF, and a named review use needs candidate organization claims before an architecture answer is selected. It creates one current `U.WorkPlan` for possible future DPF-authoring Work, then one C.2.1 `IntendedFrameworkResultDescription` whose identity is its exact intended-result ClaimGraph, that WorkPlan as EntityOfConcern, and its effective ReferenceScheme; ClaimScope remains separate. `FrameworkOrganizationDesignProposal` uses that description as its EntityOfConcern and proposes candidate pattern-family, dependency, publication, and access relations in one ClaimGraph. The proposal is the current result. No future framework entity, actual architecture, architecture description, dated Work, or production relation is asserted.
 
-#### Coverage and acceptance slice
+
+
+#### E.4.DPF:5.4 - Coverage and acceptance slice
+
 
 The proposal's medication-review coverage criterion names the pattern families whose representation is necessary for that declared use. One constraint claim node names the covered relation-family refs with exact kinds, that admitted use, and the coverage criterion. The authoring WorkPlan separately cites an acceptance target for review completion. C.33 uses the coverage node as comparator when evaluating proposal coverage; the WorkPlan target does not replace the criterion.
 
-#### Empirical-grounding and use-frame stress slice
+
+
+#### E.4.DPF:5.5 - Empirical-grounding and use-frame stress slice
+
 
 The intended-result description has a separately obtaining `EpistemeEmpiricalGroundingRelation` to `MedicationReviewTeam@Hospital-A`, an A.1-admitted holon, covering the exact supported claim subgraph. The holon is not an episteme identity slot. A request to rely instead on a consortium first rechecks the empirical-grounding relation and evidence, effective ReferenceScheme, ClaimScope, and any independently selected BoundedModelUseStructure. Changing only the empirical ground changes that relation; changing the ClaimGraph, EntityOfConcern, or effective scheme identifies another episteme. F.9 opens only if an exact cross-context local-sense translation is actually current, not merely because the maintaining organization changed.
 
-#### Optional authoring-dependency slice
+
+
+#### E.4.DPF:5.6 - Optional authoring-dependency slice
+
 
 A named next authoring use needs a stable dependency account. The selected FPF edition is available and relevant now, so its `fpfEdition` position has exact value and kind refs and no acquisition condition. The next-use boundary names the Core claims needed for that authoring use. The accepted architecture answer is cited through its E.9 DRR because this use needs that rationale; it is not a mandatory PFAD dependency position. A publication carrier is missing but retained for later use, so its position has no value refs, has an acquisition-condition description, and does not block current pattern drafting. A missing source pack marked `currentForNextAuthoringUse` blocks the next use and opens the stated return. Availability never stands for relevance.
 
-#### Framework-evolution slice
+
+
+#### E.4.DPF:5.7 - Framework-evolution slice
+
 
 A new controlled-environment study changes the admissible nutrient range used only by `HC.NutrientMonitoring`. Because this example selected a broad, refreshable `G.2` pack, first revise that pack and preserve the displaced source reading. Use `E.4.PFR` to identify the nutrient pattern, its source-reuse relation, and its dependent examples as the affected set; use `E.21` to evaluate the revised pattern body; use `E.23` for repeated improvement of that pattern edition; and use `G.11` for currentness, telemetry, and deprecation or supersession of exposed editions. Unaffected climate-control and harvest-feedback patterns remain current. `E.4.PFAD` stays closed while framework family, pattern split, relation structure, publication-form, presentation-carrier or access-route architecture, and dependency boundary remain unchanged; a change to one of those decisions makes PFAD current again.
 

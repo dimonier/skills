@@ -26,9 +26,10 @@ dependencies:
 
 # A.6.3.CR: ConservativeRetextualization: EntityOfConcern-Preserving Textual Re-Expression
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when one already available source line about the same EntityOfConcern needs a second textual form: a report rewrite, summary, translation, or declared filtered restatement.
+> **First move:** > `ConservativeRetextualization` is a named pattern specialized under `A.6.3 U.EpistemicViewing` for textual re-expression of the same EntityOfConcern.
+>
+> **Governing patterns:** `references/A.6.3.md` `references/A.6.2.md` `references/A.7.md` `references/E.10.D2.md` `references/E.17.0.md` `references/E.17.md` `references/F.9.md` `references/F.18.md`
 
 ---
 
@@ -196,22 +197,40 @@ These are recurring move shapes, not separate patterns. The specialization relat
 
 #### A.6.3.CR:4.5 - Shared conservative retextualization rule bundle
 
-##### A.6.3.CR:4.5.a. Preservation rule
+
+
+##### A.6.3.CR:4.5.a. - Preservation rule
+
 A case under `ConservativeRetextualization` preserves the same resolved EntityOfConcern, the declared bounded context, and the already available claim-bearing source while changing wording, register, language, ordering, or density. It states what remains preserved about claim scope, publication scope, pins, provenance, grounding, and ontic scaffold, and it says whether the case is `Direct` or `Correspondence`.
 
-##### A.6.3.CR:4.5.b. Loss and reliability rule
+
+
+##### A.6.3.CR:4.5.b. - Loss and reliability rule
+
 A reviewed case makes explicit what is omitted, shortened, foregrounded, or carried only through a declared source-loss mode by the rewrite. Reliability transport may remain source-bounded or be explicitly downgraded, but it must never be silently widened by cleaner prose, more forceful rhetoric, or management-facing polish.
 
-##### A.6.3.CR:4.5.c. Authority and changed-claim boundary
+
+
+##### A.6.3.CR:4.5.c. - Authority and changed-claim boundary
+
 A case reviewed under this pattern stays about the same entity and remains an episteme-to-episteme textual rewrite. It does not establish explanation faithfulness, an F.9 Bridge or bounded-use suitability, retargeting, current reliance, authorization, or actual receiving use. If the rewrite becomes explanatory, Bridge-bearing, gate-bearing, or world-facing, state the attempted claim and use the pattern that defines, constrains, or tests it. Use F.9 for a semantic Bridge between two exact F.17 local senses or a proposed bounded use of that Bridge. Take a current reliance question to triggered A.10 or B.3 and authorization to the pattern that directly constrains the receiving act. For an asserted occurrence, first recover the actual object or occurrence under its direct obtaining or admission rule, then cite the evidence on which the assertion relies. A precise dated Work claim needs A.13 and independent A.15.1 admission; add F.6 only for precise assignment-bound attribution. Do not create those records when their branches are not live.
 
-##### A.6.3.CR:4.5.d. Composition and reopen rule
+
+
+##### A.6.3.CR:4.5.d. - Composition and reopen rule
+
 Repeated direct rewrite over the same source line may be idempotent, but heterogeneous rewrites and correspondence-mediated rewrites are generally order-sensitive. A reviewed case must reopen whenever correspondence witness, source pins, provenance, admissible-face assumptions, or entityOfConcernRef-preserving conservativity stop being explicit. Revalidate the affected claims when a load-bearing source, correspondence witness, provenance, face or use assumption, or preservation condition changes, even if it remains explicit; use `E.17:5.1b–c` for the applicable reopen condition.
 
-##### A.6.3.CR:4.5.e. Non-collapse note for correspondence
+
+
+##### A.6.3.CR:4.5.e. - Non-collapse note for correspondence
+
 Correspondence-mediated retextualization does **not** by itself establish an F.9 Bridge, bounded-use suitability, current reliance, authorization, or actual receiving use. Apply F.9 when a cross-local-sense semantic Bridge or a proposed bounded use of that Bridge is claimed. When reliance is current, apply triggered A.10 or B.3. The pattern for the receiving act handles authorization; recover any asserted occurrence under its direct obtaining or admission rule and cite evidence when the assertion relies on it. These are independent questions, not a mandatory record bundle for every rewrite.
 
-##### A.6.3.CR:4.5.f. Local conservativity witness for borderline textual cases
+
+
+##### A.6.3.CR:4.5.f. - Local conservativity witness for borderline textual cases
+
 For borderline textual rewrites, the user treats the case as conservative only while each point below remains visibly preserved or its loss is declared and admissible for the stated use. A missing basis or repairable defect follows the repair route in §4.2.b; an actual changed claim or use follows the pattern that defines, constrains, or tests it.
 - **Modality and force.** A rewrite may not silently turn possibility, uncertainty, permission, obligation, recommendation, decision status, bounded scope, temporal window, or hypothesis language into a wider commitment.
 - **Caveats and qualifications.** A rewrite may not quietly remove conditions, exception notes, uncertainty markers, or temporal qualifiers that still matter for interpreting the same source.

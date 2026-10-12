@@ -20,9 +20,10 @@ dependencies:
 
 # A.6.1: U.Mechanism - Reusable Law-Governed Operation Declaration
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** An engineer needs a reusable declaration of operations, their typed argument and result positions, the laws they preserve, and the conditions under which an operation is admitted.
+> **First move:** Use `U.Mechanism` as the dependent durable U-kind for a reusable law-governed operation declaration episteme. Identify it through C.2.1.
+>
+> **Governing patterns:** `references/A.6.0.md` `references/C.2.1.md` `references/A.2.6.md` `references/A.6.REL.md` `references/A.6.5.md` `references/A.3.1.md` `references/A.15.1.md` `references/F.9.md`
 
 ---
 

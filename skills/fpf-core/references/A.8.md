@@ -18,9 +18,11 @@ dependencies:
 
 # A.8: Universal Core Principle: Test a U-Kind Across Domains
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a candidate durable U-kind is proposed as a kernel-level universal primitive rather than as a local concept, C.3 `U.Kind`, direct subject-pattern value, Concept-Set row, slot, relation, record, publication form, or dep …
+> **Problem frame:** FPF needs some universal primitives. It also needs to avoid turning a field's favorite vocabulary into the kernel. A word that works in software, finance, biology, or physics may still be local.
+> **First move:** | Check | Requirement | | --- | --- | | `CC-A8-1` | The candidate has an `E.24.UK` durable U-kind admission basis before A.8 is applied. | | `CC-A8-2` | The A.8 claim is kernel-level universal-core admission, not C.3 typed reasoning.
+>
+> **Governing patterns:** `references/E.24.UK.md` `references/A.11.md` `references/C.3.md` `references/F.8.md` `references/F.18.md`
 
 ---
 

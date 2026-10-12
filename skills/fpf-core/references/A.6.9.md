@@ -41,9 +41,10 @@ dependencies:
 
 # A.6.9: Cross-Context Sameness Disambiguation - Restoring the concrete claim behind "same / equivalent / align" (RPR-XCTX)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Cross-context prose routinely compresses a multi-part claim into one adjective: *same*, *equivalent*, *align*, *map*, *matches*, or *corresponds*.
+> **First move:** Treat an umbrella sameness sentence as a **dispatch trigger**, not as an automatic Bridge and not as a demand for a card. Recover the concrete subject and action first. Then choose the smallest truthful branch:
+>
+> **Governing patterns:** `references/A.6.P.md` `references/F.17.md` `references/F.18.md` `references/F.9.md` `references/C.2.1.md` `references/F.0.1.md` `references/F.7.md` `references/F.8.md`
 
 ---
 

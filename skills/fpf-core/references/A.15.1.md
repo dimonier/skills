@@ -33,9 +33,10 @@ dependencies:
 
 # A.15.1: `U.Work`: Dated Performed Work Occurrence
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** After we have separated **which system-role assignment obtains** (via `U.SystemRoleAssignment`), **what capability is being relied on** (through an A.2.2 qualified holder-ability claim), **how in principle** the Work is done (the exact `U.M …
+> **First move:** This pattern does not define another kind of Agent and does not infer agency from Work. In precise FPF prose, **Agent** is shorthand for the A.13 core result about one exact admitted `U.System`, one exact local agential system-role kind and …
+>
+> **Governing patterns:** `references/A.1.md` `references/A.2.1.md` `references/A.3.1.md` `references/A.13.md` `references/C.2.1.md` `references/F.6.md` `references/A.6.1.md` `references/A.3.4.md`
 
 ---
 

@@ -13,11 +13,6 @@ dependencies:
 ## ASB.Placement - Placement & portability: global vs project-local, symlink strategy
 
 > **Trigger:** When deciding where a skill should live (global user directory vs project-local) and how to expose one source of truth to several agent products.
-> **Governing patterns:**
->   → `AS.9` (Placement & Portability — the AS-DPF pattern this card specializes)
->   → `E.4` (family architecture — where a skill lives in the ecosystem)
->   → `E.5.3` (acyclicity)
->   → `C.33` (carrier admission)
 > **Skill dependencies:**
 >   → none
 
@@ -115,17 +110,16 @@ discovery rules. Portability requires keeping repo facts out of the skill.
 
 ### ASB.Placement:10 - Rationale
 
-`AS.9` fixes placement by audience and portability; `E.4`/`E.5.3` place skills as
-family artifacts with a unidirectional dependency; `C.33` treats each installed
-location as a carrier returning to the single source. Symlinks preserve one
-authoritative surface.
+`E.4`/`E.5.3` place skills as family artifacts with a unidirectional dependency;
+`C.33` treats each installed location as a carrier returning to the single source.
+Symlinks preserve one authoritative surface.
 
 ### ASB.Placement:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "Placement Guide" (global vs project-local, symlink strategy) | Adopt | Placement table, symlink layout, security note | Reopen on a skill-payload edition change |
-| AS-DPF `AS.9` Placement & Portability | Adopt | Audience-based placement, one-source discipline | Reopen on `AS.9` revision |
+| AS-DPF `AS.9` Placement & Portability (merged 2026-10-04) | Adopt | Audience-based placement, one-source discipline | — merged into this DPF |
 | opencode multi-directory skill loading | Adopt | "Check the product's discovery rules before symlinking" | Reopen on a product-discovery change |
 
 Best-known line: one source, symlinked outward. Rejected rival: "duplicate into every
@@ -133,9 +127,7 @@ agent directory" — rejected as a forked single surface.
 
 ### ASB.Placement:12 - Relations
 
-- **Builds on (DPF):** `AS.9` (placement).
-- **Builds on (FPF):** `E.4` (family architecture), `E.5.3` (acyclicity), `C.33` (carrier admission).
-- **Coordinates with (DPF):** `AS.11` (security surface of global skills).
-- **Coordinates with (LPF):** `ASB.SecurityAndTrust` (selective global install is stated in both).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.9` (placement).
 
 ### ASB.Placement:End

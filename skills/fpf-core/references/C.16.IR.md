@@ -16,9 +16,10 @@ dependencies:
 
 # C.16.IR: Determine What a Measurement Indication Can Resolve
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an available measurement relation leaves open what can be inferred from an indication. A loaded voltmeter reading can fit several source voltages.
+> **First move:** Construct the cases compatible with the indication and relevant conditions. Obtain the sought values represented by those cases, retaining the distinction between feasible examples and bounds that contain all solutions.
+>
+> **Governing patterns:** `references/C.16.md` `references/C.16.MR.md` `references/C.29.1.md` `references/C.29.2.md` `references/A.3.3.PI.md` `references/B.5.MPC.R.md` `references/C.11.DUA.md`
 
 ---
 

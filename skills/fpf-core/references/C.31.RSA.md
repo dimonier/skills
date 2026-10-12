@@ -32,9 +32,10 @@ dependencies:
 
 # C.31.RSA: Reusable Structure Accounting
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a practitioner needs to locate where reusable structure lives, where bespoke residue grows, which accounting basis is being used, what can be refactored, and what remains a bounded exception or source-return condition. …
+> **First move:** C.31.RSA governs reusable-structure accounting as a typed description over declared structures and structural aspects. It starts with `ReusableStructureTriage`; it uses `ReusableStructureAccountingDescription@Context` only when the accounti …
+>
+> **Governing patterns:** `references/C.31.md` `references/C.30.md` `references/C.30.ASV.md` `references/C.16.md` `references/A.19.md` `references/A.6.M.md` `references/C.31.ASAP.md` `references/C.29.md`
 
 ---
 

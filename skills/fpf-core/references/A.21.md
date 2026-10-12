@@ -26,9 +26,11 @@ dependencies:
 
 # A.21: Gate Decisions from Independent Check Results
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use A.21 when a named gate must decide whether one bounded action or transition may proceed under an applicable profile rule. Identify every check that the rule requires, including the subject and criterion of each check.
+> **Problem frame:** A gate combines results defined elsewhere. A.20 may report an internal constraint; A.10 or B.3 may support an evidence or assurance check; E.18 may establish a structural crossing; a regulatory or safety pattern may define another criterion …
+> **First move:** `GateDecisionResult` is a C.2.1 result episteme. Its EntityOfConcern is the bounded action or transition being decided. Its ClaimGraph says that one identified profile application maps one complete effective set of check-application results …
+>
+> **Governing patterns:** `references/A.20.md` `references/E.18.md` `references/A.15.5.md` `references/A.10.md` `references/B.3.md` `references/A.2.md` `references/C.3.2.md` `references/A.2.1.md`
 
 ---
 

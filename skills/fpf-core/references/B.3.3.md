@@ -21,9 +21,10 @@ dependencies:
 
 # B.3.3: Assurance Subtypes & Levels
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** A team must decide whether the available support is enough for a particular claim and receiving use, or what a published assurance level permits a recipient to conclude.
+> **First move:** A Target of Assurance (ToA) denotes the claim being assessed for the named use, not an undifferentiated score for its whole system.
+>
+> **Governing patterns:** `references/B.3.md` `references/A.10.md` `references/C.28.md` `references/B.3.4.md` `references/B.3.5.md`
 
 ---
 

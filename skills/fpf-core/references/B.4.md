@@ -11,9 +11,10 @@ dependencies:
 
 # B.4: Coordinate Repeated Adaptation (Canonical Evolution Loop)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** The FPF is built on the **Principle of Open-Ended Evolution (P-10)**: continued use can reveal reasons to adapt a System, an episteme, a Method, or a description.
+> **First move:** Use the **Canonical Evolution Loop** as a coordinating cycle, not as a universal identity rule. First recover the exact subject and what continuity means for it.
+>
+> **Governing patterns:** `references/A.4.md` `references/A.12.md`
 
 ---
 

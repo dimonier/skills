@@ -18,9 +18,10 @@ dependencies:
 
 # A.3.3.TR: Construct a Rule for State Change
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you can describe a situation's state but still need to work out how it can change. A connection limits two bodies' positions but leaves their acceleration to be determined.
+> **First move:** Construct the rule around the change that matters to the question. Recover the relevant subject operations or interactions, connect their effects and test the resulting continuation.
+>
+> **Governing patterns:** `references/A.3.3.md` `references/A.3.3.CC.md` `references/B.5.FM.md` `references/B.5.MPC.md` `references/B.5.MPC.R.md` `references/A.22.CGUS.md` `references/C.29.1.md` `references/C.29.2.md`
 
 ---
 

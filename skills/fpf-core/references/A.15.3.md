@@ -32,9 +32,10 @@ dependencies:
 
 # A.15.3: `SlotFillingsPlanItem`: Plan a Value for an Existing Declaration Member
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** A WorkPlan may need more precision than *use this Method* or *perform this task*. An inspection plan may need to remember that `Robot_8_Ref` is intended for `HolderSystemSlot` in the cited `InspectionRobotSystemRoleAssignmentSignature` edit …
+> **First move:** `SlotFillingsPlanItem` is a content form inside one `U.WorkPlan` ClaimGraph. It is not a U-kind, dependent durable kind, `U.Relation` occurrence, ontic `SlotRelation`, independent record, or second slot ontology.
+>
+> **Governing patterns:** `references/C.2.1.md` `references/A.15.2.md` `references/A.6.5.md` `references/A.6.1.md` `references/A.15.1.md` `references/A.6.RCD.md` `references/A.15.5.md` `references/E.17.md`
 
 ---
 

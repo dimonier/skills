@@ -17,9 +17,10 @@ dependencies:
 
 # B.1.4: Specify Order-Sensitive or Temporal Aggregation (Γ_ctx, Γ_time)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Many useful aggregates are not simple unordered wholes. A manufacturing sequence changes meaning when steps are swapped. An argument chain depends on which premise is used before which lemma.
+> **First move:** For contextual order aggregation:
+>
+> **Governing patterns:** `references/B.1.md` `references/A.1.1.md` `references/A.14.md` `references/C.27.TA.md` `references/A.15.1.md` `references/A.3.4.md` `references/C.29.md`
 
 ---
 

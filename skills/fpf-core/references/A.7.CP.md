@@ -13,9 +13,9 @@ keywords:
 
 # A.7.CP: Constructive-Premise Compact and Reasoning-Basis Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when reasoning, ontology analysis, choice, or reconciliation actually relies on a broad constructive claim and another person must be able to recover which claim, exact receiving claim or result, posture, scope, work occurr …
+> **Problem frame:** Dated work applying an FPF method can rely on broad claims such as “a publication does not create world-side obtaining” or “a MethodDescription episteme does not perform Work”.
+> **First move:** The compact carries these stable claim contents:
 
 ---
 

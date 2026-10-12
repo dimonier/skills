@@ -26,14 +26,15 @@ dependencies:
     - G.5
     - G.9
     - G.11
-    - C.30.TFS
+    - "C.30.TFS-REL"
 ---
 
 # E.18: Transformation Flow Structure
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Provide a notation-independent pattern for `TransformationFlowStructure`: a selected compound structure whose loci may bind independently identified actual `U.Transformation` values and adjacent values whose definitions or constraints are i …
+> **First move:** | Force | Tension | | ------------------------------------------------ | …
+>
+> **Governing patterns:** `references/A.3.4.md` `references/E.17.md` `references/E.8.md` `references/E.10.md` `references/A.7.md` `references/E.18.NET.md` `references/A.15.1.md` `references/A.15.PROD.md`
 
 ---
 

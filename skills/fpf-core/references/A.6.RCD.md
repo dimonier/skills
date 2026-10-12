@@ -19,9 +19,11 @@ dependencies:
 
 # A.6.RCD: Needed Relation Claim Derivation and Relation-Kind Admission
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when an engineer can name the exact participant referents and the claim, check, decision, or continuation that is blocked, but no current direct relation states the needed relation-bearing claim.
+> **Problem frame:** FPF permits rich claims over already identified entities and admitted relations without requiring one primitive relation kind for every useful sentence.
+> **First move:** Name the blocked receiving claim and participants. Reuse a current direct predicate when it can state that claim. Derive only what the selected substrate warrants. Publish reusable predicate semantics only for repeated use.
+>
+> **Governing patterns:** `references/A.6.REL.md` `references/A.6.5.md` `references/C.2.1.md` `references/A.6.0.md` `references/A.11.md` `references/E.24.md` `references/E.24.UK.md` `references/C.29.md`
 
 ---
 

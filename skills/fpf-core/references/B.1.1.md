@@ -16,9 +16,11 @@ dependencies:
 
 # B.1.1: Dependency Structure and Relation Grounding
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when an aggregation, architecture, assurance, or construction claim depends on how candidate parts, members, phases, portions, or external relations depend on each other.
+> **Problem frame:** B.1.1 separates dependency structure from graph representation.
+> **First move:** Use dependency structure first; use graph representation second.
+>
+> **Governing patterns:** `references/B.1.md` `references/A.14.md` `references/C.13.md` `references/C.29.md` `references/A.10.md` `references/B.3.5.md`
 
 ---
 

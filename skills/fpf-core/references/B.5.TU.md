@@ -1,7 +1,7 @@
 ---
 id: B.5.TU
 title: Construct a Working Use of an Unfamiliar Theory
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -16,16 +16,17 @@ dependencies:
 
 # B.5.TU: Construct a Working Use of an Unfamiliar Theory
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a theory offers a promising way to answer a question, but you cannot yet connect its objects and reasoning to an answer you can use.
+> **First move:** Connect the working question, the theory's constructive or inferential resources, and the use of the resulting answer. Enter where the unresolved connection begins; reuse contributions already available.
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.RC.md` `references/B.5.RA.md` `references/B.5.RR.md` `references/C.29.md` `references/A.6.3.RT.md` `references/A.15.9.md`
 
 ---
 
 ## B.5.TU - Construct a Working Use of an Unfamiliar Theory
 
 > **Type:** Method-description pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.TU:1 - Problem frame

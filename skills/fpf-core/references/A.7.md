@@ -16,9 +16,11 @@ dependencies:
 
 # A.7: Strict Distinction: Repair Conflations of FPF Objects (Clarity Lattice)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when one sentence, diagram, card, identifier, file, plan, or run is being read as several nearby FPF objects and the team needs to recover the exact relation position before checking the recovered claim under its exact subj …
+> **Problem frame:** Provide a **single, didactically clear lattice of distinctions** for recognizing and correcting category errors. The pattern addresses four recurrent confusions:
+> **First move:** | Force | Tension | | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | | **Didactic brevity vs conceptual pr …
+>
+> **Governing patterns:** `references/A.1.md` `references/A.2.md` `references/A.3.md`
 
 ---
 

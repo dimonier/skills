@@ -20,9 +20,10 @@ dependencies:
 
 # A.15.7: Situation-Responsive Work Steering and Next-Action Selection
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Use this pattern when you are in the middle of Work, current facts can change what should happen next, and a domain Method still sets what is allowed.
+> **First move:** Use the following steering Method. Keep the answer as small as the current decision permits, and stop as soon as a direct result or honest blocker is available.
+>
+> **Governing patterns:** `references/A.3.1.md` `references/A.15.1.md` `references/A.10.md` `references/A.15.2.md` `references/A.15.5.md` `references/C.11.md` `references/A.19.md` `references/C.18.md`
 
 ---
 

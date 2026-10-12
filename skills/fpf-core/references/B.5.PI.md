@@ -15,9 +15,10 @@ dependencies:
 
 # B.5.PI: Initiate Inquiry from Ongoing Work
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern to make room for a useful question in work that people or agents currently treat as ordinary. Reports arrive, calculations run, repairs succeed, and nobody asks whether the way of obtaining or using those results needs exam …
+> **First move:** **At an ordinary work occasion, recover the use and what it takes; compare; keep what the account misses; form a question or retain the cue; obtain a worthwhile next contribution; return to the whole work.** These moves form one connected m …
+>
+> **Governing patterns:** `references/A.15.11.md` `references/B.5.EA.md` `references/A.16.1.md` `references/B.5.QD.md` `references/B.5.md` `references/C.11.DUA.md`
 
 ---
 

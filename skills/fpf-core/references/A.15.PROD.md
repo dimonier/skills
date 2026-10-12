@@ -29,9 +29,10 @@ dependencies:
 
 # A.15.PROD: Production Work, Entity-Identity Inception, and Production Completion Recovery
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when.** Practitioners **SHOULD** use this pattern when work is said to have *made*, *produced*, *built*, *assembled*, *grown*, *generated*, *finished*, or *completed* something and the receiving decision needs to know which exact …
+> **First move:** The practitioner **MUST** choose one of the three production questions, name the Work and the affected referent, candidate basis, or produced entity involved, and gather only the facts that decide that question.
+>
+> **Governing patterns:** `references/A.13.md` `references/A.15.1.md` `references/F.6.md` `references/A.3.1.md` `references/A.3.4.md` `references/C.2.1.md` `references/A.6.RCD.md` `references/A.1.md`
 
 ---
 
@@ -245,7 +246,10 @@ Assurance may warrant reliance on the claim. Work, change, entity inception, and
 
 The ordinary sequence is section 4.7 applied to the selected branch. If several production questions are current, handle each as a separate claim. For production-work participation, choose the whole-work or proper-part branch in section 4.3; for inception or completion, use sections 4.5 or 4.6. Stop after the readable answer or exact blocker. If later reuse needs a durable claim, identify its C.2.1 episteme; if the receiving use also needs availability through a form or carrier, establish the separate E.24.PUB occurrence. Open delivery, acceptance, release, publication, availability, result, evidence, assurance, or relation-kind questions only when the named action or decision asks one of them; none follows from the production answer.
 
-##### Triggered author replay
+
+
+##### A.15.PROD:4.9.1 - Triggered author replay
+
 
 Continue only for an A.6.RCD:4.2 pin-triggering use or when a negative or earliest-boundary answer consumes additional semantics:
 

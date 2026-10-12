@@ -5,9 +5,9 @@ title: "A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Interpretive Views of Declar
 
 # A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW: A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW - Interpretive Views of Declared Source Sets and Search/Outcome Spaces
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when one already-declared substrate from `A.19.SOURCE-SET-SPACE-SUBSTRATE` is already in force, and the current passage either cites that substrate directly or works through one declared source-set entry point or set-result …
+> **Problem frame:** Once one source-set and search/outcome-space substrate has been declared, many lines still need one second-order interpretive view for ordinary work.
+> **First move:** Declare interpretive views as substrate-side only readings over one already-declared substrate-bearing basis, keep them explicitly under existing view law, and reserve atlas form for the cases that truly need it.
 
 ---
 
@@ -43,7 +43,7 @@ Not this pattern when:
 - you are defining a new generic view law, viewpoint bundle, or publication-view family rather than one domain-specific interpretive reading; use `A.6.3`, `E.17.0`, `E.17`, or `E.17.1`;
 - the line would change the EntityOfConcern rather than preserve it; use `A.6.4` or the appropriate retargeting pattern.
 
-### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:0.1 - What goes wrong if missed
+#### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:0.1 - What goes wrong if missed
 
 If this pattern is missed, interpretive-view work usually fails in one of four ways:
 
@@ -54,7 +54,7 @@ If this pattern is missed, interpretive-view work usually fails in one of four w
 
 The reader then cannot tell whether a visible interpretation is one optional interpretive view, one fuller atlas reading, one publication face, or one new semantic head.
 
-### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:0.2 - What this buys
+#### A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW:0.2 - What this buys
 
 This pattern buys one disciplined middle layer:
 

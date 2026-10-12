@@ -1,7 +1,7 @@
 ---
 id: E.10.INT
 title: Recovering What Interest or Curiosity Means Here
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -11,9 +11,10 @@ dependencies:
 
 # E.10.INT: Recovering What Interest or Curiosity Means Here
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** a claim that something is *interesting*, *in someone's interest* or *driven by curiosity* is being used to choose work, but leaves you unsure what to do.
+> **First move:** Recover the relied-on meaning, then continue the work that gives it value.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md`
 
 ---
 
@@ -21,7 +22,7 @@ dependencies:
 
 > **Type:** lexical and ontological precision restoration (E)
 >
-> **Status:** Draft
+> **Status:** Stable
 
 ### E.10.INT:1 - Problem frame
 

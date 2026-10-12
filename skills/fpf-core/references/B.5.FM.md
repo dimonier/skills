@@ -1,7 +1,7 @@
 ---
 id: B.5.FM
 title: Construct a First Model for the Working Question
-status: Draft
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -17,16 +17,17 @@ dependencies:
 
 # B.5.FM: Construct a First Model for the Working Question
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when you need to reason about a situation or formal problem but do not yet have an account on which to perform the needed inference.
+> **First move:** Construct a model by selecting distinctions, proposing their relations and making those relations usable in an inference. Work can move back and forth between these contributions.
+>
+> **Governing patterns:** `references/B.5.md` `references/B.5.4.md` `references/C.29.md` `references/A.3.3.md` `references/C.16.md` `references/A.6.3.RT.md` `references/B.5.RR.md` `references/B.5.MPC.R.md`
 
 ---
 
 ## B.5.FM - Construct a First Model for the Working Question
 
 > **Type:** Method pattern
-> **Status:** Draft
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.FM:1 - Problem frame
@@ -79,7 +80,7 @@ Try a consequential variation. If two situations receive the same description bu
 
 For a question about permitted continuations, A.3.3 helps construct a sufficient state description. For an observation, C.16 helps connect the quantity of interest to what the observation reports.
 
-#### B.5.FM:4.2.1 - Let a conceptual scheme expose a useful question
+##### B.5.FM:4.2.1 - Let a conceptual scheme expose a useful question
 
 Start from what the current account is meant to enable, even when the question is provisional: prepare a workshop, interpret an effect or improve a construction. Choose a small, understood conceptual scheme whose relations could reveal a consequential distinction. Here a scheme means related concepts and the inferences their relations permit. For example, connecting a learner's attempt, what an instructor can observe and the feedback required can expose a question that a seating plan leaves unanswered.
 

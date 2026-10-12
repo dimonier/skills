@@ -19,9 +19,10 @@ dependencies:
 
 # C.22.1: Task-family adaptation signature
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Final task score alone does not tell whether a holder, dyad, or bounded specialist portfolio acquired usable specialization quickly, under what budget, with what prior exposure, whether the resulting competence transferred, or whether it en …
+> **First move:** - adaptation claims collapse into vague `got better` language with no declared work-measure threshold target or budget-to-threshold account - parity later compares outcomes that were reached under different prior exposure, different work-me …
+>
+> **Governing patterns:** `references/C.22.md` `references/C.19.1.md` `references/A.15.md` `references/C.24.md` `references/E.16.md` `references/E.23.md` `references/G.5.md` `references/G.9.md`
 
 ---
 

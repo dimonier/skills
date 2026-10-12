@@ -22,9 +22,10 @@ dependencies:
 
 # A.4: Compare a System's Intended Design with Its Operating Conditions
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** a decision depends on whether an independently identified System's operation matches a selected design account, and that comparison is still unresolved.
+> **First move:** 1. **Select the subject, account and use.** Identify the System, the design account edition and the decision this comparison must inform. Keep the System's identity under its own rule and the account's identity under C.2.1.
+>
+> **Governing patterns:** `references/A.1.md` `references/C.2.1.md` `references/A.1.1.md` `references/A.3.4.md` `references/C.27.md` `references/B.4.md`
 
 ---
 

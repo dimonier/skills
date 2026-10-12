@@ -17,18 +17,17 @@ dependencies:
     - A.3.2
     - A.3.4
     - A.10
-    - A.12
-    - A.15
-    - B.1.4
-    - B.1.6
+    - "A.12-A.15"
+    - "B.1.4-B.1.6"
     - F.9
 ---
 
 # A.3: Transformer Quartet: Distinguish Work, Performer, Method and Method Description
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Establish a substrate-neutral way to say which system performed one dated world-side Work occurrence by enacting which `U.Method`, under which exact `U.SystemRoleAssignment` when assignment-bound attribution is needed, and which separately …
+> **First move:** | Force | Tension | | --------------------------- | ------------------------------------------------------------------------------------------- | | **Identity vs behaviour** | Keep holon identity stable while roles/behaviours change.
+>
+> **Governing patterns:** `references/A.2.1.md` `references/A.7.md` `references/A.13.md` `references/A.15.1.md` `references/C.2.1.md` `references/F.6.md` `references/A.4.md` `references/A.3.1.md`
 
 ---
 

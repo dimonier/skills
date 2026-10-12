@@ -28,9 +28,10 @@ dependencies:
 
 # F.9.1: Bridge Stance Note — Clarify a Bounded Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** People often need one short gloss after they have established a cross-local semantic relation and judged one bounded use of it.
+> **First move:** Before adding a stance note, check four things:
+>
+> **Governing patterns:** `references/F.9.md` `references/C.2.1.md` `references/A.10.md` `references/B.3.md` `references/A.6.3.CSC.md` `references/E.17.ID.CR.md` `references/C.16.Q.md` `references/E.24.PUB.md`
 
 ---
 

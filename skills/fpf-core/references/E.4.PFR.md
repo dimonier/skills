@@ -28,9 +28,10 @@ dependencies:
 
 # E.4.PFR: Pattern-Framework Relation and Edition Discipline
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Pattern frameworks need several relation functions. One pattern may specialize another. A local framework edition may depend on a domain-framework edition or selected Core content in an FPF edition.
+> **First move:** In one CGUS position, `selectedConstituentRef` designates `result-42`. The exact C.11 `ChoiceResult` definition classifies that record from its stated disposition, selected option, comparison basis, rule, and stop-probing reason; A.22.CGUS …
+>
+> **Governing patterns:** `references/E.5.3.md` `references/E.4.md` `references/E.4.PFAD.md` `references/E.11.PUR.md` `references/E.11.md` `references/E.17.md` `references/G.5.md` `references/F.18.md`
 
 ---
 

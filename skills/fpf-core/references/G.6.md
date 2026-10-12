@@ -50,9 +50,10 @@ dependencies:
 
 # G.6: Evidence Graph and Provenance Ledger: Citable Evidence-Provenance Paths
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a later user must cite, replay, audit, or refresh a path through several already established objects and relations rather than repeat their complete source account.
+> **First move:** Create an `EvidenceGraph` only after the relied-on claim or bounded use and its supporting objects have been recovered. The graph is a declarative, addressable representation.
+>
+> **Governing patterns:** `references/A.10.md` `references/A.2.4.md` `references/C.2.1.md` `references/C.29.md` `references/A.15.1.md` `references/A.2.1.md` `references/A.6.1.md` `references/A.15.PROD.md`
 
 ---
 

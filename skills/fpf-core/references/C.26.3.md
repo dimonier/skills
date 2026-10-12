@@ -16,7 +16,7 @@ dependencies:
   builds_on:
     - C.26
     - C.25
-    - U.D
+    - U.Dynamics
     - A.6
     - A.15
     - C.16
@@ -33,9 +33,10 @@ dependencies:
 
 # C.26.3: Viability-Envelope Boundary Regulation
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when architecture work is maintaining, recovering, or changing viable operating ranges across boundaries.
+> **First move:** Use C.26.3 when the work must regulate a multi-characteristic viability envelope under disturbance. Use `C.25`, `U.Dynamics`, measurement, boundary, causal, and work patterns to state the exact qualities, changes, observations, relations, a …
+>
+> **Governing patterns:** `references/C.26.md` `references/C.25.md` `references/U.Dynamics.md` `references/A.6.md` `references/A.15.md` `references/C.16.md` `references/A.10.md` `references/B.3.md`
 
 ---
 

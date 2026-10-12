@@ -24,9 +24,10 @@ dependencies:
 
 # C.32.P2S: Problem-to-Structure Architecturing Unfolding
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an architect or architecture-responsible practitioner has a stated external-use hypothesis for one project system-of-interest and must carry the resulting architecture pressure through selected structures, candidate sy …
+> **First move:** Create or update one `ProblemToStructureArchitecturingFlowCard@Project` and apply the P2S method through only the smallest useful part of the Plain action sequence below.
+>
+> **Governing patterns:** `references/A.1.md` `references/A.1.SCR.md` `references/A.15.6.md` `references/A.1.STM.md` `references/C.22.2.md` `references/A.22.md` `references/C.30.md` `references/C.32.md`
 
 ---
 

@@ -35,9 +35,10 @@ dependencies:
 
 # C.32.ADR: Architecture Decision Record Projection
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when an `ArchitectureDecisionRelation@Project` or equivalent project architecture decision must be published as an ADR-like record, decision memo, trade-study record, certification rationale, or similar decision-description …
+> **First move:** Create `ArchitectureDecisionRecordProjection@Project` from an existing `ArchitectureDecisionRelation@Project` and `ArchitectureDecisionDescription@Project`. If the decision relation is missing, require `C.32.PAD` before writing the record.
+>
+> **Governing patterns:** `references/C.32.PAD.md` `references/C.30.AD.md` `references/C.30.ASV.md` `references/E.17.md` `references/E.24.PUB.md` `references/A.15.md` `references/E.8.md` `references/E.11.PUR.md`
 
 ---
 

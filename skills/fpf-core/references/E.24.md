@@ -23,9 +23,11 @@ dependencies:
 
 # E.24: U.Ontic and Ontic Introduction Discipline
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when FPF work appears to need a durable ontic: a connected action-facing ontology unit whose stable identity and admissible uses depend on keeping several direct relation kinds, their relation-participant meanings and admit …
+> **Problem frame:** Some FPF objects are small enough to define through one direct relation `ClaimGraph`. Others become candidates for a durable ontic when several direct relations and rule-content loci need persistent coordination across dependent use.
+> **First move:** The defining `ClaimGraph` located here states `U.Ontic` as the FPF kind for a connected action-facing ontology unit. Before dependent uses rely on that unit, the accepted ontic-introduction decision states its primary subject kind, exact id …
+>
+> **Governing patterns:** `references/A.6.REL.md` `references/A.6.0.md` `references/A.6.5.md` `references/C.2.1.md` `references/E.8.md` `references/E.10.md` `references/E.10.ARCH.md` `references/F.18.md`
 
 ---
 

@@ -25,9 +25,11 @@ dependencies:
 
 # C.19.2: Use-Bounded Apparatus Application
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when one practical result matters and a relevant method, model, formalism, assurance technique, ontology, or other direct-kind apparatus is available, but the work needed to configure and apply it may cost more than the res …
+> **Problem frame:** A team can have a rich apparatus and still lack an economical way to use it. A maintenance group may need only one typed relation distinction for a one-off repair, an architecture team may need a carefully configured model across hundreds o …
+> **First move:** Use this minimal lens before taking a branch:
+>
+> **Governing patterns:** `references/C.39.md` `references/C.40.md` `references/C.18.md` `references/C.19.md` `references/C.19.1.md` `references/C.22.1.md` `references/E.23.md` `references/C.11.md`
 
 ---
 

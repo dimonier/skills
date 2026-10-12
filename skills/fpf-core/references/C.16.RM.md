@@ -17,9 +17,10 @@ dependencies:
 
 # C.16.RM: Repair a Measurement Model or Arrangement
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a measurement disagrees with an expected result or cannot distinguish the cases needed for the work. A detector combines a beam with background light. A voltmeter changes the voltage it measures.
+> **First move:** Follow the disagreement from the wanted result through the indication-producing relations. Compare changes at the contribution that matters, choose a sufficient available repair, and use the revised relation to obtain the result needed by t …
+>
+> **Governing patterns:** `references/C.16.md` `references/C.16.MR.md` `references/C.16.IR.md` `references/B.5.MPC.R.md` `references/B.5.RR.md` `references/C.29.2.md` `references/C.28.md` `references/C.11.DUA.md`
 
 ---
 

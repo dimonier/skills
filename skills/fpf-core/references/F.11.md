@@ -24,9 +24,10 @@ dependencies:
 
 # F.11: Distinguish Method, MethodDescription, Work and Outputs
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Intent.** Give a cold reader four practical questions that prevent common category errors:
+> **First move:** Use four questions, then state only the relations that actually obtain:
+>
+> **Governing patterns:** `references/A.3.md` `references/A.15.md` `references/B.1.5.md` `references/E.10.D1.md` `references/F.4.md` `references/F.6.md` `references/F.9.md`
 
 ---
 

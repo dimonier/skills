@@ -7,9 +7,8 @@ keywords: []
 
 # E.17.AUD: PublicationUnit Stability Discipline
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when people still read one note, memo, sheet, table, screen, or short section as one stable unit even though it has quietly changed what it is mainly about, the publication move it makes, or the boundary between that move a …
+> **First move:** > Stabilize the interpretation of one publication unit before editing it at the wrong level. > > Name what the unit is mainly about, the publication move it carries, the claim that remains outside, and one repair choice.
 
 ---
 

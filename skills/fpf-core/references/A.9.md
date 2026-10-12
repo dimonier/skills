@@ -21,9 +21,10 @@ dependencies:
 
 # A.9: Choose and Check an Aggregation Law for the Intended Result
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Use this when** a receiving decision needs a combined result, but the law that gives the proposed operation its meaning or preserves a needed property is unresolved.
+> **First move:** 1. **Name the intended result and operands.** State what the combination must mean, which inputs contribute and what operation is proposed. For reliability, distinguish joint success from alternative success.
+>
+> **Governing patterns:** `references/B.1.md` `references/B.2.md` `references/C.29.md` `references/A.19.CN.md` `references/A.19.ULSAM.md`
 
 ---
 

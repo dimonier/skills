@@ -28,7 +28,7 @@ dependencies:
     - E.17
     - E.8
   coordinates_with:
-    - C.30.TFS
+    - "C.30.TFS-REL"
     - C.30.LCA
     - C.30.ILC
     - C.32
@@ -36,7 +36,7 @@ dependencies:
     - C.32.CONWAY
     - C.32.FAIL
     - A.19.CPM
-    - A.19.S
+    - A.19.SelectorMechanism
     - C.18
     - C.19
     - G.5
@@ -52,9 +52,11 @@ dependencies:
 
 # C.30.P: Clarify Architecture and Structure Wording (Precision Restoration)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when architecture or structure wording hides which use is being made.
+> **Problem frame:** Working engineers often say "architecture" or "structure" while pointing at a useful artifact: a diagram, model, graph, table, dashboard, ADR, code-agent relation graph, neural-network architecture-operation diagram, benchmark result, or so …
+> **First move:** Repair architecture or structure wording by producing an `architecture-structure repair note` or an equivalent local rewrite.
+>
+> **Governing patterns:** `references/E.10.md` `references/E.10.ARCH.md` `references/A.22.md` `references/C.30.md` `references/C.30.AD.md` `references/C.30.ASV.md` `references/C.2.P.md` `references/A.6.P.md`
 
 ---
 

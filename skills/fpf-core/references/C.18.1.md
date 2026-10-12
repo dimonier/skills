@@ -27,9 +27,10 @@ dependencies:
 
 # C.18.1: Scaling‑Law Lens Binding (SLL)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Teams often say a method “**scales**” without disclosing **which resources**, **across what window**, and **how** outcomes respond (convex rise → knee → plateau).
+> **First move:** `SLL.Profile` is an **annotation** on a `MethodFamily/Generator` or a `Selector` profile; no durable U-kinds are minted (LEX discipline).
+>
+> **Governing patterns:** `references/C.16.md` `references/C.17.md` `references/C.18.md` `references/C.19.md` `references/G.5.md` `references/G.9.md` `references/G.10.md`
 
 ---
 

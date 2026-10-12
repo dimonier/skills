@@ -35,9 +35,10 @@ dependencies:
 
 # C.30.ILC: Cross-Scope Architecture Residual Triage
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when a project situation contains a cross-scope architecture residual for a described holon, often described in project speech as:
+> **First move:** Create a `CrossScopeArchitectureResidualTriageRecord@Context` when an architecture concern is carried by residuals across declared holon levels, declared scopes, or level-bearing structure relations.
+>
+> **Governing patterns:** `references/C.30.md` `references/C.30.ASV.md` `references/A.22.md` `references/C.32.MLAO.md` `references/C.32.md` `references/C.32.PAD.md` `references/C.31.ASAP.md` `references/C.16.md`
 
 ---
 

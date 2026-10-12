@@ -5,9 +5,9 @@ title: "C.2.2a - `U.LanguageStateSpace` - Language-state chart over `U.Character
 
 # C.2.2a: C.2.2a - `U.LanguageStateSpace` - Language-state chart over `U.CharacteristicSpace`
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Start with the smallest row that can change the next action:
+> **Problem frame:** In engineering, inquiry, operator, and management practice, teams often need to say where a governed `U.Episteme` publication currently stands before it has reached an endpoint subject pattern.
+> **First move:** `U.LanguageStateSpace` is the cluster-local name for the declared language-state chart over `U.CharacteristicSpace` as disciplined by `A.19`.
 
 ---
 

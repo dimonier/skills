@@ -20,9 +20,10 @@ dependencies:
 
 # D.2: Recognize Ethical Concerns Across Levels and Scopes (Multilevel Ethics)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Ethical trouble in system-holon work often appears because the current action is good for one level and bad for another. A person may benefit while a team is damaged. A project may benefit while a community pays the cost.
+> **First move:** `D.2` is an entry pattern, not a general ethics doctrine and not a conflict solver. It keeps ethics from being omitted when levels and scopes of holons matter.
+>
+> **Governing patterns:** `references/D.1.md` `references/A.1.md` `references/B.1.md` `references/C.30.ILC.md` `references/D.3.md` `references/D.4.md` `references/D.5.md` `references/A.15.md`
 
 ---
 

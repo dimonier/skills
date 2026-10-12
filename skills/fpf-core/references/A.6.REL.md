@@ -16,9 +16,10 @@ dependencies:
 
 # A.6.REL: Relation Obtaining and Individuation: Distinguish Occurrences When Needed
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** **Plain name.** Relation occurrence.
+> **First move:** **Local relation-occurrence mantra.** *State the direct relation. Ask whether later work must distinguish repeated occurrences. If no, stop. If yes, apply the direct identity rule and add only the exact receiving object.*
+>
+> **Governing patterns:** `references/A.6.0.md` `references/A.6.5.md` `references/C.2.1.md` `references/E.24.md` `references/E.24.UK.md` `references/F.18.md` `references/C.29.md`
 
 ---
 
@@ -373,7 +374,10 @@ Assertion, description, and signature epistemes can have editions; a system perf
 
 ### A.6.REL:11 - SoTA-Echoing
 
-#### Ontological SoTA and constructional sources
+
+
+#### A.6.REL:11.1 - Ontological SoTA and constructional sources
+
 
 This pattern uses these sources to constrain its account of occurrence existence and identity. They provide ontological comparisons, not notation selection.
 
@@ -385,7 +389,10 @@ This pattern uses these sources to constrain its account of occurrence existence
 | Almeida, Guizzardi, Sales, and Fonseca, [gUFO](https://arxiv.org/abs/2603.20948), 2026 preprint | Provides a current foundational-ontology implementation with differentiated relational-aspect and reification patterns. | **Adapt its ontological distinctions as a current comparison; reject its OWL implementation as proof of FPF occurrence existence or identity.** Section 4.4 separates direct relation, assertion, reifier, and optional relator without importing the complete category hierarchy. |
 | [OntoUML Relator](https://ontouml.readthedocs.io/en/init-ontouml/classes/sortals/relator/index.html), specification lineage | Models a relator as a dependent truth-maker for a material relation. | **Reject as current competitive SoTA; retain and adapt as a lineage comparison for material relators.** Section 4.4 permits a relator only when the direct material ontology identifies the relator, its dependence relations to the participants, and its occurrence-identity rule. |
 
-#### Representation and implementation stress tests
+
+
+#### A.6.REL:11.2 - Representation and implementation stress tests
+
 
 This pattern uses these sources to test whether the selected ontological distinctions can be represented and used. They do not determine what relation occurrences exist or how they are identified.
 

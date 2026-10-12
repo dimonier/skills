@@ -14,10 +14,6 @@ dependencies:
 ## ASB.ProgressiveDisclosure - Progressive disclosure: keeping SKILL.md small, externalizing heavy content
 
 > **Trigger:** When deciding what goes in the `SKILL.md` body vs bundled resources (`references/`, `scripts/`, `assets/`, `templates/`) vs what does not belong in the skill at all.
-> **Governing patterns:**
->   → `AS.4` (Progressive Disclosure — the AS-DPF pattern this card specializes)
->   → `E.11` (first-practical entry)
->   → `C.33` (carrier admission)
 > **Skill dependencies:**
 >   → `create-agent-skill` (skill anatomy)
 
@@ -115,26 +111,24 @@ distinguishes a skill from a small `AGENTS.md`.
 
 ### ASB.ProgressiveDisclosure:10 - Rationale
 
-`AS.4` defines the three-level system; `E.11` makes level 1 the practical entry;
-`C.33` keeps the bundled resources as a carrier returning to the skill's own
-authoritative content. Deferring load is what makes tokens pay only at need.
+`E.11` makes level 1 the practical entry; `C.33` keeps the bundled resources as a
+carrier returning to the skill's own authoritative content. Deferring load is what
+makes tokens pay only at need.
 
 ### ASB.ProgressiveDisclosure:11 - SoTA-Echoing
 
 | Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
 | `agent-skill-builder` "Progressive disclosure (3 levels)" + "Anatomy" | Adopt | The three-level model and the resource roles | Reopen on a skill-payload edition change |
-| AS-DPF `AS.4` Progressive Disclosure | Adopt | ~500-line body budget, discipline rule, multi-variant split | Reopen on `AS.4` revision |
-| AS-DPF `AS.4:4.1` source-of-truth vs derived carrier | Adopt (referenced) | Carrier-level disclosure; specialized by the Spec-Decomposer LPF | Reopen on `AS.4:4.1` revision |
+| AS-DPF `AS.4` Progressive Disclosure (merged 2026-10-04) | Adopt | ~500-line body budget, discipline rule, multi-variant split | — merged into this DPF |
+| AS-DPF `AS.4:4.1` source-of-truth vs derived carrier (merged 2026-10-04) | Adopt (referenced) | Carrier-level disclosure; specialized by the Spec-Decomposer LPF | — merged into this DPF |
 
 Best-known line: load context only at the moment of need. Rejected rival: the flat
 "small `AGENTS.md`" skill — rejected as non-progressive.
 
 ### ASB.ProgressiveDisclosure:12 - Relations
 
-- **Builds on (DPF):** `AS.4` (progressive disclosure).
-- **Builds on (FPF):** `E.11` (practical entry), `C.33` (carrier admission).
-- **Coordinates with (DPF):** `AS.3` (externalize shared content), `AS.4:4.1` (source-of-truth vs derived carrier), `C.34` (tooling-reference carrier).
-- **Specialized by (LPF):** `ASB.Atomicity` (shared heavy content goes to `references/`), `ASB.Compaction` (Move 1 is the same deletion/externalization).
+FPF governing codes live in this card's frontmatter `dependencies` (single home, not repeated); intra-DPF relations and provenance live in `references/relations.md`.
+**Provenance:** former AS-DPF `AS.4` (progressive disclosure; incl. `AS.4:4.1` source-of-truth vs derived carrier).
 
 ### ASB.ProgressiveDisclosure:End

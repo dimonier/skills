@@ -1,84 +1,128 @@
-# BAR.BusinessProcessModeling: Моделирование бизнес-процессов как источник требований
+---
+id: BAR.BusinessProcessModeling
+title: Моделирование бизнес-процессов как источник требований
+status: seed
+keywords: [process-modeling, bpmn, as-is, to-be, traceability]
+dependencies:
+  builds_on: [A.3.4, E.17]
+  coordinates_with: [C.27, A.10, C.30, C.16]
+---
 
-> **Trigger:** Бизнес-процессы моделируются как самоцель: диаграммы «лежат на полке»; модель процесса не содержит ссылок на требования; процесс и спецификация — в разных «мирах»
-> **Governing patterns:** 
->   → `../fpf-core/references/A.3.4-transformation.md`
->   → `../fpf-core/references/C.27-temporal.md`
->   → `../fpf-core/references/A.10-evidence.md`
->   → `../fpf-core/references/C.30-architecture-flow.md`
->   → `../fpf-core/references/C.16-coverage.md`
+## BAR.BusinessProcessModeling - Моделирование бизнес-процессов как источник требований
+
+> **Trigger:** Бизнес-процессы моделируются как самоцель: диаграммы «лежат на полке»; модель процесса не содержит ссылок на требования; процесс и спецификация — в разных «мирах».
 
 ---
 
-## Always‑Core Fields
+### BAR.BusinessProcessModeling:1 - Problem frame
 
-| Поле | Содержание |
+Use this pattern in an automation/digitalization project where the business process is
+the main source of functional requirements: treat the process model as a structured
+input for requirement elicitation, not as a self-sufficient artifact.
+
+**ScopeCut** — моделирование процесса (BPMN/EPC/UML Activity) как техника выявления
+и обоснования требований; **не** охватывает BPM-автоматизацию (BPMS), имитационное
+моделирование, организационный дизайн.
+
+### BAR.BusinessProcessModeling:2 - Problem
+
+**ProblemSignal** — процессы моделируются как самоцель: as-is/to-be диаграммы «лежат
+на полке»; модель не содержит ссылок на требования; изменение процесса не вызывает
+обновления требований.
+
+**SymptomDetection** — аналитик рисует BPMN, но не может показать, какое требование
+вытекает из конкретного activity; при изменении процесса разработчики не знают
+затронутые требования; to-be описан, но система автоматизирует as-is.
+
+**ProblemHypothesis** — моделирование не интегрировано в работу с требованиями:
+диаграмма создаётся «для галочки», а не как structured input для elicitation.
+
+### BAR.BusinessProcessModeling:3 - Forces
+
+| Force | Settlement |
 |---|---|
-| **ProblemSignal** | Бизнес-процессы моделируются как самоцель: создаются as-is и to-be диаграммы, которые «лежат на полке»; модель процесса не содержит ссылок на требования к системе; изменение процесса не вызывает обновления требований; процессная модель и спецификация требований существуют в разных «мирах», не связанных traceability |
-| **ContextGrounding** | Проект автоматизации/цифровизации бизнес-процессов, где бизнес-процесс является основным источником функциональных требований к системе |
-| **ScopeCut** | Использование моделирования бизнес-процессов (BPMN, EPC, UML Activity) как техники выявления и обоснования требований; не охватывает BPM-автоматизацию (BPMS), имитационное моделирование и организационный дизайн |
-| **NotWishReason** | «Нарисуем процесс в BPMN — и требования появятся сами» — без методики извлечения требований из модели процесса, без связи элементов модели с требованиями |
+| «Нарисуем BPMN — требования появятся сами» vs методика извлечения | Связь каждого элемента с требованием |
+| To-be сразу vs as-is baseline | Запрет to-be без as-is baseline и problem statement |
+| Модель как артефакт vs модель как источник | Traceability link «элемент процесса → требование» |
 
-## Conditional Fields
+### BAR.BusinessProcessModeling:4 - Solution
 
-| Поле | Содержание |
-|---|---|
-| **SourceSignalRef** | BABOK v3: Process Modeling technique (ch. 10.35). Silver «BPMN Method and Style» — методика уровневого моделирования. BPMN 2.0 (OMG, 2011) |
-| **EntityOfConcern** | Модель бизнес-процесса как эпистемический артефакт, из которого извлекаются требования — процесс не самоцель, а carrier требований к автоматизирующей системе |
-| **SymptomDetection** | Бизнес-аналитик рисует BPMN-диаграмму, но не может показать, какое требование к системе вытекает из конкретного activity; при изменении процесса разработчики не знают, какие требования затронуты; to-be процесс описан, но система автоматизирует as-is |
-| **ProblemHypothesis** | Моделирование процесса не интегрировано в процесс работы с требованиями — диаграмма создаётся как артефакт «для галочки», а не как structured input для elicitation требований |
-| **ImprovementCheck** | Каждый элемент модели процесса, взаимодействующий с системой, прослеживается до требования; изменение процесса идентифицирует затронутые требования; модель покрывает функциональные области системы без «белых пятен» |
-| **AcceptanceCriterion** | (1) Для каждого элемента процесса, взаимодействующего с системой (user task → system task, service task), зафиксировано ≥1 требование; (2) для каждого gateway определено бизнес-правило — источник требования; (3) связь «элемент процесса → требование» задокументирована (traceability link); (4) при изменении процесса traceability позволяет получить список затронутых требований за ≤30 минут; (5) as-is процесс зафиксирован как baseline; to-be содержит rationale каждого изменения |
-| **MandatoryConstraints** | Запрещено моделировать to-be процесс без as-is baseline; запрещено создавать процессную модель без traceability links до требований; запрещено «оптимизировать процесс» (to-be) без problem statement — что в as-is не устраивает стейкхолдеров |
-| **CharacterizationRelation** | Process-to-requirement coverage (доля элементов процесса с trace до требования), model granularity adequacy, freshness (актуальность при изменении регламентов), requirement derivation velocity |
-| **ComparabilityRelation** | Сравнение as-is и to-be моделей по метрикам (время выполнения, количество ручных шагов, количество системных интеграций) — rationale для изменения требований |
-| **ValidationBoundary** | Проверка: другой аналитик по модели процесса восстанавливает набор требований; refresh при изменении регламента, оргструктуры или автоматизирующей системы |
-| **FreshnessOrExpiry** | `stale` при изменении бизнес-процесса без обновления модели и связанных требований; `stale` при внедрении новой системы, меняющей процесс |
-| **ProblemFormulationFollowUpReason** | Связать моделирование процесса и требования, чтобы изменение процесса не вызывало «слепых» изменений в системе |
-| **ReadinessDisposition** | `P2W-ready` для использования модели процесса как structured input для elicitation и спецификации требований |
-| **SolvabilityBand** | `feasible` при наличии доступа к носителям процесса (владелец процесса, исполнители); `blocked` если процесс не документирован и стейкхолдеры недоступны |
-| **UnknownHandling** | `safe-probe-needed` если границы процесса не определены — workshop process discovery до моделирования |
+**EntityOfConcern** — модель бизнес-процесса как эпистемический артефакт, из которого
+извлекаются требования: процесс не самоцель, а carrier требований к автоматизирующей
+системе.
 
-## Worked Examples
+**AcceptanceCriterion** — (1) для каждого системо-взаимодействующего элемента — ≥1
+требование; (2) для каждого gateway — бизнес-правило; (3) связь «элемент → требование»
+задокументирована; (4) изменение процесса даёт список затронутых требований за ≤30
+минут; (5) as-is зафиксирован как baseline; to-be содержит rationale каждого изменения.
 
-**Positive Worked Slice:** В крупном розничном банке бизнес-аналитик построил as-is модель процесса «выдача кредита наличными». Модель выявила, что 40% шагов (14 из 35) выполняются вручную: переключение между АБС и CRM, ручная сверка данных кредитной заявки с бюро кредитных историй, бумажное согласование для сумм свыше 300 000 руб. Каждый ручной шаг стал источником требования к автоматизации: интеграция с БКИ через API, электронный маршрут согласования с цифровой подписью, единое окно операциониста. Связь «элемент процесса → требование» зафиксирована в traceability matrix, что позволило при изменении регламента ЦБ за ≤30 минут определить затронутые требования.
+**MandatoryConstraints** — запрещено моделировать to-be без as-is baseline; запрещена
+модель без traceability links до требований; запрещено «оптимизировать процесс»
+(to-be) без problem statement.
 
-**Transfer:** в здравоохранении та же методика traceability «элемент процесса → требование» позволила при смене клинических регламентов (приказ Минздрава) за ≤1 день определить затронутые требования к МИС и избежать трёхмесячного перепроектирования.
+**CharacterizationRelation** — process-to-requirement coverage, model granularity
+adequacy, freshness, requirement derivation velocity.
 
-**Near-Miss Example:** Команда строит BPMN-диаграмму процесса закупок, извлекает требования: «система должна отправлять заявку на склад», «система должна резервировать бюджет». Через месяц выясняется: 30% заявок возвращаются без обработки — склад не понимает, что заказано, потому что в заявке нет артикула. Диаграмма была нарисована, но проблема не в процессе — проблема в данных: номенклатурный справочник не синхронизирован между системой закупок и складом. Это не misuse BusinessProcessModeling, а дефект `BAR.DataRequirements` (требования к master data не выявлены). Применяется DataRequirements, а не перемоделирование процесса.
+### BAR.BusinessProcessModeling:5 - Archetypal Grounding
 
-**Local Anti-Patterns:**
+**Show.** Розничный банк: as-is модель процесса «выдача кредита» выявила 40% ручных
+шагов (переключение АБС/CRM, ручная сверка с БКИ, бумажное согласование). Каждый
+ручной шаг стал источником требования (интеграция с БКИ, электронный маршрут
+согласования). Связь «элемент → требование» в traceability matrix позволила при
+изменении регламента ЦБ за ≤30 минут определить затронутые требования.
 
-| Anti-pattern | Symptom | Why misuse |
-|---|---|---|
-| **BPMN как самоцель** | Бизнес-аналитик два месяца рисует диаграммы в шести уровнях декомпозиции; требования к системе не извлечены, ссылок «элемент процесса → требование» нет | AcceptanceCriterion требует traceability link для каждого элемента, взаимодействующего с системой. Модель без links — артефакт «для галочки», а не источник требований |
-| **To-be без as-is baseline** | Команда сразу моделирует «целевой» процесс, не зафиксировав текущее состояние; «проблема» не задокументирована — нарисован идеальный процесс, не связанный с реальностью | MandatoryConstraints запрещают to-be без as-is baseline и problem statement. Без as-is невозможно измерить улучшение и обосновать требования |
+### BAR.BusinessProcessModeling:6 - Bias-Annotation
 
-## Conformance Checklist
+**NotWishReason** — «Нарисуем процесс в BPMN — и требования появятся сами»: без
+методики извлечения требований и связи элементов модели с требованиями.
+
+**Near-Miss (boundary, not this pattern).** BPMN закупок нарисована, требования
+извлечены, но 30% заявок возвращаются — номенклатурный справочник не синхронизирован.
+Это не misuse процесса, а дефект `BAR.DataRequirements` (master data не выявлены).
+
+### BAR.BusinessProcessModeling:7 - Conformance Checklist
 
 | ID | Requirement | Purpose |
 |---|---|---|
-| CC-BAR.BPM-1 | Для каждого элемента процесса, взаимодействующего с системой, зафиксировано ≥1 traceability link до требования | Операционализирует AcceptanceCriterion пп. (1) и (3): процесс как источник требований |
-| CC-BAR.BPM-2 | As-is процесс зафиксирован как baseline; to-be содержит rationale каждого изменения относительно as-is | Операционализирует MandatoryConstraints: запрет to-be без as-is baseline |
-| CC-BAR.BPM-3 | При изменении процесса traceability позволяет получить список затронутых требований за ≤30 минут | Операционализирует AcceptanceCriterion п. (4): impact analysis через процесс |
-| CC-BAR.BPM-4 | Другой аналитик по модели процесса восстанавливает сопоставимый набор требований | Операционализирует ValidationBoundary: модель как воспроизводимый источник |
+| `CC-BAR.BPM-1` | Для системо-взаимодействующего элемента ≥1 traceability link до требования | Процесс как источник требований |
+| `CC-BAR.BPM-2` | As-is baseline; to-be с rationale каждого изменения | Запрет to-be без as-is |
+| `CC-BAR.BPM-3` | Изменение процесса даёт затронутые требования за ≤30 минут | Impact analysis через процесс |
+| `CC-BAR.BPM-4` | Другой аналитик восстанавливает сопоставимый набор требований | Модель как воспроизводимый источник |
 
-## Mature Comparator Parity
+### BAR.BusinessProcessModeling:8 - Common Anti-Patterns and How to Avoid Them
 
-| Comparator (BABOK/IREB) | What comparator prescribes | How BAPF pattern relates | Value delta |
+| Anti-pattern | Why misuse | Repair |
+|---|---|---|
+| **BPMN как самоцель** | Два месяца диаграмм; требований нет, links нет | Traceability link для каждого элемента |
+| **To-be без as-is baseline** | «Целевой» процесс без проблематизации as-is | Запрет to-be без as-is baseline и problem statement |
+
+### BAR.BusinessProcessModeling:9 - Consequences
+
+**ImprovementCheck** — каждый элемент процесса прослеживается до требования;
+изменение процесса идентифицирует затронутые требования.
+
+**ValidationBoundary** — другой аналитик по модели восстанавливает требования;
+refresh при изменении регламента/оргструктуры/системы.
+
+**FreshnessOrExpiry** — `stale` при изменении процесса без обновления модели и
+требований. **ReadinessDisposition** — `P2W-ready` как structured input для elicitation.
+
+### BAR.BusinessProcessModeling:10 - Rationale
+
+Связать моделирование процесса и требования, чтобы изменение процесса не вызывало
+«слепых» изменений в системе.
+
+### BAR.BusinessProcessModeling:11 - SoTA-Echoing
+
+| Source line | Adopt/adapt/reject | Locus in this card | Boundary |
 |---|---|---|---|
-| BABOK v3, ch. 10.35 (Process Modeling) | Process Modeling как техника elicitation: создание as-is и to-be моделей для понимания текущего и целевого процесса | **Extended** — BABOK описывает моделирование как технику; BAPF добавляет mandatory traceability link «элемент процесса → требование» и запрет to-be без as-is baseline | Substantial extension: BABOK treats process model as elicitation output; BAPF treats it as structured input to requirements, requiring traceability link from each system-interacting element. Value: process change → requirement impact analysis за ≤30 мин. Anti-pattern «BPMN как самоцель» не описан в BABOK |
-| Silver, *BPMN Method and Style* | Уровневая методика моделирования: контекст → процесс → задача; focus on diagram clarity and methodological consistency | **Adapted** — Silver's levels adopted as modeling carrier; BAPF adds problem-side framing: процесс не самоцель, а источник требований | Silver фокусируется на качестве диаграмм; BAPF переориентирует моделирование на problem-side: as-is baseline → problem statement → to-be с rationale. Silver — modeling methodology, BAPF — requirement derivation methodology |
+| BABOK v3, ch. 10.35 (Process Modeling) | Extended | Mandatory traceability + запрет to-be без as-is | Reopen on BABOK v4 |
+| Silver, BPMN Method and Style (уровни моделирования) | Adapt | Уровни как carrier; problem-side framing | Reopen on source revision |
 
-## Governing‑Pattern Cues
+### BAR.BusinessProcessModeling:12 - Relations
 
-| Cue | Governing Pattern |
-|---|---|
-| Процесс как Transformation (вход → деятельность → выход) | `A.3.4` |
-| As-is / To-be различение как temporal states | `C.27` |
-| Элемент процесса → требование как traceability link | `A.10`, `C.32` |
-| Process coverage как характеризация полноты выявления требований | `C.16` |
+The dependency graph (FPF content edges) has its single authored home in this card's
+frontmatter `dependencies`; it is not repeated here. The readable intra-LPF map is
+generated in `references/relations.md`.
 
----
-
-> **Source:** `assets/BABusinessAnalysis-dpf.md` lines L742-L813
+### BAR.BusinessProcessModeling:End

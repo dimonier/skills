@@ -27,9 +27,10 @@ dependencies:
 
 # C.26.2: Enacted Distributed State Evidence
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use this pattern when coordinated work, behavior, or trace patterns give evidence that a team, organization, service mesh, market, or other collective system is acting from a state that no single participant report, survey, policy sentence …
+> **First move:** Model the claim as evidence-bound `U.Episteme` over a declared collective `U.System`. Do not make the distributed state a bearer-independent thing. Do not treat a survey, dashboard, report, or API response as the state itself.
+>
+> **Governing patterns:** `references/C.26.md` `references/A.15.md` `references/A.10.md` `references/B.3.md` `references/F.9.md` `references/C.16.md` `references/C.26.1.md` `references/C.26.3.md`
 
 ---
 

@@ -27,9 +27,11 @@ dependencies:
 
 # A.1: Recognize a Whole with Parts (U.Holon and Admitted Holon Kinds)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when a project must say what kind of thing is under concern before it can rely on parts, wholes, boundaries, acting systems, roles, methods, work, architecture, or descriptions.
+> **Problem frame:** FPF cannot use `system` as its universal root. A pump, theory, software product, legal code, dashboard, research program, work occurrence, discipline, and team can all be objects under concern, but they do not all act, exchange matter, exec …
+> **First move:** Use A.1 to distinguish an exact referenceable entity from a candidate that satisfies the constructive holon criterion under an already admitted public holon kind.
+>
+> **Governing patterns:** `references/E.24.UK.md` `references/A.14.md` `references/C.13.md` `references/B.3.5.md` `references/A.15.1.md` `references/A.6.1.md` `references/C.2.1.md` `references/A.10.md`
 
 ---
 

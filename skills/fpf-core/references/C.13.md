@@ -19,9 +19,10 @@ dependencies:
 
 # C.13: Constructional Mereology (Compose‑CAL)
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Provide one minimal calculus for narrating three kinds of construction: how constituents assemble an integrated whole, how entities form a collection under that collection's own belongs-to rule, and how an aspect is distinguished from one b …
+> **First move:** Use the coarsest of three construction narratives that fits the named whole, collection, or aspect. In each case, write the shorthand only after the required facts are recoverable.
+>
+> **Governing patterns:** `references/A.14.md` `references/C.2.1.md`
 
 ---
 

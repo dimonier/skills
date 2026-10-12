@@ -12,7 +12,7 @@ keywords:
   - settledness.
 dependencies:
   builds_on:
-    - C.2.2
+    - C.2.2a
   coordinates_with:
     - C.2.LS
     - A.16
@@ -20,9 +20,10 @@ dependencies:
 
 # C.2.5: `U.LanguageStateClosureDegree` — How Fixed Is the Current Candidate Space?
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** A governed `U.Episteme` may already be explicit enough for publication while its declared position claim remains intentionally open to rival routes or frames.
+> **First move:** `U.LanguageStateClosureDegree` is an ordinal characteristic over how fixed the current candidate set, framing, and admissible next moves are in a published position claim in the declared language-state chart over `U.CharacteristicSpace`.
+>
+> **Governing patterns:** `references/C.2.2a.md` `references/C.2.LS.md` `references/A.16.md`
 
 ---
 

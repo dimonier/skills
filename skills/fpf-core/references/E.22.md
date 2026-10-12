@@ -14,8 +14,7 @@ dependencies:
     - E.19
     - E.10
     - C.25
-    - C.17
-    - C.19
+    - "C.17-C.19"
     - G.5
     - G.9
     - G.11
@@ -23,9 +22,10 @@ dependencies:
 
 # E.22: Improvement-Oriented Quality Evaluation Question Framing
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Problem frame:** Use `E.22` when a request such as “review this” leaves it unclear what the recipient needs to learn about an object version.
+> **First move:** `E.22` gives one compact declaration for improvement-oriented quality evaluation questions. It keeps the question from replacing the evaluation and keeps the evaluation result from becoming a decision or work product beyond its authority.
+>
+> **Governing patterns:** `references/A.19.ECS.md` `references/E.21.md` `references/E.9.DA.md` `references/E.2.DA.md` `references/E.23.md` `references/E.19.md` `references/E.10.md` `references/C.25.md`
 
 ---
 

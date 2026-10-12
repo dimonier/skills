@@ -36,9 +36,11 @@ dependencies:
 
 # A.2.9: `U.SpeechAct` — Communicative Work and Its Intended Use
 
-> **Trigger:** [TODO: trigger condition — human review required]
-> **Governing patterns:**
->   → [TODO: extract governing-pattern cues from body and convert to reference paths]
+> **Trigger:** Use this pattern when one actual act of communicating matters because either:
+> **Problem frame:** FPF repeatedly needs to reference “someone said/did the approving/authorizing/declaring thing”:
+> **First move:** When a receiving use is current, state who should understand or do what because of the communicative Work, including later self-use by its producer, then judge that Work against evidence relevant to the stated use.
+>
+> **Governing patterns:** `references/A.2.1.md` `references/A.2.6.md` `references/A.7.md` `references/A.10.md` `references/A.13.md` `references/A.15.1.md` `references/F.6.md` `references/A.2.md`
 
 ---
 
