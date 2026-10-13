@@ -31,6 +31,8 @@ dependencies:
 
 ## B.3.4 - Can Earlier Evidence Still Support This Use? — Evidence Decay and Epistemic Debt
 
+> **Status:** Stable
+
 ### B.3.4:1 - Problem Frame
 
 **Use this when.** An earlier result is being relied on now, and a changed condition or a due review may change whether it still supports the receiving claim. Begin with the relied-on use and the premise that may have changed.

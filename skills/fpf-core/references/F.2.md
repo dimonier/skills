@@ -30,7 +30,9 @@ dependencies:
 ## F.2 — Source-Local Term Harvesting & Normalisation
 
 **“Harvest the source’s own words, recover what they mean there, and stop before comparison.”**
-**Status.** Architectural pattern.
+**Type:** Architectural pattern.
+
+> **Status:** Stable
 **Depends on.** F.1 **Question-Relative Source Selection**; F.0.1 **Source-Local Meaning Recovery**; E.10.D1 **Recovering What “Context” Means in Use**; A.7 **Strict Distinction**; A.11 **Ontological Parsimony**.
 **Coordinates with.** F.3 **Source-Local Sense Clustering**; F.17 for an optional durable cell and basis relation; F.4 **SystemRoleKindDescription** when the recovered subject is a local system-role kind; F.9 only for an actual relation between distinct local meanings.
 **Aliases (informative).** *source-local harvesting*; *local normalisation*.

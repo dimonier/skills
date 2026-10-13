@@ -28,6 +28,8 @@ dependencies:
 
 ## E.1 - Vision & Mission
 
+> **Status:** Stable
+
 
 ### E.1:1 - Problem frame
 

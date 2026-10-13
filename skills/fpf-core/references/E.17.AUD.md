@@ -14,6 +14,8 @@ keywords: []
 
 ## E.17.AUD - PublicationUnit Stability Discipline - keep one publication unit stable enough to read honestly
 
+> **Status:** Stable
+
 **Plain name.** Keep one publication unit stable enough to read honestly.
 
 ### E.17.AUD:1 - Problem frame

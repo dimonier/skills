@@ -98,6 +98,21 @@ Before making any pattern-use record, answer aloud: “What exactly do I have no
 
 The practical delta has three honest forms. A new entity or relation occurrence becomes current under its own rule and basis; use the applicable A.15.PROD branch only when a production-work, Work-attributed first-constitution or completion claim is current. A pre-existing entity remains unchanged while a grounding finding becomes adequate for this use. Or the expected subject result remains absent while an honest interim result and return condition become explicit.
 
+##### E.11.PUA:4.1.1 - Read a reference by the contribution needed here
+
+Read what the sentence asks you to do. A citation gives the basis of a claim or explanation already stated; an application reference asks or invites you to use another contribution. “This distinction follows X” and “use X to compare the arrangements” serve different purposes, even if they point to the same pattern. E.8:4.2.2.2 defines this writing convention. A compact list may use `Source:` or `Apply:`, but ordinary clear prose needs no such labels. An address that only names a relation participant is neither kind merely because it is an address.
+
+At a citation, use the quoted or explained material directly when it is sufficient for the present work. Inspect the source when its assumptions, meaning, currentness or evidence need examination for your reliance. The citation neither certifies the claim nor imposes an automatic source-reading step.
+
+At an application reference, distinguish a required dependency, a conditional next move and one possible way. Follow a branch when it is required or chosen and its conditions hold; needing the result does not make every suggested Method compulsory. Reuse an adequate result after checking that it answers the present question under the current conditions. If the contribution is missing, obtain the relevant explanation, apply what is needed and bring its result back to the work that needs it. Reading a title or naming the pattern supplies no such result. An already understood Method need not be read again merely because it is referenced.
+
+A reference to comparison, for example, is satisfied by an adequate comparison of the actual alternatives and conditions, not by a list of patterns to read or by choosing a familiar alternative. A direction to reuse an existing sufficient arrangement concerns that arrangement's adequacy for the receiving work; it is not permission to stop because several relevant pages have been read.
+
+If the purpose is ambiguous, recover it from the referring passage and destination, not from the URL, document kind or absence of a label. Establish what the next operation needs and whether the current passage already supplies it. If the purpose or necessary material remains unavailable, keep the dependent result open and continue work whose basis is available. Report a consequential ambiguity as a text defect; do not turn uncertainty into either reading every citation or skipping every reference.
+
+Stop following references when the needed contribution and its conditions are sufficient for the current use. This is not a requirement to read all related patterns, reproduce a cited theory or invent a missing connection privately. Where the connection remains unexplained, use C.39 to obtain or develop it before claiming the larger result.
+
+
 #### E.11.PUA:4.2 - Reliance profiles
 
 ```text

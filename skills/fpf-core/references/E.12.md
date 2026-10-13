@@ -25,6 +25,8 @@ dependencies:
 
 ## E.12 - Didactic Primacy & Cognitive Ergonomics
 
+> **Status:** Stable
+
 ### E.12:1 - **Problem Frame**
 
 Use this pattern in either of two working situations:

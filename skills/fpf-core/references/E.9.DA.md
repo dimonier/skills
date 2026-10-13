@@ -28,7 +28,9 @@ dependencies:
 
 ## E.9.DA - Evaluate a DRR for Its Declared Authoring Use (Decision-Adequacy CharacteristicSpace)
 
-Status: Core.
+**Framework placement:** Core.
+
+> **Status:** Stable
 
 ### E.9.DA:1 - Problem frame
 

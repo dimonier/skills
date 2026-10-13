@@ -36,7 +36,7 @@ dependencies:
 ## F.4 - SystemRoleKindDescription — Describing an Exact System-Role Kind
 
 > **Type:** Definitional (D)
-> **Status:** Stable in the current FPF
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### F.4:0 - Use This When

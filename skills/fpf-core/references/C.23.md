@@ -31,6 +31,8 @@ dependencies:
 
 ## C.23 - MethodFamily Evidence & Maturity (Method‑SoS‑LOG)
 
+> **Status:** Stable
+
 *LOG (logic) for deductive shells for admissibility*
 *First use expansion:* **SoS‑LOG = Science‑of‑Science LOG** (LEX short‑form discipline applied).
 

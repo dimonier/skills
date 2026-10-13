@@ -30,6 +30,8 @@ dependencies:
 
 ## B.3.3 — Assurance Subtypes & Levels
 
+> **Status:** Stable
+
 ### B.3.3:1 - Problem Frame
 
 **Use this when.** A team must decide whether the available support is enough for a particular claim and receiving use, or what a published assurance level permits a recipient to conclude. Start with that claim, use, relevant conditions, and the warrant the conclusion needs.

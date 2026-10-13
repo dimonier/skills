@@ -311,6 +311,8 @@ Reopen this line when a current direct Method supplies the entire use with less 
 
 ### C.39:12 - Relations
 
+C.39.MC continues a connected Method-development question after a result or changed condition. It preserves applicable qualification, composition, description and support results while returning only the affected question to its supplier. Use it when that continuation is unresolved; an adequate direct MethodDescription remains the sufficient return.
+
 - C.39.RO constructs a reusable operation from a working case, retaining input meanings, application conditions and the reason for its result.
 - B.5.RC recovers a described construction; B.5.TU makes an available theory usable for the working question.
 - C.38 constructs comparable whole ways for one result after sufficient obtaining content is available.

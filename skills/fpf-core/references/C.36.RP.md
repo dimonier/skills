@@ -213,6 +213,8 @@ With a fixed retention and practice budget, preserving the possibility of variat
 
 ### C.36.RP:12 - Relations
 
+C.36.MC qualifies a cultural claim about a Method repertoire and develops the explanation that lets another practitioner reconstruct and adapt a selected way. Use its result here when retention or renewal depends on that reconstructibility; an available description alone establishes neither acquired capability nor cultural retention.
+
 - **Specializes C.36** for sustaining and renewing shared ways of working.
 - **Uses E.23.CAE and E.23.CDI** to distinguish unavailable use from capability change and to construct a needed development intervention.
 - **Uses B.5.RC, B.5.RA and B.5.MPC** for reconstruction, argument use and connected foundational reasoning where those contributions are needed.

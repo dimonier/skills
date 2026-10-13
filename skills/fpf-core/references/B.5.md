@@ -1,7 +1,7 @@
 ---
 id: B.5
 title: Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)
-status: Candidate
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -25,7 +25,7 @@ dependencies:
 ## B.5 - Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)
 
 > **Type:** Method-description pattern
-> **Status:** Candidate
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5:1 - Problem frame

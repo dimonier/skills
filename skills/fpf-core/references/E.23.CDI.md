@@ -1,7 +1,7 @@
 ---
 id: E.23.CDI
 title: Developing Capability for a Named Work Family
-status: Candidate
+status: Stable
 keywords: []
 dependencies:
   builds_on:
@@ -30,7 +30,7 @@ dependencies:
 > **Tech-name:** `WorkFamilyCapabilityDevelopmentMethod`
 > **Plain-name:** develop a System's capability for named work and check it in representative work
 > **Type:** Method-description pattern for a separate capability-development Method; coordinated with `E.23`
-> **Status:** Candidate
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### E.23.CDI:1 - Problem frame

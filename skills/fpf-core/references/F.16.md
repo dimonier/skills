@@ -35,7 +35,9 @@ dependencies:
 ## F.16 - Worked-Example Template (Cross-Domain)
 
 **“Show one claim, the actual values and relations that make it true or false, and enough evidence for a reader to replay the example.”**
-**Status.** Architectural pattern.
+**Type:** Architectural pattern.
+
+> **Status:** Stable
 **Builds on:** E.10.D1 **Recovering What “Context” Means in Use**; F.1 for the source cut; F.0.1, F.2, F.3, and F.17 for exact source-local meaning when needed; F.7 for an optional comparison surface; F.9 only for actual semantic relations and bounded-use claims; F.10 for windows; F.15 for checks.
 **Coordinates with.** F.12 when a case evaluates promise acceptance; A.10 for evidence use; B.3 only for an actual named assurance claim; C.16.P and A.6.RCD when indicator or proxy wording hides a missing relation; E.13 only for optimized or decision-driving proxies; the direct Part C pattern for every illustrated subject; and the A.3, A.15, A.6.1, and B.1.5 method-and-work stack.
 

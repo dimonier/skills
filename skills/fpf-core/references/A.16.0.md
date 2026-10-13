@@ -169,7 +169,7 @@ A trajectory does not need to terminate to be useful. What matters is a visible 
 Typical next-use patterns include:
 
 - `A.6.P` for relation precision or repair;
-- `A.6.A` for an action invitation;
+- `A.6.A` when action-oriented wording leaves the intended claim or question unclear; return the recovered meaning to its subject pattern for any further result;
 - `C.16.Q` for quality or evaluative-characterization wording repair;
 - `B.5.2` for abductive inquiry;
 - `A.15.2` for planning future Work, including its target Method;

@@ -236,4 +236,7 @@ Reopen the Method's use when the proposed problem cannot be interpreted or exami
 - **C.11.DUA** compares worthwhile information work; **C.38** compares ways for a shared result.
 - **E.10.INT and C.36.RP** connect action-relevant interest and continuing access to shared methods.
 
+C.40.OCN develops a bounded opportunity when its useful contribution and attainability still need construction. If the resulting way, holder and provision require coupled change, C.40.JD constructs those joins. C.40.NP develops a further problem from an obtained result. C.40.OD connects these contributions into an open-ended developmental whole when that is the intended result; the co-development of this one problem and way can also finish on its own.
+
+
 ### C.40.CD:End

@@ -37,7 +37,7 @@ dependencies:
 ## F.5 - Name U-kinds, Local System-Role Kinds and SystemRoleKindDescriptions
 
 > **Type:** Definitional (D)
-> **Status:** Stable in the current FPF
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### F.5:0 - Use This When

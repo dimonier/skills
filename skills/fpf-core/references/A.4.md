@@ -31,6 +31,8 @@ dependencies:
 
 ## A.4 - Compare a System's Intended Design with Its Operating Conditions
 
+> **Status:** Stable
+
 ### A.4:1 - Problem frame
 
 **Use this when** a decision depends on whether an independently identified System's operation matches a selected design account, and that comparison is still unresolved. The account may state an intended operating condition, required result or predicted behavior. Select the account edition and its operative comparison criterion before diagnosing a discrepancy or choosing a change.

@@ -19,6 +19,8 @@ dependencies:
 
 ## B.5.1 - Coordinate Development States: Explore → Shape → Evidence → Operate
 
+> **Status:** Stable
+
 ### B.5.1:1 - **Problem Frame**
 
 Use this state model when a development project needs a shared account of whether a `U.Episteme` or `U.System` is being explored, shaped, evaluated or operated. The practical gain is to make the current development focus and the conditions for an intended transition visible. Without that distinction, a team may refine a design indefinitely or claim operational readiness before the required validation.

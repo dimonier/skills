@@ -36,6 +36,8 @@ dependencies:
 
 ## E.17.AUD.OOTD - PublicationUnit Stability Discipline and PublicationUnit Primary-Subject Discipline - publication-unit stability over one primary subject
 
+> **Status:** Stable
+
 **Placement.** Narrow publication-unit stability pattern inside the broader `PublicationUnit Stability Discipline`.
 
 **Builds on.** `A.6.P`, `A.7`, `E.10`, `F.18`, `E.14`, `E.19`, `C.2.2a`, `A.16.0`.

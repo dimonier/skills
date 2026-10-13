@@ -53,7 +53,6 @@ dependencies:
 **"Translate across contexts; never collapse them."**
 
 **Type:** Architectural pattern.
-**Status:** Stable.
 **Normativity:** Normative.
 **Builds on:** F.17 for exact scheme-based `SchemeSenseCell` identity and `SenseCellAddressRef`; F.18 for designation selection; C.2.1 for assertion and description-episteme identity; F.0.1 for `senseFamily` and bridge-only crossing discipline; F.7 and F.8 for downstream naming and reuse decisions.
 

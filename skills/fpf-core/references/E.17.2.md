@@ -25,7 +25,8 @@ dependencies:
 ---
 
 ## E.17.2 - TEVB - Project-local Typical Engineering Viewpoint Bundle Template for Holons
-> **Status:** Stable authoring template; no TEVB catalogue value is shipped by this pattern.
+> **Status:** Stable
+> **Type:** Authoring template; no TEVB catalogue value is shipped by this pattern.
 
 **Use this when.** A project wants to author one small local family of engineering viewpoints for descriptions of holons, so that functional, procedural, allocation-responsibility, and module-interface claims remain distinguishable and comparable.
 

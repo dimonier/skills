@@ -159,9 +159,9 @@ With only y_0, nonnegativity yields the bound
 
 For y_0 = 1 kg, the next total is at most 0.5 kg. This settles a requirement at most 0.6 kg without learning the composition. A limit of 0.4 kg remains unresolved by that bound.
 
-Now suppose the two readings each have absolute error at most epsilon kilograms while the retention law is fixed. The reconstructed a_0 can err by at most 5*epsilon, and b_0 by at most 6*epsilon. The formula for y_2 has error at most (7/8)*epsilon from those two reading errors: add the absolute contributions (3/4)*epsilon and (1/8)*epsilon. At epsilon = 0.01 kg this gives 0.00875 kg. A marginal threshold decision must account for that interval; a recovered negative mass calls for checking the measurement uncertainty and the model assumptions.
+Now suppose the two readings each have absolute error at most epsilon kilograms while the retention law is fixed. The reconstructed a_0 can err by at most 5\*epsilon, and b_0 by at most 6\*epsilon. The formula for y_2 has error at most (7/8)\*epsilon from those two reading errors: add the absolute contributions (3/4)\*epsilon and (1/8)\*epsilon. At epsilon = 0.01 kg this gives 0.00875 kg. A marginal threshold decision must account for that interval; a recovered negative mass calls for checking the measurement uncertainty and the model assumptions.
 
-If both substances instead have the same fixed retention factor r, the total obeys y_(n+1) = r*y_n. Composition is then unnecessary for predicting totals under that law. The needed information changes with the operations and the question.
+If both substances instead have the same fixed retention factor r, the total obeys y_(n+1) = r\*y_n. Composition is then unnecessary for predicting totals under that law. The needed information changes with the operations and the question.
 
 #### A.3.3.PI:5.2 - Preserve predictive memory under a coarse readout
 

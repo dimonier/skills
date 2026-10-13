@@ -32,6 +32,8 @@ dependencies:
 ---
 
 ## E.10.P - Conceptual Prefixes policy & registry
+
+> **Status:** Stable
  **Intent.** Provide a compact, **notation‑neutral** registry and **minting policy** for *conceptual prefixes* — short shorthands that signal **cognitive namespaces** used throughout the Core.
 
  **Policy (normative).**

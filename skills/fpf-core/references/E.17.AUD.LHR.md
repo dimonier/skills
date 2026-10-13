@@ -14,6 +14,8 @@ keywords: []
 
 ## E.17.AUD.LHR - PublicationUnit Stability Discipline and Local Head Restoration - repair the overloaded local lexical head before the publication unit inherits it
 
+> **Status:** Stable
+
 **Placement.** Narrow local lexical-head repair pattern inside the broader `PublicationUnit Stability Discipline`.
 
 **Builds on.** `A.6.P`, `A.7`, `E.10`, `F.18`, `E.14`.

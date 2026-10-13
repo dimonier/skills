@@ -32,6 +32,8 @@ dependencies:
 
 ## E.3 - Principle Taxonomy, Precedence and Agent Autonomy Profiles (ABL)
 
+> **Status:** Stable
+
 ### E.3:1 - Problem frame
 Pattern E.2 supplies eleven immutable pillars, yet experience shows that a **flat list of principles invites ambiguity**: reviewers cannot decide which pillar overrules another  and “dead‑letter” rules accumulate.
 

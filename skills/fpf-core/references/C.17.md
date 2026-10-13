@@ -51,7 +51,9 @@ dependencies:
 
 ## C.17 - Characterising Generative Novelty and Value
 
-**Status.** Evaluation and measurement-use pattern; normative where stated.
+**Type:** Evaluation and measurement-use pattern; normative where stated.
+
+> **Status:** Stable
 
 **Depends on.** `A.17`, `A.18`, and `A.19` for Characteristics, Scales, and CharacteristicSpaces; `A.19.ECS` for the evaluation-space specification; `C.16` for measurement; `C.2.1` for claim-bearing results and model epistemes; `A.1.1` for model applicability, use, and expression coherence when those relations matter; `A.10` and `B.3` for evidence, reliance, and assurance; and the patterns that define the current objective, acceptance criterion, and must-constraints.
 

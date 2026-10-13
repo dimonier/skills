@@ -291,7 +291,7 @@ For a larger differential-algebraic model, obtain the needed consistent-initiali
 
 **State and procedure.** Retain two integer counters: observations read j and ones observed s, initially zero. For each observation x, set s = s+x and j = j+1. After the selected n observations, return p_hat = s/n. The invariant is that s counts the ones in the first j observations. Thus the counters obtain the sample mean without retaining every observation.
 
-**Choose n from the guarantee.** For a binary observation, E[X]=p and Var(X)=p*(1-p) ≤ 1/4. Independence gives E[p_hat]=p and Var(p_hat) ≤ 1/(4*n). On the event |p_hat-p| ≥ epsilon, the squared error is at least epsilon². Therefore
+**Choose n from the guarantee.** For a binary observation, E[X]=p and Var(X)=p\*(1-p) ≤ 1/4. Independence gives E[p_hat]=p and Var(p_hat) ≤ 1/(4\*n). On the event |p_hat-p| ≥ epsilon, the squared error is at least epsilon². Therefore
 
 ~~~text
 epsilon² * P(|p_hat-p| ≥ epsilon)

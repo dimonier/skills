@@ -958,39 +958,39 @@ SenseCell.SystemRoleKindRelationStructure.FPFCore.2026-08-09:
   NameCardRef: NC-SYSTEM-ROLE-KIND-RELATION-STRUCTURE
 ```
 
-#### F.17:12.4i - DPF Suite Reference public row
+#### F.17:12.4i - Architectural Reference term row
 
-This row projects the current F.18 settlement for the product form already governed by `E.11.DSG`. The governed kind remains the relation-defined product form, not a newly minted root kind. The row makes the name reusable under `FPFCoreReferenceScheme`; it is neither the Reference product nor the operation that publishes one.
+This row makes the F.18:4.2e settlement reusable for the architectural-reference form already governed by E.4, E.11.PFP and E.11.DSG. The governed value is the functional publication-unit form, not a newly minted root kind. A single row is useful because the same function is cited across these rules and applied at framework, Suite and Library levels. The row identifies that function without identifying all its instances as one publication.
 
 ```text
-UTSRowId: UTS.DPFSuiteReference.FPFCore.2026-08-28
+UTSRowId: UTS.ArchitecturalReference.FPFCore.2026-10-12
 ReferenceScheme: FPFCoreReferenceScheme
-UnificationThreadId: DPFSuiteReferenceNaming.2026-08-28
-Block: DPF Suite public reference product form
-GovernedValueRef: E.11.DSG DPF Suite Reference product form
+UnificationThreadId: ArchitecturalReferenceNaming.2026-10-12
+Block: Public account of a method language
+GovernedValueRef: E.4:4.1 architectural-reference publication-unit form
 GovernedValueKindRef: U.Kind
-SubjectPatternLocator: E.11.DSG
-UnifiedTechName: DPFSuiteReference
-UnifiedPlainName: DPF Suite Reference
-NameCardRef: NC-DPF-SUITE-REFERENCE
-SenseCellRefs: SenseCell.DPFSuiteReference.FPFCore.2026-08-28
+SubjectPatternLocator: E.4:4.1; E.11.PFP:4.7; E.11.DSG
+UnifiedTechName: ArchitecturalReference
+UnifiedPlainName: architectural reference
+NameCardRef: NC-ARCHITECTURAL-REFERENCE
+SenseCellRefs: SenseCell.ArchitecturalReference.FPFCore.2026-10-12
 BridgeRefs: none
-RowRationale: both designations name the editioned non-framework product form that starts from a cross-DPF working question, returns a bounded answer or blocker, and points back to the Suite collection, product series, editions, results, states, and sources that change the answer; maintenance is a separate claim
-AdmissibleUse: Core-facing designation of the E.11.DSG product form and readable title component for one exact continuing DPF Suite Reference series or admitted edition
-BlockedUse: no Suite, product series, edition, admission, Suite inclusion, currentness, availability, source authority, answer, lookup Work, framework status, instructional Guide, or publication occurrence follows from this row
-LineageEntries: DPF Suite Guide is the predecessor Plain designation only; DSG remains stable PatternID lineage residue and is not a current public expansion; no DSR or synonym family is admitted
-RowEditionId: 2026-08-28
-CurrentnessCondition: reopen when the E.11.DSG product function, boundary, or identity rule; the exact NameCard; FPFCoreReferenceScheme or sense cell; the selected public use; or repeated reader classification changes
+RowRationale: both designations name the public account of a named method language's architecture, connections, reasons and shared explanation; embedded and separate carriage are alternatives for the same function, and useful question-led entries return to the full Methods without limiting the whole account to short answers
+AdmissibleUse: Core-facing designation of this functional form and full public titles of the form <name of the explained whole> Architectural Reference; a shorter mention is sufficient when the whole is unambiguous
+BlockedUse: the row establishes no disciplinary composition, composite Method, independent product series, edition admission, publication occurrence, availability, maintenance or source authority; it neither supplies an unwritten Method nor turns an account into another framework or teaching Guide
+Notes: DPFSuiteReference and its earlier sense cell designate the narrower cross-DPF answer-publication sense, not this broader governed value; no EpistemeEditionRelation or F.9 Bridge is asserted from shared wording, section placement or carrier
+RowEditionId: 2026-10-12
+CurrentnessCondition: reopen when E.4, E.11.PFP or E.11.DSG changes the function, public content, assembly-level or product boundary, or title rule; when the exact NameCard, FPFCoreReferenceScheme, sense cell or selected use changes; or when readers repeatedly recover a different function
 
-SenseCell.DPFSuiteReference.FPFCore.2026-08-28:
+SenseCell.ArchitecturalReference.FPFCore.2026-10-12:
   ReferenceScheme: FPFCoreReferenceScheme
-  LocalSenseId: DPFSuiteReference-core
-  LocalExpression: DPFSuiteReference
-  LocalSenseClaim: the E.11.DSG relation-defined product form for an editioned non-framework publication that answers bounded cross-DPF questions, returns sources and honest gaps, and leaves Suite constitution, product-series and edition identity, lookup Work, publication, availability, authority, currentness, and any maintenance claim to their direct rules
-  NameCardRef: NC-DPF-SUITE-REFERENCE
+  LocalSenseId: ArchitecturalReference-core
+  LocalExpression: ArchitecturalReference
+  LocalSenseClaim: the E.4/E.11.PFP/E.11.DSG functional form of a public account explaining a named method language's architecture, connections, rationale and shared conditions, embedded or separately carried at its actual assembly level, with useful entries and returns to full constituent explanations; naming the form establishes no disciplinary parthood, composite Method, independent product series, publication, availability or maintenance
+  NameCardRef: NC-ARCHITECTURAL-REFERENCE
 ```
 
-A product-specific title may qualify the Plain designation, for example *Engineering DPF Suite Reference*. That use still needs the exact product-series or edition claim; this row supplies only the shared product-form designation.
+For example, *FPF Library Architectural Reference* and *Engineering Suite Architectural Reference* identify different explained wholes. An embedded *Method Engineering Principle Framework Architectural Reference* performs the same function for that framework. The account's actual use and change boundary decides whether it is independently managed; its title alone does not. The row makes the designation recoverable, while E.24.PUB separately governs any publication of this row or a particular architectural reference.
 
 ### F.17:12.5 - Bias-Annotation
 

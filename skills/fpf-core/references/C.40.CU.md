@@ -274,5 +274,8 @@ The worked cases are new analytical constructions. They are neither experiments 
 - A.2.2 governs a capability claim; E.23.CAE/CDI separate supported performance conditions from needed capability development.
 - A.15.8 governs configuration and recovery reliance; C.36.RP makes shared methods obtainable and renewable.
 
+When realizing the application depends on co-adapting its way, the intended holder and provision, C.40.JD supplies that joint construction and keeps delivered work distinct from acquired capability. C.40.NP develops the continuation when a qualified result opens a further worthwhile problem. C.40.OD is useful when those connections form a wider open-ended development undertaking; an adequate application and its ordinary renewal need not invoke that whole.
+
+
 
 ### C.40.CU:End

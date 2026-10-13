@@ -1,7 +1,7 @@
 ---
 id: B.5.4
 title: Recognize a Reusable Concept in a Concrete Situation
-status: Candidate
+status: Stable
 keywords: []
 dependencies:
   coordinates_with:
@@ -25,7 +25,7 @@ dependencies:
 
 
 > **Type:** Method-description pattern
-> **Status:** Candidate
+> **Status:** Stable
 > **Normativity:** Normative unless marked informative
 
 ### B.5.4:1 - Problem frame
