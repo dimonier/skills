@@ -1,7 +1,7 @@
 ---
 id: PLAS.PatternBody
 title: "One E.8 pattern body per reference file"
-status: seed
+status: stable
 keywords: [pattern-body, E.8, atomicity, reference-file]
 dependencies:
   builds_on:
@@ -66,7 +66,12 @@ actually is. All break atomic loading or honesty.
    Checklist, Common Anti-Patterns and How to Avoid Them, Consequences, Rationale,
    SoTA-Echoing, Relations, and the Footer marker (`:End`). Every section carries
    content; a thin section still states its smallest grounding, boundary, or
-   reduced case. **Exception — compacted carrier:** a card of a compacted runtime
+   reduced case. Section `:5` (Archetypal Grounding) takes **one** of two alternative
+    forms, chosen by the kind of reference available — a narrative example (`Tell.`)
+    or a concrete artifact (`Show.`) — never a required pair, so a reader never hunts
+    for the missing half; the marker label follows the **language of the body**
+    (English bodies `Tell.`/`Show.`, Russian bodies `Пример:`/`Артефакт:`), while the
+    section name stays canonical. **Exception — compacted carrier:** a card of a compacted runtime
    projection (`PLAS.CompactedProjection`) replaces sections 1–13 with the sanctioned
    method/procedural `episteme` block and carries no `:11 SoTA-Echoing`; the affected
    `E.8`-section CCs are N/A for that carrier.
@@ -79,8 +84,11 @@ actually is. All break atomic loading or honesty.
    path leaves this skill. A self-sufficient body states its boundary in prose
    instead of a cue block (`PLAS.SelfSufficient`).
 6. **Mark status honestly — level per card, readiness mode per package.** A card's
-   `status` names only the **level** — `seed` (not yet evaluated) or `stable` (reaches
-   the package's declared threshold). The **readiness mode** is declared **collectively
+   `status` names only the **level** - `seed` (not yet evaluated, or evaluated and not yet
+   repaired in use) or `stable` (reaches the package's declared threshold; what qualifies is
+   `CC-QR.2`: an `E.21` result **plus** repeated feedback-driven repair). A card left `seed`
+   names its reason rather than leaving it blank. The **readiness mode** is declared
+   **collectively
    in `SKILL.md`**, not in each card: `source-faithful` (threshold read against the
    **declared carrier form** — for a full `E.8` carrier: full structure + item binding +
    link consistency + Conformance Checklist; for a compacted carrier
@@ -111,7 +119,10 @@ actually is. All break atomic loading or honesty.
    dropped. An embedded draw.io `<svg>` is recovered from its `content` attribute
    and saved only as `.drawio` in `assets/` (wrapper dropped, SVG/PNG not
    regenerated) — see `PLAS.SkillLayout:4` item 3. The pattern's EntityOfConcern is
-   the rule, not a rendering of the source.
+   the rule, not a rendering of the source. Recovering an artifact is **author's work**:
+   describe the work in the `relations.md` source/edition citation block
+   (`PLAS.SkillLayout:4` item 2), not in the body — the body carries only the pointer to
+   `assets/`.
 9. **Keep `:11 SoTA-Echoing` per-row reopen condition.** The reopen condition is
    mandatory per row even when it looks externally homogeneous; a single condition
    may move to a footer only when homogeneity is proven. All-"Принято" is
@@ -123,7 +134,8 @@ actually is. All break atomic loading or honesty.
 
 **Show.** `pattern-language-as-agent-skill/references/PLAS.SkillLayout.md` is one body with the
 13 E.8 sections filled, its Trigger present, its FPF dependencies only in the frontmatter, and a
-conformance checklist; it is marked `seed` (first-seed, not yet `E.21`-evaluated).
+conformance checklist; it now carries `stable` — its `E.21` per-coordinate result and two
+ feedback-driven repairs are recorded outside the carrier (`SKILL.md`, "references/ status").
 
 ### PLAS.PatternBody:6 - Bias-Annotation
 
@@ -142,8 +154,9 @@ declared reader, not whether the headings are present.
 | CC-PB.4 | Status is honest (`seed` until the package's declared readiness threshold is met). |
 | CC-PB.5 | For an FPF-grounded card the readiness mode (`source-faithful` vs `case-validated`) is declared collectively in `SKILL.md`, the card's `status` names only the level, and no `readiness:` frontmatter key is used. Exception: a self-sufficient card (`PLAS.SelfSufficient`) carries the explicit readiness mode in `status`. A compacted carrier (`PLAS.CompactedProjection`) keeps the collective rule and swaps only the `source-faithful` threshold to its carrier profile. |
 | CC-PB.6 | Patterns are disjoint; a repeated source fact is recorded once and delegated by reference, not mirrored. |
-| CC-PB.7 | Source diagrams/artifacts are reduced to conformance-relevant rules, not reconstructed in the body; source-referenced attachments are preserved in `assets/`; an embedded draw.io `<svg>` is recovered from `content` and saved as `.drawio` (wrapper dropped, SVG/PNG not regenerated). |
+| CC-PB.7 | Source diagrams/artifacts are reduced to conformance-relevant rules, not reconstructed in the body; source-referenced attachments are preserved in `assets/`; an embedded draw.io `<svg>` is recovered from `content` and saved as `.drawio` (wrapper dropped, SVG/PNG not regenerated). The recovery itself is author's work: its description lives in the `relations.md` source/edition citation block, and the body carries only the `assets/` pointer. |
 | CC-PB.8 | `:11 SoTA-Echoing` has a per-row reopen condition; all-"Принято" for a single-approved source is legitimate. **N/A** for a compacted carrier (`PLAS.CompactedProjection`), where provenance moves to the `relations.md` citation + `NOTICE.md`. |
+| CC-PB.9 | `:5` carries **one** marker form (narrative example or artifact reference), not a pair, and that marker's label matches the language of the body (`Tell.`/`Show.` in English bodies, `Пример:`/`Артефакт:` in Russian ones). |
 
 ### PLAS.PatternBody:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -161,6 +174,8 @@ declared reader, not whether the headings are present.
 | Forcing `E.8` sections into a compacted card | Use the sanctioned `episteme` block; mark the `E.8`-section CCs N/A (`PLAS.CompactedProjection`). |
 | Declaring `source-faithful` unreachable for a compacted card | Read the threshold against the compacted carrier profile (item 6), not full structure. |
 | Deciding an ambiguous judgment silently | Ask the owner before acting (drop source content, place an attachment, translate/rename markers). |
+| Author's work evidence inside a card body ("diagrams recovered from the draw.io wrapper, reduced to rules") | Keep the *move* in the body; move the description of the work to the `relations.md` source/edition citation block, leaving an `assets/` pointer (`CC-PB.7`). |
+| `Tell.` treated as needing a matching `Show.` (or vice versa) | They are alternative forms of `:5`; use the one the available reference supports (`CC-PB.9`). |
 
 ### PLAS.PatternBody:9 - Consequences
 
@@ -184,6 +199,8 @@ disclosure.
 | `create-agent-skill` "Atomicity: split by action, not by domain" | Adapt | "One pattern per file" (action split), not "one domain per file" | Reopen when the atomicity guidance changes |
 | FPF `E.21` pattern quality | Adopt | Bodies stay `seed` until the named readiness mode's threshold is met; for FPF-grounded cards the mode (`source-faithful` vs `case-validated`) is declared collectively in `SKILL.md`, a self-sufficient card carries it in `status` | Reopen on `E.21` revision |
 | `agent-skill-builder` `ASB.Compaction` (compacted carrier; episteme-block bodies) | Adapt | Sections 1–13 / `:11` CCs marked N/A; no card frontmatter; FPF link as an in-block `Grounding (FPF)` slot; readiness threshold read against the compacted carrier profile (`PLAS.CompactedProjection`) | Reopen if the compaction/PLAS boundary changes |
+| Feedback from a crafted skill: prose review (draw.io recovery instruction pulled the work description into a card body) | Adopt | Item 8 and `CC-PB.7`: the recovery move stays in the body, its provenance moves to the `relations.md` citation block; anti-pattern row in `:8` | Reopen when the source-attachment/provenance boundary is restated |
+| Owner ruling on `:5` markers (Russian skills read `Tell.`/`Show.` as a required pair) | Adopt | Item 3 alternative-forms rule, `CC-PB.9`, anti-pattern row | Reopen on `E.8` `:5` form change in FPF |
 
 Best-known line: `E.8` bodies with atomic skill loading. Rejected rival: "several patterns per
 file" (mini-monolith body) — dropped.

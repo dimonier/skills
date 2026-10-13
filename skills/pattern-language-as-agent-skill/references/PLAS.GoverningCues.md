@@ -73,6 +73,20 @@ frontmatter and is the same duplication removed elsewhere.
 5. **List skill dependencies separately** in a `Skill dependencies` block (e.g.
    `create-agent-skill`) — they are not FPF governing patterns and are not cited
    as FPF pattern references.
+6. **Make every cited FPF ID resolvable.** Distinguish two uses of an FPF PatternID in
+   prose. **Cue use** — the card tells the reader to apply or obey that pattern — requires a
+   matching entry in this card's frontmatter `dependencies`: **no orphan cue in prose**.
+   **Mention use** — the ID is the object being described (another card's recorded edges, an
+   `:11 SoTA-Echoing` source line, an upstream amendment path) — is content prose and takes
+   no edge; inventing one would claim a dependency the card does not have (`CC-GC.3`). Either
+   way cite the source as **FPF**, never as the skill that carries it: the carrier name lives
+   in `SKILL.md` and `relations.md` only, so a body stays valid when FPF arrives under
+   another carrier. Resolution itself is package-level — the `Depends on:` line in `SKILL.md`
+   names FPF and says where it is available — so a bare ID is loadable without glossing each
+   occurrence; add an appositive only where a runtime reader could stall. A
+   **self-sufficient** carrier has no FPF under it, so FPF IDs appear there only inside its
+   declared craft-rule line (`PLAS.SelfSufficient`), which names FPF as the origin and denies
+   the dependency.
 
 ### PLAS.GoverningCues:5 - Archetypal Grounding
 
@@ -98,6 +112,7 @@ the governing pattern verified against current FPF Core, once, in the frontmatte
 | CC-GC.2 | Every cue names a current FPF pattern ID. |
 | CC-GC.3 | The graph has one authored home — frontmatter `dependencies`: `builds_on`/`coordinates_with` (FPF codes) and `specializes` (local codes, authored on the **child** side); `specialized_by` is derived, never authored; relation functions come only from `E.4.PFR:3.3`; `:12` is a pointer and `relations.md` is generated. |
 | CC-GC.4 | Skill dependencies are not mislabeled as FPF patterns. |
+| CC-GC.5 | Cue-use test: every FPF PatternID the card tells the reader to **apply** has a matching entry in that card's frontmatter `dependencies` (an ID merely **described** as content — another card's edges, an `:11` source line — takes no edge). The carrier's `Depends on:` line in `SKILL.md` names FPF and where it is available; no card body or `INDEX.md` names the skill that carries FPF. For a self-sufficient carrier, FPF IDs appear only inside its declared craft-rule line (`PLAS.SelfSufficient`). |
 
 ### PLAS.GoverningCues:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -105,6 +120,7 @@ the governing pattern verified against current FPF Core, once, in the frontmatte
 |---|---|
 | Cards with no governing cues | Record the FPF patterns that govern each move in the frontmatter `dependencies`. |
 | Broken/guessed pattern IDs | Verify the ID against FPF Core. |
+| An FPF ID the reader is told to **apply**, with no recorded edge — they cannot tell what it is or where to load it | Add the frontmatter edge and keep the resolver at package level in `SKILL.md` (item 6, `CC-GC.5`); an ID only *described* as content takes no edge, and in a self-sufficient carrier it belongs to the declared craft-rule line. |
 | DPF-skill edits FPF | Block it; chain is one-way (`E.5.3`). |
 | `Governing FPF patterns` cue block repeated in the body | Remove it; the cues live only in the frontmatter `dependencies`. |
 | Invented relation function (`governs`/`applies-to`, `→ *all cards*`) | Use only `E.4.PFR:3.3` functions; a "lives in all cards" fact is content prose, not a graph edge. |
@@ -133,6 +149,7 @@ verifiable.
 | FPF `E.5.3` unidirectional dependency | Adopt | `DPF-skill → FPF → (nothing)`; the skill never edits FPF | Reopen on `E.5.3` revision |
 | FPF `E.4.PFR` relation records | Adopt | `builds_on`/`coordinates_with` + `relations.md` | Reopen on `E.4.PFR` revision |
 | `create-agent-skill` "Four Layers" (rules / skills / MCP / memory) | Adapt | FPF dependencies (frontmatter) vs `create-agent-skill` (a `Skill dependencies` block) stay distinct | Reopen when the layer model changes |
+| Owner ruling on bare FPF IDs (a runtime reader could not tell `F.19` was an FPF pattern) | Adopt | Item 6 resolvable-cue rule + source-naming discipline, `CC-GC.5`, anti-pattern row | Reopen when the FPF loading model or `E.4.PFR` record vocabulary changes |
 
 Best-known line: FPF unidirectional cues. Rejected rival: "cite any FPF pattern that sounds
 relevant" (alias/guessed IDs) — dropped.

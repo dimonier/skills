@@ -1,7 +1,7 @@
 ---
 id: PLAS.Dispatcher
 title: "SKILL.md as routing-only dispatcher with a trigger description"
-status: seed
+status: stable
 keywords: [dispatcher, SKILL.md, description, trigger, routing]
 dependencies:
   builds_on:

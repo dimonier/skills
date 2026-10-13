@@ -10,6 +10,9 @@ dependencies:
   coordinates_with:
     - A.6.3
     - E.4.PFR
+    - E.21
+    - F.18
+    - F.19
   specializes:
     - PLAS.SkillLayout
     - PLAS.PatternBody
@@ -110,7 +113,10 @@ consumer is handed reconstruction-only material.
 
      For a **self-sufficient** compacted carrier (no FPF dependency,
      `PLAS.SelfSufficient`) this slot is omitted; the self-sufficiency boundary
-     statement in `SKILL.md` replaces it.
+     statement in `SKILL.md` replaces it. That statement is also the only place such a
+      carrier may cite wording discipline: FPF `F.18`/`F.19` appear in its declared
+      craft-rule line (`PLAS.SelfSufficient:4` item 6), never inside a block, and are
+      cited as FPF, not as the skill that carries it (`PLAS.GoverningCues:4` item 6).
    This is not a "cue block repeated from frontmatter": in this carrier there **is no**
    frontmatter, so the slot is the projection's single home for the FPF link. The
    canonical source stays authoritative.
@@ -232,6 +238,7 @@ without inventing a mode.
 | PLAS `PLAS.SkillLayout` (single authored graph home) + `PLAS.PatternBody` (collective readiness) | Adapt | In the projection the graph home is the canonical source; readiness is collective; FPF link is the in-block slot | Reopen on PLAS graph/status revision |
 | FPF `E.4.DPF`/`C.33` (carrier vs edition) + `E.4.PFR:3.2` (one assertion, derived views) | Adopt | Projection → canonical source; per-carrier threshold | Reopen on FPF revision |
 | Feedback `feedback-plas-compacted-projection.md` + `-frontmatter.md` (2026-09-13) | Adapt | The carrier card, the no-frontmatter norm, and the FPF-slot for non-self-sufficient carriers | Reopen on new compacted-carrier signals |
+| Owner ruling on the self-sufficient × compacted intersection (where may wording craft rules be cited at all) | Adopt | Item 5: the craft-rule line lives in the `SKILL.md` boundary statement, never inside an `episteme` block; cited as FPF, not as the carrying skill (`PLAS.GoverningCues:4` item 6) | Reopen when a compacted self-sufficient carrier needs per-block wording provenance |
 
 Best-known line: a runtime-only projection — method + trigger + router, no card
 frontmatter, FPF grounding as an in-block slot. Rejected rivals: "keep frontmatter so

@@ -1,7 +1,7 @@
 ---
 id: PLAS.SkillLayout
 title: "Canonical directory layout of a DPF-skill (single surface, no monolith, no reader-facing form)"
-status: seed
+status: stable
 keywords: [skill-layout, directory, references, single-surface, access-facing-carrier, edition, monolith]
 dependencies:
   builds_on:
@@ -11,6 +11,7 @@ dependencies:
     - E.24.PUB
   coordinates_with:
     - E.4.DPF.DA
+    - E.4.PFR
     - E.11.PFP
   specializes:
     - PLAS.EntryRoute
@@ -84,8 +85,15 @@ generated.
    `references/*.md` are edited directly; for a **full** carrier `relations.md` is a
    **generated** projection of the frontmatter graph (`scripts/build_relations.py`),
    never hand-edited (a compacted projection does not ship it — see item 10). Its
-   maintained part is the source/edition citation; its graph block is generated.
-   `SKILL.md` carries only a one-line pointer to it.
+   maintained part is the source/edition citation; its graph block is generated. That
+   citation records the source **briefly**: identifying attributes only (type, code/name,
+   version, domain, status, date, link or pointer). It does not restate the source's
+   requirements - rule content lives in the card bodies and their `:11 SoTA-Echoing`, and a
+   paraphrase here would be a second formulation of the same requirements, free to drift
+   (`PLAS.QualityAndRefresh:4` item 8). When the carrier represents more than one document,
+   the source surface enumerates them under a count-neutral heading - "External sources" /
+   «Внешние источники» - and claims neither uniqueness nor a count, so adding a document
+   never falsifies the text. `SKILL.md` carries only a one-line pointer to it.
 3. **`assets/`** is for logos/data/sample payloads, never a framework monolith.
    **Preserve source attachments:** an artifact the source embeds or references
    (dashboard JSON, sample payload, schema) must be saved under `assets/`, not
@@ -121,7 +129,9 @@ generated.
    external standard (`representation-of-external-standard` from `PLAS.EntryRoute`),
    the external document is canonical and the skill is a derived projection — never
    "the standard". Declare a pin record (URL + edition + status) in `relations.md`
-   and tie refresh to the source's edition, not to internal signals. `SKILL.md`
+   and tie refresh to the source's edition, not to internal signals. That record follows
+   the citation form of item 2 - brief and identifying, count-neutral when several
+   documents are represented (`CC-SL.15`). `SKILL.md`
    states "this skill is a representation, not the standard" in one line.
 10. **One dependency graph; frontmatter is its single home.** Every edge lives in the
     card frontmatter `dependencies`, and nowhere else: FPF content edges
@@ -135,7 +145,7 @@ generated.
     (no duplication). `relations.md` is a **generated** readable projection of the
      intra-LPF graph, rebuilt by `scripts/build_relations.py` (`--check` validates), and
      is never hand-edited — one authored home, derived views (`E.4.PFR:3.2`). This
-     specialization key is a local extension of fpf-core's frontmatter (which
+     specialization key is a local extension of FPF's frontmatter (which
      carries only `builds_on`/`coordinates_with`); the Specialization semantics still
      trace to `E.4.PFR:3.3`. The carrier ships the **canonical** `build_relations.py`
      contract — a regenerate mode **and** a `--check` mode that exits non-zero on drift,
@@ -212,6 +222,7 @@ edition/carrier wording are the two counterweights.
 | CC-SL.12 | A compacted runtime projection (`PLAS.CompactedProjection`) is declared as a projection naming its canonical source; its `E.8`-section CCs are N/A, the compacted readiness profile applies, cards carry no frontmatter, and readiness is declared only collectively. |
 | CC-SL.13 | **A carrier that ships a graph** ships the canonical `build_relations.py` contract (regenerate + `--check`, non-zero on drift, `BEGIN`/`END` markers, no card edits); `--check` passes, and an empty Specialization graph yields the explicit stub line matching the carrier's FPF-edge presence (with FPF edges vs self-sufficient/none), never an empty/misleading graph. A compacted projection does not ship the graph. |
 | CC-SL.14 | The consumer-normative surface is named (`SKILL.md` + routed `references/`); authoring/reconstruction material (`INDEX.md`, `relations.md`, `ECPF.7` reverse-render) is reference-only and not a consumer obligation. |
+| CC-SL.15 | The `relations.md` source/edition citation is brief and identifying (type, code/name, version, domain, status, date, link or pointer) and never restates the source's requirements; where several external documents are represented they are enumerated under a count-neutral heading ("External sources" / «Внешние источники») with no uniqueness or count claim. |
 
 ### PLAS.SkillLayout:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -234,6 +245,8 @@ edition/carrier wording are the two counterweights.
 | Empty `relations.md` graph presented as generated | Emit the explicit stub line when the Specialization graph is empty. |
 | Truncated/forbidden `build_relations.py` (no `--check`, always rewrites, edits cards) | Ship the canonical contract: regenerate + `--check` (non-zero on drift), markers, no card edits. |
 | Consumer obliged to read `INDEX.md`/`relations.md` or reverse-render | Name the consumer surface; those are reference-only. |
+| The source's requirements restated inside the `relations.md` citation | Keep identifying attributes only there; rule content lives in the card bodies and their `:11 SoTA-Echoing` (`CC-SL.15`). |
+| A «Единственный внешний источник» / "single external source" heading falsified by the next document | Enumerate the sources under a count-neutral "External sources" heading (`CC-SL.15`, `PLAS.SelfSufficient:4` item 1). |
 
 ### PLAS.SkillLayout:9 - Consequences
 
@@ -261,6 +274,7 @@ framework more mature.
 | `create-agent-skill` "Anatomy of a Skill" (`SKILL.md` + `references/` + `scripts/` + `templates/` + `assets/`) | Adopt | Becomes the canonical directory tree; `assets/` is resource-only | Reopen when skill-anatomy guidance changes |
 | `create-agent-skill` progressive disclosure (metadata → body → resources) | Adopt | `SKILL.md` routing-only; bodies load on demand from `references/` | Reopen when the loading model changes |
 | FPF `E.4.DPF`/`C.33` edition-carrier separation | Adopt | Skill directory = access-facing carrier; edition = `C.2.1` episteme in `references/` | Reopen on FPF `E.4.DPF`/`C.33` revision |
+| Feedback from a crafted skill: run (a second normative document made «единственный внешний источник» false, and the directive was paraphrased into `relations.md`) | Adopt | Item 2 brief identifying citation + count-neutral "External sources" surface; `CC-SL.15`; two anti-pattern rows | Reopen when the source surface becomes consumer-reading-obligatory or the citation home moves |
 
 Best-known line: single-surface skill anatomy. Rejected rival: "monolith + derived skill" (the
 `assets/` "source of truth" pattern) — dropped to avoid fork/drift.

@@ -15,7 +15,7 @@
     },
     {
       "id": 3,
-      "prompt": "Audit this DPF-skill for FPF conformance: verify every PatternID exists in fpf-core references/, every body has the 13 E.8 sections, and the SKILL.md routing table matches each card's governing cues.",
+      "prompt": "Audit this DPF-skill for FPF conformance: verify every PatternID exists among the FPF patterns (resolve the carrying skill from the **Depends on** line in `SKILL.md`), every body has the 13 E.8 sections, and the SKILL.md routing table matches each card's governing cues.",
       "expected_output": "Findings list with exact loci: broken PatternIDs, missing E.8 sections, governing-cue mismatches between SKILL.md and the cards.",
       "files": []
     }

@@ -64,14 +64,22 @@ follow `create-agent-skill`.
 
 ## references/ status
 
-**First seed** — 9 pattern cards + INDEX + relations. Pattern bodies are draft
-`E.8` bodies marked `seed` (level only); a card's frontmatter `status` carries the
-level (`seed`/`stable`), **not** the readiness mode. They stay `seed` until they
-pass `E.21` / `E.4.DPF.DA` (see `references/PLAS.QualityAndRefresh.md`).
+**Status levels** — 9 pattern cards + INDEX + relations. Bodies are `E.8` bodies; a card's
+frontmatter `status` carries the **level** (`seed`/`stable`), **not** the readiness mode.
+Five bodies carry `stable` (`PLAS.Dispatcher`, `PLAS.PatternBody`, `PLAS.QualityAndRefresh`,
+`PLAS.SelfSufficient`, `PLAS.SkillLayout`): each has a per-coordinate `E.21` result and at
+least two feedback-driven repairs in the trailing month — the card was repaired because a
+real skill applied it. Four stay `seed` with the reason named: `PLAS.EntryRoute`,
+`PLAS.GoverningCues`, `PLAS.Naming` (no repair in that window, not an unevaluated card) and
+`PLAS.CompactedProjection` (authored after the `E.21` per-coordinate pass, so it has no
+`E.21` result yet — repairs alone do not promote it).
 
 **Readiness mode (declared collectively, per package):** `source-faithful` —
 faithful to FPF (`E.4.DPF`, `E.8`, `E.4.PFR`) + `create-agent-skill`; **not**
-`case-validated` (no heterogeneous cases yet). This follows FPF: a card's `status`
+`case-validated`. The package passed the per-coordinate `E.21` evaluation and four
+heterogeneous applications; `case-validated` is withheld because the bodies still lack a
+filled worked case, a counter-case and transfer coverage, one completed `E.8:11`
+comparison, and the FPF edition is not yet pinned. This follows FPF: a card's `status`
 is the pattern status (`Stable`/`Draft`), while package adequacy is a separate
 aggregate result (`E.4.DPF.DA:4.5` `DPFPackageAdequacyStatus`); no per-card
 `readiness:` key is used (`PLAS.PatternBody:4` item 6, CC-PB.5).
@@ -94,15 +102,25 @@ local links are `Continues`/`Reopen`, and the FPF link is a single in-block
 `Grounding (FPF)` slot. The dependency graph and provenance live in the canonical
 source, not in the projection.
 
-**Self-assessment (reflexive):** this framework has not yet passed its own
-`PLAS.EntryRoute` CC-ER.1–6 — no `E.4.PFAD` answer, no `E.9` DRR, no coverage map,
-no representative application, and the authoring-scenario axes are declared but not
-yet evaluated. Disclosed as an honest first-seed gap, not silently omitted.
+**Provenance of the last pass.** A wording-pass (`PLAS.QualityAndRefresh:4` item 3,
+`CC-QR.8`) over every hand-authored body and this file ran on 2026-10-13; it produced the
+craft-rule citation rule, the source-naming rule, and the `:5` marker and status
+actualizations. Before/after evidence for disputed passages stays in the project vault.
+
+**Self-assessment (reflexive):** this framework runs its own loop. Passed: `E.4.PFAD`
+outcome + `E.9` DRR (process state held outside the skill), coverage map and representative
+application, four heterogeneous applications, and a per-coordinate `E.21` pass. Not passed,
+disclosed: `CC-ER.1` — the cold-reader route was run as later probes, not before the first
+bodies were drafted; `CC-QR.2` for `PLAS.CompactedProjection` — authored after the `E.21`
+pass, so it has no per-coordinate result yet; the FPF edition is not pinned, so
+currentness rests on the resolver line rather than a version; and the bodies still lack a
+filled worked case with counter-case and transfer coverage.
 
 ## Guardrails
 
-When a judgment is ambiguous — dropping source content, placing an attachment,
-translating or renaming markers, or any choice that could diverge from the owner's
+When a judgment is ambiguous — dropping or widening source content, placing an
+attachment, renaming a marker beyond the language rule of `PLAS.PatternBody:4` item 3
+(`CC-PB.9`), or any choice that could diverge from the owner's
 intent — **ask the owner before acting**; do not resolve it silently. This applies
 both when authoring a new DPF-skill and when revising an existing one.
 

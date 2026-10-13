@@ -1,8 +1,8 @@
 ---
 id: PLAS.QualityAndRefresh
 title: "Evaluating, improving, and refreshing a DPF-skill"
-status: seed
-keywords: [quality, evaluation, improvement, refresh, currentness, weak-model]
+status: stable
+keywords: [quality, evaluation, improvement, refresh, currentness, weak-model, wording-pass]
 dependencies:
   builds_on:
     - E.4.DPF.DA
@@ -12,6 +12,9 @@ dependencies:
   coordinates_with:
     - E.22
     - E.19
+    - E.4.PFR
+    - F.18
+    - F.19
 ---
 
 ## PLAS.QualityAndRefresh - Evaluating, improving, and refreshing a DPF-skill
@@ -55,7 +58,16 @@ compares them mechanically.
    edition/currentness, D10 is the improvement/refresh loop this card owns). Run the
    `PFM1`–`PFM12` sub-pass separately and mark its reader-facing publication-form
    checks N/A; do not drop a D-coordinate.
-3. **Pattern quality** with `E.21`; mark bodies `seed` until they pass.
+3. **Pattern quality** with `E.21`; mark bodies `seed` until they pass (what promotes a
+   body is `CC-QR.2`). Read the findings of FPF `F.19` (ontology-first plain technical
+   rewriting) into the `E.21` `PrecisionRestorationProfile` (`F.19:12`): before relying on
+   the skill, every hand-authored body **and** `SKILL.md` is read once, in one continuous
+   pass, as ordinary technical prose (wording-pass). The normal outcome is corrected text
+   or a named blocker with an unresolved meaning — "read it, nothing found" is not an
+   outcome. Structural checks cannot see a flipped source meaning, so prose is checked by
+   reading, not by layout. Keep the before/after comparison of disputed or high-risk
+   passages **outside** the carrier (project vault, git history), never as card content
+   (`PLAS.SkillLayout:4` item 7).
 4. **Machine frontmatter check (cheap, before any "rely on").** Parse every card's
    YAML frontmatter — and the `SKILL.md` `description` — and fail on any parse error
    before relying on the skill. A `description` with a bare `:` + space breaks the
@@ -92,16 +104,28 @@ compares them mechanically.
 7. **Weak-model gate** (`create-agent-skill`): a weaker model must follow every
    step without inventing steps or asking for clarification.
 8. **Refresh** with `G.11`: reopen on source change, FPF edition change, local
-   misuse telemetry, or supersession.
+   misuse telemetry, or supersession. When the refresh is driven by a **new normative
+   source** (an added directive, an amended standard), transfer its requirements before
+   editing any body: (a) place each requirement in the one existing pattern whose problem
+   and scope cover it — if no pattern covers it, author a new pattern instead of a rule
+   inside somebody else's card, and express any intended delegation in the carrier's graph
+   vocabulary (FPF codes in `builds_on`/`coordinates_with`, local specialization child-side
+   `specializes`), never as an invented edge or a dangling "see …" pointer; (b) reproduce
+   the source's wording literally ("debug logs" stays "debug logs", not `TRACE`/`DEBUG`) —
+   extending it takes an explicit owner decision; (c) name new terms by the card's local
+   convention (`actor_id`, not the source's verbatim `act_sub`) and record the divergence
+   in `:11 SoTA-Echoing`.
 9. **Owner-performed sync.** A repo-carrier change is materialized into the
    installed copy only by an **owner-performed sync** — the authoring agent
    refreshes the bodies in the repo, never the deployed projection.
 
 ### PLAS.QualityAndRefresh:5 - Archetypal Grounding
 
-**Show.** `pattern-language-as-agent-skill` is a first seed: bodies are `seed`, not yet
-`E.21`-evaluated; `SKILL.md` says so. Before reliance, run `E.4.DPF.DA` D1–D12 and
-the weak-model gate.
+**Show.** `pattern-language-as-agent-skill` ran this loop on itself: `E.4.DPF.DA` D1–D12,
+a per-coordinate `E.21` pass over every body, four heterogeneous applications, and
+repeated feedback-driven repairs; five bodies now carry `stable`, the rest stay `seed`
+with the reason named in `SKILL.md`. Before reliance, run the same loop, the weak-model
+gate, and the wording-pass.
 
 ### PLAS.QualityAndRefresh:6 - Bias-Annotation
 
@@ -115,12 +139,14 @@ to silently drop rather than mark N/A, which hides the carrier-specific gap.
 | ID | Requirement |
 |---|---|
 | CC-QR.1 | Package adequacy is evaluated with all `E.4.DPF.DA` D1–D12 coordinates, not assumed from a build. |
-| CC-QR.2 | Each body has an `E.21` result or an explicit `seed` mark. |
+| CC-QR.2 | Each body has an `E.21` result or an explicit `seed` mark. A body moves `seed` → `stable` only when it has **both** a per-coordinate `E.21` result **and** at least two distinct feedback-driven repairs in the trailing month (each repair traceable to a real downstream application, not to authoring churn); repairs made inside the current quality cycle do not count until a downstream application exercises them. A `seed` left in place names its reason. |
 | CC-QR.3 | Improvement uses a separate reviewer and a target level (`E.23`). |
 | CC-QR.4 | Refresh triggers are named (`G.11`). |
 | CC-QR.5 | Publication-form checks are explicitly N/A, not silently dropped. |
 | CC-QR.6 | A machine frontmatter-parse check (incl. `description` YAML-safety) passes before reliance — parametrized by carrier: id-prefix/template + valid status set (`seed`/`stable`, or `source-faithful`/`case-validated`, or no-frontmatter for a compacted projection), plus `INDEX.md ↔ references/` consistency and no `readiness:` key / body cue block. |
 | CC-QR.7 | The dependency graph has one authored home (frontmatter); `:12` is a pointer; no card body repeats a `Governing FPF patterns` cue block; `scripts/build_relations.py --check` passes (generated `relations.md` matches the frontmatter; an empty Specialization graph yields the explicit stub line matching FPF-edge presence (with FPF edges vs self-sufficient/none), not an empty graph); the carrier ships the canonical script contract (regenerate + `--check`, non-zero on drift, markers, no card edits); no `governs`/`applies-to` pseudo-edges. |
+| CC-QR.8 | Before reliance, every hand-authored body and `SKILL.md` passed one continuous prose read (wording-pass, item 3), with FPF `F.19` findings taken into the `E.21` `PrecisionRestorationProfile`; the recorded outcome is corrected text or a named blocker, and the before/after comparison for disputed passages lives outside the carrier. |
+| CC-QR.9 | A source-change refresh transferred requirements by all three rules of item 8: one covering pattern (or a newly authored pattern, with any delegation expressed in the carrier's graph vocabulary), literal source wording unless extended by an explicit owner decision, local naming convention with the divergence recorded in `:11 SoTA-Echoing`. |
 
 ### PLAS.QualityAndRefresh:8 - Common Anti-Patterns and How to Avoid Them
 
@@ -133,6 +159,10 @@ to silently drop rather than mark N/A, which hides the carrier-specific gap.
 | A frontmatter checker hardened to one carrier (e.g. `PV.`-prefix, `seed`/`stable`) applied to another (self-sufficient) | Parametrize by carrier (id-prefix/template + status set); see `CC-QR.6`. |
 | Graph views drift (direction flip between frontmatter / `:12` / `relations.md`) | Frontmatter is the single home; regenerate `relations.md` with `build_relations.py`; keep `:12` a pointer. |
 | `--check` never fails (a truncated script copy is shipped) | Ship the canonical contract (regenerate + `--check`, non-zero on drift); verify it fails on a deliberate drift. |
+| A new source requirement dropped into a neighbouring card | Find the one pattern whose problem covers it; otherwise author a new pattern. Express delegation in the carrier's graph vocabulary, not a dangling "see …" reference. |
+| Source wording extended while transferring ("debug logs" → `TRACE`/`DEBUG`) | Reproduce the source literally; extend only on an explicit owner decision (item 8, `CC-QR.9`). |
+| The source's verbatim term adopted as the local name (`act_sub` beside `user_id`) | Name by the card's local convention; record the divergence in `:11 SoTA-Echoing`. |
+| Structural conformance read as prose correctness | Run the wording-pass (item 3, `CC-QR.8`): a structurally clean body can still flip the source's meaning. |
 
 ### PLAS.QualityAndRefresh:9 - Consequences
 
@@ -155,6 +185,8 @@ N/A rather than silently omitted.
 | FPF `E.4.DPF.DA` (D1–D12) + `E.21` + `E.23` + `G.11` quality stack | Adopt | Package adequacy judges all D1–D12; `PFM1`–`PFM12` sub-pass N/A for a skill carrier | Reopen on FPF quality-pattern revision |
 | `create-agent-skill` "Quality Gate: weak-model test" | Adopt | A weaker model must follow every step without inventing steps or asking for clarification | Reopen when the weak-model gate changes |
 | `skill-creator` eval loop (test cases, baseline, benchmark) | Adapt | Recorded as the refresh/improve route; full evals deferred while the framework stays `seed` | Reopen when the seed is promoted |
+| Feedback from a crafted skill: prose review of a nine-card LPF (`F.19` applied to bodies that passed every structural check) | Adapt | Item 3 wording-pass and `CC-QR.8`: prose is read as prose, `F.19` findings feed `PrecisionRestorationProfile`; evidence stays outside the carrier | Reopen when `F.19` or its `E.21` bridge changes |
+| Feedback from a crafted skill: directive-transfer run (three defects caught by hand: wrong host pattern, widened source wording, non-conform term) | Adopt | Item 8 transfer procedure, `CC-QR.9`, three anti-pattern rows | Reopen on further transfer misuse signals |
 
 Best-known line: FPF quality stack + weak-model gate. Rejected rival: "works in the demo" /
 self-review ("you can't check yourself") — dropped.
